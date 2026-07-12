@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RouteBudget EU — Support</title>
+<meta name="description" content="RouteBudget EU — route cost calculator & PDF quotes for European truck drivers. Support & help." />
+<style>
+  :root{
+    --bg:#0B0E14;--surface:#17212B;--surface2:#1F2A36;--input:#101820;
+    --primary:#2481CC;--success:#31B545;--premium:#8774E1;
+    --text:#FFFFFF;--text2:#8B98A5;--text3:#5C6B7A;--divider:#232F3B;--pill:28px;--radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    background:radial-gradient(120% 80% at 50% -10%,#13233A 0%,#0B0E14 55%);
+    color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  header{position:sticky;top:0;z-index:10;background:rgba(11,14,20,.82);
+    backdrop-filter:saturate(160%) blur(18px);-webkit-backdrop-filter:saturate(160%) blur(18px);
+    border-bottom:1px solid var(--divider)}
+  .bar{max-width:820px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+  .brand img{width:38px;height:38px;border-radius:10px}
+  .brand b{font-size:17px;font-weight:800;letter-spacing:-.3px}
+  .brand b span{color:var(--primary)}
+  .langs{display:flex;gap:6px}
+  .langs button{font:inherit;font-size:13px;font-weight:700;cursor:pointer;color:var(--text2);
+    background:var(--input);border:1px solid var(--divider);border-radius:var(--pill);padding:7px 14px;transition:.15s}
+  .langs button.active{background:var(--primary);border-color:var(--primary);color:#fff}
+  .hero{text-align:center;padding:70px 0 30px}
+  .hero img{width:96px;height:96px;border-radius:22px;box-shadow:0 20px 60px rgba(36,129,204,.35);margin-bottom:22px}
+  .hero h1{font-size:44px;font-weight:800;letter-spacing:-1.2px;margin-bottom:10px}
+  .hero h1 span{color:var(--primary)}
+  .hero p{color:var(--text2);font-size:16px;max-width:520px;margin:0 auto}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+  .card{background:var(--surface);border:1px solid var(--divider);border-radius:var(--radius);padding:24px}
+  .card.full{grid-column:1/-1}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--primary);margin-bottom:14px;font-weight:800}
+  p.lead{color:#C7D1DB;font-size:15px}
+  .contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+  .chip{display:inline-flex;align-items:center;gap:9px;background:var(--input);border:1px solid var(--divider);
+    border-radius:var(--pill);padding:12px 20px;color:var(--text);font-size:15px;font-weight:600;text-decoration:none;transition:.15s}
+  .chip:hover{border-color:var(--primary)}
+  .chip svg{width:18px;height:18px;fill:var(--primary)}
+  .faq{margin-top:6px}
+  details{border-bottom:1px solid var(--divider);padding:14px 0}
+  details:last-child{border-bottom:none}
+  summary{cursor:pointer;font-weight:700;color:var(--text);font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--primary);font-size:22px;font-weight:400}
+  details[open] summary::after{content:"−"}
+  details p{color:var(--text2);font-size:14px;margin-top:10px}
+  .pill-link{display:inline-block;margin-top:6px;background:var(--primary);color:#fff;font-weight:700;
+    border-radius:var(--pill);padding:13px 26px;text-decoration:none;font-size:15px}
+  footer{text-align:center;color:var(--text3);font-size:13px;margin-top:44px;padding-top:24px;border-top:1px solid var(--divider)}
+  footer a{color:var(--text2)}
+  [data-lang]{display:none}
+  body[data-active="en"] [data-lang="en"],body[data-active="it"] [data-lang="it"]{display:block}
+  @media(max-width:620px){.grid{grid-template-columns:1fr}.hero h1{font-size:32px}}
+</style>
+</head>
+<body data-active="en">
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html"><img src="logo.png" alt="RouteBudget EU"/><b>RouteBudget<span>EU</span></b></a>
+    <div class="langs"><button data-set="en" class="active">EN</button><button data-set="it">IT</button></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <img src="logo.png" alt="RouteBudget EU"/>
+    <h1>RouteBudget<span> EU</span></h1>
+    <p data-lang="en">Route cost calculator &amp; professional PDF quotes for European truck drivers. Support &amp; help below.</p>
+    <p data-lang="it">Calcolatore di costi di viaggio e preventivi PDF professionali per autotrasportatori europei. Assistenza qui sotto.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card full">
+      <h2 data-lang="en">Contact Support</h2><h2 data-lang="it">Contatta l'assistenza</h2>
+      <p class="lead" data-lang="en">Questions, bugs or feedback? We usually reply within 24–48 hours.</p>
+      <p class="lead" data-lang="it">Domande, problemi o suggerimenti? Rispondiamo di solito entro 24–48 ore.</p>
+      <div class="contact">
+        <a class="chip" href="mailto:mosta1570@gmail.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>mosta1570@gmail.com</a>
+        <a class="chip" href="tel:+3288168288"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10 21 3 14 3 5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>+32 88 168 288</a>
+      </div>
+    </div>
+
+    <div class="card full">
+      <h2 data-lang="en">Frequently Asked</h2><h2 data-lang="it">Domande frequenti</h2>
+      <div class="faq" data-lang="en">
+        <details><summary>How is the toll cost calculated?</summary><p>By vehicle class and axle count (2 to 5+ axles) using a blended European motorway rate matrix, with a heavy-weight surcharge above 32 t.</p></details>
+        <details><summary>Does it work offline?</summary><p>Yes. All calculations run on-device. Only the optional “Get real distance” feature needs internet to look up road distance between cities.</p></details>
+        <details><summary>How do I restore my Pro subscription?</summary><p>Open the Paywall screen and tap “Restore purchases”. Your subscription is tied to your Apple ID.</p></details>
+        <details><summary>Is my data private?</summary><p>Completely. Routes, prices and history stay on your device. Nothing is uploaded, tracked or sold. See our <a href="privacy.html">Privacy Policy</a>.</p></details>
+        <details><summary>What does Pro unlock?</summary><p>Unlimited calculations, your company logo on PDF quotes, and the advanced per-country toll matrix.</p></details>
+      </div>
+      <div class="faq" data-lang="it">
+        <details><summary>Come viene calcolato il pedaggio?</summary><p>Per classe veicolo e numero di assi (da 2 a 5+ assi) con una matrice di tariffe autostradali europee, più un supplemento per peso oltre le 32 t.</p></details>
+        <details><summary>Funziona offline?</summary><p>Sì. Tutti i calcoli avvengono sul dispositivo. Solo la funzione “Calcola distanza reale” richiede internet per la distanza stradale tra città.</p></details>
+        <details><summary>Come ripristino l'abbonamento Pro?</summary><p>Apri la schermata Pro e tocca “Ripristina acquisti”. L'abbonamento è legato al tuo Apple ID.</p></details>
+        <details><summary>I miei dati sono privati?</summary><p>Completamente. Tratte, prezzi e cronologia restano sul dispositivo. Nulla viene caricato, tracciato o venduto. Vedi la <a href="privacy.html">Privacy</a>.</p></details>
+        <details><summary>Cosa sblocca Pro?</summary><p>Calcoli illimitati, il logo della tua azienda sui preventivi PDF e la matrice pedaggi avanzata per Paese.</p></details>
+      </div>
+    </div>
+
+    <div class="card full" style="text-align:center">
+      <h2 data-lang="en">Legal</h2><h2 data-lang="it">Note legali</h2>
+      <a class="pill-link" href="privacy.html" data-lang="en">Read the Privacy Policy →</a>
+      <a class="pill-link" href="privacy.html" data-lang="it">Leggi la Privacy →</a>
+    </div>
+  </div>
+
+  <footer><p>© 2026 RouteBudget EU · Eng. Mostafa</p></footer>
+</div>
+
+<script>
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.body.dataset.active=b.dataset.set;document.documentElement.lang=b.dataset.set;
+      document.querySelectorAll('.langs button').forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

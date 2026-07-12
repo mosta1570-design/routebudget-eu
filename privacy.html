@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — RouteBudget EU</title>
+<meta name="description" content="RouteBudget EU privacy policy — offline-first, on-device data, GDPR compliant." />
+<style>
+  :root{
+    --bg:#0B0E14; --surface:#17212B; --surface2:#1F2A36; --input:#101820;
+    --primary:#2481CC; --success:#31B545; --premium:#8774E1;
+    --text:#FFFFFF; --text2:#8B98A5; --text3:#5C6B7A; --divider:#232F3B;
+    --radius:14px; --pill:28px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    background:linear-gradient(180deg,#0B0E14 0%,#0D1622 100%);
+    color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  header{
+    position:sticky;top:0;z-index:10;
+    background:rgba(11,14,20,.82);backdrop-filter:saturate(160%) blur(18px);
+    -webkit-backdrop-filter:saturate(160%) blur(18px);
+    border-bottom:1px solid var(--divider);
+  }
+  .bar{max-width:820px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+  .brand img{width:38px;height:38px;border-radius:10px;display:block}
+  .brand b{font-size:17px;font-weight:800;letter-spacing:-.3px}
+  .brand b span{color:var(--primary)}
+  .langs{display:flex;gap:6px}
+  .langs button{
+    font:inherit;font-size:13px;font-weight:700;cursor:pointer;color:var(--text2);
+    background:var(--input);border:1px solid var(--divider);border-radius:var(--pill);
+    padding:7px 14px;transition:.15s;
+  }
+  .langs button.active{background:var(--primary);border-color:var(--primary);color:#fff}
+  .hero{padding:56px 0 28px;text-align:center}
+  .hero .kicker{color:var(--primary);font-weight:800;letter-spacing:1.6px;font-size:12px;text-transform:uppercase}
+  .hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;margin:10px 0 8px}
+  .hero p{color:var(--text2);font-size:15px}
+  .summary{
+    background:linear-gradient(135deg,rgba(36,129,204,.14),rgba(135,116,225,.10));
+    border:1px solid var(--divider);border-radius:var(--radius);
+    padding:20px 22px;margin:24px 0;color:#D7E2EE;font-size:15px;
+  }
+  .summary b{color:var(--text)}
+  .card{background:var(--surface);border:1px solid var(--divider);border-radius:var(--radius);padding:26px 26px;margin:16px 0}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--primary);margin:0 0 14px;font-weight:800}
+  h2 .n{color:var(--text3);margin-right:8px}
+  p{color:#C7D1DB;font-size:15px;margin:0 0 12px}
+  p:last-child{margin-bottom:0}
+  strong{color:var(--text)}
+  ul{list-style:none;margin:6px 0 12px}
+  li{position:relative;padding-left:22px;color:#C7D1DB;font-size:15px;margin:8px 0}
+  li::before{content:"";position:absolute;left:2px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--success)}
+  li.no::before{background:#E53935}
+  table{width:100%;border-collapse:collapse;margin:8px 0 4px;font-size:14px}
+  td,th{text-align:left;padding:10px 8px;border-bottom:1px solid var(--divider);color:#C7D1DB;vertical-align:top}
+  th{color:var(--text2);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .chip{display:inline-flex;align-items:center;gap:9px;background:var(--input);border:1px solid var(--divider);border-radius:var(--pill);padding:11px 18px;color:var(--text);font-size:14px;font-weight:600}
+  .chip svg{width:17px;height:17px;fill:var(--primary)}
+  footer{text-align:center;color:var(--text3);font-size:13px;margin-top:40px;padding-top:24px;border-top:1px solid var(--divider)}
+  footer a{color:var(--text2)}
+  [data-lang]{display:none}
+  body[data-active="en"] [data-lang="en"]{display:block}
+  body[data-active="it"] [data-lang="it"]{display:block}
+  li[data-lang],td[data-lang]{display:none}
+  body[data-active="en"] li[data-lang="en"]{display:list-item}
+  body[data-active="it"] li[data-lang="it"]{display:list-item}
+  @media(max-width:560px){.hero h1{font-size:30px}.card{padding:20px}}
+</style>
+</head>
+<body data-active="en">
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html"><img src="logo.png" alt="RouteBudget EU" /><b>RouteBudget<span>EU</span></b></a>
+    <div class="langs">
+      <button data-set="en" class="active">EN</button>
+      <button data-set="it">IT</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker" data-lang="en">Privacy Policy</div>
+    <div class="kicker" data-lang="it">Informativa sulla Privacy</div>
+    <h1 data-lang="en">Privacy Policy</h1>
+    <h1 data-lang="it">Privacy</h1>
+    <p data-lang="en">Effective 12 July 2026 · Last updated 12 July 2026</p>
+    <p data-lang="it">In vigore dal 12 luglio 2026 · Ultimo aggiornamento 12 luglio 2026</p>
+  </div>
+
+  <div class="summary">
+    <p data-lang="en"><b>In short:</b> RouteBudget EU is an offline-first calculator. Your routes, prices, truck configuration and history are stored <b>only on your device</b>. We do not run servers that receive your data, we do not track you, we show no ads, and we never sell any information. The only third-party processing happens if you voluntarily buy a Pro subscription (handled by Apple and RevenueCat).</p>
+    <p data-lang="it"><b>In breve:</b> RouteBudget EU è un calcolatore offline-first. Le tue tratte, i prezzi, la configurazione del mezzo e la cronologia sono salvati <b>solo sul tuo dispositivo</b>. Non gestiamo server che ricevono i tuoi dati, non ti tracciamo, non mostriamo pubblicità e non vendiamo mai alcuna informazione. L'unico trattamento da terzi avviene se acquisti volontariamente un abbonamento Pro (gestito da Apple e RevenueCat).</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">1</span><span data-lang="en">Data Controller</span><span data-lang="it">Titolare del trattamento</span></h2>
+    <p data-lang="en">The data controller is the developer of RouteBudget EU:</p>
+    <p data-lang="it">Il titolare del trattamento è lo sviluppatore di RouteBudget EU:</p>
+    <p><strong>Eng. Mostafa</strong></p>
+    <div class="contact">
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>mosta1570@gmail.com</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10 21 3 14 3 5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>+32 88 168 288</span>
+    </div>
+    <p data-lang="en" style="margin-top:14px">Under Regulation (EU) 2016/679 (“GDPR”), the person above is the controller for any personal data processed in connection with the App.</p>
+    <p data-lang="it" style="margin-top:14px">Ai sensi del Regolamento (UE) 2016/679 (“GDPR”), il soggetto sopra indicato è il titolare per qualsiasi dato personale trattato in relazione all'App.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">2</span><span data-lang="en">Data We Do NOT Collect</span><span data-lang="it">Dati che NON raccogliamo</span></h2>
+    <p data-lang="en">By design (Art. 5(1)(c) GDPR — data minimisation), the App does <strong>not</strong>:</p>
+    <p data-lang="it">Per progettazione (Art. 5(1)(c) GDPR — minimizzazione), l'App <strong>non</strong>:</p>
+    <ul>
+      <li class="no" data-lang="en">collect or transmit your routes, origins, destinations, distances, prices or calculations to any external server;</li>
+      <li class="no" data-lang="en">collect GPS location, movement telemetry or driving behaviour;</li>
+      <li class="no" data-lang="en"><strong>sell, rent or share personal routing telemetry or any personal data — ever;</strong></li>
+      <li class="no" data-lang="en">use advertising networks, ad identifiers (IDFA) or cross-app tracking;</li>
+      <li class="no" data-lang="en">use third-party analytics SDKs;</li>
+      <li class="no" data-lang="en">require an account, email or phone number to work.</li>
+      <li class="no" data-lang="it">raccoglie o trasmette le tue tratte, origini, destinazioni, distanze, prezzi o calcoli ad alcun server esterno;</li>
+      <li class="no" data-lang="it">raccoglie posizione GPS, telemetria di movimento o comportamento di guida;</li>
+      <li class="no" data-lang="it"><strong>vende, affitta o condivide telemetria di percorso o altri dati personali — mai;</strong></li>
+      <li class="no" data-lang="it">usa reti pubblicitarie, identificatori (IDFA) o tracciamento tra app;</li>
+      <li class="no" data-lang="it">usa SDK di analisi di terze parti;</li>
+      <li class="no" data-lang="it">richiede un account, email o numero di telefono per funzionare.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">3</span><span data-lang="en">Data Stored Locally On Your Device</span><span data-lang="it">Dati salvati localmente sul dispositivo</span></h2>
+    <p data-lang="en">The following is created by you and stored <strong>exclusively on your device</strong> in a local SQLite database inside the app sandbox:</p>
+    <p data-lang="it">I seguenti dati sono creati da te e salvati <strong>esclusivamente sul tuo dispositivo</strong> in un database SQLite locale nella sandbox dell'app:</p>
+    <table>
+      <tr><th data-lang="en">Data</th><th data-lang="en">Purpose</th><th data-lang="it">Dato</th><th data-lang="it">Finalità</th></tr>
+      <tr>
+        <td data-lang="en">Route inputs (origin, destination, distance, truck config)</td><td data-lang="en">Cost calculation</td>
+        <td data-lang="it">Dati tratta (origine, destinazione, distanza, mezzo)</td><td data-lang="it">Calcolo dei costi</td>
+      </tr>
+      <tr>
+        <td data-lang="en">Economic parameters (fuel price, wage, margin)</td><td data-lang="en">Cost calculation</td>
+        <td data-lang="it">Parametri economici (gasolio, paga, margine)</td><td data-lang="it">Calcolo dei costi</td>
+      </tr>
+      <tr>
+        <td data-lang="en">Calculation history & quote totals</td><td data-lang="en">History feature</td>
+        <td data-lang="it">Cronologia calcoli e totali preventivi</td><td data-lang="it">Funzione archivio</td>
+      </tr>
+      <tr>
+        <td data-lang="en">Company logo (Pro), language, usage counter</td><td data-lang="en">App features</td>
+        <td data-lang="it">Logo aziendale (Pro), lingua, contatore</td><td data-lang="it">Funzioni app</td>
+      </tr>
+    </table>
+    <p data-lang="en" style="margin-top:10px">This data never leaves your device unless <strong>you</strong> explicitly share it (e.g. exporting a PDF via the iOS share sheet). Deleting the App permanently deletes this database. We cannot access, restore or process it.</p>
+    <p data-lang="it" style="margin-top:10px">Questi dati non lasciano mai il dispositivo salvo che sia <strong>tu</strong> a condividerli (es. esportando un PDF con il menu di condivisione iOS). Disinstallando l'App questo database viene eliminato definitivamente. Noi non possiamo accedervi, ripristinarlo o trattarlo.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">4</span><span data-lang="en">Location (Trip Tracking)</span><span data-lang="it">Posizione (Tracciamento viaggio)</span></h2>
+    <p data-lang="en">If you start the optional live trip tracking, the App uses your GPS location <strong>only while tracking is active</strong>, solely to compute distance and cost on your device in real time. Location is <strong>never uploaded</strong> and is not stored after the trip ends. You can revoke the permission any time in iOS Settings.</p>
+    <p data-lang="it">Se avvii il tracciamento viaggio (opzionale), l'App usa la posizione GPS <strong>solo mentre il tracciamento è attivo</strong>, esclusivamente per calcolare distanza e costo sul dispositivo in tempo reale. La posizione <strong>non viene mai caricata</strong> né conservata al termine del viaggio. Puoi revocare il permesso in qualsiasi momento nelle Impostazioni iOS.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">5</span><span data-lang="en">Subscription Data (RouteBudget Pro)</span><span data-lang="it">Dati abbonamento (RouteBudget Pro)</span></h2>
+    <ul>
+      <li data-lang="en">Payment is processed entirely by <strong>Apple</strong> (In-App Purchase). We never receive or store your card details.</li>
+      <li data-lang="en">Entitlement validation is performed by <strong>RevenueCat, Inc.</strong> (USA) as our processor. It receives a pseudonymous app-user ID and receipt data — <strong>never your routes, calculations or content</strong>.</li>
+      <li data-lang="en">RevenueCat processing uses the EU Standard Contractual Clauses (Art. 46 GDPR). See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</li>
+      <li data-lang="en">Legal basis: performance of a contract (Art. 6(1)(b) GDPR).</li>
+      <li data-lang="it">Il pagamento è gestito interamente da <strong>Apple</strong> (Acquisti In-App). Non riceviamo né conserviamo i dati della tua carta.</li>
+      <li data-lang="it">La convalida dell'abbonamento è eseguita da <strong>RevenueCat, Inc.</strong> (USA) come responsabile. Riceve un ID utente pseudonimo e i dati della ricevuta — <strong>mai le tue tratte, calcoli o contenuti</strong>.</li>
+      <li data-lang="it">RevenueCat adotta le Clausole Contrattuali Standard UE (Art. 46 GDPR). Vedi <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</li>
+      <li data-lang="it">Base giuridica: esecuzione di un contratto (Art. 6(1)(b) GDPR).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">6</span><span data-lang="en">City Distance Lookup</span><span data-lang="it">Calcolo distanza tra città</span></h2>
+    <p data-lang="en">When you tap “Get real distance”, only the two city names you typed are sent to keyless public map services (OpenStreetMap Nominatim & OSRM) to compute road distance. No identifiers, no tracking, no account.</p>
+    <p data-lang="it">Quando tocchi “Calcola distanza reale”, vengono inviati solo i due nomi di città digitati a servizi cartografici pubblici senza chiave (OpenStreetMap Nominatim e OSRM) per calcolare la distanza stradale. Nessun identificatore, nessun tracciamento, nessun account.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">7</span><span data-lang="en">Your Rights &amp; Retention</span><span data-lang="it">I tuoi diritti e conservazione</span></h2>
+    <p data-lang="en">You have the rights of access, rectification, erasure, restriction, portability and objection (Chapter III GDPR). Because your calculation data lives only on your device, you exercise most rights directly — edit or delete entries in the App, or uninstall to erase everything. For subscription data contact us; we reply within 30 days. You may complain to your supervisory authority (in Italy: Garante per la Protezione dei Dati Personali — <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>).</p>
+    <p data-lang="it">Hai i diritti di accesso, rettifica, cancellazione, limitazione, portabilità e opposizione (Capo III GDPR). Poiché i dati di calcolo risiedono solo sul dispositivo, eserciti la maggior parte dei diritti direttamente — modifica o elimina le voci nell'App, o disinstalla per cancellare tutto. Per i dati di abbonamento contattaci; rispondiamo entro 30 giorni. Puoi rivolgerti all'autorità di controllo (in Italia: Garante per la Protezione dei Dati Personali — <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>).</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">8</span><span data-lang="en">Children &amp; Security &amp; Changes</span><span data-lang="it">Minori, sicurezza e modifiche</span></h2>
+    <p data-lang="en">The App is a professional tool for users aged 16+ and does not knowingly process children's data. Local data is protected by the OS app sandbox and device encryption; subscription traffic uses TLS. We may update this policy as the App evolves; the current version is always published at this URL with the effective date above.</p>
+    <p data-lang="it">L'App è uno strumento professionale per utenti dai 16 anni e non tratta consapevolmente dati di minori. I dati locali sono protetti dalla sandbox del sistema e dalla cifratura del dispositivo; il traffico di abbonamento usa TLS. Potremmo aggiornare questa informativa; la versione corrente è sempre pubblicata a questo URL con la data in vigore indicata sopra.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">9</span><span data-lang="en">Contact</span><span data-lang="it">Contatti</span></h2>
+    <div class="contact">
+      <a class="chip" href="mailto:mosta1570@gmail.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>mosta1570@gmail.com</a>
+      <a class="chip" href="tel:+3288168288"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10 21 3 14 3 5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>+32 88 168 288</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 RouteBudget EU · Eng. Mostafa · <a href="index.html" data-lang="en">Support</a><a href="index.html" data-lang="it">Assistenza</a></p>
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.body.dataset.active=b.dataset.set;
+      document.documentElement.lang=b.dataset.set;
+      document.querySelectorAll('.langs button').forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
