@@ -80,11 +80,10 @@
   <div class="grid">
     <div class="card full">
       <h2 data-lang="en">Contact Support</h2><h2 data-lang="it">Contatta l'assistenza</h2>
-      <p class="lead" data-lang="en">Questions, bugs or feedback? We usually reply within 24–48 hours.</p>
-      <p class="lead" data-lang="it">Domande, problemi o suggerimenti? Rispondiamo di solito entro 24–48 ore.</p>
+      <p class="lead" data-lang="en">RouteBudget EU is maintained by its independent developer, Eng. Mostafa. Support and privacy contact:</p>
+      <p class="lead" data-lang="it">RouteBudget EU è gestita dal suo sviluppatore indipendente, Eng. Mostafa. Contatto per assistenza e privacy:</p>
       <div class="contact">
         <a class="chip" href="mailto:mosta1570@gmail.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>mosta1570@gmail.com</a>
-        <a class="chip" href="tel:+3288168288"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10 21 3 14 3 5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>+32 88 168 288</a>
       </div>
     </div>
 
@@ -92,17 +91,17 @@
       <h2 data-lang="en">Frequently Asked</h2><h2 data-lang="it">Domande frequenti</h2>
       <div class="faq" data-lang="en">
         <details><summary>How is the toll cost calculated?</summary><p>By vehicle class and axle count (2 to 5+ axles) using a blended European motorway rate matrix, with a heavy-weight surcharge above 32 t.</p></details>
-        <details><summary>Does it work offline?</summary><p>Yes. All calculations run on-device. Only the optional “Get real distance” feature needs internet to look up road distance between cities.</p></details>
+        <details><summary>Does it work offline?</summary><p>Core calculations and local Archive work without internet. Real-distance lookup and subscription purchase, restore, and entitlement synchronization require network access.</p></details>
         <details><summary>How do I restore my Pro subscription?</summary><p>Open the Paywall screen and tap “Restore purchases”. Your subscription is tied to your Apple ID.</p></details>
-        <details><summary>Is my data private?</summary><p>Completely. Routes, prices and history stay on your device. Nothing is uploaded, tracked or sold. See our <a href="privacy.html">Privacy Policy</a>.</p></details>
-        <details><summary>What does Pro unlock?</summary><p>Unlimited calculations, your company logo on PDF quotes, and the advanced per-country toll matrix.</p></details>
+        <details><summary>Is my data private?</summary><p>Core calculations, Archive and settings are local-only and may be lost after uninstall because there is no cloud sync. PDFs leave the device only when you explicitly choose a destination in the system share interface. Optional foreground location is used on-device only while trip tracking is active and is not intentionally uploaded. Real-distance lookup sends origin and destination city text to Nominatim, then the resulting coordinates to OSRM. Apple processes App Store payments; RevenueCat uses an anonymous App User ID to process purchase and subscription information for Pro. No analytics or advertising SDK is installed. See our <a href="privacy.html">Privacy Policy</a>.</p></details>
+        <details><summary>What does Pro unlock?</summary><p>Unlimited calculations and your company logo on PDF quotes.</p></details>
       </div>
       <div class="faq" data-lang="it">
         <details><summary>Come viene calcolato il pedaggio?</summary><p>Per classe veicolo e numero di assi (da 2 a 5+ assi) con una matrice di tariffe autostradali europee, più un supplemento per peso oltre le 32 t.</p></details>
-        <details><summary>Funziona offline?</summary><p>Sì. Tutti i calcoli avvengono sul dispositivo. Solo la funzione “Calcola distanza reale” richiede internet per la distanza stradale tra città.</p></details>
+        <details><summary>Funziona offline?</summary><p>I calcoli principali e l'Archivio locale funzionano senza internet. La ricerca della distanza reale e l'acquisto, il ripristino e la sincronizzazione dell'abbonamento richiedono una connessione.</p></details>
         <details><summary>Come ripristino l'abbonamento Pro?</summary><p>Apri la schermata Pro e tocca “Ripristina acquisti”. L'abbonamento è legato al tuo Apple ID.</p></details>
-        <details><summary>I miei dati sono privati?</summary><p>Completamente. Tratte, prezzi e cronologia restano sul dispositivo. Nulla viene caricato, tracciato o venduto. Vedi la <a href="privacy.html">Privacy</a>.</p></details>
-        <details><summary>Cosa sblocca Pro?</summary><p>Calcoli illimitati, il logo della tua azienda sui preventivi PDF e la matrice pedaggi avanzata per Paese.</p></details>
+        <details><summary>I miei dati sono privati?</summary><p>Calcoli, Archivio e impostazioni sono solo locali e possono andare persi dopo la disinstallazione perché non esiste sincronizzazione cloud. I PDF lasciano il dispositivo solo quando scegli esplicitamente una destinazione nell'interfaccia di condivisione del sistema. La posizione in primo piano opzionale viene usata sul dispositivo solo mentre il tracciamento viaggio è attivo e non viene inviata intenzionalmente. La ricerca della distanza reale invia i nomi delle città di origine e destinazione a Nominatim, poi le coordinate risultanti a OSRM. Apple gestisce i pagamenti App Store; RevenueCat usa un ID utente anonimo per trattare le informazioni di acquisto e abbonamento per Pro. Non è installato alcun SDK di analisi o pubblicità. Vedi la <a href="privacy.html">Privacy</a>.</p></details>
+        <details><summary>Cosa sblocca Pro?</summary><p>Calcoli illimitati e il logo della tua azienda sui preventivi PDF.</p></details>
       </div>
     </div>
 
@@ -110,6 +109,10 @@
       <h2 data-lang="en">Legal</h2><h2 data-lang="it">Note legali</h2>
       <a class="pill-link" href="privacy.html" data-lang="en">Read the Privacy Policy →</a>
       <a class="pill-link" href="privacy.html" data-lang="it">Leggi la Privacy →</a>
+      <a class="pill-link" href="terms.html" data-lang="en">Read the Terms of Use →</a>
+      <a class="pill-link" href="terms.html" data-lang="it">Leggi i Termini di Servizio →</a>
+      <p data-lang="en">Any trader-status declaration or verification Apple may request through App Store Connect under the DSA is separate from this public Support and Privacy content.</p>
+      <p data-lang="it">Qualsiasi dichiarazione o verifica dello status di operatore commerciale che Apple possa richiedere tramite App Store Connect ai sensi del DSA è distinta da questi contenuti pubblici di assistenza e privacy.</p>
     </div>
   </div>
 
