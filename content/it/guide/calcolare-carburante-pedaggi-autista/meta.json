@@ -1,0 +1,44 @@
+{
+  "slug": "calcolare-carburante-pedaggi-autista",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Carburante, pedaggi e autista: controllo dei costi diretti",
+  "description": "Un controllo per allineare distanza, pedaggi e durata operativa prima di sommare carburante e costo autista nella stessa tratta.",
+  "eyebrow": "Controllo dei costi diretti",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "controllo costi diretti tratta camion",
+  "searchIntent": "informational",
+  "topics": [
+    "carburante",
+    "pedaggi",
+    "costo autista",
+    "costo di tratta"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:costo-chilometrico-camion",
+    "guide:proteggere-margine-tratta",
+    "calcolatori:costo-carburante-viaggio",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "calculatorId": null,
+  "pillar": "guide:calcolo-costo-trasporto",
+  "conversionIntent": "complete-trip",
+  "translationGroup": "calcolare-carburante-pedaggi-autista",
+  "sources": [
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "Commissione europea — Road charging",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    },
+    {
+      "label": "EUR-Lex — Regolamento (CE) n. 561/2006 sui tempi di guida e riposo",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231"
+    }
+  ]
+}

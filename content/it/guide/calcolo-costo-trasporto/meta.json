@@ -1,0 +1,46 @@
+{
+  "slug": "calcolo-costo-trasporto",
+  "kind": "pillar",
+  "locale": "it",
+  "title": "Calcolo del costo di trasporto: metodo completo per una tratta",
+  "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
+  "eyebrow": "Guida al costo di tratta",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "calcolo costo trasporto",
+  "searchIntent": "informational",
+  "topics": [
+    "costo di tratta",
+    "autotrasporto",
+    "tariffa camion",
+    "margine operativo"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:preventivo-trasporto",
+    "guide:costo-chilometrico-camion",
+    "guide:calcolare-carburante-pedaggi-autista",
+    "guide:proteggere-margine-tratta",
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:costo-carburante-viaggio"
+  ],
+  "pillar": null,
+  "calculatorId": null,
+  "conversionIntent": "complete-trip",
+  "translationGroup": "calcolo-costo-trasporto",
+  "sources": [
+    {
+      "label": "EUR-Lex — Regolamento (CE) n. 561/2006 sui tempi di guida e riposo",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231"
+    },
+    {
+      "label": "Commissione europea — Road charging",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    },
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    }
+  ]
+}

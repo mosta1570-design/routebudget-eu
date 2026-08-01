@@ -1,0 +1,40 @@
+{
+  "slug": "costi-fissi-variabili-autotrasporto",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Costi fissi e variabili nell’autotrasporto: come separarli",
+  "description": "Una classificazione pratica dei costi fissi e variabili di camion e impresa, con criteri di ripartizione utili per le singole tratte.",
+  "eyebrow": "Struttura dei costi",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "costi fissi e variabili autotrasporto",
+  "searchIntent": "informational",
+  "topics": [
+    "costi fissi",
+    "costi variabili",
+    "ripartizione costi",
+    "autotrasporto"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costo-chilometrico-camion",
+    "guide:proteggere-margine-tratta",
+    "guide:errori-calcolo-tariffa-trasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "calculatorId": null,
+  "pillar": "guide:costi-autotrasporto",
+  "conversionIntent": "protect-margin",
+  "translationGroup": "costi-fissi-variabili-autotrasporto",
+  "sources": [
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "Commissione europea — Road charging",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    }
+  ]
+}

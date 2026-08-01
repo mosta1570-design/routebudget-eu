@@ -1,0 +1,33 @@
+{
+  "slug": "preventivo-trasporto",
+  "kind": "pillar",
+  "locale": "it",
+  "title": "Preventivo di trasporto: dal costo della tratta a un’offerta chiara",
+  "description": "Come preparare un preventivo di trasporto leggibile e coerente, definendo tratta, servizio, prezzo, validità ed eventuali esclusioni.",
+  "eyebrow": "Guida al preventivo",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "preventivo trasporto",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "preventivo PDF",
+    "tariffa di trasporto",
+    "offerta cliente",
+    "margine di tratta"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:costi-autotrasporto",
+    "guide:proteggere-margine-tratta",
+    "guide:errori-calcolo-tariffa-trasporto",
+    "guide:calcolare-carburante-pedaggi-autista",
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:costo-carburante-viaggio"
+  ],
+  "pillar": null,
+  "calculatorId": null,
+  "conversionIntent": "pdf-quote",
+  "translationGroup": "preventivo-trasporto",
+  "sources": []
+}

@@ -1,0 +1,17 @@
+{
+  "name": "RouteBudget EU",
+  "origin": "https://mosta1570-design.github.io",
+  "basePath": "/routebudget-eu",
+  "author": "Eng. Mostafa",
+  "appStoreUrl": "https://apps.apple.com/app/id6789717191",
+  "googlePlayUrl": "https://play.google.com/store/apps/details?id=eu.routebudget.app",
+  "locales": {
+    "it": {
+      "language": "Italiano",
+      "languageTag": "it-IT",
+      "guideSegment": "guide",
+      "calculatorSegment": "calcolatori",
+      "comparisonSegment": "confronti"
+    }
+  }
+}

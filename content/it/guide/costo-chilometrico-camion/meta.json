@@ -1,0 +1,40 @@
+{
+  "slug": "costo-chilometrico-camion",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Costo chilometrico storico del camion: periodo e consuntivo",
+  "description": "Come ricavare un costo chilometrico gestionale da spese e chilometri dello stesso periodo, distinguendo chilometri totali e fatturabili.",
+  "eyebrow": "Analisi periodica per chilometro",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "calcolo costo chilometrico camion da consuntivo",
+  "searchIntent": "informational",
+  "topics": [
+    "costo per km",
+    "camion",
+    "costi operativi",
+    "chilometri a vuoto"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "guide:calcolare-carburante-pedaggi-autista",
+    "guide:proteggere-margine-tratta",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "calculatorId": null,
+  "pillar": "guide:costi-autotrasporto",
+  "conversionIntent": "protect-margin",
+  "translationGroup": "costo-chilometrico-camion",
+  "sources": [
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "Commissione europea — Road charging",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    }
+  ]
+}

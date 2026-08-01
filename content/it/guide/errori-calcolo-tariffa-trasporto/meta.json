@@ -1,0 +1,44 @@
+{
+  "slug": "errori-calcolo-tariffa-trasporto",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Errori nella tariffa di trasporto: 10 controlli prima dell’offerta",
+  "description": "Gli errori operativi che rendono fragile una tariffa di trasporto, dalla distanza al ritorno a vuoto fino a tempi, pedaggi e validità.",
+  "eyebrow": "Controllo della tariffa",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "errori calcolo tariffa trasporto",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "tariffa trasporto",
+    "preventivo",
+    "ritorno a vuoto",
+    "controllo costi"
+  ],
+  "related": [
+    "guide:preventivo-trasporto",
+    "guide:calcolo-costo-trasporto",
+    "guide:proteggere-margine-tratta",
+    "guide:calcolare-carburante-pedaggi-autista",
+    "guide:costi-fissi-variabili-autotrasporto"
+  ],
+  "calculatorId": null,
+  "pillar": "guide:preventivo-trasporto",
+  "conversionIntent": "complete-trip",
+  "translationGroup": "errori-calcolo-tariffa-trasporto",
+  "sources": [
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "Commissione europea — Road charging",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    },
+    {
+      "label": "EUR-Lex — Regolamento (CE) n. 561/2006 sui tempi di guida e riposo",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231"
+    }
+  ]
+}

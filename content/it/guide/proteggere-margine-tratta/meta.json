@@ -1,0 +1,31 @@
+{
+  "slug": "proteggere-margine-tratta",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Analisi di sensibilità del margine per una tratta camion",
+  "description": "Come stressare una stima di tratta variando carburante, attese, itinerario e ritorno a vuoto per capire quanto margine resta.",
+  "eyebrow": "Stress test della tratta",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "analisi sensibilità margine tratta",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "margine",
+    "punto di pareggio",
+    "scenari di prezzo",
+    "rischio operativo"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:preventivo-trasporto",
+    "guide:costo-chilometrico-camion",
+    "guide:errori-calcolo-tariffa-trasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "calculatorId": null,
+  "pillar": "guide:calcolo-costo-trasporto",
+  "conversionIntent": "protect-margin",
+  "translationGroup": "proteggere-margine-tratta",
+  "sources": []
+}

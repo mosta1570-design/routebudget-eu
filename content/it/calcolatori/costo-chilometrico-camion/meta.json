@@ -1,0 +1,39 @@
+{
+  "slug": "costo-chilometrico-camion",
+  "kind": "calculator",
+  "locale": "it",
+  "title": "Calcolatore del costo chilometrico camion",
+  "description": "Calcola gratuitamente costo della tratta, costo per km percorso e costo per km carico usando carburante, pedaggi, autista, usura e costi fissi.",
+  "eyebrow": "Calcolatore costo per km",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "calcolatore costo chilometrico camion",
+  "searchIntent": "transactional-informational",
+  "topics": [
+    "costo per chilometro",
+    "costi fissi camion",
+    "carburante",
+    "costo autista"
+  ],
+  "related": [
+    "guide:costo-chilometrico-camion",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "guide:calcolo-costo-trasporto",
+    "calcolatori:costo-carburante-viaggio"
+  ],
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": "cost-per-km",
+  "conversionIntent": "complete-trip",
+  "translationGroup": "calculator-cost-per-km-truck",
+  "sources": [
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "Commissione europea — Road charging",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    }
+  ]
+}

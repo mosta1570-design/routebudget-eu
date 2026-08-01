@@ -1,0 +1,46 @@
+{
+  "slug": "costi-autotrasporto",
+  "kind": "pillar",
+  "locale": "it",
+  "title": "Costi dell’autotrasporto: mappa completa per gestire una piccola flotta",
+  "description": "Una guida pratica ai costi fissi, variabili e indiretti dell’autotrasporto per capire il costo per km e proteggere il margine.",
+  "eyebrow": "Economia dell’autotrasporto",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "primaryKeyword": "costi autotrasporto",
+  "searchIntent": "informational",
+  "topics": [
+    "costi fissi",
+    "costi variabili",
+    "costo chilometrico",
+    "gestione flotta"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:preventivo-trasporto",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "guide:costo-chilometrico-camion",
+    "guide:proteggere-margine-tratta",
+    "guide:errori-calcolo-tariffa-trasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "pillar": null,
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "translationGroup": "costi-autotrasporto",
+  "sources": [
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "Commissione europea — Road charging",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    },
+    {
+      "label": "EUR-Lex — Regolamento (CE) n. 561/2006 sui tempi di guida e riposo",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231"
+    }
+  ]
+}
