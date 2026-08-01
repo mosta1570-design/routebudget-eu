@@ -21,6 +21,7 @@
     "guide:costi-autotrasporto",
     "guide:proteggere-margine-tratta",
     "guide:errori-calcolo-tariffa-trasporto",
+    "guide:preventivo-trasporto-pdf",
     "guide:calcolare-carburante-pedaggi-autista",
     "calcolatori:costo-chilometrico-camion",
     "calcolatori:costo-carburante-viaggio"
@@ -29,5 +30,19 @@
   "calculatorId": null,
   "conversionIntent": "pdf-quote",
   "translationGroup": "preventivo-trasporto",
-  "sources": []
+  "sources": [],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "preventivo trasporto merci",
+    "calcolo preventivo trasporto"
+  ],
+  "cluster": "preventivi-trasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "pdf-quote",
+  "canonical": "/it/guide/preventivo-trasporto/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
 }

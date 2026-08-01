@@ -27,5 +27,19 @@
   "pillar": "guide:calcolo-costo-trasporto",
   "conversionIntent": "protect-margin",
   "translationGroup": "proteggere-margine-tratta",
-  "sources": []
+  "sources": [],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "margine trasporto",
+    "prezzo minimo tratta"
+  ],
+  "cluster": "margini-e-tariffe",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "cost-scenarios",
+  "canonical": "/it/guide/proteggere-margine-tratta/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
 }

@@ -1,0 +1,72 @@
+{
+  "slug": "usura-manutenzione-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Usura e manutenzione camion: quota corretta nel costo tratta",
+  "description": "Metodo pratico per trasformare manutenzione, pneumatici e usura in quote per chilometro o missione, usando consuntivi aziendali e limiti espliciti.",
+  "eyebrow": "Costo tecnico del mezzo",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "usura manutenzione camion costo tratta",
+  "secondaryKeywords": [
+    "costo manutenzione camion per km",
+    "quota usura autocarro",
+    "pneumatici costo chilometrico",
+    "costi operativi camion"
+  ],
+  "searchIntent": "informational",
+  "conversionIntent": "complete-trip",
+  "translationGroup": "truck-wear-maintenance-trip-cost",
+  "cluster": "costi-autotrasporto",
+  "pillar": "guide:costi-autotrasporto",
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "guide:costo-chilometrico-camion",
+    "guide:calcolo-costo-trasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "calculatorId": null,
+  "appFeature": "cost-breakdown",
+  "canonical": "/it/guide/usura-manutenzione-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "topics": [
+    "manutenzione camion",
+    "usura per chilometro",
+    "pneumatici",
+    "costo di tratta"
+  ],
+  "sources": [
+    {
+      "label": "Commissione europea — Vehicle inspection",
+      "url": "https://road-safety.transport.ec.europa.eu/eu-road-safety-policy/priorities/safe-vehicles/vehicle-inspection_en",
+      "publishedOrUpdated": "Pagina live consultata il 2026-08-01",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-01",
+      "supports": "Contesto ufficiale sul ruolo di manutenzione e controlli di efficienza e sicurezza dei veicoli."
+    },
+    {
+      "label": "EUR-Lex — Direttiva 2014/45/UE sui controlli tecnici periodici",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32014L0045",
+      "publishedOrUpdated": "Versione consolidata disponibile dal 2023-05-20",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-01",
+      "supports": "Quadro normativo europeo dei controlli tecnici; non definisce una quota economica universale di manutenzione."
+    },
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en",
+      "publishedOrUpdated": "Ultimi file pubblicati il 2026-07-30",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-01",
+      "supports": "Separazione tra input carburante aggiornato e quota tecnica di usura/manutenzione."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: tre metodi di ripartizione, esempio numerico, registro dati e controlli contro il doppio conteggio."
+}

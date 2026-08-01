@@ -1,8 +1,10 @@
 {
   "name": "RouteBudget EU",
-  "origin": "https://mosta1570-design.github.io",
-  "basePath": "/routebudget-eu",
+  "origin": "https://routebudget.eu",
+  "basePath": "",
   "author": "Eng. Mostafa",
+  "coreLastModified": "2026-08-01",
+  "legalLastModified": "2026-08-01",
   "appStoreUrl": "https://apps.apple.com/app/id6789717191",
   "googlePlayUrl": "https://play.google.com/store/apps/details?id=eu.routebudget.app",
   "locales": {

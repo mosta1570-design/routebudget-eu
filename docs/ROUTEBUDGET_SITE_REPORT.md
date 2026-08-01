@@ -1,5 +1,7 @@
 # RouteBudget EU website report
 
+> Historical checkpoint. Current reference-led homepage and final Higgsfield media state are documented in [VISUAL_COMPARISON_REPORT.md](./VISUAL_COMPARISON_REPORT.md) and [HIGGSFIELD_ASSET_REPORT.md](./HIGGSFIELD_ASSET_REPORT.md). Statements below describe the superseded pre-redesign checkpoint.
+
 ## Outcome
 
 Rebuilt existing public site as a production-ready React + TypeScript + Tailwind CSS + Vite landing page. Direction is Italian-first, dark, cinematic, and product-led. Composition takes only broad confidence and pacing cues from the supplied reference; branding, layout, copy, imagery, and interactions are original RouteBudget work.
@@ -44,7 +46,7 @@ Rebuilt existing public site as a production-ready React + TypeScript + Tailwind
 - Styling: Tailwind CSS 4 pipeline plus a committed custom design system in `src/styles.css`.
 - Components: header, hero, cost equation, product showcase, workflow, audiences, support, closing CTA, footer.
 - Legal pages remain static under `public/` to preserve `/privacy.html` and `/terms.html`.
-- GitHub Pages base path remains `/routebudget-eu/`.
+- Custom apex target is `https://routebudget.eu/`, with Vite base path `/` and `CNAME` included in the artifact.
 - Official GitHub Pages deployment workflow builds `dist/` after `npm run check`.
 
 ## Verification

@@ -22,6 +22,7 @@
     "guide:costo-chilometrico-camion",
     "guide:calcolare-carburante-pedaggi-autista",
     "guide:proteggere-margine-tratta",
+    "guide:ritorno-a-vuoto-autotrasporto",
     "calcolatori:costo-chilometrico-camion",
     "calcolatori:costo-carburante-viaggio"
   ],
@@ -42,5 +43,19 @@
       "label": "Commissione europea — Weekly Oil Bulletin",
       "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
     }
-  ]
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "prezzo tratta camion",
+    "calcolo tariffa autotrasporto"
+  ],
+  "cluster": "costo-trasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "complete-route-calculation",
+  "canonical": "/it/guide/calcolo-costo-trasporto/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
 }

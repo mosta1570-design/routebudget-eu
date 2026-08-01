@@ -32,8 +32,8 @@ Formulazioni consigliate: “stima”, “indicativo”, “aiuta a valutare”,
 Al 1 agosto 2026:
 
 - la landing premium e i collegamenti pubblici ad App Store e Google Play esistono;
-- il sito è pubblicato sotto `https://mosta1570-design.github.io/routebudget-eu/`;
-- il worktree genera un `robots.txt` sotto il path progetto che consente la scansione e indica `sitemap.xml`; la disponibilità dell'endpoint pubblico e il comportamento del `robots.txt` alla radice dell'host restano da verificare dopo il deploy;
+- il repository usa `https://routebudget.eu/` come target canonico; pubblicazione sul dominio resta da verificare dopo il deploy;
+- il worktree genera `/robots.txt` con scansione consentita e riferimento a `https://routebudget.eu/sitemap.xml`; disponibilità pubblica resta da verificare dopo il deploy;
 - il sito pubblico precedente esponeva un sitemap bootstrap con homepage, Privacy e Termini; il worktree ora genera durante la build un inventario di 15 URL (3 fisse, 2 hub, 3 pillar, 5 guide e 2 calcolatori), da verificare sul sito solo dopo il deploy;
 - il selettore IT/EN della landing cambia contenuto sulla stessa URL: le future pagine organiche dovranno invece avere URL distinte e scansionabili;
 - Privacy e Termini pubblici descrivono l'app, non autorizzano automaticamente un sistema di analytics del sito.
@@ -68,36 +68,36 @@ La procedura giornaliera e i controlli di pubblicazione sono in [SEO_EDITORIAL_W
 
 ### Radice di prodotto
 
-- `/routebudget-eu/` — landing premium, panoramica verificata e accesso agli store.
+- `/` — landing premium, panoramica verificata e accesso agli store.
 
 ### Hub editoriali
 
-- `/routebudget-eu/it/guide/` — guide e pillar.
-- `/routebudget-eu/it/calcolatori/` — strumenti gratuiti e relativa spiegazione.
-- `/routebudget-eu/it/confronti/` — decisioni, metodi e scenari confrontati senza classifiche artificiali.
+- `/it/guide/` — guide e pillar.
+- `/it/calcolatori/` — strumenti gratuiti e relativa spiegazione.
+- `/it/confronti/` — decisioni, metodi e scenari confrontati senza classifiche artificiali.
 
 ### Spina iniziale
 
 Pillar:
 
-- `/routebudget-eu/it/guide/calcolo-costo-trasporto/`
-- `/routebudget-eu/it/guide/costi-autotrasporto/`
-- `/routebudget-eu/it/guide/preventivo-trasporto/`
+- `/it/guide/calcolo-costo-trasporto/`
+- `/it/guide/costi-autotrasporto/`
+- `/it/guide/preventivo-trasporto/`
 
 Primi strumenti:
 
-- `/routebudget-eu/it/calcolatori/costo-chilometrico-camion/`
-- `/routebudget-eu/it/calcolatori/costo-carburante-viaggio/`
+- `/it/calcolatori/costo-chilometrico-camion/`
+- `/it/calcolatori/costo-carburante-viaggio/`
 
 Guide di supporto M1 generate nel build, con pubblicazione da confermare dopo il deploy:
 
-- `/routebudget-eu/it/guide/calcolare-carburante-pedaggi-autista/`
-- `/routebudget-eu/it/guide/costi-fissi-variabili-autotrasporto/`
-- `/routebudget-eu/it/guide/costo-chilometrico-camion/`
-- `/routebudget-eu/it/guide/errori-calcolo-tariffa-trasporto/`
-- `/routebudget-eu/it/guide/proteggere-margine-tratta/`
+- `/it/guide/calcolare-carburante-pedaggi-autista/`
+- `/it/guide/costi-fissi-variabili-autotrasporto/`
+- `/it/guide/costo-chilometrico-camion/`
+- `/it/guide/errori-calcolo-tariffa-trasporto/`
+- `/it/guide/proteggere-margine-tratta/`
 
-La versione su un futuro dominio mantiene i path da `/it/` in avanti. Gli slug non includono l'anno salvo che l'anno sia parte essenziale dell'intento; gli aggiornamenti sostanziali avvengono sulla stessa URL.
+Il dominio personalizzato mantiene i path da `/it/` in avanti. Gli slug non includono l'anno salvo che l'anno sia parte essenziale dell'intento; gli aggiornamenti sostanziali avvengono sulla stessa URL.
 
 ## 7. Modello a cluster
 
@@ -199,7 +199,7 @@ Italiano resta il banco di prova. Inglese, tedesco, francese, polacco, romeno e 
 
 Per ogni traduzione:
 
-- creare una URL separata e scansionabile, per esempio `/routebudget-eu/en/guide/...` sull'host corrente; dopo una migrazione al dominio posseduto, mantenere il path `/en/guide/...`;
+- creare una URL separata e scansionabile, per esempio `/en/guide/...` sul dominio corrente, mantenendo stabile quel path;
 - adattare esempi, terminologia, valuta, fonti e regole locali;
 - usare canonical autoreferenziale, non canonical verso l'italiano;
 - collegare reciprocamente tutte le varianti pubblicate con `hreflang` completi;

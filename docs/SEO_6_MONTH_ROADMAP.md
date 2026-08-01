@@ -19,13 +19,13 @@ Il piano non promette traffico, indicizzazione o posizionamenti. Google Search C
 
 ## Architettura e convenzioni
 
-Il base path pubblico resta `/routebudget-eu/`. La homepage prodotto mantiene tale URL; il contenuto italiano usa percorsi crawlable completi sotto `/routebudget-eu/it/`:
+Il dominio canonico è `https://routebudget.eu/`. La homepage prodotto usa il path `/`; il contenuto italiano usa percorsi crawlable completi sotto `/it/`:
 
-- pillar e guide: `/routebudget-eu/it/guide/{slug}/`
-- strumenti: `/routebudget-eu/it/calcolatori/{slug}/`
-- confronti decisionali futuri: `/routebudget-eu/it/confronti/{slug}/`
+- pillar e guide: `/it/guide/{slug}/`
+- strumenti: `/it/calcolatori/{slug}/`
+- confronti decisionali futuri: `/it/confronti/{slug}/`
 
-Le lingue future usano lo stesso schema (`/routebudget-eu/en/`, `/routebudget-eu/de/`, `/routebudget-eu/fr/`, `/routebudget-eu/pl/`, `/routebudget-eu/ro/`, `/routebudget-eu/ar/`) e vengono pubblicate solo quando esiste una traduzione adattata e revisionata. Ogni URL deve essere staticamente renderizzato o prerenderizzato, avere canonical auto-referenziale, title e description unici, breadcrumb visibili, metadata social, dati strutturati appropriati e inclusione selettiva nella sitemap. Un cambio lingua non deve dipendere da solo stato client-side.
+Le lingue future usano lo stesso schema (`/en/`, `/de/`, `/fr/`, `/pl/`, `/ro/`, `/ar/`) e vengono pubblicate solo quando esiste una traduzione adattata e revisionata. Ogni URL deve essere staticamente renderizzato o prerenderizzato, avere canonical auto-referenziale, title e description unici, breadcrumb visibili, metadata social, dati strutturati appropriati e inclusione selettiva nella sitemap. Un cambio lingua non deve dipendere da solo stato client-side.
 
 ## Baseline prima della pubblicazione
 
@@ -52,22 +52,22 @@ Rendere il sistema pubblicabile e misurabile, quindi lanciare tre pillar, due ca
 
 Pillar iniziali:
 
-1. `/routebudget-eu/it/guide/calcolo-costo-trasporto/` — metodo completo per calcolare il costo di una tratta.
-2. `/routebudget-eu/it/guide/costi-autotrasporto/` — costi fissi e variabili, costo/km e attribuzione alla singola tratta.
-3. `/routebudget-eu/it/guide/preventivo-trasporto/` — dal costo al prezzo e al preventivo professionale.
+1. `/it/guide/calcolo-costo-trasporto/` — metodo completo per calcolare il costo di una tratta.
+2. `/it/guide/costi-autotrasporto/` — costi fissi e variabili, costo/km e attribuzione alla singola tratta.
+3. `/it/guide/preventivo-trasporto/` — dal costo al prezzo e al preventivo professionale.
 
 Calcolatori iniziali:
 
-1. `/routebudget-eu/it/calcolatori/costo-chilometrico-camion/`
-2. `/routebudget-eu/it/calcolatori/costo-carburante-viaggio/`
+1. `/it/calcolatori/costo-chilometrico-camion/`
+2. `/it/calcolatori/costo-carburante-viaggio/`
 
 Guide iniziali:
 
-1. `/routebudget-eu/it/guide/calcolare-carburante-pedaggi-autista/`
-2. `/routebudget-eu/it/guide/costi-fissi-variabili-autotrasporto/`
-3. `/routebudget-eu/it/guide/costo-chilometrico-camion/`
-4. `/routebudget-eu/it/guide/errori-calcolo-tariffa-trasporto/`
-5. `/routebudget-eu/it/guide/proteggere-margine-tratta/`
+1. `/it/guide/calcolare-carburante-pedaggi-autista/`
+2. `/it/guide/costi-fissi-variabili-autotrasporto/`
+3. `/it/guide/costo-chilometrico-camion/`
+4. `/it/guide/errori-calcolo-tariffa-trasporto/`
+5. `/it/guide/proteggere-margine-tratta/`
 
 Ogni pagina segue la mappa keyword e il cluster assegnato, contiene almeno un esempio verificabile, collega il pillar, una risorsa correlata, la funzione RouteBudget pertinente e una CTA store contestuale.
 
@@ -82,7 +82,7 @@ Ogni pagina segue la mappa keyword e il cluster assegnato, contiene almeno un es
 
 ### Search Console e misurazione
 
-- Dopo il deployment su GitHub Pages, verificare la proprietà GSC di tipo **prefisso URL** per `https://mosta1570-design.github.io/routebudget-eu/`. Creare una Domain property solo dopo il passaggio a un dominio RouteBudget controllato via DNS.
+- Dopo il deployment sul dominio personalizzato, verificare la proprietà GSC di tipo **Dominio** per `routebudget.eu` tramite DNS. Usare una proprietà **Prefisso URL** per `https://routebudget.eu/` solo come supporto transitorio o diagnostico.
 - Inviare la sitemap e ispezionare homepage, tre pillar e due calcolatori; richiedere l'indicizzazione solo dopo QA.
 - Usare come unico contratto di misurazione la tassonomia e le fasi di autorizzazione in [SEO_CONVERSION_MAP.md](./SEO_CONVERSION_MAP.md). Nessun endpoint analytics viene attivato prima della revisione privacy prevista.
 - Annotare nel registro editoriale la data effettiva del primo deploy pubblico e le modifiche sostanziali; una data di build o preview non è una data di pubblicazione.
@@ -98,7 +98,7 @@ Ogni pagina segue la mappa keyword e il cluster assegnato, contiene almeno un es
 
 ### Produzione pianificata
 
-- Pubblicare `/routebudget-eu/it/calcolatori/margine-trasporto/` e `/routebudget-eu/it/calcolatori/prezzo-minimo-tratta/`.
+- Pubblicare `/it/calcolatori/margine-trasporto/` e `/it/calcolatori/prezzo-minimo-tratta/`.
 - Pubblicare guide su `prezzo minimo, consigliato e ideale`, `errori nel calcolo di una tariffa`, `ritorno a vuoto` e `punto di pareggio della tratta`.
 - Creare una risorsa linkabile: checklist scaricabile/stampabile “Dati da raccogliere prima di quotare una tratta”, senza raccogliere email come condizione d'accesso.
 
@@ -116,9 +116,9 @@ Continuare a espandere una pagina se acquisisce query coerenti, impressioni cres
 
 ### Produzione pianificata
 
-- Pubblicare il pillar `/routebudget-eu/it/guide/pedaggi-autostradali-camion/`.
+- Pubblicare il pillar `/it/guide/pedaggi-autostradali-camion/`.
 - Pubblicare supporti su assi/peso/classe, come verificare un pedaggio, costo autista e durata operativa, e pause dopo periodi di guida.
-- Pubblicare `/routebudget-eu/it/calcolatori/costi-fissi-variabili/` e un foglio di preparazione pedaggi che somma importi inseriti dall'utente, senza fingere un tariffario ufficiale.
+- Pubblicare `/it/calcolatori/costi-fissi-variabili/` e un foglio di preparazione pedaggi che somma importi inseriti dall'utente, senza fingere un tariffario ufficiale.
 - Aggiungere esempi di tratta solo con dati dichiarati come ipotetici e data/fonte per eventuali tariffe esterne.
 
 ### Autorità e distribuzione

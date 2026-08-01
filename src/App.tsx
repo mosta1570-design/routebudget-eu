@@ -1,15 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { AudienceSection } from './components/AudienceSection';
-import { ClosingSection } from './components/ClosingSection';
-import { CostEquation } from './components/CostEquation';
-import { GrowthResourcesSection } from './components/GrowthResourcesSection';
-import { Hero } from './components/Hero';
-import { ProductShowcase } from './components/ProductShowcase';
-import { SiteFooter } from './components/SiteFooter';
-import { SiteHeader } from './components/SiteHeader';
-import { SupportSection } from './components/SupportSection';
-import { WorkflowSection } from './components/WorkflowSection';
+import { CinematicHero } from './components/CinematicHero';
+import { ProductContinuation } from './components/ProductContinuation';
 import { siteCopy, type Locale } from './content/siteCopy';
 
 const LOCALE_KEY = 'routebudget-site-locale';
@@ -25,6 +17,7 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.lang = locale;
+    document.body.dataset.locale = locale;
     window.localStorage.setItem(LOCALE_KEY, locale);
   }, [locale]);
 
@@ -33,18 +26,10 @@ export default function App() {
       <a className="skip-link" href="#contenuto">
         {copy.skipLabel}
       </a>
-      <SiteHeader locale={locale} copy={copy} onLocaleChange={setLocale} />
       <main id="contenuto">
-        <Hero copy={copy.hero} />
-        <CostEquation copy={copy.equation} />
-        <ProductShowcase copy={copy.showcase} />
-        <WorkflowSection copy={copy.flow} />
-        <GrowthResourcesSection copy={copy.resources} />
-        <AudienceSection copy={copy.audience} />
-        <SupportSection copy={copy.support} />
-        <ClosingSection copy={copy.closing} />
+        <CinematicHero locale={locale} onLocaleChange={setLocale} />
+        <ProductContinuation copy={copy} locale={locale} />
       </main>
-      <SiteFooter copy={copy.footer} />
     </>
   );
 }

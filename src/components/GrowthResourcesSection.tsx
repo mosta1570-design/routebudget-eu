@@ -52,7 +52,7 @@ export function GrowthResourcesSection({ copy }: GrowthResourcesSectionProps) {
           </ol>
         </div>
 
-        <a className="growth-resources__hub" href="/routebudget-eu/it/guide/">
+        <a className="growth-resources__hub" href="/it/guide/">
           {copy.hubAction}
           <ArrowUpRight aria-hidden="true" size={19} />
         </a>

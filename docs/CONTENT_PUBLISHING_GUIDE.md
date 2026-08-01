@@ -6,16 +6,18 @@ System publishes crawlable guides, calculators, and comparisons without changing
 
 Public landing base and canonical deployment target; generated editorial routes remain pending until a production deploy returns `200`:
 
-- site: `https://mosta1570-design.github.io/routebudget-eu/`
-- Italian guides: `/routebudget-eu/it/guide/`
-- Italian calculators: `/routebudget-eu/it/calcolatori/`
-- planned comparisons: `/routebudget-eu/it/confronti/`
+- site: `https://routebudget.eu/`
+- Italian guides: `/it/guide/`
+- Italian calculators: `/it/calcolatori/`
+- planned comparisons: `/it/confronti/`
 
 ## Source layout
 
 ```text
 content/
   site.json
+  sources.json
+  meta.schema.json
   it/
     guide/
       <slug>/
@@ -26,6 +28,10 @@ content/
         meta.json
         body.md
     confronti/
+      <slug>/
+        meta.json
+        body.md
+    landing/
       <slug>/
         meta.json
         body.md
@@ -62,23 +68,33 @@ Use `content/it/confronti/<slug>/` with `kind: "comparison"` only for a distinct
 | Field | Contract |
 | --- | --- |
 | `slug` | lowercase ASCII words joined by hyphens; must match folder |
-| `kind` | `pillar`, `guide`, `calculator`, or `comparison` |
+| `kind` | `pillar`, `guide`, `calculator`, `comparison`, or `landing` |
 | `locale` | source locale, currently `it` |
-| `title` | unique visible H1 and title basis; maximum 90 characters |
+| `status` | editorial lifecycle; only `published` can enter the public build |
+| `title` | unique visible H1 and title basis; maximum 75 characters |
 | `description` | specific 70–180 character summary |
 | `eyebrow` | short editorial context above H1 |
 | `published` | actual first public deployment date, `YYYY-MM-DD`; preview/build date is not publication |
 | `modified` | last meaningful content change, never a cosmetic date bump |
 | `reviewed` | latest accuracy/editorial review date |
+| `author`, `reviewer` | approved real editorial identity |
 | `primaryKeyword` | single query intent owner |
+| `secondaryKeywords` | at least two related variants owned by same intent |
 | `searchIntent` | informational, commercial, transactional, or combined |
+| `cluster` | stable topical group |
 | `topics` | at least two closely related subjects |
 | `related` | at least two valid local references |
+| `relatedCalculator` | relevant calculator reference, also present in `related` |
 | `pillar` | `guide:<slug>` for guides, calculators, and comparisons; `null` on pillar |
 | `calculatorId` | `cost-per-km` or `fuel-trip` on the matching calculators; `null` on guides, pillars, and comparisons |
 | `conversionIntent` | `complete-trip`, `pdf-quote`, `protect-margin`, or `unlimited` |
+| `appFeature` | verified product capability used by contextual CTA |
 | `translationGroup` | stable cross-language identity, not translated slug |
-| `sources` | authoritative HTTPS sources visibly rendered on page; empty allowed |
+| `canonical` | exact generated production path |
+| `ogImage` | production image path |
+| `noindex` | `false` for published; required `true` for every other status |
+| `sources` | authoritative HTTPS source references; time-sensitive details inline or in `sources.json` |
+| `changeSummary` | meaningful reason for latest update |
 
 Reference format is section plus slug, for example:
 
@@ -110,7 +126,7 @@ Build fails for missing references, duplicate page identities, invalid dates, we
 Every supporting guide must connect:
 
 1. back to one pillar through `pillar`;
-2. to 2–6 related guides or calculators through `related`;
+2. to 2–5 related guides or calculators through `related`;
 3. to a truthful RouteBudget app capability through `conversionIntent`;
 4. to both verified store listings through generated CTA.
 
@@ -156,7 +172,7 @@ Any future analytics endpoint, persistent identifier, or returning-visitor logic
 ## Verification commands
 
 ```bash
-npm run check
+npm run seo:all
 npm run preview
 ```
 
@@ -164,7 +180,7 @@ Expected build products:
 
 - one HTML file per source page;
 - guide and calculator hub `index.html` files;
-- `dist/sitemap.xml` with accurate canonical URLs and meaningful `lastmod`;
+- `dist/sitemap.xml` index plus four deterministic child sitemaps;
 - `dist/content-manifest.json` for editorial QA;
 - passing calculator fixtures;
 - no unresolved internal references.

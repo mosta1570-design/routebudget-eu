@@ -1,380 +1,191 @@
 # RouteBudget EU — Workflow editoriale SEO
 
-Procedura operativa standard per ideare, pubblicare, migliorare, tradurre e ritirare contenuti organici.
+Sistema Italian-first per creare contenuti utili, verificabili e coerenti col prodotto. La keyword documenta un bisogno; non giustifica da sola una pagina.
 
-## 1. Principio editoriale
-
-Una pagina nasce per aiutare un professionista del trasporto a prendere una decisione migliore. La keyword descrive il bisogno; non giustifica da sola la pubblicazione.
-
-Google raccomanda contenuti originali, completi, affidabili e creati per le persone, con paternità e metodo trasparenti. Non richiede un conteggio di parole prestabilito e sconsiglia di cambiare date senza aggiornamenti sostanziali: [Creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content).
-
-## 2. Ruoli reali, non personaggi editoriali
-
-| Ruolo | Responsabilità | Condizione |
-| --- | --- | --- |
-| Responsabile editoriale | approva intento, priorità, titolo, aggiornamenti e ritiro | una persona nominata nel registro interno |
-| Autore | ricerca, scrive e registra le fonti | byline reale solo se autorizzata e verificabile |
-| Revisore di materia | controlla formule, terminologia, esempi e fonti del trasporto | non attribuire qualifiche non dimostrate |
-| Revisore prodotto | confronta le affermazioni con app, store, Privacy e Termini correnti | obbligatorio quando si cita RouteBudget |
-| Revisore locale | adatta una traduzione alla lingua e al mercato | obbligatorio prima di indicizzare una lingua nuova |
-| Responsabile tecnico | valida URL, metadata, rendering, link, sitemap e deploy | firma la checklist di pubblicazione |
-
-Una persona può coprire più ruoli, ma ogni controllo deve avere nome reale e data nel registro. Non creare autori fittizi, “redazioni” inesistenti o biografie costruite per sembrare autorevoli.
-
-## 3. Stati del contenuto
+## 1. Ciclo di vita
 
 ```text
-BACKLOG
-→ QUALIFICATO
-→ BRIEF_APPROVATO
-→ BOZZA
-→ REVISIONE_FONTI
-→ REVISIONE_PRODOTTO_SEO
-→ PRONTO
-→ PUBBLICATO
-→ MONITORATO
-→ AGGIORNARE | TRADURRE | UNIRE | RITIRARE
+idea
+→ keyword e prove SERP
+→ brief
+→ bozza
+→ revisione fattuale
+→ revisione verità prodotto
+→ validazione SEO
+→ preview design
+→ pubblicazione
+→ invio/scoperta
+→ monitoraggio
+→ miglioramento
 ```
 
-Ogni passaggio ha un criterio di uscita. Nessun contenuto passa direttamente da bozza a pubblicato.
+Stati consentiti:
 
-## 4. Intake settimanale
+| Stato | Criterio ingresso | Criterio uscita |
+| --- | --- | --- |
+| `idea` | bisogno o opportunità registrata | pubblico, problema, cluster ed evidenza definiti |
+| `researching` | ricerca approvata | keyword/intento/SERP/fonti/cannibalizzazione documentati |
+| `brief-ready` | brief completo | owner e revisori approvano perimetro e valore originale |
+| `drafting` | struttura approvata | bozza completa, fonti e limiti inclusi |
+| `review` | bozza consegnata | fatti, prodotto, lingua, SEO, accessibilità e design approvati |
+| `approved` | tutti i gate verdi | release editoriale inclusa in deploy autorizzato |
+| `published` | URL pubblica `200` e canonica | monitoraggio attivo o trigger di aggiornamento |
+| `updating` | evidenza di modifica | nuova review completa e rilascio approvato |
+| `retired` | contenuto non più utile/corretto | redirect o esclusione deliberata documentati |
 
-Le idee ammesse arrivano da:
+Nessun salto da `drafting` a `published`. Il deploy non è autorizzato da questo documento.
 
-- query e coppie query/pagina in Search Console;
-- domande di supporto, solo dopo anonimizzazione;
-- lacune individuate dentro un cluster esistente;
-- fonti ufficiali cambiate;
-- funzioni di prodotto effettivamente rilasciate;
-- necessità pratica che una guida o un calcolatore può risolvere meglio.
+## 2. Ruoli reali
 
-Per ogni idea registrare:
-
-| Campo | Domanda |
+| Ruolo | Responsabilità |
 | --- | --- |
-| Problema | quale decisione deve prendere il lettore? |
-| Pubblico | autista, padroncino o piccola impresa? |
-| Evidenza | query reale, domanda di supporto, fonte o lacuna? |
-| Cluster | quale pillar rafforza? |
-| Differenza | quale utilità originale aggiunge? |
-| Manutenzione | quali dati possono cambiare e chi li controllerà? |
-| Conversione | quale funzione RouteBudget completa il compito? |
+| Responsabile editoriale | intento, priorità, lifecycle, approvazione |
+| Autore | ricerca, bozza, registro fonti |
+| Revisore fattuale | formule, norme, date, geografia, fonti |
+| Revisore prodotto | claim RouteBudget vs app/store/privacy/termini correnti |
+| Revisore SEO | intent owner, metadata, link, canonical, schema |
+| Revisore design/accessibilità | mobile, tabelle, controlli, focus, reduced motion |
+| Responsabile tecnico | build, rendering statico, sitemap, robots, test |
+| Revisore locale | lingua e mercato per future traduzioni |
 
-L'idea resta nel backlog se non ha pubblico, fonte, differenza o collocazione nel cluster.
+Una persona può coprire più ruoli, ma firma con nome reale e data nel registro interno. Non creare esperti, testimonianze, redazioni o qualifiche fittizie. Sul sito usare solo identità RouteBudget/Corvian già approvata e contatto professionale configurato; niente indirizzo di casa, telefono personale o email privata aggiuntiva.
 
-## 5. Controllo dell'intento e cannibalizzazione
+## 3. Intake `idea`
 
-Prima del brief:
+Fonti ammesse:
 
-1. cercare nell'inventario titolo, query, sinonimi e intento;
-2. aprire le pagine già pubblicate che Google mostra per la query;
-3. stabilire se serve una nuova URL, una sezione su una pagina esistente o un aggiornamento;
-4. scegliere una sola pagina proprietaria dell'intento principale;
-5. registrare le URL che dovranno collegarla.
+- query/pagine reali Search Console;
+- SERP italiana osservata e datata;
+- domanda supporto anonimizzata;
+- lacuna in cluster esistente;
+- modifica di fonte ufficiale;
+- funzione prodotto realmente rilasciata;
+- compito pratico risolvibile da guida, tabella o calcolatore.
 
-Se due pagine promettono la stessa risposta allo stesso pubblico, non pubblicarne una terza. Ampliare la pagina più forte oppure pianificare un'unione con redirect.
+Registrare problema, lettore, evidenza, cluster, differenza, rischio di manutenzione e conversione pertinente. Scartare idee senza utilità originale o con intento già posseduto.
 
-## 6. Modello di brief
+## 4. Ricerca `researching`
 
-Usare questo blocco nel record del contenuto. I valori sono campi, non copy da pubblicare.
+1. cercare query primaria e varianti italiane;
+2. registrare data, luogo/lingua, dispositivo se rilevante e risultati osservati;
+3. classificare intento e formati dominanti, senza inventare volumi;
+4. confrontare inventario RouteBudget e possibili sovrapposizioni;
+5. decidere: nuova URL, nuova sezione, aggiornamento, merge o nessuna azione;
+6. raccogliere fonti primarie e segnare fatti volatili;
+7. scegliere pagina proprietaria dell'intento.
 
-```yaml
-content_id: identificatore_stabile
-status: BRIEF_APPROVATO
-locale: it
-page_type: pillar | guide | calculator | comparison
-public_path: /routebudget-eu/it/...
-pillar_path: /routebudget-eu/it/guide/...
-primary_intent: informativo | calcolo | decisione | prodotto
-reader: autista | padroncino | piccola_impresa
-reader_job: "decisione concreta da completare"
-primary_query: "linguaggio osservato o ipotesi da validare"
-related_queries: []
-existing_owner_url: null
-answer_promise: "risultato utile, senza esagerazioni"
-original_value: "formula, tabella, esempio, strumento o analisi"
-required_sections: []
-official_sources: []
-volatile_facts: []
-product_feature: "funzione verificata oppure null"
-product_truth_risk: basso | medio | alto
-internal_links_in: []
-internal_links_out: []
-cta_id: complete_trip_app
-author: "persona reale da assegnare"
-subject_reviewer: "persona reale da assegnare"
-product_reviewer: "persona reale da assegnare"
-target_publish_date: null
-next_review_trigger: "data, fonte o evento prodotto"
-```
+Output: [SEO_CONTENT_BRIEF_TEMPLATE.md](./SEO_CONTENT_BRIEF_TEMPLATE.md).
 
-Non inserire dati personali del lettore, query individuali di supporto o informazioni riservate nel brief.
+## 5. Brief `brief-ready`
 
-## 7. Struttura della bozza
+Gate:
 
-### Per guide e pillar
+- intento singolo e lettore definito;
+- risposta promessa realistica;
+- valore originale concreto: formula, esempio, tabella, checklist o tool;
+- page type e URL coerenti;
+- pillar, 2–5 link contestuali e link in ingresso pianificati;
+- fonti, geografia, date e trigger review;
+- claim prodotto verificabili;
+- CTA utile e non intrusiva;
+- rischio di cannibalizzazione risolto;
+- nessuna metrica o forecast inventato.
 
-1. risposta diretta nelle prime righe;
-2. definizione di perimetro, unità e ipotesi;
-3. metodo o formula leggibile;
-4. esempio italiano riproducibile, chiaramente etichettato come illustrativo;
-5. tabella o checklist utile al lavoro;
-6. errori e limiti;
-7. fonti con ente, titolo, URL e data di consultazione;
-8. collegamenti al pillar, a contenuti correlati e allo strumento pertinente;
-9. CTA contestuale dopo aver fornito valore;
-10. nota di aggiornamento solo se il contenuto è cambiato in modo sostanziale.
+## 6. Bozza `drafting`
 
-### Per confronti
+Usare [SEO_ARTICLE_TEMPLATE.md](./SEO_ARTICLE_TEMPLATE.md).
 
-- dichiarare i criteri prima della conclusione;
-- confrontare metodi o scenari omogenei;
-- mostrare quando ciascuna opzione è adatta;
-- separare margine, ricarico, utile e prezzo;
-- evitare classifiche sponsorizzate o vincitori artificiali.
+- Risposta diretta nelle prime righe.
+- Metodo, unità, ipotesi ed esclusioni visibili.
+- Esempi chiaramente illustrativi; importi variabili restano modificabili.
+- Tabelle responsive e leggibili senza colore.
+- Fonti collegate vicino alle affermazioni e riepilogate in fondo.
+- Nessun grande passaggio copiato; sintesi originale.
+- CTA dopo aver fornito valore.
+- Nessun H1 in `body.md`: generatore usa `title`.
+- Nessun HTML, iframe, script, tracker o form esterno nel Markdown.
 
-### Per calcolatori
+Per calcolatori: formula e arrotondamento documentati, input validati, risultato chiamato “stima”, dati mantenuti nel browser, nessuna tariffa live o precisione ufficiale promessa.
 
-- formula e unità visibili;
-- input con limiti e messaggi di errore comprensibili;
-- valori iniziali etichettati come esempio, non come dato di mercato corrente;
-- politica di arrotondamento documentata;
-- risultato chiamato “stima”;
-- elenco di voci incluse ed escluse;
-- nessun invio di input o risultato nella telemetry;
-- CTA dopo il risultato, senza bloccare l'utilità gratuita;
-- test da tastiera, mobile, formato decimale italiano e casi limite.
+## 7. Review `review`
 
-Il piano tecnico dei tool è in [SEO_CALCULATORS_PLAN.md](./SEO_CALCULATORS_PLAN.md).
+### 7.1 Fatti
 
-## 8. Controllo delle fonti e dei fatti
+Eseguire [SEO_FACT_CHECK_CHECKLIST.md](./SEO_FACT_CHECK_CHECKLIST.md). Ogni dato variabile ha fonte, contesto, data, geografia e trigger. Se non verificabile: rimuovere o dichiarare incertezza.
 
-### Registro minimo della fonte
+### 7.2 Verità prodotto
 
-```text
-Ente/autore:
-Titolo:
-URL:
-Data di pubblicazione o validità:
-Data di consultazione:
-Affermazione supportata:
-Mercato/Paese:
-Prossima verifica:
-```
+Confrontare app installata, store pubblici, Privacy e Termini correnti. Confermare soltanto funzioni realmente disponibili. Regole correnti da ricontrollare prima di ogni pubblicazione:
 
-### Checklist di revisione
+- RouteBudget fornisce stime operative non vincolanti;
+- Free ha calcoli limitati; Pro sblocca calcoli illimitati e logo aziendale nei PDF;
+- nessun account RouteBudget;
+- PDF e archivio seguono comportamento effettivo dell'app;
+- Trip Tracking non va promesso su Android;
+- nessuna navigazione, prezzo pedaggio live, tariffa ufficiale o garanzia di profitto;
+- nessun prezzo abbonamento hardcoded nel copy editoriale.
 
-- [ ] Ogni numero non illustrativo ha una fonte o una provenienza interna documentata.
-- [ ] È chiaro se gli importi sono netti o lordi e se IVA/imposte sono escluse.
-- [ ] Pedaggi, costi e tempi non sono descritti come esatti o vincolanti.
-- [ ] Le norme sono citate con fonte primaria e non trasformate in consulenza legale.
-- [ ] Le fonti italiane non sono generalizzate automaticamente ad altri Paesi.
-- [ ] Le formule distinguono margine da ricarico.
-- [ ] Date e prezzi soggetti a variazione hanno un trigger di revisione.
-- [ ] Citazioni da fonti esterne sono brevi e il valore editoriale è originale.
-- [ ] Non sono presenti statistiche, utenti, risparmi, recensioni o testimonianze inventati.
+### 7.3 SEO e tecnica
 
-Quando una verifica non è possibile, rimuovere l'affermazione o dichiarare esplicitamente l'incertezza. Non coprire una lacuna con un tono più sicuro.
+- title, description e H1 unici;
+- URL minuscola stabile, canonical assoluta autoreferenziale;
+- `lang="it"`, breadcrumb e schema coerenti col visibile;
+- almeno un link HTML in ingresso; pillar/related validi;
+- pagina indicizzabile solo se `approved`;
+- `published`, `modified`, `reviewed` veritieri;
+- static HTML contiene risposta principale;
+- build e `npm run seo:all` verdi.
 
-## 9. Revisione della verità RouteBudget
+### 7.4 Design/accessibilità
 
-Quando la pagina cita l'app, confermare:
+- mobile 320/375/768 e desktop controllati;
+- nessuna sovrapposizione o overflow;
+- tabelle scrollabili/leggibili;
+- focus visibile, label, tastiera, target adeguati;
+- contrasto, zoom e reduced motion;
+- hero video homepage non caricato su articoli.
 
-- tre calcoli Free; Pro per calcoli illimitati e logo aziendale nei PDF;
-- stime di carburante/energia, pedaggi, autista, usura e ritorno a vuoto;
-- scenari Minimo, Consigliato e Ideale, pareggio, costo/km e margine;
-- PDF locale con dettaglio costi opzionale e condivisione di sistema;
-- Archivio locale e assenza di account;
-- rete necessaria per distanza online e abbonamenti;
-- Trip Tracking solo iOS;
-- nessun prezzo live, tariffa ufficiale, navigazione o garanzia di profitto.
-
-Usare App Store, Google Play, Privacy e Termini correnti come fonti pubbliche. Non copiare metadata locali obsoleti senza confronto con la versione pubblicata.
-
-## 10. Revisione linguistica italiana
-
-- [ ] Frasi dirette, terminologia da lavoro e verbi concreti.
-- [ ] “Camion”, “mezzo”, “tratta”, “costo autista”, “ritorno a vuoto” usati in modo coerente.
-- [ ] Nessuna sequenza artificiale di sinonimi per inserire keyword.
-- [ ] Titoli descrittivi, non sensazionalistici.
-- [ ] Esempi con separatore decimale, euro e unità coerenti.
-- [ ] Sigle spiegate al primo uso.
-- [ ] Nessun residuo di prompt, formula generica da AI o traduzione letterale.
-- [ ] Un lettore esterno può completare il compito senza cercare una seconda guida.
-
-Se automazione o AI hanno contribuito in modo sostanziale, applicare la policy editoriale sulla disclosure e documentare comunque revisione, fonti e responsabilità umana. L'automazione non è una fonte.
-
-## 11. SEO on-page e accessibilità
-
-- [ ] Una URL stabile, minuscola, con trattini e senza parametri per la versione canonica.
-- [ ] `title` unico e descrittivo; nessuna promessa non presente nella pagina.
-- [ ] Meta description utile, non elenco di keyword.
-- [ ] Un solo H1 che riassume la risposta.
-- [ ] Gerarchia H2/H3 logica e indice nei pillar lunghi.
-- [ ] Canonical assoluto e autoreferenziale.
-- [ ] `html lang="it"` per la pagina italiana.
-- [ ] Immagini autentiche o dichiarate, dimensionate, compresse e con alt contestuale.
-- [ ] Tabelle leggibili su mobile e comprensibili senza colore.
-- [ ] Link con testo descrittivo; nessun “clicca qui”.
-- [ ] Dati strutturati solo quando il contenuto visibile soddisfa davvero il tipo scelto.
-- [ ] Nessun contenuto importante disponibile solo dopo interazione JavaScript.
-- [ ] Focus visibile, controlli da 44 px e modalità riduzione movimento rispettata.
-
-## 12. Internal linking prima della pubblicazione
-
-Ogni pagina deve collegare:
-
-1. il proprio pillar;
-2. da due a sei guide o strumenti realmente correlati, includendo un calcolatore pertinente quando esiste;
-3. la funzione RouteBudget pertinente;
-4. App Store e Google Play tramite una CTA coerente.
-
-Il pillar e almeno un'altra pagina devono ricevere un aggiornamento per puntare alla nuova URL. Il link nasce nel testo dove aiuta il lettore, non in blocchi automatici di pagine vagamente correlate.
-
-## 13. Revisione conversione e privacy
-
-- [ ] La CTA corrisponde al problema della pagina.
-- [ ] La risposta utile precede la CTA.
-- [ ] App Store e Google Play usano gli URL pubblici verificati.
-- [ ] Nessun prezzo di abbonamento è hardcoded nel copy editoriale.
-- [ ] La pagina Android non promette Trip Tracking o Maps.
-- [ ] Eventuali eventi usano solo ID e valori enumerati definiti in [SEO_CONVERSION_MAP.md](./SEO_CONVERSION_MAP.md).
-- [ ] Input e risultati dei calcolatori non entrano mai nel payload di analytics.
-- [ ] Nessun tracker, cookie o storage è aggiunto senza approvazione privacy e disclosure aggiornata.
-
-## 14. Gate tecnico di pubblicazione
-
-In ambiente di preview e poi in produzione:
-
-- [ ] `published` coincide con la data del primo deploy pubblico effettivo; la data di preview/build resta separata.
-- [ ] La URL restituisce `200` senza autenticazione.
-- [ ] Contenuto principale, title, description, canonical e link sono presenti nell'HTML scansionabile.
-- [ ] La pagina non contiene `noindex` e non è bloccata da `robots.txt`.
-- [ ] Canonical, Open Graph e URL del sitemap usano lo stesso host e path.
-- [ ] La pagina è inclusa nel sitemap solo se canonica e destinata alla ricerca.
-- [ ] `lastmod` riflette l'ultimo aggiornamento sostanziale, non il deploy.
-- [ ] Link interni in entrata e uscita non restituiscono errori.
-- [ ] CTA store, mail e legal funzionano.
-- [ ] Mobile, tastiera, riduzione movimento e console browser sono stati verificati.
-- [ ] La build e i controlli automatici passano.
-
-La presenza nel sitemap facilita la scoperta ma non garantisce scansione o indicizzazione: [Sitemap overview](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview).
-
-## 15. Registro di pubblicazione
-
-```text
-Content ID:
-URL canonica:
-Titolo:
-Cluster/pillar:
-Intento:
-Autore:
-Revisori:
-Data pubblicazione:
-Commit/deploy:
-Fonti verificate il:
-Link interni aggiunti da:
-CTA ID:
-Sitemap verificato:
-URL Inspection eseguita: sì/no + motivo
-Prossimo trigger di revisione:
-```
-
-Non richiedere manualmente l'indicizzazione per ogni pagina ordinaria. Usare sitemap e link interni; riservare URL Inspection a homepage, pillar, primi calcolatori, correzioni importanti e diagnosi.
-
-## 16. Monitoraggio dopo la pubblicazione
-
-### Prime due settimane
-
-Controllare raggiungibilità, rendering, canonical e scoperta. Non giudicare qualità o domanda da pochi giorni e pochi dati.
-
-### Dopo un ciclo dati sufficiente
-
-Usare confronti a 7 giorni per la routine e a 28 giorni per distinguere tendenza da rumore. Leggere sempre la coppia query/pagina, non soltanto il totale del sito.
-
-| Segnale | Diagnosi da fare | Azione possibile |
-| --- | --- | --- |
-| Impressioni crescono, CTR debole | titolo/snippet o intento non allineato | riscrivere title e introduzione, senza clickbait |
-| Posizione media indicativa 8–20 e query coerenti | risposta utile ma autorità/copertura migliorabile | colmare subtopic, aggiungere esempi e link interni |
-| Una query mostra più URL | possibile sovrapposizione | scegliere proprietaria, unire o differenziare |
-| Impressioni calano su 28 giorni | fonte obsoleta, concorrenza, stagionalità o problema tecnico | verificare prima di riscrivere |
-| Query pertinente non è risposta | lacuna reale | ampliare la pagina o creare supporto nel cluster |
-| Nessun segnale | pagina non scoperta, domanda bassa o attesa insufficiente | controllare indicizzazione e link; non clonare la keyword |
-
-Ogni modifica nasce da un'ipotesi e viene annotata. Quando possibile cambiare un gruppo coerente di elementi, non l'intera pagina senza sapere cosa si sta testando.
-
-## 17. Aggiornamento sostanziale
-
-Un aggiornamento giustifica una nuova data quando cambia almeno uno di questi elementi:
-
-- fonte, regola, prezzo di esempio o formula;
-- risposta a un subtopic rilevante;
-- tabella, calcolatore o esempio operativo;
-- funzione RouteBudget descritta;
-- struttura necessaria per risolvere meglio l'intento.
-
-Correzioni tipografiche, cambio del copyright o ritocchi puramente estetici non modificano `dateModified` né `lastmod`.
+## 8. Approvazione `approved`
 
 Registro:
 
 ```text
-Data:
-Segnale o trigger:
-Ipotesi:
-Modifica sostanziale:
-Fonti ricontrollate:
-Link aggiornati:
-CTA aggiornata:
-Responsabile:
-Data di riesame:
+Content ID:
+URL prevista:
+Autore:
+Revisore fattuale / data:
+Revisore prodotto / data:
+Revisore SEO / data:
+Revisore design / data:
+Build SHA:
+Risultato seo:all:
+Approvazione pubblicazione:
 ```
 
-## 18. Unire, reindirizzare o ritirare
+Non registrare account, token, email private o dati di lettori.
 
-### Unire
+## 9. Pubblicazione e scoperta
 
-Usare quando due pagine rispondono allo stesso intento. Conservare la URL più forte e completa, portare il valore utile nell'unica pagina, applicare redirect permanente dalla secondaria, aggiornare link e sitemap.
+Dopo deploy separatamente autorizzato:
 
-### Differenziare
+1. verificare `200`, HTTPS, HTML, canonical, robots e sitemap;
+2. controllare link, store CTA, schema e mobile;
+3. impostare `published` sulla prima data pubblica reale;
+4. verificare `lastmod` soltanto per modifica sostanziale;
+5. usare Search Console secondo [GOOGLE_SEARCH_CONSOLE_SETUP.md](./GOOGLE_SEARCH_CONSOLE_SETUP.md);
+6. richiedere indicizzazione manuale solo per homepage, pillar e primi calcolatori;
+7. annotare URL, data, release e trigger di revisione.
 
-Usare solo quando i compiti sono realmente diversi, per esempio formula generale contro calcolatore operativo. Titolo, introduzione, struttura e link devono rendere la distinzione evidente.
+## 10. Monitoraggio e miglioramento
 
-### Ritirare
+Usare review [settimanale](./SEO_WEEKLY_REVIEW_TEMPLATE.md) e [mensile](./SEO_MONTHLY_REVIEW_TEMPLATE.md). Un aggiornamento richiede evidenza: query, fatto cambiato, claim prodotto, problema tecnico o errore editoriale. Non cambiare title sulla base di poche impressioni; non cambiare date per sembrare recente.
 
-Se esiste un sostituto pertinente, redirect. Se non esiste e il contenuto non deve restare, restituire uno stato di rimozione corretto, togliere URL da sitemap e link. Non reindirizzare ogni contenuto debole alla homepage.
+Possibili esiti: mantenere, espandere, aggiornare fonti, migliorare link, unire, redirect, tradurre o ritirare.
 
-## 19. Gate di traduzione
+## 11. Traduzioni
 
-Tradurre una pagina italiana solo se:
+Italiano resta mercato iniziale. Tradurre solo pagine provate da dati italiani o valore strategico documentato, con URL crawlable distinta, title/description/H1 localizzati, canonical autoreferenziale, hreflang reciproco, esempi/fonti locali e revisore umano. Arabo richiede RTL verificato. Nessun redirect basato solo sulla lingua browser.
 
-- l'intento e le query osservate sono coerenti;
-- il contenuto ha fonti e manutenzione solide;
-- la pagina offre utilità originale, non soltanto impressioni;
-- esiste domanda o una priorità di mercato motivata;
-- un revisore locale è disponibile;
-- esempi e regole possono essere adattati al Paese.
+## 12. Uso di automazione o AI
 
-Flusso:
-
-1. creare URL separata nella lingua;
-2. riscrivere query, titolo, esempio, fonti e CTA per il mercato;
-3. revisione di lingua e materia;
-4. canonical autoreferenziale;
-5. `hreflang` completo, assoluto e reciproco tra le sole varianti pubblicate;
-6. link nel selettore lingua senza redirect automatico forzato;
-7. inserimento nel sitemap e QA con URL Inspection.
-
-Google specifica che ogni variante deve indicare sé stessa e le alternative con URL complete e reciproche: [Localized versions](https://developers.google.com/search/docs/specialty/international/localized-versions).
-
-## 20. Definition of done
-
-Una pagina è completa solo quando:
-
-- risolve il compito promesso con contenuto originale;
-- fonti, formule, esempi e verità di prodotto sono approvati;
-- italiano, accessibilità e UX mobile sono revisionati;
-- URL, metadata, canonical, sitemap e link interni sono validi;
-- CTA e misurazione rispettano intento e privacy;
-- autori/revisori reali e trigger di aggiornamento sono registrati;
-- il monitoraggio Search Console ha proprietario e data di riesame.
+Automazione può aiutare struttura e controlli; non è fonte né revisore. Contenuto resta soggetto a verifica umana, prodotto e linguistica. Documentare uso materiale secondo policy interna; non generare esperienze, autori, dati, citazioni o consenso. Nessuna quota giornaliera: completezza e qualità prevalgono sul numero di pagine.

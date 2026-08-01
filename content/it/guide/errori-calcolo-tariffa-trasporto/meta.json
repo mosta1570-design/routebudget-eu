@@ -21,7 +21,7 @@
     "guide:calcolo-costo-trasporto",
     "guide:proteggere-margine-tratta",
     "guide:calcolare-carburante-pedaggi-autista",
-    "guide:costi-fissi-variabili-autotrasporto"
+    "calcolatori:costo-chilometrico-camion"
   ],
   "calculatorId": null,
   "pillar": "guide:preventivo-trasporto",
@@ -40,5 +40,19 @@
       "label": "EUR-Lex — Regolamento (CE) n. 561/2006 sui tempi di guida e riposo",
       "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231"
     }
-  ]
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "errori prezzo trasporto",
+    "controllo tariffa autotrasporto"
+  ],
+  "cluster": "preventivi-trasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "cost-scenarios",
+  "canonical": "/it/guide/errori-calcolo-tariffa-trasporto/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
 }

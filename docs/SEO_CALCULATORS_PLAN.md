@@ -46,10 +46,10 @@ Nessun valore utente entra nel title, canonical, URL condiviso, log analytics o 
 
 ## Tool 1 — costo chilometrico camion
 
-- **URL:** `/routebudget-eu/it/calcolatori/costo-chilometrico-camion/`
+- **URL:** `/it/calcolatori/costo-chilometrico-camion/`
 - **Lancio:** Mese 1, P0
 - **Intento:** “calcolatore costo chilometrico camion”, “costo camion al km”
-- **Guida madre:** `/routebudget-eu/it/guide/calcolo-costo-trasporto/`
+- **Guida madre:** `/it/guide/calcolo-costo-trasporto/`
 
 ### Input
 
@@ -102,11 +102,11 @@ I test automatici devono verificare i valori non arrotondati e la formattazione 
 
 ## Tool 2 — costo carburante viaggio
 
-- **URL:** `/routebudget-eu/it/calcolatori/costo-carburante-viaggio/`
+- **URL:** `/it/calcolatori/costo-carburante-viaggio/`
 - **Lancio:** Mese 1, P0
 - **Intento:** “calcolatore costo carburante viaggio”, “calcolo gasolio camion”
-- **Pillar:** `/routebudget-eu/it/guide/calcolo-costo-trasporto/`
-- **Guida metodologica:** `/routebudget-eu/it/guide/calcolare-carburante-pedaggi-autista/`
+- **Pillar:** `/it/guide/calcolo-costo-trasporto/`
+- **Guida metodologica:** `/it/guide/calcolare-carburante-pedaggi-autista/`
 
 ### Input e formula
 
@@ -139,10 +139,10 @@ Con `distanceKm=640`, `emptyReturnKm=120`, `32 L/100 km` e `1,75 €/L`: distanz
 
 ## Tool 3 — margine trasporto
 
-- **URL:** `/routebudget-eu/it/calcolatori/margine-trasporto/`
+- **URL:** `/it/calcolatori/margine-trasporto/`
 - **Lancio:** Mese 2, P1
 - **Intento:** “calcolatore margine trasporto”, “prezzo con margine”
-- **Guida madre:** `/routebudget-eu/it/guide/margine-trasporto-vs-ricarico/`
+- **Guida madre:** `/it/guide/margine-trasporto-vs-ricarico/`
 
 ### Input e formula
 
@@ -175,10 +175,10 @@ Con costo `1.000 €` e margine target `20%`, prezzo `1.250 €`, utile `250 €
 
 ## Tool 4 — prezzo minimo della tratta
 
-- **URL:** `/routebudget-eu/it/calcolatori/prezzo-minimo-tratta/`
+- **URL:** `/it/calcolatori/prezzo-minimo-tratta/`
 - **Lancio:** Mese 2, P1
 - **Intento:** “calcolatore prezzo minimo tratta”, “tariffa minima camion”
-- **Guida madre:** `/routebudget-eu/it/guide/punto-pareggio-trasporto/`
+- **Guida madre:** `/it/guide/punto-pareggio-trasporto/`
 
 ### Input e formula
 
@@ -200,10 +200,10 @@ Il nome UI principale deve essere “soglia di copertura costi”. La keyword �
 
 ## Tool 5 — costi fissi e variabili
 
-- **URL:** `/routebudget-eu/it/calcolatori/costi-fissi-variabili/`
+- **URL:** `/it/calcolatori/costi-fissi-variabili/`
 - **Lancio:** Mese 3, P1
 - **Intento:** “calcolatore costi fissi e variabili autotrasporto”
-- **Guida madre:** `/routebudget-eu/it/guide/costi-fissi-variabili-autotrasporto/`
+- **Guida madre:** `/it/guide/costi-fissi-variabili-autotrasporto/`
 
 ### Input
 
@@ -234,10 +234,10 @@ exampleRouteTotal = exampleRouteBaseCost + routeTollCost + routeDriverCost
 
 ## Tool 6 — somma pedaggi del viaggio
 
-- **URL:** `/routebudget-eu/it/calcolatori/somma-pedaggi-viaggio/`
+- **URL:** `/it/calcolatori/somma-pedaggi-viaggio/`
 - **Lancio:** Mese 3, P1
 - **Intento:** “somma pedaggi viaggio camion”, supporto al cluster pedaggi
-- **Guida madre:** `/routebudget-eu/it/guide/pedaggi-autostradali-camion/`
+- **Guida madre:** `/it/guide/pedaggi-autostradali-camion/`
 
 ### Input e formula
 
@@ -253,10 +253,10 @@ Non stimare importi con una matrice pubblica non mantenuta e non usare il termin
 
 ## Tool 7 — stima semplice del preventivo
 
-- **URL candidato:** `/routebudget-eu/it/calcolatori/stima-preventivo-trasporto/`
+- **URL candidato:** `/it/calcolatori/stima-preventivo-trasporto/`
 - **Lancio:** Mese 4 solo se GSC mostra intento distinto, P2
 - **Intento:** “preventivo trasporto online”, “stima preventivo camion”
-- **Guida madre:** `/routebudget-eu/it/guide/preventivo-trasporto/`
+- **Guida madre:** `/it/guide/preventivo-trasporto/`
 
 ### Flusso e formula
 
@@ -279,9 +279,9 @@ CTA: “Crea il preventivo professionale PDF e conserva il calcolo nell'Archivio
 
 ## Tool 8 — ritorno a vuoto
 
-- **URL candidato:** `/routebudget-eu/it/calcolatori/ritorno-a-vuoto/`
+- **URL candidato:** `/it/calcolatori/ritorno-a-vuoto/`
 - **Lancio:** Mese 4, solo con domanda verificata, P2
-- **Guida madre:** `/routebudget-eu/it/guide/costo-ritorno-a-vuoto/`
+- **Guida madre:** `/it/guide/costo-ritorno-a-vuoto/`
 
 ### Input e formula
 
@@ -301,9 +301,9 @@ Non suggerire automaticamente di “ribaltare” tutto sul cliente: il risultato
 
 ## Tool 9 — costo viaggio N1
 
-- **URL candidato:** `/routebudget-eu/it/calcolatori/costo-viaggio-n1/`
+- **URL candidato:** `/it/calcolatori/costo-viaggio-n1/`
 - **Lancio:** Mese 5 dopo verifica product/normativa e domanda, P2
-- **Guida madre:** `/routebudget-eu/it/guide/costo-furgone-n1-km/`
+- **Guida madre:** `/it/guide/costo-furgone-n1-km/`
 
 ### Modalità e formula
 

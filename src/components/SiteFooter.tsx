@@ -16,8 +16,8 @@ export function SiteFooter({ copy }: SiteFooterProps) {
         </a>
 
         <nav aria-label="Legal">
-          <a href="/routebudget-eu/it/guide/">{copy.guides}</a>
-          <a href="/routebudget-eu/it/calcolatori/">{copy.calculators}</a>
+          <a href="/it/guide/">{copy.guides}</a>
+          <a href="/it/calcolatori/">{copy.calculators}</a>
           <a href="#supporto">{copy.support}</a>
           <a href="privacy.html">{copy.privacy}</a>
           <a href="terms.html">{copy.terms}</a>

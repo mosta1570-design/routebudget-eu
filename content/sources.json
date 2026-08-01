@@ -1,0 +1,20 @@
+{
+  "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en": {
+    "publishedOrUpdated": "Serie ufficiale aggiornata periodicamente",
+    "geography": "Unione europea",
+    "accessedAt": "2026-08-01",
+    "supports": "Metodo per reperire prezzi energetici datati per paese senza fissare un prezzo universale"
+  },
+  "https://transport.ec.europa.eu/transport-modes/road/road-charging_en": {
+    "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+    "geography": "Unione europea",
+    "accessedAt": "2026-08-01",
+    "supports": "Quadro europeo di pedaggi e vignette per veicoli pesanti; tariffe concrete restano nazionali e variabili"
+  },
+  "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231": {
+    "publishedOrUpdated": "Versione consolidata al 31 dicembre 2024",
+    "geography": "Unione europea",
+    "accessedAt": "2026-08-01",
+    "supports": "Quadro normativo sui tempi di guida, interruzioni e riposi richiamato solo come riferimento operativo"
+  }
+}

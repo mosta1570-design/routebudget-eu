@@ -52,14 +52,14 @@ Mostrare entrambi quando la pagina non è specifica per piattaforma. Non inoltra
 
 | Pagina | Compito risolto dalla pagina | CTA primaria | Messaggio di continuità |
 | --- | --- | --- | --- |
-| `/routebudget-eu/it/guide/` | scegliere una guida pertinente | `download_app_generic` | l'app riunisce il calcolo completo |
-| `/routebudget-eu/it/guide/calcolo-costo-trasporto/` | capire formula e voci della tratta | `complete_trip_app` | applica le voci al proprio viaggio |
-| `/routebudget-eu/it/guide/costi-autotrasporto/` | distinguere costi e dati necessari | `complete_trip_app` | porta i dati in un calcolo di tratta |
-| `/routebudget-eu/it/guide/preventivo-trasporto/` | strutturare prezzo e preventivo | `create_pdf_quote` | genera e condividi il PDF dall'app |
-| `/routebudget-eu/it/calcolatori/` | scegliere uno strumento semplice | `download_app_generic` | usa l'app per il flusso completo |
-| `/routebudget-eu/it/calcolatori/costo-chilometrico-camion/` | stimare una singola metrica €/km | `complete_trip_app` | completa mezzo, tempo, pedaggi e scenari |
-| `/routebudget-eu/it/calcolatori/costo-carburante-viaggio/` | stimare il costo carburante da input propri | `add_trip_costs_app` | aggiungi le altre voci operative |
-| `/routebudget-eu/it/confronti/` e pagine figlie | scegliere tra metodi o scenari | `compare_scenarios_app` | confronta i tre scenari nell'app |
+| `/it/guide/` | scegliere una guida pertinente | `download_app_generic` | l'app riunisce il calcolo completo |
+| `/it/guide/calcolo-costo-trasporto/` | capire formula e voci della tratta | `complete_trip_app` | applica le voci al proprio viaggio |
+| `/it/guide/costi-autotrasporto/` | distinguere costi e dati necessari | `complete_trip_app` | porta i dati in un calcolo di tratta |
+| `/it/guide/preventivo-trasporto/` | strutturare prezzo e preventivo | `create_pdf_quote` | genera e condividi il PDF dall'app |
+| `/it/calcolatori/` | scegliere uno strumento semplice | `download_app_generic` | usa l'app per il flusso completo |
+| `/it/calcolatori/costo-chilometrico-camion/` | stimare una singola metrica €/km | `complete_trip_app` | completa mezzo, tempo, pedaggi e scenari |
+| `/it/calcolatori/costo-carburante-viaggio/` | stimare il costo carburante da input propri | `add_trip_costs_app` | aggiungi le altre voci operative |
+| `/it/confronti/` e pagine figlie | scegliere tra metodi o scenari | `compare_scenarios_app` | confronta i tre scenari nell'app |
 
 Una nuova pagina sceglie una sola CTA primaria dal registro. Una CTA secondaria è ammessa soltanto se serve un passaggio diverso e non compete visivamente con la primaria.
 
@@ -168,7 +168,7 @@ Prerequisiti:
 5. payload testato contro questa allowlist e privato dei dati vietati;
 6. navigazione funzionante anche con JavaScript o raccolta bloccati.
 
-GitHub Pages è hosting statico e non costituisce da solo un endpoint first-party per ricevere eventi. Se non esiste un endpoint controllato sul futuro dominio o un fornitore sottoposto a revisione privacy e contrattuale, restare alla Fase 0. Non aggiungere un tracker di terze parti per colmare il vuoto.
+GitHub Pages è hosting statico e non costituisce da solo un endpoint first-party per ricevere eventi, anche quando pubblicato su `routebudget.eu`. Se non esiste un endpoint controllato o un fornitore sottoposto a revisione privacy e contrattuale, restare alla Fase 0. Non aggiungere un tracker di terze parti per colmare il vuoto.
 
 ### Fase 2 — visita di ritorno, rinviata
 

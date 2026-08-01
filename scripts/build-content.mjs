@@ -13,8 +13,35 @@ const OUTPUT_ROOT = path.resolve(
   OUTPUT_FLAG >= 0 && process.argv[OUTPUT_FLAG + 1] ? process.argv[OUTPUT_FLAG + 1] : 'dist',
 );
 
-const SECTION_KEYS = ['guide', 'calcolatori', 'confronti'];
+const SECTION_KEYS = ['guide', 'calcolatori', 'confronti', 'landing'];
+const HUB_SECTION_KEYS = ['guide', 'calcolatori', 'confronti'];
 const GUIDE_KINDS = new Set(['pillar', 'guide']);
+const CONTENT_STATUSES = new Set([
+  'idea',
+  'researching',
+  'brief-ready',
+  'drafting',
+  'review',
+  'approved',
+  'published',
+  'updating',
+  'retired',
+]);
+const APP_FEATURES = new Set([
+  'complete-route-calculation',
+  'cost-breakdown',
+  'cost-scenarios',
+  'fuel-estimate',
+  'local-archive',
+  'pdf-quote',
+]);
+const UNSUPPORTED_PRODUCT_CLAIMS = [
+  /Google Maps/i,
+  /navigazione (?:GPS|turn-by-turn)/i,
+  /pedaggi (?:live|in tempo reale)/i,
+  /tracciamento (?:live|in tempo reale)/i,
+  /RouteBudget[^.]{0,80}(?:ottimizza|sceglie) il percorso/i,
+];
 const CTA_COPY = {
   'complete-trip': {
     eyebrow: 'Continua nell’app',
@@ -52,17 +79,19 @@ const CTA_ID_BY_INTENT = {
 };
 
 const config = JSON.parse(await readFile(path.join(CONTENT_ROOT, 'site.json'), 'utf8'));
+const sourceRegistry = JSON.parse(await readFile(path.join(CONTENT_ROOT, 'sources.json'), 'utf8'));
+validateConfig(config);
 const siteUrl = `${config.origin}${config.basePath}`;
-const pages = await loadPages();
+const allPages = await loadPages();
+const pages = allPages.filter((page) => page.meta.status === 'published' && page.meta.noindex === false);
 const pagesById = new Map(pages.map((page) => [page.id, page]));
 const activeHubs = Object.keys(config.locales).flatMap((locale) =>
-  SECTION_KEYS
+  HUB_SECTION_KEYS
     .filter((section) => pages.some((page) => page.locale === locale && page.section === section))
     .map((section) => ({ locale, section })),
 );
 
-validateConfig(config);
-validateRelationships(pages, pagesById);
+validateRelationships(allPages, new Map(allPages.map((page) => [page.id, page])));
 
 await Promise.all([
   ...pages.map((page) => writeRoute(page.urlPath, renderPage(page))),
@@ -71,18 +100,36 @@ await Promise.all([
   ),
 ]);
 
-await writeFile(path.join(OUTPUT_ROOT, 'sitemap.xml'), renderSitemap(), 'utf8');
+const sitemapFiles = renderSitemaps();
+await mkdir(path.join(OUTPUT_ROOT, 'sitemaps'), { recursive: true });
+await Promise.all(
+  Object.entries(sitemapFiles).map(([relativePath, xml]) =>
+    writeFile(path.join(OUTPUT_ROOT, relativePath), xml, 'utf8'),
+  ),
+);
 await writeFile(
   path.join(OUTPUT_ROOT, 'content-manifest.json'),
   `${JSON.stringify(
     {
-      generatedAt: new Date().toISOString(),
+      revisionDate: latestDate(pages.map((page) => page.meta.modified)),
       pages: pages.map(({ id, urlPath, meta }) => ({
         id,
         url: absoluteUrl(urlPath),
         title: meta.title,
+        description: meta.description,
+        type: meta.kind,
+        locale: meta.locale,
+        canonical: absoluteUrl(urlPath),
+        indexable: true,
         primaryKeyword: meta.primaryKeyword,
         modified: meta.modified,
+      })),
+      hubs: activeHubs.map(({ locale, section }) => ({
+        id: `${locale}:${section}:hub`,
+        url: absoluteUrl(hubPath(locale, section)),
+        locale,
+        section,
+        indexable: true,
       })),
     },
     null,
@@ -91,7 +138,7 @@ await writeFile(
   'utf8',
 );
 
-console.log(`Generated ${pages.length} content pages, ${activeHubs.length} hubs, and sitemap.xml.`);
+console.log(`Generated ${pages.length} published pages, ${activeHubs.length} hubs, and split XML sitemaps.`);
 
 async function loadPages() {
   const loaded = [];
@@ -117,6 +164,10 @@ async function loadPages() {
           readFile(path.join(sourceDirectory, 'body.md'), 'utf8'),
         ]);
         const meta = JSON.parse(metaSource);
+        meta.sources = (meta.sources ?? []).map((source) => ({
+          ...(sourceRegistry[source.url] ?? {}),
+          ...source,
+        }));
         const page = {
           id: `${locale}:${section}:${entry.name}`,
           locale,
@@ -134,11 +185,20 @@ async function loadPages() {
 
   const ids = new Set();
   const canonicals = new Set();
+  const titles = new Set();
+  const descriptions = new Set();
+  const primaryKeywords = new Set();
   for (const page of loaded) {
     assert(!ids.has(page.id), `${page.id}: duplicate page id`);
     assert(!canonicals.has(page.urlPath), `${page.id}: duplicate canonical path`);
+    assert(!titles.has(page.meta.title), `${page.id}: duplicate title`);
+    assert(!descriptions.has(page.meta.description), `${page.id}: duplicate description`);
+    assert(!primaryKeywords.has(page.meta.primaryKeyword), `${page.id}: duplicate primaryKeyword`);
     ids.add(page.id);
     canonicals.add(page.urlPath);
+    titles.add(page.meta.title);
+    descriptions.add(page.meta.description);
+    primaryKeywords.add(page.meta.primaryKeyword);
   }
 
   return loaded.sort((a, b) => a.urlPath.localeCompare(b.urlPath, 'it'));
@@ -147,8 +207,12 @@ async function loadPages() {
 function validateConfig(value) {
   assert(typeof value.name === 'string' && value.name.length > 0, 'site.json: name required');
   assert(/^https:\/\//.test(value.origin), 'site.json: HTTPS origin required');
-  assert(/^\/[a-z0-9-]+$/.test(value.basePath), 'site.json: basePath must be one clean path segment');
+  assert(value.basePath === '' || /^\/[a-z0-9-]+$/.test(value.basePath), 'site.json: basePath must be empty or one clean path segment');
   assert(value.locales && typeof value.locales === 'object', 'site.json: locales required');
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(value.coreLastModified), 'site.json: coreLastModified required');
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(value.legalLastModified), 'site.json: legalLastModified required');
+  assert(/^https:\/\/apps\.apple\.com\/app\/id\d+$/.test(value.appStoreUrl), 'site.json: valid public App Store URL required');
+  assert(value.googlePlayUrl === 'https://play.google.com/store/apps/details?id=eu.routebudget.app', 'site.json: Google Play URL must target eu.routebudget.app');
 }
 
 function validatePage(page, directorySlug) {
@@ -163,10 +227,18 @@ function validatePage(page, directorySlug) {
     'published',
     'modified',
     'reviewed',
+    'status',
+    'author',
+    'reviewer',
     'primaryKeyword',
     'searchIntent',
     'conversionIntent',
     'translationGroup',
+    'cluster',
+    'appFeature',
+    'canonical',
+    'ogImage',
+    'changeSummary',
   ];
 
   for (const key of requiredStrings) {
@@ -176,23 +248,45 @@ function validatePage(page, directorySlug) {
   assert(meta.slug === directorySlug, `${id}: slug must match directory name`);
   assert(meta.locale === locale, `${id}: locale must match content directory`);
   assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(meta.slug), `${id}: invalid slug`);
-  assert(meta.title.length <= 90, `${id}: title exceeds 90 characters`);
+  assert(CONTENT_STATUSES.has(meta.status), `${id}: invalid editorial status`);
+  assert(meta.title.length <= 75, `${id}: title exceeds 75 characters`);
   assert(meta.description.length >= 70 && meta.description.length <= 180, `${id}: description must be 70–180 characters`);
   assert(/^\d{4}-\d{2}-\d{2}$/.test(meta.published), `${id}: invalid published date`);
   assert(/^\d{4}-\d{2}-\d{2}$/.test(meta.modified), `${id}: invalid modified date`);
   assert(/^\d{4}-\d{2}-\d{2}$/.test(meta.reviewed), `${id}: invalid reviewed date`);
   assert(new Date(meta.modified) >= new Date(meta.published), `${id}: modified predates published`);
+  assert(meta.author === config.author, `${id}: author must match configured editorial identity`);
+  assert(meta.reviewer === config.author, `${id}: reviewer must use the approved real identity`);
+  assert(Array.isArray(meta.secondaryKeywords) && meta.secondaryKeywords.length >= 2, `${id}: at least two secondaryKeywords required`);
   assert(Array.isArray(meta.topics) && meta.topics.length >= 2, `${id}: at least two topics required`);
   assert(Array.isArray(meta.related) && meta.related.length >= 2, `${id}: at least two related links required`);
   assert(Array.isArray(meta.sources), `${id}: sources must be an array`);
+  assert(typeof meta.noindex === 'boolean', `${id}: noindex must be boolean`);
+  assert(meta.status !== 'published' || meta.noindex === false, `${id}: published page cannot be noindex`);
+  assert(meta.status === 'published' || meta.noindex === true, `${id}: non-published page must be noindex`);
+  assert(meta.canonical === page.urlPath, `${id}: canonical must exactly match generated route`);
+  assert(meta.ogImage.startsWith(`${config.basePath}/`), `${id}: ogImage must use the production base path`);
+  assert(APP_FEATURES.has(meta.appFeature), `${id}: unsupported appFeature`);
+  assert(meta.relatedCalculator === null || typeof meta.relatedCalculator === 'string', `${id}: relatedCalculator must be a reference or null`);
   assert(Object.hasOwn(CTA_COPY, meta.conversionIntent), `${id}: unknown conversionIntent`);
   assert(!/^#\s/m.test(markdown), `${id}: body.md must not contain an H1`);
   assert(!/<[A-Za-z][^>]*>/.test(markdown), `${id}: raw HTML is not allowed in Markdown`);
-  assert(markdown.trim().split(/\s+/).length >= 450, `${id}: body is too short for a useful page`);
+  if (meta.status === 'published') {
+    assert(markdown.trim().split(/\s+/).length >= 650, `${id}: published body is too short for a useful page`);
+  }
+  assert(!/(?:\bTODO\b|\bTBD\b|lorem ipsum|placeholder|da completare)/i.test(markdown), `${id}: placeholder content remains`);
+  const claimText = `${meta.title}\n${meta.description}\n${markdown}`;
+  for (const pattern of UNSUPPORTED_PRODUCT_CLAIMS) {
+    assert(!pattern.test(claimText), `${id}: unsupported product claim matches ${pattern}`);
+  }
 
   for (const source of meta.sources) {
     assert(typeof source.label === 'string' && source.label.trim(), `${id}: source label required`);
     assert(/^https:\/\//.test(source.url), `${id}: source URL must use HTTPS`);
+    assert(typeof source.publishedOrUpdated === 'string' && source.publishedOrUpdated.trim(), `${id}: source publishedOrUpdated required`);
+    assert(typeof source.geography === 'string' && source.geography.trim(), `${id}: source geography required`);
+    assert(/^\d{4}-\d{2}-\d{2}$/.test(source.accessedAt), `${id}: source accessedAt must be YYYY-MM-DD`);
+    assert(typeof source.supports === 'string' && source.supports.trim(), `${id}: source claim description required`);
   }
 
   if (section === 'guide') {
@@ -207,20 +301,39 @@ function validatePage(page, directorySlug) {
     assert(meta.kind === 'calculator', `${id}: calculator section requires calculator kind`);
     assert(['cost-per-km', 'fuel-trip'].includes(meta.calculatorId), `${id}: unknown calculatorId`);
     assert(typeof meta.pillar === 'string', `${id}: calculator must name a pillar`);
-  } else {
+  } else if (section === 'confronti') {
     assert(meta.kind === 'comparison', `${id}: comparison section requires comparison kind`);
     assert(meta.calculatorId === null, `${id}: comparison calculatorId must be null`);
     assert(typeof meta.pillar === 'string', `${id}: comparison must name a pillar`);
+  } else {
+    assert(section === 'landing', `${id}: unknown content section`);
+    assert(meta.kind === 'landing', `${id}: landing section requires landing kind`);
+    assert(meta.calculatorId === null, `${id}: landing calculatorId must be null`);
+    assert(meta.pillar === null, `${id}: landing page must not claim a guide pillar`);
   }
 }
 
 function validateRelationships(allPages, byId) {
   for (const page of allPages) {
-    const references = [page.meta.pillar, ...page.meta.related].filter(Boolean);
+    const references = [page.meta.pillar, page.meta.relatedCalculator, ...page.meta.related].filter(Boolean);
     for (const reference of references) {
       const targetId = resolveReferenceId(page.locale, reference);
       assert(byId.has(targetId), `${page.id}: unresolved internal reference ${reference}`);
       assert(targetId !== page.id, `${page.id}: page cannot link to itself`);
+      if (page.meta.status === 'published' && page.meta.noindex === false) {
+        const target = byId.get(targetId);
+        assert(target.meta.status === 'published' && target.meta.noindex === false, `${page.id}: published page links to non-indexable content ${reference}`);
+      }
+    }
+
+    if (page.meta.relatedCalculator) {
+      assert(byId.get(resolveReferenceId(page.locale, page.meta.relatedCalculator)).meta.kind === 'calculator', `${page.id}: relatedCalculator must target a calculator`);
+      assert(page.meta.related.includes(page.meta.relatedCalculator), `${page.id}: relatedCalculator must also appear in related links`);
+    }
+
+    if (page.meta.kind === 'guide') {
+      assert(page.meta.related.length <= 5, `${page.id}: supporting guide may contain at most five related links`);
+      assert(page.meta.related.includes(page.meta.pillar), `${page.id}: supporting guide must link to its pillar`);
     }
   }
 
@@ -234,6 +347,7 @@ function validateRelationships(allPages, byId) {
 
 function renderPage(page) {
   const isCalculator = page.section === 'calcolatori';
+  const isLanding = page.section === 'landing';
   const body = renderMarkdown(page.markdown);
   const readingMinutes = Math.max(3, Math.ceil(stripMarkdown(page.markdown).split(/\s+/).length / 220));
   const pillar = page.meta.pillar ? pagesById.get(resolveReferenceId(page.locale, page.meta.pillar)) : null;
@@ -246,8 +360,11 @@ ${renderHead({
     title: `${page.meta.title} | ${config.name}`,
     description: page.meta.description,
     canonicalPath: page.urlPath,
-    type: isCalculator ? 'website' : 'article',
+    type: isCalculator || isLanding ? 'website' : 'article',
     modified: page.meta.modified,
+    published: page.meta.published,
+    locale: page.locale,
+    ogImage: absoluteUrl(page.meta.ogImage),
     schema,
     calculator: isCalculator,
     alternateLinks: renderAlternateLinks(page),
@@ -263,7 +380,7 @@ ${renderHead({
         <h1>${escapeHtml(page.meta.title)}</h1>
         <p class="seo-hero__summary">${escapeHtml(page.meta.description)}</p>
         <div class="seo-meta" aria-label="Informazioni editoriali">
-          <span>A cura di ${escapeHtml(config.author)} · ${escapeHtml(config.name)}</span>
+          <span>A cura di ${escapeHtml(page.meta.author)} · ${escapeHtml(config.name)}</span>
           <span>Revisione ${formatDate(page.meta.reviewed)}</span>
           <span>${readingMinutes} min di lettura</span>
         </div>
@@ -324,6 +441,8 @@ ${renderHead({
     description,
     canonicalPath,
     type: 'website',
+    locale,
+    ogImage: `${siteUrl}/og-cover.jpg`,
     schema: hubSchema,
   })}
 <body class="seo-body" data-content-id="${escapeAttr(`${locale}:${section}:hub`)}" data-page-type="hub" data-locale="${escapeAttr(locale)}">
@@ -348,7 +467,7 @@ ${renderHead({
       </div>
       <div>
         <p>RouteBudget riunisce distanza, carburante, pedaggi, autista, usura, margine, scenari e PDF. I contenuti qui spiegano il metodo; l’app lo porta nel lavoro quotidiano.</p>
-        <a class="button button--primary" href="${escapeAttr(config.googlePlayUrl)}" data-analytics-event="store_outbound" data-analytics-id="download_app_generic" data-analytics-position="end" data-analytics-target="google-play">Scarica RouteBudget</a>
+        ${renderStoreBadges(locale, 'download_app_generic', 'hub')}
       </div>
     </section>
   </main>
@@ -387,8 +506,10 @@ function renderHubEntries(sectionPages, section) {
   </ol>`;
 }
 
-function renderHead({ title, description, canonicalPath, type, modified, schema, calculator = false, alternateLinks = '' }) {
+function renderHead({ title, description, canonicalPath, type, modified, published, locale = 'it', ogImage = `${siteUrl}/og-cover.jpg`, schema, calculator = false, alternateLinks = '' }) {
   const canonical = absoluteUrl(canonicalPath);
+  const localeConfig = config.locales[locale];
+  const ogLocale = localeConfig.languageTag.replace('-', '_');
   return `<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -398,14 +519,19 @@ function renderHead({ title, description, canonicalPath, type, modified, schema,
     <link rel="canonical" href="${escapeAttr(canonical)}" />
     ${alternateLinks}
     <meta property="og:type" content="${escapeAttr(type)}" />
-    <meta property="og:locale" content="it_IT" />
+    <meta property="og:locale" content="${escapeAttr(ogLocale)}" />
     <meta property="og:site_name" content="${escapeAttr(config.name)}" />
     <meta property="og:title" content="${escapeAttr(title)}" />
     <meta property="og:description" content="${escapeAttr(description)}" />
     <meta property="og:url" content="${escapeAttr(canonical)}" />
-    <meta property="og:image" content="${siteUrl}/og-cover.jpg" />
+    <meta property="og:image" content="${escapeAttr(ogImage)}" />
+    <meta property="og:image:alt" content="${escapeAttr(`${config.name} — ${title}`)}" />
+    ${published ? `<meta property="article:published_time" content="${escapeAttr(published)}" />` : ''}
     ${modified ? `<meta property="article:modified_time" content="${escapeAttr(modified)}" />` : ''}
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${escapeAttr(title)}" />
+    <meta name="twitter:description" content="${escapeAttr(description)}" />
+    <meta name="twitter:image" content="${escapeAttr(ogImage)}" />
     <link rel="icon" type="image/png" href="${config.basePath}/logo.png" />
     <link rel="manifest" href="${config.basePath}/site.webmanifest" />
     <link rel="stylesheet" href="${config.basePath}/seo/seo.css" />
@@ -427,9 +553,9 @@ function renderHeader(locale) {
         <a href="${hubPath(locale, 'guide')}">Guide</a>
         <a href="${hubPath(locale, 'calcolatori')}">Calcolatori</a>
         ${pages.some((page) => page.locale === locale && page.section === 'confronti') ? `<a href="${hubPath(locale, 'confronti')}">Confronti</a>` : ''}
-        <a href="${config.basePath}/#prodotto">Prodotto</a>
+        <a href="${appLandingPath(locale)}">App</a>
       </nav>
-      <a class="seo-header__app" href="${escapeAttr(config.googlePlayUrl)}" data-analytics-event="store_outbound" data-analytics-id="download_app_generic" data-analytics-position="header" data-analytics-target="google-play">Apri l’app <span aria-hidden="true">↗</span></a>
+      <a class="seo-header__app" href="${appLandingPath(locale)}">Scopri l’app <span aria-hidden="true">→</span></a>
     </div>
   </header>`;
 }
@@ -448,6 +574,7 @@ function renderFooter(locale) {
         <a href="${hubPath(locale, 'guide')}">Guide</a>
         <a href="${hubPath(locale, 'calcolatori')}">Calcolatori</a>
         ${pages.some((page) => page.locale === locale && page.section === 'confronti') ? `<a href="${hubPath(locale, 'confronti')}">Confronti</a>` : ''}
+        <a href="${appLandingPath(locale)}">App</a>
         <a href="${config.basePath}/privacy.html">Privacy</a>
         <a href="${config.basePath}/terms.html">Termini</a>
       </nav>
@@ -457,6 +584,13 @@ function renderFooter(locale) {
 }
 
 function renderBreadcrumb(page) {
+  if (page.section === 'landing') {
+    return `<nav class="breadcrumbs" aria-label="Percorso">
+      <a href="${config.basePath}/">RouteBudget</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">${escapeHtml(page.meta.title)}</span>
+    </nav>`;
+  }
   const label = sectionLabel(page.section);
   return `<nav class="breadcrumbs" aria-label="Percorso">
     <a href="${config.basePath}/">RouteBudget</a>
@@ -490,11 +624,16 @@ function renderCta(page) {
     <p class="rail-label">${escapeHtml(copy.eyebrow)}</p>
     <h2>${escapeHtml(copy.title)}</h2>
     <p>${escapeHtml(copy.body)}</p>
-    <div class="app-cta__actions">
-      <a class="button button--primary" href="${escapeAttr(config.googlePlayUrl)}" data-analytics-event="store_outbound" data-analytics-id="${escapeAttr(ctaId)}" data-analytics-position="end" data-analytics-target="google-play">Google Play <span aria-hidden="true">↗</span></a>
-      <a class="button button--quiet" href="${escapeAttr(config.appStoreUrl)}" data-analytics-event="store_outbound" data-analytics-id="${escapeAttr(ctaId)}" data-analytics-position="end" data-analytics-target="app-store">App Store <span aria-hidden="true">↗</span></a>
-    </div>
+    ${renderStoreBadges(page.locale, ctaId, 'article')}
   </section>`;
+}
+
+function renderStoreBadges(locale, ctaId, position) {
+  const language = locale === 'it' ? 'it' : 'en';
+  return `<div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="${escapeAttr(config.appStoreUrl)}" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="${escapeAttr(ctaId)}" data-analytics-position="${escapeAttr(position)}" data-analytics-target="app-store"><img src="${config.basePath}/store-badges/app-store-${language}.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="${escapeAttr(config.googlePlayUrl)}" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="${escapeAttr(ctaId)}" data-analytics-position="${escapeAttr(position)}" data-analytics-target="google-play"><img src="${config.basePath}/store-badges/google-play-${language}.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>`;
 }
 
 function renderRelated(related) {
@@ -509,7 +648,7 @@ function renderRelated(related) {
           .map(
             (page, index) => `<a href="${page.urlPath}">
               <span>${String(index + 1).padStart(2, '0')}</span>
-              <div><small>${page.section === 'calcolatori' ? 'Calcolatore' : page.section === 'confronti' ? 'Confronto operativo' : page.meta.kind === 'pillar' ? 'Guida pilastro' : 'Guida pratica'}</small><strong>${escapeHtml(page.meta.title)}</strong></div>
+              <div><small>${page.section === 'calcolatori' ? 'Calcolatore' : page.section === 'confronti' ? 'Confronto operativo' : page.section === 'landing' ? 'App RouteBudget' : page.meta.kind === 'pillar' ? 'Guida pilastro' : 'Guida pratica'}</small><strong>${escapeHtml(page.meta.title)}</strong></div>
               <b aria-hidden="true">↗</b>
             </a>`,
           )
@@ -527,7 +666,7 @@ function renderSources(page) {
     <h2 id="fonti-${page.meta.slug}">Fonti e riferimenti</h2>
     <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
     <ul>
-      ${page.meta.sources.map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noreferrer">${escapeHtml(source.label)}</a></li>`).join('\n')}
+      ${page.meta.sources.map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noreferrer">${escapeHtml(source.label)}</a><small>${escapeHtml(source.supports)} · ${escapeHtml(source.geography)} · consultata il ${escapeHtml(formatDate(source.accessedAt))}</small></li>`).join('\n')}
     </ul>
   </section>`;
 }
@@ -639,7 +778,16 @@ function renderPageSchema(page) {
     {
       '@type': 'Person',
       '@id': `${siteUrl}/#author`,
-      name: config.author,
+      name: page.meta.author,
+      worksFor: { '@id': `${siteUrl}/#organization` },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: config.name,
+      url: `${siteUrl}/`,
+      logo: `${siteUrl}/logo.png`,
+      sameAs: [config.appStoreUrl, config.googlePlayUrl],
     },
     {
       '@type': 'WebSite',
@@ -647,7 +795,7 @@ function renderPageSchema(page) {
       url: `${siteUrl}/`,
       name: config.name,
       inLanguage: locale,
-      publisher: { '@id': `${siteUrl}/#author` },
+      publisher: { '@id': `${siteUrl}/#organization` },
     },
     {
       '@type': 'BreadcrumbList',
@@ -661,7 +809,7 @@ function renderPageSchema(page) {
     },
   ];
 
-  if (page.section !== 'calcolatori') {
+  if (page.section === 'guide' || page.section === 'confronti') {
     commonGraph.push({
       '@type': 'Article',
       '@id': `${canonical}#article`,
@@ -673,12 +821,13 @@ function renderPageSchema(page) {
       dateModified: page.meta.modified,
       inLanguage: locale,
       author: { '@id': `${siteUrl}/#author` },
-      publisher: { '@id': `${siteUrl}/#author` },
+      publisher: { '@id': `${siteUrl}/#organization` },
       isPartOf: { '@id': `${siteUrl}/#website` },
-      keywords: [page.meta.primaryKeyword, ...page.meta.topics].join(', '),
+      image: absoluteUrl(page.meta.ogImage),
+      keywords: [page.meta.primaryKeyword, ...page.meta.secondaryKeywords].join(', '),
       citation: page.meta.sources.map((source) => source.url),
     });
-  } else {
+  } else if (page.section === 'calcolatori') {
     commonGraph.push({
       '@type': 'WebApplication',
       '@id': `${canonical}#calculator`,
@@ -691,7 +840,24 @@ function renderPageSchema(page) {
       isAccessibleForFree: true,
       inLanguage: locale,
       author: { '@id': `${siteUrl}/#author` },
+      publisher: { '@id': `${siteUrl}/#organization` },
       isPartOf: { '@id': `${siteUrl}/#website` },
+    });
+  } else {
+    commonGraph.push({
+      '@type': 'SoftwareApplication',
+      '@id': `${canonical}#application`,
+      name: config.name,
+      description: page.meta.description,
+      url: canonical,
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Android, iOS',
+      inLanguage: locale,
+      image: absoluteUrl(page.meta.ogImage),
+      author: { '@id': `${siteUrl}/#organization` },
+      publisher: { '@id': `${siteUrl}/#organization` },
+      isPartOf: { '@id': `${siteUrl}/#website` },
+      sameAs: [config.appStoreUrl, config.googlePlayUrl],
     });
   }
 
@@ -759,7 +925,7 @@ function renderMarkdown(markdown) {
   });
 }
 
-function renderSitemap() {
+function renderSitemaps() {
   const hubEntries = activeHubs.map(({ locale, section }) => {
     const sectionPages = pages.filter((page) => page.locale === locale && page.section === section);
     return {
@@ -767,17 +933,43 @@ function renderSitemap() {
       lastmod: latestDate(sectionPages.map((page) => page.meta.modified)),
     };
   });
-  const entries = [
-    { path: `${config.basePath}/`, lastmod: latestDate(pages.map((page) => page.meta.modified)) },
-    { path: `${config.basePath}/privacy.html` },
-    { path: `${config.basePath}/terms.html` },
-    ...hubEntries,
-    ...pages.map((page) => ({ path: page.urlPath, lastmod: page.meta.modified })),
-  ];
+  const groups = {
+    'sitemaps/core.xml': [
+      { path: `${config.basePath}/`, lastmod: config.coreLastModified },
+      ...hubEntries,
+      ...pages
+        .filter((page) => page.section === 'landing')
+        .map((page) => ({ path: page.urlPath, lastmod: page.meta.modified })),
+    ],
+    'sitemaps/articles-it.xml': pages
+      .filter((page) => page.locale === 'it' && ['guide', 'confronti'].includes(page.section))
+      .map((page) => ({ path: page.urlPath, lastmod: page.meta.modified })),
+    'sitemaps/calculators-it.xml': pages
+      .filter((page) => page.locale === 'it' && page.section === 'calcolatori')
+      .map((page) => ({ path: page.urlPath, lastmod: page.meta.modified })),
+    'sitemaps/legal.xml': [
+      { path: `${config.basePath}/privacy.html`, lastmod: config.legalLastModified },
+      { path: `${config.basePath}/terms.html`, lastmod: config.legalLastModified },
+    ],
+  };
 
+  const files = Object.fromEntries(
+    Object.entries(groups).map(([relativePath, entries]) => [relativePath, renderUrlSet(entries)]),
+  );
+  files['sitemap.xml'] = renderSitemapIndex(
+    Object.entries(groups).map(([relativePath, entries]) => ({
+      path: `${config.basePath}/${relativePath}`,
+      lastmod: latestDate(entries.map((entry) => entry.lastmod).filter(Boolean)),
+    })),
+  );
+  return files;
+}
+
+function renderUrlSet(entries) {
+  const sorted = [...entries].sort((a, b) => a.path.localeCompare(b.path));
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${entries
+${sorted
     .map(
       (entry) => `  <url>
     <loc>${escapeXml(absoluteUrl(entry.path))}</loc>${entry.lastmod ? `\n    <lastmod>${entry.lastmod}</lastmod>` : ''}
@@ -788,7 +980,28 @@ ${entries
 `;
 }
 
+function renderSitemapIndex(entries) {
+  const sorted = [...entries].sort((a, b) => a.path.localeCompare(b.path));
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sorted
+    .map(
+      (entry) => `  <sitemap>
+    <loc>${escapeXml(absoluteUrl(entry.path))}</loc>${entry.lastmod ? `\n    <lastmod>${entry.lastmod}</lastmod>` : ''}
+  </sitemap>`,
+    )
+    .join('\n')}
+</sitemapindex>
+`;
+}
+
 function breadcrumbItems(page) {
+  if (page.section === 'landing') {
+    return [
+      { name: 'RouteBudget', url: `${siteUrl}/` },
+      { name: page.meta.title, url: absoluteUrl(page.urlPath) },
+    ];
+  }
   return [
     { name: 'RouteBudget', url: `${siteUrl}/` },
     {
@@ -806,11 +1019,15 @@ function resolveReferenceId(locale, reference) {
 }
 
 function pagePath(locale, section, slug) {
+  if (section === 'landing') {
+    return `${config.basePath}/${locale}/${slug}/`;
+  }
   const segment = sectionSegment(locale, section);
   return `${config.basePath}/${locale}/${segment}/${slug}/`;
 }
 
 function hubPath(locale, section) {
+  assert(HUB_SECTION_KEYS.includes(section), `No hub exists for section: ${section}`);
   const segment = sectionSegment(locale, section);
   return `${config.basePath}/${locale}/${segment}/`;
 }
@@ -824,7 +1041,14 @@ function sectionSegment(locale, section) {
 function sectionLabel(section) {
   if (section === 'guide') return 'Guide';
   if (section === 'calcolatori') return 'Calcolatori';
+  if (section === 'landing') return 'App';
   return 'Confronti';
+}
+
+function appLandingPath(locale) {
+  const landing = pages.find((page) => page.locale === locale && page.section === 'landing');
+  assert(landing, `${locale}: one published app landing is required`);
+  return landing.urlPath;
 }
 
 function absoluteUrl(urlPath) {

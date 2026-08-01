@@ -1,0 +1,64 @@
+{
+  "slug": "app-per-autotrasportatori",
+  "kind": "landing",
+  "locale": "it",
+  "status": "published",
+  "title": "App per autotrasportatori: calcola costi, prezzo e preventivo",
+  "description": "RouteBudget riunisce costi di tratta, tre scenari di prezzo, archivio locale e riepilogo PDF per autotrasportatori e piccole imprese.",
+  "eyebrow": "RouteBudget per il lavoro quotidiano",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "app per autotrasportatori",
+  "secondaryKeywords": [
+    "app calcolo costi trasporto",
+    "app preventivo camion",
+    "calcolo margine autotrasporto",
+    "software costo tratta camion"
+  ],
+  "searchIntent": "commercial-transactional",
+  "conversionIntent": "complete-trip",
+  "translationGroup": "app-for-road-hauliers",
+  "cluster": "prodotto-routebudget",
+  "pillar": null,
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:costi-autotrasporto",
+    "guide:preventivo-trasporto",
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:costo-carburante-viaggio"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "calculatorId": null,
+  "appFeature": "complete-route-calculation",
+  "canonical": "/it/app-per-autotrasportatori/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "topics": [
+    "app autotrasporto",
+    "costo di tratta",
+    "scenari di prezzo",
+    "preventivo PDF"
+  ],
+  "sources": [
+    {
+      "label": "Apple App Store — RouteBudget: Truck Toll Cost",
+      "url": "https://apps.apple.com/app/id6789717191",
+      "publishedOrUpdated": "Scheda live consultata il 2026-08-01",
+      "geography": "Disponibilità secondo paese o area dello store",
+      "accessedAt": "2026-08-01",
+      "supports": "Descrizione ufficiale di costi inseriti, ritorno a vuoto, scenari di prezzo, archivio, PDF e funzioni Pro."
+    },
+    {
+      "label": "Google Play — RouteBudget EU",
+      "url": "https://play.google.com/store/apps/details?id=eu.routebudget.app",
+      "publishedOrUpdated": "Scheda live consultata il 2026-08-01",
+      "geography": "Disponibilità secondo paese o area dello store",
+      "accessedAt": "2026-08-01",
+      "supports": "Destinazione ufficiale Android del prodotto RouteBudget EU."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: pagina prodotto italiana con pubblico, flusso, funzioni verificate, limiti e link agli store ufficiali."
+}

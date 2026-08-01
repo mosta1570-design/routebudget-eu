@@ -1,7 +1,7 @@
 {
   "name": "RouteBudget EU",
   "short_name": "RouteBudget",
-  "start_url": "/routebudget-eu/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#070B12",
   "theme_color": "#070B12",

@@ -1,0 +1,64 @@
+{
+  "slug": "preventivo-trasporto-pdf",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Preventivo di trasporto PDF: contenuti e controllo finale",
+  "description": "Struttura pratica per trasformare una stima di tratta in un PDF leggibile, distinguendo calcolo interno, offerta commerciale e dati da verificare.",
+  "eyebrow": "Dal calcolo al documento",
+  "published": "2026-08-01",
+  "modified": "2026-08-01",
+  "reviewed": "2026-08-01",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "preventivo trasporto PDF",
+  "secondaryKeywords": [
+    "modello preventivo autotrasporto",
+    "PDF preventivo camion",
+    "offerta trasporto merci",
+    "riepilogo costo tratta"
+  ],
+  "searchIntent": "informational-commercial",
+  "conversionIntent": "pdf-quote",
+  "translationGroup": "road-haulage-quote-pdf",
+  "cluster": "preventivi-trasporto",
+  "pillar": "guide:preventivo-trasporto",
+  "related": [
+    "guide:preventivo-trasporto",
+    "guide:calcolo-costo-trasporto",
+    "guide:errori-calcolo-tariffa-trasporto",
+    "guide:proteggere-margine-tratta",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "calculatorId": null,
+  "appFeature": "pdf-quote",
+  "canonical": "/it/guide/preventivo-trasporto-pdf/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "topics": [
+    "preventivo PDF",
+    "offerta di trasporto",
+    "controllo documenti",
+    "scenario di prezzo"
+  ],
+  "sources": [
+    {
+      "label": "Apple App Store — RouteBudget: Truck Toll Cost",
+      "url": "https://apps.apple.com/app/id6789717191",
+      "publishedOrUpdated": "Scheda live consultata il 2026-08-01",
+      "geography": "Disponibilità secondo paese o area dello store",
+      "accessedAt": "2026-08-01",
+      "supports": "Descrizione ufficiale delle funzioni di stima, scenari, archivio, PDF e logo aziendale."
+    },
+    {
+      "label": "Google Play — RouteBudget EU",
+      "url": "https://play.google.com/store/apps/details?id=eu.routebudget.app",
+      "publishedOrUpdated": "Scheda live consultata il 2026-08-01",
+      "geography": "Disponibilità secondo paese o area dello store",
+      "accessedAt": "2026-08-01",
+      "supports": "Destinazione ufficiale Android e disponibilità del prodotto; le funzioni restano quelle dichiarate nella pagina."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: struttura del PDF, separazione tra stima e offerta, esempio e checklist pre-invio."
+}

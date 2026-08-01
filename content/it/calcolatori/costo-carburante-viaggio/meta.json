@@ -31,5 +31,19 @@
       "label": "Commissione europea — Weekly Oil Bulletin",
       "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
     }
-  ]
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "calcolo consumo camion",
+    "costo gasolio tratta camion"
+  ],
+  "cluster": "costo-trasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "fuel-estimate",
+  "canonical": "/it/calcolatori/costo-carburante-viaggio/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
 }

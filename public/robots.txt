@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mosta1570-design.github.io/routebudget-eu/sitemap.xml
+Sitemap: https://routebudget.eu/sitemap.xml

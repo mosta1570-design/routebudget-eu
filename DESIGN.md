@@ -24,10 +24,10 @@ No gradient text. Gradients may shape light, depth, or image legibility without 
 
 ## Typography
 
-- Display: Barlow Condensed, 600 to 700. Its compressed road-sign character feels directional and mechanical without resembling a gaming or portfolio font.
-- Body and UI: Barlow, 400 to 700. Same superfamily keeps product and marketing surfaces related while width contrast creates hierarchy.
+- Display, body, and UI: Inter, 300 to 700. Light editorial display lines contrast with medium navigation and readable body copy.
+- Technical accent: basis33, used selectively for second metadata lines, compact product labels, and selected hero phrases. It never carries paragraphs or long-form content.
 - Numerals: tabular lining figures for all route-cost examples.
-- Hero maximum: 96 px, minimum 56 px on desktop and 48 px on narrow mobile.
+- Hero maximum: 68 px, minimum 28 px on narrow mobile; explicit line breaks and selective basis33 scaling preserve the title-sequence geometry.
 - Body measure: 65 ch maximum.
 
 ## Layout
@@ -57,8 +57,8 @@ No gradient text. Gradients may shape light, depth, or image legibility without 
 
 ## Components
 
-- `SiteHeader`: transparent-to-solid sticky header, desktop anchors, IT/EN switch, full-screen mobile menu.
-- `Hero`: cinematic image, brand promise, verified App Store action, Android review status, product decision proof.
+- `CinematicHero`: locked full-screen media, compact desktop navigation, IT/EN switch, four-column metadata, editorial headline, factual chips, and full-screen mobile menu.
+- `DemoOverlay`: real Android screenshots in a product demonstration; never a simulated video.
 - `CostEquation`: connected operational formula rather than a feature-card grid.
 - `ProductShowcase`: real Android screenshots in asymmetric phone compositions.
 - `WorkflowSection`: calculate, compare, export, archive flow with one continuous route line.

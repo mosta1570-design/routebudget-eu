@@ -35,5 +35,19 @@
       "label": "Commissione europea — Road charging",
       "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
     }
-  ]
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "costo camion al km",
+    "costo autotrasporto al km"
+  ],
+  "cluster": "costi-autotrasporto",
+  "relatedCalculator": "calcolatori:costo-carburante-viaggio",
+  "appFeature": "cost-breakdown",
+  "canonical": "/it/calcolatori/costo-chilometrico-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
 }
