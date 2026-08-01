@@ -659,7 +659,10 @@ p {
   inset: 0;
   z-index: 70;
   display: flex;
+  min-height: 100svh;
+  height: 100dvh;
   overflow-y: auto;
+  overscroll-behavior: contain;
   flex-direction: column;
   padding: max(1.25rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right)) max(1.25rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
   background: oklch(9% 0.012 255 / 97%);
@@ -671,6 +674,7 @@ p {
   transition:
     opacity 380ms var(--ease-premium),
     transform 380ms var(--ease-premium);
+  -webkit-overflow-scrolling: touch;
 }
 
 .demo-overlay.is-open {
@@ -766,6 +770,10 @@ p {
   font-size: 0.65rem;
   font-weight: 500;
   text-align: right;
+}
+
+.demo-overlay__controls {
+  display: none;
 }
 
 .demo-overlay__stores {
@@ -1767,26 +1775,152 @@ p {
     padding-top: 0.65rem;
   }
 
+  .demo-overlay {
+    padding: max(0.9rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1.25rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+  }
+
+  .demo-overlay__header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding-right: 3.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .demo-overlay__header .icon-control {
+    position: fixed;
+    z-index: 71;
+    top: max(0.9rem, env(safe-area-inset-top));
+    right: max(1rem, env(safe-area-inset-right));
+    width: 48px;
+    height: 48px;
+    background: oklch(14.5% 0.018 255 / 96%);
+    box-shadow: 0 12px 30px rgb(0 0 0 / 38%);
+  }
+
+  .demo-overlay__header h2 {
+    max-width: 15ch;
+    font-size: clamp(1.75rem, 8vw, 2.45rem);
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
   .demo-overlay__frames {
     display: flex;
+    width: 100%;
+    min-width: 0;
+    flex: 0 0 auto;
     overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    align-items: flex-start;
     justify-content: flex-start;
-    gap: 1rem;
+    gap: 0;
+    margin: 0;
+    padding: 1rem 0 0.75rem;
+    scrollbar-width: none;
+    scroll-padding-inline: 0;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .demo-overlay__frames::-webkit-scrollbar {
+    display: none;
   }
 
   .demo-frame {
-    width: min(73vw, 270px);
-    flex: 0 0 min(73vw, 270px);
-    scroll-snap-align: center;
+    width: 100%;
+    min-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 
   .demo-frame:nth-child(2) {
     transform: none;
   }
 
+  .demo-frame__image,
+  .demo-frame figcaption {
+    width: min(78vw, 288px);
+  }
+
+  .demo-frame figcaption span {
+    font-size: 0.68rem;
+  }
+
+  .demo-frame figcaption strong {
+    font-size: 0.78rem;
+  }
+
+  .demo-overlay__controls {
+    display: grid;
+    width: min(100%, 288px);
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 1rem auto 0;
+  }
+
+  .demo-overlay__controls button {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgb(255 255 255 / 24%);
+    border-radius: 14px;
+    background: var(--asphalt);
+    color: var(--ink);
+    cursor: pointer;
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease,
+      opacity 180ms ease;
+  }
+
+  .demo-overlay__controls button:active:not(:disabled) {
+    background: var(--steel);
+  }
+
+  .demo-overlay__controls button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .demo-overlay__controls p {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  .demo-overlay__controls span {
+    color: var(--ink-muted);
+    font-family: "basis33", monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .demo-overlay__controls strong {
+    font-size: 0.86rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
   .demo-overlay__header h2 + p {
-    font-size: 0.8rem;
+    max-width: 32ch;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+
+  .demo-overlay__stores {
+    justify-content: center;
+    margin-top: 0;
   }
 }
 

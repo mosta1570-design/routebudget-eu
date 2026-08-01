@@ -1,5 +1,7 @@
 import {
   ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
   Menu,
   Play,
   X,
@@ -51,6 +53,11 @@ type HeroLanguage = {
   demoTitle: string;
   demoIntro: string;
   demoClose: string;
+  demoCarouselLabel: string;
+  demoControlsLabel: string;
+  demoPrevious: string;
+  demoNext: string;
+  demoScreenLabel: string;
   downloadLabel: string;
   availability: string;
   footerFacts: string;
@@ -77,6 +84,11 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
     demoIntro:
       'Tre schermate reali dell’app Android: scenari, composizione dei costi e Archivio locale.',
     demoClose: 'Chiudi la dimostrazione',
+    demoCarouselLabel: 'Schermate reali dell’app RouteBudget',
+    demoControlsLabel: 'Controlli delle schermate',
+    demoPrevious: 'Schermata precedente',
+    demoNext: 'Schermata successiva',
+    demoScreenLabel: 'Schermata',
     downloadLabel: 'Scarica RouteBudget',
     availability: 'Disponibile per iPhone e Android.',
     footerFacts: '7 lingue • Preventivi PDF • Archivio locale',
@@ -118,6 +130,11 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
     demoIntro:
       'Three authentic Android app screens: scenarios, cost composition, and local Archive.',
     demoClose: 'Close demonstration',
+    demoCarouselLabel: 'Authentic RouteBudget app screens',
+    demoControlsLabel: 'Screen controls',
+    demoPrevious: 'Previous screen',
+    demoNext: 'Next screen',
+    demoScreenLabel: 'Screen',
     downloadLabel: 'Download RouteBudget',
     availability: 'Available for iPhone and Android.',
     footerFacts: '7 languages • PDF estimates • Local Archive',
@@ -207,28 +224,127 @@ function DemoOverlay({
   onClose: () => void;
 }) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const framesRef = useRef<HTMLDivElement>(null);
+  const [activeFrame, setActiveFrame] = useState(0);
   const badges = STORE_BADGES[locale];
 
   useEffect(() => {
     if (open) {
       closeButtonRef.current?.focus();
+
+      window.requestAnimationFrame(() => {
+        setActiveFrame(0);
+        overlayRef.current?.scrollTo({ top: 0 });
+        framesRef.current?.scrollTo({ left: 0 });
+      });
     }
   }, [open]);
 
+  useEffect(() => {
+    const overlay = overlayRef.current;
+
+    if (!open || !overlay) {
+      return undefined;
+    }
+
+    const trapFocus = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const focusable = Array.from(overlay.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      )).filter((element) => {
+        const styles = window.getComputedStyle(element);
+        const bounds = element.getBoundingClientRect();
+        return styles.display !== 'none'
+          && styles.visibility !== 'hidden'
+          && bounds.width > 0
+          && bounds.height > 0;
+      });
+      const first = focusable.at(0);
+      const last = focusable.at(-1);
+
+      if (!first || !last) {
+        event.preventDefault();
+        return;
+      }
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    overlay.addEventListener('keydown', trapFocus);
+    return () => overlay.removeEventListener('keydown', trapFocus);
+  }, [open]);
+
+  const scrollToFrame = (index: number) => {
+    const container = framesRef.current;
+    const nextIndex = Math.max(0, Math.min(index, demoFrames.length - 1));
+    const target = container?.children.item(nextIndex);
+
+    if (!container || !(target instanceof HTMLElement)) {
+      return;
+    }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    container.scrollTo({
+      behavior: reduceMotion ? 'auto' : 'smooth',
+      left: target.offsetLeft - container.offsetLeft,
+    });
+    setActiveFrame(nextIndex);
+  };
+
+  const updateActiveFrame = () => {
+    const container = framesRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    const viewportCenter = container.scrollLeft + container.clientWidth / 2;
+    let closestIndex = 0;
+    let closestDistance = Number.POSITIVE_INFINITY;
+
+    Array.from(container.children).forEach((child, index) => {
+      if (!(child instanceof HTMLElement)) {
+        return;
+      }
+
+      const frameCenter = child.offsetLeft - container.offsetLeft + child.offsetWidth / 2;
+      const distance = Math.abs(frameCenter - viewportCenter);
+
+      if (distance < closestDistance) {
+        closestIndex = index;
+        closestDistance = distance;
+      }
+    });
+
+    setActiveFrame(closestIndex);
+  };
+
   return createPortal(
     <div
+      aria-describedby="product-demo-intro"
       aria-hidden={!open}
       aria-labelledby="product-demo-title"
       aria-modal="true"
       className={`demo-overlay ${open ? 'is-open' : ''}`}
       inert={!open}
+      ref={overlayRef}
       role="dialog"
     >
       <div className="demo-overlay__header">
         <div>
           <p className="font-pixel">PRODUCT DEMO / ANDROID</p>
           <h2 id="product-demo-title">{copy.demoTitle}</h2>
-          <p>{copy.demoIntro}</p>
+          <p id="product-demo-intro">{copy.demoIntro}</p>
         </div>
         <button
           aria-label={copy.demoClose}
@@ -242,7 +358,50 @@ function DemoOverlay({
         </button>
       </div>
 
-      <div className="demo-overlay__frames">
+      <div aria-label={copy.demoControlsLabel} className="demo-overlay__controls" role="group">
+        <button
+          aria-label={copy.demoPrevious}
+          disabled={activeFrame === 0}
+          onClick={() => scrollToFrame(activeFrame - 1)}
+          type="button"
+        >
+          <ChevronLeft aria-hidden="true" size={22} strokeWidth={1.7} />
+        </button>
+        <p aria-atomic="true" aria-live="polite">
+          <span>{copy.demoScreenLabel}</span>
+          <strong>
+            {String(activeFrame + 1).padStart(2, '0')} / {String(demoFrames.length).padStart(2, '0')}
+          </strong>
+        </p>
+        <button
+          aria-label={copy.demoNext}
+          disabled={activeFrame === demoFrames.length - 1}
+          onClick={() => scrollToFrame(activeFrame + 1)}
+          type="button"
+        >
+          <ChevronRight aria-hidden="true" size={22} strokeWidth={1.7} />
+        </button>
+      </div>
+
+      <div
+        aria-label={copy.demoCarouselLabel}
+        className="demo-overlay__frames"
+        onKeyDown={(event) => {
+          if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            scrollToFrame(activeFrame - 1);
+          }
+
+          if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            scrollToFrame(activeFrame + 1);
+          }
+        }}
+        onScroll={updateActiveFrame}
+        ref={framesRef}
+        role="region"
+        tabIndex={open ? 0 : -1}
+      >
         {demoFrames.map((frame) => (
           <figure className="demo-frame" key={frame.label}>
             <div className="demo-frame__image">
@@ -273,6 +432,8 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
   const closeMenuRef = useRef<HTMLButtonElement>(null);
+  const menuTriggerRef = useRef<HTMLButtonElement>(null);
+  const demoTriggerRef = useRef<HTMLButtonElement>(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
   const copy = heroLanguage[locale];
 
@@ -314,8 +475,15 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
 
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        setMenuOpen(false);
-        setDemoOpen(false);
+        if (menuOpen) {
+          setMenuOpen(false);
+          window.requestAnimationFrame(() => menuTriggerRef.current?.focus({ preventScroll: true }));
+        }
+
+        if (demoOpen) {
+          setDemoOpen(false);
+          window.requestAnimationFrame(() => demoTriggerRef.current?.focus({ preventScroll: true }));
+        }
       }
     };
 
@@ -335,7 +503,10 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
     }
   }, [menuOpen]);
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    window.requestAnimationFrame(() => menuTriggerRef.current?.focus({ preventScroll: true }));
+  };
 
   return (
     <>
@@ -386,6 +557,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
               aria-label={copy.menuLabel}
               className="hero-mobile-menu icon-control"
               onClick={() => setMenuOpen(true)}
+              ref={menuTriggerRef}
               type="button"
             >
               <Menu aria-hidden="true" size={24} strokeWidth={1.6} />
@@ -437,6 +609,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
                 <button
                   className="hero-demo-button"
                   onClick={() => setDemoOpen(true)}
+                  ref={demoTriggerRef}
                   type="button"
                 >
                   <Play aria-hidden="true" fill="currentColor" size={16} strokeWidth={1.4} />
@@ -512,7 +685,15 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
         </div>
       </div>, document.body)}
 
-      <DemoOverlay copy={copy} locale={locale} onClose={() => setDemoOpen(false)} open={demoOpen} />
+      <DemoOverlay
+        copy={copy}
+        locale={locale}
+        onClose={() => {
+          setDemoOpen(false);
+          window.requestAnimationFrame(() => demoTriggerRef.current?.focus({ preventScroll: true }));
+        }}
+        open={demoOpen}
+      />
     </>
   );
 }
