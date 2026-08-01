@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — RouteBudget EU</title>
+<meta name="description" content="RouteBudget EU Privacy Policy for Android and iOS: local data, route-provider requests, subscriptions, retention and platform permissions." />
+<link rel="canonical" href="https://routebudget.eu/privacy.html" />
+<style>
+  :root{
+    --bg:#0B0E14; --surface:#17212B; --surface2:#1F2A36; --input:#101820;
+    --primary:#2481CC; --success:#31B545; --premium:#8774E1;
+    --text:#FFFFFF; --text2:#8B98A5; --text3:#5C6B7A; --divider:#232F3B;
+    --radius:14px; --pill:28px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    background:linear-gradient(180deg,#0B0E14 0%,#0D1622 100%);
+    color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  header{
+    position:sticky;top:0;z-index:10;
+    background:rgba(11,14,20,.82);backdrop-filter:saturate(160%) blur(18px);
+    -webkit-backdrop-filter:saturate(160%) blur(18px);
+    border-bottom:1px solid var(--divider);
+  }
+  .bar{max-width:820px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+  .brand img{width:38px;height:38px;border-radius:10px;display:block}
+  .brand b{font-size:17px;font-weight:800;letter-spacing:-.3px}
+  .brand b span{color:var(--primary)}
+  .langs{display:flex;gap:6px}
+  .langs button{
+    font:inherit;font-size:13px;font-weight:700;cursor:pointer;color:var(--text2);
+    background:var(--input);border:1px solid var(--divider);border-radius:var(--pill);
+    padding:7px 14px;transition:.15s;
+  }
+  .langs button.active{background:var(--primary);border-color:var(--primary);color:#fff}
+  .hero{padding:56px 0 28px;text-align:center}
+  .hero .kicker{color:var(--primary);font-weight:800;letter-spacing:1.6px;font-size:12px;text-transform:uppercase}
+  .hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;margin:10px 0 8px}
+  .hero p{color:var(--text2);font-size:15px}
+  .summary{
+    background:linear-gradient(135deg,rgba(36,129,204,.14),rgba(135,116,225,.10));
+    border:1px solid var(--divider);border-radius:var(--radius);
+    padding:20px 22px;margin:24px 0;color:#D7E2EE;font-size:15px;
+  }
+  .summary b{color:var(--text)}
+  .card{background:var(--surface);border:1px solid var(--divider);border-radius:var(--radius);padding:26px 26px;margin:16px 0}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--primary);margin:0 0 14px;font-weight:800}
+  h2 .n{color:var(--text3);margin-right:8px}
+  p{color:#C7D1DB;font-size:15px;margin:0 0 12px}
+  p:last-child{margin-bottom:0}
+  strong{color:var(--text)}
+  ul{list-style:none;margin:6px 0 12px}
+  li{position:relative;padding-left:22px;color:#C7D1DB;font-size:15px;margin:8px 0}
+  li::before{content:"";position:absolute;left:2px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--success)}
+  li.no::before{background:#E53935}
+  table{width:100%;border-collapse:collapse;margin:8px 0 4px;font-size:14px}
+  td,th{text-align:left;padding:10px 8px;border-bottom:1px solid var(--divider);color:#C7D1DB;vertical-align:top}
+  th{color:var(--text2);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .chip{display:inline-flex;align-items:center;gap:9px;background:var(--input);border:1px solid var(--divider);border-radius:var(--pill);padding:11px 18px;color:var(--text);font-size:14px;font-weight:600}
+  .chip svg{width:17px;height:17px;fill:var(--primary)}
+  footer{text-align:center;color:var(--text3);font-size:13px;margin-top:40px;padding-top:24px;border-top:1px solid var(--divider)}
+  footer a{color:var(--text2)}
+  [data-lang]{display:none}
+  body[data-active="en"] [data-lang="en"]{display:block}
+  body[data-active="it"] [data-lang="it"]{display:block}
+  li[data-lang],td[data-lang]{display:none}
+  body[data-active="en"] li[data-lang="en"]{display:list-item}
+  body[data-active="it"] li[data-lang="it"]{display:list-item}
+  body[data-active="en"] td[data-lang="en"],body[data-active="en"] th[data-lang="en"]{display:table-cell}
+  body[data-active="it"] td[data-lang="it"],body[data-active="it"] th[data-lang="it"]{display:table-cell}
+  @media(max-width:560px){.hero h1{font-size:30px}.card{padding:20px}}
+</style>
+</head>
+<body data-active="en">
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html"><img src="logo.png" alt="RouteBudget EU" /><b>RouteBudget<span>EU</span></b></a>
+    <div class="langs">
+      <button data-set="en" class="active">EN</button>
+      <button data-set="it">IT</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker" data-lang="en">Privacy Policy</div>
+    <div class="kicker" data-lang="it">Informativa sulla Privacy</div>
+    <h1 data-lang="en">Privacy Policy</h1>
+    <h1 data-lang="it">Privacy</h1>
+    <p data-lang="en">Effective 27 July 2026 · Last updated 1 August 2026</p>
+    <p data-lang="it">In vigore dal 27 luglio 2026 · Ultimo aggiornamento 1 agosto 2026</p>
+  </div>
+
+  <div class="summary">
+    <p data-lang="en"><b>In short:</b> Core calculations, quotes, settings and Archive data are kept on your device. Optional real-distance lookup sends origin and destination city text to Nominatim, then route endpoints and coordinates to OSRM. Apple or Google Play processes payment, depending on platform; RevenueCat processes purchase history and an anonymous App User ID for Pro access. Optional foreground-GPS Trip tracking exists on iOS only. Android has no Trip tracking, Maps feature or device-location permission. No account, advertising, Firebase Analytics, cross-app tracking or developer-operated cloud sync is present.</p>
+    <p data-lang="it"><b>In breve:</b> Calcoli, preventivi, impostazioni e dati dell'Archivio sono conservati sul dispositivo. La ricerca opzionale della distanza reale invia i nomi delle città di origine e destinazione a Nominatim, quindi gli estremi e le coordinate della tratta a OSRM. Apple o Google Play gestisce il pagamento, a seconda della piattaforma; RevenueCat tratta la cronologia degli acquisti e un ID utente anonimo dell'app per l'accesso Pro. Il Trip Tracking opzionale con GPS in primo piano esiste solo su iOS. Android non include Trip Tracking, funzionalità Maps o permessi di posizione del dispositivo. Non sono presenti account, pubblicità, Firebase Analytics, tracciamento tra app o sincronizzazione cloud gestita dallo sviluppatore.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">1</span><span data-lang="en">Controller and Privacy Contact</span><span data-lang="it">Titolare e contatto privacy</span></h2>
+    <p data-lang="en"><strong>Data controller:</strong> the independent developer of RouteBudget EU.</p>
+    <p data-lang="it"><strong>Titolare del trattamento:</strong> lo sviluppatore indipendente di RouteBudget EU.</p>
+    <p><strong>Eng. Mostafa</strong></p>
+    <div class="contact">
+      <a class="chip" href="mailto:mosta1570@gmail.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>mosta1570@gmail.com</a>
+    </div>
+    <p data-lang="en" style="margin-top:14px"><strong>Privacy contact:</strong> <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+    <p data-lang="it" style="margin-top:14px"><strong>Contatto privacy:</strong> <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+    <p data-lang="en">Any trader-status declaration or verification information Apple may separately request through App Store Connect concerns App Store distribution under the DSA. It is distinct from this public Privacy Policy and is not reproduced here.</p>
+    <p data-lang="it">Qualsiasi dichiarazione sullo status di operatore commerciale o informazione di verifica che Apple possa richiedere separatamente tramite App Store Connect riguarda la distribuzione sull'App Store ai sensi del DSA. È distinta dalla presente informativa privacy pubblica e non viene riprodotta qui.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">2</span><span data-lang="en">Free, Pro, Accounts and Tracking</span><span data-lang="it">Free, Pro, account e tracciamento</span></h2>
+    <p data-lang="en">RouteBudget EU can be used without registration or login. The Free product provides a limited number of calculations. RouteBudget Pro is an optional subscription that unlocks unlimited calculations and a user-selected company logo on PDF quotes. No RouteBudget user account is created for either product.</p>
+    <p data-lang="it">RouteBudget EU può essere usata senza registrazione o accesso. Il prodotto Free offre un numero limitato di calcoli. RouteBudget Pro è un abbonamento facoltativo che sblocca calcoli illimitati e un logo aziendale scelto dall'utente nei preventivi PDF. Non viene creato alcun account RouteBudget per nessuno dei due prodotti.</p>
+    <p data-lang="en">By design, current App code does <strong>not</strong>:</p>
+    <p data-lang="it">Per progettazione, il codice attuale dell'App <strong>non</strong>:</p>
+    <ul>
+      <li class="no" data-lang="en">intentionally send customer names, licence plates, wages, margins, toll breakdowns or financial totals to map or subscription providers;</li>
+      <li class="no" data-lang="en">upload foreground GPS fixes used by optional iOS Trip tracking;</li>
+      <li class="no" data-lang="en">request Android device location or provide Android Trip tracking or Maps;</li>
+      <li class="no" data-lang="en">sell user data;</li>
+      <li class="no" data-lang="en">use advertising networks, ad identifiers, Firebase Analytics or cross-app tracking;</li>
+      <li class="no" data-lang="en">use third-party analytics or session-replay SDKs;</li>
+      <li class="no" data-lang="en">require an account, email or phone number to work.</li>
+      <li class="no" data-lang="it">invia intenzionalmente nomi dei clienti, targhe, retribuzioni, margini, dettagli dei pedaggi o totali finanziari ai fornitori di mappe o abbonamenti;</li>
+      <li class="no" data-lang="it">carica le posizioni GPS usate dal Trip Tracking opzionale su iOS;</li>
+      <li class="no" data-lang="it">richiede la posizione del dispositivo Android o offre Trip Tracking o Maps su Android;</li>
+      <li class="no" data-lang="it">vende i dati degli utenti;</li>
+      <li class="no" data-lang="it">usa reti pubblicitarie, identificatori pubblicitari, Firebase Analytics o tracciamento tra app;</li>
+      <li class="no" data-lang="it">usa SDK di analisi o riproduzione delle sessioni di terze parti;</li>
+      <li class="no" data-lang="it">richiede un account, email o numero di telefono per funzionare.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">3</span><span data-lang="en">Data Stored Locally On Your Device</span><span data-lang="it">Dati salvati localmente sul dispositivo</span></h2>
+    <p data-lang="en">The following is created by you and stored on your device in a local SQLite database inside the app sandbox. When you explicitly request real distance, only the city text and resulting route endpoints described in Section 6 are transmitted off-device:</p>
+    <p data-lang="it">I seguenti dati sono creati da te e salvati sul dispositivo in un database SQLite locale nella sandbox dell'app. Quando richiedi esplicitamente la distanza reale, vengono trasmessi fuori dal dispositivo solo i nomi delle città e gli estremi della tratta descritti nella Sezione 6:</p>
+    <table>
+      <tr><th data-lang="en">Data</th><th data-lang="en">Purpose</th><th data-lang="it">Dato</th><th data-lang="it">Finalità</th></tr>
+      <tr>
+        <td data-lang="en">Route inputs (origin, destination, distance, truck config)</td><td data-lang="en">Cost calculation</td>
+        <td data-lang="it">Dati tratta (origine, destinazione, distanza, mezzo)</td><td data-lang="it">Calcolo dei costi</td>
+      </tr>
+      <tr>
+        <td data-lang="en">Economic parameters (fuel price, wage, margin)</td><td data-lang="en">Cost calculation</td>
+        <td data-lang="it">Parametri economici (gasolio, paga, margine)</td><td data-lang="it">Calcolo dei costi</td>
+      </tr>
+      <tr>
+        <td data-lang="en">Calculation history &amp; quote totals</td><td data-lang="en">History feature</td>
+        <td data-lang="it">Cronologia calcoli e totali preventivi</td><td data-lang="it">Funzione archivio</td>
+      </tr>
+      <tr>
+        <td data-lang="en">Settings, language, theme and free-calculation count</td><td data-lang="en">App preferences and Free limits</td>
+        <td data-lang="it">Impostazioni, lingua, tema e conteggio dei calcoli Free</td><td data-lang="it">Preferenze dell'app e limiti Free</td>
+      </tr>
+      <tr>
+        <td data-lang="en">Company logo photo or image selected by the user (Pro)</td><td data-lang="en">Logo on PDF quotes</td>
+        <td data-lang="it">Foto o immagine del logo aziendale scelta dall'utente (Pro)</td><td data-lang="it">Logo sui preventivi PDF</td>
+      </tr>
+      <tr>
+        <td data-lang="en">Pending calculation drafts and cached subscription tier</td><td data-lang="en">Recovery and access state</td>
+        <td data-lang="it">Bozze di calcolo in sospeso e livello di abbonamento in cache</td><td data-lang="it">Ripristino e stato di accesso</td>
+      </tr>
+    </table>
+    <p data-lang="en" style="margin-top:10px">PDFs are generated locally and leave the device only when <strong>you</strong> explicitly choose a destination in the operating-system share interface. The selected destination then processes the file under its own terms and privacy policy. The company logo leaves the app only as part of a PDF you choose to share.</p>
+    <p data-lang="it" style="margin-top:10px">I PDF vengono generati localmente e lasciano il dispositivo solo quando <strong>tu</strong> scegli esplicitamente una destinazione nell'interfaccia di condivisione del sistema operativo. La destinazione scelta tratta quindi il file secondo i propri termini e la propria informativa. Il logo aziendale lascia l'app solo come parte di un PDF che scegli di condividere.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">4</span><span data-lang="en">Trip Tracking and Device Location by Platform</span><span data-lang="it">Trip Tracking e posizione per piattaforma</span></h2>
+    <p data-lang="en"><strong>iOS only:</strong> optional Trip tracking requests foreground location access and uses GPS fixes <strong>only while tracking is active</strong> to measure travelled distance and cost on your device. It does not request background or always-on location, and current App code does not intentionally upload those GPS fixes. You can revoke permission at any time in iOS Settings.</p>
+    <p data-lang="it"><strong>Solo iOS:</strong> il Trip Tracking opzionale richiede l'accesso alla posizione in primo piano e usa le posizioni GPS <strong>solo mentre il tracciamento è attivo</strong> per misurare distanza percorsa e costo sul dispositivo. Non richiede la posizione in background o sempre attiva e il codice attuale dell'App non invia intenzionalmente tali posizioni GPS. Puoi revocare il permesso in qualsiasi momento nelle Impostazioni iOS.</p>
+    <p data-lang="en"><strong>Android:</strong> this release has no Trip tracking, Maps feature or native Trip map and does not request device-location permission. Optional real-distance lookup uses city text that you enter and the Nominatim/OSRM flow in Section 6; it does not read Android GPS location.</p>
+    <p data-lang="it"><strong>Android:</strong> questa release non include Trip Tracking, funzionalità Maps o una mappa Trip nativa e non richiede il permesso di posizione del dispositivo. La ricerca opzionale della distanza reale usa i nomi delle città inseriti e il flusso Nominatim/OSRM della Sezione 6; non legge la posizione GPS Android.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">5</span><span data-lang="en">Subscription Data (RouteBudget Pro)</span><span data-lang="it">Dati abbonamento (RouteBudget Pro)</span></h2>
+    <ul>
+      <li data-lang="en">Payment is processed by <strong>Apple App Store</strong> on iOS or <strong>Google Play Billing</strong> on Android. RouteBudget does not receive or store payment-card details.</li>
+      <li data-lang="en"><strong>RevenueCat</strong> processes purchase history, receipt or transaction information, subscription/entitlement state, and an anonymous App User ID or related app/device identifier so the App can unlock and restore Pro access. No RouteBudget account is created, and current App code does not intentionally send routes, calculations, company logos or PDF content to RevenueCat.</li>
+      <li data-lang="en">At this policy's last-updated date, the RouteBudget RevenueCat project has no developer-configured analytics integrations, scheduled data exports, advertising, messaging, support or webhook integrations.</li>
+      <li data-lang="en">Apple privacy information: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>. Google privacy information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+      <li data-lang="en">RevenueCat privacy information: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</li>
+      <li data-lang="it">Il pagamento è gestito da <strong>Apple App Store</strong> su iOS o da <strong>Google Play Billing</strong> su Android. RouteBudget non riceve né conserva i dati delle carte di pagamento.</li>
+      <li data-lang="it"><strong>RevenueCat</strong> tratta la cronologia degli acquisti, le informazioni di ricevuta o transazione, lo stato dell'abbonamento/abilitazione e un ID utente anonimo dell'app o un identificatore correlato dell'app/dispositivo, così l'App può sbloccare e ripristinare l'accesso Pro. Non viene creato alcun account RouteBudget e il codice attuale dell'App non invia intenzionalmente tratte, calcoli, loghi aziendali o contenuti PDF a RevenueCat.</li>
+      <li data-lang="it">Alla data di ultimo aggiornamento di questa informativa, il progetto RouteBudget su RevenueCat non ha integrazioni configurate dallo sviluppatore per analisi, esportazioni pianificate dei dati, pubblicità, messaggistica, assistenza o webhook.</li>
+      <li data-lang="it">Informazioni sulla privacy di Apple: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>. Informazioni sulla privacy di Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+      <li data-lang="it">Informazioni sulla privacy di RevenueCat: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a>.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">6</span><span data-lang="en">City Distance Lookup</span><span data-lang="it">Calcolo distanza tra città</span></h2>
+    <p data-lang="en">When you tap “Get real distance”, origin and destination city text is sent over HTTPS to OpenStreetMap Nominatim for geocoding. The resulting route endpoints and coordinates are then sent over HTTPS to the public OSRM routing service for distance and routing calculations. Requests include app identification and selected language; providers also receive technical request data needed to deliver the service, such as the connecting IP address. Geocoding results are cached locally to reduce repeated requests. No customer name, licence plate, wage, margin, calculated price, financial total, history ID or pending-calculation ID is intentionally included. See the <a href="https://operations.osmfoundation.org/policies/nominatim/" target="_blank" rel="noopener">Nominatim Usage Policy</a>, <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OSMF Privacy Policy</a> and <a href="https://project-osrm.org/" target="_blank" rel="noopener">Project OSRM</a>.</p>
+    <p data-lang="it">Quando tocchi “Calcola distanza reale”, i nomi delle città di origine e destinazione vengono inviati tramite HTTPS a OpenStreetMap Nominatim per la geocodifica. Gli estremi e le coordinate della tratta risultanti vengono poi inviati tramite HTTPS al servizio pubblico di routing OSRM per i calcoli di distanza e percorso. Le richieste includono l'identificazione dell'app e la lingua selezionata; i fornitori ricevono anche dati tecnici necessari per fornire il servizio, come l'indirizzo IP di connessione. I risultati della geocodifica vengono memorizzati localmente per ridurre richieste ripetute. Non vengono inclusi intenzionalmente nomi dei clienti, targhe, retribuzioni, margini, prezzi calcolati, totali finanziari, ID della cronologia o ID di calcoli in sospeso. Consulta la <a href="https://operations.osmfoundation.org/policies/nominatim/" target="_blank" rel="noopener">Policy Nominatim</a>, la <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Privacy OSMF</a> e <a href="https://project-osrm.org/" target="_blank" rel="noopener">Project OSRM</a>.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">7</span><span data-lang="en">Feedback Email</span><span data-lang="it">Email di feedback</span></h2>
+    <p data-lang="en">Feedback is optional. When you choose to send feedback, the App opens your mail client with your message plus the app version, build, operating-system version and device name. Nothing is sent until you choose to send that email. Your email provider and the recipient then process its contents.</p>
+    <p data-lang="it">Il feedback è facoltativo. Quando scegli di inviarlo, l'App apre il client di posta con il tuo messaggio, la versione dell'app, il numero di build, la versione del sistema operativo e il nome del dispositivo. Nulla viene inviato finché non scegli di inviare l'email. Il fornitore di posta e il destinatario trattano quindi il contenuto.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">8</span><span data-lang="en">Retention, Uninstall &amp; Restore</span><span data-lang="it">Conservazione, disinstallazione e ripristino</span></h2>
+    <p data-lang="en">Local SQLite data remains until you delete Archive entries or the company logo in the App, clear the App's storage, or the operating system removes the app container. Because RouteBudget has no account, the developer cannot remotely access or delete data stored only on your device.</p>
+    <p data-lang="it">I dati SQLite locali restano finché non elimini le voci dell'Archivio o il logo aziendale nell'App, cancelli i dati dell'App o il sistema operativo rimuove il contenitore dell'app. Poiché RouteBudget non prevede account, lo sviluppatore non può accedere o eliminare da remoto i dati conservati solo sul dispositivo.</p>
+    <p data-lang="en">RouteBudget does not operate developer cloud synchronization. Android cloud backup is disabled in the Android application configuration. This does not guarantee that data can never move between devices: Android, iOS, the operating-system vendor or a device manufacturer may handle device-to-device migration or platform-managed backup according to your settings and platform behavior. Some operating-system secure storage may also survive uninstall. RouteBudget does not control or guarantee those platform processes.</p>
+    <p data-lang="it">RouteBudget non gestisce una sincronizzazione cloud dello sviluppatore. Il backup cloud Android è disabilitato nella configurazione dell'applicazione Android. Ciò non garantisce che i dati non possano mai passare tra dispositivi: Android, iOS, il fornitore del sistema operativo o il produttore del dispositivo può gestire la migrazione da dispositivo a dispositivo o un backup della piattaforma secondo le impostazioni dell'utente e il comportamento della piattaforma. Alcuni dati protetti dal sistema operativo possono inoltre sopravvivere alla disinstallazione. RouteBudget non controlla né garantisce tali processi della piattaforma.</p>
+    <p data-lang="en">Purchase history is controlled by Apple on iOS and Google Play on Android, and eligible Pro access can be requested again with Restore Purchases. Restore Purchases does not restore local calculations, PDFs, settings, logos or Archive rows.</p>
+    <p data-lang="it">La cronologia degli acquisti è controllata da Apple su iOS e Google Play su Android e l'accesso Pro idoneo può essere richiesto di nuovo con Ripristina acquisti. Il ripristino degli acquisti non recupera calcoli locali, PDF, impostazioni, loghi o voci dell'Archivio.</p>
+    <p data-lang="en">Provider-side retention is controlled by Apple, Google Play, RevenueCat, OpenStreetMap Foundation and Project OSRM under their respective policies. For questions or a request concerning support correspondence or provider data that RouteBudget can identify and control, contact the privacy address in Section 1.</p>
+    <p data-lang="it">La conservazione presso i fornitori è regolata dalle rispettive informative di Apple, Google Play, RevenueCat, OpenStreetMap Foundation e Project OSRM. Per domande o richieste relative alla corrispondenza di assistenza o a dati del fornitore che RouteBudget può identificare e controllare, contatta l'indirizzo privacy della Sezione 1.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">9</span><span data-lang="en">Security &amp; Changes</span><span data-lang="it">Sicurezza e modifiche</span></h2>
+    <p data-lang="en">Local data is protected by the iOS or Android application sandbox and device security. App network requests described in this policy use HTTPS encryption in transit. No internet service can be guaranteed completely secure or continuously available.</p>
+    <p data-lang="it">I dati locali sono protetti dalla sandbox dell'applicazione iOS o Android e dalla sicurezza del dispositivo. Le richieste di rete dell'App descritte in questa informativa usano la crittografia HTTPS durante il trasferimento. Nessun servizio internet può essere garantito come completamente sicuro o sempre disponibile.</p>
+    <p data-lang="en">This policy may be updated when application behavior, service providers or legal requirements change. Material changes will be published here with a revised “Last updated” date and, where appropriate, communicated through the App or its store listing.</p>
+    <p data-lang="it">Questa informativa può essere aggiornata quando cambiano il comportamento dell'applicazione, i fornitori di servizi o i requisiti legali. Le modifiche sostanziali saranno pubblicate qui con una nuova data di “Ultimo aggiornamento” e, quando opportuno, comunicate tramite l'App o la relativa scheda nello store.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">10</span><span data-lang="en">Contact</span><span data-lang="it">Contatti</span></h2>
+    <div class="contact">
+      <a class="chip" href="mailto:mosta1570@gmail.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>mosta1570@gmail.com</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 RouteBudget EU · Eng. Mostafa · <a href="index.html" data-lang="en">Support</a><a href="index.html" data-lang="it">Assistenza</a> · <a href="terms.html" data-lang="en">Terms of Use</a><a href="terms.html" data-lang="it">Termini di Servizio</a></p>
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.body.dataset.active=b.dataset.set;
+      document.documentElement.lang=b.dataset.set;
+      document.querySelectorAll('.langs button').forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

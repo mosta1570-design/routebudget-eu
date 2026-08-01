@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070B12" />
+    <meta name="description" content="Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://routebudget.eu/it/guide/calcolo-costo-trasporto/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="RouteBudget EU" />
+    <meta property="og:title" content="Calcolo del costo di trasporto: metodo completo per una tratta | RouteBudget EU" />
+    <meta property="og:description" content="Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine." />
+    <meta property="og:url" content="https://routebudget.eu/it/guide/calcolo-costo-trasporto/" />
+    <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
+    <meta property="og:image:alt" content="RouteBudget EU — Calcolo del costo di trasporto: metodo completo per una tratta | RouteBudget EU" />
+    <meta property="article:published_time" content="2026-08-01" />
+    <meta property="article:modified_time" content="2026-08-01" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calcolo del costo di trasporto: metodo completo per una tratta | RouteBudget EU" />
+    <meta name="twitter:description" content="Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine." />
+    <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/seo/seo.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/guide/calcolo-costo-trasporto/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Guide","item":"https://routebudget.eu/it/guide/"},{"@type":"ListItem","position":3,"name":"Calcolo del costo di trasporto: metodo completo per una tratta","item":"https://routebudget.eu/it/guide/calcolo-costo-trasporto/"}]},{"@type":"Article","@id":"https://routebudget.eu/it/guide/calcolo-costo-trasporto/#article","headline":"Calcolo del costo di trasporto: metodo completo per una tratta","description":"Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.","url":"https://routebudget.eu/it/guide/calcolo-costo-trasporto/","mainEntityOfPage":"https://routebudget.eu/it/guide/calcolo-costo-trasporto/","datePublished":"2026-08-01","dateModified":"2026-08-01","inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"},"image":"https://routebudget.eu/og-cover.jpg","keywords":"calcolo costo trasporto, prezzo tratta camion, calcolo tariffa autotrasporto","citation":["https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231","https://transport.ec.europa.eu/transport-modes/road/road-charging_en","https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"]}]}</script>
+    <script src="/seo/events.js" defer></script>
+
+    <title>Calcolo del costo di trasporto: metodo completo per una tratta | RouteBudget EU</title>
+  </head>
+<body class="seo-body" data-content-id="it:guide:calcolo-costo-trasporto" data-page-type="pillar" data-locale="it">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <header class="seo-header">
+    <div class="seo-header__inner">
+      <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
+        <img src="/logo.png" width="42" height="42" alt="" />
+        <span>RouteBudget <small>EU</small></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+      </nav>
+      <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scopri l’app <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+  <main id="contenuto">
+    <section class="seo-hero">
+      <div class="seo-shell">
+        <nav class="breadcrumbs" aria-label="Percorso">
+    <a href="/">RouteBudget</a>
+    <span aria-hidden="true">/</span>
+    <a href="/it/guide/">Guide</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Calcolo del costo di trasporto: metodo completo per una tratta</span>
+  </nav>
+        <p class="seo-eyebrow">Guida al costo di tratta</p>
+        <h1>Calcolo del costo di trasporto: metodo completo per una tratta</h1>
+        <p class="seo-hero__summary">Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.</p>
+        <div class="seo-meta" aria-label="Informazioni editoriali">
+          <span>A cura di Eng. Mostafa · RouteBudget EU</span>
+          <span>Revisione 1 agosto 2026</span>
+          <span>8 min di lettura</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="seo-shell article-layout">
+      <article class="seo-prose">
+        <h2>Il costo della tratta non coincide con il gasolio</h2>
+<p>Calcolare il costo di un trasporto significa ricostruire tutto ciò che il viaggio assorbe, dal momento in cui il mezzo viene preparato fino al rientro o al successivo carico. Il carburante è spesso la voce più visibile, ma non è l’unica: pedaggi, tempo dell’autista, usura, manutenzione, assicurazioni e chilometri senza merce continuano a esistere anche quando non compaiono nella richiesta del cliente.</p>
+<p>Un calcolo utile deve rispondere a tre domande diverse:</p>
+<ul>
+<li>quanto costa eseguire la tratta nelle condizioni previste;</li>
+<li>quale prezzo copre quel costo senza erodere il margine;</li>
+<li>quali ipotesi cambierebbero il risultato prima della partenza.</li>
+</ul>
+<p>Separare queste domande evita di confondere il costo operativo con il prezzo da proporre. Il primo descrive ciò che l’impresa prevede di spendere; il secondo aggiunge il margine e tiene conto del servizio offerto.</p>
+<h2>I dati da raccogliere prima del calcolo</h2>
+<p>La qualità del risultato dipende soprattutto dagli input. Prima di applicare una formula, conviene preparare una scheda della tratta con dati coerenti e aggiornati.</p>
+<table>
+<thead>
+<tr>
+<th>Gruppo</th>
+<th>Dato operativo</th>
+<th>Perché serve</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Percorso</td>
+<td>km di andata, ritorno e deviazioni previste</td>
+<td>determina consumo, usura e tempo</td>
+</tr>
+<tr>
+<td>Veicolo</td>
+<td>consumo medio, assi, massa e classe</td>
+<td>influenza carburante e pedaggi</td>
+</tr>
+<tr>
+<td>Lavoro</td>
+<td>ore di guida, carico, scarico e attesa</td>
+<td>misura il tempo impegnato</td>
+</tr>
+<tr>
+<td>Costi</td>
+<td>carburante, pedaggi, costo autista, usura</td>
+<td>forma il costo diretto</td>
+</tr>
+<tr>
+<td>Servizio</td>
+<td>ritorno a vuoto, urgenza, soste, accessi</td>
+<td>rende il preventivo aderente al lavoro</td>
+</tr>
+<tr>
+<td>Prezzo</td>
+<td>margine desiderato e condizioni concordate</td>
+<td>trasforma il costo in proposta</td>
+</tr>
+</tbody></table>
+<p>La distanza commerciale indicata dal cliente può essere diversa dai chilometri realmente percorsi. Un accesso industriale, un divieto per mezzi pesanti o la necessità di raggiungere un punto di lavaggio possono aggiungere strada e tempo. È quindi preferibile annotare l’origine della distanza: itinerario verificato, dato storico, navigazione o stima iniziale.</p>
+<h2>Un modello semplice del costo operativo</h2>
+<p>Una struttura di base può essere espressa così:</p>
+<p><code>costo operativo = carburante + pedaggi + autista + usura + quota costi fissi + altri costi di tratta</code></p>
+<p>Ogni voce deve avere una regola chiara. Il carburante dipende da chilometri, consumo medio e prezzo al litro. L’autista dipende dal tempo operativo, non soltanto dalle ore con il veicolo in movimento. L’usura può essere rappresentata da una quota per chilometro, costruita su manutenzione, pneumatici e valore del mezzo. I costi fissi vengono invece ripartiti con un criterio stabile, per esempio sui chilometri produttivi o sulle giornate effettivamente disponibili.</p>
+<p>Il modello non deve essere complicato per forza. Deve però essere ripetibile: due persone che usano gli stessi dati dovrebbero arrivare allo stesso risultato e capire da dove proviene ogni importo.</p>
+<h2>Carburante: usare il consumo del proprio mezzo</h2>
+<p>La formula operativa più comune è:</p>
+<p><code>litri stimati = km totali × consumo medio in litri/100 km ÷ 100</code></p>
+<p><code>costo carburante = litri stimati × prezzo per litro</code></p>
+<p>Il consumo dichiarato dal costruttore è un riferimento, non la fotografia di ogni viaggio. Carico, pendenza, traffico, temperatura, velocità e stile di guida possono modificare il dato. Per le decisioni quotidiane è più utile una media ricavata dallo stesso veicolo su tratte comparabili, aggiornata periodicamente.</p>
+<p>Anche il prezzo del carburante va trattato con coerenza. Si può usare il prezzo dell’ultimo rifornimento, una media aziendale o il valore previsto nel luogo di rifornimento. L’importante è indicare quale dato è stato scelto e non alternare criteri diversi tra preventivi simili.</p>
+<h2>Pedaggi e costi legati al percorso</h2>
+<p>Il pedaggio non è sempre proporzionale ai chilometri. Paese, infrastruttura, classe ambientale, numero di assi, massa, gallerie, ponti e valichi possono cambiare l’importo. Una stima iniziale è utile per valutare la tratta, ma prima di impegnarsi su percorsi particolari è prudente verificare le condizioni presso i gestori o le fonti ufficiali pertinenti.</p>
+<p>Nella stessa area del calcolo conviene tenere separate altre spese di percorso:</p>
+<ul>
+<li>traghetti, tunnel o valichi con tariffa specifica;</li>
+<li>parcheggi custoditi e aree di sosta;</li>
+<li>permessi o accessi locali applicabili al servizio;</li>
+<li>lavaggi, pesature o operazioni richieste dal carico.</li>
+</ul>
+<p>Separare queste voci rende più facile aggiornare il totale quando cambia soltanto una parte dell’itinerario.</p>
+<h2>Tempo dell’autista e durata operativa</h2>
+<p>Una tratta di sei ore di guida può occupare una giornata molto più lunga. Preparazione del mezzo, carico, documenti, attese, pause, scarico e rientro impegnano risorse anche quando il tachimetro è fermo. Per questo il costo dell’autista dovrebbe usare la durata operativa prevista.</p>
+<p>Le regole sui tempi di guida e riposo incidono sulla pianificazione. Il regolamento europeo applicabile e le eventuali condizioni specifiche vanno verificati nel contesto reale: il calcolo economico non sostituisce la programmazione conforme del viaggio. Dal punto di vista del costo, una pausa obbligatoria o un riposo che estende la missione può aumentare ore, pasti, parcheggi e disponibilità del veicolo.</p>
+<p>Una scheda tempi essenziale distingue:</p>
+<ol>
+<li>guida prevista;</li>
+<li>carico e scarico;</li>
+<li>attese note o ragionevolmente prevedibili;</li>
+<li>pause e riposi inseriti nel piano;</li>
+<li>attività finali e riposizionamento.</li>
+</ol>
+<h2>Usura, manutenzione e quota dei costi fissi</h2>
+<p>Ignorare l’usura rende conveniente quasi ogni viaggio sulla carta. Pneumatici, tagliandi, riparazioni e perdita di valore maturano con l’utilizzo, anche se la fattura arriverà più avanti. Una quota per chilometro permette di assegnare alla tratta una parte di questi costi futuri.</p>
+<p>I costi fissi richiedono un passaggio diverso. Assicurazione, leasing, sistemi gestionali e altre spese di struttura esistono anche quando il camion è fermo. Vanno ripartiti su un volume realistico di attività, non sui chilometri massimi teorici. Se il mezzo lavora meno del previsto, la quota unitaria cresce.</p>
+<p>È utile mantenere distinti i due valori: l’usura reagisce ai chilometri della singola tratta, mentre la quota fissa dipende dalla capacità produttiva dell’impresa nel periodo.</p>
+<h2>Il ritorno a vuoto cambia il costo per chilometro venduto</h2>
+<p>Il cliente può acquistare un trasporto di 400 km, ma l’impresa potrebbe percorrerne 520 considerando il riposizionamento. Calcolare soltanto i chilometri carichi sposta sul margine il costo della parte vuota.</p>
+<p>Ci sono tre modi pratici per gestire il ritorno:</p>
+<ul>
+<li>includere tutti i chilometri previsti nella stessa tratta;</li>
+<li>attribuire una probabilità realistica di trovare un carico di ritorno;</li>
+<li>separare il riposizionamento come scenario e decidere quanto assorbirne nel prezzo.</li>
+</ul>
+<p>Il primo metodo è il più prudente quando il ritorno non è organizzato. Il secondo richiede dati storici affidabili, non una speranza. Il terzo rende visibile la decisione commerciale: mostra quanto margine resta se il rientro non genera ricavi.</p>
+<h2>Esempio didattico di calcolo</h2>
+<p>Consideriamo una missione ipotetica di 600 km complessivi, già comprensivi di ritorno e deviazioni. Il mezzo consuma in media 30 l/100 km e il prezzo utilizzato è 1,70 € al litro. Il calcolo produce 180 litri e quindi 306 € di carburante.</p>
+<p>Supponiamo inoltre, soltanto per illustrare il metodo:</p>
+<table>
+<thead>
+<tr>
+<th>Voce</th>
+<th align="right">Importo di esempio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Carburante</td>
+<td align="right">306 €</td>
+</tr>
+<tr>
+<td>Pedaggi e percorso</td>
+<td align="right">140 €</td>
+</tr>
+<tr>
+<td>Tempo autista</td>
+<td align="right">220 €</td>
+</tr>
+<tr>
+<td>Usura</td>
+<td align="right">90 €</td>
+</tr>
+<tr>
+<td>Quota costi fissi</td>
+<td align="right">110 €</td>
+</tr>
+<tr>
+<td>Costo operativo</td>
+<td align="right">866 €</td>
+</tr>
+</tbody></table>
+<p>Questi numeri non rappresentano una tariffa media e non sono adatti a un preventivo reale. Servono a mostrare la sequenza. Se l’obiettivo fosse aggiungere il 15% al costo, il prezzo di scenario sarebbe 995,90 €. Se invece si volesse un margine pari al 15% del prezzo finale, la formula sarebbe diversa: <code>866 ÷ 0,85</code>, cioè circa 1.018,82 €. La distinzione tra ricarico sul costo e margine sul prezzo evita errori frequenti.</p>
+<h2>Verificare il risultato con scenari alternativi</h2>
+<p>Un solo totale può dare una falsa sensazione di precisione. Prima di confermare la proposta, conviene vedere cosa succede se cambiano gli input più sensibili.</p>
+<p>Preparare almeno questi scenari:</p>
+<ul>
+<li>carburante al prezzo attuale e a un valore leggermente superiore;</li>
+<li>ritorno con carico confermato oppure completamente a vuoto;</li>
+<li>attesa ordinaria oppure una sosta aggiuntiva;</li>
+<li>itinerario principale oppure percorso alternativo;</li>
+<li>margine minimo accettabile e margine obiettivo.</li>
+</ul>
+<p>Lo scopo non è prevedere ogni imprevisto, ma conoscere il punto in cui la tratta smette di essere sostenibile. Se una piccola variazione azzera il risultato, la proposta ha poco spazio di sicurezza.</p>
+<h2>Dal costo calcolato al prezzo da proporre</h2>
+<p>Il prezzo non nasce soltanto dalla somma delle spese. Considera anche la disponibilità richiesta, la complessità del servizio, la responsabilità operativa, le condizioni di pagamento e il margine necessario all’impresa. Questi elementi devono essere spiegabili senza nascondere costi o trasformare una stima in una promessa.</p>
+<p>Un processo ordinato mantiene tre valori separati:</p>
+<ol>
+<li><strong>costo operativo</strong>, basato sugli input della tratta;</li>
+<li><strong>punto di pareggio</strong>, sotto il quale il lavoro non copre il modello adottato;</li>
+<li><strong>prezzo proposto</strong>, che include il margine e le condizioni commerciali.</li>
+</ol>
+<p>Questa separazione aiuta anche nelle trattative. Se il cliente chiede una riduzione, è possibile valutare quale parte del margine viene ceduta invece di abbassare il prezzo alla cieca.</p>
+<h2>Checklist prima di chiudere il calcolo</h2>
+<ul>
+<li> La distanza comprende deviazioni, accessi e riposizionamento prevedibile.</li>
+<li> Il consumo medio appartiene al mezzo o a una classe comparabile.</li>
+<li> Il prezzo carburante ha una data e un criterio riconoscibili.</li>
+<li> Pedaggi e spese speciali sono separati e verificabili.</li>
+<li> Il tempo include carico, scarico, attese, pause e attività finali.</li>
+<li> Usura e costi fissi usano quote aggiornate.</li>
+<li> Il ritorno a vuoto non è stato ignorato.</li>
+<li> Margine e ricarico non vengono confusi.</li>
+<li> Esiste almeno uno scenario meno favorevole.</li>
+<li> Il preventivo descrive chiaramente ciò che è incluso.</li>
+</ul>
+<p>Un calcolo completo non elimina l’incertezza, ma la rende visibile. Registrare dati, ipotesi e risultato permette di confrontare il preventivo con il consuntivo dopo il viaggio. È questo confronto, ripetuto nel tempo, che rende più affidabili consumo, tempi, quote di usura e costo per chilometro della propria attività.</p>
+
+        <section class="sources" aria-labelledby="fonti-calcolo-costo-trasporto">
+    <h2 id="fonti-calcolo-costo-trasporto">Fonti e riferimenti</h2>
+    <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
+    <ul>
+      <li><a href="https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231" rel="noreferrer">EUR-Lex — Regolamento (CE) n. 561/2006 sui tempi di guida e riposo</a><small>Quadro normativo sui tempi di guida, interruzioni e riposi richiamato solo come riferimento operativo · Unione europea · consultata il 1 agosto 2026</small></li>
+<li><a href="https://transport.ec.europa.eu/transport-modes/road/road-charging_en" rel="noreferrer">Commissione europea — Road charging</a><small>Quadro europeo di pedaggi e vignette per veicoli pesanti; tariffe concrete restano nazionali e variabili · Unione europea · consultata il 1 agosto 2026</small></li>
+<li><a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en" rel="noreferrer">Commissione europea — Weekly Oil Bulletin</a><small>Metodo per reperire prezzi energetici datati per paese senza fissare un prezzo universale · Unione europea · consultata il 1 agosto 2026</small></li>
+    </ul>
+  </section>
+        <section class="editorial-note" aria-labelledby="nota-editoriale">
+          <h2 id="nota-editoriale">Nota editoriale</h2>
+          <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
+        </section>
+      </article>
+      <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+        <section class="rail-link">
+    <p class="rail-label">Centro guide</p>
+    <h2><a href="/it/guide/">Esplora il metodo completo</a></h2>
+    <p>Passa dai singoli costi alla costruzione di una tariffa sostenibile.</p>
+  </section>
+        <section class="app-cta">
+    <p class="rail-label">Continua nell’app</p>
+    <h2>Calcola la tratta completa.</h2>
+    <p>Aggiungi pedaggi, autista, usura, ritorno a vuoto e scenari di prezzo in un unico flusso.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="article" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="article" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </section>
+      </aside>
+    </div>
+    <section class="related-section">
+    <div class="seo-shell">
+      <div class="related-section__heading">
+        <p class="seo-eyebrow">Continua il calcolo</p>
+        <h2>Passi collegati.</h2>
+      </div>
+      <div class="related-links">
+        <a href="/it/guide/costi-autotrasporto/">
+              <span>01</span>
+              <div><small>Guida pilastro</small><strong>Costi dell’autotrasporto: mappa completa per gestire una piccola flotta</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/preventivo-trasporto/">
+              <span>02</span>
+              <div><small>Guida pilastro</small><strong>Preventivo di trasporto: dal costo della tratta a un’offerta chiara</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/costo-chilometrico-camion/">
+              <span>03</span>
+              <div><small>Guida pratica</small><strong>Costo chilometrico storico del camion: periodo e consuntivo</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/calcolare-carburante-pedaggi-autista/">
+              <span>04</span>
+              <div><small>Guida pratica</small><strong>Carburante, pedaggi e autista: controllo dei costi diretti</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/proteggere-margine-tratta/">
+              <span>05</span>
+              <div><small>Guida pratica</small><strong>Analisi di sensibilità del margine per una tratta camion</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/ritorno-a-vuoto-autotrasporto/">
+              <span>06</span>
+              <div><small>Guida pratica</small><strong>Ritorno a vuoto nell’autotrasporto: costi e prezzo della tratta</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/calcolatori/costo-chilometrico-camion/">
+              <span>07</span>
+              <div><small>Calcolatore</small><strong>Calcolatore del costo chilometrico camion</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/calcolatori/costo-carburante-viaggio/">
+              <span>08</span>
+              <div><small>Calcolatore</small><strong>Calcolatore del costo carburante per un viaggio camion</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer__inner">
+      <div>
+        <a class="seo-brand" href="/">
+          <img src="/logo.png" width="38" height="38" loading="lazy" alt="" />
+          <span>RouteBudget <small>EU</small></span>
+        </a>
+        <p>Costi chiari. Decisioni difendibili.</p>
+      </div>
+      <nav aria-label="Risorse e informazioni legali">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Termini</a>
+      </nav>
+      <p>© 2026 RouteBudget EU · Eng. Mostafa</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+{
+  "revisionDate": "2026-08-01",
+  "pages": [
+    {
+      "id": "it:landing:app-per-autotrasportatori",
+      "url": "https://routebudget.eu/it/app-per-autotrasportatori/",
+      "title": "App per autotrasportatori: calcola costi, prezzo e preventivo",
+      "description": "RouteBudget riunisce costi di tratta, tre scenari di prezzo, archivio locale e riepilogo PDF per autotrasportatori e piccole imprese.",
+      "type": "landing",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/app-per-autotrasportatori/",
+      "indexable": true,
+      "primaryKeyword": "app per autotrasportatori",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:calcolatori:costo-carburante-viaggio",
+      "url": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
+      "title": "Calcolatore del costo carburante per un viaggio camion",
+      "description": "Calcola litri e costo stimato del carburante per andata e ritorno a vuoto usando distanza, consumo medio e prezzo al litro.",
+      "type": "calculator",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
+      "indexable": true,
+      "primaryKeyword": "calcolatore costo carburante viaggio",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:calcolatori:costo-chilometrico-camion",
+      "url": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
+      "title": "Calcolatore del costo chilometrico camion",
+      "description": "Calcola gratuitamente costo della tratta, costo per km percorso e costo per km carico usando carburante, pedaggi, autista, usura e costi fissi.",
+      "type": "calculator",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
+      "indexable": true,
+      "primaryKeyword": "calcolatore costo chilometrico camion",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:calcolare-carburante-pedaggi-autista",
+      "url": "https://routebudget.eu/it/guide/calcolare-carburante-pedaggi-autista/",
+      "title": "Carburante, pedaggi e autista: controllo dei costi diretti",
+      "description": "Un controllo per allineare distanza, pedaggi e durata operativa prima di sommare carburante e costo autista nella stessa tratta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/calcolare-carburante-pedaggi-autista/",
+      "indexable": true,
+      "primaryKeyword": "controllo costi diretti tratta camion",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:calcolo-costo-trasporto",
+      "url": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
+      "title": "Calcolo del costo di trasporto: metodo completo per una tratta",
+      "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
+      "type": "pillar",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
+      "indexable": true,
+      "primaryKeyword": "calcolo costo trasporto",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:costi-autotrasporto",
+      "url": "https://routebudget.eu/it/guide/costi-autotrasporto/",
+      "title": "Costi dell’autotrasporto: mappa completa per gestire una piccola flotta",
+      "description": "Una guida pratica ai costi fissi, variabili e indiretti dell’autotrasporto per capire il costo per km e proteggere il margine.",
+      "type": "pillar",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costi-autotrasporto/",
+      "indexable": true,
+      "primaryKeyword": "costi autotrasporto",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:costi-fissi-variabili-autotrasporto",
+      "url": "https://routebudget.eu/it/guide/costi-fissi-variabili-autotrasporto/",
+      "title": "Costi fissi e variabili nell’autotrasporto: come separarli",
+      "description": "Una classificazione pratica dei costi fissi e variabili di camion e impresa, con criteri di ripartizione utili per le singole tratte.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costi-fissi-variabili-autotrasporto/",
+      "indexable": true,
+      "primaryKeyword": "costi fissi e variabili autotrasporto",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:costo-chilometrico-camion",
+      "url": "https://routebudget.eu/it/guide/costo-chilometrico-camion/",
+      "title": "Costo chilometrico storico del camion: periodo e consuntivo",
+      "description": "Come ricavare un costo chilometrico gestionale da spese e chilometri dello stesso periodo, distinguendo chilometri totali e fatturabili.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-chilometrico-camion/",
+      "indexable": true,
+      "primaryKeyword": "calcolo costo chilometrico camion da consuntivo",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:errori-calcolo-tariffa-trasporto",
+      "url": "https://routebudget.eu/it/guide/errori-calcolo-tariffa-trasporto/",
+      "title": "Errori nella tariffa di trasporto: 10 controlli prima dell’offerta",
+      "description": "Gli errori operativi che rendono fragile una tariffa di trasporto, dalla distanza al ritorno a vuoto fino a tempi, pedaggi e validità.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/errori-calcolo-tariffa-trasporto/",
+      "indexable": true,
+      "primaryKeyword": "errori calcolo tariffa trasporto",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:preventivo-trasporto-pdf",
+      "url": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
+      "title": "Preventivo di trasporto PDF: contenuti e controllo finale",
+      "description": "Struttura pratica per trasformare una stima di tratta in un PDF leggibile, distinguendo calcolo interno, offerta commerciale e dati da verificare.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
+      "indexable": true,
+      "primaryKeyword": "preventivo trasporto PDF",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:preventivo-trasporto",
+      "url": "https://routebudget.eu/it/guide/preventivo-trasporto/",
+      "title": "Preventivo di trasporto: dal costo della tratta a un’offerta chiara",
+      "description": "Come preparare un preventivo di trasporto leggibile e coerente, definendo tratta, servizio, prezzo, validità ed eventuali esclusioni.",
+      "type": "pillar",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto/",
+      "indexable": true,
+      "primaryKeyword": "preventivo trasporto",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:proteggere-margine-tratta",
+      "url": "https://routebudget.eu/it/guide/proteggere-margine-tratta/",
+      "title": "Analisi di sensibilità del margine per una tratta camion",
+      "description": "Come stressare una stima di tratta variando carburante, attese, itinerario e ritorno a vuoto per capire quanto margine resta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/proteggere-margine-tratta/",
+      "indexable": true,
+      "primaryKeyword": "analisi sensibilità margine tratta",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:ritorno-a-vuoto-autotrasporto",
+      "url": "https://routebudget.eu/it/guide/ritorno-a-vuoto-autotrasporto/",
+      "title": "Ritorno a vuoto nell’autotrasporto: costi e prezzo della tratta",
+      "description": "Metodo pratico per conteggiare chilometri, tempo, pedaggi e usura del ritorno a vuoto senza nascondere ipotesi o confonderli con ricavi certi.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/ritorno-a-vuoto-autotrasporto/",
+      "indexable": true,
+      "primaryKeyword": "ritorno a vuoto autotrasporto",
+      "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:usura-manutenzione-camion",
+      "url": "https://routebudget.eu/it/guide/usura-manutenzione-camion/",
+      "title": "Usura e manutenzione camion: quota corretta nel costo tratta",
+      "description": "Metodo pratico per trasformare manutenzione, pneumatici e usura in quote per chilometro o missione, usando consuntivi aziendali e limiti espliciti.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/usura-manutenzione-camion/",
+      "indexable": true,
+      "primaryKeyword": "usura manutenzione camion costo tratta",
+      "modified": "2026-08-01"
+    }
+  ],
+  "hubs": [
+    {
+      "id": "it:guide:hub",
+      "url": "https://routebudget.eu/it/guide/",
+      "locale": "it",
+      "section": "guide",
+      "indexable": true
+    },
+    {
+      "id": "it:calcolatori:hub",
+      "url": "https://routebudget.eu/it/calcolatori/",
+      "locale": "it",
+      "section": "calcolatori",
+      "indexable": true
+    }
+  ]
+}
