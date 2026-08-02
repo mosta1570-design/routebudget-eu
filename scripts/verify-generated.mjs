@@ -374,8 +374,17 @@ function capture(value, pattern, message) {
 }
 
 function decodeXml(value) {
-  return value.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&#039;', "'");
+  return value
+    .replaceAll('&quot;', '"')
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&#039;', "'")
+    .replaceAll('&amp;', '&');
 }
+
+assert.equal(decodeXml('&quot;'), '"');
+assert.equal(decodeXml('&amp;quot;'), '&quot;');
+assert.equal(decodeXml('&amp;lt;'), '&lt;');
 
 function escapeRegex(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
