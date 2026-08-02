@@ -124,7 +124,7 @@ function readFuelTripInput(form) {
 
 function readNumber(form, name, required, strictlyPositive) {
   const input = form.elements.namedItem(name);
-  const label = input?.closest('label')?.querySelector(':scope > span')?.textContent?.replace('*', '').trim() || name;
+  const label = input?.closest('label')?.querySelector(':scope > span')?.textContent?.replaceAll('*', '').trim() || name;
   const raw = input?.value?.trim() || '';
 
   if (!raw) {
