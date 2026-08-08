@@ -38,7 +38,7 @@ Template operativo per una pagina in `content/it/<sezione>/<slug>/`. Non pubblic
 }
 ```
 
-Valori `kind`: `pillar`, `guide`, `calculator`, `comparison`. Pillar usa `pillar: null`. Calcolatori usano sezione `calcolatori`, `kind: "calculator"` e `calculatorId: "cost-per-km"` o `"fuel-trip"`. Intenti CTA attualmente validi: `complete-trip`, `pdf-quote`, `add-trip-costs`, `protect-margin`, `unlimited`.
+Valori `kind`: `pillar`, `guide`, `calculator`, `comparison`. Pillar usa `pillar: null`. Calcolatori usano sezione `calcolatori`, `kind: "calculator"` e `calculatorId: "cost-per-km"`, `"fuel-trip"` o `"fuel-surcharge"`. Intenti CTA attualmente validi: `complete-trip`, `pdf-quote`, `add-trip-costs`, `protect-margin`, `unlimited`.
 
 `published` non è data bozza/build. `modified` cambia solo con modifica visibile sostanziale. `reviewed` richiede controllo reale.
 

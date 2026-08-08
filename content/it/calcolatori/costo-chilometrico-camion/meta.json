@@ -2,13 +2,13 @@
   "slug": "costo-chilometrico-camion",
   "kind": "calculator",
   "locale": "it",
-  "title": "Calcolatore del costo chilometrico camion",
-  "description": "Calcola gratuitamente costo della tratta, costo per km percorso e costo per km carico usando carburante, pedaggi, autista, usura e costi fissi.",
+  "title": "Costo km camion: calcolatore gratuito per una tratta",
+  "description": "Calcola costo totale, costo per km percorso e costo per km carico con carburante, pedaggi, autista, usura, costi fissi e ritorno a vuoto.",
   "eyebrow": "Calcolatore costo per km",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
-  "primaryKeyword": "calcolatore costo chilometrico camion",
+  "modified": "2026-08-08",
+  "reviewed": "2026-08-08",
+  "primaryKeyword": "costo km camion",
   "searchIntent": "transactional-informational",
   "topics": [
     "costo per chilometro",
@@ -20,7 +20,9 @@
     "guide:costo-chilometrico-camion",
     "guide:costi-fissi-variabili-autotrasporto",
     "guide:calcolo-costo-trasporto",
-    "calcolatori:costo-carburante-viaggio"
+    "calcolatori:costo-carburante-viaggio",
+    "calcolatori:fuel-surcharge-autotrasporto",
+    "landing:app-per-autotrasportatori"
   ],
   "pillar": "guide:calcolo-costo-trasporto",
   "calculatorId": "cost-per-km",
@@ -34,12 +36,17 @@
     {
       "label": "Commissione europea — Road charging",
       "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
     }
   ],
   "status": "published",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "secondaryKeywords": [
+    "calcolatore costo chilometrico camion",
     "costo camion al km",
     "costo autotrasporto al km"
   ],
@@ -49,5 +56,5 @@
   "canonical": "/it/calcolatori/costo-chilometrico-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
+  "changeSummary": "Risposta iniziale, query costo km camion, fonte MIT, collegamenti e distinzione fra costo e tariffa rafforzati."
 }

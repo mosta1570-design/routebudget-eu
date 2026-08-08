@@ -1,8 +1,10 @@
 ## Che cosa calcola questo strumento
 
-Il calcolatore stima il costo operativo di una singola tratta e lo divide in due modi: per tutti i chilometri percorsi e per i soli chilometri carichi. La differenza rende visibile il peso di un ritorno o riposizionamento a vuoto senza trasformare il risultato in una tariffa da proporre al cliente.
+Il costo km camion di una singola tratta nasce dalla somma delle voci operative divisa per i chilometri pertinenti. Questo calcolatore stima il totale e lo divide in due modi: per tutti i chilometri percorsi e per i soli chilometri carichi. La differenza rende visibile il peso di un ritorno o riposizionamento a vuoto.
 
-Il modello somma carburante, pedaggi inseriti, tempo dell’autista, usura e una quota facoltativa di costi fissi. Non calcola un itinerario, non consulta tariffe in tempo reale e non aggiunge margine. Il calcolo avviene nel browser: i valori del modulo non vengono inviati a RouteBudget e non vengono salvati.
+Il risultato è un costo, non la risposta a “quanto farsi pagare al km”. Per arrivare a una tariffa servono anche margine, condizioni del servizio, rischio e voci escluse. Il modello somma carburante, pedaggi inseriti, tempo dell’autista, usura e una quota facoltativa di costi fissi. Non calcola un itinerario, non consulta tariffe in tempo reale e non aggiunge margine. Il calcolo avviene nel browser: i valori del modulo non vengono inviati a RouteBudget e non vengono salvati.
+
+Se vuoi ricavare una media da fatture e chilometri già registrati, usa invece la guida al [costo chilometrico storico del camion](/it/guide/costo-chilometrico-camion/). Le due pagine rispondono a intenti diversi: previsione di una tratta qui, consuntivo di un periodo nella guida.
 
 ## Formula usata
 
@@ -35,6 +37,8 @@ Un ritorno a vuoto pari a zero è possibile, ma deve rappresentare un’ipotesi 
 Usa un consumo osservato per mezzo, massa e tipo di percorso simili. Il calcolatore applica lo stesso consumo medio ai chilometri carichi e a vuoto; se le condizioni differiscono molto, esegui due stime separate e somma i costi carburante prima di prendere una decisione.
 
 Per il prezzo al litro usa una base coerente con la contabilità aziendale, chiarendo internamente se comprende IVA, sconti o condizioni della carta carburante. Il Weekly Oil Bulletin della Commissione europea aiuta a controllare l’andamento generale, ma fatture e accordi effettivi restano più pertinenti al tuo caso.
+
+Se devi confrontare un prezzo base con un prezzo successivo secondo un criterio concordato, usa il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/). Non confondere quella variazione con il costo carburante completo della tratta.
 
 ### Pedaggi totali
 
@@ -73,11 +77,19 @@ I 600 km richiedono 186 litri, pari a **325,50 €**. Il costo autista è **225 
 
 Il rapporto è circa **1,50 €/km percorso** e **1,80 €/km carico**. Nessuno dei due valori è automaticamente il prezzo finale. Il secondo mostra soltanto quanto dovrebbe recuperare ogni chilometro carico per coprire le voci inserite quando i 100 km vuoti non sono fatturati separatamente.
 
+I valori indicativi dei costi di esercizio pubblicati dal MIT, aggiornati nella fonte consultata il 17 marzo 2026, possono servire come controllo esterno delle categorie considerate. Non sostituiscono consumo, costi e percorrenza della tua impresa e non vengono inseriti automaticamente nel calcolo.
+
 ## Come leggere il risultato
 
 Confronta le componenti prima del totale. Se il carburante domina, controlla consumo, distanza e prezzo. Se l’autista pesa molto, verifica che le ore includano attività reali senza duplicazioni. Se la differenza fra i due costi per km è ampia, il ritorno a vuoto merita una decisione commerciale esplicita.
 
 Esegui almeno una prova prudente: aumenta prezzo carburante, ore operative o chilometri a vuoto. La sensibilità non predice il futuro, ma mostra quali ipotesi possono rendere fragile un’offerta.
+
+## Dal costo km camion alla tariffa proposta
+
+Per calcolare il costo al km, dividi il totale operativo per i chilometri coerenti con la decisione. Per definire quanto chiedere al cliente, parti invece dal costo completo, verifica che nessuna voce sia stata esclusa e applica il criterio di margine scelto. Ricarico sul costo e margine sul prezzo finale non sono equivalenti.
+
+Una tariffa può cambiare anche con attese, urgenza, condizioni di pagamento, accessi, traghetti o disponibilità del mezzo. Per questo non esiste un prezzo al km universale ricavabile dal solo risultato. La guida al [preventivo di trasporto per autotrasportatori](/it/guide/preventivo-trasporto/) mostra come passare dal calcolo interno a un’offerta leggibile.
 
 ## Cosa resta fuori
 
@@ -97,4 +109,4 @@ Un costo formalmente corretto può quindi essere incompleto se manca una voce az
 
 RouteBudget riunisce nel calcolo della tratta carburante o energia, pedaggi stimati o inseriti, tempo autista, pause operative, usura/manutenzione, ritorno a vuoto e scenari di prezzo. Può poi generare un PDF della stima e conservarne il calcolo nell’Archivio locale. Il calcolatore web resta intenzionalmente più limitato: non salva, non genera documenti e non riproduce gli scenari dell’app.
 
-Prima di usare la stima, controlla distanza, consumo, pedaggi, ore, criteri di ripartizione e voci lasciate a zero. Arrotonda solo alla fine e non presentare il costo per km come tariffa minima ufficiale.
+Prima di usare la stima, controlla distanza, consumo, pedaggi, ore, criteri di ripartizione e voci lasciate a zero. Arrotonda solo alla fine e non presentare il costo per km come tariffa minima ufficiale. Quando serve continuità tra calcolo, scenari e PDF, passa alla pagina [RouteBudget per autotrasportatori e padroncini](/it/app-per-autotrasportatori/).

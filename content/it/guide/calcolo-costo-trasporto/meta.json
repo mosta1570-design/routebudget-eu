@@ -6,8 +6,8 @@
   "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
   "eyebrow": "Guida al costo di tratta",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-08",
+  "reviewed": "2026-08-08",
   "primaryKeyword": "calcolo costo trasporto",
   "searchIntent": "informational",
   "topics": [
@@ -24,7 +24,9 @@
     "guide:proteggere-margine-tratta",
     "guide:ritorno-a-vuoto-autotrasporto",
     "calcolatori:costo-chilometrico-camion",
-    "calcolatori:costo-carburante-viaggio"
+    "calcolatori:costo-carburante-viaggio",
+    "calcolatori:fuel-surcharge-autotrasporto",
+    "landing:app-per-autotrasportatori"
   ],
   "pillar": null,
   "calculatorId": null,
@@ -42,6 +44,10 @@
     {
       "label": "Commissione europea — Weekly Oil Bulletin",
       "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
     }
   ],
   "status": "published",
@@ -49,7 +55,8 @@
   "reviewer": "Eng. Mostafa",
   "secondaryKeywords": [
     "prezzo tratta camion",
-    "calcolo tariffa autotrasporto"
+    "calcolo tariffa autotrasporto",
+    "calcolo costo trasporto merci"
   ],
   "cluster": "costo-trasporto",
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",
@@ -57,5 +64,5 @@
   "canonical": "/it/guide/calcolo-costo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
+  "changeSummary": "Confine tratta-versus-consuntivo, fonte MIT 2026 e collegamenti verso strumenti e app rafforzati."
 }

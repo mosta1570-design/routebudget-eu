@@ -7,15 +7,15 @@
   "description": "Struttura pratica per trasformare una stima di tratta in un PDF leggibile, distinguendo calcolo interno, offerta commerciale e dati da verificare.",
   "eyebrow": "Dal calcolo al documento",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-08",
+  "reviewed": "2026-08-08",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "preventivo trasporto PDF",
   "secondaryKeywords": [
     "modello preventivo autotrasporto",
     "PDF preventivo camion",
-    "offerta trasporto merci",
+    "checklist preventivo trasporto PDF",
     "riepilogo costo tratta"
   ],
   "searchIntent": "informational-commercial",
@@ -60,5 +60,5 @@
       "supports": "Destinazione ufficiale Android e disponibilità del prodotto; le funzioni restano quelle dichiarate nella pagina."
     }
   ],
-  "changeSummary": "Prima pubblicazione: struttura del PDF, separazione tra stima e offerta, esempio e checklist pre-invio."
+  "changeSummary": "Keyword generica offerta di trasporto assegnata alla guida principale; questa pagina resta focalizzata sul controllo PDF."
 }

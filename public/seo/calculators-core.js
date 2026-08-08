@@ -66,3 +66,35 @@ export function calculateFuelTrip(input) {
     totalFuelCost: outboundFuelCost + returnFuelCost,
   };
 }
+
+export function calculateFuelSurcharge(input) {
+  requirePositive(input.baseFreight, 'baseFreight');
+  requirePositive(input.baseFuelPrice, 'baseFuelPrice');
+  requirePositive(input.currentFuelPrice, 'currentFuelPrice');
+  requirePositive(input.fuelSharePercent, 'fuelSharePercent');
+
+  if (input.baseFreight < 0.01 || input.baseFuelPrice < 0.01 || input.currentFuelPrice < 0.01) {
+    throw new RangeError('currency inputs must be at least 0.01');
+  }
+  if (input.fuelSharePercent > 100) {
+    throw new RangeError('fuelSharePercent must not exceed 100');
+  }
+
+  const fuelPriceVariationRate = (input.currentFuelPrice - input.baseFuelPrice) / input.baseFuelPrice;
+  const freightAdjustmentRate = fuelPriceVariationRate * (input.fuelSharePercent / 100);
+  const adjustmentAmount = input.baseFreight * freightAdjustmentRate;
+  const adjustedFreight = input.baseFreight + adjustmentAmount;
+
+  if (![fuelPriceVariationRate, freightAdjustmentRate, adjustmentAmount, adjustedFreight].every(Number.isFinite)) {
+    throw new RangeError('fuel surcharge result must be finite');
+  }
+
+  return {
+    baseFreight: input.baseFreight,
+    fuelSharePercent: input.fuelSharePercent,
+    fuelPriceVariationPercent: fuelPriceVariationRate * 100,
+    freightAdjustmentPercent: freightAdjustmentRate * 100,
+    adjustmentAmount,
+    adjustedFreight,
+  };
+}

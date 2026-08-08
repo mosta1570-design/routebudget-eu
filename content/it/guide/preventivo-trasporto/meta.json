@@ -2,12 +2,12 @@
   "slug": "preventivo-trasporto",
   "kind": "pillar",
   "locale": "it",
-  "title": "Preventivo di trasporto: dal costo della tratta a un’offerta chiara",
-  "description": "Come preparare un preventivo di trasporto leggibile e coerente, definendo tratta, servizio, prezzo, validità ed eventuali esclusioni.",
+  "title": "Preventivo trasporto per autotrasportatori: costo e offerta",
+  "description": "Come trasformare il costo di una tratta in un’offerta di trasporto merci chiara, con prezzo, inclusioni, esclusioni, validità e PDF verificato.",
   "eyebrow": "Guida al preventivo",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-08",
+  "reviewed": "2026-08-08",
   "primaryKeyword": "preventivo trasporto",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -24,19 +24,40 @@
     "guide:preventivo-trasporto-pdf",
     "guide:calcolare-carburante-pedaggi-autista",
     "calcolatori:costo-chilometrico-camion",
-    "calcolatori:costo-carburante-viaggio"
+    "calcolatori:costo-carburante-viaggio",
+    "calcolatori:fuel-surcharge-autotrasporto",
+    "landing:app-per-autotrasportatori"
   ],
   "pillar": null,
   "calculatorId": null,
   "conversionIntent": "pdf-quote",
   "translationGroup": "preventivo-trasporto",
-  "sources": [],
+  "sources": [
+    {
+      "label": "Apple App Store — RouteBudget: Truck Toll Cost",
+      "url": "https://apps.apple.com/app/id6789717191",
+      "publishedOrUpdated": "Scheda live consultata il 2026-08-08",
+      "geography": "Disponibilità secondo paese o area dello store",
+      "accessedAt": "2026-08-08",
+      "supports": "Descrizione ufficiale delle funzioni di stima, scenari, archivio, PDF e logo aziendale."
+    },
+    {
+      "label": "Google Play — RouteBudget EU",
+      "url": "https://play.google.com/store/apps/details?id=eu.routebudget.app",
+      "publishedOrUpdated": "Scheda live consultata il 2026-08-08",
+      "geography": "Disponibilità secondo paese o area dello store",
+      "accessedAt": "2026-08-08",
+      "supports": "Destinazione ufficiale Android e disponibilità del prodotto RouteBudget EU."
+    }
+  ],
   "status": "published",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "secondaryKeywords": [
     "preventivo trasporto merci",
-    "calcolo preventivo trasporto"
+    "calcolo preventivo trasporto",
+    "preventivo trasporti",
+    "offerta di trasporto"
   ],
   "cluster": "preventivi-trasporto",
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",
@@ -44,5 +65,5 @@
   "canonical": "/it/guide/preventivo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
+  "changeSummary": "Intento vettore chiarito, apertura e esempio costo-prezzo rafforzati, collegamenti contestuali e query GSC aggiunti."
 }

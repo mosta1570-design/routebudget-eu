@@ -350,6 +350,10 @@ li {
   line-height: 0.91;
 }
 
+.seo-h1__mobile {
+  display: none;
+}
+
 .seo-hero__summary {
   max-width: 780px;
   margin-top: 30px;
@@ -403,6 +407,27 @@ li {
   margin-right: 22px;
   color: var(--route);
   content: "•";
+}
+
+.seo-hero__store-cta {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.seo-hero__store-cta > p {
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.seo-hero__store-cta .store-badge-row {
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 0;
 }
 
 /* Editorial article */
@@ -890,6 +915,23 @@ li {
   color: var(--ink-muted);
 }
 
+.calculator-intro > p.calculator-formula {
+  display: grid;
+  gap: 7px;
+  margin-top: 28px;
+  padding: 18px 0 18px 20px;
+  border-left: 2px solid var(--route);
+  color: var(--ink-faint);
+  font-size: 0.88rem;
+}
+
+.calculator-formula strong {
+  color: var(--route-bright);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .calculator-form {
   padding: clamp(24px, 4vw, 42px);
   border: 1px solid var(--line);
@@ -1055,6 +1097,35 @@ li {
   font-size: 0.8rem;
 }
 
+.calculator-result__cta {
+  margin-top: 26px;
+  padding: 24px;
+  border: 1px solid color-mix(in oklch, var(--route) 48%, var(--line));
+  border-radius: 14px;
+  background: linear-gradient(145deg, color-mix(in oklch, var(--route) 14%, transparent), transparent 62%);
+}
+
+.calculator-result__cta h3 {
+  margin-top: 10px;
+  color: var(--ink);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.calculator-result__cta > p:not(.rail-label) {
+  margin-top: 14px;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+}
+
+.calculator-result__cta .store-badge-row {
+  flex-flow: row wrap;
+  align-items: center;
+}
+
 /* Footer */
 
 .seo-footer {
@@ -1181,6 +1252,14 @@ li {
     font-size: clamp(3.15rem, 15vw, 5.2rem);
   }
 
+  .seo-h1__desktop {
+    display: none;
+  }
+
+  .seo-h1__mobile {
+    display: inline;
+  }
+
   .breadcrumbs {
     gap: 7px;
     margin-bottom: 24px;
@@ -1197,6 +1276,12 @@ li {
 
   .seo-meta span + span::before {
     display: none;
+  }
+
+  .seo-hero__store-cta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .article-layout {
@@ -1243,6 +1328,27 @@ li {
   .calculator-form__actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .calculator-form[data-calculator="fuel-surcharge"] .calculator-result {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calculator-form[data-calculator="fuel-surcharge"] .calculator-result__lead {
+    order: 1;
+  }
+
+  .calculator-form[data-calculator="fuel-surcharge"] .calculator-result dl {
+    order: 2;
+  }
+
+  .calculator-form[data-calculator="fuel-surcharge"] .calculator-result__cta {
+    order: 3;
+  }
+
+  .calculator-form[data-calculator="fuel-surcharge"] .calculator-result > p {
+    order: 4;
   }
 
   .seo-footer__inner {
@@ -1296,6 +1402,14 @@ li {
   .calculator-result__lead {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .calculator-form__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-result__cta {
+    padding: 20px;
   }
 }
 

@@ -36,7 +36,7 @@ for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
 
 assert.equal(counts.pillar, 3, 'initial set requires exactly three pillars');
 assert.equal(counts.guide, 8, 'initial set requires exactly eight supporting guides');
-assert.equal(counts.calculator, 2, 'initial set requires exactly two calculators');
+assert.equal(counts.calculator, 3, 'current set requires exactly three calculators');
 assert.equal(counts.landing, 1, 'initial set requires exactly one app landing');
 
 const temporaryOutput = await mkdtemp(path.join(os.tmpdir(), 'routebudget-seo-content-'));
@@ -50,4 +50,4 @@ try {
   await rm(temporaryOutput, { recursive: true, force: true });
 }
 
-console.log(`Content schema passed: ${published} published pages (3 pillars, 8 supports, 2 calculators, 1 app landing).`);
+console.log(`Content schema passed: ${published} published pages (3 pillars, 8 supports, 3 calculators, 1 app landing).`);

@@ -6,8 +6,8 @@
   "description": "Come ricavare un costo chilometrico gestionale da spese e chilometri dello stesso periodo, distinguendo chilometri totali e fatturabili.",
   "eyebrow": "Analisi periodica per chilometro",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-08",
+  "reviewed": "2026-08-08",
   "primaryKeyword": "calcolo costo chilometrico camion da consuntivo",
   "searchIntent": "informational",
   "topics": [
@@ -41,8 +41,8 @@
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "secondaryKeywords": [
-    "costo camion al km",
-    "calcolo costo chilometrico autotrasporto"
+    "costo chilometrico storico camion",
+    "analisi costo chilometrico consuntivo"
   ],
   "cluster": "costi-autotrasporto",
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",
@@ -50,5 +50,5 @@
   "canonical": "/it/guide/costo-chilometrico-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
+  "changeSummary": "Confine con il calcolatore di singola tratta e collegamenti contestuali esplicitati per evitare cannibalizzazione."
 }
