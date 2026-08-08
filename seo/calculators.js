@@ -1,4 +1,8 @@
-import { calculateCostPerKm, calculateFuelTrip } from './calculators-core.js';
+import {
+  calculateCostPerKm,
+  calculateFuelSurcharge,
+  calculateFuelTrip,
+} from './calculators-core.js';
 
 const eur = new Intl.NumberFormat('it-IT', {
   style: 'currency',
@@ -16,6 +20,25 @@ const kilometre = new Intl.NumberFormat('it-IT', {
   maximumFractionDigits: 1,
 });
 
+const percentage = new Intl.NumberFormat('it-IT', {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 2,
+  signDisplay: 'exceptZero',
+});
+
+const plainPercentage = new Intl.NumberFormat('it-IT', {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 2,
+});
+
+const signedEur = new Intl.NumberFormat('it-IT', {
+  style: 'currency',
+  currency: 'EUR',
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+  signDisplay: 'exceptZero',
+});
+
 const LIMITS = {
   loadedKm: 100_000,
   emptyKm: 100_000,
@@ -28,6 +51,17 @@ const LIMITS = {
   fixedPerKm: 100,
   distanceKm: 100_000,
   emptyReturnKm: 100_000,
+  baseFreight: 10_000_000,
+  baseFuelPrice: 100,
+  currentFuelPrice: 100,
+  fuelSharePercent: 100,
+};
+
+const MINIMUMS = {
+  baseFreight: 0.01,
+  baseFuelPrice: 0.01,
+  currentFuelPrice: 0.01,
+  fuelSharePercent: 0.01,
 };
 
 for (const form of document.querySelectorAll('[data-calculator]')) {
@@ -54,9 +88,7 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
     if (status) status.textContent = '';
 
     try {
-      const result = form.dataset.calculator === 'cost-per-km'
-        ? calculateCostPerKm(readCostPerKmInput(form))
-        : calculateFuelTrip(readFuelTripInput(form));
+      const result = calculate(form);
 
       error.hidden = true;
       error.textContent = '';
@@ -93,10 +125,23 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
 }
 
 function resultAnnouncement(calculator, result) {
+  if (calculator === 'fuel-surcharge') {
+    return `Calcolo completato. Nolo aggiornato stimato: ${eur.format(result.adjustedFreight)}. Adeguamento: ${signedEur.format(result.adjustmentAmount)}.`;
+  }
   const isCostPerKm = calculator === 'cost-per-km';
   const label = isCostPerKm ? 'Costo operativo stimato' : 'Costo carburante stimato';
   const value = isCostPerKm ? result.totalOperationalCost : result.totalFuelCost;
   return `Calcolo completato. ${label}: ${eur.format(value)}.`;
+}
+
+function calculate(form) {
+  if (form.dataset.calculator === 'cost-per-km') {
+    return calculateCostPerKm(readCostPerKmInput(form));
+  }
+  if (form.dataset.calculator === 'fuel-surcharge') {
+    return calculateFuelSurcharge(readFuelSurchargeInput(form));
+  }
+  return calculateFuelTrip(readFuelTripInput(form));
 }
 
 function readCostPerKmInput(form) {
@@ -122,9 +167,18 @@ function readFuelTripInput(form) {
   };
 }
 
+function readFuelSurchargeInput(form) {
+  return {
+    baseFreight: readNumber(form, 'baseFreight', true, true),
+    baseFuelPrice: readNumber(form, 'baseFuelPrice', true, true),
+    currentFuelPrice: readNumber(form, 'currentFuelPrice', true, true),
+    fuelSharePercent: readNumber(form, 'fuelSharePercent', true, true),
+  };
+}
+
 function readNumber(form, name, required, strictlyPositive) {
   const input = form.elements.namedItem(name);
-  const label = input?.closest('label')?.querySelector(':scope > span')?.textContent?.replace('*', '').trim() || name;
+  const label = input?.closest('label')?.querySelector(':scope > span')?.textContent?.replaceAll('*', '').trim() || name;
   const raw = input?.value?.trim() || '';
 
   if (!raw) {
@@ -148,6 +202,10 @@ function readNumber(form, name, required, strictlyPositive) {
     throw validationError(`“${label}” supera il limite previsto da questo calcolatore.`, 'out_of_range');
   }
 
+  if (MINIMUMS[name] !== undefined && value < MINIMUMS[name]) {
+    throw validationError(`“${label}” deve essere almeno ${String(MINIMUMS[name]).replace('.', ',')}.`, 'out_of_range');
+  }
+
   return value;
 }
 
@@ -156,7 +214,15 @@ function populateResult(form, result) {
     const target = form.querySelector(`[data-result="${key}"]`);
     if (!target) continue;
 
-    if (key.endsWith('PerKm')) {
+    if (key === 'fuelSharePercent') {
+      target.textContent = `${plainPercentage.format(value)}%`;
+    } else if (key.endsWith('Percent')) {
+      target.textContent = `${percentage.format(value)}%`;
+    } else if (key === 'adjustmentAmount') {
+      target.textContent = signedEur.format(value);
+    } else if (['baseFreight', 'adjustedFreight'].includes(key)) {
+      target.textContent = eur.format(value);
+    } else if (key.endsWith('PerKm')) {
       target.textContent = `${eur.format(value)} / km`;
     } else if (key.toLowerCase().includes('cost')) {
       target.textContent = eur.format(value);

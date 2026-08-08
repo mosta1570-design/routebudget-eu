@@ -25,7 +25,7 @@
     cta_id: (value) => CTA_IDS.has(value),
     cta_position: (value) => ['inline', 'after_result', 'end', 'header', 'footer'].includes(value),
     destination: (value) => ['internal', 'app_store', 'google_play'].includes(value),
-    calculator_id: (value) => ['cost-per-km', 'fuel-trip'].includes(value),
+    calculator_id: (value) => ['cost-per-km', 'fuel-trip', 'fuel-surcharge'].includes(value),
     error_code: (value) => ['required', 'invalid_format', 'invalid_value', 'out_of_range'].includes(value),
   };
 
@@ -68,11 +68,7 @@
     const anchor = event.target instanceof Element ? event.target.closest('a[href]') : null;
     if (!anchor) return;
 
-    const destination = anchor.href.includes('play.google.com')
-      ? 'google_play'
-      : anchor.href.includes('apps.apple.com')
-        ? 'app_store'
-        : null;
+    const destination = classifyStoreDestination(anchor.href);
 
     if (destination) {
       emit('store_outbound_click', {
@@ -129,6 +125,17 @@
     } catch {
       return 'unknown';
     }
+  }
+
+  function classifyStoreDestination(href) {
+    try {
+      const origin = new URL(href).origin;
+      if (origin === 'https://play.google.com') return 'google_play';
+      if (origin === 'https://apps.apple.com') return 'app_store';
+    } catch {
+      // Invalid URLs are never trusted store destinations.
+    }
+    return null;
   }
 
   function inferPosition(anchor) {

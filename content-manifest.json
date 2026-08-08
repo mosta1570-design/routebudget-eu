@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-01",
+  "revisionDate": "2026-08-08",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -11,7 +11,7 @@
       "canonical": "https://routebudget.eu/it/app-per-autotrasportatori/",
       "indexable": true,
       "primaryKeyword": "app per autotrasportatori",
-      "modified": "2026-08-01"
+      "modified": "2026-08-08"
     },
     {
       "id": "it:calcolatori:costo-carburante-viaggio",
@@ -23,19 +23,31 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
       "indexable": true,
       "primaryKeyword": "calcolatore costo carburante viaggio",
-      "modified": "2026-08-01"
+      "modified": "2026-08-08"
     },
     {
       "id": "it:calcolatori:costo-chilometrico-camion",
       "url": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
-      "title": "Calcolatore del costo chilometrico camion",
-      "description": "Calcola gratuitamente costo della tratta, costo per km percorso e costo per km carico usando carburante, pedaggi, autista, usura e costi fissi.",
+      "title": "Costo km camion: calcolatore gratuito per una tratta",
+      "description": "Calcola costo totale, costo per km percorso e costo per km carico con carburante, pedaggi, autista, usura, costi fissi e ritorno a vuoto.",
       "type": "calculator",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
       "indexable": true,
-      "primaryKeyword": "calcolatore costo chilometrico camion",
-      "modified": "2026-08-01"
+      "primaryKeyword": "costo km camion",
+      "modified": "2026-08-08"
+    },
+    {
+      "id": "it:calcolatori:fuel-surcharge-autotrasporto",
+      "url": "https://routebudget.eu/it/calcolatori/fuel-surcharge-autotrasporto/",
+      "title": "Calcolo fuel surcharge autotrasporto: formula e risultato",
+      "description": "Calcola l’adeguamento carburante di un nolo stradale con prezzi del gasolio, incidenza modificabile, formula trasparente e risultato verificabile.",
+      "type": "calculator",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/calcolatori/fuel-surcharge-autotrasporto/",
+      "indexable": true,
+      "primaryKeyword": "calcolo fuel surcharge autotrasporto",
+      "modified": "2026-08-08"
     },
     {
       "id": "it:guide:calcolare-carburante-pedaggi-autista",
@@ -59,19 +71,19 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-01"
+      "modified": "2026-08-08"
     },
     {
       "id": "it:guide:costi-autotrasporto",
       "url": "https://routebudget.eu/it/guide/costi-autotrasporto/",
-      "title": "Costi dell’autotrasporto: mappa completa per gestire una piccola flotta",
-      "description": "Una guida pratica ai costi fissi, variabili e indiretti dell’autotrasporto per capire il costo per km e proteggere il margine.",
+      "title": "Costi dell’autotrasporto merci: voci fisse, variabili e indirette",
+      "description": "Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.",
       "type": "pillar",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/guide/costi-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "costi autotrasporto",
-      "modified": "2026-08-01"
+      "modified": "2026-08-08"
     },
     {
       "id": "it:guide:costi-fissi-variabili-autotrasporto",
@@ -95,7 +107,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-chilometrico-camion/",
       "indexable": true,
       "primaryKeyword": "calcolo costo chilometrico camion da consuntivo",
-      "modified": "2026-08-01"
+      "modified": "2026-08-08"
     },
     {
       "id": "it:guide:errori-calcolo-tariffa-trasporto",
@@ -119,19 +131,19 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto PDF",
-      "modified": "2026-08-01"
+      "modified": "2026-08-08"
     },
     {
       "id": "it:guide:preventivo-trasporto",
       "url": "https://routebudget.eu/it/guide/preventivo-trasporto/",
-      "title": "Preventivo di trasporto: dal costo della tratta a un’offerta chiara",
-      "description": "Come preparare un preventivo di trasporto leggibile e coerente, definendo tratta, servizio, prezzo, validità ed eventuali esclusioni.",
+      "title": "Preventivo trasporto per autotrasportatori: costo e offerta",
+      "description": "Come trasformare il costo di una tratta in un’offerta di trasporto merci chiara, con prezzo, inclusioni, esclusioni, validità e PDF verificato.",
       "type": "pillar",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto",
-      "modified": "2026-08-01"
+      "modified": "2026-08-08"
     },
     {
       "id": "it:guide:proteggere-margine-tratta",
