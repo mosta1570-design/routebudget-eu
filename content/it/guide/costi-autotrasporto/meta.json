@@ -2,12 +2,12 @@
   "slug": "costi-autotrasporto",
   "kind": "pillar",
   "locale": "it",
-  "title": "Costi dell’autotrasporto: mappa completa per gestire una piccola flotta",
-  "description": "Una guida pratica ai costi fissi, variabili e indiretti dell’autotrasporto per capire il costo per km e proteggere il margine.",
+  "title": "Costi dell’autotrasporto merci: voci fisse, variabili e indirette",
+  "description": "Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.",
   "eyebrow": "Economia dell’autotrasporto",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-08",
+  "reviewed": "2026-08-08",
   "primaryKeyword": "costi autotrasporto",
   "searchIntent": "informational",
   "topics": [
@@ -24,7 +24,9 @@
     "guide:usura-manutenzione-camion",
     "guide:proteggere-margine-tratta",
     "guide:errori-calcolo-tariffa-trasporto",
-    "calcolatori:costo-chilometrico-camion"
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:fuel-surcharge-autotrasporto",
+    "landing:app-per-autotrasportatori"
   ],
   "pillar": null,
   "calculatorId": null,
@@ -42,6 +44,10 @@
     {
       "label": "EUR-Lex — Regolamento (CE) n. 561/2006 sui tempi di guida e riposo",
       "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231"
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
     }
   ],
   "status": "published",
@@ -49,7 +55,8 @@
   "reviewer": "Eng. Mostafa",
   "secondaryKeywords": [
     "costi fissi autotrasporto",
-    "costi variabili autotrasporto"
+    "costi variabili autotrasporto",
+    "costo autotrasporto merci"
   ],
   "cluster": "costi-autotrasporto",
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",
@@ -57,5 +64,5 @@
   "canonical": "/it/guide/costi-autotrasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
+  "changeSummary": "Query costo autotrasporto merci, risposta diretta, fonte MIT 2026 e collegamenti di calcolo aggiunti."
 }

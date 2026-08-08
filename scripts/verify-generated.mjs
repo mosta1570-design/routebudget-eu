@@ -78,6 +78,10 @@ for (const route of [...hubPaths, ...pagePaths]) {
     assert(html.includes('store-badges/app-store-it.svg'), `${route}: official App Store badge missing`);
     assert(html.includes('store-badges/google-play-it.png'), `${route}: official Google Play badge missing`);
     assert(html.includes('data-analytics-event="store_outbound"'), `${route}: product CTA event contract missing`);
+    if (sourcePage.meta.mobileH1) {
+      assert(html.includes(`<span class="seo-h1__desktop">${sourcePage.meta.title}</span>`), `${route}: desktop H1 variant missing`);
+      assert(html.includes(`<span class="seo-h1__mobile">${sourcePage.meta.mobileH1}</span>`), `${route}: mobile H1 variant missing`);
+    }
     if (sourcePage.meta.pillar) {
       const pillar = sourceById.get(resolveReferenceId(sourcePage.locale, sourcePage.meta.pillar));
       assert(pillar && html.includes(`href="${pillar.urlPath}"`), `${route}: visible pillar link missing`);

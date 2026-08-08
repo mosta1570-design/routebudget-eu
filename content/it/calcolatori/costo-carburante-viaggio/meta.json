@@ -6,8 +6,8 @@
   "description": "Calcola litri e costo stimato del carburante per andata e ritorno a vuoto usando distanza, consumo medio e prezzo al litro.",
   "eyebrow": "Calcolatore carburante viaggio",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-08",
+  "reviewed": "2026-08-08",
   "primaryKeyword": "calcolatore costo carburante viaggio",
   "searchIntent": "transactional-informational",
   "topics": [
@@ -20,7 +20,8 @@
     "guide:calcolare-carburante-pedaggi-autista",
     "guide:calcolo-costo-trasporto",
     "guide:proteggere-margine-tratta",
-    "calcolatori:costo-chilometrico-camion"
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:fuel-surcharge-autotrasporto"
   ],
   "pillar": "guide:calcolo-costo-trasporto",
   "calculatorId": "fuel-trip",
@@ -45,5 +46,5 @@
   "canonical": "/it/calcolatori/costo-carburante-viaggio/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
+  "changeSummary": "Aggiunto percorso interno distinto verso il calcolo dell’adeguamento carburante."
 }

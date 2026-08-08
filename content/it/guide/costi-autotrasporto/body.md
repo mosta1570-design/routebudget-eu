@@ -1,8 +1,8 @@
-## Perché serve una mappa dei costi
+## Risposta diretta: quali sono i costi dell’autotrasporto merci
 
-Conoscere i costi dell’autotrasporto non significa soltanto sommare le fatture del mese. Significa capire quali risorse consuma ogni veicolo, quali spese cambiano con l’attività e quanta capacità produttiva rimane realmente disponibile. Senza questa mappa, un prezzo può sembrare interessante perché copre gasolio e pedaggio, ma lascia scoperti manutenzione, fermo mezzo, assicurazione o lavoro amministrativo.
+I costi dell’autotrasporto merci comprendono voci fisse, variabili, indirette e straordinarie. Gasolio e pedaggi sono visibili subito; leasing, assicurazione, autista, manutenzione, pneumatici, fermo mezzo e lavoro amministrativo devono essere attribuiti con un criterio coerente. Questa pagina costruisce la mappa economica dell’impresa, non il preventivo di una singola tratta.
 
-Una piccola impresa non ha bisogno di un modello enorme. Ha bisogno di categorie stabili, dati aggiornati e un criterio coerente per assegnare i costi ai chilometri o alle giornate lavorate. L’obiettivo è arrivare a un costo operativo utile per decidere, non sostituire la contabilità né le valutazioni fiscali del professionista incaricato.
+Una piccola impresa non ha bisogno di un modello enorme. Ha bisogno di categorie stabili, dati aggiornati e un criterio coerente per assegnare i costi ai chilometri o alle giornate lavorate. Per una missione futura usa la guida al [calcolo del costo di trasporto](/it/guide/calcolo-costo-trasporto/) o il [calcolatore del costo km camion](/it/calcolatori/costo-chilometrico-camion/). Qui l’obiettivo è arrivare a una base gestionale utile, non sostituire contabilità o valutazioni fiscali.
 
 ## Costi fissi, variabili e indiretti
 
@@ -16,6 +16,8 @@ La prima distinzione è legata al comportamento della spesa.
 | Straordinari | non sono regolari ma vanno previsti | guasti rilevanti, franchigie, sostituzioni urgenti |
 
 La classificazione non è identica per ogni impresa. Un contratto di manutenzione con canone fisso, per esempio, si comporta diversamente da una manutenzione pagata a intervento. Conta documentare il criterio usato e mantenerlo abbastanza a lungo da confrontare i periodi.
+
+Il MIT pubblica valori indicativi di riferimento dei costi di esercizio dell’autotrasporto. La fonte consultata è aggiornata al 17 marzo 2026 e aiuta a controllare categorie e ordine di grandezza, ma non fornisce una tariffa universale: costi effettivi, mezzo, percorrenza e organizzazione restano specifici dell’impresa.
 
 ## I principali costi fissi del mezzo
 
@@ -44,6 +46,8 @@ Il carburante varia con distanza, consumo e prezzo al litro. Per seguirlo bene s
 La media generale è utile per il controllo, ma può nascondere differenze importanti. Un viaggio a pieno carico su percorso montano non è confrontabile direttamente con un trasferimento leggero in pianura. Creare poche classi operative — per esempio lunga distanza, distribuzione e percorso impegnativo — offre spesso una stima migliore di un unico consumo standard.
 
 Il prezzo va aggiornato con una frequenza coerente con la volatilità osservata e con le modalità di acquisto dell’impresa. Le fonti pubbliche possono offrire un contesto, ma il calcolo di tratta dovrebbe riflettere il costo effettivo o il criterio aziendale scelto.
+
+Quando il rapporto prevede un confronto fra prezzo base e prezzo successivo, il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) può isolare l’adeguamento. Non sostituisce la misurazione dei litri o il costo carburante reale.
 
 ## Pneumatici, manutenzione e usura
 
@@ -152,4 +156,4 @@ Archiviare l’origine dei dati è importante quanto il numero. Un importo senza
 - [ ] Il costo per km riporta periodo e voci incluse.
 - [ ] Preventivo e consuntivo vengono confrontati.
 
-La mappa dei costi diventa utile quando entra nelle decisioni quotidiane: selezione delle tratte, verifica dei prezzi, pianificazione del rientro e lettura del margine. Aggiornata con metodo, non promette un risultato, ma impedisce che spese note restino invisibili fino alla fine del mese.
+La mappa dei costi diventa utile quando entra nelle decisioni quotidiane: selezione delle tratte, verifica dei prezzi, pianificazione del rientro e lettura del margine. Aggiornata con metodo, non promette un risultato, ma impedisce che spese note restino invisibili fino alla fine del mese. [RouteBudget per autotrasportatori e padroncini](/it/app-per-autotrasportatori/) porta queste voci nel flusso operativo della singola tratta.

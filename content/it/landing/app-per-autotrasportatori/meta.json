@@ -7,8 +7,8 @@
   "description": "RouteBudget riunisce costi di tratta, tre scenari di prezzo, archivio locale e riepilogo PDF per autotrasportatori e piccole imprese.",
   "eyebrow": "RouteBudget per il lavoro quotidiano",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-08",
+  "reviewed": "2026-08-08",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "app per autotrasportatori",
@@ -16,7 +16,9 @@
     "app calcolo costi trasporto",
     "app preventivo camion",
     "calcolo margine autotrasporto",
-    "software costo tratta camion"
+    "software costo tratta camion",
+    "software per autotrasportatori",
+    "app per padroncini"
   ],
   "searchIntent": "commercial-transactional",
   "conversionIntent": "complete-trip",
@@ -28,7 +30,8 @@
     "guide:costi-autotrasporto",
     "guide:preventivo-trasporto",
     "calcolatori:costo-chilometrico-camion",
-    "calcolatori:costo-carburante-viaggio"
+    "calcolatori:costo-carburante-viaggio",
+    "calcolatori:fuel-surcharge-autotrasporto"
   ],
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",
   "calculatorId": null,
@@ -60,5 +63,5 @@
       "supports": "Destinazione ufficiale Android del prodotto RouteBudget EU."
     }
   ],
-  "changeSummary": "Prima pubblicazione: pagina prodotto italiana con pubblico, flusso, funzioni verificate, limiti e link agli store ufficiali."
+  "changeSummary": "Intenti software per autotrasportatori e app per padroncini chiariti senza promettere funzioni TMS; CTA store anticipata."
 }

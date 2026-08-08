@@ -1,6 +1,8 @@
-## Il costo della tratta non coincide con il gasolio
+## Risposta diretta: come calcolare il costo di un trasporto
 
-Calcolare il costo di un trasporto significa ricostruire tutto ciò che il viaggio assorbe, dal momento in cui il mezzo viene preparato fino al rientro o al successivo carico. Il carburante è spesso la voce più visibile, ma non è l’unica: pedaggi, tempo dell’autista, usura, manutenzione, assicurazioni e chilometri senza merce continuano a esistere anche quando non compaiono nella richiesta del cliente.
+Per calcolare il costo di un trasporto somma carburante, pedaggi, tempo dell’autista, usura, quota dei costi fissi e spese specifiche della missione, includendo chilometri a vuoto e durata reale. Il risultato è il costo operativo della tratta; margine e condizioni commerciali formano poi il prezzo da proporre.
+
+Questa pagina riguarda una missione futura. Per analizzare fatture e chilometri di un periodo già concluso, usa la [mappa dei costi dell’autotrasporto merci](/it/guide/costi-autotrasporto/) e la guida al costo chilometrico storico.
 
 Un calcolo utile deve rispondere a tre domande diverse:
 
@@ -35,6 +37,8 @@ Ogni voce deve avere una regola chiara. Il carburante dipende da chilometri, con
 
 Il modello non deve essere complicato per forza. Deve però essere ripetibile: due persone che usano gli stessi dati dovrebbero arrivare allo stesso risultato e capire da dove proviene ogni importo.
 
+I valori indicativi dei costi di esercizio pubblicati dal MIT, aggiornati nella fonte consultata il 17 marzo 2026, sono un riferimento esterno utile per controllare le categorie. Non sono una tariffa universale e non sostituiscono i dati effettivi del mezzo o della missione.
+
 ## Carburante: usare il consumo del proprio mezzo
 
 La formula operativa più comune è:
@@ -46,6 +50,8 @@ La formula operativa più comune è:
 Il consumo dichiarato dal costruttore è un riferimento, non la fotografia di ogni viaggio. Carico, pendenza, traffico, temperatura, velocità e stile di guida possono modificare il dato. Per le decisioni quotidiane è più utile una media ricavata dallo stesso veicolo su tratte comparabili, aggiornata periodicamente.
 
 Anche il prezzo del carburante va trattato con coerenza. Si può usare il prezzo dell’ultimo rifornimento, una media aziendale o il valore previsto nel luogo di rifornimento. L’importante è indicare quale dato è stato scelto e non alternare criteri diversi tra preventivi simili.
+
+Se il rapporto separa un adeguamento rispetto a un prezzo base, usa il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) come controllo specifico. L’adeguamento non sostituisce litri e costo carburante della tratta.
 
 ## Pedaggi e costi legati al percorso
 
@@ -150,4 +156,4 @@ Questa separazione aiuta anche nelle trattative. Se il cliente chiede una riduzi
 - [ ] Esiste almeno uno scenario meno favorevole.
 - [ ] Il preventivo descrive chiaramente ciò che è incluso.
 
-Un calcolo completo non elimina l’incertezza, ma la rende visibile. Registrare dati, ipotesi e risultato permette di confrontare il preventivo con il consuntivo dopo il viaggio. È questo confronto, ripetuto nel tempo, che rende più affidabili consumo, tempi, quote di usura e costo per chilometro della propria attività.
+Un calcolo completo non elimina l’incertezza, ma la rende visibile. Registrare dati, ipotesi e risultato permette di confrontare il preventivo con il consuntivo dopo il viaggio. È questo confronto, ripetuto nel tempo, che rende più affidabili consumo, tempi, quote di usura e costo per chilometro. Per continuare con scenari e PDF, consulta [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/).

@@ -250,6 +250,7 @@ function validatePage(page, directorySlug) {
   assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(meta.slug), `${id}: invalid slug`);
   assert(CONTENT_STATUSES.has(meta.status), `${id}: invalid editorial status`);
   assert(meta.title.length <= 75, `${id}: title exceeds 75 characters`);
+  assert(meta.mobileH1 === undefined || (typeof meta.mobileH1 === 'string' && meta.mobileH1.trim().length >= 10 && meta.mobileH1.length <= 75), `${id}: mobileH1 must be 10–75 characters when provided`);
   assert(meta.description.length >= 70 && meta.description.length <= 180, `${id}: description must be 70–180 characters`);
   assert(/^\d{4}-\d{2}-\d{2}$/.test(meta.published), `${id}: invalid published date`);
   assert(/^\d{4}-\d{2}-\d{2}$/.test(meta.modified), `${id}: invalid modified date`);
@@ -299,7 +300,7 @@ function validatePage(page, directorySlug) {
     assert(meta.calculatorId === null, `${id}: guide calculatorId must be null`);
   } else if (section === 'calcolatori') {
     assert(meta.kind === 'calculator', `${id}: calculator section requires calculator kind`);
-    assert(['cost-per-km', 'fuel-trip'].includes(meta.calculatorId), `${id}: unknown calculatorId`);
+    assert(['cost-per-km', 'fuel-trip', 'fuel-surcharge'].includes(meta.calculatorId), `${id}: unknown calculatorId`);
     assert(typeof meta.pillar === 'string', `${id}: calculator must name a pillar`);
   } else if (section === 'confronti') {
     assert(meta.kind === 'comparison', `${id}: comparison section requires comparison kind`);
@@ -377,13 +378,17 @@ ${renderHead({
       <div class="seo-shell">
         ${renderBreadcrumb(page)}
         <p class="seo-eyebrow">${escapeHtml(page.meta.eyebrow)}</p>
-        <h1>${escapeHtml(page.meta.title)}</h1>
+        <h1>${page.meta.mobileH1
+          ? `<span class="seo-h1__desktop">${escapeHtml(page.meta.title)}</span>
+          <span class="seo-h1__mobile">${escapeHtml(page.meta.mobileH1)}</span>`
+          : escapeHtml(page.meta.title)}</h1>
         <p class="seo-hero__summary">${escapeHtml(page.meta.description)}</p>
         <div class="seo-meta" aria-label="Informazioni editoriali">
           <span>A cura di ${escapeHtml(page.meta.author)} · ${escapeHtml(config.name)}</span>
           <span>Revisione ${formatDate(page.meta.reviewed)}</span>
           <span>${readingMinutes} min di lettura</span>
         </div>
+        ${isLanding ? `<div class="seo-hero__store-cta" aria-label="Scarica RouteBudget"><p>Disponibile per iOS e Android.</p>${renderStoreBadges(page.locale, 'complete_trip_app', 'header')}</div>` : ''}
       </div>
     </section>
     ${isCalculator ? renderCalculator(page) : ''}
@@ -666,7 +671,7 @@ function renderSources(page) {
     <h2 id="fonti-${page.meta.slug}">Fonti e riferimenti</h2>
     <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
     <ul>
-      ${page.meta.sources.map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noreferrer">${escapeHtml(source.label)}</a><small>${escapeHtml(source.supports)} · ${escapeHtml(source.geography)} · consultata il ${escapeHtml(formatDate(source.accessedAt))}</small></li>`).join('\n')}
+      ${page.meta.sources.map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noreferrer">${escapeHtml(source.label)}</a><small>${escapeHtml(source.supports)} · ${escapeHtml(source.geography)} · consultata in data ${escapeHtml(formatDate(source.accessedAt))}</small></li>`).join('\n')}
     </ul>
   </section>`;
 }
@@ -701,7 +706,7 @@ function renderCalculator(page) {
           </div>
           <div class="calculator-error" role="alert" tabindex="-1" hidden></div>
           <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
-          <output class="calculator-result" hidden>
+          <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
             <div class="calculator-result__lead"><span>Costo operativo stimato</span><strong data-result="totalOperationalCost">—</strong></div>
             <dl>
               <div><dt>Costo per km percorso</dt><dd data-result="costPerTravelledKm">—</dd></div>
@@ -714,7 +719,54 @@ function renderCalculator(page) {
               <div><dt>Quota costi fissi</dt><dd data-result="fixedCost">—</dd></div>
             </dl>
             <p>Stima arrotondata. Non è il prezzo da offrire: margine, imposte, rischio e costi non inseriti restano esclusi.</p>
-          </output>
+          </section>
+        </form>
+      </div>
+    </section>`;
+  }
+
+  if (page.meta.calculatorId === 'fuel-surcharge') {
+    return `<section class="calculator-section" aria-labelledby="calculator-title">
+      <div class="seo-shell calculator-layout">
+        <div class="calculator-intro">
+          <p class="seo-eyebrow">Strumento gratuito · calcolo locale</p>
+          <h2 id="calculator-title">Calcola l’adeguamento carburante.</h2>
+          <p>Confronta due prezzi del gasolio e applica l’incidenza carburante scelta al nolo di riferimento. Nessun dato viene inviato a RouteBudget.</p>
+          <p class="calculator-formula"><strong>Formula</strong><span>((prezzo confronto − prezzo riferimento) ÷ prezzo riferimento) × (incidenza ÷ 100) × nolo base</span></p>
+        </div>
+        <form class="calculator-form" data-calculator="fuel-surcharge" novalidate>
+          <div class="calculator-fields calculator-fields--compact">
+            ${numberField('baseFreight', 'Nolo di riferimento', '€', 'es. 1200', true)}
+            ${numberField('baseFuelPrice', 'Prezzo gasolio di riferimento', '€ / L', 'inserisci', true)}
+            ${numberField('currentFuelPrice', 'Prezzo gasolio di confronto', '€ / L', 'inserisci', true)}
+            ${numberField('fuelSharePercent', 'Incidenza carburante concordata', '%', 'es. 30', true)}
+          </div>
+          <div class="calculator-form__footer">
+            <p>Usa prezzi con stessa fonte, frequenza, unità e trattamento fiscale, ma relativi ai due periodi da confrontare. Il calcolatore non decide quale clausola applicare.</p>
+            <div class="calculator-form__actions">
+              <button class="button button--quiet" type="reset">Ricomincia</button>
+              <button class="button button--primary" type="submit">Calcola adeguamento</button>
+            </div>
+          </div>
+          <div class="calculator-error" role="alert" tabindex="-1" hidden></div>
+          <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+          <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
+            <div class="calculator-result__lead"><span>Nolo aggiornato stimato</span><strong data-result="adjustedFreight">—</strong></div>
+            <dl>
+              <div><dt>Nolo di riferimento</dt><dd data-result="baseFreight">—</dd></div>
+              <div><dt>Variazione del gasolio</dt><dd data-result="fuelPriceVariationPercent">—</dd></div>
+              <div><dt>Incidenza carburante applicata</dt><dd data-result="fuelSharePercent">—</dd></div>
+              <div><dt>Adeguamento sul nolo</dt><dd data-result="freightAdjustmentPercent">—</dd></div>
+              <div><dt>Importo dell’adeguamento</dt><dd data-result="adjustmentAmount">—</dd></div>
+            </dl>
+            <p>Stima matematica, non parere legale o fiscale. Verifica contratto, fonte dei prezzi, periodo, soglie, arrotondamenti e trattamento degli importi prima di usarla.</p>
+            <div class="calculator-result__cta">
+              <p class="rail-label">Dall’adeguamento alla tratta completa</p>
+              <h3>Calcola costi, scenari e PDF in RouteBudget.</h3>
+              <p>Questo strumento isola solo la variazione carburante. Nell’app puoi valutare anche pedaggi, autista, usura, ritorno a vuoto e margine.</p>
+              ${renderStoreBadges(page.locale, 'add_trip_costs_app', 'after_result')}
+            </div>
+          </section>
         </form>
       </div>
     </section>`;
@@ -743,7 +795,7 @@ function renderCalculator(page) {
         </div>
         <div class="calculator-error" role="alert" tabindex="-1" hidden></div>
         <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
-        <output class="calculator-result" hidden>
+        <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
           <div class="calculator-result__lead"><span>Costo carburante stimato</span><strong data-result="totalFuelCost">—</strong></div>
           <dl>
             <div><dt>Distanza andata</dt><dd data-result="outboundDistanceKm">—</dd></div>
@@ -756,7 +808,7 @@ function renderCalculator(page) {
             <div><dt>Costo ritorno a vuoto</dt><dd data-result="returnFuelCost">—</dd></div>
           </dl>
           <p>Stima arrotondata. Pedaggi, autista, usura, soste, margine e altri costi non sono inclusi.</p>
-        </output>
+        </section>
       </form>
     </div>
   </section>`;

@@ -16,5 +16,35 @@
     "geography": "Unione europea",
     "accessedAt": "2026-08-01",
     "supports": "Quadro normativo sui tempi di guida, interruzioni e riposi richiamato solo come riferimento operativo"
+  },
+  "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti": {
+    "publishedOrUpdated": "Serie ufficiale aggiornata mensilmente",
+    "geography": "Italia",
+    "accessedAt": "2026-08-08",
+    "supports": "Fonte istituzionale per confrontare prezzi medi mensili dei carburanti; la tabella dichiara valori in euro per 1.000 litri"
+  },
+  "https://sisen.mase.gov.it/dgsaie/open-data": {
+    "publishedOrUpdated": "Catalogo open data consultato nella versione corrente",
+    "geography": "Italia",
+    "accessedAt": "2026-08-08",
+    "supports": "Disponibilità e riuso delle serie settimanali e mensili ufficiali sui prezzi dei carburanti"
+  },
+  "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6": {
+    "publishedOrUpdated": "Aggiornamento del 17 marzo 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-08",
+    "supports": "Valori indicativi di riferimento dei costi di esercizio dell’autotrasporto, non tariffa universale"
+  },
+  "https://modena.cna.it/fuel-surcharge-cosa-prevede-la-normativa/": {
+    "publishedOrUpdated": "Approfondimento settoriale consultato nella versione corrente",
+    "geography": "Italia",
+    "accessedAt": "2026-08-08",
+    "supports": "Contesto pratico sull’adeguamento carburante nei rapporti di autotrasporto e sulle variabili da chiarire"
+  },
+  "https://www.fiapautotrasporti.it/le-ultime-notizie/fuel-surcharge-nei-contratti-di-autotrasporto-obblighi-normativi-diritti-del-vettore-e-posizione-fiap-sui-contratti-scritti-con-e-senza-clausola-carburante/": {
+    "publishedOrUpdated": "Approfondimento settoriale 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-08",
+    "supports": "Contesto aggiornato sulle clausole carburante nei contratti di autotrasporto; da verificare sul rapporto concreto"
   }
 }

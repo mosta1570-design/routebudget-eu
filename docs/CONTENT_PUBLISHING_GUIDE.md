@@ -86,7 +86,7 @@ Use `content/it/confronti/<slug>/` with `kind: "comparison"` only for a distinct
 | `related` | at least two valid local references |
 | `relatedCalculator` | relevant calculator reference, also present in `related` |
 | `pillar` | `guide:<slug>` for guides, calculators, and comparisons; `null` on pillar |
-| `calculatorId` | `cost-per-km` or `fuel-trip` on the matching calculators; `null` on guides, pillars, and comparisons |
+| `calculatorId` | `cost-per-km`, `fuel-trip`, or `fuel-surcharge` on the matching calculators; `null` on guides, pillars, and comparisons |
 | `conversionIntent` | `complete-trip`, `pdf-quote`, `protect-margin`, or `unlimited` |
 | `appFeature` | verified product capability used by contextual CTA |
 | `translationGroup` | stable cross-language identity, not translated slug |

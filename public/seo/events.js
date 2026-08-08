@@ -25,7 +25,7 @@
     cta_id: (value) => CTA_IDS.has(value),
     cta_position: (value) => ['inline', 'after_result', 'end', 'header', 'footer'].includes(value),
     destination: (value) => ['internal', 'app_store', 'google_play'].includes(value),
-    calculator_id: (value) => ['cost-per-km', 'fuel-trip'].includes(value),
+    calculator_id: (value) => ['cost-per-km', 'fuel-trip', 'fuel-surcharge'].includes(value),
     error_code: (value) => ['required', 'invalid_format', 'invalid_value', 'out_of_range'].includes(value),
   };
 

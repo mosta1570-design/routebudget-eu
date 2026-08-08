@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 
 import {
   calculateCostPerKm,
+  calculateFuelSurcharge,
   calculateFuelTrip,
 } from '../public/seo/calculators-core.js';
 
@@ -45,6 +46,50 @@ approximately(fuelTrip.outboundFuelCost, 358.4);
 approximately(fuelTrip.returnFuelCost, 67.2);
 approximately(fuelTrip.totalFuelCost, 425.6);
 
+const fuelSurcharge = calculateFuelSurcharge({
+  baseFreight: 1_200,
+  baseFuelPrice: 1.6,
+  currentFuelPrice: 1.76,
+  fuelSharePercent: 30,
+});
+
+approximately(fuelSurcharge.fuelPriceVariationPercent, 10);
+approximately(fuelSurcharge.freightAdjustmentPercent, 3);
+approximately(fuelSurcharge.adjustmentAmount, 36);
+approximately(fuelSurcharge.adjustedFreight, 1_236);
+
+const unchangedFuelSurcharge = calculateFuelSurcharge({
+  baseFreight: 1_200,
+  baseFuelPrice: 1.6,
+  currentFuelPrice: 1.6,
+  fuelSharePercent: 30,
+});
+
+approximately(unchangedFuelSurcharge.adjustmentAmount, 0);
+approximately(unchangedFuelSurcharge.adjustedFreight, 1_200);
+
+const decreasingFuelSurcharge = calculateFuelSurcharge({
+  baseFreight: 1_200,
+  baseFuelPrice: 1.6,
+  currentFuelPrice: 1.52,
+  fuelSharePercent: 25,
+});
+
+approximately(decreasingFuelSurcharge.fuelPriceVariationPercent, -5);
+approximately(decreasingFuelSurcharge.freightAdjustmentPercent, -1.25);
+approximately(decreasingFuelSurcharge.adjustmentAmount, -15);
+approximately(decreasingFuelSurcharge.adjustedFreight, 1_185);
+
+const fullIncidenceFuelSurcharge = calculateFuelSurcharge({
+  baseFreight: 1_000,
+  baseFuelPrice: 1,
+  currentFuelPrice: 1.1,
+  fuelSharePercent: 100,
+});
+
+approximately(fullIncidenceFuelSurcharge.freightAdjustmentPercent, 10);
+approximately(fullIncidenceFuelSurcharge.adjustedFreight, 1_100);
+
 assert.throws(
   () => calculateCostPerKm({ ...perKmInput, loadedKm: 0 }),
   /loadedKm/,
@@ -55,6 +100,24 @@ assert.throws(
   () => calculateFuelTrip({ distanceKm: -1, fuelConsumption: 30, fuelPrice: 1.7, emptyReturnKm: 0 }),
   /distanceKm/,
   'negative distance must be rejected',
+);
+
+assert.throws(
+  () => calculateFuelSurcharge({ baseFreight: 1_000, baseFuelPrice: 0, currentFuelPrice: 1.7, fuelSharePercent: 30 }),
+  /baseFuelPrice/,
+  'zero base fuel price must be rejected',
+);
+
+assert.throws(
+  () => calculateFuelSurcharge({ baseFreight: 1_000, baseFuelPrice: 1.6, currentFuelPrice: 1.7, fuelSharePercent: 101 }),
+  /fuelSharePercent/,
+  'fuel share above 100 percent must be rejected',
+);
+
+assert.throws(
+  () => calculateFuelSurcharge({ baseFreight: 1_000, baseFuelPrice: Number.MIN_VALUE, currentFuelPrice: 1.7, fuelSharePercent: 30 }),
+  /at least 0\.01/,
+  'sub-cent base fuel price must be rejected before derived values overflow',
 );
 
 console.log('Calculator fixtures passed.');

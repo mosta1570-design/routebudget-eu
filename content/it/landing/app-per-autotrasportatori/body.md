@@ -4,6 +4,12 @@ RouteBudget è un’app per autotrasportatori, padroncini e piccole imprese che 
 
 Non è un navigatore e non promette tariffe o pedaggi aggiornati in tempo reale. Il risultato dipende dai dati forniti: distanza, costi e ipotesi vanno controllati dall’impresa. L’obiettivo è rendere il ragionamento economico più ordinato, non sostituire pianificazione, fonti ufficiali o consulenza professionale.
 
+## App o software per autotrasportatori: che cosa fa RouteBudget
+
+Chi cerca un software per autotrasportatori può intendere strumenti molto diversi. RouteBudget è un’app mobile focalizzata su costo e prezzo della singola tratta. Non è un TMS o ERP: non gestisce flotta, ordini, fatturazione, telematica, localizzazione dei veicoli o assegnazione dei carichi.
+
+Il perimetro stretto serve a padroncini e piccole imprese che vogliono passare rapidamente dagli input operativi a tre scenari, salvare il calcolo sul dispositivo e creare un riepilogo PDF. Chi necessita pianificazione multi-mezzo, tracking o amministrazione completa deve usare strumenti dedicati e può affiancare RouteBudget soltanto per la stima economica prevista dall’app.
+
 ## Per chi è pensata
 
 ### Autotrasportatore indipendente
@@ -32,6 +38,8 @@ Una stima utile parte da dati verificabili. A seconda della tratta e del mezzo, 
 - margine desiderato.
 
 RouteBudget combina questi input. Non misura automaticamente il costo reale della flotta e non certifica la correttezza del percorso. Se un valore cambia, anche il risultato cambia.
+
+Per una verifica isolata dell’adeguamento carburante, il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) usa quattro input e una formula visibile. L’app mantiene invece il flusso completo della missione.
 
 ## Dal costo ai tre scenari di prezzo
 

@@ -1,10 +1,10 @@
 ## Che cosa misura davvero il costo chilometrico
 
-Il costo chilometrico del camion indica quanto costa, secondo il modello scelto, percorrere un chilometro con quel mezzo in un determinato periodo. È un indicatore interno: aiuta a costruire preventivi, confrontare tratte e leggere i consuntivi, ma non è automaticamente la tariffa da proporre al cliente.
+Il costo chilometrico storico del camion trasforma spese e chilometri dello stesso periodo in un valore gestionale per km. Serve a leggere un consuntivo, confrontare periodi e aggiornare le proprie quote; non stima direttamente una nuova singola tratta.
 
 Per essere utile deve dichiarare tre cose: quali costi comprende, quali chilometri usa come denominatore e a quale periodo si riferisce. Un valore senza queste informazioni può sembrare preciso e invece mettere insieme dati non confrontabili.
 
-Questa guida parte dal consuntivo di un mese o di un anno. Non sostituisce il calcolatore della singola tratta, che usa chilometri carichi e a vuoto, ore e pedaggi inseriti per una missione specifica.
+Questa guida parte dal consuntivo di un mese o di un anno. Per una previsione operativa inserita campo per campo, usa il [calcolatore gratuito del costo km camion](/it/calcolatori/costo-chilometrico-camion/), che usa chilometri carichi e a vuoto, ore e pedaggi di una missione specifica.
 
 ## Quali voci inserire
 
@@ -109,4 +109,4 @@ Conservare per ogni versione:
 - [ ] È chiaro se il valore riguarda km totali o km carichi.
 - [ ] Il prezzo finale aggiunge margine senza confonderlo con il costo.
 
-Un costo chilometrico ben documentato non garantisce la redditività della singola tratta. Riduce però il rischio di formulare un prezzo partendo soltanto dalle spese più visibili e crea una base coerente da confrontare con il consuntivo.
+Un costo chilometrico ben documentato non garantisce la redditività della singola tratta. Riduce però il rischio di formulare un prezzo partendo soltanto dalle spese più visibili e crea una base coerente da confrontare con il consuntivo. Nel flusso [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/) puoi invece confrontare input e scenari della missione prima del preventivo.
