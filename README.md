@@ -25,7 +25,7 @@ Vite uses `/` as its production base path for the custom apex URL `https://route
 
 ## Deployment
 
-`.github/workflows/deploy.yml` builds and deploys `dist/` with official GitHub Pages actions. Before first deployment, set repository **Settings → Pages → Build and deployment → Source** to **GitHub Actions**. Pushes to `main` then run lint, build, and deployment.
+GitHub Pages currently serves the root of the `gh-pages` branch. A production release must first pass `npm run check` and `npm run seo:all`; only the generated `dist/` tree is then copied to `gh-pages` and pushed. The deployment remains an explicit release action rather than an automatic side effect of every source push.
 
 `public/CNAME` keeps `routebudget.eu` in the uploaded Pages artifact. GitHub Pages custom-domain settings and DNS remain external deployment prerequisites.
 

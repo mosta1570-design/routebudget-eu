@@ -1,6 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 
-import appIcon from '../assets/app-icon.png';
+import appIcon from '../assets/app-icon-ui.png';
 import type { SiteCopy } from '../content/siteCopy';
 
 const APP_STORE_URL = 'https://apps.apple.com/app/id6789717191';

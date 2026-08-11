@@ -1,0 +1,67 @@
+{
+  "slug": "calcolo-pedaggio-camion",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Calcolo pedaggio camion: classe, assi, tratta e concessionario",
+  "mobileH1": "Calcolo pedaggio camion: dati e metodo",
+  "description": "Metodo per stimare il pedaggio di un camion in Italia: classe, numero di assi, chilometri tariffari, tipo di tratta e concessionari da verificare.",
+  "eyebrow": "Pedaggi camion · Metodo italiano",
+  "published": "2026-08-11",
+  "modified": "2026-08-11",
+  "reviewed": "2026-08-11",
+  "primaryKeyword": "calcolo pedaggio camion",
+  "searchIntent": "informational-transactional",
+  "topics": [
+    "pedaggio camion",
+    "classi di pedaggio",
+    "assi camion",
+    "concessionari autostradali"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolare-carburante-pedaggi-autista",
+    "guide:costo-chilometrico-camion",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "calculatorId": null,
+  "pillar": "guide:calcolo-costo-trasporto",
+  "conversionIntent": "add-trip-costs",
+  "translationGroup": "calcolo-pedaggio-camion",
+  "sources": [
+    {
+      "label": "Autostrade per l'Italia — Come si calcola il pedaggio",
+      "url": "https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio",
+      "publishedOrUpdated": "Tariffe indicate dal gestore aggiornate al 1° gennaio 2026",
+      "geography": "Italia — rete Autostrade per l'Italia",
+      "accessedAt": "2026-08-11",
+      "supports": "Metodo tariffa unitaria per chilometri, IVA, arrotondamento, sistemi aperti e chiusi e gestione di tratte con più concessionari"
+    },
+    {
+      "label": "Autostrade per l'Italia — Classi di pedaggio",
+      "url": "https://www.autostrade.it/it/servizi-al-cliente/pedaggio/classi-di-pedaggio",
+      "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+      "geography": "Italia — rete Autostrade per l'Italia",
+      "accessedAt": "2026-08-11",
+      "supports": "Classificazione per altezza all'asse anteriore nei veicoli a due assi e per numero di assi nei veicoli e convogli più lunghi"
+    },
+    {
+      "label": "Commissione europea — Road charging",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/road-charging_en"
+    }
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "quanto costa pedaggio camion",
+    "classe pedaggio camion assi",
+    "pedaggio autostrada mezzi pesanti"
+  ],
+  "cluster": "costo-trasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "cost-breakdown",
+  "canonical": "/it/guide/calcolo-pedaggio-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Nuova guida transazionale sul calcolo del pedaggio camion, con confini espliciti tra stima operativa e importo del concessionario."
+}

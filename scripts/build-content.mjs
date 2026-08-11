@@ -349,7 +349,11 @@ function validateRelationships(allPages, byId) {
 function renderPage(page) {
   const isCalculator = page.section === 'calcolatori';
   const isLanding = page.section === 'landing';
-  const body = renderMarkdown(page.markdown);
+  const isEditorial = page.section === 'guide' || page.section === 'confronti';
+  const headings = extractHeadings(page.markdown);
+  const body = isEditorial
+    ? insertMobileConversion(renderMarkdown(page.markdown), page)
+    : renderMarkdown(page.markdown);
   const readingMinutes = Math.max(3, Math.ceil(stripMarkdown(page.markdown).split(/\s+/).length / 220));
   const pillar = page.meta.pillar ? pagesById.get(resolveReferenceId(page.locale, page.meta.pillar)) : null;
   const related = page.meta.related.map((reference) => pagesById.get(resolveReferenceId(page.locale, reference)));
@@ -372,6 +376,7 @@ ${renderHead({
   })}
 <body class="seo-body" data-content-id="${escapeAttr(page.id)}" data-page-type="${escapeAttr(page.meta.kind)}" data-locale="${escapeAttr(page.locale)}">
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  ${isEditorial ? '<div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar"></span></div>' : ''}
   ${renderHeader(page.locale)}
   <main id="contenuto">
     <section class="seo-hero">
@@ -393,15 +398,19 @@ ${renderHead({
     </section>
     ${isCalculator ? renderCalculator(page) : ''}
     <div class="seo-shell article-layout">
-      <article class="seo-prose">
-        ${body}
-        ${renderSources(page)}
-        <section class="editorial-note" aria-labelledby="nota-editoriale">
-          <h2 id="nota-editoriale">Nota editoriale</h2>
-          <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
-        </section>
-      </article>
+      <div class="article-main">
+        ${isEditorial ? renderMobileTableOfContents(headings) : ''}
+        <article class="seo-prose">
+          ${body}
+          ${renderSources(page)}
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
+          </section>
+        </article>
+      </div>
       <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+        ${isEditorial ? renderTableOfContents(headings) : ''}
         ${pillar ? renderPillarLink(pillar) : renderHubLink(page.locale)}
         ${renderCta(page)}
       </aside>
@@ -437,6 +446,16 @@ function renderHub(locale, section) {
     url: absoluteUrl(canonicalPath),
     inLanguage: localeConfig.languageTag,
     isPartOf: { '@id': `${siteUrl}/#website` },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: sectionPages.length,
+      itemListElement: sectionPages.map((page, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: page.meta.title,
+        url: absoluteUrl(page.urlPath),
+      })),
+    },
   };
 
   return `<!doctype html>
@@ -490,6 +509,10 @@ function renderHubEntries(sectionPages, section) {
     return a.meta.title.localeCompare(b.meta.title, 'it');
   });
 
+  if (isGuides) {
+    return renderGuidePaths(sorted);
+  }
+
   return `<div class="seo-index__heading">
     <p>${sorted.length} risorse pubblicate</p>
     <span>${isGuides ? 'Pilastri e guide collegate' : isCalculators ? 'Calcolo locale, dati non trasmessi' : 'Metodi e scenari messi a confronto'}</span>
@@ -509,6 +532,48 @@ function renderHubEntries(sectionPages, section) {
       )
       .join('\n')}
   </ol>`;
+}
+
+function renderGuidePaths(sectionPages) {
+  const pillars = sectionPages.filter((page) => page.meta.kind === 'pillar');
+  const guides = sectionPages.filter((page) => page.meta.kind === 'guide');
+
+  return `<div class="seo-index__heading">
+    <p>${sectionPages.length} risorse pubblicate</p>
+    <span>Tre percorsi: tratta, costi d’impresa, preventivo</span>
+  </div>
+  <div class="guide-paths">
+    ${pillars
+      .map((pillar, pathIndex) => {
+        const pillarReference = `guide:${pillar.meta.slug}`;
+        const children = guides
+          .filter((guide) => guide.meta.pillar === pillarReference)
+          .sort((a, b) => a.meta.title.localeCompare(b.meta.title, 'it'));
+        return `<section class="guide-path" aria-labelledby="guide-path-${escapeAttr(pillar.meta.slug)}">
+          <header class="guide-path__header">
+            <span class="guide-path__number">${String(pathIndex + 1).padStart(2, '0')}</span>
+            <div>
+              <p class="editorial-list__type">Percorso operativo</p>
+              <h2 id="guide-path-${escapeAttr(pillar.meta.slug)}"><a href="${pillar.urlPath}">${escapeHtml(pillar.meta.title)}</a></h2>
+              <p>${escapeHtml(pillar.meta.description)}</p>
+            </div>
+            <a class="editorial-list__action" href="${pillar.urlPath}" aria-label="Apri il percorso: ${escapeAttr(pillar.meta.title)}">Inizia <span aria-hidden="true">↗</span></a>
+          </header>
+          <ol class="guide-path__list">
+            ${children
+              .map(
+                (guide, index) => `<li>
+                  <span>${String(index + 1).padStart(2, '0')}</span>
+                  <div><h3><a href="${guide.urlPath}">${escapeHtml(guide.meta.title)}</a></h3><p>${escapeHtml(guide.meta.description)}</p></div>
+                  <a href="${guide.urlPath}" aria-label="Apri: ${escapeAttr(guide.meta.title)}"><span aria-hidden="true">↗</span></a>
+                </li>`,
+              )
+              .join('\n')}
+          </ol>
+        </section>`;
+      })
+      .join('\n')}
+  </div>`;
 }
 
 function renderHead({ title, description, canonicalPath, type, modified, published, locale = 'it', ogImage = `${siteUrl}/og-cover.jpg`, schema, calculator = false, alternateLinks = '' }) {
@@ -537,7 +602,7 @@ function renderHead({ title, description, canonicalPath, type, modified, publish
     <meta name="twitter:title" content="${escapeAttr(title)}" />
     <meta name="twitter:description" content="${escapeAttr(description)}" />
     <meta name="twitter:image" content="${escapeAttr(ogImage)}" />
-    <link rel="icon" type="image/png" href="${config.basePath}/logo.png" />
+    <link rel="icon" type="image/png" href="${config.basePath}/logo-ui.png" />
     <link rel="manifest" href="${config.basePath}/site.webmanifest" />
     <link rel="stylesheet" href="${config.basePath}/seo/seo.css" />
     <script type="application/ld+json">${safeJson(schema)}</script>
@@ -551,7 +616,7 @@ function renderHeader(locale) {
   return `<header class="seo-header">
     <div class="seo-header__inner">
       <a class="seo-brand" href="${config.basePath}/" aria-label="RouteBudget EU, pagina principale">
-        <img src="${config.basePath}/logo.png" width="42" height="42" alt="" />
+        <img src="${config.basePath}/logo-ui.png" width="42" height="42" alt="" />
         <span>RouteBudget <small>EU</small></span>
       </a>
       <nav aria-label="Navigazione principale">
@@ -570,7 +635,7 @@ function renderFooter(locale) {
     <div class="seo-shell seo-footer__inner">
       <div>
         <a class="seo-brand" href="${config.basePath}/">
-          <img src="${config.basePath}/logo.png" width="38" height="38" loading="lazy" alt="" />
+          <img src="${config.basePath}/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
           <span>RouteBudget <small>EU</small></span>
         </a>
         <p>Costi chiari. Decisioni difendibili.</p>
@@ -641,6 +706,43 @@ function renderStoreBadges(locale, ctaId, position) {
   </div>`;
 }
 
+function renderTableOfContents(headings) {
+  const entries = headings.filter((heading) => heading.depth === 2);
+  if (entries.length < 2) return '';
+  return `<nav class="article-toc" aria-label="Indice della guida">
+    <p class="rail-label">In questa guida</p>
+    <ol>
+      ${entries.map((heading) => `<li><a href="#${escapeAttr(heading.id)}">${escapeHtml(heading.label)}</a></li>`).join('\n')}
+    </ol>
+  </nav>`;
+}
+
+function renderMobileTableOfContents(headings) {
+  const entries = headings.filter((heading) => heading.depth === 2);
+  if (entries.length < 2) return '';
+  return `<details class="mobile-toc">
+    <summary><span>Indice della guida</span><b aria-hidden="true">+</b></summary>
+    <ol>
+      ${entries.map((heading) => `<li><a href="#${escapeAttr(heading.id)}">${escapeHtml(heading.label)}</a></li>`).join('\n')}
+    </ol>
+  </details>`;
+}
+
+function insertMobileConversion(body, page) {
+  const firstHeading = body.indexOf('<h2');
+  const secondHeading = firstHeading >= 0 ? body.indexOf('<h2', firstHeading + 3) : -1;
+  if (secondHeading < 0) return body;
+  const copy = CTA_COPY[page.meta.conversionIntent];
+  const ctaId = CTA_ID_BY_INTENT[page.meta.conversionIntent];
+  const conversion = `<aside class="mobile-inline-cta" aria-label="Continua con RouteBudget">
+    <p class="rail-label">${escapeHtml(copy.eyebrow)}</p>
+    <p class="mobile-inline-cta__title">${escapeHtml(copy.title)}</p>
+    <p>${escapeHtml(copy.body)}</p>
+    ${renderStoreBadges(page.locale, ctaId, 'inline')}
+  </aside>`;
+  return `${body.slice(0, secondHeading)}${conversion}${body.slice(secondHeading)}`;
+}
+
 function renderRelated(related) {
   return `<section class="related-section">
     <div class="seo-shell">
@@ -698,7 +800,7 @@ function renderCalculator(page) {
             ${numberField('fixedPerKm', 'Quota costi fissi', '€ / km', 'es. 0,20', false)}
           </div>
           <div class="calculator-form__footer">
-            <p>I campi facoltativi vuoti valgono zero. Usa valori aziendali, non medie generiche.</p>
+            <p id="calculator-number-format">Formato numeri: virgola per i decimali (4,5), punto per le migliaia (1.000). I campi facoltativi vuoti valgono zero.</p>
             <div class="calculator-form__actions">
               <button class="button button--quiet" type="reset">Ricomincia</button>
               <button class="button button--primary" type="submit">Calcola il costo per km</button>
@@ -719,6 +821,12 @@ function renderCalculator(page) {
               <div><dt>Quota costi fissi</dt><dd data-result="fixedCost">—</dd></div>
             </dl>
             <p>Stima arrotondata. Non è il prezzo da offrire: margine, imposte, rischio e costi non inseriti restano esclusi.</p>
+            <div class="calculator-result__cta">
+              <p class="rail-label">Dal costo al prezzo sostenibile</p>
+              <h3>Completa la tratta in RouteBudget.</h3>
+              <p>Aggiungi margine, scenari e preventivo PDF mantenendo insieme tutti i costi della tratta.</p>
+              ${renderStoreBadges(page.locale, 'complete_trip_app', 'after_result')}
+            </div>
           </section>
         </form>
       </div>
@@ -742,7 +850,7 @@ function renderCalculator(page) {
             ${numberField('fuelSharePercent', 'Incidenza carburante concordata', '%', 'es. 30', true)}
           </div>
           <div class="calculator-form__footer">
-            <p>Usa prezzi con stessa fonte, frequenza, unità e trattamento fiscale, ma relativi ai due periodi da confrontare. Il calcolatore non decide quale clausola applicare.</p>
+            <p id="calculator-number-format">Formato numeri: virgola per i decimali (1,75), punto per le migliaia (1.000). Usa prezzi con stessa fonte, frequenza, unità e trattamento fiscale.</p>
             <div class="calculator-form__actions">
               <button class="button button--quiet" type="reset">Ricomincia</button>
               <button class="button button--primary" type="submit">Calcola adeguamento</button>
@@ -787,7 +895,7 @@ function renderCalculator(page) {
           ${numberField('emptyReturnKm', 'Ritorno a vuoto', 'km', 'es. 120', false)}
         </div>
         <div class="calculator-form__footer">
-          <p>Il ritorno usa lo stesso consumo medio: correggilo nei tuoi dati se il mezzo scarico consuma diversamente.</p>
+          <p id="calculator-number-format">Formato numeri: virgola per i decimali (1,75), punto per le migliaia (1.000). Il ritorno usa lo stesso consumo medio.</p>
           <div class="calculator-form__actions">
             <button class="button button--quiet" type="reset">Ricomincia</button>
             <button class="button button--primary" type="submit">Calcola carburante</button>
@@ -808,6 +916,12 @@ function renderCalculator(page) {
             <div><dt>Costo ritorno a vuoto</dt><dd data-result="returnFuelCost">—</dd></div>
           </dl>
           <p>Stima arrotondata. Pedaggi, autista, usura, soste, margine e altri costi non sono inclusi.</p>
+          <div class="calculator-result__cta">
+            <p class="rail-label">Dal carburante alla tratta completa</p>
+            <h3>Aggiungi pedaggi, autista, usura e margine.</h3>
+            <p>RouteBudget riunisce i costi mancanti, confronta gli scenari e prepara il riepilogo PDF.</p>
+            ${renderStoreBadges(page.locale, 'add_trip_costs_app', 'after_result')}
+          </div>
         </section>
       </form>
     </div>
@@ -818,7 +932,7 @@ function numberField(name, label, unit, placeholder, required) {
   const id = `field-${name}`;
   return `<label class="calculator-field" for="${id}">
     <span>${escapeHtml(label)}${required ? ' <b aria-hidden="true">*</b>' : ''}</span>
-    <span class="calculator-input"><input id="${id}" name="${name}" type="text" inputmode="decimal" autocomplete="off" placeholder="${escapeAttr(placeholder)}" ${required ? 'required' : ''} /><small>${escapeHtml(unit)}</small></span>
+    <span class="calculator-input"><input id="${id}" name="${name}" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="${escapeAttr(placeholder)}" ${required ? 'required' : ''} /><small>${escapeHtml(unit)}</small></span>
   </label>`;
 }
 
@@ -826,6 +940,8 @@ function renderPageSchema(page) {
   const canonical = absoluteUrl(page.urlPath);
   const locale = config.locales[page.locale].languageTag;
   const breadcrumbs = breadcrumbItems(page);
+  const wordCount = stripMarkdown(page.markdown).split(/\s+/).length;
+  const readingMinutes = Math.max(3, Math.ceil(wordCount / 220));
   const commonGraph = [
     {
       '@type': 'Person',
@@ -877,6 +993,9 @@ function renderPageSchema(page) {
       isPartOf: { '@id': `${siteUrl}/#website` },
       image: absoluteUrl(page.meta.ogImage),
       keywords: [page.meta.primaryKeyword, ...page.meta.secondaryKeywords].join(', '),
+      about: page.meta.topics.map((topic) => ({ '@type': 'Thing', name: topic })),
+      wordCount,
+      timeRequired: `PT${readingMinutes}M`,
       citation: page.meta.sources.map((source) => source.url),
     });
   } else if (page.section === 'calcolatori') {
@@ -935,7 +1054,8 @@ function renderAlternateLinks(page) {
 
 function renderMarkdown(markdown) {
   const parsed = marked.parse(markdown, { async: false, gfm: true });
-  return sanitizeHtml(String(parsed), {
+  const withHeadingIds = addHeadingIds(String(parsed));
+  return sanitizeHtml(withHeadingIds, {
     allowedTags: [
       'h2',
       'h3',
@@ -961,6 +1081,9 @@ function renderMarkdown(markdown) {
     ],
     allowedAttributes: {
       a: ['href', 'title', 'rel'],
+      h2: ['id'],
+      h3: ['id'],
+      h4: ['id'],
       th: ['align'],
       td: ['align'],
     },
@@ -975,6 +1098,47 @@ function renderMarkdown(markdown) {
       }),
     },
   });
+}
+
+function extractHeadings(markdown) {
+  const counts = new Map();
+  return markdown
+    .split(/\r?\n/)
+    .map((line) => line.match(/^(#{2,4})\s+(.+?)\s*#*$/))
+    .filter(Boolean)
+    .map((match) => {
+      const label = stripMarkdown(match[2]);
+      const base = headingSlug(label);
+      const count = counts.get(base) ?? 0;
+      counts.set(base, count + 1);
+      return {
+        depth: match[1].length,
+        label,
+        id: count === 0 ? base : `${base}-${count + 1}`,
+      };
+    });
+}
+
+function addHeadingIds(html) {
+  const headings = [];
+  return html.replace(/<h([2-4])>([\s\S]*?)<\/h\1>/g, (match, depth, inner) => {
+    const label = inner.replace(/<[^>]+>/g, ' ').replace(/&[^;]+;/g, ' ').replace(/\s+/g, ' ').trim();
+    const base = headingSlug(label);
+    const duplicates = headings.filter((id) => id === base || id.startsWith(`${base}-`)).length;
+    const id = duplicates === 0 ? base : `${base}-${duplicates + 1}`;
+    headings.push(id);
+    return `<h${depth} id="${escapeAttr(id)}">${inner}</h${depth}>`;
+  });
+}
+
+function headingSlug(value) {
+  const slug = String(value)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return slug || 'sezione';
 }
 
 function renderSitemaps() {

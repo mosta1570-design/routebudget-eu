@@ -1,6 +1,6 @@
 # RouteBudget EU — cluster SEO italiani
 
-Data architettura: 1 agosto 2026. Stato: preparato nel build locale, non distribuito.
+Data architettura: 11 agosto 2026. Stato: inventario validato nel build; baseline [GSC 1–9 agosto 2026](./GSC_BASELINE_2026-08-11.md) registrata.
 
 ## Principio
 
@@ -9,8 +9,8 @@ RouteBudget non pubblica un blog generico. Ogni URL risolve un lavoro economico 
 Inventario iniziale validato:
 
 - 3 pillar;
-- 8 guide di supporto;
-- 2 calcolatori gratuiti;
+- 11 guide di supporto;
+- 3 calcolatori gratuiti;
 - 1 landing app;
 - hub `/it/guide/` e `/it/calcolatori/`.
 
@@ -25,11 +25,14 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | Pagina | Ruolo unico | Passo successivo |
 | --- | --- | --- |
 | `calcolare-carburante-pedaggi-autista` | Allinea tre costi diretti e fonti di verifica | Calcolatore carburante o pillar |
+| `quanto-consuma-un-camion` | Misura l/100 km, fattori e profili usando dati del mezzo | Calcolatore carburante |
+| `calcolo-pedaggio-camion` | Spiega classe, assi, km tariffari, concessionari e verifica | Calcolatore costo/km con importo controllato |
 | `ritorno-a-vuoto-autotrasporto` | Mostra effetto dei km non fatturati su tutte le voci | Calcolatore costo/km |
 | `proteggere-margine-tratta` | Stress test di costo, prezzo, margine e ricarico | Scenari RouteBudget |
 | calcolatore `costo-carburante-viaggio` | Litri e costo da km, L/100 km e prezzo inseriti | Aggiungere costi mancanti nell’app |
+| calcolatore `fuel-surcharge-autotrasporto` | Adeguamento carburante da base, quota e indice inseriti | Riportare variazione nella trattativa |
 
-Pedaggi, costo autista e carburante restano insieme nella guida sui costi diretti: la ricerca ha mostrato intento utile, ma una seconda URL pedaggi sovrapporrebbe contenuto. Una pagina autonoma nasce solo se GSC dimostra query e compito distinti.
+GSC ha mostrato query distinte per consumo e pedaggio: `consumo medio camion` 19 impressioni, `quanto consuma un camion` 9 e `calcolo del pedaggio per camion` 2 nel periodo osservato. Per questo le due guide autonome sono pubblicate nel contenuto. Il confine resta rigido: costi diretti integra le voci; consumo spiega misurazione e fattori; pedaggio spiega metodo e verifica; i calcolatori eseguono solo formule dichiarate da input utente.
 
 ## Cluster 2 — costi dell’autotrasporto
 
@@ -41,10 +44,11 @@ Search job: distinguere costi fissi, variabili e indiretti, quindi attribuirli a
 | --- | --- | --- |
 | `costi-fissi-variabili-autotrasporto` | Classifica e ripartisce le voci senza benchmark universali | Calcolatore costo/km |
 | `costo-chilometrico-camion` | Ricava un costo storico da spese e km dello stesso periodo | Confronto con nuova tratta |
+| `costo-furgone-per-km` | Separa costo N1, tempo, vuoti e km fatturabili dai parametri camion | Calcolatore costo/km usato con dati del mezzo corretto |
 | `usura-manutenzione-camion` | Costruisce quota da storico aziendale evitando doppio conteggio | Inserimento quota nel calcolo |
 | calcolatore `costo-chilometrico-camion` | Stima costo totale, per km percorso e per km carico | Flusso completo RouteBudget |
 
-La guida costo/km e il calcolatore omonimo non competono: la prima usa il consuntivo di un periodo; il secondo stima una singola tratta da input dichiarati.
+La guida costo/km e il calcolatore omonimo non competono: la prima usa il consuntivo di un periodo; il secondo stima una singola tratta da input dichiarati. La guida furgone possiede intento N1, validato da due query long-tail GSC; non riutilizza benchmark, esempi o regole camion come equivalenti.
 
 ## Cluster 3 — preventivi, tariffe e margine
 
@@ -78,9 +82,10 @@ Search job: trasformare il costo in proposta leggibile senza inventare un prezzo
 ## Backlog condizionato a dati
 
 - costo autista per viaggio autonomo;
-- pagina pedaggi autonoma;
 - calcolatore margine;
 - calcolatore prezzo minimo;
+- calcolatore N1 autonomo, solo dopo domanda transazionale sufficiente e verifica prodotto;
+- worksheet somma pedaggi, solo se distinto dalla guida pubblicata;
 - guida durata operativa e pause con revisione normativa;
 - hub tematici dedicati;
 - traduzioni.

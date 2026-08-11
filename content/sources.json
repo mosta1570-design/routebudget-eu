@@ -35,6 +35,24 @@
     "accessedAt": "2026-08-08",
     "supports": "Valori indicativi di riferimento dei costi di esercizio dell’autotrasporto, non tariffa universale"
   },
+  "https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio": {
+    "publishedOrUpdated": "Tariffe indicate dal gestore aggiornate al 1° gennaio 2026",
+    "geography": "Italia — rete Autostrade per l'Italia",
+    "accessedAt": "2026-08-11",
+    "supports": "Metodo tariffa unitaria per chilometri, IVA, arrotondamento e tratte gestite da più concessionari"
+  },
+  "https://www.autostrade.it/it/servizi-al-cliente/pedaggio/classi-di-pedaggio": {
+    "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+    "geography": "Italia — rete Autostrade per l'Italia",
+    "accessedAt": "2026-08-11",
+    "supports": "Classificazione per altezza all'asse anteriore o numero di assi secondo tipo di veicolo e convoglio"
+  },
+  "https://www.ela.europa.eu/en/news/driving-and-rest-rules-and-compulsory-tachographs-apply-light-commercial-vehicles-cross-border": {
+    "publishedOrUpdated": "24 giugno 2026",
+    "geography": "Unione europea",
+    "accessedAt": "2026-08-11",
+    "supports": "Nuove regole dal 1° luglio 2026 per veicoli commerciali leggeri oltre 2,5 t e fino a 3,5 t in trasporto internazionale o cabotaggio"
+  },
   "https://modena.cna.it/fuel-surcharge-cosa-prevede-la-normativa/": {
     "publishedOrUpdated": "Approfondimento settoriale consultato nella versione corrente",
     "geography": "Italia",

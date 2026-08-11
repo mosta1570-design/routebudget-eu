@@ -1,0 +1,59 @@
+{
+  "slug": "quanto-consuma-un-camion",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Quanto consuma un camion? Calcolo in l/100 km con dati reali",
+  "mobileH1": "Quanto consuma un camion? Calcolo pratico",
+  "description": "Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli.",
+  "eyebrow": "Consumo camion · Metodo operativo",
+  "published": "2026-08-11",
+  "modified": "2026-08-11",
+  "reviewed": "2026-08-11",
+  "primaryKeyword": "quanto consuma un camion",
+  "searchIntent": "informational",
+  "topics": [
+    "consumo camion",
+    "litri per 100 km",
+    "costo carburante",
+    "dati di flotta"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolare-carburante-pedaggi-autista",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "calcolatori:costo-carburante-viaggio"
+  ],
+  "calculatorId": null,
+  "pillar": "guide:calcolo-costo-trasporto",
+  "conversionIntent": "add-trip-costs",
+  "translationGroup": "quanto-consuma-un-camion",
+  "sources": [
+    {
+      "label": "MASE — Prezzi mensili dei carburanti",
+      "url": "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti"
+    },
+    {
+      "label": "Commissione europea — Weekly Oil Bulletin",
+      "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+    }
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "consumo camion litri 100 km",
+    "calcolo consumo gasolio camion",
+    "come calcolare consumo camion"
+  ],
+  "cluster": "costo-trasporto",
+  "relatedCalculator": "calcolatori:costo-carburante-viaggio",
+  "appFeature": "fuel-estimate",
+  "canonical": "/it/guide/quanto-consuma-un-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Nuova guida basata su intento di ricerca reale: metodo in l/100 km, segmentazione dei dati e passaggio dal consumo al costo tratta."
+}

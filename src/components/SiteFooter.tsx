@@ -1,4 +1,4 @@
-import appIcon from '../assets/app-icon.png';
+import appIcon from '../assets/app-icon-ui.png';
 import type { SiteCopy } from '../content/siteCopy';
 
 type SiteFooterProps = {

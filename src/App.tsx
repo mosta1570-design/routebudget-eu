@@ -6,6 +6,38 @@ import { siteCopy, type Locale } from './content/siteCopy';
 
 const LOCALE_KEY = 'routebudget-site-locale';
 
+const HOME_META: Record<
+  Locale,
+  {
+    title: string;
+    description: string;
+    socialDescription: string;
+    ogLocale: string;
+    imageAlt: string;
+  }
+> = {
+  it: {
+    title: 'RouteBudget EU | Costi camion e preventivi PDF',
+    description:
+      'RouteBudget EU calcola costi di tratta, pedaggi, carburante, ore di guida e margine. Preventivi PDF professionali per autotrasportatori europei.',
+    socialDescription: 'Calcola il prezzo giusto prima di accettare la tratta.',
+    ogLocale: 'it_IT',
+    imageAlt: 'RouteBudget EU, controllo dei costi di una tratta camion',
+  },
+  en: {
+    title: 'RouteBudget EU | Truck costs and PDF quotes',
+    description:
+      'RouteBudget EU calculates route costs, tolls, fuel, driving hours and margin. Professional PDF quotes for European road transport.',
+    socialDescription: 'Calculate the right price before accepting the route.',
+    ogLocale: 'en_GB',
+    imageAlt: 'RouteBudget EU truck route cost control',
+  },
+};
+
+function setMeta(selector: string, content: string) {
+  document.querySelector<HTMLMetaElement>(selector)?.setAttribute('content', content);
+}
+
 function getInitialLocale(): Locale {
   const stored = window.localStorage.getItem(LOCALE_KEY);
   return stored === 'en' ? 'en' : 'it';
@@ -16,8 +48,18 @@ export default function App() {
   const copy = siteCopy[locale];
 
   useEffect(() => {
+    const meta = HOME_META[locale];
+
     document.documentElement.lang = locale;
     document.body.dataset.locale = locale;
+    document.title = meta.title;
+    setMeta('meta[name="description"]', meta.description);
+    setMeta('meta[property="og:locale"]', meta.ogLocale);
+    setMeta('meta[property="og:title"]', meta.title);
+    setMeta('meta[property="og:description"]', meta.socialDescription);
+    setMeta('meta[property="og:image:alt"]', meta.imageAlt);
+    setMeta('meta[name="twitter:title"]', meta.title);
+    setMeta('meta[name="twitter:description"]', meta.socialDescription);
     window.localStorage.setItem(LOCALE_KEY, locale);
   }, [locale]);
 

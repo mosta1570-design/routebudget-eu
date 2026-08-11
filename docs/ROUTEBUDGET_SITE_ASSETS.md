@@ -4,8 +4,10 @@
 
 | Website file | Source | Use |
 | --- | --- | --- |
-| `src/assets/app-icon.png` | RouteBudget Android store icon | Header and product identity |
-| `public/logo.png` | Optimized RouteBudget Android store icon | Favicon, manifest, legal pages |
+| `src/assets/app-icon.png` | RouteBudget Android store icon | Verified master source |
+| `src/assets/app-icon-ui.png` | 192 px derivative of the verified store icon | Lightweight landing-page UI identity |
+| `public/logo.png` | Optimized RouteBudget Android store icon | Manifest and structured-data master |
+| `public/logo-ui.png` | 96 px derivative of the verified store icon | Lightweight generated-content and legal headers |
 | `public/logo-original.png` | Previous public-site logo | Preserved source reference |
 | `src/assets/app-home-it.png` | Verified Italian Android capture: home | Product showcase |
 | `src/assets/app-costs-it.png` | Verified Italian Android capture: cost detail | Product showcase |

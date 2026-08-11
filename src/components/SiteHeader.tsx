@@ -1,7 +1,7 @@
 import { useEffect, useId, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 
-import appIcon from '../assets/app-icon.png';
+import appIcon from '../assets/app-icon-ui.png';
 import type { Locale, SiteCopy } from '../content/siteCopy';
 
 type SiteHeaderProps = {

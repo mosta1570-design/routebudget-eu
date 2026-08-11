@@ -16,7 +16,7 @@ import { createPortal } from 'react-dom';
 
 import appArchive from '../assets/app-archive-it.png';
 import appCosts from '../assets/app-costs-it.png';
-import appIcon from '../assets/app-icon.png';
+import appIcon from '../assets/app-icon-ui.png';
 import appScenarios from '../assets/app-scenarios-it.png';
 import heroDesktop from '../assets/hero/routebudget-hero-desktop.mp4';
 import heroMobile from '../assets/hero/routebudget-hero-mobile.mp4';
@@ -405,7 +405,7 @@ function DemoOverlay({
         {demoFrames.map((frame) => (
           <figure className="demo-frame" key={frame.label}>
             <div className="demo-frame__image">
-              <img alt={frame.alt} height="2400" src={frame.image} width="1080" />
+              <img alt={frame.alt} decoding="async" height="2400" loading="lazy" src={frame.image} width="1080" />
             </div>
             <figcaption>
               <span className="font-pixel">{frame.label}</span>
@@ -432,6 +432,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
   const closeMenuRef = useRef<HTMLButtonElement>(null);
+  const menuOverlayRef = useRef<HTMLDivElement>(null);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const demoTriggerRef = useRef<HTMLButtonElement>(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
@@ -439,6 +440,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
 
   useEffect(() => {
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let heroVisible = true;
 
     const syncPlayback = () => {
       const video = heroVideoRef.current;
@@ -447,9 +449,11 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
         return;
       }
 
-      if (motionPreference.matches) {
+      if (motionPreference.matches || !heroVisible) {
         video.pause();
-        video.currentTime = 0;
+        if (motionPreference.matches) {
+          video.currentTime = 0;
+        }
         return;
       }
 
@@ -458,8 +462,21 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
 
     syncPlayback();
     motionPreference.addEventListener('change', syncPlayback);
+    const visibilityObserver = new IntersectionObserver(
+      ([entry]) => {
+        heroVisible = entry?.isIntersecting ?? true;
+        syncPlayback();
+      },
+      { threshold: 0.05 },
+    );
+    if (heroVideoRef.current) {
+      visibilityObserver.observe(heroVideoRef.current);
+    }
 
-    return () => motionPreference.removeEventListener('change', syncPlayback);
+    return () => {
+      motionPreference.removeEventListener('change', syncPlayback);
+      visibilityObserver.disconnect();
+    };
   }, []);
 
   useEffect(() => {
@@ -503,6 +520,47 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
     }
   }, [menuOpen]);
 
+  useEffect(() => {
+    const overlay = menuOverlayRef.current;
+
+    if (!menuOpen || !overlay) {
+      return undefined;
+    }
+
+    const trapFocus = (event: KeyboardEvent) => {
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const focusable = Array.from(overlay.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      )).filter((element) => {
+        const styles = window.getComputedStyle(element);
+        const bounds = element.getBoundingClientRect();
+        return styles.visibility !== 'hidden' && styles.display !== 'none' && bounds.width > 0 && bounds.height > 0;
+      });
+
+      if (focusable.length === 0) {
+        event.preventDefault();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable.at(-1);
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', trapFocus);
+    return () => document.removeEventListener('keydown', trapFocus);
+  }, [menuOpen]);
+
   const closeMenu = () => {
     setMenuOpen(false);
     window.requestAnimationFrame(() => menuTriggerRef.current?.focus({ preventScroll: true }));
@@ -526,8 +584,8 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
           preload="metadata"
           ref={heroVideoRef}
         >
-          <source media="(max-width: 767px)" src={heroMobile} type="video/mp4" />
-          <source src={heroDesktop} type="video/mp4" />
+          <source media="(max-width: 767px) and (prefers-reduced-motion: no-preference)" src={heroMobile} type="video/mp4" />
+          <source media="(min-width: 768px) and (prefers-reduced-motion: no-preference)" src={heroDesktop} type="video/mp4" />
         </video>
         <div aria-hidden="true" className="hero-stage__contrast" />
 
@@ -577,7 +635,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
             </div>
 
             <div className="hero-meta__positioning">
-              <p>COSTI &amp;</p>
+              <p>{locale === 'it' ? 'COSTI &' : 'COSTS &'}</p>
               <p className="font-pixel">{copy.meta.positioning}</p>
             </div>
 
@@ -616,7 +674,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
                   <span>{copy.demoLabel}</span>
                 </button>
 
-                <div className="hero-chips" aria-label="RouteBudget capabilities">
+                <div className="hero-chips" aria-label={locale === 'it' ? 'Funzioni RouteBudget' : 'RouteBudget capabilities'}>
                   {copy.chips.map((chip) => (
                     <div className="hero-chip" key={chip.label}>
                       <strong>{chip.label}</strong>
@@ -645,6 +703,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
         aria-hidden={!menuOpen}
         className={`mobile-nav-overlay ${menuOpen ? 'is-open' : ''}`}
         inert={!menuOpen}
+        ref={menuOverlayRef}
       >
         <div className="mobile-nav-overlay__header">
           <a aria-label="RouteBudget EU — Home" className="hero-brand" href="#top" onClick={closeMenu} tabIndex={menuOpen ? 0 : -1}>
@@ -685,15 +744,17 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
         </div>
       </div>, document.body)}
 
-      <DemoOverlay
-        copy={copy}
-        locale={locale}
-        onClose={() => {
-          setDemoOpen(false);
-          window.requestAnimationFrame(() => demoTriggerRef.current?.focus({ preventScroll: true }));
-        }}
-        open={demoOpen}
-      />
+      {demoOpen ? (
+        <DemoOverlay
+          copy={copy}
+          locale={locale}
+          onClose={() => {
+            setDemoOpen(false);
+            window.requestAnimationFrame(() => demoTriggerRef.current?.focus({ preventScroll: true }));
+          }}
+          open
+        />
+      ) : null}
     </>
   );
 }

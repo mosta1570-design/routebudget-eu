@@ -4,9 +4,28 @@ import {
   calculateCostPerKm,
   calculateFuelSurcharge,
   calculateFuelTrip,
+  parseItalianNumber,
 } from '../public/seo/calculators-core.js';
 
 const tolerance = 1e-9;
+
+assert.equal(parseItalianNumber('1.000'), 1_000, 'Italian thousands separator must not become a decimal');
+assert.equal(parseItalianNumber('1.000,50'), 1_000.5, 'Italian grouped decimal must parse correctly');
+assert.equal(parseItalianNumber('1,75'), 1.75, 'Italian decimal comma must parse correctly');
+assert.equal(parseItalianNumber('1.75'), 1.75, 'decimal point must remain accepted');
+assert.ok(
+  Number.isNaN(parseItalianNumber('4.500', { rejectAmbiguousGrouping: true })),
+  'ambiguous three-digit decimal must be rejected for decimal fields',
+);
+assert.equal(
+  parseItalianNumber('1.000,50', { rejectAmbiguousGrouping: true }),
+  1_000.5,
+  'explicit Italian grouped decimals must remain accepted',
+);
+assert.equal(parseItalianNumber('1 000,50'), 1_000.5, 'spaces used for grouping must be ignored');
+assert.equal(parseItalianNumber('1\u00a0000,50'), 1_000.5, 'non-breaking spaces used for grouping must be ignored');
+assert.ok(Number.isNaN(parseItalianNumber('1,000.50')), 'mixed English grouping must be rejected as ambiguous');
+assert.ok(Number.isNaN(parseItalianNumber('1.000.50')), 'malformed grouping must be rejected');
 
 const perKmInput = {
   loadedKm: 500,

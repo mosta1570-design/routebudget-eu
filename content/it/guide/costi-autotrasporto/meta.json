@@ -6,8 +6,8 @@
   "description": "Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.",
   "eyebrow": "Economia dell’autotrasporto",
   "published": "2026-08-01",
-  "modified": "2026-08-08",
-  "reviewed": "2026-08-08",
+  "modified": "2026-08-11",
+  "reviewed": "2026-08-11",
   "primaryKeyword": "costi autotrasporto",
   "searchIntent": "informational",
   "topics": [
@@ -21,6 +21,7 @@
     "guide:preventivo-trasporto",
     "guide:costi-fissi-variabili-autotrasporto",
     "guide:costo-chilometrico-camion",
+    "guide:costo-furgone-per-km",
     "guide:usura-manutenzione-camion",
     "guide:proteggere-margine-tratta",
     "guide:errori-calcolo-tariffa-trasporto",
@@ -64,5 +65,5 @@
   "canonical": "/it/guide/costi-autotrasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Query costo autotrasporto merci, risposta diretta, fonte MIT 2026 e collegamenti di calcolo aggiunti."
+  "changeSummary": "Aggiunto percorso separato per il costo chilometrico dei furgoni N1, senza trasferire automaticamente regole e parametri dei camion."
 }
