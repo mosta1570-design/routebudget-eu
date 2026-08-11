@@ -1275,7 +1275,8 @@ async function writeRoute(urlPath, html) {
   const relative = urlPath.slice(config.basePath.length).replace(/^\//, '');
   const targetDirectory = path.join(OUTPUT_ROOT, relative);
   await mkdir(targetDirectory, { recursive: true });
-  await writeFile(path.join(targetDirectory, 'index.html'), html, 'utf8');
+  const normalizedHtml = `${html.replace(/[ \t]+$/gm, '').trim()}\n`;
+  await writeFile(path.join(targetDirectory, 'index.html'), normalizedHtml, 'utf8');
 }
 
 function stripMarkdown(markdown) {
