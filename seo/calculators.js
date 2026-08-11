@@ -2,6 +2,7 @@ import {
   calculateCostPerKm,
   calculateFuelSurcharge,
   calculateFuelTrip,
+  parseItalianNumber,
 } from './calculators-core.js';
 
 const eur = new Intl.NumberFormat('it-IT', {
@@ -63,6 +64,18 @@ const MINIMUMS = {
   currentFuelPrice: 0.01,
   fuelSharePercent: 0.01,
 };
+
+const DECIMAL_FIELDS = new Set([
+  'fuelConsumption',
+  'fuelPrice',
+  'operationalHours',
+  'driverHourlyCost',
+  'wearPerKm',
+  'fixedPerKm',
+  'baseFuelPrice',
+  'currentFuelPrice',
+  'fuelSharePercent',
+]);
 
 for (const form of document.querySelectorAll('[data-calculator]')) {
   let started = false;
@@ -188,13 +201,14 @@ function readNumber(form, name, required, strictlyPositive) {
     return 0;
   }
 
-  const normalized = raw.replace(/\s+/g, '').replace(',', '.');
-  if (!/^\d+(?:\.\d+)?$/.test(normalized)) {
-    throw validationError(`“${label}” deve essere un numero positivo. Usa la virgola per i decimali e nessun separatore delle migliaia.`, 'invalid_format');
+  const value = parseItalianNumber(raw, {
+    rejectAmbiguousGrouping: DECIMAL_FIELDS.has(name),
+  });
+  if (!Number.isFinite(value)) {
+    throw validationError(`“${label}” deve essere un numero positivo. Usa la virgola per i decimali (es. 4,5) e il punto solo per le migliaia (es. 1.000).`, 'invalid_format');
   }
 
-  const value = Number(normalized);
-  if (!Number.isFinite(value) || value < 0 || (strictlyPositive && value === 0)) {
+  if (value < 0 || (strictlyPositive && value === 0)) {
     throw validationError(`Controlla il valore di “${label}”.`, 'invalid_value');
   }
 

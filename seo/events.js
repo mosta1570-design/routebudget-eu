@@ -64,6 +64,23 @@
 
   emit('content_landing_view', { source_class: classifySource(document.referrer) });
 
+  const readingProgress = document.querySelector('.reading-progress__bar');
+  if (readingProgress) {
+    let progressFrame = null;
+    const updateReadingProgress = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+      readingProgress.style.transform = `scaleX(${progress})`;
+      progressFrame = null;
+    };
+    const requestReadingProgress = () => {
+      if (progressFrame === null) progressFrame = window.requestAnimationFrame(updateReadingProgress);
+    };
+    updateReadingProgress();
+    window.addEventListener('scroll', requestReadingProgress, { passive: true });
+    window.addEventListener('resize', requestReadingProgress);
+  }
+
   document.addEventListener('click', (event) => {
     const anchor = event.target instanceof Element ? event.target.closest('a[href]') : null;
     if (!anchor) return;

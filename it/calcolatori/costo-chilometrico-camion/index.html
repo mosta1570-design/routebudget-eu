@@ -7,7 +7,7 @@
     <meta name="description" content="Calcola costo totale, costo per km percorso e costo per km carico con carburante, pedaggi, autista, usura, costi fissi e ritorno a vuoto." />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/" />
-    
+
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="it_IT" />
     <meta property="og:site_name" content="RouteBudget EU" />
@@ -17,12 +17,12 @@
     <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
     <meta property="og:image:alt" content="RouteBudget EU — Costo km camion: calcolatore gratuito per una tratta | RouteBudget EU" />
     <meta property="article:published_time" content="2026-08-01" />
-    <meta property="article:modified_time" content="2026-08-08" />
+    <meta property="article:modified_time" content="2026-08-11" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Costo km camion: calcolatore gratuito per una tratta | RouteBudget EU" />
     <meta name="twitter:description" content="Calcola costo totale, costo per km percorso e costo per km carico con carburante, pedaggi, autista, usura, costi fissi e ritorno a vuoto." />
     <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/logo-ui.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/seo/seo.css" />
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Calcolatori","item":"https://routebudget.eu/it/calcolatori/"},{"@type":"ListItem","position":3,"name":"Costo km camion: calcolatore gratuito per una tratta","item":"https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/"}]},{"@type":"WebApplication","@id":"https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/#calculator","name":"Costo km camion: calcolatore gratuito per una tratta","description":"Calcola costo totale, costo per km percorso e costo per km carico con carburante, pedaggi, autista, usura, costi fissi e ritorno a vuoto.","url":"https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/","applicationCategory":"BusinessApplication","operatingSystem":"Qualsiasi browser moderno","browserRequirements":"JavaScript abilitato per il calcolo interattivo","isAccessibleForFree":true,"inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"}}]}</script>
@@ -32,16 +32,17 @@
   </head>
 <body class="seo-body" data-content-id="it:calcolatori:costo-chilometrico-camion" data-page-type="calculator" data-locale="it">
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
   <header class="seo-header">
     <div class="seo-header__inner">
       <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
-        <img src="/logo.png" width="42" height="42" alt="" />
+        <img src="/logo-ui.png" width="42" height="42" alt="" />
         <span>RouteBudget <small>EU</small></span>
       </a>
       <nav aria-label="Navigazione principale">
         <a href="/it/guide/">Guide</a>
         <a href="/it/calcolatori/">Calcolatori</a>
-        
+
         <a href="/it/app-per-autotrasportatori/">App</a>
       </nav>
       <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scopri l’app <span aria-hidden="true">→</span></a>
@@ -62,10 +63,10 @@
         <p class="seo-hero__summary">Calcola costo totale, costo per km percorso e costo per km carico con carburante, pedaggi, autista, usura, costi fissi e ritorno a vuoto.</p>
         <div class="seo-meta" aria-label="Informazioni editoriali">
           <span>A cura di Eng. Mostafa · RouteBudget EU</span>
-          <span>Revisione 8 agosto 2026</span>
+          <span>Revisione 11 agosto 2026</span>
           <span>6 min di lettura</span>
         </div>
-        
+
       </div>
     </section>
     <section class="calculator-section" aria-labelledby="calculator-title">
@@ -79,43 +80,43 @@
           <div class="calculator-fields">
             <label class="calculator-field" for="field-loadedKm">
     <span>Chilometri carichi <b aria-hidden="true">*</b></span>
-    <span class="calculator-input"><input id="field-loadedKm" name="loadedKm" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 500" required /><small>km</small></span>
+    <span class="calculator-input"><input id="field-loadedKm" name="loadedKm" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 500" required /><small>km</small></span>
   </label>
             <label class="calculator-field" for="field-emptyKm">
     <span>Chilometri a vuoto</span>
-    <span class="calculator-input"><input id="field-emptyKm" name="emptyKm" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 100"  /><small>km</small></span>
+    <span class="calculator-input"><input id="field-emptyKm" name="emptyKm" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 100"  /><small>km</small></span>
   </label>
             <label class="calculator-field" for="field-fuelConsumption">
     <span>Consumo medio <b aria-hidden="true">*</b></span>
-    <span class="calculator-input"><input id="field-fuelConsumption" name="fuelConsumption" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 31" required /><small>L / 100 km</small></span>
+    <span class="calculator-input"><input id="field-fuelConsumption" name="fuelConsumption" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 31" required /><small>L / 100 km</small></span>
   </label>
             <label class="calculator-field" for="field-fuelPrice">
     <span>Prezzo carburante <b aria-hidden="true">*</b></span>
-    <span class="calculator-input"><input id="field-fuelPrice" name="fuelPrice" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 1,75" required /><small>€ / L</small></span>
+    <span class="calculator-input"><input id="field-fuelPrice" name="fuelPrice" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 1,75" required /><small>€ / L</small></span>
   </label>
             <label class="calculator-field" for="field-tollCost">
     <span>Pedaggi totali della tratta</span>
-    <span class="calculator-input"><input id="field-tollCost" name="tollCost" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 120"  /><small>€</small></span>
+    <span class="calculator-input"><input id="field-tollCost" name="tollCost" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 120"  /><small>€</small></span>
   </label>
             <label class="calculator-field" for="field-operationalHours">
     <span>Ore operative <b aria-hidden="true">*</b></span>
-    <span class="calculator-input"><input id="field-operationalHours" name="operationalHours" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 9" required /><small>ore</small></span>
+    <span class="calculator-input"><input id="field-operationalHours" name="operationalHours" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 9" required /><small>ore</small></span>
   </label>
             <label class="calculator-field" for="field-driverHourlyCost">
     <span>Costo autista</span>
-    <span class="calculator-input"><input id="field-driverHourlyCost" name="driverHourlyCost" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 25"  /><small>€ / ora</small></span>
+    <span class="calculator-input"><input id="field-driverHourlyCost" name="driverHourlyCost" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 25"  /><small>€ / ora</small></span>
   </label>
             <label class="calculator-field" for="field-wearPerKm">
     <span>Usura e manutenzione</span>
-    <span class="calculator-input"><input id="field-wearPerKm" name="wearPerKm" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 0,18"  /><small>€ / km</small></span>
+    <span class="calculator-input"><input id="field-wearPerKm" name="wearPerKm" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 0,18"  /><small>€ / km</small></span>
   </label>
             <label class="calculator-field" for="field-fixedPerKm">
     <span>Quota costi fissi</span>
-    <span class="calculator-input"><input id="field-fixedPerKm" name="fixedPerKm" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 0,20"  /><small>€ / km</small></span>
+    <span class="calculator-input"><input id="field-fixedPerKm" name="fixedPerKm" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 0,20"  /><small>€ / km</small></span>
   </label>
           </div>
           <div class="calculator-form__footer">
-            <p>I campi facoltativi vuoti valgono zero. Usa valori aziendali, non medie generiche.</p>
+            <p id="calculator-number-format">Formato numeri: virgola per i decimali (4,5), punto per le migliaia (1.000). I campi facoltativi vuoti valgono zero.</p>
             <div class="calculator-form__actions">
               <button class="button button--quiet" type="reset">Ricomincia</button>
               <button class="button button--primary" type="submit">Calcola il costo per km</button>
@@ -136,17 +137,28 @@
               <div><dt>Quota costi fissi</dt><dd data-result="fixedCost">—</dd></div>
             </dl>
             <p>Stima arrotondata. Non è il prezzo da offrire: margine, imposte, rischio e costi non inseriti restano esclusi.</p>
+            <div class="calculator-result__cta">
+              <p class="rail-label">Dal costo al prezzo sostenibile</p>
+              <h3>Completa la tratta in RouteBudget.</h3>
+              <p>Aggiungi margine, scenari e preventivo PDF mantenendo insieme tutti i costi della tratta.</p>
+              <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="after_result" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="after_result" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+            </div>
           </section>
         </form>
       </div>
     </section>
     <div class="seo-shell article-layout">
-      <article class="seo-prose">
-        <h2>Che cosa calcola questo strumento</h2>
+      <div class="article-main">
+
+        <article class="seo-prose">
+          <h2 id="che-cosa-calcola-questo-strumento">Che cosa calcola questo strumento</h2>
 <p>Il costo km camion di una singola tratta nasce dalla somma delle voci operative divisa per i chilometri pertinenti. Questo calcolatore stima il totale e lo divide in due modi: per tutti i chilometri percorsi e per i soli chilometri carichi. La differenza rende visibile il peso di un ritorno o riposizionamento a vuoto.</p>
 <p>Il risultato è un costo, non la risposta a “quanto farsi pagare al km”. Per arrivare a una tariffa servono anche margine, condizioni del servizio, rischio e voci escluse. Il modello somma carburante, pedaggi inseriti, tempo dell’autista, usura e una quota facoltativa di costi fissi. Non calcola un itinerario, non consulta tariffe in tempo reale e non aggiunge margine. Il calcolo avviene nel browser: i valori del modulo non vengono inviati a RouteBudget e non vengono salvati.</p>
 <p>Se vuoi ricavare una media da fatture e chilometri già registrati, usa invece la guida al <a href="/it/guide/costo-chilometrico-camion/">costo chilometrico storico del camion</a>. Le due pagine rispondono a intenti diversi: previsione di una tratta qui, consuntivo di un periodo nella guida.</p>
-<h2>Formula usata</h2>
+<h2 id="formula-usata">Formula usata</h2>
 <p>La stima segue questi passaggi:</p>
 <p><code>km totali = km carichi + km a vuoto</code></p>
 <p><code>carburante = km totali ÷ 100 × consumo L/100 km × prezzo €/L</code></p>
@@ -155,24 +167,24 @@
 <p><code>quota fissa = km totali × costi fissi €/km</code></p>
 <p><code>costo operativo = carburante + pedaggi + autista + usura + quota fissa</code></p>
 <p>Il costo operativo viene poi diviso per i chilometri totali e per i chilometri carichi. Il primo rapporto descrive il costo medio di ciò che il mezzo percorre. Il secondo mostra quanto costo deve essere recuperato da ogni chilometro carico se la tratta a vuoto non genera ricavo proprio.</p>
-<h2>Come compilare i campi</h2>
-<h3>Chilometri carichi e a vuoto</h3>
+<h2 id="come-compilare-i-campi">Come compilare i campi</h2>
+<h3 id="chilometri-carichi-e-a-vuoto">Chilometri carichi e a vuoto</h3>
 <p>Inserisci la distanza operativa prevista, non quella in linea d’aria. I chilometri carichi sono quelli della missione con carico; i chilometri a vuoto comprendono il ritorno o il riposizionamento attribuibile al lavoro. Se una parte del riposizionamento serve anche una commessa successiva, adotta un criterio coerente per non assegnare lo stesso costo due volte.</p>
 <p>Un ritorno a vuoto pari a zero è possibile, ma deve rappresentare un’ipotesi reale. Non eliminarlo solo per rendere il risultato più basso. Deviazioni, accessi, aree di sosta e passaggi necessari al mezzo possono aumentare la distanza effettiva.</p>
-<h3>Consumo e prezzo carburante</h3>
+<h3 id="consumo-e-prezzo-carburante">Consumo e prezzo carburante</h3>
 <p>Usa un consumo osservato per mezzo, massa e tipo di percorso simili. Il calcolatore applica lo stesso consumo medio ai chilometri carichi e a vuoto; se le condizioni differiscono molto, esegui due stime separate e somma i costi carburante prima di prendere una decisione.</p>
 <p>Per il prezzo al litro usa una base coerente con la contabilità aziendale, chiarendo internamente se comprende IVA, sconti o condizioni della carta carburante. Il Weekly Oil Bulletin della Commissione europea aiuta a controllare l’andamento generale, ma fatture e accordi effettivi restano più pertinenti al tuo caso.</p>
 <p>Se devi confrontare un prezzo base con un prezzo successivo secondo un criterio concordato, usa il <a href="/it/calcolatori/fuel-surcharge-autotrasporto/">calcolatore fuel surcharge per autotrasporto</a>. Non confondere quella variazione con il costo carburante completo della tratta.</p>
-<h3>Pedaggi totali</h3>
+<h3 id="pedaggi-totali">Pedaggi totali</h3>
 <p>Inserisci l’importo della tratta controllato sulle fonti applicabili oppure una stima che riconosci come tale. Il campo non identifica classe, assi, paese, percorso o gestore. Tunnel, traghetti e infrastrutture speciali possono richiedere voci separate.</p>
 <p>Se il percorso non è ancora definito, prova più ipotesi invece di presentare un pedaggio medio come tariffa certa. Prima dell’offerta verifica la tariffa in vigore per configurazione e itinerario.</p>
-<h3>Ore operative e costo autista</h3>
+<h3 id="ore-operative-e-costo-autista">Ore operative e costo autista</h3>
 <p>Le ore operative devono rappresentare il tempo che vuoi attribuire alla missione. Possono comprendere guida, pause applicabili, carico, scarico e attese quando tali periodi rientrano nel costo aziendale. Non usare solo il tempo ideale di percorrenza se il lavoro occupa il mezzo e l’autista più a lungo.</p>
 <p>Il costo orario non coincide necessariamente con la paga netta. Ogni impresa deve definire quali componenti pertinenti includere e mantenere lo stesso criterio nei confronti successivi. Questo strumento non determina obblighi retributivi o conformità normativa.</p>
-<h3>Usura e quota dei costi fissi</h3>
+<h3 id="usura-e-quota-dei-costi-fissi">Usura e quota dei costi fissi</h3>
 <p>L’usura per chilometro può comprendere manutenzione, pneumatici e una riserva documentata per interventi legati all’utilizzo. La quota fissa per chilometro può derivare da costi annui divisi per chilometri coerenti dello stesso periodo. Evita doppioni: leasing, ammortamento o assicurazione non devono entrare sia nella quota fissa sia nell’usura.</p>
 <p>I due campi sono facoltativi perché il calcolatore non inventa valori medi. Lasciarli a zero significa escluderli, non dimostrare che il costo non esiste.</p>
-<h2>Esempio verificabile</h2>
+<h2 id="esempio-verificabile">Esempio verificabile</h2>
 <p>Considera queste ipotesi illustrative:</p>
 <table>
 <thead>
@@ -217,13 +229,13 @@
 <p>I 600 km richiedono 186 litri, pari a <strong>325,50 €</strong>. Il costo autista è <strong>225 €</strong>, l’usura <strong>108 €</strong> e la quota fissa <strong>120 €</strong>. Aggiungendo 120 € di pedaggi, il costo operativo stimato è <strong>898,50 €</strong>.</p>
 <p>Il rapporto è circa <strong>1,50 €/km percorso</strong> e <strong>1,80 €/km carico</strong>. Nessuno dei due valori è automaticamente il prezzo finale. Il secondo mostra soltanto quanto dovrebbe recuperare ogni chilometro carico per coprire le voci inserite quando i 100 km vuoti non sono fatturati separatamente.</p>
 <p>I valori indicativi dei costi di esercizio pubblicati dal MIT, aggiornati nella fonte consultata il 17 marzo 2026, possono servire come controllo esterno delle categorie considerate. Non sostituiscono consumo, costi e percorrenza della tua impresa e non vengono inseriti automaticamente nel calcolo.</p>
-<h2>Come leggere il risultato</h2>
+<h2 id="come-leggere-il-risultato">Come leggere il risultato</h2>
 <p>Confronta le componenti prima del totale. Se il carburante domina, controlla consumo, distanza e prezzo. Se l’autista pesa molto, verifica che le ore includano attività reali senza duplicazioni. Se la differenza fra i due costi per km è ampia, il ritorno a vuoto merita una decisione commerciale esplicita.</p>
 <p>Esegui almeno una prova prudente: aumenta prezzo carburante, ore operative o chilometri a vuoto. La sensibilità non predice il futuro, ma mostra quali ipotesi possono rendere fragile un’offerta.</p>
-<h2>Dal costo km camion alla tariffa proposta</h2>
+<h2 id="dal-costo-km-camion-alla-tariffa-proposta">Dal costo km camion alla tariffa proposta</h2>
 <p>Per calcolare il costo al km, dividi il totale operativo per i chilometri coerenti con la decisione. Per definire quanto chiedere al cliente, parti invece dal costo completo, verifica che nessuna voce sia stata esclusa e applica il criterio di margine scelto. Ricarico sul costo e margine sul prezzo finale non sono equivalenti.</p>
 <p>Una tariffa può cambiare anche con attese, urgenza, condizioni di pagamento, accessi, traghetti o disponibilità del mezzo. Per questo non esiste un prezzo al km universale ricavabile dal solo risultato. La guida al <a href="/it/guide/preventivo-trasporto/">preventivo di trasporto per autotrasportatori</a> mostra come passare dal calcolo interno a un’offerta leggibile.</p>
-<h2>Cosa resta fuori</h2>
+<h2 id="cosa-resta-fuori">Cosa resta fuori</h2>
 <p>Il risultato non include automaticamente:</p>
 <ul>
 <li>margine o utile desiderato;</li>
@@ -235,11 +247,11 @@
 <li>verifica normativa delle ore e delle pause.</li>
 </ul>
 <p>Un costo formalmente corretto può quindi essere incompleto se manca una voce aziendale. Conserva le ipotesi insieme al risultato e aggiornale quando cambiano percorso, mezzo, carburante o condizioni operative.</p>
-<h2>Dal calcolo web al flusso completo</h2>
+<h2 id="dal-calcolo-web-al-flusso-completo">Dal calcolo web al flusso completo</h2>
 <p>RouteBudget riunisce nel calcolo della tratta carburante o energia, pedaggi stimati o inseriti, tempo autista, pause operative, usura/manutenzione, ritorno a vuoto e scenari di prezzo. Può poi generare un PDF della stima e conservarne il calcolo nell’Archivio locale. Il calcolatore web resta intenzionalmente più limitato: non salva, non genera documenti e non riproduce gli scenari dell’app.</p>
 <p>Prima di usare la stima, controlla distanza, consumo, pedaggi, ore, criteri di ripartizione e voci lasciate a zero. Arrotonda solo alla fine e non presentare il costo per km come tariffa minima ufficiale. Quando serve continuità tra calcolo, scenari e PDF, passa alla pagina <a href="/it/app-per-autotrasportatori/">RouteBudget per autotrasportatori e padroncini</a>.</p>
 
-        <section class="sources" aria-labelledby="fonti-costo-chilometrico-camion">
+          <section class="sources" aria-labelledby="fonti-costo-chilometrico-camion">
     <h2 id="fonti-costo-chilometrico-camion">Fonti e riferimenti</h2>
     <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
     <ul>
@@ -248,12 +260,14 @@
 <li><a href="https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6" rel="noreferrer">MIT — Valori indicativi dei costi di esercizio, marzo 2026</a><small>Valori indicativi di riferimento dei costi di esercizio dell’autotrasporto, non tariffa universale · Italia · consultata in data 8 agosto 2026</small></li>
     </ul>
   </section>
-        <section class="editorial-note" aria-labelledby="nota-editoriale">
-          <h2 id="nota-editoriale">Nota editoriale</h2>
-          <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
-        </section>
-      </article>
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
+          </section>
+        </article>
+      </div>
       <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+
         <section class="rail-link">
     <p class="rail-label">Guida pilastro</p>
     <h2><a href="/it/guide/calcolo-costo-trasporto/">Calcolo del costo di trasporto: metodo completo per una tratta</a></h2>
@@ -282,28 +296,38 @@
               <div><small>Guida pratica</small><strong>Costo chilometrico storico del camion: periodo e consuntivo</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
-<a href="/it/guide/costi-fissi-variabili-autotrasporto/">
+<a href="/it/guide/calcolo-pedaggio-camion/">
               <span>02</span>
+              <div><small>Guida pratica</small><strong>Calcolo pedaggio camion: classe, assi, tratta e concessionario</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/costo-furgone-per-km/">
+              <span>03</span>
+              <div><small>Guida pratica</small><strong>Costo furgone per km: formula completa per veicoli N1</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/costi-fissi-variabili-autotrasporto/">
+              <span>04</span>
               <div><small>Guida pratica</small><strong>Costi fissi e variabili nell’autotrasporto: come separarli</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
 <a href="/it/guide/calcolo-costo-trasporto/">
-              <span>03</span>
+              <span>05</span>
               <div><small>Guida pilastro</small><strong>Calcolo del costo di trasporto: metodo completo per una tratta</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
 <a href="/it/calcolatori/costo-carburante-viaggio/">
-              <span>04</span>
+              <span>06</span>
               <div><small>Calcolatore</small><strong>Calcolatore del costo carburante per un viaggio camion</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
 <a href="/it/calcolatori/fuel-surcharge-autotrasporto/">
-              <span>05</span>
+              <span>07</span>
               <div><small>Calcolatore</small><strong>Calcolo fuel surcharge autotrasporto: formula e risultato</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
 <a href="/it/app-per-autotrasportatori/">
-              <span>06</span>
+              <span>08</span>
               <div><small>App RouteBudget</small><strong>App per autotrasportatori: calcola costi, prezzo e preventivo</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
@@ -315,7 +339,7 @@
     <div class="seo-shell seo-footer__inner">
       <div>
         <a class="seo-brand" href="/">
-          <img src="/logo.png" width="38" height="38" loading="lazy" alt="" />
+          <img src="/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
           <span>RouteBudget <small>EU</small></span>
         </a>
         <p>Costi chiari. Decisioni difendibili.</p>
@@ -323,7 +347,7 @@
       <nav aria-label="Risorse e informazioni legali">
         <a href="/it/guide/">Guide</a>
         <a href="/it/calcolatori/">Calcolatori</a>
-        
+
         <a href="/it/app-per-autotrasportatori/">App</a>
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Termini</a>

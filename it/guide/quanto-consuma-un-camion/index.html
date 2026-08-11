@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070B12" />
+    <meta name="description" content="Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://routebudget.eu/it/guide/quanto-consuma-un-camion/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="RouteBudget EU" />
+    <meta property="og:title" content="Quanto consuma un camion? Calcolo in l/100 km con dati reali | RouteBudget EU" />
+    <meta property="og:description" content="Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli." />
+    <meta property="og:url" content="https://routebudget.eu/it/guide/quanto-consuma-un-camion/" />
+    <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
+    <meta property="og:image:alt" content="RouteBudget EU — Quanto consuma un camion? Calcolo in l/100 km con dati reali | RouteBudget EU" />
+    <meta property="article:published_time" content="2026-08-11" />
+    <meta property="article:modified_time" content="2026-08-11" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Quanto consuma un camion? Calcolo in l/100 km con dati reali | RouteBudget EU" />
+    <meta name="twitter:description" content="Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli." />
+    <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
+    <link rel="icon" type="image/png" href="/logo-ui.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/seo/seo.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/guide/quanto-consuma-un-camion/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Guide","item":"https://routebudget.eu/it/guide/"},{"@type":"ListItem","position":3,"name":"Quanto consuma un camion? Calcolo in l/100 km con dati reali","item":"https://routebudget.eu/it/guide/quanto-consuma-un-camion/"}]},{"@type":"Article","@id":"https://routebudget.eu/it/guide/quanto-consuma-un-camion/#article","headline":"Quanto consuma un camion? Calcolo in l/100 km con dati reali","description":"Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli.","url":"https://routebudget.eu/it/guide/quanto-consuma-un-camion/","mainEntityOfPage":"https://routebudget.eu/it/guide/quanto-consuma-un-camion/","datePublished":"2026-08-11","dateModified":"2026-08-11","inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"},"image":"https://routebudget.eu/og-cover.jpg","keywords":"quanto consuma un camion, consumo camion litri 100 km, calcolo consumo gasolio camion, come calcolare consumo camion","about":[{"@type":"Thing","name":"consumo camion"},{"@type":"Thing","name":"litri per 100 km"},{"@type":"Thing","name":"costo carburante"},{"@type":"Thing","name":"dati di flotta"}],"wordCount":1238,"timeRequired":"PT6M","citation":["https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti","https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en","https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"]}]}</script>
+    <script src="/seo/events.js" defer></script>
+
+    <title>Quanto consuma un camion? Calcolo in l/100 km con dati reali | RouteBudget EU</title>
+  </head>
+<body class="seo-body" data-content-id="it:guide:quanto-consuma-un-camion" data-page-type="guide" data-locale="it">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar"></span></div>
+  <header class="seo-header">
+    <div class="seo-header__inner">
+      <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
+        <img src="/logo-ui.png" width="42" height="42" alt="" />
+        <span>RouteBudget <small>EU</small></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+      </nav>
+      <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scopri l’app <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+  <main id="contenuto">
+    <section class="seo-hero">
+      <div class="seo-shell">
+        <nav class="breadcrumbs" aria-label="Percorso">
+    <a href="/">RouteBudget</a>
+    <span aria-hidden="true">/</span>
+    <a href="/it/guide/">Guide</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Quanto consuma un camion? Calcolo in l/100 km con dati reali</span>
+  </nav>
+        <p class="seo-eyebrow">Consumo camion · Metodo operativo</p>
+        <h1><span class="seo-h1__desktop">Quanto consuma un camion? Calcolo in l/100 km con dati reali</span>
+          <span class="seo-h1__mobile">Quanto consuma un camion? Calcolo pratico</span></h1>
+        <p class="seo-hero__summary">Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli.</p>
+        <div class="seo-meta" aria-label="Informazioni editoriali">
+          <span>A cura di Eng. Mostafa · RouteBudget EU</span>
+          <span>Revisione 11 agosto 2026</span>
+          <span>6 min di lettura</span>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="seo-shell article-layout">
+      <div class="article-main">
+        <details class="mobile-toc">
+    <summary><span>Indice della guida</span><b aria-hidden="true">+</b></summary>
+    <ol>
+      <li><a href="#quanto-consuma-un-camion-la-risposta-utile-parte-dai-tuoi-dati">Quanto consuma un camion: la risposta utile parte dai tuoi dati</a></li>
+<li><a href="#l-100-km-km-l-e-litri-totali">L/100 km, km/l e litri totali</a></li>
+<li><a href="#come-misurare-il-consumo-reale-del-camion">Come misurare il consumo reale del camion</a></li>
+<li><a href="#i-fattori-che-cambiano-il-consumo">I fattori che cambiano il consumo</a></li>
+<li><a href="#costruire-profili-invece-di-cercare-una-media-universale">Costruire profili invece di cercare una media universale</a></li>
+<li><a href="#dal-consumo-al-costo-carburante-della-tratta">Dal consumo al costo carburante della tratta</a></li>
+<li><a href="#consumo-per-km-e-redditivita-non-sono-la-stessa-cosa">Consumo per km e redditività non sono la stessa cosa</a></li>
+<li><a href="#errori-frequenti-nel-calcolo-del-consumo">Errori frequenti nel calcolo del consumo</a></li>
+<li><a href="#checklist-prima-di-usare-il-dato-nel-preventivo">Checklist prima di usare il dato nel preventivo</a></li>
+    </ol>
+  </details>
+        <article class="seo-prose">
+          <h2 id="quanto-consuma-un-camion-la-risposta-utile-parte-dai-tuoi-dati">Quanto consuma un camion: la risposta utile parte dai tuoi dati</h2>
+<p>Chiedere quanto consuma un camion non porta a un unico valore valido per ogni mezzo e tratta. Motore, massa, rimorchio, pendenza, traffico e velocità possono cambiare il risultato in modo sostanziale. Una media generica può servire come controllo iniziale, ma non dovrebbe diventare la base di un preventivo.</p>
+<p>Il dato operativo da cercare è il consumo del proprio veicolo in un contesto dichiarato: per esempio trattore e semirimorchio, carico medio, percorso autostradale e periodo estivo. Solo così il numero può essere confrontato con una nuova missione e trasformato in un costo carburante.</p>
+<aside class="mobile-inline-cta" aria-label="Continua con RouteBudget">
+    <p class="rail-label">Completa la tratta</p>
+    <p class="mobile-inline-cta__title">Aggiungi le altre voci operative.</p>
+    <p>Porta carburante, pedaggi, autista, usura, ritorno a vuoto e scenari in un unico calcolo.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="add_trip_costs_app" data-analytics-position="inline" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="add_trip_costs_app" data-analytics-position="inline" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </aside><h2 id="l-100-km-km-l-e-litri-totali">L/100 km, km/l e litri totali</h2>
+<p>Nel trasporto stradale il consumo viene espresso spesso in litri per 100 km. Il valore indica quanti litri sono necessari per percorrere cento chilometri nelle condizioni osservate.</p>
+<p>La formula per una tratta è:</p>
+<p><code>litri necessari = distanza in km × consumo in l/100 km ÷ 100</code></p>
+<p>Se un profilo aziendale registra 31 l/100 km e una tratta prevista misura 620 km, il calcolo didattico è:</p>
+<p><code>620 × 31 ÷ 100 = 192,2 litri</code></p>
+<p>Il 31 dell'esempio non è un consumo medio per tutti i camion. È un'ipotesi da sostituire con un valore misurato sul mezzo o con uno scenario prudente documentato.</p>
+<p>Quando il dato è espresso in chilometri per litro, la relazione si inverte:</p>
+<p><code>l/100 km = 100 ÷ km/l</code></p>
+<p>Non mescolare le due unità nello stesso foglio. Un errore di conversione può rendere inutilizzabile anche un preventivo costruito bene nelle altre voci.</p>
+<h2 id="come-misurare-il-consumo-reale-del-camion">Come misurare il consumo reale del camion</h2>
+<p>Il metodo pieno-pieno è accessibile anche senza telematica. Riempi il serbatoio, registra chilometraggio e litri, lavora per un intervallo abbastanza rappresentativo, poi rifornisci nuovamente fino a un livello comparabile. Il calcolo è:</p>
+<p><code>consumo in l/100 km = litri riforniti ÷ km percorsi × 100</code></p>
+<p>Un solo rifornimento può risentire di inclinazione del piazzale, livello di riempimento, temperatura o registrazione incompleta. Un periodo più lungo riduce il peso di queste differenze, purché non unisca missioni troppo diverse.</p>
+<p>Con dati di bordo o telematica il principio non cambia. Conviene conservare almeno:</p>
+<ul>
+<li>veicolo e configurazione del convoglio;</li>
+<li>chilometri iniziali e finali;</li>
+<li>litri consumati o riforniti;</li>
+<li>quota di percorso carico e a vuoto;</li>
+<li>tipo di strada e dislivello rilevante;</li>
+<li>ore di motore al minimo;</li>
+<li>periodo, temperatura e anomalie;</li>
+<li>eventuali consumi separati di gruppo frigo o altre utenze.</li>
+</ul>
+<p>L'AdBlue e l'energia delle attrezzature non vanno sommati ai litri di gasolio. Restano costi operativi, ma richiedono una riga distinta per non alterare il consumo del motore.</p>
+<h2 id="i-fattori-che-cambiano-il-consumo">I fattori che cambiano il consumo</h2>
+<h3 id="massa-e-distribuzione-del-carico">Massa e distribuzione del carico</h3>
+<p>Una maggiore massa richiede più energia nelle accelerazioni e sulle pendenze. Anche distribuzione, altezza e stabilità del carico possono influire. La massa effettiva della missione è quindi più utile di una semplice etichetta “carico” o “vuoto”.</p>
+<h3 id="percorso-pendenza-e-traffico">Percorso, pendenza e traffico</h3>
+<p>Autostrada scorrevole, montagna, urbano e misto non sono profili equivalenti. Salite, ripartenze e rallentamenti aumentano la domanda di energia; una discesa successiva non annulla automaticamente tutto il maggior consumo. Deviazioni, code e accessi al cliente aggiungono chilometri che il percorso commerciale può non mostrare chiaramente.</p>
+<h3 id="velocita-e-aerodinamica">Velocità e aerodinamica</h3>
+<p>La resistenza dell'aria cresce con la velocità. Cabina, semirimorchio, spoiler, distanza tra unità e teloni incidono sul comportamento aerodinamico. Confrontare autisti o mezzi ha senso solo su missioni sufficientemente simili: velocità media e traffico possono spiegare una parte della differenza.</p>
+<h3 id="pneumatici-e-stato-del-mezzo">Pneumatici e stato del mezzo</h3>
+<p>Pressione non coerente, geometria, usura, cuscinetti e manutenzione possono aumentare le resistenze. Il consumo anomalo è un segnale da controllare, non una diagnosi automatica. Prima di attribuirlo allo stile di guida vanno esclusi errori nei dati e variazioni della missione.</p>
+<h3 id="guida-soste-e-utenze-ausiliarie">Guida, soste e utenze ausiliarie</h3>
+<p>Accelerazioni, frenate, uso del freno motore, mantenimento della velocità e tempo al minimo influenzano i litri. Climatizzazione, riscaldamento, prese di forza e refrigerazione aggiungono domanda. Nei servizi con molte soste, misurare anche litri per ora può spiegare meglio ciò che il solo dato per km nasconde.</p>
+<h2 id="costruire-profili-invece-di-cercare-una-media-universale">Costruire profili invece di cercare una media universale</h2>
+<p>Un unico consumo annuale mescola condizioni diverse. Una flotta piccola può già ottenere un dato più utile creando pochi profili stabili:</p>
+<table>
+<thead>
+<tr>
+<th>Profilo</th>
+<th>Segmentazione minima</th>
+<th>Uso nel preventivo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Autostrada carico</td>
+<td>convoglio, massa, stagione</td>
+<td>tratte lunghe comparabili</td>
+</tr>
+<tr>
+<td>Autostrada vuoto</td>
+<td>stesso mezzo, ritorno</td>
+<td>costo del rientro</td>
+</tr>
+<tr>
+<td>Misto</td>
+<td>quota autostrada e viabilità ordinaria</td>
+<td>missioni regionali</td>
+</tr>
+<tr>
+<td>Montagna</td>
+<td>dislivello e massa</td>
+<td>scenario prudente</td>
+</tr>
+<tr>
+<td>Urbano</td>
+<td>soste, ore al minimo, accessi</td>
+<td>integrare costo orario</td>
+</tr>
+</tbody></table>
+<p>Per ogni profilo usa un numero sufficiente di viaggi e registra anche la dispersione. Se i risultati oscillano molto, una singola media è debole: prepara scenario basso, base e alto. Lo scenario alto non deve essere una percentuale casuale, ma può derivare dal gruppo di missioni più impegnativo presente nello storico.</p>
+<h2 id="dal-consumo-al-costo-carburante-della-tratta">Dal consumo al costo carburante della tratta</h2>
+<p>Dopo aver stimato i litri, applica un prezzo datato e coerente:</p>
+<p><code>costo carburante = litri stimati × prezzo effettivo per litro</code></p>
+<p>Il prezzo può provenire dalle fatture o dal sistema carte carburante. Per confronti esterni, il MASE pubblica serie mensili italiane e la Commissione europea il Weekly Oil Bulletin. Queste fonti aiutano a collocare il prezzo nel tempo; non sostituiscono il prezzo netto realmente sostenuto dall'impresa.</p>
+<p>Esempio illustrativo: 192,2 litri a 1,68 €/l producono 322,90 € arrotondati. Se il consumo passa da 31 a 34 l/100 km, gli stessi 620 km richiedono 210,8 litri. La differenza mostra perché conviene testare almeno due scenari prima di fissare il prezzo.</p>
+<p>Puoi eseguire questo passaggio con il <a href="/it/calcolatori/costo-carburante-viaggio/">calcolatore del costo carburante del viaggio</a>. Inserisci distanza, consumo e prezzo scelti da te; il risultato rimane una stima dipendente dagli input.</p>
+<h2 id="consumo-per-km-e-redditivita-non-sono-la-stessa-cosa">Consumo per km e redditività non sono la stessa cosa</h2>
+<p>Un ritorno a vuoto può consumare meno litri per km rispetto all'andata carica, ma resta una percorrenza che deve essere finanziata. Allo stesso modo, ridurre il consumo non copre pedaggi, autista, manutenzione o tempo improduttivo. Per formulare un'offerta, il carburante deve entrare nel <a href="/it/guide/calcolo-costo-trasporto/">calcolo completo del costo di trasporto</a> insieme alle altre componenti.</p>
+<p>Evita anche il doppio conteggio. Se utilizzi già un costo chilometrico storico che include il carburante, non aggiungere di nuovo l'intero importo senza prima separare la quota. Il modello deve dichiarare cosa comprende ogni riga.</p>
+<h2 id="errori-frequenti-nel-calcolo-del-consumo">Errori frequenti nel calcolo del consumo</h2>
+<ul>
+<li>Usare il valore dichiarato di un mezzo diverso come dato definitivo.</li>
+<li>Calcolare i litri sui soli chilometri fatturati anziché su quelli realmente percorsi.</li>
+<li>Unire pieno, rabbocco e rifornimento incompleto senza criterio.</li>
+<li>Confrontare inverno, estate, montagna e pianura come se fossero lo stesso profilo.</li>
+<li>Ignorare deviazioni, accessi, code e ore al minimo.</li>
+<li>Inserire un prezzo carburante senza data, IVA o criterio aziendale chiaro.</li>
+<li>Trattare una stima come garanzia del consumo finale.</li>
+</ul>
+<h2 id="checklist-prima-di-usare-il-dato-nel-preventivo">Checklist prima di usare il dato nel preventivo</h2>
+<ul>
+<li> Unità di misura confermata in l/100 km.</li>
+<li> Veicolo e configurazione identificati.</li>
+<li> Chilometri totali della missione inclusi, anche a vuoto.</li>
+<li> Profilo di strada e carico comparabile allo storico.</li>
+<li> Periodo e qualità del campione documentati.</li>
+<li> Utenze ausiliarie trattate in modo coerente.</li>
+<li> Prezzo al litro aggiornato e riferito all'impresa.</li>
+<li> Scenario prudente provato quando il dato è variabile.</li>
+<li> Carburante integrato una sola volta nel costo totale.</li>
+</ul>
+<p>Sapere quanto consuma un camion significa quindi saper descrivere il contesto del numero. Un dato misurato, segmentato e datato vale più di una media precisa solo in apparenza. Nel flusso <a href="/it/app-per-autotrasportatori/">RouteBudget per autotrasportatori</a> puoi portare consumo, distanza e altre voci della missione in una stima unica, da verificare prima di inviare il preventivo.</p>
+
+          <section class="sources" aria-labelledby="fonti-quanto-consuma-un-camion">
+    <h2 id="fonti-quanto-consuma-un-camion">Fonti e riferimenti</h2>
+    <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
+    <ul>
+      <li><a href="https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti" rel="noreferrer">MASE — Prezzi mensili dei carburanti</a><small>Fonte istituzionale per confrontare prezzi medi mensili dei carburanti; la tabella dichiara valori in euro per 1.000 litri · Italia · consultata in data 8 agosto 2026</small></li>
+<li><a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en" rel="noreferrer">Commissione europea — Weekly Oil Bulletin</a><small>Metodo per reperire prezzi energetici datati per paese senza fissare un prezzo universale · Unione europea · consultata in data 1 agosto 2026</small></li>
+<li><a href="https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6" rel="noreferrer">MIT — Valori indicativi dei costi di esercizio, marzo 2026</a><small>Valori indicativi di riferimento dei costi di esercizio dell’autotrasporto, non tariffa universale · Italia · consultata in data 8 agosto 2026</small></li>
+    </ul>
+  </section>
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
+          </section>
+        </article>
+      </div>
+      <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+        <nav class="article-toc" aria-label="Indice della guida">
+    <p class="rail-label">In questa guida</p>
+    <ol>
+      <li><a href="#quanto-consuma-un-camion-la-risposta-utile-parte-dai-tuoi-dati">Quanto consuma un camion: la risposta utile parte dai tuoi dati</a></li>
+<li><a href="#l-100-km-km-l-e-litri-totali">L/100 km, km/l e litri totali</a></li>
+<li><a href="#come-misurare-il-consumo-reale-del-camion">Come misurare il consumo reale del camion</a></li>
+<li><a href="#i-fattori-che-cambiano-il-consumo">I fattori che cambiano il consumo</a></li>
+<li><a href="#costruire-profili-invece-di-cercare-una-media-universale">Costruire profili invece di cercare una media universale</a></li>
+<li><a href="#dal-consumo-al-costo-carburante-della-tratta">Dal consumo al costo carburante della tratta</a></li>
+<li><a href="#consumo-per-km-e-redditivita-non-sono-la-stessa-cosa">Consumo per km e redditività non sono la stessa cosa</a></li>
+<li><a href="#errori-frequenti-nel-calcolo-del-consumo">Errori frequenti nel calcolo del consumo</a></li>
+<li><a href="#checklist-prima-di-usare-il-dato-nel-preventivo">Checklist prima di usare il dato nel preventivo</a></li>
+    </ol>
+  </nav>
+        <section class="rail-link">
+    <p class="rail-label">Guida pilastro</p>
+    <h2><a href="/it/guide/calcolo-costo-trasporto/">Calcolo del costo di trasporto: metodo completo per una tratta</a></h2>
+    <p>Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.</p>
+  </section>
+        <section class="app-cta">
+    <p class="rail-label">Completa la tratta</p>
+    <h2>Aggiungi le altre voci operative.</h2>
+    <p>Porta carburante, pedaggi, autista, usura, ritorno a vuoto e scenari in un unico calcolo.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="add_trip_costs_app" data-analytics-position="article" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="add_trip_costs_app" data-analytics-position="article" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </section>
+      </aside>
+    </div>
+    <section class="related-section">
+    <div class="seo-shell">
+      <div class="related-section__heading">
+        <p class="seo-eyebrow">Continua il calcolo</p>
+        <h2>Passi collegati.</h2>
+      </div>
+      <div class="related-links">
+        <a href="/it/guide/calcolo-costo-trasporto/">
+              <span>01</span>
+              <div><small>Guida pilastro</small><strong>Calcolo del costo di trasporto: metodo completo per una tratta</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/calcolare-carburante-pedaggi-autista/">
+              <span>02</span>
+              <div><small>Guida pratica</small><strong>Carburante, pedaggi e autista: controllo dei costi diretti</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/costi-fissi-variabili-autotrasporto/">
+              <span>03</span>
+              <div><small>Guida pratica</small><strong>Costi fissi e variabili nell’autotrasporto: come separarli</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/calcolatori/costo-carburante-viaggio/">
+              <span>04</span>
+              <div><small>Calcolatore</small><strong>Calcolatore del costo carburante per un viaggio camion</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer__inner">
+      <div>
+        <a class="seo-brand" href="/">
+          <img src="/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
+          <span>RouteBudget <small>EU</small></span>
+        </a>
+        <p>Costi chiari. Decisioni difendibili.</p>
+      </div>
+      <nav aria-label="Risorse e informazioni legali">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Termini</a>
+      </nav>
+      <p>© 2026 RouteBudget EU · Eng. Mostafa</p>
+    </div>
+  </footer>
+</body>
+</html>

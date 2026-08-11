@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-08",
+  "revisionDate": "2026-08-11",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -23,7 +23,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
       "indexable": true,
       "primaryKeyword": "calcolatore costo carburante viaggio",
-      "modified": "2026-08-08"
+      "modified": "2026-08-11"
     },
     {
       "id": "it:calcolatori:costo-chilometrico-camion",
@@ -35,7 +35,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
       "indexable": true,
       "primaryKeyword": "costo km camion",
-      "modified": "2026-08-08"
+      "modified": "2026-08-11"
     },
     {
       "id": "it:calcolatori:fuel-surcharge-autotrasporto",
@@ -71,7 +71,19 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-08"
+      "modified": "2026-08-11"
+    },
+    {
+      "id": "it:guide:calcolo-pedaggio-camion",
+      "url": "https://routebudget.eu/it/guide/calcolo-pedaggio-camion/",
+      "title": "Calcolo pedaggio camion: classe, assi, tratta e concessionario",
+      "description": "Metodo per stimare il pedaggio di un camion in Italia: classe, numero di assi, chilometri tariffari, tipo di tratta e concessionari da verificare.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/calcolo-pedaggio-camion/",
+      "indexable": true,
+      "primaryKeyword": "calcolo pedaggio camion",
+      "modified": "2026-08-11"
     },
     {
       "id": "it:guide:costi-autotrasporto",
@@ -83,7 +95,7 @@
       "canonical": "https://routebudget.eu/it/guide/costi-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "costi autotrasporto",
-      "modified": "2026-08-08"
+      "modified": "2026-08-11"
     },
     {
       "id": "it:guide:costi-fissi-variabili-autotrasporto",
@@ -108,6 +120,18 @@
       "indexable": true,
       "primaryKeyword": "calcolo costo chilometrico camion da consuntivo",
       "modified": "2026-08-08"
+    },
+    {
+      "id": "it:guide:costo-furgone-per-km",
+      "url": "https://routebudget.eu/it/guide/costo-furgone-per-km/",
+      "title": "Costo furgone per km: formula completa per veicoli N1",
+      "description": "Come calcolare il costo di un furgone per km con spese fisse, variabili, ore, vuoti e chilometri fatturabili, senza usare tariffe camion fuori contesto.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-furgone-per-km/",
+      "indexable": true,
+      "primaryKeyword": "costo furgone per km",
+      "modified": "2026-08-11"
     },
     {
       "id": "it:guide:errori-calcolo-tariffa-trasporto",
@@ -156,6 +180,18 @@
       "indexable": true,
       "primaryKeyword": "analisi sensibilità margine tratta",
       "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:quanto-consuma-un-camion",
+      "url": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
+      "title": "Quanto consuma un camion? Calcolo in l/100 km con dati reali",
+      "description": "Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
+      "indexable": true,
+      "primaryKeyword": "quanto consuma un camion",
+      "modified": "2026-08-11"
     },
     {
       "id": "it:guide:ritorno-a-vuoto-autotrasporto",

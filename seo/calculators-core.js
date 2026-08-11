@@ -10,6 +10,30 @@ function requirePositive(value, name) {
   }
 }
 
+export function parseItalianNumber(rawValue, options = {}) {
+  const raw = String(rawValue ?? '').trim().replace(/[\s\u00a0\u202f]+/g, '');
+  if (!raw) return Number.NaN;
+
+  const italianGrouped = /^\d{1,3}(?:\.\d{3})+(?:,\d+)?$/;
+  if (italianGrouped.test(raw)) {
+    const ambiguousSingleGroup = /^\d{1,3}\.\d{3}$/.test(raw);
+    if (options.rejectAmbiguousGrouping && ambiguousSingleGroup) {
+      return Number.NaN;
+    }
+    return Number(raw.replaceAll('.', '').replace(',', '.'));
+  }
+
+  if (/^\d+(?:,\d+)?$/.test(raw)) {
+    return Number(raw.replace(',', '.'));
+  }
+
+  if (/^\d+\.\d+$/.test(raw)) {
+    return Number(raw);
+  }
+
+  return Number.NaN;
+}
+
 export function calculateCostPerKm(input) {
   requirePositive(input.loadedKm, 'loadedKm');
   requireFiniteNonNegative(input.emptyKm, 'emptyKm');

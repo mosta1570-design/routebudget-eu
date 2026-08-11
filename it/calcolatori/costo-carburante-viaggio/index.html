@@ -7,7 +7,7 @@
     <meta name="description" content="Calcola litri e costo stimato del carburante per andata e ritorno a vuoto usando distanza, consumo medio e prezzo al litro." />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/" />
-    
+
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="it_IT" />
     <meta property="og:site_name" content="RouteBudget EU" />
@@ -17,12 +17,12 @@
     <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
     <meta property="og:image:alt" content="RouteBudget EU — Calcolatore del costo carburante per un viaggio camion | RouteBudget EU" />
     <meta property="article:published_time" content="2026-08-01" />
-    <meta property="article:modified_time" content="2026-08-08" />
+    <meta property="article:modified_time" content="2026-08-11" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Calcolatore del costo carburante per un viaggio camion | RouteBudget EU" />
     <meta name="twitter:description" content="Calcola litri e costo stimato del carburante per andata e ritorno a vuoto usando distanza, consumo medio e prezzo al litro." />
     <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/logo-ui.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/seo/seo.css" />
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Calcolatori","item":"https://routebudget.eu/it/calcolatori/"},{"@type":"ListItem","position":3,"name":"Calcolatore del costo carburante per un viaggio camion","item":"https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/"}]},{"@type":"WebApplication","@id":"https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/#calculator","name":"Calcolatore del costo carburante per un viaggio camion","description":"Calcola litri e costo stimato del carburante per andata e ritorno a vuoto usando distanza, consumo medio e prezzo al litro.","url":"https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/","applicationCategory":"BusinessApplication","operatingSystem":"Qualsiasi browser moderno","browserRequirements":"JavaScript abilitato per il calcolo interattivo","isAccessibleForFree":true,"inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"}}]}</script>
@@ -32,16 +32,17 @@
   </head>
 <body class="seo-body" data-content-id="it:calcolatori:costo-carburante-viaggio" data-page-type="calculator" data-locale="it">
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
   <header class="seo-header">
     <div class="seo-header__inner">
       <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
-        <img src="/logo.png" width="42" height="42" alt="" />
+        <img src="/logo-ui.png" width="42" height="42" alt="" />
         <span>RouteBudget <small>EU</small></span>
       </a>
       <nav aria-label="Navigazione principale">
         <a href="/it/guide/">Guide</a>
         <a href="/it/calcolatori/">Calcolatori</a>
-        
+
         <a href="/it/app-per-autotrasportatori/">App</a>
       </nav>
       <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scopri l’app <span aria-hidden="true">→</span></a>
@@ -62,10 +63,10 @@
         <p class="seo-hero__summary">Calcola litri e costo stimato del carburante per andata e ritorno a vuoto usando distanza, consumo medio e prezzo al litro.</p>
         <div class="seo-meta" aria-label="Informazioni editoriali">
           <span>A cura di Eng. Mostafa · RouteBudget EU</span>
-          <span>Revisione 8 agosto 2026</span>
+          <span>Revisione 11 agosto 2026</span>
           <span>4 min di lettura</span>
         </div>
-        
+
       </div>
     </section>
     <section class="calculator-section" aria-labelledby="calculator-title">
@@ -79,23 +80,23 @@
         <div class="calculator-fields calculator-fields--compact">
           <label class="calculator-field" for="field-distanceKm">
     <span>Distanza di andata <b aria-hidden="true">*</b></span>
-    <span class="calculator-input"><input id="field-distanceKm" name="distanceKm" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 640" required /><small>km</small></span>
+    <span class="calculator-input"><input id="field-distanceKm" name="distanceKm" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 640" required /><small>km</small></span>
   </label>
           <label class="calculator-field" for="field-fuelConsumption">
     <span>Consumo medio <b aria-hidden="true">*</b></span>
-    <span class="calculator-input"><input id="field-fuelConsumption" name="fuelConsumption" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 32" required /><small>L / 100 km</small></span>
+    <span class="calculator-input"><input id="field-fuelConsumption" name="fuelConsumption" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 32" required /><small>L / 100 km</small></span>
   </label>
           <label class="calculator-field" for="field-fuelPrice">
     <span>Prezzo carburante <b aria-hidden="true">*</b></span>
-    <span class="calculator-input"><input id="field-fuelPrice" name="fuelPrice" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 1,75" required /><small>€ / L</small></span>
+    <span class="calculator-input"><input id="field-fuelPrice" name="fuelPrice" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 1,75" required /><small>€ / L</small></span>
   </label>
           <label class="calculator-field" for="field-emptyReturnKm">
     <span>Ritorno a vuoto</span>
-    <span class="calculator-input"><input id="field-emptyReturnKm" name="emptyReturnKm" type="text" inputmode="decimal" autocomplete="off" placeholder="es. 120"  /><small>km</small></span>
+    <span class="calculator-input"><input id="field-emptyReturnKm" name="emptyReturnKm" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 120"  /><small>km</small></span>
   </label>
         </div>
         <div class="calculator-form__footer">
-          <p>Il ritorno usa lo stesso consumo medio: correggilo nei tuoi dati se il mezzo scarico consuma diversamente.</p>
+          <p id="calculator-number-format">Formato numeri: virgola per i decimali (1,75), punto per le migliaia (1.000). Il ritorno usa lo stesso consumo medio.</p>
           <div class="calculator-form__actions">
             <button class="button button--quiet" type="reset">Ricomincia</button>
             <button class="button button--primary" type="submit">Calcola carburante</button>
@@ -116,24 +117,35 @@
             <div><dt>Costo ritorno a vuoto</dt><dd data-result="returnFuelCost">—</dd></div>
           </dl>
           <p>Stima arrotondata. Pedaggi, autista, usura, soste, margine e altri costi non sono inclusi.</p>
+          <div class="calculator-result__cta">
+            <p class="rail-label">Dal carburante alla tratta completa</p>
+            <h3>Aggiungi pedaggi, autista, usura e margine.</h3>
+            <p>RouteBudget riunisce i costi mancanti, confronta gli scenari e prepara il riepilogo PDF.</p>
+            <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="add_trip_costs_app" data-analytics-position="after_result" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="add_trip_costs_app" data-analytics-position="after_result" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+          </div>
         </section>
       </form>
     </div>
   </section>
     <div class="seo-shell article-layout">
-      <article class="seo-prose">
-        <h2>Che cosa stima il calcolatore</h2>
+      <div class="article-main">
+
+        <article class="seo-prose">
+          <h2 id="che-cosa-stima-il-calcolatore">Che cosa stima il calcolatore</h2>
 <p>Questo strumento trasforma distanza, consumo medio e prezzo al litro in due risultati: litri stimati e costo carburante. Puoi aggiungere i chilometri di ritorno a vuoto per evitare che il preventivo consideri solo la parte caricata della missione.</p>
 <p>Il calcolo avviene nel browser. I valori inseriti non vengono inviati a RouteBudget e non vengono memorizzati dal calcolatore. Il risultato è una stima non vincolante: rifornimenti, variazioni di prezzo e consumo reale possono produrre un consuntivo diverso.</p>
-<h2>Formula applicata</h2>
+<h2 id="formula-applicata">Formula applicata</h2>
 <p>Per ogni segmento viene usata questa formula:</p>
 <p><code>litri = distanza km ÷ 100 × consumo L/100 km</code></p>
 <p><code>costo carburante = litri × prezzo €/L</code></p>
 <p>Andata e ritorno vengono calcolati separatamente e poi sommati. Il modello usa lo stesso consumo medio per entrambe le direzioni. Se sai che il mezzo scarico, un percorso montano o una seconda configurazione cambiano sensibilmente il consumo, esegui due stime separate e somma i risultati: anche l’app RouteBudget usa un solo profilo di consumo per lo stesso calcolo.</p>
-<h2>Quale distanza inserire</h2>
+<h2 id="quale-distanza-inserire">Quale distanza inserire</h2>
 <p>Usa la distanza che prevedi di percorrere, non quella in linea d’aria. Controlla che il percorso sia compatibile con sagoma, massa, limitazioni e rete ammessa al mezzo. Deviazioni, ricerca di un punto sicuro, accessi al cliente e chilometri interni possono aumentare il dato reale.</p>
 <p>Il campo “ritorno a vuoto” non deve essere usato solo quando torni al punto di partenza. Può rappresentare anche il riposizionamento necessario per raggiungere il carico successivo. Se una parte del ritorno è già coperta da un’altra commessa, attribuisci a ciascun lavoro un criterio coerente e documentabile.</p>
-<h2>Come scegliere il consumo medio</h2>
+<h2 id="come-scegliere-il-consumo-medio">Come scegliere il consumo medio</h2>
 <p>Il consumo dovrebbe provenire da dati del mezzo in condizioni simili:</p>
 <ul>
 <li>massa e tipo di carico;</li>
@@ -144,7 +156,7 @@
 <li>presenza di ritorno scarico.</li>
 </ul>
 <p>Una media di flotta può essere utile per un controllo iniziale, ma rischia di nascondere differenze fra veicoli. Quando possibile, confronta litri acquistati e chilometri percorsi su più viaggi comparabili. Evita di scegliere il consumo migliore ottenuto in una singola tratta.</p>
-<h2>Quale prezzo carburante usare</h2>
+<h2 id="quale-prezzo-carburante-usare">Quale prezzo carburante usare</h2>
 <p>Definisci prima la base contabile: prezzo lordo o netto, con o senza sconti, coerente con il resto del preventivo. Per una tratta internazionale può essere utile stimare dove avverranno i rifornimenti. Il Weekly Oil Bulletin della Commissione europea mostra andamenti e confronti nazionali, ma la tua fonte primaria resta il prezzo effettivamente sostenuto o contrattualizzato.</p>
 <p>Quando il preventivo resta valido per molti giorni, non fingere di conoscere il prezzo futuro. Puoi:</p>
 <ol>
@@ -153,7 +165,7 @@
 <li>prevedere una regola di revisione chiara, se appropriata al rapporto commerciale;</li>
 <li>controllare la sensibilità con un prezzo più alto.</li>
 </ol>
-<h2>Esempio di andata e ritorno</h2>
+<h2 id="esempio-di-andata-e-ritorno">Esempio di andata e ritorno</h2>
 <p>Ipotesi illustrative:</p>
 <table>
 <thead>
@@ -181,7 +193,7 @@
 </tbody></table>
 <p>L’andata richiede circa 204,8 litri, pari a 358,40 €. Il ritorno richiede circa 38,4 litri, pari a 67,20 €. Il totale stimato è <strong>243,2 litri e 425,60 €</strong>.</p>
 <p>Il numero non comprende pedaggi, costo autista, usura, tempi di attesa, traghetti, pernottamenti o margine. Non è quindi il costo della tratta e non è una tariffa da offrire.</p>
-<h2>Controlla la sensibilità</h2>
+<h2 id="controlla-la-sensibilita">Controlla la sensibilità</h2>
 <p>Una stima diventa più utile quando non guardi un solo scenario. Prova almeno due variazioni:</p>
 <ul>
 <li>aumenta il prezzo al litro di 0,10 €;</li>
@@ -190,7 +202,7 @@
 <li>confronta percorso breve e percorso operativo realmente utilizzabile.</li>
 </ul>
 <p>Nell’esempio, un aumento di 0,10 €/L pesa circa 24,32 € sul viaggio complessivo. Un consumo di 34 L/100 km, a distanza e prezzo invariati, porta i litri a 258,4 e il costo a circa 452,20 €. Questo non prevede il futuro: rende visibile quanto la proposta dipende da un’ipotesi.</p>
-<h2>Dal carburante al costo completo della tratta</h2>
+<h2 id="dal-carburante-al-costo-completo-della-tratta">Dal carburante al costo completo della tratta</h2>
 <p>Il carburante è spesso visibile e facile da aggiornare, ma non deve assorbire tutta l’attenzione. Una tratta sostenibile considera anche:</p>
 <ul>
 <li>pedaggi e infrastrutture a pagamento;</li>
@@ -201,7 +213,7 @@
 <li>condizioni e validità del preventivo.</li>
 </ul>
 <p>RouteBudget collega carburante o energia, pedaggi, tempo autista, pause operative, usura/manutenzione e ritorno a vuoto; confronta scenari di prezzo e crea un PDF della stima. Rischio commerciale, validità e condizioni dell’offerta restano valutazioni dell’impresa. Il calcolatore web resta deliberatamente limitato al carburante, così puoi ottenere una verifica rapida senza riprodurre il flusso completo dell’app.</p>
-<h2>Checklist prima di riportare il dato</h2>
+<h2 id="checklist-prima-di-riportare-il-dato">Checklist prima di riportare il dato</h2>
 <ul>
 <li>distanza verificata per il mezzo;</li>
 <li>ritorno o riposizionamento considerato;</li>
@@ -213,19 +225,21 @@
 </ul>
 <p>Conserva insieme alla stima data, fonte del prezzo e ipotesi di consumo. Se cambia uno di questi elementi, aggiorna il calcolo prima di riutilizzarlo in una nuova offerta.</p>
 
-        <section class="sources" aria-labelledby="fonti-costo-carburante-viaggio">
+          <section class="sources" aria-labelledby="fonti-costo-carburante-viaggio">
     <h2 id="fonti-costo-carburante-viaggio">Fonti e riferimenti</h2>
     <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
     <ul>
       <li><a href="https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en" rel="noreferrer">Commissione europea — Weekly Oil Bulletin</a><small>Metodo per reperire prezzi energetici datati per paese senza fissare un prezzo universale · Unione europea · consultata in data 1 agosto 2026</small></li>
     </ul>
   </section>
-        <section class="editorial-note" aria-labelledby="nota-editoriale">
-          <h2 id="nota-editoriale">Nota editoriale</h2>
-          <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
-        </section>
-      </article>
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
+          </section>
+        </article>
+      </div>
       <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+
         <section class="rail-link">
     <p class="rail-label">Guida pilastro</p>
     <h2><a href="/it/guide/calcolo-costo-trasporto/">Calcolo del costo di trasporto: metodo completo per una tratta</a></h2>
@@ -254,23 +268,28 @@
               <div><small>Guida pratica</small><strong>Carburante, pedaggi e autista: controllo dei costi diretti</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
-<a href="/it/guide/calcolo-costo-trasporto/">
+<a href="/it/guide/quanto-consuma-un-camion/">
               <span>02</span>
+              <div><small>Guida pratica</small><strong>Quanto consuma un camion? Calcolo in l/100 km con dati reali</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/calcolo-costo-trasporto/">
+              <span>03</span>
               <div><small>Guida pilastro</small><strong>Calcolo del costo di trasporto: metodo completo per una tratta</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
 <a href="/it/guide/proteggere-margine-tratta/">
-              <span>03</span>
+              <span>04</span>
               <div><small>Guida pratica</small><strong>Analisi di sensibilità del margine per una tratta camion</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
 <a href="/it/calcolatori/costo-chilometrico-camion/">
-              <span>04</span>
+              <span>05</span>
               <div><small>Calcolatore</small><strong>Costo km camion: calcolatore gratuito per una tratta</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
 <a href="/it/calcolatori/fuel-surcharge-autotrasporto/">
-              <span>05</span>
+              <span>06</span>
               <div><small>Calcolatore</small><strong>Calcolo fuel surcharge autotrasporto: formula e risultato</strong></div>
               <b aria-hidden="true">↗</b>
             </a>
@@ -282,7 +301,7 @@
     <div class="seo-shell seo-footer__inner">
       <div>
         <a class="seo-brand" href="/">
-          <img src="/logo.png" width="38" height="38" loading="lazy" alt="" />
+          <img src="/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
           <span>RouteBudget <small>EU</small></span>
         </a>
         <p>Costi chiari. Decisioni difendibili.</p>
@@ -290,7 +309,7 @@
       <nav aria-label="Risorse e informazioni legali">
         <a href="/it/guide/">Guide</a>
         <a href="/it/calcolatori/">Calcolatori</a>
-        
+
         <a href="/it/app-per-autotrasportatori/">App</a>
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Termini</a>
