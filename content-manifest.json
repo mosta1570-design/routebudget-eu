@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-11",
+  "revisionDate": "2026-08-12",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -59,7 +59,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolare-carburante-pedaggi-autista/",
       "indexable": true,
       "primaryKeyword": "controllo costi diretti tratta camion",
-      "modified": "2026-08-01"
+      "modified": "2026-08-12"
     },
     {
       "id": "it:guide:calcolo-costo-trasporto",
@@ -71,7 +71,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-11"
+      "modified": "2026-08-12"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -95,7 +95,7 @@
       "canonical": "https://routebudget.eu/it/guide/costi-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "costi autotrasporto",
-      "modified": "2026-08-11"
+      "modified": "2026-08-12"
     },
     {
       "id": "it:guide:costi-fissi-variabili-autotrasporto",
@@ -134,6 +134,18 @@
       "modified": "2026-08-11"
     },
     {
+      "id": "it:guide:costo-orario-autista-camion",
+      "url": "https://routebudget.eu/it/guide/costo-orario-autista-camion/",
+      "title": "Costo orario autista camion 2026: metodo e dati ufficiali",
+      "description": "Come ricavare il costo orario aziendale di un autista camion, leggere i riferimenti 2026 e attribuire correttamente le ore a una tratta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-orario-autista-camion/",
+      "indexable": true,
+      "primaryKeyword": "costo orario autista camion",
+      "modified": "2026-08-12"
+    },
+    {
       "id": "it:guide:errori-calcolo-tariffa-trasporto",
       "url": "https://routebudget.eu/it/guide/errori-calcolo-tariffa-trasporto/",
       "title": "Errori nella tariffa di trasporto: 10 controlli prima dell’offerta",
@@ -167,7 +179,7 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto",
-      "modified": "2026-08-08"
+      "modified": "2026-08-12"
     },
     {
       "id": "it:guide:proteggere-margine-tratta",
@@ -204,6 +216,30 @@
       "indexable": true,
       "primaryKeyword": "ritorno a vuoto autotrasporto",
       "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:tempi-attesa-carico-scarico-autotrasporto",
+      "url": "https://routebudget.eu/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
+      "title": "Attese carico e scarico: 90 minuti e indennizzo nel 2026",
+      "description": "Come distinguere attesa e operazioni, applicare la franchigia di 90 minuti e trattare indennizzo, costo interno e prezzo nel preventivo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
+      "indexable": true,
+      "primaryKeyword": "indennizzo tempi di attesa carico scarico autotrasporto",
+      "modified": "2026-08-12"
+    },
+    {
+      "id": "it:guide:tempi-guida-riposo-camion",
+      "url": "https://routebudget.eu/it/guide/tempi-guida-riposo-camion/",
+      "title": "Tempi di guida e riposo camion: calcolo del costo tratta",
+      "description": "Metodo pratico per stimare guida, interruzioni, riposi e durata operativa, così da includere correttamente il tempo nel costo di una tratta camion.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/tempi-guida-riposo-camion/",
+      "indexable": true,
+      "primaryKeyword": "calcolo tempi di guida e riposo camion",
+      "modified": "2026-08-12"
     },
     {
       "id": "it:guide:usura-manutenzione-camion",
