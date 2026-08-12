@@ -1,0 +1,63 @@
+{
+  "slug": "costo-orario-autista-camion",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Costo orario autista camion 2026: metodo e dati ufficiali",
+  "description": "Come ricavare il costo orario aziendale di un autista camion, leggere i riferimenti 2026 e attribuire correttamente le ore a una tratta.",
+  "eyebrow": "Costo del lavoro · Metodo 2026",
+  "published": "2026-08-12",
+  "modified": "2026-08-12",
+  "reviewed": "2026-08-12",
+  "primaryKeyword": "costo orario autista camion",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "costo del lavoro autista",
+    "costo orario camion",
+    "ore operative della tratta",
+    "personale viaggiante"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:calcolo-costo-trasporto",
+    "guide:tempi-guida-riposo-camion",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "translationGroup": "costo-orario-autista-camion",
+  "sources": [
+    {
+      "label": "Ministero del Lavoro — Settore logistica, trasporto merci e spedizione",
+      "url": "https://www.lavoro.gov.it/temi-e-priorita/rapporti-di-lavoro-e-relazioni-industriali/focus/settore-della-logistica-trasporto-merci-spedizione",
+      "publishedOrUpdated": "Decreto direttoriale n. 135 del 19 dicembre 2025; tabelle con decorrenze 2025–2027",
+      "geography": "Italia",
+      "accessedAt": "2026-08-12",
+      "supports": "Costo medio orario del lavoro nel settore per livello e tipologia di personale; riferimento per appalti, non salario netto o tariffa universale."
+    },
+    {
+      "label": "Uomini e Trasporti — Tabelle sul costo orario del lavoro nella logistica",
+      "url": "https://www.uominietrasporti.it/professione/appalti-pubblicate-le-tabelle-sul-costo-orario-del-lavoro-nella-logistica-un-autista-di-camion-oscilla-tra-i-29-e-i-35-euro-allora/",
+      "publishedOrUpdated": "22 dicembre 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-08-12",
+      "supports": "Lettura settoriale delle tabelle ministeriali 2026 per personale viaggiante e distinzione tra costo sostenuto dall’impresa e retribuzione del lavoratore."
+    }
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "costo autista per ora camion",
+    "costo del lavoro autista camion",
+    "calcolo costo autista viaggio"
+  ],
+  "cluster": "costi-autotrasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "cost-breakdown",
+  "canonical": "/it/guide/costo-orario-autista-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Nuova guida sul calcolo del costo orario aziendale dell’autista, con riferimenti 2026 e controlli contro il doppio conteggio."
+}

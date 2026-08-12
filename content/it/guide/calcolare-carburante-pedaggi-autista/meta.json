@@ -6,8 +6,8 @@
   "description": "Un controllo per allineare distanza, pedaggi e durata operativa prima di sommare carburante e costo autista nella stessa tratta.",
   "eyebrow": "Controllo dei costi diretti",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-12",
+  "reviewed": "2026-08-12",
   "primaryKeyword": "controllo costi diretti tratta camion",
   "searchIntent": "informational",
   "topics": [
@@ -18,10 +18,10 @@
   ],
   "related": [
     "guide:calcolo-costo-trasporto",
-    "guide:costo-chilometrico-camion",
-    "guide:proteggere-margine-tratta",
-    "calcolatori:costo-carburante-viaggio",
-    "calcolatori:costo-chilometrico-camion"
+    "guide:tempi-guida-riposo-camion",
+    "guide:costo-orario-autista-camion",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "calcolatori:costo-carburante-viaggio"
   ],
   "calculatorId": null,
   "pillar": "guide:calcolo-costo-trasporto",
@@ -55,5 +55,5 @@
   "canonical": "/it/guide/calcolare-carburante-pedaggi-autista/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
+  "changeSummary": "Aggiunti percorsi verso durata operativa, costo orario dell’autista e attese, lasciando questa guida come controllo d’integrazione delle voci dirette."
 }
