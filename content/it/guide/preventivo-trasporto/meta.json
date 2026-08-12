@@ -6,8 +6,8 @@
   "description": "Come trasformare il costo di una tratta in un’offerta di trasporto merci chiara, con prezzo, inclusioni, esclusioni, validità e PDF verificato.",
   "eyebrow": "Guida al preventivo",
   "published": "2026-08-01",
-  "modified": "2026-08-08",
-  "reviewed": "2026-08-08",
+  "modified": "2026-08-12",
+  "reviewed": "2026-08-12",
   "primaryKeyword": "preventivo trasporto",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -22,6 +22,7 @@
     "guide:proteggere-margine-tratta",
     "guide:errori-calcolo-tariffa-trasporto",
     "guide:preventivo-trasporto-pdf",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
     "guide:calcolare-carburante-pedaggi-autista",
     "calcolatori:costo-chilometrico-camion",
     "calcolatori:costo-carburante-viaggio",
@@ -65,5 +66,5 @@
   "canonical": "/it/guide/preventivo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Intento vettore chiarito, apertura e esempio costo-prezzo rafforzati, collegamenti contestuali e query GSC aggiunti."
+  "changeSummary": "Aggiunto percorso dedicato a tempi di attesa, condizioni e indennizzo, separato dal processo generale di preparazione del preventivo."
 }

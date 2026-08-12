@@ -1,0 +1,61 @@
+{
+  "slug": "tempi-guida-riposo-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Tempi di guida e riposo camion: calcolo del costo tratta",
+  "description": "Metodo pratico per stimare guida, interruzioni, riposi e durata operativa, così da includere correttamente il tempo nel costo di una tratta camion.",
+  "eyebrow": "Durata reale della tratta",
+  "published": "2026-08-12",
+  "modified": "2026-08-12",
+  "reviewed": "2026-08-12",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "calcolo tempi di guida e riposo camion",
+  "secondaryKeywords": [
+    "tempi guida camion 2026",
+    "pausa 45 minuti camion",
+    "ore guida autista camion",
+    "riposo giornaliero autista"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "tempi di guida",
+    "interruzioni tachigrafo",
+    "riposo giornaliero",
+    "durata operativa",
+    "costo autista"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolare-carburante-pedaggi-autista",
+    "guide:costo-orario-autista-camion",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "complete-trip",
+  "appFeature": "complete-route-calculation",
+  "translationGroup": "driving-rest-times-truck",
+  "canonical": "/it/guide/tempi-guida-riposo-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "EUR-Lex — Regolamento (CE) n. 561/2006 sui tempi di guida e riposo",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231"
+    },
+    {
+      "label": "Commissione europea — Tachigrafo nel trasporto stradale",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/tachograph_en?prefLang=it"
+    },
+    {
+      "label": "ELA — Regole 2026 per i veicoli commerciali leggeri transfrontalieri",
+      "url": "https://www.ela.europa.eu/en/news/driving-and-rest-rules-and-compulsory-tachographs-apply-light-commercial-vehicles-cross-border"
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo prudente per trasformare guida, interruzioni, riposi e altre attività in durata e costo di tratta."
+}

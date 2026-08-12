@@ -53,6 +53,48 @@
     "accessedAt": "2026-08-11",
     "supports": "Nuove regole dal 1° luglio 2026 per veicoli commerciali leggeri oltre 2,5 t e fino a 3,5 t in trasporto internazionale o cabotaggio"
   },
+  "https://transport.ec.europa.eu/transport-modes/road/tachograph_en?prefLang=it": {
+    "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+    "geography": "Unione europea",
+    "accessedAt": "2026-08-12",
+    "supports": "Funzione del tachigrafo e registrazione di guida, interruzioni, riposi, altre mansioni e disponibilità; estensione 2026 ai veicoli commerciali leggeri interessati"
+  },
+  "https://www.lavoro.gov.it/temi-e-priorita/rapporti-di-lavoro-e-relazioni-industriali/focus/settore-della-logistica-trasporto-merci-spedizione": {
+    "publishedOrUpdated": "Decreto direttoriale n. 135 del 19 dicembre 2025; tabelle con decorrenze 2025–2027",
+    "geography": "Italia",
+    "accessedAt": "2026-08-12",
+    "supports": "Costo medio orario del lavoro nel settore logistica, trasporto merci e spedizione per livello e tipologia di personale; riferimento per appalti, non salario netto o tariffa universale"
+  },
+  "https://www.uominietrasporti.it/professione/appalti-pubblicate-le-tabelle-sul-costo-orario-del-lavoro-nella-logistica-un-autista-di-camion-oscilla-tra-i-29-e-i-35-euro-allora/": {
+    "publishedOrUpdated": "22 dicembre 2025",
+    "geography": "Italia",
+    "accessedAt": "2026-08-12",
+    "supports": "Lettura settoriale delle tabelle ministeriali 2026 per personale viaggiante e distinzione tra costo sostenuto dall'impresa e retribuzione del lavoratore"
+  },
+  "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture": {
+    "publishedOrUpdated": "19 maggio 2025; pagina modificata il 10 giugno 2025",
+    "geography": "Italia",
+    "accessedAt": "2026-08-12",
+    "supports": "Nuova disciplina comunicata dal MIT: franchigia di 90 minuti per ogni operazione, indennizzo di 100 euro per ora o frazione e rivalutazione annuale"
+  },
+  "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25A04106&art.dataPubblicazioneGazzetta=2025-07-19&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1": {
+    "publishedOrUpdated": "Decreto-legge 21 maggio 2025, n. 73, in vigore dal 21 maggio 2025; testo coordinato con le modifiche della legge di conversione 18 luglio 2025, n. 105, in vigore dal 20 luglio 2025",
+    "geography": "Italia",
+    "accessedAt": "2026-08-12",
+    "supports": "Testo coordinato dell'articolo 4: disciplina vigente su franchigia, indennizzo, prova, responsabilità, eccezioni e rivalutazione dei tempi di attesa al carico e scarico"
+  },
+  "https://www.fiapautotrasporti.it/le-ultime-notizie/attese-al-carico-e-allo-scarico-fiap-chiarisce-come-funziona-la-regola-dei-90-minuti/": {
+    "publishedOrUpdated": "8 ottobre 2025",
+    "geography": "Italia",
+    "accessedAt": "2026-08-12",
+    "supports": "Chiarimento settoriale sull'applicazione pratica della franchigia, documentazione dei tempi e distinzione tra attesa e operazioni"
+  },
+  "https://www.uominietrasporti.it/centonumeri/autisti-e-dintorni/435-e-il-tempo-di-attesa-media-di-un-camion-al-carico-scarico/": {
+    "publishedOrUpdated": "23 ottobre 2024",
+    "geography": "Italia",
+    "accessedAt": "2026-08-12",
+    "supports": "Evidenza settoriale basata su 95.000 giornate lavorative sulla dimensione operativa delle attese; non fonte normativa"
+  },
   "https://modena.cna.it/fuel-surcharge-cosa-prevede-la-normativa/": {
     "publishedOrUpdated": "Approfondimento settoriale consultato nella versione corrente",
     "geography": "Italia",

@@ -1,0 +1,81 @@
+{
+  "slug": "tempi-attesa-carico-scarico-autotrasporto",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Attese carico e scarico: 90 minuti e indennizzo nel 2026",
+  "description": "Come distinguere attesa e operazioni, applicare la franchigia di 90 minuti e trattare indennizzo, costo interno e prezzo nel preventivo.",
+  "eyebrow": "Attese e preventivo",
+  "published": "2026-08-12",
+  "modified": "2026-08-12",
+  "reviewed": "2026-08-12",
+  "primaryKeyword": "indennizzo tempi di attesa carico scarico autotrasporto",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "attesa carico e scarico",
+    "indennizzo autotrasporto",
+    "franchigia 90 minuti",
+    "costo operativo autista",
+    "preventivo trasporto"
+  ],
+  "related": [
+    "guide:preventivo-trasporto",
+    "guide:calcolo-costo-trasporto",
+    "guide:costo-orario-autista-camion",
+    "guide:tempi-guida-riposo-camion",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "pillar": "guide:preventivo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "pdf-quote",
+  "translationGroup": "waiting-time-loading-unloading-haulage",
+  "sources": [
+    {
+      "label": "MIT — Autotrasporto, misure significative nel Decreto Infrastrutture",
+      "url": "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
+      "publishedOrUpdated": "19 maggio 2025; pagina modificata il 10 giugno 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-08-12",
+      "supports": "Franchigia di 90 minuti per ogni operazione, importo base dell’indennizzo per ora o frazione e rivalutazione annuale."
+    },
+    {
+      "label": "Gazzetta Ufficiale — Articolo 4 del DL 73/2025 coordinato con la legge 105/2025",
+      "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25A04106&art.dataPubblicazioneGazzetta=2025-07-19&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+      "publishedOrUpdated": "Decreto-legge 21 maggio 2025, n. 73, in vigore dal 21 maggio 2025; testo coordinato con le modifiche della legge di conversione 18 luglio 2025, n. 105, in vigore dal 20 luglio 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-08-12",
+      "supports": "Testo coordinato dell’articolo 4 su franchigia, indennizzo, prova, responsabilità, eccezioni e rivalutazione."
+    },
+    {
+      "label": "FIAP — Attese al carico e allo scarico: regola dei 90 minuti",
+      "url": "https://www.fiapautotrasporti.it/le-ultime-notizie/attese-al-carico-e-allo-scarico-fiap-chiarisce-come-funziona-la-regola-dei-90-minuti/",
+      "publishedOrUpdated": "8 ottobre 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-08-12",
+      "supports": "Applicazione pratica della franchigia, documentazione dei tempi e distinzione tra attesa e operazioni."
+    },
+    {
+      "label": "Uomini e Trasporti — Il tempo medio di attesa al carico e scarico",
+      "url": "https://www.uominietrasporti.it/centonumeri/autisti-e-dintorni/435-e-il-tempo-di-attesa-media-di-un-camion-al-carico-scarico/",
+      "publishedOrUpdated": "23 ottobre 2024",
+      "geography": "Italia",
+      "accessedAt": "2026-08-12",
+      "supports": "Evidenza settoriale sulla dimensione operativa delle attese, non utilizzata come fonte normativa."
+    }
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "indennizzo attesa camion 90 minuti",
+    "tempi attesa carico scarico",
+    "franchigia carico scarico autotrasporto",
+    "costo attesa autotrasporto"
+  ],
+  "cluster": "preventivi-trasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "pdf-quote",
+  "canonical": "/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Nuova guida operativa sulla disciplina delle attese e sulla separazione tra indennizzo, costo interno e prezzo commerciale."
+}
