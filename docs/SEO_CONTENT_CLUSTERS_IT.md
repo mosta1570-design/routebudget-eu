@@ -1,6 +1,6 @@
 # RouteBudget EU — cluster SEO italiani
 
-Data architettura: 12 agosto 2026. Stato: inventario validato nel build; baseline [GSC 1–9 agosto 2026](./GSC_BASELINE_2026-08-11.md) registrata; [ricerca round 2](./SEO_RESEARCH_ROUND_2_2026-08-12.md) documentata.
+Data architettura: 13 agosto 2026. Stato: inventario in validazione pre-release; baseline GSC 1–11 agosto 2026 registrata nella [ricerca round 3](./SEO_RESEARCH_ROUND_3_2026-08-13.md).
 
 ## Principio
 
@@ -9,7 +9,7 @@ RouteBudget non pubblica un blog generico. Ogni URL risolve un lavoro economico 
 Inventario iniziale validato:
 
 - 3 pillar;
-- 14 guide di supporto;
+- 17 guide di supporto;
 - 3 calcolatori gratuiti;
 - 1 landing app;
 - hub `/it/guide/` e `/it/calcolatori/`.
@@ -27,6 +27,7 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | `calcolare-carburante-pedaggi-autista` | Allinea tre costi diretti e fonti di verifica | Calcolatore carburante o pillar |
 | `quanto-consuma-un-camion` | Misura l/100 km, fattori e profili usando dati del mezzo | Calcolatore carburante |
 | `calcolo-pedaggio-camion` | Spiega classe, assi, km tariffari, concessionari e verifica | Calcolatore costo/km con importo controllato |
+| `pedaggio-camion-austria` | Possiede GO-Maut, assi, classi EURO/CO₂ e sezioni speciali austriache | Calcolatore costo/km con importo ASFINAG verificato |
 | `tempi-guida-riposo-camion` | Distingue le categorie di tempo e porta la durata pianificata nel costo | Calcolatore costo/km con ore verificate |
 | `ritorno-a-vuoto-autotrasporto` | Mostra effetto dei km non fatturati su tutte le voci | Calcolatore costo/km |
 | `proteggere-margine-tratta` | Stress test di costo, prezzo, margine e ricarico | Scenari RouteBudget |
@@ -46,6 +47,8 @@ Search job: distinguere costi fissi, variabili e indiretti, quindi attribuirli a
 | `costi-fissi-variabili-autotrasporto` | Classifica e ripartisce le voci senza benchmark universali | Calcolatore costo/km |
 | `costo-chilometrico-camion` | Ricava un costo storico da spese e km dello stesso periodo | Confronto con nuova tratta |
 | `costo-furgone-per-km` | Separa costo N1, tempo, vuoti e km fatturabili dai parametri camion | Calcolatore costo/km usato con dati del mezzo corretto |
+| `tachigrafo-furgoni-2026` | Verifica il perimetro transfrontaliero dal 1° luglio senza dire “tutti gli N1” | Costo della tratta con massa, attività e tempi verificati |
+| `tabelle-costi-autotrasporto-mit-2026` | Legge classi A–D e voci applicabili come benchmark datato | Confronto con dati reali nel calcolatore costo/km |
 | `costo-orario-autista-camion` | Separa costo aziendale, retribuzione e prezzo; costruisce un input orario | Calcolatore costo/km con dato aziendale |
 | `usura-manutenzione-camion` | Costruisce quota da storico aziendale evitando doppio conteggio | Inserimento quota nel calcolo |
 | calcolatore `costo-chilometrico-camion` | Stima costo totale, per km percorso e per km carico | Flusso completo RouteBudget |

@@ -1,0 +1,71 @@
+{
+  "slug": "tabelle-costi-autotrasporto-mit-2026",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Tabelle costi autotrasporto MIT 2026: guida alle classi A–D",
+  "description": "Come scegliere la tabella MIT 2026 corretta, sommare solo le voci applicabili e confrontare il riferimento con il costo reale della tratta.",
+  "eyebrow": "Costi di esercizio · Tabelle MIT 2026",
+  "published": "2026-08-13",
+  "modified": "2026-08-13",
+  "reviewed": "2026-08-13",
+  "primaryKeyword": "tabelle costi autotrasporto MIT 2026",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "valori indicativi MIT",
+    "classi di peso A B C D",
+    "costo chilometrico autotrasporto",
+    "confronto costi di tratta"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:calcolo-costo-trasporto",
+    "guide:costo-chilometrico-camion",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "translationGroup": "tabelle-costi-autotrasporto-mit-2026",
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-13",
+      "supports": "Pubblicazione delle tabelle A–D e aggiornamento di assicurazione, energia e pedaggiamenti a marzo 2026."
+    },
+    {
+      "label": "MIT — Legenda per il corretto utilizzo delle tabelle 2026",
+      "url": "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/Legenda.pdf",
+      "publishedOrUpdated": "Marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-13",
+      "supports": "Classi A–D, percorrenze medie annue di riferimento e regola di sommare soltanto le voci pertinenti alla modalità del trasporto."
+    },
+    {
+      "label": "MIT — Tabella D dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/TABELLA%20D_Costi%20Esercizio%20Imprese_Modello%20costi_mar2026_pedaggi%20al%20netto%20IVA.pdf",
+      "publishedOrUpdated": "Marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-13",
+      "supports": "Intervalli annuali e per chilometro della classe D, con valori di carburante, personale, trasferte, straordinari e pedaggi al netto IVA."
+    }
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "tabelle MIT costi autotrasporto marzo 2026",
+    "valori indicativi costi esercizio autotrasporto",
+    "tabella costi chilometrici camion 2026"
+  ],
+  "cluster": "costi-autotrasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "cost-breakdown",
+  "canonical": "/it/guide/tabelle-costi-autotrasporto-mit-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Nuova guida operativa per scegliere la classe MIT 2026, leggere le voci applicabili e confrontarle senza trattarle come tariffa universale."
+}

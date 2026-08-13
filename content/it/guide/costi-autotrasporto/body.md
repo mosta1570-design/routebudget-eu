@@ -17,7 +17,7 @@ La prima distinzione è legata al comportamento della spesa.
 
 La classificazione non è identica per ogni impresa. Un contratto di manutenzione con canone fisso, per esempio, si comporta diversamente da una manutenzione pagata a intervento. Conta documentare il criterio usato e mantenerlo abbastanza a lungo da confrontare i periodi.
 
-Il MIT pubblica valori indicativi di riferimento dei costi di esercizio dell’autotrasporto. La fonte consultata è aggiornata al 17 marzo 2026 e aiuta a controllare categorie e ordine di grandezza, ma non fornisce una tariffa universale: costi effettivi, mezzo, percorrenza e organizzazione restano specifici dell’impresa.
+Il MIT pubblica valori indicativi di riferimento dei costi di esercizio dell’autotrasporto. La fonte consultata è aggiornata al 17 marzo 2026 e aiuta a controllare categorie e ordine di grandezza, ma non fornisce una tariffa universale: costi effettivi, mezzo, percorrenza e organizzazione restano specifici dell’impresa. La guida alle [tabelle costi autotrasporto MIT 2026](/it/guide/tabelle-costi-autotrasporto-mit-2026/) mostra come scegliere la classe A–D e sommare solo le voci applicabili.
 
 ## I principali costi fissi del mezzo
 

@@ -1,0 +1,65 @@
+{
+  "slug": "pedaggio-camion-austria",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion Austria: calcolo GO-Maut, assi e CO₂",
+  "mobileH1": "Pedaggio camion Austria: guida GO-Maut",
+  "description": "Come stimare il pedaggio camion in Austria: soglia oltre 3,5 t, GO-Box, assi, classi EURO e CO₂, tratte speciali e verifica prima del preventivo.",
+  "eyebrow": "Austria · Pedaggio GO",
+  "published": "2026-08-13",
+  "modified": "2026-08-13",
+  "reviewed": "2026-08-13",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Austria",
+  "secondaryKeywords": [
+    "GO-Maut camion Austria",
+    "calcolo pedaggio camion Austria",
+    "GO-Box assi camion",
+    "classe CO2 pedaggio Austria"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "pedaggio GO",
+    "GO-Box",
+    "assi camion",
+    "classe EURO",
+    "classe CO2"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:errori-calcolo-tariffa-trasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-austria",
+  "canonical": "/it/guide/pedaggio-camion-austria/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "ASFINAG — Pagare il pedaggio GO",
+      "url": "https://www.go-maut.at/it/pagare-il-pedaggio-go/"
+    },
+    {
+      "label": "ASFINAG — Tariffe pedaggio GO 2026",
+      "url": "https://www.go-maut.at/it/pagare-il-pedaggio-go/tariffe-pedaggio-go/"
+    },
+    {
+      "label": "ASFINAG — Pedaggio GO per camion",
+      "url": "https://www.go-maut.at/it/sistema-a-pedaggio-go/in-3-passaggi-al-pedaggio-go/pedaggio-go-per-camion/"
+    },
+    {
+      "label": "ASFINAG — Classi di emissione di CO₂",
+      "url": "https://www.go-maut.at/it/pagine-informative/classi-di-emissione-di-co2/"
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo verificabile per stimare il pedaggio GO austriaco e inserirlo nel costo reale della tratta."
+}

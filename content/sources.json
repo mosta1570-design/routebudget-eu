@@ -106,5 +106,59 @@
     "geography": "Italia",
     "accessedAt": "2026-08-08",
     "supports": "Contesto aggiornato sulle clausole carburante nei contratti di autotrasporto; da verificare sul rapporto concreto"
+  },
+  "https://www.mit.gov.it/index.php/normativa/circolare-prot-n-9674-del-16042026": {
+    "publishedOrUpdated": "Circolare prot. n. 9674 del 16 aprile 2026, pubblicata il 29 aprile 2026",
+    "geography": "Italia e trasporto transfrontaliero UE",
+    "accessedAt": "2026-08-13",
+    "supports": "Decorrenza dal 1° luglio 2026, soglia oltre 2,5 t del veicolo o complesso e perimetro trasporto internazionale o cabotaggio"
+  },
+  "https://www.ela.europa.eu/it/veicoli-leggeri-grandi-cambiamenti": {
+    "publishedOrUpdated": "Campagna informativa 2026",
+    "geography": "Unione europea",
+    "accessedAt": "2026-08-13",
+    "supports": "Tachigrafo intelligente G2V2 e regole di guida e riposo per i veicoli commerciali leggeri transfrontalieri interessati"
+  },
+  "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A02006R0561-20241231": {
+    "publishedOrUpdated": "Versione consolidata al 31 dicembre 2024",
+    "geography": "Unione europea",
+    "accessedAt": "2026-08-13",
+    "supports": "Ambito di applicazione, esenzioni e regole europee sui periodi di guida, interruzione e riposo"
+  },
+  "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/Legenda.pdf": {
+    "publishedOrUpdated": "Marzo 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-13",
+    "supports": "Classi A–D, percorrenze annue di riferimento e istruzione di sommare soltanto le voci pertinenti alla modalità di trasporto"
+  },
+  "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/TABELLA%20D_Costi%20Esercizio%20Imprese_Modello%20costi_mar2026_pedaggi%20al%20netto%20IVA.pdf": {
+    "publishedOrUpdated": "Marzo 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-13",
+    "supports": "Valori indicativi annuali e per chilometro della classe D, compresi carburante, personale, manutenzione e pedaggi al netto IVA"
+  },
+  "https://www.go-maut.at/it/pagare-il-pedaggio-go/": {
+    "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+    "geography": "Austria",
+    "accessedAt": "2026-08-13",
+    "supports": "Calcolo chilometrico GO per veicoli oltre 3,5 t e variabili tariffarie: assi, classe EURO, classe CO₂ e percorso"
+  },
+  "https://www.go-maut.at/it/pagare-il-pedaggio-go/tariffe-pedaggio-go/": {
+    "publishedOrUpdated": "Tariffe valide dal 1° gennaio 2026",
+    "geography": "Austria",
+    "accessedAt": "2026-08-13",
+    "supports": "Struttura tariffaria 2026, sezioni speciali, tariffa notturna A13 e maggiorazione della sezione A12 Unterinntal"
+  },
+  "https://www.go-maut.at/it/sistema-a-pedaggio-go/in-3-passaggi-al-pedaggio-go/pedaggio-go-per-camion/": {
+    "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+    "geography": "Austria",
+    "accessedAt": "2026-08-13",
+    "supports": "Uso del GO-Box, categorie di assi e obbligo di adeguare la categoria alla configurazione effettiva del camion"
+  },
+  "https://www.go-maut.at/it/pagine-informative/classi-di-emissione-di-co2/": {
+    "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+    "geography": "Austria",
+    "accessedAt": "2026-08-13",
+    "supports": "Cinque classi CO₂, dati necessari alla classificazione e documenti del veicolo utili alla prova"
   }
 }

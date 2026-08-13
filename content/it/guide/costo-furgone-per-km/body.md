@@ -107,7 +107,7 @@ I valori indicativi pubblicati dal MIT per i costi di esercizio dell'autotraspor
 
 ## Nota 2026 per furgoni oltre 2,5 t nel trasporto internazionale
 
-Dal 1° luglio 2026, secondo l'European Labour Authority, regole UE su tempi di guida e riposo, tachigrafo intelligente G2V2 e distacco dei conducenti si estendono ai veicoli commerciali leggeri con massa massima ammissibile superiore a 2,5 t e fino a 3,5 t impiegati nel trasporto internazionale di merci o cabotaggio. La stessa fonte precisa che il trasporto svolto soltanto all'interno di un Paese non rientra in questa specifica estensione.
+Dal 1° luglio 2026, secondo l'European Labour Authority, regole UE su tempi di guida e riposo, tachigrafo intelligente G2V2 e distacco dei conducenti si estendono ai veicoli commerciali leggeri con massa massima ammissibile superiore a 2,5 t e fino a 3,5 t impiegati nel trasporto internazionale di merci o cabotaggio. La stessa fonte precisa che il trasporto svolto soltanto all'interno di un Paese non rientra in questa specifica estensione. La guida sul [tachigrafo per furgoni nel 2026](/it/guide/tachigrafo-furgoni-2026/) separa soglia, tipo di operazione, casi da verificare e impatto economico.
 
 Questa è una nota di perimetro, non consulenza normativa. Controlla massa indicata nei documenti, tipo di operazione, eventuali esenzioni e istruzioni dell'autorità competente. Se la missione rientra nell'ambito, tempi, soste, dotazioni e amministrazione possono modificare capacità produttiva e costo: non vanno ignorati nel preventivo.
 
