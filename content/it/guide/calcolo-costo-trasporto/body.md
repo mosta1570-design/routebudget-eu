@@ -57,6 +57,8 @@ Se il rapporto separa un adeguamento rispetto a un prezzo base, usa il [calcolat
 
 Il pedaggio non è sempre proporzionale ai chilometri. Paese, infrastruttura, classe ambientale, numero di assi, massa, gallerie, ponti e valichi possono cambiare l’importo. Una stima iniziale è utile per valutare la tratta, ma prima di impegnarsi su percorsi particolari è prudente verificare le condizioni presso i gestori o le fonti ufficiali pertinenti.
 
+Nelle missioni oltre confine usa una riga per ogni sistema nazionale. Per esempio, il [pedaggio camion in Austria](/it/guide/pedaggio-camion-austria/) dipende dal GO-Maut, dagli assi, dalle classi EURO e CO₂ e dalle eventuali sezioni speciali: non può essere derivato dalla classe autostradale italiana.
+
 Nella stessa area del calcolo conviene tenere separate altre spese di percorso:
 
 - traghetti, tunnel o valichi con tariffa specifica;

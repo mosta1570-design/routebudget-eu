@@ -1,0 +1,76 @@
+{
+  "slug": "tachigrafo-furgoni-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Tachigrafo furgoni 2026: obbligo, soglia 2,5 t e costi",
+  "mobileH1": "Tachigrafo furgoni 2026: chi deve adeguarsi",
+  "description": "Dal 1° luglio 2026 il tachigrafo riguarda alcuni furgoni oltre 2,5 t nei trasporti internazionali: perimetro, eccezioni, tempi e costi.",
+  "eyebrow": "Furgoni internazionali dal 1° luglio",
+  "published": "2026-08-13",
+  "modified": "2026-08-13",
+  "reviewed": "2026-08-13",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "tachigrafo furgoni 2026",
+  "secondaryKeywords": [
+    "obbligo tachigrafo furgoni 2,5 tonnellate",
+    "tachigrafo furgoni internazionali",
+    "tachigrafo N1 2026",
+    "tempi di guida furgoni 2026",
+    "tachigrafo intelligente G2V2 furgoni"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "tachigrafo furgoni",
+    "veicoli commerciali leggeri",
+    "trasporto internazionale",
+    "cabotaggio",
+    "tempi di guida e riposo",
+    "costo di tratta"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costo-furgone-per-km",
+    "guide:tempi-guida-riposo-camion",
+    "guide:calcolo-costo-trasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "complete-trip",
+  "appFeature": "complete-route-calculation",
+  "translationGroup": "tachograph-vans-2026",
+  "canonical": "/it/guide/tachigrafo-furgoni-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Circolare prot. n. 9674 del 16 aprile 2026",
+      "url": "https://www.mit.gov.it/index.php/normativa/circolare-prot-n-9674-del-16042026",
+      "publishedOrUpdated": "29 aprile 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-13",
+      "supports": "Decorrenza, massa del veicolo o complesso e perimetro trasporto internazionale o cabotaggio."
+    },
+    {
+      "label": "ELA — Veicoli leggeri, grandi cambiamenti",
+      "url": "https://www.ela.europa.eu/it/veicoli-leggeri-grandi-cambiamenti",
+      "publishedOrUpdated": "2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-13",
+      "supports": "Tachigrafo intelligente G2V2, limiti di guida, interruzioni e riposi per veicoli commerciali leggeri transfrontalieri."
+    },
+    {
+      "label": "EUR-Lex — Regolamento (CE) n. 561/2006, testo consolidato",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A02006R0561-20241231",
+      "publishedOrUpdated": "31 dicembre 2024",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-13",
+      "supports": "Ambito di applicazione, esenzioni e regole europee sui periodi di guida, interruzione e riposo."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: perimetro 2026 del tachigrafo per furgoni, verifica pratica e impatto prudente sul costo della tratta."
+}

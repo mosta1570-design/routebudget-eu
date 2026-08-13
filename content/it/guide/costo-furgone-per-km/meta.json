@@ -7,8 +7,8 @@
   "description": "Come calcolare il costo di un furgone per km con spese fisse, variabili, ore, vuoti e chilometri fatturabili, senza usare tariffe camion fuori contesto.",
   "eyebrow": "Furgoni N1 · Costo operativo",
   "published": "2026-08-11",
-  "modified": "2026-08-11",
-  "reviewed": "2026-08-11",
+  "modified": "2026-08-13",
+  "reviewed": "2026-08-13",
   "primaryKeyword": "costo furgone per km",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -21,7 +21,7 @@
     "guide:costi-autotrasporto",
     "guide:costi-fissi-variabili-autotrasporto",
     "guide:ritorno-a-vuoto-autotrasporto",
-    "guide:proteggere-margine-tratta",
+    "guide:tachigrafo-furgoni-2026",
     "calcolatori:costo-chilometrico-camion"
   ],
   "calculatorId": null,
@@ -60,5 +60,5 @@
   "canonical": "/it/guide/costo-furgone-per-km/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Nuova guida dedicata ai veicoli N1: struttura del costo, denominatori corretti e nota regolatoria UE 2026 per attività transfrontaliere."
+  "changeSummary": "Collegata la guida dedicata al tachigrafo 2026 per furgoni transfrontalieri interessati, mantenendo separati costo e perimetro normativo."
 }

@@ -98,6 +98,8 @@ Pedaggi e vignette per veicoli pesanti rientrano in un quadro europeo, ma sistem
 
 Su una tratta internazionale costruisci una riga per ogni sistema: pedaggio a distanza, vignetta temporale, tratto speciale o altra voce applicabile. Evita di estendere la classe italiana a una rete estera senza verifica.
 
+Per il corridoio del Brennero, la guida al [pedaggio camion in Austria](/it/guide/pedaggio-camion-austria/) spiega il sistema GO-Maut, la soglia oltre 3,5 t, le categorie di assi e le classi EURO e CO₂. È un metodo distinto da quello dei concessionari italiani e l'importo resta da verificare presso ASFINAG.
+
 ## Esempio di scheda di controllo
 
 Per una missione italiana puoi conservare una scheda come questa:

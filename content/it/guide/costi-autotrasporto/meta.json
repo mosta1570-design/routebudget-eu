@@ -6,8 +6,8 @@
   "description": "Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.",
   "eyebrow": "Economia dell’autotrasporto",
   "published": "2026-08-01",
-  "modified": "2026-08-12",
-  "reviewed": "2026-08-12",
+  "modified": "2026-08-13",
+  "reviewed": "2026-08-13",
   "primaryKeyword": "costi autotrasporto",
   "searchIntent": "informational",
   "topics": [
@@ -22,6 +22,8 @@
     "guide:costi-fissi-variabili-autotrasporto",
     "guide:costo-chilometrico-camion",
     "guide:costo-furgone-per-km",
+    "guide:tachigrafo-furgoni-2026",
+    "guide:tabelle-costi-autotrasporto-mit-2026",
     "guide:costo-orario-autista-camion",
     "guide:tempi-attesa-carico-scarico-autotrasporto",
     "guide:usura-manutenzione-camion",
@@ -67,5 +69,5 @@
   "canonical": "/it/guide/costi-autotrasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunti approfondimenti separati sul costo orario dell’autista e sul costo economico delle attese, senza trasformare riferimenti ufficiali in tariffe universali."
+  "changeSummary": "Aggiunti approfondimenti separati su tabelle MIT 2026 e obbligo tachigrafo per i furgoni transfrontalieri interessati."
 }

@@ -1,6 +1,6 @@
 # RouteBudget EU — mappa keyword italiana
 
-Aggiornamento: 12 agosto 2026. Baseline decisionale: [GSC 1–9 agosto 2026](./GSC_BASELINE_2026-08-11.md), 7 clic, 542 impressioni, CTR 1,3%, posizione media 16,8. Le decisioni aggiuntive sono documentate nella [ricerca italiana round 2](./SEO_RESEARCH_ROUND_2_2026-08-12.md).
+Aggiornamento: 13 agosto 2026. Baseline più recente: GSC 1–11 agosto 2026, 10 clic, 725 impressioni, CTR 1,4%, posizione media 15,2 e 52 query. Sono finestre osservate, non volumi mensili. Decisioni: [round 2](./SEO_RESEARCH_ROUND_2_2026-08-12.md) e [round 3](./SEO_RESEARCH_ROUND_3_2026-08-13.md).
 
 ## Come usare questa mappa
 
@@ -61,6 +61,9 @@ Le lingue future replicano la struttura sotto il proprio codice lingua solo dopo
 | guadagno autotrasportatore per viaggio | I | Valutazione | guida | `/it/guide/utile-viaggio-autotrasporto/` | utile netto tratta; ricavo meno costi; profitto viaggio camion; margine operativo tratta | Confronta costo, prezzo e utile senza promesse | pianificato M4 solo con evidenza GSC / P2 |
 | calcolatore ritorno a vuoto | T | Decisione | calcolatore | `/it/calcolatori/ritorno-a-vuoto/` | costo km a vuoto; prezzo con rientro; chilometri non fatturati; costo rientro camion | Gestisci andata e ritorno nel calcolo completo | pianificato M4 solo con evidenza / P2 |
 | costo furgone per km | I/C | Valutazione | guida N1 | `/it/guide/costo-furgone-per-km/` | costo chilometrico furgone Ducato; calcolo costi chilometrici furgoni; veicolo commerciale leggero; km fatturabili | Usa dati e costi del veicolo N1, separati dal camion | pubblicato 11 agosto 2026; due query long-tail GSC / P1 |
+| tachigrafo furgoni 2026 | I/C | Decisione | guida normativa-operativa N1 | `/it/guide/tachigrafo-furgoni-2026/` | obbligo tachigrafo furgoni 2,5 tonnellate; tachigrafo N1; G2V2; cabotaggio furgoni | Verifica il perimetro e porta tempo e costi nel calcolo RouteBudget | generato 13 agosto 2026; MIT, ELA ed EUR-Lex / P0 |
+| tabelle costi autotrasporto MIT 2026 | I/C | Valutazione | guida benchmark ufficiale | `/it/guide/tabelle-costi-autotrasporto-mit-2026/` | tabelle MIT marzo 2026; classi A B C D; valori indicativi costi esercizio | Confronta benchmark e costo reale della tratta | generato 13 agosto 2026; pubblicazione e legenda MIT / P0 |
+| pedaggio camion Austria | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-austria/` | GO-Maut camion; GO-Box assi; classe CO2 pedaggio; Brennero camion | Inserisci l’importo ASFINAG verificato nel costo completo | generato 13 agosto 2026; fonti italiane ASFINAG / P0 |
 | calcolatore costo viaggio furgone N1 | T | Decisione | calcolatore N1 | `/it/calcolatori/costo-viaggio-n1/` | calcolo furgone elettrico; costo energia kWh; costo viaggio van; veicolo leggero ≤3,5 t | Calcola il flusso N1 completo nell'app | pianificato M5, verifica scope / P2 |
 | camion vs furgone N1 costi | C/I | Valutazione | confronto | `/it/confronti/costi-camion-vs-n1/` | differenze costo viaggio; pedaggi camion e N1; consumo e manutenzione; applicabilità regole | Scegli la configurazione mezzo appropriata nell'app | backlog, solo domanda verificata / P2 |
 
@@ -79,6 +82,9 @@ Le lingue future replicano la struttura sotto il proprio codice lingua solo dopo
 | `tempi-guida-riposo-camion` vs `costo-orario-autista-camion` | La prima determina quali tempi pianificare; la seconda costruisce l’input €/ora e lo attribuisce. Nessuna delle due sostituisce il pillar sul costo completo. |
 | `tempi-attesa-carico-scarico` vs `preventivo-trasporto` | La guida attese possiede franchigia, prova, indennizzo e costo dell’attesa; il pillar conserva il processo commerciale completo. |
 | camion pesante vs N1 | URL, formule, esempi e disclaimer separati. Non riutilizzare automaticamente regole, pedaggi o pause tra classi di veicolo. |
+| `costo-furgone-per-km` vs `tachigrafo-furgoni-2026` | La prima possiede costo e denominatori N1; la seconda possiede soglia, attività transfrontaliera, G2V2 e impatto operativo dal 1° luglio 2026. |
+| `costi-autotrasporto` vs `tabelle-costi-autotrasporto-mit-2026` | Il pillar mappa il sistema di costo dell’impresa; la guida MIT insegna a leggere un benchmark datato senza trasformarlo in tariffa universale. |
+| `calcolo-pedaggio-camion` vs `pedaggio-camion-austria` | La prima possiede rete e classi italiane; la seconda possiede GO-Maut, assi, EURO/CO₂ e tratte speciali austriache. |
 
 ## Termini da non presidiare con pagine fuorvianti
 

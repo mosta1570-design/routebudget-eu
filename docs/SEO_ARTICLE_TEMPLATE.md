@@ -9,14 +9,23 @@ Template operativo per una pagina in `content/it/<sezione>/<slug>/`. Non pubblic
   "slug": "<slug-minuscolo>",
   "kind": "guide",
   "locale": "it",
-  "title": "<H1 unico, massimo 90 caratteri>",
+  "status": "drafting",
+  "title": "<H1 unico, massimo 75 caratteri>",
+  "mobileH1": "<opzionale, 10–75 caratteri>",
   "description": "<sintesi specifica, 70–180 caratteri>",
   "eyebrow": "<contesto breve>",
   "published": "<YYYY-MM-DD della prima pubblicazione reale>",
   "modified": "<YYYY-MM-DD dell'ultima modifica sostanziale>",
   "reviewed": "<YYYY-MM-DD dell'ultima review fattuale>",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
   "primaryKeyword": "<query proprietaria dell'intento>",
+  "secondaryKeywords": [
+    "<variante 1>",
+    "<variante 2>"
+  ],
   "searchIntent": "informational",
+  "cluster": "<cluster-approvato>",
   "topics": [
     "<tema vicino 1>",
     "<tema vicino 2>"
@@ -25,22 +34,28 @@ Template operativo per una pagina in `content/it/<sezione>/<slug>/`. Non pubblic
     "guide:<slug-correlato>",
     "calcolatori:<slug-calcolatore>"
   ],
+  "relatedCalculator": "calcolatori:<slug-calcolatore>",
   "pillar": "guide:<slug-pillar>",
   "calculatorId": null,
   "conversionIntent": "complete-trip",
+  "appFeature": "complete-route-calculation",
   "translationGroup": "<identità-stabile-non-localizzata>",
+  "canonical": "/it/guide/<slug-minuscolo>/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": true,
   "sources": [
     {
       "label": "<Ente — titolo fonte>",
       "url": "https://<url-ufficiale>"
     }
-  ]
+  ],
+  "changeSummary": "<cosa cambia e perché>"
 }
 ```
 
 Valori `kind`: `pillar`, `guide`, `calculator`, `comparison`. Pillar usa `pillar: null`. Calcolatori usano sezione `calcolatori`, `kind: "calculator"` e `calculatorId: "cost-per-km"`, `"fuel-trip"` o `"fuel-surcharge"`. Intenti CTA attualmente validi: `complete-trip`, `pdf-quote`, `add-trip-costs`, `protect-margin`, `unlimited`.
 
-`published` non è data bozza/build. `modified` cambia solo con modifica visibile sostanziale. `reviewed` richiede controllo reale.
+`published` non è data bozza/build. `modified` cambia solo con modifica visibile sostanziale. `reviewed` richiede controllo reale. Una bozza usa `status: "drafting"` e `noindex: true`; una pagina pubblicata usa `status: "published"` e `noindex: false`. `relatedCalculator` deve comparire anche in `related`. I dati completi delle fonti possono essere registrati una volta in `content/sources.json` e completati durante il build.
 
 ## 2. `body.md`
 
