@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-13",
+  "revisionDate": "2026-08-14",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -170,6 +170,30 @@
       "modified": "2026-08-13"
     },
     {
+      "id": "it:guide:pedaggio-camion-germania",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-germania/",
+      "title": "Pedaggio camion Germania 2026: calcolo LKW-Maut al km",
+      "description": "Come stimare il pedaggio camion in Germania nel 2026: soglia oltre 3,5 t, rete Toll Collect, peso, assi, EURO, classe CO₂ e costo della tratta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-germania/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Germania",
+      "modified": "2026-08-14"
+    },
+    {
+      "id": "it:guide:pedaggio-camion-svizzera",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-svizzera/",
+      "title": "Pedaggio camion Svizzera 2026: calcolo TTPCP e NMTS",
+      "description": "Come calcolare il pedaggio camion in Svizzera con TTPCP III: chilometri, peso, classe di emissione, NMTS per veicoli esteri e verifica ufficiale.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-svizzera/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Svizzera",
+      "modified": "2026-08-14"
+    },
+    {
       "id": "it:guide:preventivo-trasporto-pdf",
       "url": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
       "title": "Preventivo di trasporto PDF: contenuti e controllo finale",
@@ -252,6 +276,18 @@
       "indexable": true,
       "primaryKeyword": "tachigrafo furgoni 2026",
       "modified": "2026-08-13"
+    },
+    {
+      "id": "it:guide:tariffe-trazionisti",
+      "url": "https://routebudget.eu/it/guide/tariffe-trazionisti/",
+      "title": "Tariffe trazionisti: capire se l’offerta copre davvero la tratta",
+      "description": "Metodo per valutare un’offerta di subvezione con chilometri reali, vuoto, pedaggi, ore, attese, costi fissi e termini di pagamento.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/tariffe-trazionisti/",
+      "indexable": true,
+      "primaryKeyword": "tariffe trazionisti",
+      "modified": "2026-08-14"
     },
     {
       "id": "it:guide:tempi-attesa-carico-scarico-autotrasporto",
