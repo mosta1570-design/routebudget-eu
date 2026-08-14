@@ -35,7 +35,7 @@ for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
 }
 
 assert.equal(counts.pillar, 3, 'initial set requires exactly three pillars');
-assert.equal(counts.guide, 17, 'current set requires exactly seventeen supporting guides');
+assert.equal(counts.guide, 20, 'current set requires exactly twenty supporting guides');
 assert.equal(counts.calculator, 3, 'current set requires exactly three calculators');
 assert.equal(counts.landing, 1, 'initial set requires exactly one app landing');
 
@@ -50,4 +50,4 @@ try {
   await rm(temporaryOutput, { recursive: true, force: true });
 }
 
-console.log(`Content schema passed: ${published} published pages (3 pillars, 17 supports, 3 calculators, 1 app landing).`);
+console.log(`Content schema passed: ${published} published pages (3 pillars, 20 supports, 3 calculators, 1 app landing).`);

@@ -1,13 +1,13 @@
 # RouteBudget EU — mappa internal link
 
-Data: 13 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
+Data: 14 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
 
 ## Entry points
 
 | Sorgente | Destinazioni HTML principali |
 | --- | --- |
 | Homepage statica | hub guide, hub calcolatori, landing app, privacy, termini, store |
-| Hub guide | tutti i 3 pillar e i 17 supporti |
+| Hub guide | tutti i 3 pillar e i 20 supporti |
 | Hub calcolatori | tutti i 3 calcolatori |
 | Header/footer SEO | homepage, hub guide, hub calcolatori, landing app, privacy, termini |
 | Landing app | 3 pillar, 3 calcolatori, entrambi gli store |
@@ -20,7 +20,9 @@ Data: 13 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
 | `guide/calcolare-carburante-pedaggi-autista/` | calcolo costo | carburante | costo/km, margine, entrambi i tool |
 | `guide/quanto-consuma-un-camion/` | calcolo costo | carburante | costi diretti, fissi/variabili, calcolatore carburante |
 | `guide/calcolo-pedaggio-camion/` | calcolo costo | costo/km | costi diretti, costo/km storico, Austria, calcolatore costo/km |
-| `guide/pedaggio-camion-austria/` | calcolo costo | costo/km | pedaggio Italia, errori tariffa, calcolatore costo/km |
+| `guide/pedaggio-camion-austria/` | calcolo costo | costo/km | pedaggio Italia, Svizzera, Germania, calcolatore costo/km |
+| `guide/pedaggio-camion-svizzera/` | calcolo costo | costo/km | pedaggio Italia, Austria, Germania, calcolatore costo/km |
+| `guide/pedaggio-camion-germania/` | calcolo costo | costo/km | pedaggio Italia, Austria, Svizzera, calcolatore costo/km |
 | `guide/tempi-guida-riposo-camion/` | calcolo costo | costo/km | costi diretti, costo orario, attese, calcolatore costo/km |
 | `guide/ritorno-a-vuoto-autotrasporto/` | calcolo costo | costo/km | costo/km guida, margine, due tool |
 | `guide/proteggere-margine-tratta/` | calcolo costo | costo/km | preventivo, errori tariffa, costo/km |
@@ -49,6 +51,7 @@ Data: 13 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
 | `guide/errori-calcolo-tariffa-trasporto/` | preventivo | costo/km | costo tratta, margine, costi diretti |
 | `guide/preventivo-trasporto-pdf/` | preventivo | costo/km | costo tratta, errori tariffa, margine |
 | `guide/tempi-attesa-carico-scarico-autotrasporto/` | preventivo | costo/km | costo tratta, costo orario, durata operativa, calcolatore costo/km |
+| `guide/tariffe-trazionisti/` | calcolo costo | costo/km | ritorno a vuoto, benchmark MIT, attese, calcolatore costo/km |
 
 ## Regole automatiche
 
@@ -82,3 +85,13 @@ Il controllo generato deve continuare a chiudere con zero URL orfani e zero link
 - `calcolo-costo-trasporto` e `calcolo-pedaggio-camion` → `pedaggio-camion-austria`;
 - hub guide → tutti i 17 supporti;
 - ogni nuova pagina → pillar, calcolatore e contenuti correlati.
+
+## Gate internal link per la release 14 agosto
+
+- homepage → `tariffe-trazionisti`, `pedaggio-camion-svizzera` e `pedaggio-camion-germania`;
+- pillar `calcolo-costo-trasporto` → tutte e tre le nuove guide;
+- pillar `preventivo-trasporto` e `proteggere-margine-tratta` → `tariffe-trazionisti`;
+- `calcolo-pedaggio-camion` e `pedaggio-camion-austria` → guide Svizzera/Germania;
+- hub guide → tutti i 20 supporti;
+- ogni nuova pagina → pillar, calcolatore e contenuti correlati;
+- gate generato: zero route orfane, zero target o fragment rotti.

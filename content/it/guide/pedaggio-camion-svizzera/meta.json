@@ -1,0 +1,91 @@
+{
+  "slug": "pedaggio-camion-svizzera",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion Svizzera 2026: calcolo TTPCP e NMTS",
+  "mobileH1": "Pedaggio camion Svizzera: calcolo TTPCP",
+  "description": "Come calcolare il pedaggio camion in Svizzera con TTPCP III: chilometri, peso, classe di emissione, NMTS per veicoli esteri e verifica ufficiale.",
+  "eyebrow": "Svizzera · TTPCP III",
+  "published": "2026-08-14",
+  "modified": "2026-08-14",
+  "reviewed": "2026-08-14",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Svizzera",
+  "secondaryKeywords": [
+    "calcolo TTPCP Svizzera",
+    "TTPCP III 2026",
+    "tassa camion Svizzera",
+    "tassa traffico pesante Svizzera",
+    "NMTS veicoli esteri"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "TTPCP",
+    "TTPCP III",
+    "NMTS",
+    "pedaggio camion",
+    "trasporto Italia Svizzera"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-austria",
+    "guide:pedaggio-camion-germania",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-svizzera",
+  "canonical": "/it/guide/pedaggio-camion-svizzera/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "UDSC — TTPCP e sistema TTPCP III",
+      "url": "https://www.bazg.admin.ch/it/tassa-sul-traffico-pesante-commisurata-alle-prestazioni-ttpcp",
+      "publishedOrUpdated": "Contenuto operativo corrente al 14 agosto 2026",
+      "geography": "Svizzera e Principato del Liechtenstein",
+      "accessedAt": "2026-08-14",
+      "supports": "Ambito della TTPCP, soglia oltre 3,5 t, sistemi NETS, SET e NMTS, registrazione dei veicoli esteri."
+    },
+    {
+      "label": "UDSC — Calcolo della TTPCP",
+      "url": "https://www.bazg.admin.ch/it/calcolo-della-ttpcp",
+      "publishedOrUpdated": "Contenuto operativo corrente al 14 agosto 2026",
+      "geography": "Svizzera e Principato del Liechtenstein",
+      "accessedAt": "2026-08-14",
+      "supports": "Formula basata su chilometri, peso determinante e classe di emissione; regole sul peso dei convogli."
+    },
+    {
+      "label": "UDSC — NMTS: registrazione e pagamento",
+      "url": "https://www.bazg.admin.ch/it/nmts-tassa-registrazione-e-pagamento",
+      "publishedOrUpdated": "Contenuto operativo corrente al 14 agosto 2026",
+      "geography": "Veicoli immatricolati all'estero in Svizzera",
+      "accessedAt": "2026-08-14",
+      "supports": "Registrazione NMTS prima dell'ingresso, dati richiesti, pianificatore e rettifica della corsa."
+    },
+    {
+      "label": "UDSC — TTPCP III nell'ePortal",
+      "url": "https://www.bazg.admin.ch/it/sistema-ttpcp-iii-nell-eportal",
+      "publishedOrUpdated": "Contenuto operativo corrente al 14 agosto 2026",
+      "geography": "Svizzera e veicoli esteri",
+      "accessedAt": "2026-08-14",
+      "supports": "Ruolo ePortal, documenti TTPCP e registrazione NETS dei veicoli stranieri."
+    },
+    {
+      "label": "UDSC — tariffe TTPCP valide dal 1° gennaio 2025",
+      "url": "https://www.bazg.admin.ch/dam/bazg/de/dokumente/abgaben/AVEA/AVAI/G%C3%BCltige%20LSVA-Tarife%20ab%2001.01.25.pdf.download.pdf/G%C3%BCltige%20LSVA-Tarife%20ab%2001.01.2025.pdf",
+      "publishedOrUpdated": "Tariffe valide dal 1° gennaio 2025, verificate il 14 agosto 2026",
+      "geography": "Svizzera e Principato del Liechtenstein",
+      "accessedAt": "2026-08-14",
+      "supports": "Tariffe ufficiali in centesimi per tonnellata-chilometro, compresa la categoria EURO 6 usata nell'esempio."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: guida operativa 2026 per verificare la TTPCP svizzera e inserirla nel costo completo della tratta."
+}
