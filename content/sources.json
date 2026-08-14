@@ -160,5 +160,29 @@
     "geography": "Austria",
     "accessedAt": "2026-08-13",
     "supports": "Cinque classi CO₂, dati necessari alla classificazione e documenti del veicolo utili alla prova"
+  },
+  "https://www.toll-collect.de/en/toll_collect/rund_um_die_maut/3_5_tonnen_maut/p1745_3_5_tonnen_maut.html": {
+    "publishedOrUpdated": "Pagina ufficiale corrente, verificata il 14 agosto 2026",
+    "geography": "Germania",
+    "accessedAt": "2026-08-14",
+    "supports": "Obbligo LKW-Maut oltre 3,5 t di massa tecnicamente ammissibile, regola per il veicolo trainante, registrazione e OBU"
+  },
+  "https://www.toll-collect.de/en/toll_collect/bezahlen/maut_tarife/p1745_mauttarife_07_2024.html": {
+    "publishedOrUpdated": "Tariffe indicate dal 1° luglio 2024, pagina ufficiale verificata il 14 agosto 2026",
+    "geography": "Germania",
+    "accessedAt": "2026-08-14",
+    "supports": "Formula e componenti della tariffa, classi di peso, assi, EURO e CO₂; valori correnti usati nell'esempio datato"
+  },
+  "https://www.toll-collect.de/en/toll_collect/rund_um_die_maut/mautpflichtige_strassen/mautpflichtige_strassen.html": {
+    "publishedOrUpdated": "Pagina ufficiale corrente, verificata il 14 agosto 2026",
+    "geography": "Germania",
+    "accessedAt": "2026-08-14",
+    "supports": "Rete soggetta su autostrade e strade federali, estensione complessiva e specifiche eccezioni"
+  },
+  "https://www.toll-collect.de/en/toll_collect/rund_um_die_maut/meldungen/detailsseite_news_48128.html": {
+    "publishedOrUpdated": "1° luglio 2026",
+    "geography": "Germania",
+    "accessedAt": "2026-08-14",
+    "supports": "Riclassificazione CO₂ 2026 dei camion oltre 16 t, possibile passaggio da classe 3 a 2 o 1 e conseguente aumento del pedaggio"
   }
 }

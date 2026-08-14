@@ -1,6 +1,6 @@
 # RouteBudget EU — cluster SEO italiani
 
-Data architettura: 13 agosto 2026. Stato: inventario in validazione pre-release; baseline GSC 1–11 agosto 2026 registrata nella [ricerca round 3](./SEO_RESEARCH_ROUND_3_2026-08-13.md).
+Data architettura: 14 agosto 2026. Stato: inventario round 4 in validazione pre-release; baseline GSC 1–12 agosto 2026 registrata nella [ricerca round 4](./SEO_RESEARCH_ROUND_4_2026-08-14.md).
 
 ## Principio
 
@@ -9,7 +9,7 @@ RouteBudget non pubblica un blog generico. Ogni URL risolve un lavoro economico 
 Inventario iniziale validato:
 
 - 3 pillar;
-- 17 guide di supporto;
+- 20 guide di supporto;
 - 3 calcolatori gratuiti;
 - 1 landing app;
 - hub `/it/guide/` e `/it/calcolatori/`.
@@ -28,13 +28,15 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | `quanto-consuma-un-camion` | Misura l/100 km, fattori e profili usando dati del mezzo | Calcolatore carburante |
 | `calcolo-pedaggio-camion` | Spiega classe, assi, km tariffari, concessionari e verifica | Calcolatore costo/km con importo controllato |
 | `pedaggio-camion-austria` | Possiede GO-Maut, assi, classi EURO/CO₂ e sezioni speciali austriache | Calcolatore costo/km con importo ASFINAG verificato |
+| `pedaggio-camion-svizzera` | Possiede TTPCP, peso determinante, classe emissioni e NMTS/TTPCP III | Calcolatore costo/km con importo UDSC verificato |
+| `pedaggio-camion-germania` | Possiede LKW-Maut, rete, massa tecnica, assi, EURO e classe CO₂ 2026 | Calcolatore costo/km con importo Toll Collect verificato |
 | `tempi-guida-riposo-camion` | Distingue le categorie di tempo e porta la durata pianificata nel costo | Calcolatore costo/km con ore verificate |
 | `ritorno-a-vuoto-autotrasporto` | Mostra effetto dei km non fatturati su tutte le voci | Calcolatore costo/km |
 | `proteggere-margine-tratta` | Stress test di costo, prezzo, margine e ricarico | Scenari RouteBudget |
 | calcolatore `costo-carburante-viaggio` | Litri e costo da km, L/100 km e prezzo inseriti | Aggiungere costi mancanti nell’app |
 | calcolatore `fuel-surcharge-autotrasporto` | Adeguamento carburante da base, quota e indice inseriti | Riportare variazione nella trattativa |
 
-GSC ha mostrato query distinte per consumo e pedaggio: `consumo medio camion` 19 impressioni, `quanto consuma un camion` 9 e `calcolo del pedaggio per camion` 2 nel periodo osservato. Per questo le due guide autonome sono pubblicate nel contenuto. Il confine resta rigido: costi diretti integra le voci; consumo spiega misurazione e fattori; pedaggio spiega metodo e verifica; i calcolatori eseguono solo formule dichiarate da input utente.
+GSC 1–12 agosto ha mostrato query distinte per consumo e pedaggio: `consumo medio camion` 31 impressioni, `quanto consuma un camion` 16 e `calcolo del pedaggio per camion` 3. Le guide Paese aggiungono sistemi nazionali separati, sostenuti da SERP italiana e fonti ufficiali; non sono copie della pagina italiana. I calcolatori eseguono soltanto formule dichiarate da input utente.
 
 ## Cluster 2 — costi dell’autotrasporto
 
@@ -67,8 +69,9 @@ Search job: trasformare il costo in proposta leggibile senza inventare un prezzo
 | `preventivo-trasporto-pdf` | Struttura del documento, inclusioni, esclusioni e validità | PDF RouteBudget non vincolante |
 | `tempi-attesa-carico-scarico-autotrasporto` | Separa franchigia, prova, indennizzo, costo interno e condizione commerciale | Stima del costo; clausole gestite fuori dal PDF app |
 | `proteggere-margine-tratta` | Punto di pareggio, ricarico, margine e sensibilità | Tre scenari prezzo |
+| `tariffe-trazionisti` | Decide se una specifica offerta di subvezione copre km reali, tempo, vuoto, costi e cassa | Controllo missione e scenari RouteBudget |
 
-`preventivo-trasporto` copre processo commerciale completo; `preventivo-trasporto-pdf` copre solo struttura e controllo del documento. Il confine è registrato nella mappa keyword.
+`preventivo-trasporto` copre il processo commerciale completo; `preventivo-trasporto-pdf` copre struttura e controllo del documento; `tariffe-trazionisti` parte invece da un'offerta ricevuta nella subvezione e termina con una decisione accept/reject. Il confine è registrato nella mappa keyword.
 
 ## Landing app
 

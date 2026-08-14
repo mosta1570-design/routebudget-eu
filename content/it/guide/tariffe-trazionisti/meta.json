@@ -1,0 +1,82 @@
+{
+  "slug": "tariffe-trazionisti",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Tariffe trazionisti: capire se l’offerta copre davvero la tratta",
+  "mobileH1": "Tariffe trazionisti: l’offerta copre la tratta?",
+  "description": "Metodo per valutare un’offerta di subvezione con chilometri reali, vuoto, pedaggi, ore, attese, costi fissi e termini di pagamento.",
+  "eyebrow": "Subvezione · Controllo dell’offerta",
+  "published": "2026-08-14",
+  "modified": "2026-08-14",
+  "reviewed": "2026-08-14",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "tariffe trazionisti",
+  "secondaryKeywords": [
+    "tariffa subvezione autotrasporto",
+    "offerta trazionista",
+    "costo tratta padroncino",
+    "prezzo subvezione camion"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "margini-e-tariffe",
+  "topics": [
+    "offerta di subvezione",
+    "chilometri reali e pagati",
+    "ritorno a vuoto",
+    "costo operativo della tratta",
+    "termini di pagamento"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:ritorno-a-vuoto-autotrasporto",
+    "guide:tabelle-costi-autotrasporto-mit-2026",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-scenarios",
+  "translationGroup": "tariffe-trazionisti",
+  "canonical": "/it/guide/tariffe-trazionisti/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Normattiva — Decreto legislativo 21 novembre 2005, n. 286",
+      "url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=005G0306&atto.dataPubblicazioneGazzetta=2006-01-09&qId=&tipoDettaglio=multivigenza",
+      "publishedOrUpdated": "Testo vigente consultato il 14 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-14",
+      "supports": "Definizioni di vettore e sub-vettore, disciplina del corrispettivo e quadro della subvezione; da leggere nel testo vigente per il rapporto concreto."
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-14",
+      "supports": "Tabelle A–D dei valori indicativi di riferimento aggiornate per assicurazione, energia e pedaggiamenti; benchmark, non tariffa universale."
+    },
+    {
+      "label": "FIAP — Tempi di pagamento nell’autotrasporto merci",
+      "url": "https://www.fiapautotrasporti.it/le-ultime-notizie/tempi-di-pagamento-nellautotrasporto-merci-circolare-dellalbo-autotrasportatori/",
+      "publishedOrUpdated": "3 novembre 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-08-14",
+      "supports": "Richiamo settoriale alla circolare dell’Albo e al termine massimo di pagamento; la conformità del contratto specifico richiede verifica professionale."
+    },
+    {
+      "label": "Uomini e Trasporti — Intervista a una PMI sulla pressione della subvezione",
+      "url": "https://www.uominietrasporti.it/home/ipiuletti2025-limpossibile-ricerca-di-autisti-per-una-pmi-ho-offerto-2-400-euro-al-mese-per-viaggi-in-giornata-ma-non-risponde-nessuno-cosi-la-subvezione-taglia-tariffe-e-buste-pag/",
+      "publishedOrUpdated": "30 dicembre 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-08-14",
+      "supports": "Testimonianza settoriale sulla compressione economica lungo più passaggi di subvezione; evidenza del problema, non benchmark tariffario."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo distinto per verificare se un’offerta al trazionista copre la missione, senza proporre tariffe legali o di mercato."
+}

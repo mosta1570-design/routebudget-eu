@@ -31,7 +31,8 @@
   "related": [
     "guide:calcolo-costo-trasporto",
     "guide:calcolo-pedaggio-camion",
-    "guide:errori-calcolo-tariffa-trasporto",
+    "guide:pedaggio-camion-svizzera",
+    "guide:pedaggio-camion-germania",
     "calcolatori:costo-chilometrico-camion"
   ],
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",

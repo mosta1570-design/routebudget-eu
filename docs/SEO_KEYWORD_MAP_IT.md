@@ -1,6 +1,6 @@
 # RouteBudget EU — mappa keyword italiana
 
-Aggiornamento: 13 agosto 2026. Baseline più recente: GSC 1–11 agosto 2026, 10 clic, 725 impressioni, CTR 1,4%, posizione media 15,2 e 52 query. Sono finestre osservate, non volumi mensili. Decisioni: [round 2](./SEO_RESEARCH_ROUND_2_2026-08-12.md) e [round 3](./SEO_RESEARCH_ROUND_3_2026-08-13.md).
+Aggiornamento: 14 agosto 2026. Baseline più recente: GSC 1–12 agosto 2026, 12 clic, 840 impressioni, CTR 1,4%, posizione media 15,4 e 59 query. Sono finestre osservate, non volumi mensili. Decisioni: [round 2](./SEO_RESEARCH_ROUND_2_2026-08-12.md), [round 3](./SEO_RESEARCH_ROUND_3_2026-08-13.md) e [round 4](./SEO_RESEARCH_ROUND_4_2026-08-14.md).
 
 ## Come usare questa mappa
 
@@ -61,9 +61,12 @@ Le lingue future replicano la struttura sotto il proprio codice lingua solo dopo
 | guadagno autotrasportatore per viaggio | I | Valutazione | guida | `/it/guide/utile-viaggio-autotrasporto/` | utile netto tratta; ricavo meno costi; profitto viaggio camion; margine operativo tratta | Confronta costo, prezzo e utile senza promesse | pianificato M4 solo con evidenza GSC / P2 |
 | calcolatore ritorno a vuoto | T | Decisione | calcolatore | `/it/calcolatori/ritorno-a-vuoto/` | costo km a vuoto; prezzo con rientro; chilometri non fatturati; costo rientro camion | Gestisci andata e ritorno nel calcolo completo | pianificato M4 solo con evidenza / P2 |
 | costo furgone per km | I/C | Valutazione | guida N1 | `/it/guide/costo-furgone-per-km/` | costo chilometrico furgone Ducato; calcolo costi chilometrici furgoni; veicolo commerciale leggero; km fatturabili | Usa dati e costi del veicolo N1, separati dal camion | pubblicato 11 agosto 2026; due query long-tail GSC / P1 |
-| tachigrafo furgoni 2026 | I/C | Decisione | guida normativa-operativa N1 | `/it/guide/tachigrafo-furgoni-2026/` | obbligo tachigrafo furgoni 2,5 tonnellate; tachigrafo N1; G2V2; cabotaggio furgoni | Verifica il perimetro e porta tempo e costi nel calcolo RouteBudget | generato 13 agosto 2026; MIT, ELA ed EUR-Lex / P0 |
-| tabelle costi autotrasporto MIT 2026 | I/C | Valutazione | guida benchmark ufficiale | `/it/guide/tabelle-costi-autotrasporto-mit-2026/` | tabelle MIT marzo 2026; classi A B C D; valori indicativi costi esercizio | Confronta benchmark e costo reale della tratta | generato 13 agosto 2026; pubblicazione e legenda MIT / P0 |
-| pedaggio camion Austria | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-austria/` | GO-Maut camion; GO-Box assi; classe CO2 pedaggio; Brennero camion | Inserisci l’importo ASFINAG verificato nel costo completo | generato 13 agosto 2026; fonti italiane ASFINAG / P0 |
+| tachigrafo furgoni 2026 | I/C | Decisione | guida normativa-operativa N1 | `/it/guide/tachigrafo-furgoni-2026/` | obbligo tachigrafo furgoni 2,5 tonnellate; tachigrafo N1; G2V2; cabotaggio furgoni | Verifica il perimetro e porta tempo e costi nel calcolo RouteBudget | pubblicato 13 agosto 2026; MIT, ELA ed EUR-Lex / P0 |
+| tabelle costi autotrasporto MIT 2026 | I/C | Valutazione | guida benchmark ufficiale | `/it/guide/tabelle-costi-autotrasporto-mit-2026/` | tabelle MIT marzo 2026; classi A B C D; valori indicativi costi esercizio | Confronta benchmark e costo reale della tratta | pubblicato 13 agosto 2026; pubblicazione e legenda MIT / P0 |
+| pedaggio camion Austria | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-austria/` | GO-Maut camion; GO-Box assi; classe CO2 pedaggio; Brennero camion | Inserisci l’importo ASFINAG verificato nel costo completo | pubblicato 13 agosto 2026; fonti italiane ASFINAG / P0 |
+| tariffe trazionisti | C/I | Decisione | guida subvezione | `/it/guide/tariffe-trazionisti/` | tariffa subvezione; offerta trazionista; costo tratta padroncino; km reali e pagati | Verifica se la specifica offerta copre costo e rischio | pubblicato 14 agosto 2026; query GSC esatta + Normattiva/MIT / P0 |
+| pedaggio camion Svizzera | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-svizzera/` | calcolo TTPCP; TTPCP III; NMTS camion estero; tassa pesanti Svizzera | Inserisci l’importo UDSC verificato nel costo completo | pubblicato 14 agosto 2026; fonti italiane UDSC / P0 |
+| pedaggio camion Germania | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-germania/` | LKW-Maut 2026; Toll Collect; classe CO2; camion oltre 3,5 t | Inserisci l’importo Toll Collect verificato nel costo completo | pubblicato 14 agosto 2026; fonti Toll Collect e SERP italiana / P0 |
 | calcolatore costo viaggio furgone N1 | T | Decisione | calcolatore N1 | `/it/calcolatori/costo-viaggio-n1/` | calcolo furgone elettrico; costo energia kWh; costo viaggio van; veicolo leggero ≤3,5 t | Calcola il flusso N1 completo nell'app | pianificato M5, verifica scope / P2 |
 | camion vs furgone N1 costi | C/I | Valutazione | confronto | `/it/confronti/costi-camion-vs-n1/` | differenze costo viaggio; pedaggi camion e N1; consumo e manutenzione; applicabilità regole | Scegli la configurazione mezzo appropriata nell'app | backlog, solo domanda verificata / P2 |
 
@@ -85,6 +88,8 @@ Le lingue future replicano la struttura sotto il proprio codice lingua solo dopo
 | `costo-furgone-per-km` vs `tachigrafo-furgoni-2026` | La prima possiede costo e denominatori N1; la seconda possiede soglia, attività transfrontaliera, G2V2 e impatto operativo dal 1° luglio 2026. |
 | `costi-autotrasporto` vs `tabelle-costi-autotrasporto-mit-2026` | Il pillar mappa il sistema di costo dell’impresa; la guida MIT insegna a leggere un benchmark datato senza trasformarlo in tariffa universale. |
 | `calcolo-pedaggio-camion` vs `pedaggio-camion-austria` | La prima possiede rete e classi italiane; la seconda possiede GO-Maut, assi, EURO/CO₂ e tratte speciali austriache. |
+| pedaggi Italia vs Austria vs Svizzera vs Germania | Ogni URL possiede un solo sistema nazionale: classi/caselli italiani, GO-Maut, TTPCP/NMTS o LKW-Maut/Toll Collect. Nessuna overview replica i quattro intenti. |
+| `tariffe-trazionisti` vs costo/km, margine e preventivo | La nuova pagina decide accept/reject su una specifica offerta di subvezione; non pubblica tariffa generale, non sostituisce il preventivo e non possiede il metodo costo/km. |
 
 ## Termini da non presidiare con pagine fuorvianti
 
