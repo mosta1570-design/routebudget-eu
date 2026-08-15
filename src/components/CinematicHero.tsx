@@ -1,4 +1,5 @@
 import {
+  ArrowDown,
   ArrowUpRight,
   ChevronLeft,
   ChevronRight,
@@ -11,6 +12,7 @@ import {
   useRef,
   useState,
   type CSSProperties,
+  type PointerEvent as ReactPointerEvent,
 } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -21,34 +23,30 @@ import appScenarios from '../assets/app-scenarios-it.png';
 import heroDesktop from '../assets/hero/routebudget-hero-desktop.mp4';
 import heroMobile from '../assets/hero/routebudget-hero-mobile.mp4';
 import heroPoster from '../assets/hero/routebudget-hero-poster.webp';
+import {
+  APP_STORE_URL,
+  GOOGLE_PLAY_URL,
+  STORE_BADGES,
+} from '../content/siteConfig';
 import type { Locale } from '../content/siteCopy';
-
-const APP_STORE_URL = 'https://apps.apple.com/app/id6789717191';
-const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=eu.routebudget.app';
-const STORE_BADGES = {
-  it: {
-    appStore: '/store-badges/app-store-it.svg',
-    googlePlay: '/store-badges/google-play-it.png',
-    appStoreAlt: 'Scarica su App Store',
-    googlePlayAlt: 'Disponibile su Google Play',
-  },
-  en: {
-    appStore: '/store-badges/app-store-en.svg',
-    googlePlay: '/store-badges/google-play-en.png',
-    appStoreAlt: 'Download on the App Store',
-    googlePlayAlt: 'Get it on Google Play',
-  },
-} satisfies Record<Locale, { appStore: string; googlePlay: string; appStoreAlt: string; googlePlayAlt: string }>;
 
 type CinematicHeroProps = {
   locale: Locale;
   onLocaleChange: (locale: Locale) => void;
 };
 
+const PRODUCT_REVEAL_QUERY = '(min-width: 901px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)';
+
 type HeroLanguage = {
   navigationLabel: string;
   menuLabel: string;
   closeLabel: string;
+  languageLabel: string;
+  eyebrow: string;
+  headline: [string, string];
+  body: string;
+  primaryCta: string;
+  downloadOptionsLabel: string;
   demoLabel: string;
   demoTitle: string;
   demoIntro: string;
@@ -58,19 +56,20 @@ type HeroLanguage = {
   demoPrevious: string;
   demoNext: string;
   demoScreenLabel: string;
-  downloadLabel: string;
-  availability: string;
-  footerFacts: string;
-  meta: {
-    blurb: string[];
-    positioning: string;
-    problemLabel: string;
-    problem: string;
-    functionsLabel: string;
-    functions: string[];
+  trust: string;
+  ledgerLabel: string;
+  ledger: {
+    routeLabel: string;
+    routeValue: string;
+    costLabel: string;
+    costValue: string;
+    priceLabel: string;
+    priceValue: string;
+    profitLabel: string;
+    profitValue: string;
+    disclaimer: string;
   };
-  headline: [string, string, string, string];
-  chips: Array<{ label: string; detail: string }>;
+  opening: [string, string, string, string];
   nav: Array<{ label: string; href: string }>;
 };
 
@@ -79,124 +78,146 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
     navigationLabel: 'Navigazione principale',
     menuLabel: 'Apri il menu',
     closeLabel: 'Chiudi il menu',
-    demoLabel: 'Guarda come funziona',
-    demoTitle: 'Dal costo al prezzo, senza fogli sparsi.',
+    languageLabel: 'Lingua del sito',
+    eyebrow: 'Cockpit finanziario per l’autotrasporto',
+    headline: ['Sai quanto chiedere.', 'Prima di partire.'],
+    body:
+      'Carburante, pedaggi, ore, pause e usura in un unico costo. Scegli il margine e prepara il preventivo PDF.',
+    primaryCta: 'Scarica gratis',
+    downloadOptionsLabel: 'Scegli lo store per scaricare RouteBudget',
+    demoLabel: 'Vedi un calcolo reale',
+    demoTitle: 'Un costo leggibile. Tre prezzi da confrontare.',
     demoIntro:
-      'Tre schermate reali dell’app Android: scenari, composizione dei costi e Archivio locale.',
+      'Schermate autentiche dell’app Android: composizione dei costi, scenari e Archivio locale.',
     demoClose: 'Chiudi la dimostrazione',
-    demoCarouselLabel: 'Schermate reali dell’app RouteBudget',
+    demoCarouselLabel: 'Schermate autentiche dell’app RouteBudget',
     demoControlsLabel: 'Controlli delle schermate',
     demoPrevious: 'Schermata precedente',
     demoNext: 'Schermata successiva',
     demoScreenLabel: 'Schermata',
-    downloadLabel: 'Scarica RouteBudget',
-    availability: 'Disponibile per iPhone e Android.',
-    footerFacts: '7 lingue • Preventivi PDF • Archivio locale',
-    meta: {
-      blurb: ['Il controllo economico', 'di ogni tratta, prima', 'di partire.'],
-      positioning: 'MARGINI',
-      problemLabel: 'COSA RISOLVE',
-      problem: 'Stima il costo operativo e il prezzo corretto prima di accettare il viaggio.',
-      functionsLabel: 'FUNZIONI',
-      functions: [
-        'Carburante e pedaggi',
-        'Autista e usura',
-        'Tre scenari di prezzo',
-        'Preventivo PDF',
-        'Archivio locale',
-      ],
+    trust: '3 calcoli inclusi · nessun account · dati principali sul dispositivo',
+    ledgerLabel: 'Esempio di decisione economica',
+    ledger: {
+      routeLabel: 'Tratta dimostrativa',
+      routeValue: '870 km',
+      costLabel: 'Costo operativo',
+      costValue: '1.220,68 €',
+      priceLabel: 'Prezzo consigliato',
+      priceValue: '1.525,85 €',
+      profitLabel: 'Utile · Margine',
+      profitValue: '305,17 € · 20%',
+      disclaimer: 'Stima operativa non vincolante',
     },
-    headline: ['CALCOLA IL', 'COSTO REALE', 'PRIMA DI ACCETTARE', 'LA TRATTA'],
-    chips: [
-      { label: 'COSTI', detail: 'COMPLETI' },
-      { label: '3 PREZZI', detail: 'MIN • CONS • IDEAL' },
-      { label: 'PDF', detail: 'PROFESSIONALE' },
-    ],
+    opening: ['TRATTA', 'COSTI', 'MARGINE', 'PREZZO'],
     nav: [
-      { label: 'PRODOTTO', href: '#prodotto' },
-      { label: 'COME FUNZIONA', href: '#metodo' },
-      { label: 'FUNZIONI', href: '#funzioni' },
-      { label: 'PREZZI', href: '#prezzi' },
-      { label: 'GUIDE', href: '/it/guide/' },
-      { label: 'SCARICA', href: '#scarica' },
+      { label: 'Prodotto', href: '#prodotto' },
+      { label: 'Metodo', href: '#metodo' },
+      { label: 'Guide', href: '/it/guide/' },
+      { label: 'Supporto', href: '#supporto' },
     ],
   },
   en: {
     navigationLabel: 'Primary navigation',
     menuLabel: 'Open menu',
     closeLabel: 'Close menu',
-    demoLabel: 'See how it works',
-    demoTitle: 'From operating cost to a clear price.',
+    languageLabel: 'Website language',
+    eyebrow: 'Financial cockpit for road transport',
+    headline: ['Know what to charge.', 'Before you depart.'],
+    body:
+      'Fuel, tolls, hours, breaks and wear in one operating cost. Choose your margin and prepare the PDF quote.',
+    primaryCta: 'Download free',
+    downloadOptionsLabel: 'Choose a store to download RouteBudget',
+    demoLabel: 'See a real calculation',
+    demoTitle: 'One readable cost. Three prices to compare.',
     demoIntro:
-      'Three authentic Android app screens: scenarios, cost composition, and local Archive.',
+      'Authentic Android app screens: cost composition, scenarios and local Archive.',
     demoClose: 'Close demonstration',
     demoCarouselLabel: 'Authentic RouteBudget app screens',
     demoControlsLabel: 'Screen controls',
     demoPrevious: 'Previous screen',
     demoNext: 'Next screen',
     demoScreenLabel: 'Screen',
-    downloadLabel: 'Download RouteBudget',
-    availability: 'Available for iPhone and Android.',
-    footerFacts: '7 languages • PDF estimates • Local Archive',
-    meta: {
-      blurb: ['Economic control', 'for every route, before', 'you depart.'],
-      positioning: 'MARGINS',
-      problemLabel: 'WHAT IT SOLVES',
-      problem: 'Estimate operating cost and the right price before accepting the trip.',
-      functionsLabel: 'FUNCTIONS',
-      functions: [
-        'Fuel and tolls',
-        'Driver and wear',
-        'Three price scenarios',
-        'PDF estimate',
-        'Local Archive',
-      ],
+    trust: '3 calculations included · no account · core data stays on device',
+    ledgerLabel: 'Example economic decision',
+    ledger: {
+      routeLabel: 'Demonstration route',
+      routeValue: '870 km',
+      costLabel: 'Operating cost',
+      costValue: '€1,220.68',
+      priceLabel: 'Recommended price',
+      priceValue: '€1,525.85',
+      profitLabel: 'Profit · Margin',
+      profitValue: '€305.17 · 20%',
+      disclaimer: 'Non-binding operating estimate',
     },
-    headline: ['CALCULATE THE', 'REAL COST', 'BEFORE YOU ACCEPT', 'THE ROUTE'],
-    chips: [
-      { label: 'COSTS', detail: 'COMBINED' },
-      { label: '3 PRICES', detail: 'MIN • REC • IDEAL' },
-      { label: 'PDF', detail: 'SHAREABLE' },
-    ],
+    opening: ['ROUTE', 'COSTS', 'MARGIN', 'PRICE'],
     nav: [
-      { label: 'PRODUCT', href: '#prodotto' },
-      { label: 'HOW IT WORKS', href: '#metodo' },
-      { label: 'FUNCTIONS', href: '#funzioni' },
-      { label: 'PRICING', href: '#prezzi' },
-      { label: 'GUIDES', href: '/it/guide/' },
-      { label: 'DOWNLOAD', href: '#scarica' },
+      { label: 'Product', href: '#prodotto' },
+      { label: 'Method', href: '#metodo' },
+      { label: 'Guides', href: '/it/guide/' },
+      { label: 'Support', href: '#supporto' },
     ],
   },
 };
 
-const demoFrames = [
-  {
-    image: appScenarios,
-    alt: 'RouteBudget mostra gli scenari Minimo, Consigliato e Ideale',
-    label: '01 / SCENARI',
-    value: '1.525,85 €',
-  },
-  {
-    image: appCosts,
-    alt: 'RouteBudget mostra carburante, pedaggi, autista e usura',
-    label: '02 / COSTI',
-    value: '1.220,68 €',
-  },
-  {
-    image: appArchive,
-    alt: 'RouteBudget mostra un calcolo salvato nell’Archivio locale',
-    label: '03 / ARCHIVIO',
-    value: 'SALVATO IN LOCALE',
-  },
-];
+const demoFrames: Record<
+  Locale,
+  Array<{ image: string; alt: string; label: string; value: string }>
+> = {
+  it: [
+    {
+      image: appScenarios,
+      alt: 'RouteBudget mostra gli scenari Minimo, Consigliato e Ideale',
+      label: 'SCENARI',
+      value: '1.525,85 €',
+    },
+    {
+      image: appCosts,
+      alt: 'RouteBudget mostra carburante, pedaggi, autista e usura',
+      label: 'COSTI',
+      value: '1.220,68 €',
+    },
+    {
+      image: appArchive,
+      alt: 'RouteBudget mostra un calcolo salvato nell’Archivio locale',
+      label: 'ARCHIVIO',
+      value: 'SALVATO IN LOCALE',
+    },
+  ],
+  en: [
+    {
+      image: appScenarios,
+      alt: 'RouteBudget shows Minimum, Recommended and Ideal price scenarios',
+      label: 'SCENARIOS',
+      value: '€1,525.85',
+    },
+    {
+      image: appCosts,
+      alt: 'RouteBudget shows fuel, tolls, driver and wear costs',
+      label: 'COSTS',
+      value: '€1,220.68',
+    },
+    {
+      image: appArchive,
+      alt: 'RouteBudget shows a calculation saved in the local Archive',
+      label: 'ARCHIVE',
+      value: 'SAVED LOCALLY',
+    },
+  ],
+};
 
 function LanguageSwitch({
+  copy,
   locale,
   onLocaleChange,
   compact = false,
-}: CinematicHeroProps & { compact?: boolean }) {
+}: CinematicHeroProps & { copy: HeroLanguage; compact?: boolean }) {
   return (
-    <div className={compact ? 'hero-language hero-language--menu' : 'hero-language'} aria-label="Language">
+    <div
+      aria-label={copy.languageLabel}
+      className={compact ? 'hero-language hero-language--menu' : 'hero-language'}
+      role="group"
+    >
       {(['it', 'en'] as const).map((value) => (
         <button
           aria-pressed={locale === value}
@@ -215,36 +236,30 @@ function LanguageSwitch({
 function DemoOverlay({
   copy,
   locale,
-  open,
   onClose,
 }: {
   copy: HeroLanguage;
   locale: Locale;
-  open: boolean;
   onClose: () => void;
 }) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const framesRef = useRef<HTMLDivElement>(null);
+  const scrollFrameRef = useRef<number | null>(null);
   const [activeFrame, setActiveFrame] = useState(0);
   const badges = STORE_BADGES[locale];
+  const frames = demoFrames[locale];
 
   useEffect(() => {
-    if (open) {
-      closeButtonRef.current?.focus();
-
-      window.requestAnimationFrame(() => {
-        setActiveFrame(0);
-        overlayRef.current?.scrollTo({ top: 0 });
-        framesRef.current?.scrollTo({ left: 0 });
-      });
-    }
-  }, [open]);
+    closeButtonRef.current?.focus();
+    overlayRef.current?.scrollTo({ top: 0 });
+    framesRef.current?.scrollTo({ left: 0 });
+  }, []);
 
   useEffect(() => {
     const overlay = overlayRef.current;
 
-    if (!open || !overlay) {
+    if (!overlay) {
       return undefined;
     }
 
@@ -282,67 +297,76 @@ function DemoOverlay({
 
     overlay.addEventListener('keydown', trapFocus);
     return () => overlay.removeEventListener('keydown', trapFocus);
-  }, [open]);
+  }, []);
+
+  useEffect(() => () => {
+    if (scrollFrameRef.current !== null) {
+      window.cancelAnimationFrame(scrollFrameRef.current);
+    }
+  }, []);
 
   const scrollToFrame = (index: number) => {
     const container = framesRef.current;
-    const nextIndex = Math.max(0, Math.min(index, demoFrames.length - 1));
+    const nextIndex = Math.max(0, Math.min(index, frames.length - 1));
     const target = container?.children.item(nextIndex);
 
     if (!container || !(target instanceof HTMLElement)) {
       return;
     }
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     container.scrollTo({
-      behavior: reduceMotion ? 'auto' : 'smooth',
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
       left: target.offsetLeft - container.offsetLeft,
     });
     setActiveFrame(nextIndex);
   };
 
   const updateActiveFrame = () => {
-    const container = framesRef.current;
-
-    if (!container) {
+    if (scrollFrameRef.current !== null) {
       return;
     }
 
-    const viewportCenter = container.scrollLeft + container.clientWidth / 2;
-    let closestIndex = 0;
-    let closestDistance = Number.POSITIVE_INFINITY;
+    scrollFrameRef.current = window.requestAnimationFrame(() => {
+      const container = framesRef.current;
+      scrollFrameRef.current = null;
 
-    Array.from(container.children).forEach((child, index) => {
-      if (!(child instanceof HTMLElement)) {
+      if (!container) {
         return;
       }
 
-      const frameCenter = child.offsetLeft - container.offsetLeft + child.offsetWidth / 2;
-      const distance = Math.abs(frameCenter - viewportCenter);
+      const viewportCenter = container.scrollLeft + container.clientWidth / 2;
+      let closestIndex = 0;
+      let closestDistance = Number.POSITIVE_INFINITY;
 
-      if (distance < closestDistance) {
-        closestIndex = index;
-        closestDistance = distance;
-      }
+      Array.from(container.children).forEach((child, index) => {
+        if (!(child instanceof HTMLElement)) {
+          return;
+        }
+
+        const frameCenter = child.offsetLeft - container.offsetLeft + child.offsetWidth / 2;
+        const distance = Math.abs(frameCenter - viewportCenter);
+
+        if (distance < closestDistance) {
+          closestIndex = index;
+          closestDistance = distance;
+        }
+      });
+      setActiveFrame(closestIndex);
     });
-
-    setActiveFrame(closestIndex);
   };
 
   return createPortal(
     <div
       aria-describedby="product-demo-intro"
-      aria-hidden={!open}
       aria-labelledby="product-demo-title"
       aria-modal="true"
-      className={`demo-overlay ${open ? 'is-open' : ''}`}
-      inert={!open}
+      className="demo-overlay is-open"
       ref={overlayRef}
       role="dialog"
     >
-      <div className="demo-overlay__header">
+      <header className="demo-overlay__header">
         <div>
-          <p className="font-pixel">PRODUCT DEMO / ANDROID</p>
+          <p className="technical-label">ROUTEBUDGET / PRODUCT PROOF</p>
           <h2 id="product-demo-title">{copy.demoTitle}</h2>
           <p id="product-demo-intro">{copy.demoIntro}</p>
         </div>
@@ -351,12 +375,11 @@ function DemoOverlay({
           className="icon-control"
           onClick={onClose}
           ref={closeButtonRef}
-          tabIndex={open ? 0 : -1}
           type="button"
         >
-          <X aria-hidden="true" size={24} strokeWidth={1.6} />
+          <X aria-hidden="true" size={22} strokeWidth={1.7} />
         </button>
-      </div>
+      </header>
 
       <div aria-label={copy.demoControlsLabel} className="demo-overlay__controls" role="group">
         <button
@@ -370,12 +393,12 @@ function DemoOverlay({
         <p aria-atomic="true" aria-live="polite">
           <span>{copy.demoScreenLabel}</span>
           <strong>
-            {String(activeFrame + 1).padStart(2, '0')} / {String(demoFrames.length).padStart(2, '0')}
+            {String(activeFrame + 1).padStart(2, '0')} / {String(frames.length).padStart(2, '0')}
           </strong>
         </p>
         <button
           aria-label={copy.demoNext}
-          disabled={activeFrame === demoFrames.length - 1}
+          disabled={activeFrame === frames.length - 1}
           onClick={() => scrollToFrame(activeFrame + 1)}
           type="button"
         >
@@ -391,7 +414,6 @@ function DemoOverlay({
             event.preventDefault();
             scrollToFrame(activeFrame - 1);
           }
-
           if (event.key === 'ArrowRight') {
             event.preventDefault();
             scrollToFrame(activeFrame + 1);
@@ -400,15 +422,24 @@ function DemoOverlay({
         onScroll={updateActiveFrame}
         ref={framesRef}
         role="region"
-        tabIndex={open ? 0 : -1}
+        tabIndex={0}
       >
-        {demoFrames.map((frame) => (
+        {frames.map((frame, index) => (
           <figure className="demo-frame" key={frame.label}>
             <div className="demo-frame__image">
-              <img alt={frame.alt} decoding="async" height="2400" loading="lazy" src={frame.image} width="1080" />
+              <img
+                alt={frame.alt}
+                decoding="async"
+                height="2400"
+                loading="lazy"
+                src={frame.image}
+                width="1080"
+              />
             </div>
             <figcaption>
-              <span className="font-pixel">{frame.label}</span>
+              <span className="technical-label">
+                {String(index + 1).padStart(2, '0')} / {frame.label}
+              </span>
               <strong>{frame.value}</strong>
             </figcaption>
           </figure>
@@ -416,10 +447,10 @@ function DemoOverlay({
       </div>
 
       <div className="demo-overlay__stores">
-        <a aria-label={badges.appStoreAlt} href={APP_STORE_URL} rel="noreferrer" target="_blank">
+        <a aria-label={badges.appStoreAlt} data-analytics-id="demo-app-store" href={APP_STORE_URL} rel="noreferrer" target="_blank">
           <img alt={badges.appStoreAlt} height="40" src={badges.appStore} width="120" />
         </a>
-        <a aria-label={badges.googlePlayAlt} href={GOOGLE_PLAY_URL} rel="noreferrer" target="_blank">
+        <a aria-label={badges.googlePlayAlt} data-analytics-id="demo-google-play" href={GOOGLE_PLAY_URL} rel="noreferrer" target="_blank">
           <img alt={badges.googlePlayAlt} height="50" src={badges.googlePlay} width="129" />
         </a>
       </div>
@@ -431,12 +462,26 @@ function DemoOverlay({
 export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
+  const [storeChooserOpen, setStoreChooserOpen] = useState(false);
+  const saveDataEnabled = Boolean(
+    (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData,
+  );
+  const [mediaEnabled, setMediaEnabled] = useState(
+    () => !saveDataEnabled && !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  );
+  const [productRevealEnabled, setProductRevealEnabled] = useState(
+    () => !saveDataEnabled && window.matchMedia(PRODUCT_REVEAL_QUERY).matches,
+  );
   const closeMenuRef = useRef<HTMLButtonElement>(null);
   const menuOverlayRef = useRef<HTMLDivElement>(null);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const demoTriggerRef = useRef<HTMLButtonElement>(null);
+  const firstStoreRef = useRef<HTMLAnchorElement>(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const heroStageRef = useRef<HTMLElement>(null);
+  const spotlightFrameRef = useRef<number | null>(null);
   const copy = heroLanguage[locale];
+  const badges = STORE_BADGES[locale];
 
   useEffect(() => {
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -444,14 +489,17 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
 
     const syncPlayback = () => {
       const video = heroVideoRef.current;
+      const canPlay = !motionPreference.matches && !saveDataEnabled;
+
+      setMediaEnabled(canPlay);
 
       if (!video) {
         return;
       }
 
-      if (motionPreference.matches || !heroVisible) {
+      if (!canPlay || !heroVisible || document.hidden) {
         video.pause();
-        if (motionPreference.matches) {
+        if (!canPlay) {
           video.currentTime = 0;
         }
         return;
@@ -460,8 +508,6 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
       void video.play().catch(() => undefined);
     };
 
-    syncPlayback();
-    motionPreference.addEventListener('change', syncPlayback);
     const visibilityObserver = new IntersectionObserver(
       ([entry]) => {
         heroVisible = entry?.isIntersecting ?? true;
@@ -469,15 +515,29 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
       },
       { threshold: 0.05 },
     );
+
+    syncPlayback();
+    motionPreference.addEventListener('change', syncPlayback);
+    document.addEventListener('visibilitychange', syncPlayback);
     if (heroVideoRef.current) {
       visibilityObserver.observe(heroVideoRef.current);
     }
 
     return () => {
       motionPreference.removeEventListener('change', syncPlayback);
+      document.removeEventListener('visibilitychange', syncPlayback);
       visibilityObserver.disconnect();
     };
-  }, []);
+  }, [saveDataEnabled]);
+
+  useEffect(() => {
+    const revealPreference = window.matchMedia(PRODUCT_REVEAL_QUERY);
+    const syncReveal = () => setProductRevealEnabled(!saveDataEnabled && revealPreference.matches);
+
+    syncReveal();
+    revealPreference.addEventListener('change', syncReveal);
+    return () => revealPreference.removeEventListener('change', syncReveal);
+  }, [saveDataEnabled]);
 
   useEffect(() => {
     if (!menuOpen && !demoOpen) {
@@ -491,21 +551,21 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
     mainElement?.setAttribute('aria-hidden', 'true');
 
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        if (menuOpen) {
-          setMenuOpen(false);
-          window.requestAnimationFrame(() => menuTriggerRef.current?.focus({ preventScroll: true }));
-        }
+      if (event.key !== 'Escape') {
+        return;
+      }
 
-        if (demoOpen) {
-          setDemoOpen(false);
-          window.requestAnimationFrame(() => demoTriggerRef.current?.focus({ preventScroll: true }));
-        }
+      if (menuOpen) {
+        setMenuOpen(false);
+        window.requestAnimationFrame(() => menuTriggerRef.current?.focus({ preventScroll: true }));
+      }
+      if (demoOpen) {
+        setDemoOpen(false);
+        window.requestAnimationFrame(() => demoTriggerRef.current?.focus({ preventScroll: true }));
       }
     };
 
     document.addEventListener('keydown', handleEscape);
-
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener('keydown', handleEscape);
@@ -537,212 +597,340 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
       )).filter((element) => {
         const styles = window.getComputedStyle(element);
         const bounds = element.getBoundingClientRect();
-        return styles.visibility !== 'hidden' && styles.display !== 'none' && bounds.width > 0 && bounds.height > 0;
+        return styles.visibility !== 'hidden'
+          && styles.display !== 'none'
+          && bounds.width > 0
+          && bounds.height > 0;
       });
+      const first = focusable.at(0);
+      const last = focusable.at(-1);
 
-      if (focusable.length === 0) {
+      if (!first || !last) {
         event.preventDefault();
         return;
       }
 
-      const first = focusable[0];
-      const last = focusable.at(-1);
-
       if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
-        last?.focus();
+        last.focus();
       } else if (!event.shiftKey && document.activeElement === last) {
         event.preventDefault();
         first.focus();
       }
     };
 
-    document.addEventListener('keydown', trapFocus);
-    return () => document.removeEventListener('keydown', trapFocus);
+    overlay.addEventListener('keydown', trapFocus);
+    return () => overlay.removeEventListener('keydown', trapFocus);
   }, [menuOpen]);
 
-  const closeMenu = () => {
+  useEffect(() => () => {
+    if (spotlightFrameRef.current !== null) {
+      window.cancelAnimationFrame(spotlightFrameRef.current);
+    }
+  }, []);
+
+  const focusHashTarget = (href: string) => {
+    if (!href.startsWith('#')) {
+      return;
+    }
+
+    let targetId: string;
+
+    try {
+      targetId = decodeURIComponent(href.slice(1));
+    } catch {
+      return;
+    }
+
+    const target = document.getElementById(targetId);
+
+    if (!target) {
+      return;
+    }
+
+    const headingId = target.getAttribute('aria-labelledby');
+    const focusTarget = headingId ? document.getElementById(headingId) ?? target : target;
+    focusTarget.setAttribute('tabindex', '-1');
+    target.scrollIntoView();
+    focusTarget.focus({ preventScroll: true });
+    focusTarget.addEventListener('blur', () => focusTarget.removeAttribute('tabindex'), { once: true });
+  };
+
+  const closeMenu = (restoreFocus = true) => {
     setMenuOpen(false);
-    window.requestAnimationFrame(() => menuTriggerRef.current?.focus({ preventScroll: true }));
+    if (restoreFocus) {
+      window.requestAnimationFrame(() => menuTriggerRef.current?.focus({ preventScroll: true }));
+    }
+  };
+
+  const followMenuLink = (href: string) => {
+    closeMenu(false);
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => focusHashTarget(href));
+    });
+  };
+
+  const openStoreChooser = () => {
+    setStoreChooserOpen(true);
+    window.requestAnimationFrame(() => firstStoreRef.current?.focus({ preventScroll: true }));
+  };
+
+  const updateSpotlight = (event: ReactPointerEvent<HTMLElement>) => {
+    if (!productRevealEnabled || event.pointerType !== 'mouse' || spotlightFrameRef.current !== null) {
+      return;
+    }
+
+    const { clientX, clientY } = event;
+    spotlightFrameRef.current = window.requestAnimationFrame(() => {
+      const stage = heroStageRef.current;
+      spotlightFrameRef.current = null;
+
+      if (!stage) {
+        return;
+      }
+
+      const bounds = stage.getBoundingClientRect();
+      stage.style.setProperty('--spot-x', `${clientX - bounds.left}px`);
+      stage.style.setProperty('--spot-y', `${clientY - bounds.top}px`);
+    });
+  };
+
+  const resetSpotlight = () => {
+    const stage = heroStageRef.current;
+    stage?.style.setProperty('--spot-x', '76vw');
+    stage?.style.setProperty('--spot-y', '38svh');
   };
 
   return (
     <>
       <section
-        className="hero-stage relative h-screen w-full overflow-hidden bg-black text-white"
+        className="hero-stage"
         id="top"
+        onPointerLeave={resetSpotlight}
+        onPointerMove={updateSpotlight}
+        ref={heroStageRef}
       >
-        <video
-          aria-hidden="true"
-          autoPlay
-          className="hero-stage__media absolute inset-0 h-full w-full object-cover"
-          data-media-status="higgsfield-original"
-          loop
-          muted
-          playsInline
-          poster={heroPoster}
-          preload="metadata"
-          ref={heroVideoRef}
-        >
-          <source media="(max-width: 767px) and (prefers-reduced-motion: no-preference)" src={heroMobile} type="video/mp4" />
-          <source media="(min-width: 768px) and (prefers-reduced-motion: no-preference)" src={heroDesktop} type="video/mp4" />
-        </video>
-        <div aria-hidden="true" className="hero-stage__contrast" />
+        <div aria-hidden="true" className="hero-opening">
+          {copy.opening.map((label, index) => (
+            <div className="hero-opening__panel" key={label} style={{ '--opening-index': index } as CSSProperties}>
+              <span>{label}</span>
+            </div>
+          ))}
+          <div className="hero-opening__brand">
+            <img alt="" height="512" src={appIcon} width="512" />
+            <strong>ROUTEBUDGET EU</strong>
+          </div>
+        </div>
 
-        <div className="hero-stage__content relative z-10 flex h-full flex-col px-5 sm:px-6 md:px-10 lg:px-14">
-          <nav
-            aria-label={copy.navigationLabel}
-            className="hero-navbar flex items-center justify-between py-6"
+        <div className="hero-stage__media-wrap">
+          <video
+            aria-hidden="true"
+            autoPlay={mediaEnabled}
+            className="hero-stage__media"
+            data-media-status="higgsfield-approved-original"
+            loop
+            muted
+            playsInline
+            poster={heroPoster}
+            preload={mediaEnabled ? 'metadata' : 'none'}
+            ref={heroVideoRef}
           >
+            {mediaEnabled ? (
+              <>
+                <source media="(max-width: 767px) and (prefers-reduced-motion: no-preference)" src={heroMobile} type="video/mp4" />
+                <source media="(min-width: 768px) and (prefers-reduced-motion: no-preference)" src={heroDesktop} type="video/mp4" />
+              </>
+            ) : null}
+          </video>
+        </div>
+        <div aria-hidden="true" className="hero-stage__contrast" />
+        <div aria-hidden="true" className="hero-stage__grid" />
+        {productRevealEnabled ? (
+          <div aria-hidden="true" className="hero-product-reveal">
+            <div className="hero-product-reveal__plane">
+              <div className="hero-product-reveal__device">
+                <img alt="" decoding="async" fetchPriority="high" height="2400" src={appScenarios} width="1080" />
+              </div>
+            </div>
+          </div>
+        ) : null}
+        <div className="hero-shell">
+          <nav aria-label={copy.navigationLabel} className="hero-navbar">
             <a aria-label="RouteBudget EU — Home" className="hero-brand" href="#top">
               <img alt="" height="512" src={appIcon} width="512" />
-              <span>
-                ROUTEBUDGET <b className="font-pixel">EU</b>
-              </span>
+              <span>ROUTEBUDGET <b>EU</b></span>
             </a>
 
             <div className="hero-desktop-nav">
-              {copy.nav.map((item) => (
-                <a className={item.href === '#scarica' ? 'hero-nav-download' : undefined} href={item.href} key={item.href}>
-                  {item.label}
-                </a>
-              ))}
-              <LanguageSwitch locale={locale} onLocaleChange={onLocaleChange} />
+              {copy.nav.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
+            </div>
+
+            <div className="hero-navbar__actions">
+              <LanguageSwitch copy={copy} locale={locale} onLocaleChange={onLocaleChange} />
+              <button
+                aria-controls="hero-download-options"
+                aria-expanded={storeChooserOpen}
+                className="hero-nav-download"
+                data-analytics-id="hero-nav-download"
+                onClick={openStoreChooser}
+                type="button"
+              >
+                {copy.primaryCta}
+                <ArrowDown aria-hidden="true" size={16} />
+              </button>
             </div>
 
             <button
+              aria-controls="routebudget-mobile-menu"
               aria-expanded={menuOpen}
+              aria-haspopup="dialog"
               aria-label={copy.menuLabel}
               className="hero-mobile-menu icon-control"
               onClick={() => setMenuOpen(true)}
               ref={menuTriggerRef}
               type="button"
             >
-              <Menu aria-hidden="true" size={24} strokeWidth={1.6} />
+              <Menu aria-hidden="true" size={22} strokeWidth={1.7} />
             </button>
           </nav>
 
-          <div className="hero-meta mt-4 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-8">
-            <div className="hero-meta__brand">
-              <p>ROUTEBUDGET</p>
-              <p className="font-pixel">EU</p>
-              <span aria-hidden="true" className="font-pixel hero-meta__marker">*</span>
-              <p className="font-pixel hero-meta__blurb">
-                {copy.meta.blurb.map((line) => (
-                  <span key={line}>{line}</span>
-                ))}
-              </p>
-            </div>
-
-            <div className="hero-meta__positioning">
-              <p>{locale === 'it' ? 'COSTI &' : 'COSTS &'}</p>
-              <p className="font-pixel">{copy.meta.positioning}</p>
-            </div>
-
-            <div className="hero-meta__problem">
-              <p className="font-pixel hero-meta__label">{copy.meta.problemLabel}</p>
-              <p>{copy.meta.problem}</p>
-            </div>
-
-            <div className="hero-meta__functions">
-              <p className="font-pixel hero-meta__label">{copy.meta.functionsLabel}</p>
-              <ul>
-                {copy.meta.functions.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex-1" />
-
-          <div className="hero-bottom pb-4">
-            <div className="hero-bottom__main grid grid-cols-1 items-end gap-4 sm:gap-6 lg:grid-cols-2">
-              <h1 className="hero-headline text-3xl font-normal uppercase tracking-wide sm:text-4xl md:text-5xl lg:text-[3.75rem] xl:text-[4.25rem]">
+          <div className="hero-composition">
+            <div className="hero-copy">
+              <p className="hero-kicker"><span aria-hidden="true" />{copy.eyebrow}</p>
+              <h1 className="hero-headline" id="hero-title" tabIndex={-1}>
                 <span>{copy.headline[0]}</span>
-                <span className="font-pixel hero-headline__pixel">{copy.headline[1]}</span>
-                <span className="hero-headline__compact">{copy.headline[2]}</span>
-                <span className="font-pixel hero-headline__pixel">{copy.headline[3]}</span>
+                <span>{copy.headline[1]}</span>
               </h1>
+              <p className="hero-body">{copy.body}</p>
 
-              <div className="hero-actions flex flex-col justify-end gap-4 sm:gap-6">
+              <div className="hero-actions">
                 <button
+                  aria-controls="hero-download-options"
+                  aria-expanded={storeChooserOpen}
+                  className="hero-primary-cta"
+                  data-analytics-id="hero-primary-download"
+                  onClick={openStoreChooser}
+                  type="button"
+                >
+                  <span>{copy.primaryCta}</span>
+                  <span aria-hidden="true" className="hero-primary-cta__disc"><ArrowDown size={18} strokeWidth={1.8} /></span>
+                </button>
+                <div
+                  aria-label={copy.downloadOptionsLabel}
+                  className="hero-store-choices"
+                  hidden={!storeChooserOpen}
+                  id="hero-download-options"
+                  role="group"
+                >
+                  <a
+                    aria-label={badges.appStoreAlt}
+                    data-analytics-id="hero-app-store"
+                    href={APP_STORE_URL}
+                    ref={firstStoreRef}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img alt={badges.appStoreAlt} height="40" src={badges.appStore} width="120" />
+                  </a>
+                  <a
+                    aria-label={badges.googlePlayAlt}
+                    data-analytics-id="hero-google-play"
+                    href={GOOGLE_PLAY_URL}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <img alt={badges.googlePlayAlt} height="50" src={badges.googlePlay} width="129" />
+                  </a>
+                </div>
+                <button
+                  aria-haspopup="dialog"
                   className="hero-demo-button"
+                  data-analytics-id="hero-product-demo"
                   onClick={() => setDemoOpen(true)}
                   ref={demoTriggerRef}
                   type="button"
                 >
-                  <Play aria-hidden="true" fill="currentColor" size={16} strokeWidth={1.4} />
+                  <Play aria-hidden="true" fill="currentColor" size={14} strokeWidth={1.5} />
                   <span>{copy.demoLabel}</span>
                 </button>
-
-                <div className="hero-chips" aria-label={locale === 'it' ? 'Funzioni RouteBudget' : 'RouteBudget capabilities'}>
-                  {copy.chips.map((chip) => (
-                    <div className="hero-chip" key={chip.label}>
-                      <strong>{chip.label}</strong>
-                      <small className="font-pixel">{chip.detail}</small>
-                    </div>
-                  ))}
-                </div>
               </div>
+              <p className="hero-trust">{copy.trust}</p>
             </div>
 
-            <div className="hero-footer mt-4 grid grid-cols-1 gap-2 pt-4 sm:mt-5 sm:grid-cols-2 sm:gap-4">
-              <p>
-                <span>{copy.availability}</span>{' '}
-                <a href="#scarica">
-                  {copy.downloadLabel}
-                  <ArrowUpRight aria-hidden="true" size={13} />
-                </a>
-              </p>
-              <p>{copy.footerFacts}</p>
+            <div aria-hidden="true" className="hero-route-marker">
+              <span className="hero-route-marker__label">EU / 870 KM</span>
+              <span className="hero-route-marker__line" />
+              <span className="hero-route-marker__dot" />
             </div>
+          </div>
+
+          <div aria-label={copy.ledgerLabel} className="hero-ledger">
+            <div className="hero-ledger__route">
+              <span>{copy.ledger.routeLabel}</span>
+              <strong>{copy.ledger.routeValue}</strong>
+            </div>
+            <div className="hero-ledger__decision">
+              <dl><dt>{copy.ledger.costLabel}</dt><dd>{copy.ledger.costValue}</dd></dl>
+              <div aria-hidden="true" className="hero-ledger__connector">
+                <svg viewBox="0 0 156 24" preserveAspectRatio="none">
+                  <path d="M2 12H142" pathLength="1" />
+                  <path d="M134 4L144 12L134 20" />
+                </svg>
+              </div>
+              <dl className="hero-ledger__price"><dt>{copy.ledger.priceLabel}</dt><dd>{copy.ledger.priceValue}</dd></dl>
+              <dl className="hero-ledger__profit"><dt>{copy.ledger.profitLabel}</dt><dd>{copy.ledger.profitValue}</dd></dl>
+            </div>
+            <p>{copy.ledger.disclaimer}</p>
           </div>
         </div>
       </section>
 
-      {createPortal(<div
-        aria-hidden={!menuOpen}
-        className={`mobile-nav-overlay ${menuOpen ? 'is-open' : ''}`}
-        inert={!menuOpen}
-        ref={menuOverlayRef}
-      >
-        <div className="mobile-nav-overlay__header">
-          <a aria-label="RouteBudget EU — Home" className="hero-brand" href="#top" onClick={closeMenu} tabIndex={menuOpen ? 0 : -1}>
-            <img alt="" height="512" src={appIcon} width="512" />
-            <span>
-              ROUTEBUDGET <b className="font-pixel">EU</b>
-            </span>
-          </a>
-          <button
-            aria-label={copy.closeLabel}
-            className="icon-control"
-            onClick={closeMenu}
-            ref={closeMenuRef}
-            tabIndex={menuOpen ? 0 : -1}
-            type="button"
-          >
-            <X aria-hidden="true" size={24} strokeWidth={1.6} />
-          </button>
-        </div>
-
-        <nav aria-label={copy.navigationLabel} className="mobile-nav-overlay__links">
-          {copy.nav.map((item, index) => (
-            <a
-              href={item.href}
-              key={item.href}
-              onClick={closeMenu}
-              style={{ '--menu-delay': `${100 + index * 60}ms` } as CSSProperties}
-              tabIndex={menuOpen ? 0 : -1}
-            >
-              {item.label}
+      {createPortal(
+        <div
+          aria-hidden={!menuOpen}
+          aria-labelledby="mobile-menu-title"
+          aria-modal="true"
+          className={`mobile-nav-overlay ${menuOpen ? 'is-open' : ''}`}
+          id="routebudget-mobile-menu"
+          inert={!menuOpen}
+          ref={menuOverlayRef}
+          role="dialog"
+        >
+          <h2 className="sr-only" id="mobile-menu-title">{copy.navigationLabel}</h2>
+          <div className="mobile-nav-overlay__header">
+            <a aria-label="RouteBudget EU — Home" className="hero-brand" href="#top" onClick={() => followMenuLink('#top')} tabIndex={menuOpen ? 0 : -1}>
+              <img alt="" height="512" src={appIcon} width="512" />
+              <span>ROUTEBUDGET <b>EU</b></span>
             </a>
-          ))}
-        </nav>
+            <button aria-label={copy.closeLabel} className="icon-control" onClick={() => closeMenu()} ref={closeMenuRef} tabIndex={menuOpen ? 0 : -1} type="button">
+              <X aria-hidden="true" size={22} strokeWidth={1.7} />
+            </button>
+          </div>
 
-        <div className="mobile-nav-overlay__footer">
-          <LanguageSwitch compact locale={locale} onLocaleChange={onLocaleChange} />
-          <p>iPhone • Android</p>
-        </div>
-      </div>, document.body)}
+          <nav aria-label={copy.navigationLabel} className="mobile-nav-overlay__links">
+            {copy.nav.map((item, index) => (
+              <a href={item.href} key={item.href} onClick={() => followMenuLink(item.href)} style={{ '--menu-delay': `${90 + index * 55}ms` } as CSSProperties} tabIndex={menuOpen ? 0 : -1}>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                {item.label}
+                <ArrowUpRight aria-hidden="true" size={20} />
+              </a>
+            ))}
+          </nav>
+
+          <div className="mobile-nav-overlay__footer">
+            <LanguageSwitch compact copy={copy} locale={locale} onLocaleChange={onLocaleChange} />
+            <div className="mobile-nav-overlay__stores">
+              <a aria-label={badges.appStoreAlt} data-analytics-id="mobile-menu-app-store" href={APP_STORE_URL} rel="noreferrer" tabIndex={menuOpen ? 0 : -1} target="_blank">
+                <img alt={badges.appStoreAlt} height="40" src={badges.appStore} width="120" />
+              </a>
+              <a aria-label={badges.googlePlayAlt} data-analytics-id="mobile-menu-google-play" href={GOOGLE_PLAY_URL} rel="noreferrer" tabIndex={menuOpen ? 0 : -1} target="_blank">
+                <img alt={badges.googlePlayAlt} height="50" src={badges.googlePlay} width="129" />
+              </a>
+            </div>
+          </div>
+        </div>,
+        document.body,
+      )}
 
       {demoOpen ? (
         <DemoOverlay
@@ -752,7 +940,6 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
             setDemoOpen(false);
             window.requestAnimationFrame(() => demoTriggerRef.current?.focus({ preventScroll: true }));
           }}
-          open
         />
       ) : null}
     </>

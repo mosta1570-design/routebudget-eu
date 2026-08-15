@@ -39,8 +39,12 @@ function setMeta(selector: string, content: string) {
 }
 
 function getInitialLocale(): Locale {
-  const stored = window.localStorage.getItem(LOCALE_KEY);
-  return stored === 'en' ? 'en' : 'it';
+  try {
+    const stored = window.localStorage.getItem(LOCALE_KEY);
+    return stored === 'en' ? 'en' : 'it';
+  } catch {
+    return 'it';
+  }
 }
 
 export default function App() {
@@ -60,12 +64,44 @@ export default function App() {
     setMeta('meta[property="og:image:alt"]', meta.imageAlt);
     setMeta('meta[name="twitter:title"]', meta.title);
     setMeta('meta[name="twitter:description"]', meta.socialDescription);
-    window.localStorage.setItem(LOCALE_KEY, locale);
+    try {
+      window.localStorage.setItem(LOCALE_KEY, locale);
+    } catch {
+      // Browsers may disable storage in privacy-restricted contexts.
+    }
   }, [locale]);
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+
+    if (!hash) {
+      return undefined;
+    }
+
+    let targetId: string;
+
+    try {
+      targetId = decodeURIComponent(hash);
+    } catch {
+      return undefined;
+    }
+
+    let innerFrame = 0;
+    const frame = window.requestAnimationFrame(() => {
+      innerFrame = window.requestAnimationFrame(() => {
+        document.getElementById(targetId)?.scrollIntoView();
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.cancelAnimationFrame(innerFrame);
+    };
+  }, []);
 
   return (
     <>
-      <a className="skip-link" href="#contenuto">
+      <a className="skip-link" href="#hero-title">
         {copy.skipLabel}
       </a>
       <main id="contenuto">
