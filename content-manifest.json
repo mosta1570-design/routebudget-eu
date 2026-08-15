@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-14",
+  "revisionDate": "2026-08-15",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -71,7 +71,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-13"
+      "modified": "2026-08-15"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -83,7 +83,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-pedaggio-camion/",
       "indexable": true,
       "primaryKeyword": "calcolo pedaggio camion",
-      "modified": "2026-08-13"
+      "modified": "2026-08-15"
     },
     {
       "id": "it:guide:costi-autotrasporto",
@@ -167,7 +167,19 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-austria/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Austria",
-      "modified": "2026-08-13"
+      "modified": "2026-08-15"
+    },
+    {
+      "id": "it:guide:pedaggio-camion-belgio",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-belgio/",
+      "title": "Pedaggio camion Belgio 2026: calcolo Viapass e CO₂",
+      "description": "Come calcolare il pedaggio camion in Belgio nel 2026: tariffe Viapass per Fiandre, Vallonia e Bruxelles, classe CO₂, OBU e trattamento IVA.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-belgio/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Belgio",
+      "modified": "2026-08-15"
     },
     {
       "id": "it:guide:pedaggio-camion-germania",
@@ -179,7 +191,31 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-germania/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Germania",
-      "modified": "2026-08-14"
+      "modified": "2026-08-15"
+    },
+    {
+      "id": "it:guide:pedaggio-camion-paesi-bassi",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-paesi-bassi/",
+      "title": "Pedaggio camion Paesi Bassi 2026: Vrachtwagenheffing e OBU",
+      "description": "Pedaggio camion nei Paesi Bassi dal 1° luglio 2026: tariffe al km, massa tecnica, classi CO₂ ed EURO, OBU e fine dell'Eurovignetta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-paesi-bassi/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Paesi Bassi 2026",
+      "modified": "2026-08-15"
+    },
+    {
+      "id": "it:guide:pedaggio-camion-slovenia",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-slovenia/",
+      "title": "Pedaggio camion Slovenia 2026: DarsGo, assi, EURO e CO₂",
+      "description": "Come verificare il pedaggio camion in Slovenia nel 2026: DarsGo oltre 3,5 t, classi R2-R4, EURO e CO₂, OBU, pagamenti e tunnel Karavanke.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-slovenia/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Slovenia 2026",
+      "modified": "2026-08-15"
     },
     {
       "id": "it:guide:pedaggio-camion-svizzera",
