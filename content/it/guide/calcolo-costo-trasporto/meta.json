@@ -6,8 +6,8 @@
   "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
   "eyebrow": "Guida al costo di tratta",
   "published": "2026-08-01",
-  "modified": "2026-08-13",
-  "reviewed": "2026-08-13",
+  "modified": "2026-08-15",
+  "reviewed": "2026-08-15",
   "primaryKeyword": "calcolo costo trasporto",
   "searchIntent": "informational",
   "topics": [
@@ -26,6 +26,9 @@
     "guide:pedaggio-camion-austria",
     "guide:pedaggio-camion-svizzera",
     "guide:pedaggio-camion-germania",
+    "guide:pedaggio-camion-paesi-bassi",
+    "guide:pedaggio-camion-belgio",
+    "guide:pedaggio-camion-slovenia",
     "guide:tempi-guida-riposo-camion",
     "guide:costo-orario-autista-camion",
     "guide:tempi-attesa-carico-scarico-autotrasporto",
@@ -73,5 +76,5 @@
   "canonical": "/it/guide/calcolo-costo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunto il percorso dedicato al pedaggio GO austriaco, mantenendo il pillar sul metodo completo della tratta."
+  "changeSummary": "Aggiunti percorsi distinti verso Vrachtwagenheffing, Viapass e DarsGo, mantenendo il pillar sul metodo completo della tratta."
 }

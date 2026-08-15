@@ -1,0 +1,110 @@
+{
+  "slug": "pedaggio-camion-paesi-bassi",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion Paesi Bassi 2026: Vrachtwagenheffing e OBU",
+  "mobileH1": "Pedaggio camion Paesi Bassi (Olanda): guida 2026",
+  "description": "Pedaggio camion nei Paesi Bassi dal 1° luglio 2026: tariffe al km, massa tecnica, classi CO₂ ed EURO, OBU e fine dell'Eurovignetta.",
+  "eyebrow": "Paesi Bassi · Truck toll 2026",
+  "published": "2026-08-15",
+  "modified": "2026-08-15",
+  "reviewed": "2026-08-15",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Paesi Bassi 2026",
+  "secondaryKeywords": [
+    "pedaggio camion Olanda",
+    "tariffe camion Paesi Bassi",
+    "OBU camion Paesi Bassi",
+    "Vrachtwagenheffing Paesi Bassi",
+    "Eurovignetta Paesi Bassi 2026",
+    "costo pedaggio camion Olanda"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "pedaggio chilometrico Paesi Bassi",
+    "truck toll Netherlands",
+    "OBU",
+    "Eurovignetta",
+    "massa massima tecnica",
+    "classe CO2",
+    "classe EURO"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-germania",
+    "guide:pedaggio-camion-belgio",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-paesi-bassi",
+  "canonical": "/it/guide/pedaggio-camion-paesi-bassi/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Trucktoll.nl — importi del pedaggio al chilometro",
+      "url": "https://www.vrachtwagenheffing.nl/en/you-will-pay-this-amount",
+      "publishedOrUpdated": "Tariffe valide dal 1° luglio al 1° settembre 2026 e dal 1° settembre 2026 al 1° gennaio 2027",
+      "geography": "Paesi Bassi",
+      "accessedAt": "2026-08-15",
+      "supports": "Scaglioni di massa tecnica, classi CO2 ed EURO, tariffe in euro/km, sconto temporaneo del 22,3%, costi provider separati e fine dell'Eurovignetta olandese."
+    },
+    {
+      "label": "Trucktoll.nl — pagamento, provider e funzionamento OBU",
+      "url": "https://www.vrachtwagenheffing.nl/en/paying-the-truck-toll",
+      "publishedOrUpdated": "Pagina operativa corrente al 15 agosto 2026",
+      "geography": "Paesi Bassi, veicoli nazionali ed esteri",
+      "accessedAt": "2026-08-15",
+      "supports": "Contratto con provider, compatibilità OBU, EETS e NedLinq, dati di registrazione, obbligo di tenere l'OBU acceso e fatturazione."
+    },
+    {
+      "label": "Trucktoll.nl — veicoli soggetti e massa tecnica",
+      "url": "https://www.vrachtwagenheffing.nl/en/for-whom-and-why",
+      "publishedOrUpdated": "Pagina istituzionale corrente al 15 agosto 2026",
+      "geography": "Paesi Bassi",
+      "accessedAt": "2026-08-15",
+      "supports": "Applicazione a veicoli N2 e N3 oltre 3.500 kg, inclusi mezzi esteri, vuoti o carichi, e definizione della massa massima tecnica."
+    },
+    {
+      "label": "Trucktoll.nl — rete stradale soggetta",
+      "url": "https://www.vrachtwagenheffing.nl/en/truck-toll-roads",
+      "publishedOrUpdated": "Mappa e lista strade correnti al 15 agosto 2026",
+      "geography": "Paesi Bassi",
+      "accessedAt": "2026-08-15",
+      "supports": "Quasi tutte le autostrade e alcune strade provinciali e comunali; obbligo OBU anche sulle strade non soggette."
+    },
+    {
+      "label": "Trucktoll.nl — avvio del sistema il 1° luglio 2026",
+      "url": "https://www.vrachtwagenheffing.nl/en/vwh-news/2026/the-netherlands-introduces-truck-toll-on-1-july-2026",
+      "publishedOrUpdated": "31 marzo 2026",
+      "geography": "Paesi Bassi, trasporto internazionale",
+      "accessedAt": "2026-08-15",
+      "supports": "Data di avvio, assenza di ticket per singola tratta e incompatibilità delle OBU nazionali Toll Collect e Satellic."
+    },
+    {
+      "label": "Eurovignettes — uscita dei Paesi Bassi dal sistema",
+      "url": "https://www.eurovignettes.eu/portal/en/information/information?reset=true",
+      "publishedOrUpdated": "Informazioni 2026 correnti al 15 agosto 2026",
+      "geography": "Paesi aderenti all'Eurovignetta",
+      "accessedAt": "2026-08-15",
+      "supports": "Dal 1° luglio 2026 non serve più l'Eurovignetta nei Paesi Bassi perché è subentrata la tariffa chilometrica."
+    },
+    {
+      "label": "Confartigianato Trasporti — nuovo pedaggio chilometrico nei Paesi Bassi",
+      "url": "https://confartigianatotrasporti.it/internazionali-paesi-bassi-dal-1-luglio-2026-entra-in-vigore-il-nuovo-pedaggio-chilometrico-per-i-mezzi-pesanti/",
+      "publishedOrUpdated": "16 giugno 2026",
+      "geography": "Imprese italiane di autotrasporto internazionale verso i Paesi Bassi",
+      "accessedAt": "2026-08-15",
+      "supports": "Rilevanza operativa per vettori stranieri, obbligo OBU e passaggio da criterio forfettario a chilometri effettivamente percorsi."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: guida operativa alle due finestre tariffarie 2026, all'OBU e all'inserimento manuale del pedaggio olandese verificato nel costo della missione."
+}

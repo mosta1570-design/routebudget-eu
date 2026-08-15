@@ -1,0 +1,107 @@
+{
+  "slug": "pedaggio-camion-belgio",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion Belgio 2026: calcolo Viapass e CO₂",
+  "mobileH1": "Pedaggio camion Belgio: guida Viapass 2026",
+  "description": "Come calcolare il pedaggio camion in Belgio nel 2026: tariffe Viapass per Fiandre, Vallonia e Bruxelles, classe CO₂, OBU e trattamento IVA.",
+  "eyebrow": "Belgio · Viapass 2026",
+  "published": "2026-08-15",
+  "modified": "2026-08-15",
+  "reviewed": "2026-08-15",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Belgio",
+  "secondaryKeywords": [
+    "Viapass 2026",
+    "calcolo pedaggio camion Belgio",
+    "tariffe Viapass",
+    "classe CO2 pedaggio Fiandre"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "Viapass",
+    "Fiandre",
+    "Vallonia",
+    "Bruxelles",
+    "OBU",
+    "classe CO2"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-paesi-bassi",
+    "guide:pedaggio-camion-germania",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-belgio",
+  "canonical": "/it/guide/pedaggio-camion-belgio/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Viapass — veicoli soggetti al pedaggio chilometrico",
+      "url": "https://www.viapass.be/en/who-is-it-for/",
+      "publishedOrUpdated": "Pagina istituzionale corrente al 15 agosto 2026",
+      "geography": "Belgio, veicoli nazionali ed esteri",
+      "accessedAt": "2026-08-15",
+      "supports": "Ambito dei veicoli categoria N oltre 3,5 t e inclusione specifica dei veicoli N1 con carrozzeria BC."
+    },
+    {
+      "label": "Viapass — Q&A trattori N1/BC e massa della combinazione",
+      "url": "https://www.viapass.be/files/files/ressources/news-pdf/trekkertjesQA2ENG.pdf",
+      "publishedOrUpdated": "Documento operativo ufficiale corrente al 15 agosto 2026",
+      "geography": "Belgio, veicoli N1/BC",
+      "accessedAt": "2026-08-15",
+      "supports": "Soglia della massa combinata oltre 3,5 t per N1/BC, OBU obbligatoria e pedaggio dovuto anche senza semirimorchio."
+    },
+    {
+      "label": "Viapass — tariffe ufficiali dal 1° luglio 2026",
+      "url": "https://www.viapass.be/en/rates/",
+      "publishedOrUpdated": "Edizione 01/07/2026",
+      "geography": "Belgio",
+      "accessedAt": "2026-08-15",
+      "supports": "Tariffe per regione, zona, massa, norma Euro e classe CO₂; distinzione IVA tra Vallonia, Fiandre e Bruxelles."
+    },
+    {
+      "label": "Viapass — modifiche al pedaggio dal 1° luglio 2026",
+      "url": "https://www.viapass.be/en/news/kilometer-charge-changes-planned-from-july-1-2026-1.html",
+      "publishedOrUpdated": "In vigore dal 01/07/2026",
+      "geography": "Belgio",
+      "accessedAt": "2026-08-15",
+      "supports": "Aggiornamenti regionali, cinque classi CO₂, registrazione della classe e compatibilità OBU con i Paesi Bassi."
+    },
+    {
+      "label": "Viapass — sovrapprezzo CO₂ nelle Fiandre",
+      "url": "https://www.viapass.be/en/news/surcharge-co2-emissions-flanders.html",
+      "publishedOrUpdated": "19/03/2026",
+      "geography": "Fiandre, Belgio",
+      "accessedAt": "2026-08-15",
+      "supports": "Documenti necessari, classi CO₂ e obbligo di aggiornare il parametro su ogni OBU."
+    },
+    {
+      "label": "Viapass — domande frequenti su OBU, registrazione e controlli",
+      "url": "https://www.viapass.be/en/faqs-and-resources/faqs/",
+      "publishedOrUpdated": "Pagina operativa corrente al 15 agosto 2026",
+      "geography": "Belgio",
+      "accessedAt": "2026-08-15",
+      "supports": "Veicoli soggetti, uso dell'OBU sulla rete belga, dati del mezzo e gestione delle anomalie."
+    },
+    {
+      "label": "FIAP Autotrasporti — nuovi pedaggi belgi basati sulle emissioni di CO₂",
+      "url": "https://www.fiapautotrasporti.it/le-ultime-notizie/belgio-dal-1-luglio-2026-entrano-in-vigore-i-nuovi-pedaggi-basati-sulle-emissioni-di-co/",
+      "publishedOrUpdated": "15/06/2026",
+      "geography": "Italia e Belgio",
+      "accessedAt": "2026-08-15",
+      "supports": "Impatto operativo per gli autotrasportatori italiani e necessità di verificare registrazione e classe CO₂."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo verificabile per calcolare Viapass nelle tre regioni belghe, gestire la classe CO₂ 2026 e riportare il pedaggio nel costo della tratta."
+}
