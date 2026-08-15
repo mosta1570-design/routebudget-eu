@@ -1,11 +1,11 @@
 # RouteBudget EU — report internal linking
 
-Verifica locale: 14 agosto 2026. Comando: `node scripts/verify-generated.mjs --scope links`.
+Verifica locale: 15 agosto 2026. Comando: `node scripts/verify-generated.mjs --scope links`.
 
 ## Risultato
 
-- URL canoniche/indexabili nel grafo: **32**.
-- Pagine contenuto: **27**.
+- URL canoniche/indexabili nel grafo: **35**.
+- Pagine contenuto: **30**.
 - Hub: **2**.
 - Core/legal: homepage, privacy, termini.
 - Broken href/src: **0**.
@@ -18,9 +18,9 @@ Verifica locale: 14 agosto 2026. Comando: `node scripts/verify-generated.mjs --s
 
 | Gruppo | Link in ingresso alle nuove pagine | Esito |
 | --- | ---: | --- |
-| `tariffe-trazionisti` | homepage, hub, pillar costo/preventivo, guida margine e benchmark MIT | verificato nel grafo generato |
-| `pedaggio-camion-svizzera` | homepage, hub, pillar tratta, guide pedaggio Italia/Austria/Germania | verificato nel grafo generato |
-| `pedaggio-camion-germania` | homepage, hub, pillar tratta, guide pedaggio Italia/Austria/Svizzera | verificato nel grafo generato |
+| `pedaggio-camion-paesi-bassi` | homepage, hub, pillar tratta, guide pedaggio Italia/Germania/Belgio | verificato nel grafo generato |
+| `pedaggio-camion-belgio` | homepage, hub, pillar tratta, guide pedaggio Italia/Germania/Paesi Bassi | verificato nel grafo generato |
+| `pedaggio-camion-slovenia` | homepage, hub, pillar tratta, guide pedaggio Italia/Austria | verificato nel grafo generato |
 
 I pillar restituiscono link ai supporti principali. Ogni guida supporto collega il proprio pillar; ogni pagina contenuto include il calcolatore dichiarato. Entrambi gli store appaiono come CTA dopo contenuto utile.
 

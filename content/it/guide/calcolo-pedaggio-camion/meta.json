@@ -7,8 +7,8 @@
   "description": "Metodo per stimare il pedaggio di un camion in Italia: classe, numero di assi, chilometri tariffari, tipo di tratta e concessionari da verificare.",
   "eyebrow": "Pedaggi camion · Metodo italiano",
   "published": "2026-08-11",
-  "modified": "2026-08-13",
-  "reviewed": "2026-08-13",
+  "modified": "2026-08-15",
+  "reviewed": "2026-08-15",
   "primaryKeyword": "calcolo pedaggio camion",
   "searchIntent": "informational-transactional",
   "topics": [
@@ -64,5 +64,5 @@
   "canonical": "/it/guide/calcolo-pedaggio-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunto il passaggio dedicato al sistema GO austriaco, distinto dal metodo italiano e dalle fonti dei concessionari nazionali."
+  "changeSummary": "Aggiunti i sistemi nazionali Vrachtwagenheffing, Viapass e DarsGo come percorsi distinti dal metodo italiano."
 }

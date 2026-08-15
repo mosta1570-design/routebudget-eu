@@ -1,6 +1,6 @@
 # RouteBudget EU — cluster SEO italiani
 
-Data architettura: 14 agosto 2026. Stato: inventario round 4 in validazione pre-release; baseline GSC 1–12 agosto 2026 registrata nella [ricerca round 4](./SEO_RESEARCH_ROUND_4_2026-08-14.md).
+Data architettura: 15 agosto 2026. Stato: inventario round 5 in validazione pre-release; baseline GSC 1–13 agosto 2026 registrata nella [ricerca round 5](./SEO_RESEARCH_ROUND_5_2026-08-15.md).
 
 ## Principio
 
@@ -9,7 +9,7 @@ RouteBudget non pubblica un blog generico. Ogni URL risolve un lavoro economico 
 Inventario iniziale validato:
 
 - 3 pillar;
-- 20 guide di supporto;
+- 23 guide di supporto;
 - 3 calcolatori gratuiti;
 - 1 landing app;
 - hub `/it/guide/` e `/it/calcolatori/`.
@@ -30,13 +30,16 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | `pedaggio-camion-austria` | Possiede GO-Maut, assi, classi EURO/CO₂ e sezioni speciali austriache | Calcolatore costo/km con importo ASFINAG verificato |
 | `pedaggio-camion-svizzera` | Possiede TTPCP, peso determinante, classe emissioni e NMTS/TTPCP III | Calcolatore costo/km con importo UDSC verificato |
 | `pedaggio-camion-germania` | Possiede LKW-Maut, rete, massa tecnica, assi, EURO e classe CO₂ 2026 | Calcolatore costo/km con importo Toll Collect verificato |
+| `pedaggio-camion-paesi-bassi` | Possiede Vrachtwagenheffing, fine Eurovignetta, OBU e due finestre tariffarie 2026 | Calcolatore costo/km con importo Trucktoll/provider verificato |
+| `pedaggio-camion-belgio` | Possiede Viapass, quattro zone tariffarie, IVA vallona e classe CO₂ fiamminga | Calcolatore costo/km con totale Viapass verificato |
+| `pedaggio-camion-slovenia` | Possiede DarsGo, soglia oltre 3,5 t, sezioni, assi, EURO e classe CO₂ | Calcolatore costo/km con importo DARS verificato |
 | `tempi-guida-riposo-camion` | Distingue le categorie di tempo e porta la durata pianificata nel costo | Calcolatore costo/km con ore verificate |
 | `ritorno-a-vuoto-autotrasporto` | Mostra effetto dei km non fatturati su tutte le voci | Calcolatore costo/km |
 | `proteggere-margine-tratta` | Stress test di costo, prezzo, margine e ricarico | Scenari RouteBudget |
 | calcolatore `costo-carburante-viaggio` | Litri e costo da km, L/100 km e prezzo inseriti | Aggiungere costi mancanti nell’app |
 | calcolatore `fuel-surcharge-autotrasporto` | Adeguamento carburante da base, quota e indice inseriti | Riportare variazione nella trattativa |
 
-GSC 1–12 agosto ha mostrato query distinte per consumo e pedaggio: `consumo medio camion` 31 impressioni, `quanto consuma un camion` 16 e `calcolo del pedaggio per camion` 3. Le guide Paese aggiungono sistemi nazionali separati, sostenuti da SERP italiana e fonti ufficiali; non sono copie della pagina italiana. I calcolatori eseguono soltanto formule dichiarate da input utente.
+GSC 1–13 agosto ha mostrato query distinte per consumo e pedaggio: `consumo medio camion` 35 impressioni, `quanto consuma un camion` 20 e `calcolo del pedaggio per camion` 3. Le guide Paese aggiungono sistemi nazionali separati, sostenuti da cambi 2025–2026, SERP italiana e fonti ufficiali; non sono copie della pagina italiana. I calcolatori eseguono soltanto formule dichiarate da input utente.
 
 ## Cluster 2 — costi dell’autotrasporto
 

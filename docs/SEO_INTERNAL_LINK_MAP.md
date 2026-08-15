@@ -1,13 +1,13 @@
 # RouteBudget EU — mappa internal link
 
-Data: 14 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
+Data: 15 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
 
 ## Entry points
 
 | Sorgente | Destinazioni HTML principali |
 | --- | --- |
 | Homepage statica | hub guide, hub calcolatori, landing app, privacy, termini, store |
-| Hub guide | tutti i 3 pillar e i 20 supporti |
+| Hub guide | tutti i 3 pillar e i 23 supporti |
 | Hub calcolatori | tutti i 3 calcolatori |
 | Header/footer SEO | homepage, hub guide, hub calcolatori, landing app, privacy, termini |
 | Landing app | 3 pillar, 3 calcolatori, entrambi gli store |
@@ -19,10 +19,13 @@ Data: 14 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
 | `guide/calcolo-costo-trasporto/` | — | costo/km | costi, preventivo, costi diretti, margine, ritorno a vuoto, tre calcolatori |
 | `guide/calcolare-carburante-pedaggi-autista/` | calcolo costo | carburante | costo/km, margine, entrambi i tool |
 | `guide/quanto-consuma-un-camion/` | calcolo costo | carburante | costi diretti, fissi/variabili, calcolatore carburante |
-| `guide/calcolo-pedaggio-camion/` | calcolo costo | costo/km | costi diretti, costo/km storico, Austria, calcolatore costo/km |
-| `guide/pedaggio-camion-austria/` | calcolo costo | costo/km | pedaggio Italia, Svizzera, Germania, calcolatore costo/km |
+| `guide/calcolo-pedaggio-camion/` | calcolo costo | costo/km | Italia, Austria, Svizzera, Germania, Paesi Bassi, Belgio e Slovenia |
+| `guide/pedaggio-camion-austria/` | calcolo costo | costo/km | pedaggio Italia, Svizzera, Slovenia, calcolatore costo/km |
 | `guide/pedaggio-camion-svizzera/` | calcolo costo | costo/km | pedaggio Italia, Austria, Germania, calcolatore costo/km |
-| `guide/pedaggio-camion-germania/` | calcolo costo | costo/km | pedaggio Italia, Austria, Svizzera, calcolatore costo/km |
+| `guide/pedaggio-camion-germania/` | calcolo costo | costo/km | pedaggio Italia, Paesi Bassi, Belgio, calcolatore costo/km |
+| `guide/pedaggio-camion-paesi-bassi/` | calcolo costo | costo/km | pedaggio Italia, Germania, Belgio, calcolatore costo/km |
+| `guide/pedaggio-camion-belgio/` | calcolo costo | costo/km | pedaggio Italia, Paesi Bassi, Germania, calcolatore costo/km |
+| `guide/pedaggio-camion-slovenia/` | calcolo costo | costo/km | pedaggio Italia, Austria, Germania, calcolatore costo/km |
 | `guide/tempi-guida-riposo-camion/` | calcolo costo | costo/km | costi diretti, costo orario, attese, calcolatore costo/km |
 | `guide/ritorno-a-vuoto-autotrasporto/` | calcolo costo | costo/km | costo/km guida, margine, due tool |
 | `guide/proteggere-margine-tratta/` | calcolo costo | costo/km | preventivo, errori tariffa, costo/km |
@@ -95,3 +98,13 @@ Il controllo generato deve continuare a chiudere con zero URL orfani e zero link
 - hub guide → tutti i 20 supporti;
 - ogni nuova pagina → pillar, calcolatore e contenuti correlati;
 - gate generato: zero route orfane, zero target o fragment rotti.
+
+## Gate internal link per la release 15 agosto
+
+- homepage → `pedaggio-camion-paesi-bassi`, `pedaggio-camion-belgio` e `pedaggio-camion-slovenia`;
+- pillar `calcolo-costo-trasporto` → tutte e tre le nuove guide con anchor nazionali descrittivi;
+- `calcolo-pedaggio-camion` → tutte e tre le nuove guide e i sistemi Paese precedenti;
+- `pedaggio-camion-germania` → Paesi Bassi e Belgio; `pedaggio-camion-austria` → Slovenia;
+- hub guide → tutti i 23 supporti;
+- ogni nuova pagina → pillar, calcolatore e almeno due guide di sistema correlate;
+- gate generato atteso: 35 route indexabili, zero route orfane, zero target o fragment rotti.

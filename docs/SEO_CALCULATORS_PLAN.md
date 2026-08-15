@@ -237,7 +237,7 @@ exampleRouteTotal = exampleRouteBaseCost + routeTollCost + routeDriverCost
 - **URL:** `/it/calcolatori/somma-pedaggi-viaggio/`
 - **Lancio:** Mese 3, P1
 - **Intento:** “somma pedaggi viaggio camion”, supporto al cluster pedaggi
-- **Guida madre:** `/it/guide/pedaggi-autostradali-camion/`
+- **Guida madre:** `/it/guide/calcolo-pedaggio-camion/`
 
 ### Input e formula
 
@@ -281,7 +281,7 @@ CTA: “Crea il preventivo professionale PDF e conserva il calcolo nell'Archivio
 
 - **URL candidato:** `/it/calcolatori/ritorno-a-vuoto/`
 - **Lancio:** Mese 4, solo con domanda verificata, P2
-- **Guida madre:** `/it/guide/costo-ritorno-a-vuoto/`
+- **Guida madre:** `/it/guide/ritorno-a-vuoto-autotrasporto/`
 
 ### Input e formula
 
@@ -303,7 +303,7 @@ Non suggerire automaticamente di “ribaltare” tutto sul cliente: il risultato
 
 - **URL candidato:** `/it/calcolatori/costo-viaggio-n1/`
 - **Lancio:** Mese 5 dopo verifica product/normativa e domanda, P2
-- **Guida madre:** `/it/guide/costo-furgone-n1-km/`
+- **Guida madre:** `/it/guide/costo-furgone-per-km/`
 
 ### Modalità e formula
 

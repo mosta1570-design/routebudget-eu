@@ -59,6 +59,8 @@ Il pedaggio non è sempre proporzionale ai chilometri. Paese, infrastruttura, cl
 
 Nelle missioni oltre confine usa una riga per ogni sistema nazionale. Per esempio, il [pedaggio camion in Austria](/it/guide/pedaggio-camion-austria/) dipende dal GO-Maut, dagli assi, dalle classi EURO e CO₂ e dalle eventuali sezioni speciali: non può essere derivato dalla classe autostradale italiana.
 
+Lo stesso principio vale sui corridoi più a nord e a est. Nei [Paesi Bassi](/it/guide/pedaggio-camion-paesi-bassi/) il Vrachtwagenheffing ha sostituito l'Eurovignetta dal 1° luglio 2026; in [Belgio](/it/guide/pedaggio-camion-belgio/) il totale dipende anche dalla regione e dalla classe CO₂ applicabile; in [Slovenia](/it/guide/pedaggio-camion-slovenia/) i camion oltre 3,5 t usano DarsGo, non la vignetta dei veicoli leggeri. Verifica ogni importo nel sistema ufficiale e somma le porzioni senza riutilizzare una media europea.
+
 Nella stessa area del calcolo conviene tenere separate altre spese di percorso:
 
 - traghetti, tunnel o valichi con tariffa specifica;
