@@ -7,8 +7,8 @@
   "description": "Calcola l’adeguamento carburante di un nolo stradale con prezzi del gasolio, incidenza modificabile, formula trasparente e risultato verificabile.",
   "eyebrow": "Calcolatore adeguamento carburante",
   "published": "2026-08-08",
-  "modified": "2026-08-08",
-  "reviewed": "2026-08-08",
+  "modified": "2026-08-16",
+  "reviewed": "2026-08-16",
   "primaryKeyword": "calcolo fuel surcharge autotrasporto",
   "searchIntent": "transactional-informational",
   "topics": [
@@ -20,6 +20,7 @@
   "related": [
     "guide:calcolo-costo-trasporto",
     "guide:preventivo-trasporto",
+    "guide:clausola-adeguamento-carburante-autotrasporto",
     "calcolatori:costo-carburante-viaggio",
     "calcolatori:costo-chilometrico-camion",
     "landing:app-per-autotrasportatori"
@@ -64,5 +65,5 @@
   "canonical": "/it/calcolatori/fuel-surcharge-autotrasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "H1 mobile abbreviato e CTA di conversione avvicinata al riepilogo del risultato, senza cambiare titolo SEO o layout desktop."
+  "changeSummary": "Aggiunto il percorso alla guida contrattuale, mantenendo questa pagina proprietaria della formula e del risultato."
 }

@@ -32,7 +32,7 @@ Questa formula è volutamente semplice. Il margine può essere calcolato come ri
 
 Nel prezzo possono pesare anche disponibilità urgente, complessità, rischio di attesa, ritorno a vuoto e condizioni di pagamento. Non sono maggiorazioni automatiche: sono caratteristiche del servizio che l’impresa deve valutare e, quando rilevanti per il cliente, descrivere con chiarezza.
 
-Se il servizio usa un criterio separato per l’adeguamento carburante, registra fonte, periodo e incidenza prima di inserirlo nell’offerta. Il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) mostra la formula senza decidere quale clausola applicare.
+Se il servizio usa un criterio separato per l’adeguamento carburante, registra fonte, periodo e incidenza prima di inserirlo nell’offerta. Il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) mostra la formula; la guida alla [clausola di adeguamento carburante](/it/guide/clausola-adeguamento-carburante-autotrasporto/) spiega invece quali elementi documentare senza sostituire la verifica del contratto.
 
 ## Cosa mostrare e cosa mantenere interno
 
@@ -128,7 +128,7 @@ Per rendere trasparente anche il passaggio interno, immaginiamo un costo operati
 
 ## Presentare il prezzo in modo comprensibile
 
-Il totale dovrebbe essere immediatamente individuabile. Se esistono componenti separate, la suddivisione deve aiutare il cliente, non complicare la lettura. Per esempio, può avere senso distinguere trasporto e traghetto quando quest’ultimo dipende da una prenotazione specifica. Dividere arbitrariamente carburante, usura e margine espone invece il modello interno senza chiarire il servizio.
+Il totale dovrebbe essere immediatamente individuabile. Se esistono componenti separate, la suddivisione deve aiutare il cliente, non complicare la lettura. Per esempio, può avere senso distinguere trasporto e traghetto quando quest’ultimo dipende da una prenotazione specifica. Nelle missioni insulari, il metodo sul [costo del traghetto camion in Sardegna](/it/guide/costo-traghetto-camion-sardegna/) aiuta a mantenere riconoscibili preventivo marittimo, validità e costo terrestre. Dividere arbitrariamente carburante, usura e margine espone invece il modello interno senza chiarire il servizio.
 
 Usare sempre la stessa valuta e la stessa convenzione per decimali e separatori. Se il trattamento di imposte, anticipazioni o altre voci richiede una formulazione precisa, il modello amministrativo va verificato con il proprio consulente. Una guida operativa non sostituisce tale verifica.
 

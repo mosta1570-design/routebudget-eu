@@ -1,0 +1,111 @@
+{
+  "slug": "clausola-adeguamento-carburante-autotrasporto",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Clausola adeguamento carburante autotrasporto: guida 2026",
+  "description": "Come documentare e applicare nel 2026 la clausola carburante nei contratti di autotrasporto: soglia del 2%, fonti MASE, fatture e controlli.",
+  "eyebrow": "Contratti di autotrasporto · Clausola carburante",
+  "published": "2026-08-16",
+  "modified": "2026-08-16",
+  "reviewed": "2026-08-16",
+  "primaryKeyword": "clausola adeguamento carburante autotrasporto",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "clausola carburante contratto scritto",
+    "soglia variazione gasolio 2 per cento",
+    "rilevazioni mensili MASE",
+    "documentazione fuel surcharge"
+  ],
+  "related": [
+    "calcolatori:fuel-surcharge-autotrasporto",
+    "guide:preventivo-trasporto",
+    "guide:proteggere-margine-tratta",
+    "guide:calcolo-costo-trasporto"
+  ],
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "translationGroup": "clausola-adeguamento-carburante-autotrasporto",
+  "sources": [
+    {
+      "label": "Normattiva — Decreto legislativo 21 novembre 2005, n. 286, articolo 6",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-11-21;286~art6!vig=",
+      "publishedOrUpdated": "Testo vigente consultato il 16 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Forma del contratto di trasporto, elementi essenziali del contratto scritto e regime del corrispettivo per i contratti non scritti."
+    },
+    {
+      "label": "Gazzetta Ufficiale — Legge 20 maggio 2022, n. 51, articolo 14",
+      "url": "https://www.gazzettaufficiale.it/eli/gu/2022/06/03/128/so/22/sg/pdf",
+      "publishedOrUpdated": "3 giugno 2022",
+      "geography": "Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Inserimento della clausola carburante tra gli elementi essenziali dell’articolo 6 e introduzione del comma 6-bis sui contratti non scritti."
+    },
+    {
+      "label": "Normattiva — Decreto-legge 25 giugno 2008, n. 112, articolo 83-bis",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2008-06-25;112~art83bis!vig=",
+      "publishedOrUpdated": "Testo vigente consultato il 16 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Autonomia negoziale e disciplina dell’adeguamento per prestazioni da eseguire in un periodo superiore a trenta giorni."
+    },
+    {
+      "label": "Gazzetta Ufficiale — Testo dell’articolo 83-bis riportato nella GU n. 234/2023",
+      "url": "https://www.gazzettaufficiale.it/eli/gu/2023/10/06/234/sg/pdf",
+      "publishedOrUpdated": "6 ottobre 2023",
+      "geography": "Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Testo del comma 5: quota carburante, soglia superiore al 2%, riferimento all’ultimo adeguamento e variazioni delle tariffe autostradali italiane."
+    },
+    {
+      "label": "MASE — Prezzi mensili dei carburanti e combustibili",
+      "url": "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+      "publishedOrUpdated": "Serie mensile consultata il 16 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Fonte mensile, unità in euro per 1.000 litri e metodo di media ponderata dei prezzi settimanali; per benzina e gasolio considera il self-service."
+    },
+    {
+      "label": "CNA Modena — Fuel surcharge: cosa prevede la normativa",
+      "url": "https://modena.cna.it/fuel-surcharge-cosa-prevede-la-normativa/",
+      "publishedOrUpdated": "18 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Lettura operativa di CNA FITA su clausola nei contratti scritti, soglia del 2%, prezzi mensili MASE e valori MIT per contratti non scritti."
+    },
+    {
+      "label": "FIAP — Fuel surcharge nei contratti di autotrasporto",
+      "url": "https://www.fiapautotrasporti.it/le-ultime-notizie/fuel-surcharge-nei-contratti-di-autotrasporto-obblighi-normativi-diritti-del-vettore-e-posizione-fiap-sui-contratti-scritti-con-e-senza-clausola-carburante/",
+      "publishedOrUpdated": "15 giugno 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Posizione associativa FIAP sui rapporti scritti e non scritti e sui contratti stipulati prima o dopo il 22 marzo 2022."
+    },
+    {
+      "label": "FIAP — I 100 milioni non sostituiscono la clausola contrattuale",
+      "url": "https://www.fiapautotrasporti.it/le-ultime-notizie/fuel-surcharge-come-calcolarla-e-come-farla-valere-i-100-milioni-del-governo-non-sostituiscono-la-clausola-contrattuale/",
+      "publishedOrUpdated": "8 aprile 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Posizione FIAP sulla distinzione fra lo stanziamento pubblico allora pari a 100 milioni e il meccanismo contrattuale del fuel surcharge."
+    }
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "clausola carburante contratto trasporto",
+    "adeguamento gasolio autotrasporto 2 per cento",
+    "fuel surcharge contratto autotrasporto",
+    "clausola gasolio 2026"
+  ],
+  "cluster": "fuel-surcharge-autotrasporto",
+  "relatedCalculator": "calcolatori:fuel-surcharge-autotrasporto",
+  "appFeature": "pdf-quote",
+  "canonical": "/it/guide/clausola-adeguamento-carburante-autotrasporto/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Nuova guida contrattuale 2026 su clausola carburante, soglia del 2%, fonti mensili, documentazione e casi che richiedono consulenza."
+}

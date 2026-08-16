@@ -98,7 +98,7 @@ Un accordo può definire periodi, frequenza e regole diverse. Tra gli elementi d
 - numero di decimali e arrotondamento;
 - data dalla quale il nuovo importo produce effetti.
 
-Il calcolatore non interpreta clausole, non controlla documenti e non produce una fattura. Gli approfondimenti di CNA e FIAP aiutano a riconoscere i punti da chiarire, ma non sostituiscono una verifica legale, fiscale o contrattuale sul rapporto concreto.
+Il calcolatore non interpreta clausole, non controlla documenti e non produce una fattura. La guida alla [clausola di adeguamento carburante nell'autotrasporto](/it/guide/clausola-adeguamento-carburante-autotrasporto/) organizza i controlli su fonte, periodo, base e documentazione; non sostituisce una verifica legale, fiscale o contrattuale sul rapporto concreto.
 
 ## Quando il calcolatore è utile
 

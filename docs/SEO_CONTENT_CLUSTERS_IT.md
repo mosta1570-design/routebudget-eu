@@ -1,6 +1,6 @@
 # RouteBudget EU — cluster SEO italiani
 
-Data architettura: 15 agosto 2026. Stato: inventario round 5 in validazione pre-release; baseline GSC 1–13 agosto 2026 registrata nella [ricerca round 5](./SEO_RESEARCH_ROUND_5_2026-08-15.md).
+Data architettura: 16 agosto 2026. Stato: inventario round 6 in validazione pre-release; baseline GSC 1–14 agosto 2026 registrata nella [ricerca round 6](./SEO_RESEARCH_ROUND_6_2026-08-16.md).
 
 ## Principio
 
@@ -9,7 +9,7 @@ RouteBudget non pubblica un blog generico. Ogni URL risolve un lavoro economico 
 Inventario iniziale validato:
 
 - 3 pillar;
-- 23 guide di supporto;
+- 26 guide di supporto;
 - 3 calcolatori gratuiti;
 - 1 landing app;
 - hub `/it/guide/` e `/it/calcolatori/`.
@@ -33,6 +33,8 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | `pedaggio-camion-paesi-bassi` | Possiede Vrachtwagenheffing, fine Eurovignetta, OBU e due finestre tariffarie 2026 | Calcolatore costo/km con importo Trucktoll/provider verificato |
 | `pedaggio-camion-belgio` | Possiede Viapass, quattro zone tariffarie, IVA vallona e classe CO₂ fiamminga | Calcolatore costo/km con totale Viapass verificato |
 | `pedaggio-camion-slovenia` | Possiede DarsGo, soglia oltre 3,5 t, sezioni, assi, EURO e classe CO₂ | Calcolatore costo/km con importo DARS verificato |
+| `pedaggio-camion-francia` | Possiede concessionari francesi, classi camion e costi distinti di Fréjus e Monte Bianco | Calcolatore costo/km con importo ufficiale verificato |
+| `costo-traghetto-camion-sardegna` | Separa preventivo marittimo, ETS/bunker, metri lineari e costo terrestre della missione | Costo tratta e preventivo con quota traghetto documentata |
 | `tempi-guida-riposo-camion` | Distingue le categorie di tempo e porta la durata pianificata nel costo | Calcolatore costo/km con ore verificate |
 | `ritorno-a-vuoto-autotrasporto` | Mostra effetto dei km non fatturati su tutte le voci | Calcolatore costo/km |
 | `proteggere-margine-tratta` | Stress test di costo, prezzo, margine e ricarico | Scenari RouteBudget |
@@ -73,6 +75,7 @@ Search job: trasformare il costo in proposta leggibile senza inventare un prezzo
 | `tempi-attesa-carico-scarico-autotrasporto` | Separa franchigia, prova, indennizzo, costo interno e condizione commerciale | Stima del costo; clausole gestite fuori dal PDF app |
 | `proteggere-margine-tratta` | Punto di pareggio, ricarico, margine e sensibilità | Tre scenari prezzo |
 | `tariffe-trazionisti` | Decide se una specifica offerta di subvezione copre km reali, tempo, vuoto, costi e cassa | Controllo missione e scenari RouteBudget |
+| `clausola-adeguamento-carburante-autotrasporto` | Documenta fonte, periodo, soglia e applicazione contrattuale senza replicare il calcolatore | Verifica formula, costo tratta e condizioni con il professionista pertinente |
 
 `preventivo-trasporto` copre il processo commerciale completo; `preventivo-trasporto-pdf` copre struttura e controllo del documento; `tariffe-trazionisti` parte invece da un'offerta ricevuta nella subvezione e termina con una decisione accept/reject. Il confine è registrato nella mappa keyword.
 

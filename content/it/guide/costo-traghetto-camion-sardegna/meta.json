@@ -1,0 +1,99 @@
+{
+  "slug": "costo-traghetto-camion-sardegna",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo traghetto camion Sardegna 2026: nolo e supplementi",
+  "mobileH1": "Costo traghetto camion Sardegna: metodo 2026",
+  "description": "Metodo pratico per leggere un preventivo traghetto merci, distinguere nolo, metri lineari, ETS, bunker, FuelEU e autista, poi inserirlo nel costo della tratta.",
+  "eyebrow": "Sardegna · traghetti merci",
+  "published": "2026-08-16",
+  "modified": "2026-08-16",
+  "reviewed": "2026-08-16",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo traghetto camion Sardegna 2026",
+  "secondaryKeywords": [
+    "prezzo traghetto camion Sardegna",
+    "nolo marittimo camion Sardegna",
+    "traghetto merci Sardegna metro lineare",
+    "costo semirimorchio Sardegna",
+    "preventivo traghetto camion Sardegna"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "traghetto camion Sardegna",
+    "nolo marittimo",
+    "metro lineare",
+    "EU ETS",
+    "bunker surcharge",
+    "FuelEU Maritime"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:preventivo-trasporto",
+    "guide:ritorno-a-vuoto-autotrasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "costo-traghetto-camion-sardegna",
+  "canonical": "/it/guide/costo-traghetto-camion-sardegna/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "RaiNews TGR Sardegna — Tariffe in salita per gasolio e navi",
+      "url": "https://www.rainews.it/tgr/sardegna/articoli/2026/03/tariffe-in-salita-per-gasolio-e-navi-grido-dallarme-per-gli-autotrasportatori--2cde3a6d-135a-4c57-933a-05df0eadbfa8.html",
+      "publishedOrUpdated": "Pubblicato il 28 marzo 2026",
+      "geography": "Sardegna, Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Segnalazione Confartigianato Sardegna sul contemporaneo aumento di gasolio e costi navali e sulla pressione economica dichiarata dalle imprese artigiane di autotrasporto; non è usata come tariffario."
+    },
+    {
+      "label": "Autorità di Sistema Portuale del Mare di Sardegna — Piano Operativo Triennale 2026-2028",
+      "url": "https://www.adspmaredisardegna.it/wp-content/uploads/2026/05/1_pot-2026-2028-finale-18-maggio-2026.pdf",
+      "publishedOrUpdated": "Piano approvato il 26 maggio 2026 e pubblicato il 27 maggio 2026",
+      "geography": "Sistema portuale della Sardegna",
+      "accessedAt": "2026-08-16",
+      "supports": "Centralità del trasporto marittimo per le merci sarde e fotografie economiche 2026 su nolo, componente ETS e caro bunker in rotte specifiche; gli importi non costituiscono tariffe universali."
+    },
+    {
+      "label": "Regione Autonoma della Sardegna — Trasporto merci e continuità marittima",
+      "url": "https://www.regione.sardegna.it/notizie/trasporto-merci-l-assessora-barbara-manca-incontra-confindustria-e-confapi",
+      "publishedOrUpdated": "Pubblicato e aggiornato il 30 giugno 2026",
+      "geography": "Sardegna, Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Posizione istituzionale sui bandi di continuità territoriale marittima, esigenza di un'offerta dedicata alle merci e richiesta politica di deroga ETS per l'insularità."
+    },
+    {
+      "label": "Grimaldi Lines — Tariffe massime delle linee in convenzione",
+      "url": "https://www.grimaldi-lines.com/it/tariffe-massime-linee-in-convenzione/",
+      "publishedOrUpdated": "Tariffe e periodi 2026; pagina live verificata il 16 agosto 2026",
+      "geography": "Linee in convenzione da e per la Sardegna elencate nella pagina",
+      "accessedAt": "2026-08-16",
+      "supports": "Applicazione per tratta e, per mezzi commerciali pieni o vuoti, per metro lineare occupato; arrotondamento delle frazioni; esclusioni di IVA, diritti portuali e, su alcune linee, variazioni carburante."
+    },
+    {
+      "label": "Commissione europea — EU ETS per il trasporto marittimo",
+      "url": "https://climate.ec.europa.eu/areas-action/transport-decarbonisation/reducing-emissions-shipping-sector_en",
+      "publishedOrUpdated": "Pagina aggiornata nel 2026 e verificata il 16 agosto 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-16",
+      "supports": "Perimetro EU ETS marittimo, copertura delle emissioni intra-UE e progressione dell'obbligo di restituzione delle quote; distingue la regola normativa dal supplemento commerciale in preventivo."
+    },
+    {
+      "label": "Commissione europea — FuelEU Maritime",
+      "url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en",
+      "publishedOrUpdated": "Regolamento pienamente applicabile dal 1° gennaio 2025; pagina verificata il 16 agosto 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-16",
+      "supports": "Finalità e ambito di FuelEU Maritime, basato sull'intensità dei gas serra dell'energia usata a bordo; chiarisce che FuelEU non coincide con ETS o bunker surcharge."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo 2026 per leggere un preventivo traghetto merci Sardegna, distinguere le componenti e trasferire il totale verificato nel costo della tratta."
+}
