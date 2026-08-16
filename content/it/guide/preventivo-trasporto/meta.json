@@ -6,8 +6,8 @@
   "description": "Come trasformare il costo di una tratta in un’offerta di trasporto merci chiara, con prezzo, inclusioni, esclusioni, validità e PDF verificato.",
   "eyebrow": "Guida al preventivo",
   "published": "2026-08-01",
-  "modified": "2026-08-12",
-  "reviewed": "2026-08-12",
+  "modified": "2026-08-16",
+  "reviewed": "2026-08-16",
   "primaryKeyword": "preventivo trasporto",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -25,6 +25,8 @@
     "guide:tempi-attesa-carico-scarico-autotrasporto",
     "guide:tariffe-trazionisti",
     "guide:calcolare-carburante-pedaggi-autista",
+    "guide:costo-traghetto-camion-sardegna",
+    "guide:clausola-adeguamento-carburante-autotrasporto",
     "calcolatori:costo-chilometrico-camion",
     "calcolatori:costo-carburante-viaggio",
     "calcolatori:fuel-surcharge-autotrasporto",
@@ -67,5 +69,5 @@
   "canonical": "/it/guide/preventivo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunto percorso dedicato a tempi di attesa, condizioni e indennizzo, separato dal processo generale di preparazione del preventivo."
+  "changeSummary": "Aggiunti percorsi verso costo traghetto Sardegna e clausola carburante, distinti dal processo generale del preventivo."
 }

@@ -1,6 +1,6 @@
 # RouteBudget EU — mappa keyword italiana
 
-Aggiornamento: 15 agosto 2026. Baseline più recente: GSC 1–13 agosto 2026, 14 clic, 959 impressioni, CTR 1,5%, posizione media 15,0 e 61 query visibili. Sono finestre osservate, non volumi mensili. Decisioni: [round 2](./SEO_RESEARCH_ROUND_2_2026-08-12.md), [round 3](./SEO_RESEARCH_ROUND_3_2026-08-13.md), [round 4](./SEO_RESEARCH_ROUND_4_2026-08-14.md) e [round 5](./SEO_RESEARCH_ROUND_5_2026-08-15.md).
+Aggiornamento: 16 agosto 2026. Baseline più recente: GSC 1–14 agosto 2026, 17 clic, 1.058 impressioni, CTR 1,6%, posizione media 14,5 e 68 query visibili. Sono finestre osservate, non volumi mensili. Decisioni: [round 2](./SEO_RESEARCH_ROUND_2_2026-08-12.md), [round 3](./SEO_RESEARCH_ROUND_3_2026-08-13.md), [round 4](./SEO_RESEARCH_ROUND_4_2026-08-14.md), [round 5](./SEO_RESEARCH_ROUND_5_2026-08-15.md) e [round 6](./SEO_RESEARCH_ROUND_6_2026-08-16.md).
 
 ## Come usare questa mappa
 
@@ -70,6 +70,9 @@ Le lingue future replicano la struttura sotto il proprio codice lingua solo dopo
 | pedaggio camion Paesi Bassi 2026 | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-paesi-bassi/` | Vrachtwagenheffing; pedaggio camion Olanda; OBU Paesi Bassi; fine Eurovignetta | Inserisci il totale Trucktoll/provider verificato nel costo completo | pubblicato 15 agosto 2026; cambio di sistema e SERP italiana / P0 |
 | pedaggio camion Belgio | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-belgio/` | Viapass 2026; tariffe Viapass; classe CO2 Fiandre; OBU Belgio | Inserisci il totale Viapass verificato nel costo completo | pubblicato 15 agosto 2026; Viapass/FIAP / P0 |
 | pedaggio camion Slovenia 2026 | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-slovenia/` | DarsGo camion; calcolo pedaggio Slovenia; vignetta camion Slovenia; classe CO2 DarsGo | Inserisci il totale DARS verificato nel costo completo | pubblicato 15 agosto 2026; GOV.SI/DARS/Gazzetta ufficiale slovena / P0 |
+| costo traghetto camion Sardegna 2026 | C/I | Decisione | guida costo di percorso | `/it/guide/costo-traghetto-camion-sardegna/` | traghetto camion Sardegna; costo semirimorchio Sardegna; ETS traghetti merci; tariffa metro lineare camion | Somma preventivo marittimo verificato e costo terrestre prima dell'offerta | generato 16 agosto 2026; Suggest italiano e crisi costi 2026 documentata / P0 |
+| pedaggio camion Francia 2026 | I/T | Decisione | guida internazionale | `/it/guide/pedaggio-camion-francia/` | calcolo pedaggio Francia camion; pedaggio Fréjus camion; pedaggio Monte Bianco camion; classe camion Francia | Inserisci autostrada e traforo verificati nel pedaggio manuale | generato 16 agosto 2026; Suggest italiano e tabelle 2026 dei gestori / P0 |
+| clausola adeguamento carburante autotrasporto | I/C | Decisione | guida contrattuale-operativa | `/it/guide/clausola-adeguamento-carburante-autotrasporto/` | clausola carburante contratto trasporto; adeguamento costo gasolio; fuel surcharge contratto; riferimento MASE | Documenta il criterio, controlla la formula e ricalcola la tratta | generato 16 agosto 2026; query GSC fuel surcharge, Suggest e chiarimenti settoriali 2026 / P0 |
 | calcolatore costo viaggio furgone N1 | T | Decisione | calcolatore N1 | `/it/calcolatori/costo-viaggio-n1/` | calcolo furgone elettrico; costo energia kWh; costo viaggio van; veicolo leggero ≤3,5 t | Calcola il flusso N1 completo nell'app | pianificato M5, verifica scope / P2 |
 | camion vs furgone N1 costi | C/I | Valutazione | confronto | `/it/confronti/costi-camion-vs-n1/` | differenze costo viaggio; pedaggi camion e N1; consumo e manutenzione; applicabilità regole | Scegli la configurazione mezzo appropriata nell'app | backlog, solo domanda verificata / P2 |
 
@@ -91,8 +94,11 @@ Le lingue future replicano la struttura sotto il proprio codice lingua solo dopo
 | `costo-furgone-per-km` vs `tachigrafo-furgoni-2026` | La prima possiede costo e denominatori N1; la seconda possiede soglia, attività transfrontaliera, G2V2 e impatto operativo dal 1° luglio 2026. |
 | `costi-autotrasporto` vs `tabelle-costi-autotrasporto-mit-2026` | Il pillar mappa il sistema di costo dell’impresa; la guida MIT insegna a leggere un benchmark datato senza trasformarlo in tariffa universale. |
 | `calcolo-pedaggio-camion` vs `pedaggio-camion-austria` | La prima possiede rete e classi italiane; la seconda possiede GO-Maut, assi, EURO/CO₂ e tratte speciali austriache. |
-| pedaggi Italia, Austria, Svizzera, Germania, Paesi Bassi, Belgio e Slovenia | Ogni URL possiede un solo sistema nazionale: classi/caselli italiani, GO-Maut, TTPCP/NMTS, LKW-Maut, Vrachtwagenheffing, Viapass o DarsGo. Nessuna overview replica gli intenti nazionali. |
+| pedaggi Italia, Austria, Svizzera, Germania, Paesi Bassi, Belgio, Slovenia e Francia | Ogni URL possiede un solo sistema nazionale o corridoio speciale: classi/caselli italiani, GO-Maut, TTPCP/NMTS, LKW-Maut, Vrachtwagenheffing, Viapass, DarsGo oppure concessionari e trafori francesi. Nessuna overview replica gli intenti nazionali. |
 | `tariffe-trazionisti` vs costo/km, margine e preventivo | La nuova pagina decide accept/reject su una specifica offerta di subvezione; non pubblica tariffa generale, non sostituisce il preventivo e non possiede il metodo costo/km. |
+| `clausola-adeguamento-carburante-autotrasporto` vs calcolatore fuel surcharge | La guida possiede disciplina, documentazione e applicazione contrattuale; il calcolatore possiede formula e risultato da input. La guida non incorpora un secondo tool. |
+| `costo-traghetto-camion-sardegna` vs costo tratta e preventivo | La guida possiede componenti del preventivo marittimo e loro attribuzione alla missione da/per Sardegna; i pillar conservano il metodo completo e la proposta commerciale. Nessun prezzo marittimo diventa valore universale. |
+| `pedaggio-camion-francia` vs guida pedaggio generale | La pagina Francia possiede concessionari, classi e trafori Fréjus/Monte Bianco; la guida generale conserva il metodo italiano e il controllo trasversale delle fonti. |
 
 ## Termini da non presidiare con pagine fuorvianti
 

@@ -1,0 +1,113 @@
+{
+  "slug": "pedaggio-camion-francia",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion Francia 2026: classi, Fréjus e Monte Bianco",
+  "mobileH1": "Pedaggio camion Francia 2026: guida pratica",
+  "description": "Come calcolare il pedaggio camion in Francia nel 2026: classi 3 e 4, concessionarie, Fréjus e Monte Bianco, IVA, andata e ritorno e verifica ufficiale.",
+  "eyebrow": "Francia · Pedaggi 2026",
+  "published": "2026-08-16",
+  "modified": "2026-08-16",
+  "reviewed": "2026-08-16",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Francia 2026",
+  "secondaryKeywords": [
+    "calcolo pedaggio Francia camion",
+    "pedaggio Frejus camion",
+    "pedaggio Monte Bianco camion"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "pedaggio camion Francia",
+    "classi 3 e 4",
+    "concessionarie autostradali francesi",
+    "Traforo del Frejus",
+    "Traforo del Monte Bianco",
+    "trasporto Italia Francia"
+  ],
+  "related": [
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-svizzera",
+    "guide:calcolo-costo-trasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-francia",
+  "canonical": "/it/guide/pedaggio-camion-francia/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Ministero francese della Transizione ecologica — pedaggi e autostrade in Francia",
+      "url": "https://www.ecologie.gouv.fr/politiques-publiques/peages-autoroutes-france",
+      "publishedOrUpdated": "Pagina istituzionale operativa corrente al 16 agosto 2026",
+      "geography": "Francia, rete autostradale in concessione",
+      "accessedAt": "2026-08-16",
+      "supports": "Regolazione statale dei pedaggi, controllo delle griglie per concessionaria, revisione annuale generalmente al 1° febbraio e modulazione dei mezzi pesanti per classe EURO."
+    },
+    {
+      "label": "ASFA — classificazione dei veicoli in autostrada",
+      "url": "https://www.autoroutes.fr/fr/classification-des-vehicules.htm",
+      "publishedOrUpdated": "Classificazione operativa consultata il 16 agosto 2026",
+      "geography": "Francia, autostrade in concessione",
+      "accessedAt": "2026-08-16",
+      "supports": "Criteri di altezza, PTAC e numero di assi per distinguere le classi tariffarie 3 e 4; criterio del PTAC del trattore per gli insiemi."
+    },
+    {
+      "label": "VINCI Autoroutes — simulatore e tariffe 2026 per ASF, Cofiroute, Escota e Arcos",
+      "url": "https://www.vinci-autoroutes.com/fr/conseils/autoroute-mode-demploi/tarifs-peage-vinci-autoroutes/",
+      "publishedOrUpdated": "Griglie 2026 con decorrenze indicate per ciascuna rete, comprese ASF dal 1° giugno 2026 e altre reti dal 1° febbraio 2026",
+      "geography": "Francia, reti VINCI Autoroutes",
+      "accessedAt": "2026-08-16",
+      "supports": "Calcolo per itinerario e classe del veicolo, disponibilità di griglie distinte per classi 3 e 4 e necessità di usare la decorrenza della rete percorsa."
+    },
+    {
+      "label": "Sanef — simulatore e griglie ufficiali dei pedaggi 2026",
+      "url": "https://www.autoroutes.sanef.com/fr/tarifs-peage",
+      "publishedOrUpdated": "Griglie applicabili dal 1° febbraio 2026",
+      "geography": "Francia, reti Sanef e Sapn",
+      "accessedAt": "2026-08-16",
+      "supports": "Calcolo secondo ingresso, uscita, distanza e classe; tariffe 2026 per itinerario; identità del prezzo tra barriera tradizionale e flusso libero."
+    },
+    {
+      "label": "SITAF — tariffe e abbonamenti del Traforo del Fréjus 2026",
+      "url": "https://www.sitaf.it/tariffe-e-abbonamenti-t4/",
+      "publishedOrUpdated": "Tariffe dal 1° gennaio 2026; pagina aggiornata il 12 gennaio 2026",
+      "geography": "Traforo autostradale del Fréjus, lato Italia",
+      "accessedAt": "2026-08-16",
+      "supports": "Tariffe italiane IVA inclusa per classi 3 e 4, corsa semplice e andata-ritorno, validità del ritorno, altezza massima e divieto per veicoli merci oltre 3,5 t EURO 0-4 salvo autorizzazione speciale."
+    },
+    {
+      "label": "SFTRF — tariffe lato Francia del Traforo del Fréjus 2026",
+      "url": "https://www.sftrf.fr/wp-content/uploads/2025/12/Tarifs_tunnel_2026_FR.pdf",
+      "publishedOrUpdated": "Tariffe applicabili dal 1° gennaio 2026",
+      "geography": "Traforo autostradale del Fréjus, piattaforma Francia",
+      "accessedAt": "2026-08-16",
+      "supports": "Tariffe francesi IVA 20% inclusa per classi 3 e 4, corsa semplice e andata-ritorno, validità di 15 giorni, altezza massima e condizioni del titolo."
+    },
+    {
+      "label": "TMB-GEIE, SITMB e ATMB — Carta dei servizi del Traforo del Monte Bianco 2026",
+      "url": "https://www.tunnelmb.net/public/files/301/01-carta-dei-servizi-ita-2026.pdf",
+      "publishedOrUpdated": "Edizione 2026 con tariffe dal 1° gennaio 2026",
+      "geography": "Traforo del Monte Bianco, lati Italia e Francia",
+      "accessedAt": "2026-08-16",
+      "supports": "Classi 3 e 4, tariffe 2026 italiane e francesi, IVA per lato, validità del ritorno, restrizioni EURO e canali ufficiali per viabilità e interruzioni."
+    },
+    {
+      "label": "Confetra — Circolare n. 5/2026, nuovi pedaggi Monte Bianco e Fréjus",
+      "url": "https://www.confetra.com/circolari/nuovi-pedaggi-monte-bianco-e-frejus-c-5-2026/",
+      "publishedOrUpdated": "8 gennaio 2026",
+      "geography": "Trasporto merci Italia-Francia attraverso Monte Bianco e Fréjus",
+      "accessedAt": "2026-08-16",
+      "supports": "Aumento 2026 dell'1,19%, valori comparati lato Italia e lato Francia, IVA 22% e 20%, classi 3 e 4 EURO 5-6 e scadenza dei biglietti andata-ritorno."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo 2026 per distinguere pedaggio autostradale francese e trafori alpini, verificare classi 3-4 e sostituire la stima con il totale manuale controllato."
+}
