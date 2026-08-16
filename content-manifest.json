@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-15",
+  "revisionDate": "2026-08-16",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -47,7 +47,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/fuel-surcharge-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo fuel surcharge autotrasporto",
-      "modified": "2026-08-08"
+      "modified": "2026-08-16"
     },
     {
       "id": "it:guide:calcolare-carburante-pedaggi-autista",
@@ -71,7 +71,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-15"
+      "modified": "2026-08-16"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -83,7 +83,19 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-pedaggio-camion/",
       "indexable": true,
       "primaryKeyword": "calcolo pedaggio camion",
-      "modified": "2026-08-15"
+      "modified": "2026-08-16"
+    },
+    {
+      "id": "it:guide:clausola-adeguamento-carburante-autotrasporto",
+      "url": "https://routebudget.eu/it/guide/clausola-adeguamento-carburante-autotrasporto/",
+      "title": "Clausola adeguamento carburante autotrasporto: guida 2026",
+      "description": "Come documentare e applicare nel 2026 la clausola carburante nei contratti di autotrasporto: soglia del 2%, fonti MASE, fatture e controlli.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/clausola-adeguamento-carburante-autotrasporto/",
+      "indexable": true,
+      "primaryKeyword": "clausola adeguamento carburante autotrasporto",
+      "modified": "2026-08-16"
     },
     {
       "id": "it:guide:costi-autotrasporto",
@@ -146,6 +158,18 @@
       "modified": "2026-08-12"
     },
     {
+      "id": "it:guide:costo-traghetto-camion-sardegna",
+      "url": "https://routebudget.eu/it/guide/costo-traghetto-camion-sardegna/",
+      "title": "Costo traghetto camion Sardegna 2026: nolo e supplementi",
+      "description": "Metodo pratico per leggere un preventivo traghetto merci, distinguere nolo, metri lineari, ETS, bunker, FuelEU e autista, poi inserirlo nel costo della tratta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-traghetto-camion-sardegna/",
+      "indexable": true,
+      "primaryKeyword": "costo traghetto camion Sardegna 2026",
+      "modified": "2026-08-16"
+    },
+    {
       "id": "it:guide:errori-calcolo-tariffa-trasporto",
       "url": "https://routebudget.eu/it/guide/errori-calcolo-tariffa-trasporto/",
       "title": "Errori nella tariffa di trasporto: 10 controlli prima dell’offerta",
@@ -180,6 +204,18 @@
       "indexable": true,
       "primaryKeyword": "pedaggio camion Belgio",
       "modified": "2026-08-15"
+    },
+    {
+      "id": "it:guide:pedaggio-camion-francia",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-francia/",
+      "title": "Pedaggio camion Francia 2026: classi, Fréjus e Monte Bianco",
+      "description": "Come calcolare il pedaggio camion in Francia nel 2026: classi 3 e 4, concessionarie, Fréjus e Monte Bianco, IVA, andata e ritorno e verifica ufficiale.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-francia/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Francia 2026",
+      "modified": "2026-08-16"
     },
     {
       "id": "it:guide:pedaggio-camion-germania",
@@ -251,7 +287,7 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto",
-      "modified": "2026-08-12"
+      "modified": "2026-08-16"
     },
     {
       "id": "it:guide:proteggere-margine-tratta",
