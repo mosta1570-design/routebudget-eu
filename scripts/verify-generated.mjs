@@ -78,6 +78,9 @@ for (const route of [...hubPaths, ...pagePaths]) {
     assert(html.includes('store-badges/app-store-it.svg'), `${route}: official App Store badge missing`);
     assert(html.includes('store-badges/google-play-it.png'), `${route}: official Google Play badge missing`);
     assert(html.includes('data-analytics-event="store_outbound"'), `${route}: product CTA event contract missing`);
+    const tableCount = (html.match(/<table>/g) || []).length;
+    const accessibleTableCount = (html.match(/<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole \d+"><table>/g) || []).length;
+    assert.equal(accessibleTableCount, tableCount, `${route}: every data table needs a named keyboard-scroll region`);
     if (sourcePage.meta.mobileH1) {
       assert(html.includes(`<span class="seo-h1__desktop">${sourcePage.meta.title}</span>`), `${route}: desktop H1 variant missing`);
       assert(html.includes(`<span class="seo-h1__mobile">${sourcePage.meta.mobileH1}</span>`), `${route}: mobile H1 variant missing`);
@@ -115,6 +118,11 @@ for (const route of [`${BASE}/privacy.html`, `${BASE}/terms.html`]) {
 const landing = await readFile(path.join(DIST, 'index.html'), 'utf8');
 htmlByRoute.set(`${BASE}/`, landing);
 verifyIndexableDocument(`${BASE}/`, landing);
+const landingSchema = parseSchema(`${BASE}/`, landing);
+const landingGraph = Array.isArray(landingSchema['@graph']) ? landingSchema['@graph'] : [];
+assert(landingGraph.some((entry) => entry['@type'] === 'Organization' && entry['@id'] === `${ORIGIN}/#organization`), 'landing Organization identity missing');
+const landingWebsite = landingGraph.find((entry) => entry['@type'] === 'WebSite');
+assert.equal(landingWebsite?.publisher?.['@id'], `${ORIGIN}/#organization`, 'landing WebSite publisher must use Organization identity');
 assert(landing.includes('data-static-home'), 'landing must contain useful static HTML before client rendering');
 assert(!/<noscript>[\s\S]*?<h1(?:\s|>)/.test(landing), 'landing must not duplicate H1 inside noscript');
 assert(landing.includes(`${BASE}/seo/events.js`), 'landing event hook missing');
@@ -157,7 +165,8 @@ assert.equal(cname.trim(), new URL(ORIGIN).hostname, 'CNAME must match canonical
 const responsiveCss = await readFile(path.join(DIST, 'seo/seo.css'), 'utf8');
 assert(responsiveCss.includes('@media (max-width: 760px)'), 'mobile article breakpoint missing');
 assert(/\.calculator-fields[\s\S]*?grid-template-columns:\s*1fr/.test(responsiveCss), 'mobile calculator fields must collapse to one column');
-assert(/\.seo-prose table[\s\S]*?overflow-x:\s*auto/.test(responsiveCss), 'article tables must scroll safely on narrow viewports');
+assert(/\.seo-prose \.table-scroll[\s\S]*?overflow-x:\s*auto/.test(responsiveCss), 'article tables must scroll safely on narrow viewports');
+assert(/\.seo-prose \.table-scroll:focus-visible[\s\S]*?outline:/.test(responsiveCss), 'keyboard-scroll table regions need a visible focus style');
 assert(responsiveCss.includes('.store-badge-row'), 'responsive official store badge layout missing');
 
 const notFound = await readFile(path.join(DIST, '404.html'), 'utf8');

@@ -34,6 +34,7 @@
     "guide:calcolo-costo-trasporto",
     "guide:preventivo-trasporto",
     "guide:ritorno-a-vuoto-autotrasporto",
+    "guide:costo-traghetto-camion-sicilia",
     "calcolatori:costo-chilometrico-camion"
   ],
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",

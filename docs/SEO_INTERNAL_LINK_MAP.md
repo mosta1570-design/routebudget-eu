@@ -1,13 +1,13 @@
 # RouteBudget EU — mappa internal link
 
-Data: 16 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
+Data: 17 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
 
 ## Entry points
 
 | Sorgente | Destinazioni HTML principali |
 | --- | --- |
 | Homepage statica | hub guide, hub calcolatori, landing app, privacy, termini, store |
-| Hub guide | tutti i 3 pillar e i 26 supporti |
+| Hub guide | tutti i 3 pillar e i 29 supporti |
 | Hub calcolatori | tutti i 3 calcolatori |
 | Header/footer SEO | homepage, hub guide, hub calcolatori, landing app, privacy, termini |
 | Landing app | 3 pillar, 3 calcolatori, entrambi gli store |
@@ -19,15 +19,18 @@ Data: 16 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
 | `guide/calcolo-costo-trasporto/` | — | costo/km | costi, preventivo, costi diretti, margine, ritorno a vuoto, tre calcolatori |
 | `guide/calcolare-carburante-pedaggi-autista/` | calcolo costo | carburante | costo/km, margine, entrambi i tool |
 | `guide/quanto-consuma-un-camion/` | calcolo costo | carburante | costi diretti, fissi/variabili, calcolatore carburante |
-| `guide/calcolo-pedaggio-camion/` | calcolo costo | costo/km | Austria, Svizzera, Francia e calcolatore costo/km |
-| `guide/pedaggio-camion-austria/` | calcolo costo | costo/km | pedaggio Italia, Svizzera, Slovenia, calcolatore costo/km |
+| `guide/calcolo-pedaggio-camion/` | calcolo costo | costo/km | Austria, Eurovignette, Repubblica Ceca e calcolatore costo/km |
+| `guide/pedaggio-camion-austria/` | calcolo costo | costo/km | pedaggio Italia, Repubblica Ceca, Slovenia, calcolatore costo/km |
 | `guide/pedaggio-camion-svizzera/` | calcolo costo | costo/km | pedaggio Italia, Austria, Germania, calcolatore costo/km |
-| `guide/pedaggio-camion-germania/` | calcolo costo | costo/km | pedaggio Italia, Paesi Bassi, Belgio, calcolatore costo/km |
-| `guide/pedaggio-camion-paesi-bassi/` | calcolo costo | costo/km | pedaggio Italia, Germania, Belgio, calcolatore costo/km |
+| `guide/pedaggio-camion-germania/` | calcolo costo | costo/km | pedaggio Italia, Paesi Bassi, Repubblica Ceca, calcolatore costo/km |
+| `guide/pedaggio-camion-paesi-bassi/` | calcolo costo | costo/km | pedaggio Italia, Germania, Eurovignette, calcolatore costo/km |
 | `guide/pedaggio-camion-belgio/` | calcolo costo | costo/km | pedaggio Italia, Paesi Bassi, Germania, calcolatore costo/km |
 | `guide/pedaggio-camion-slovenia/` | calcolo costo | costo/km | pedaggio Italia, Austria, Germania, calcolatore costo/km |
 | `guide/pedaggio-camion-francia/` | calcolo costo | costo/km | pedaggio Italia, Svizzera, costo tratta, calcolatore costo/km |
-| `guide/costo-traghetto-camion-sardegna/` | calcolo costo | costo/km | preventivo, ritorno a vuoto, costo tratta, calcolatore costo/km |
+| `guide/costo-traghetto-camion-sardegna/` | calcolo costo | costo/km | preventivo, ritorno a vuoto, Sicilia, calcolatore costo/km |
+| `guide/costo-traghetto-camion-sicilia/` | calcolo costo | costo/km | preventivo, Sardegna, ritorno a vuoto, calcolatore costo/km |
+| `guide/eurovignette-camion-2026/` | calcolo costo | costo/km | pedaggio Italia, Paesi Bassi, Germania, calcolatore costo/km |
+| `guide/pedaggio-camion-repubblica-ceca/` | calcolo costo | costo/km | pedaggio Italia, Germania, Austria, calcolatore costo/km |
 | `guide/tempi-guida-riposo-camion/` | calcolo costo | costo/km | costi diretti, costo orario, attese, calcolatore costo/km |
 | `guide/ritorno-a-vuoto-autotrasporto/` | calcolo costo | costo/km | costo/km guida, margine, due tool |
 | `guide/proteggere-margine-tratta/` | calcolo costo | costo/km | preventivo, errori tariffa, costo/km |
@@ -121,3 +124,14 @@ Il controllo generato deve continuare a chiudere con zero URL orfani e zero link
 - `preventivo-trasporto` → costo traghetto Sardegna come spesa specifica da verificare;
 - ogni nuova guida → pillar, calcolatore e almeno due contenuti adiacenti;
 - gate generato atteso: 38 route indexabili, zero route orfane, zero link o fragment rotti.
+
+## Gate internal link per la release 17 agosto
+
+- homepage → Sicilia, Eurovignette e Repubblica Ceca nelle versioni copy IT ed EN;
+- hub guide → tutti i 29 supporti;
+- pillar `calcolo-costo-trasporto` → tutte e tre le nuove guide con anchor descrittivi;
+- pillar `preventivo-trasporto` e guida Sardegna → costo traghetto Sicilia;
+- `calcolo-pedaggio-camion` e Paesi Bassi → Eurovignette, mantenendo separato Vrachtwagenheffing;
+- `calcolo-pedaggio-camion`, Germania e Austria → MYTO CZ Repubblica Ceca;
+- ogni nuova guida → pillar, calcolatore e tre contenuti adiacenti;
+- gate generato atteso: 41 route indexabili, 32 URL in `articles-it.xml`, zero route orfane e zero target o fragment rotti.

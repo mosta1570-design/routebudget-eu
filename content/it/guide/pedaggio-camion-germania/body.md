@@ -103,7 +103,7 @@ Un flusso pratico:
 5. confronta costo totale e prezzo proposto;
 6. genera il preventivo soltanto dopo la verifica.
 
-Per impostare l'intero modello, parti dalla guida al [calcolo del costo di trasporto](/it/guide/calcolo-costo-trasporto/). Per le differenze tra sistemi nazionali, confronta anche il [pedaggio camion Austria](/it/guide/pedaggio-camion-austria/) e la [TTPCP svizzera](/it/guide/pedaggio-camion-svizzera/).
+Per impostare l'intero modello, parti dalla guida al [calcolo del costo di trasporto](/it/guide/calcolo-costo-trasporto/). Per le differenze tra sistemi nazionali, confronta il [pedaggio camion Austria](/it/guide/pedaggio-camion-austria/), la [TTPCP svizzera](/it/guide/pedaggio-camion-svizzera/) e il [MYTO CZ della Repubblica Ceca](/it/guide/pedaggio-camion-repubblica-ceca/).
 
 ## Errori che fanno perdere margine
 
