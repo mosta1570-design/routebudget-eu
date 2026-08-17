@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-16",
+  "revisionDate": "2026-08-17",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -170,6 +170,18 @@
       "modified": "2026-08-16"
     },
     {
+      "id": "it:guide:costo-traghetto-camion-sicilia",
+      "url": "https://routebudget.eu/it/guide/costo-traghetto-camion-sicilia/",
+      "title": "Costo traghetto camion Sicilia 2026: Stretto di Messina",
+      "description": "Come verificare il traghetto camion sullo Stretto di Messina, attribuire costo e tempo a ogni direzione e portarli in una stima PDF senza doppioni.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-traghetto-camion-sicilia/",
+      "indexable": true,
+      "primaryKeyword": "costo traghetto camion Sicilia 2026",
+      "modified": "2026-08-17"
+    },
+    {
       "id": "it:guide:errori-calcolo-tariffa-trasporto",
       "url": "https://routebudget.eu/it/guide/errori-calcolo-tariffa-trasporto/",
       "title": "Errori nella tariffa di trasporto: 10 controlli prima dell’offerta",
@@ -180,6 +192,18 @@
       "indexable": true,
       "primaryKeyword": "errori calcolo tariffa trasporto",
       "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:eurovignette-camion-2026",
+      "url": "https://routebudget.eu/it/guide/eurovignette-camion-2026/",
+      "title": "Eurovignette camion 2026: costi, paesi e calcolo",
+      "description": "Eurovignette camion 2026: dove serve dopo l'uscita dell'Olanda, tariffe per assi e classi CO₂, scelta della durata e costo nel preventivo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/eurovignette-camion-2026/",
+      "indexable": true,
+      "primaryKeyword": "eurovignette camion 2026",
+      "modified": "2026-08-17"
     },
     {
       "id": "it:guide:pedaggio-camion-austria",
@@ -240,6 +264,18 @@
       "indexable": true,
       "primaryKeyword": "pedaggio camion Paesi Bassi 2026",
       "modified": "2026-08-15"
+    },
+    {
+      "id": "it:guide:pedaggio-camion-repubblica-ceca",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-repubblica-ceca/",
+      "title": "Pedaggio camion Repubblica Ceca 2026: MYTO CZ",
+      "description": "Come stimare il pedaggio camion in Repubblica Ceca nel 2026: mezzi oltre 3,5 t, rete MYTO CZ, OBU, assi, classe CO₂ e costo nel preventivo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-repubblica-ceca/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Repubblica Ceca 2026",
+      "modified": "2026-08-17"
     },
     {
       "id": "it:guide:pedaggio-camion-slovenia",
