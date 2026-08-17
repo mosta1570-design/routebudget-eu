@@ -36,9 +36,23 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "Organization",
+            "@id": "https://routebudget.eu/#organization",
+            "name": "RouteBudget EU",
+            "url": "https://routebudget.eu/",
+            "logo": "https://routebudget.eu/logo.png",
+            "sameAs": [
+              "https://apps.apple.com/app/id6789717191",
+              "https://play.google.com/store/apps/details?id=eu.routebudget.app"
+            ]
+          },
+          {
             "@type": "Person",
             "@id": "https://routebudget.eu/#author",
-            "name": "Eng. Mostafa"
+            "name": "Eng. Mostafa",
+            "worksFor": {
+              "@id": "https://routebudget.eu/#organization"
+            }
           },
           {
             "@type": "WebSite",
@@ -47,7 +61,7 @@
             "name": "RouteBudget EU",
             "inLanguage": ["it-IT", "en"],
             "publisher": {
-              "@id": "https://routebudget.eu/#author"
+              "@id": "https://routebudget.eu/#organization"
             }
           },
           {

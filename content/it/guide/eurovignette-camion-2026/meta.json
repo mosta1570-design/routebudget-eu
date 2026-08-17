@@ -1,0 +1,78 @@
+{
+  "slug": "eurovignette-camion-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Eurovignette camion 2026: costi, paesi e calcolo",
+  "mobileH1": "Eurovignette camion 2026: guida per vettori italiani",
+  "description": "Eurovignette camion 2026: dove serve dopo l'uscita dell'Olanda, tariffe per assi e classi CO₂, scelta della durata e costo nel preventivo.",
+  "eyebrow": "Svezia e Lussemburgo · 2026",
+  "published": "2026-08-17",
+  "modified": "2026-08-17",
+  "reviewed": "2026-08-17",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "eurovignette camion 2026",
+  "secondaryKeywords": [
+    "tariffe Eurovignette 2026",
+    "costo Eurovignette camion",
+    "Eurovignette Svezia camion",
+    "Eurovignette Lussemburgo camion",
+    "Eurovignette Olanda 2026",
+    "vignetta camion Europa"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "Eurovignette",
+    "pedaggio camion Svezia",
+    "pedaggio camion Lussemburgo",
+    "classe CO2",
+    "classe EURO",
+    "numero di assi",
+    "costo missione"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-paesi-bassi",
+    "guide:pedaggio-camion-germania",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "eurovignette-camion-2026",
+  "canonical": "/it/guide/eurovignette-camion-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Eurovignettes — informazioni operative e FAQ ufficiali",
+      "url": "https://www.eurovignettes.eu/portal/information/information",
+      "publishedOrUpdated": "Portale corrente con tariffario 2026 e avviso sull'uscita dei Paesi Bassi dal 1° luglio 2026",
+      "geography": "Svezia e Lussemburgo; informazioni sul precedente perimetro europeo",
+      "accessedAt": "2026-08-17",
+      "supports": "Validità massima, acquisto prima del transito, impossibilità di retrodatare o correggere una prenotazione completata, ricevuta elettronica, classi di emissione, uscita della Danimarca dal 1° gennaio 2025 e dei Paesi Bassi dal 1° luglio 2026."
+    },
+    {
+      "label": "Eurovignettes — tabella ufficiale delle tariffe 2026",
+      "url": "https://www.eurovignettes.eu/portal/en/tariffs/tariffs?reset=true",
+      "publishedOrUpdated": "Tariffe valide dal 1° gennaio al 31 dicembre 2026",
+      "geography": "Paesi Eurovignette nel 2026",
+      "accessedAt": "2026-08-17",
+      "supports": "Importi giornalieri, settimanali, mensili e annuali in euro, distinti per classi CO2, classi EURO quando applicabili e gruppi da 1–3 oppure 4 o più assi."
+    },
+    {
+      "label": "Eurovignettes — portale ufficiale di acquisto",
+      "url": "https://www.eurovignettes.eu/portal/booking/booking",
+      "publishedOrUpdated": "Pagina operativa corrente al 17 agosto 2026",
+      "geography": "Svezia e Lussemburgo",
+      "accessedAt": "2026-08-17",
+      "supports": "Perimetro attuale limitato a Svezia e Lussemburgo, soglia minima di 12 tonnellate, validità elettronica, un'unica Eurovignette valida nei paesi aderenti, durata da un giorno a un anno e mezzi di pagamento accettati."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: guida 2026 al perimetro Svezia-Lussemburgo, alle tariffe per classe e assi e all'inserimento del costo verificato nel preventivo di trasporto."
+}

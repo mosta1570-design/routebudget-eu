@@ -1,0 +1,83 @@
+{
+  "slug": "pedaggio-camion-repubblica-ceca",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion Repubblica Ceca 2026: MYTO CZ",
+  "mobileH1": "Pedaggio camion Repubblica Ceca: guida MYTO 2026",
+  "description": "Come stimare il pedaggio camion in Repubblica Ceca nel 2026: mezzi oltre 3,5 t, rete MYTO CZ, OBU, assi, classe CO₂ e costo nel preventivo.",
+  "eyebrow": "Repubblica Ceca · MYTO 2026",
+  "published": "2026-08-17",
+  "modified": "2026-08-17",
+  "reviewed": "2026-08-17",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Repubblica Ceca 2026",
+  "secondaryKeywords": [
+    "MYTO CZ camion",
+    "calcolo pedaggio Repubblica Ceca",
+    "tariffe pedaggio camion 2026",
+    "classe CO2 pedaggio ceco"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "MYTO CZ",
+    "pedaggio chilometrico",
+    "OBU camion",
+    "assi e massa",
+    "classe EURO",
+    "classe CO2"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-germania",
+    "guide:pedaggio-camion-austria",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-repubblica-ceca",
+  "canonical": "/it/guide/pedaggio-camion-repubblica-ceca/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Portale della pubblica amministrazione ceca — pedaggi stradali",
+      "url": "https://portal.gov.cz/en/sluzby-vs/road-toll-charges-S6739",
+      "publishedOrUpdated": "Pagina istituzionale corrente al 17 agosto 2026",
+      "geography": "Repubblica Ceca",
+      "accessedAt": "2026-08-17",
+      "supports": "Soglia oltre 3,5 t e quattro o più ruote, rete autostradale e tratti di prima classe, registrazione, dispositivo non trasferibile e condizioni prepagate."
+    },
+    {
+      "label": "MYTO CZ — tariffe di pedaggio valide dal 1° gennaio 2026",
+      "url": "https://myto.gov.cz/cs/emytne/sazby-mytneho-2026",
+      "publishedOrUpdated": "Tariffe valide dal 1° gennaio 2026",
+      "geography": "Repubblica Ceca, autostrade e strade di prima classe soggette",
+      "accessedAt": "2026-08-17",
+      "supports": "Tariffe in CZK/km e distinzione per strada, veicolo, EURO, massa, assi e classe CO2; componenti infrastruttura, aria, rumore e CO2."
+    },
+    {
+      "label": "MYTO CZ — veicoli soggetti al pedaggio",
+      "url": "https://myto.gov.cz/en/charged-vehicles/vehicles-subject-to-toll-payment",
+      "publishedOrUpdated": "Pagina operativa corrente al 17 agosto 2026",
+      "geography": "Repubblica Ceca, veicoli nazionali ed esteri",
+      "accessedAt": "2026-08-17",
+      "supports": "Categorie per massa, assi, EURO e CO2, soglia del mezzo pesante e variazione dinamica della categoria con il rimorchio."
+    },
+    {
+      "label": "MYTO CZ — calcolatore ufficiale basato sul percorso",
+      "url": "https://myto.gov.cz/en/customer-services/toll-calculator/route-based",
+      "publishedOrUpdated": "Calcolatore operativo corrente al 17 agosto 2026",
+      "geography": "Rete MYTO della Repubblica Ceca",
+      "accessedAt": "2026-08-17",
+      "supports": "Stima indicativa del pedaggio collegata al percorso selezionato e ai parametri del veicolo."
+    }
+  ],
+  "changeSummary": "Nuova guida 2026 al sistema MYTO CZ per inserire il pedaggio ceco verificato nel costo e nel preventivo di trasporto."
+}

@@ -256,6 +256,11 @@ function validatePage(page, directorySlug) {
   assert(/^\d{4}-\d{2}-\d{2}$/.test(meta.modified), `${id}: invalid modified date`);
   assert(/^\d{4}-\d{2}-\d{2}$/.test(meta.reviewed), `${id}: invalid reviewed date`);
   assert(new Date(meta.modified) >= new Date(meta.published), `${id}: modified predates published`);
+  assert(new Date(meta.reviewed) >= new Date(meta.modified), `${id}: reviewed predates modified`);
+  const today = new Date().toISOString().slice(0, 10);
+  assert(meta.published <= today, `${id}: published date is in the future`);
+  assert(meta.modified <= today, `${id}: modified date is in the future`);
+  assert(meta.reviewed <= today, `${id}: reviewed date is in the future`);
   assert(meta.author === config.author, `${id}: author must match configured editorial identity`);
   assert(meta.reviewer === config.author, `${id}: reviewer must use the approved real identity`);
   assert(Array.isArray(meta.secondaryKeywords) && meta.secondaryKeywords.length >= 2, `${id}: at least two secondaryKeywords required`);
@@ -1055,7 +1060,7 @@ function renderAlternateLinks(page) {
 function renderMarkdown(markdown) {
   const parsed = marked.parse(markdown, { async: false, gfm: true });
   const withHeadingIds = addHeadingIds(String(parsed));
-  return sanitizeHtml(withHeadingIds, {
+  const sanitized = sanitizeHtml(withHeadingIds, {
     allowedTags: [
       'h2',
       'h3',
@@ -1097,6 +1102,11 @@ function renderMarkdown(markdown) {
           : attribs,
       }),
     },
+  });
+  let tableIndex = 0;
+  return sanitized.replace(/<table>[\s\S]*?<\/table>/g, (table) => {
+    tableIndex += 1;
+    return `<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole ${tableIndex}">${table}</div>`;
   });
 }
 

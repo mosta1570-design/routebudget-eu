@@ -1,0 +1,100 @@
+{
+  "slug": "costo-traghetto-camion-sicilia",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo traghetto camion Sicilia 2026: Stretto di Messina",
+  "mobileH1": "Costo traghetto camion Sicilia: metodo 2026",
+  "description": "Come verificare il traghetto camion sullo Stretto di Messina, attribuire costo e tempo a ogni direzione e portarli in una stima PDF senza doppioni.",
+  "eyebrow": "Sicilia · Stretto di Messina",
+  "published": "2026-08-17",
+  "modified": "2026-08-17",
+  "reviewed": "2026-08-17",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo traghetto camion Sicilia 2026",
+  "secondaryKeywords": [
+    "traghetto camion Sicilia",
+    "costo traghetto Sicilia camion",
+    "tariffe camion Stretto di Messina",
+    "traghetto mezzi commerciali Villa San Giovanni Messina",
+    "costo traghetto bilico Sicilia"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "traghetto camion Sicilia",
+    "Stretto di Messina",
+    "metri lineari",
+    "addizionale carburante",
+    "EU ETS",
+    "FuelEU Maritime"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:preventivo-trasporto",
+    "guide:costo-traghetto-camion-sardegna",
+    "guide:ritorno-a-vuoto-autotrasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "pdf-quote",
+  "appFeature": "local-archive",
+  "translationGroup": "costo-traghetto-camion-sicilia",
+  "canonical": "/it/guide/costo-traghetto-camion-sicilia/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Caronte & Tourist — Tariffe automezzi commerciali sullo Stretto",
+      "url": "https://www.carontetourist.it/it/stretto-messina/merci/tariffe-automezzi-commerciali",
+      "publishedOrUpdated": "Tariffe valide dal 1° al 31 agosto 2026; prossimo aggiornamento dichiarato il 1° settembre 2026",
+      "geography": "Stretto di Messina, Italia",
+      "accessedAt": "2026-08-17",
+      "supports": "Scaglioni per metri lineari, differenza tra direzioni, componenti carburante/ETS/FuelEU incluse e servizio di impresa portuale indicato separatamente; non è usata come prezzo medio."
+    },
+    {
+      "label": "Caronte & Tourist — Orari traghetti per veicoli commerciali",
+      "url": "https://www.carontetourist.it/it/stretto-messina/merci/orari",
+      "publishedOrUpdated": "Orari in vigore dal 17 luglio 2026; pagina live verificata il 17 agosto 2026",
+      "geography": "Messina Tremestieri–Villa San Giovanni",
+      "accessedAt": "2026-08-17",
+      "supports": "Orari pubblicati per le due direzioni e necessità di verificare la corsa corrente prima di stimare durata e costo autista."
+    },
+    {
+      "label": "Caronte & Tourist — Traghetti per veicoli commerciali",
+      "url": "https://www.carontetourist.it/it/stretto-messina/merci",
+      "publishedOrUpdated": "Pagina operativa live verificata il 17 agosto 2026",
+      "geography": "Stretto di Messina, Italia",
+      "accessedAt": "2026-08-17",
+      "supports": "Porti per mezzi commerciali, categorie ammesse e durata dichiarata della traversata; la durata di navigazione non equivale alla durata operativa completa."
+    },
+    {
+      "label": "Uomini e Trasporti — Pressione dei costi dei traghetti sulle imprese siciliane",
+      "url": "https://www.uominietrasporti.it/professione/ufficio-traffico/trasportatori-siciliani-proclamato-fermo-dei-servizi-dal-14-al-18-aprile/",
+      "publishedOrUpdated": "Pubblicato il 20 marzo 2026",
+      "geography": "Sicilia, Italia",
+      "accessedAt": "2026-08-17",
+      "supports": "Problema economico dichiarato dal settore: aumento di carburante, tariffe marittime e costi ETS; non è una fonte tariffaria."
+    },
+    {
+      "label": "Commissione europea — EU ETS nel trasporto marittimo",
+      "url": "https://climate.ec.europa.eu/areas-action/transport-decarbonisation/reducing-emissions-shipping-sector_en",
+      "publishedOrUpdated": "Pagina istituzionale verificata il 17 agosto 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-17",
+      "supports": "Perimetro generale dell'EU ETS marittimo; distingue la disciplina europea dalla voce commerciale mostrata dal vettore."
+    },
+    {
+      "label": "Commissione europea — FuelEU Maritime",
+      "url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en",
+      "publishedOrUpdated": "Regolamento applicabile dal 1° gennaio 2025; pagina verificata il 17 agosto 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-17",
+      "supports": "Finalità di FuelEU Maritime e distinzione rispetto all'EU ETS e all'addizionale carburante."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo per verificare il costo dello Stretto per direzione, evitare doppioni e trasformare la missione in stima PDF archiviabile."
+}

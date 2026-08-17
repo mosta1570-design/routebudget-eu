@@ -8,6 +8,8 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'content');
 const schema = JSON.parse(await readFile(path.join(CONTENT, 'meta.schema.json'), 'utf8'));
+const config = JSON.parse(await readFile(path.join(CONTENT, 'site.json'), 'utf8'));
+const expected = config.expectedPublished;
 const required = new Set(schema.required);
 for (const field of ['status', 'author', 'reviewer', 'primaryKeyword', 'secondaryKeywords', 'cluster', 'relatedCalculator', 'appFeature', 'canonical', 'ogImage', 'noindex', 'sources', 'changeSummary']) {
   assert(required.has(field), `meta schema missing required field: ${field}`);
@@ -34,10 +36,11 @@ for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
   }
 }
 
-assert.equal(counts.pillar, 3, 'initial set requires exactly three pillars');
-assert.equal(counts.guide, 26, 'current set requires exactly twenty-six supporting guides');
-assert.equal(counts.calculator, 3, 'current set requires exactly three calculators');
-assert.equal(counts.landing, 1, 'initial set requires exactly one app landing');
+assert(expected && typeof expected === 'object', 'site.json: expectedPublished inventory is required');
+for (const kind of Object.keys(counts)) {
+  assert(Number.isInteger(expected[kind]) && expected[kind] >= 0, `site.json: invalid expectedPublished.${kind}`);
+  assert.equal(counts[kind], expected[kind], `published ${kind} inventory differs from site.json`);
+}
 
 const temporaryOutput = await mkdtemp(path.join(os.tmpdir(), 'routebudget-seo-content-'));
 try {
@@ -50,4 +53,4 @@ try {
   await rm(temporaryOutput, { recursive: true, force: true });
 }
 
-console.log(`Content schema passed: ${published} published pages (3 pillars, 26 supports, 3 calculators, 1 app landing).`);
+console.log(`Content schema passed: ${published} published pages (${counts.pillar} pillars, ${counts.guide} supports, ${counts.calculator} calculators, ${counts.landing} app landing).`);

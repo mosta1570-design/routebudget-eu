@@ -59,7 +59,7 @@ Il pedaggio non è sempre proporzionale ai chilometri. Paese, infrastruttura, cl
 
 Nelle missioni oltre confine usa una riga per ogni sistema nazionale. Per esempio, il [pedaggio camion in Austria](/it/guide/pedaggio-camion-austria/) dipende dal GO-Maut, dagli assi, dalle classi EURO e CO₂ e dalle eventuali sezioni speciali: non può essere derivato dalla classe autostradale italiana.
 
-Lo stesso principio vale sui corridoi più a nord e a est. Nei [Paesi Bassi](/it/guide/pedaggio-camion-paesi-bassi/) il Vrachtwagenheffing ha sostituito l'Eurovignetta dal 1° luglio 2026; in [Belgio](/it/guide/pedaggio-camion-belgio/) il totale dipende anche dalla regione e dalla classe CO₂ applicabile; in [Slovenia](/it/guide/pedaggio-camion-slovenia/) i camion oltre 3,5 t usano DarsGo, non la vignetta dei veicoli leggeri. Sul corridoio francese, il [pedaggio camion in Francia](/it/guide/pedaggio-camion-francia/) richiede di separare autostrada, concessionario ed eventuale Fréjus o Monte Bianco. Verifica ogni importo nel sistema ufficiale e somma le porzioni senza riutilizzare una media europea.
+Lo stesso principio vale sui corridoi più a nord e a est. Nei [Paesi Bassi](/it/guide/pedaggio-camion-paesi-bassi/) il Vrachtwagenheffing ha sostituito l'Eurovignetta dal 1° luglio 2026; l'[Eurovignette camion 2026](/it/guide/eurovignette-camion-2026/) resta invece un costo temporale da verificare nei Paesi ancora aderenti. In [Belgio](/it/guide/pedaggio-camion-belgio/) il totale dipende anche dalla regione e dalla classe CO₂ applicabile; in [Slovenia](/it/guide/pedaggio-camion-slovenia/) i camion oltre 3,5 t usano DarsGo, non la vignetta dei veicoli leggeri; in [Repubblica Ceca](/it/guide/pedaggio-camion-repubblica-ceca/) serve separare MYTO CZ dalla e-vignette auto. Sul corridoio francese, il [pedaggio camion in Francia](/it/guide/pedaggio-camion-francia/) richiede di separare autostrada, concessionario ed eventuale Fréjus o Monte Bianco. Verifica ogni importo nel sistema ufficiale e somma le porzioni senza riutilizzare una media europea.
 
 Nella stessa area del calcolo conviene tenere separate altre spese di percorso:
 
@@ -68,7 +68,7 @@ Nella stessa area del calcolo conviene tenere separate altre spese di percorso:
 - permessi o accessi locali applicabili al servizio;
 - lavaggi, pesature o operazioni richieste dal carico.
 
-Separare queste voci rende più facile aggiornare il totale quando cambia soltanto una parte dell’itinerario. Per una missione da o per l'isola, la guida al [costo del traghetto camion in Sardegna](/it/guide/costo-traghetto-camion-sardegna/) mostra perché preventivo marittimo, costi terrestri e ritorno devono restare riconoscibili.
+Separare queste voci rende più facile aggiornare il totale quando cambia soltanto una parte dell’itinerario. Per una missione da o per l'isola, la guida al [costo del traghetto camion in Sardegna](/it/guide/costo-traghetto-camion-sardegna/) mostra perché preventivo marittimo, costi terrestri e ritorno devono restare riconoscibili; per il solo Stretto usa invece il [costo traghetto camion Sicilia](/it/guide/costo-traghetto-camion-sicilia/) con direzione e tariffa corrente.
 
 ## Tempo dell’autista e durata operativa
 

@@ -128,7 +128,7 @@ Per rendere trasparente anche il passaggio interno, immaginiamo un costo operati
 
 ## Presentare il prezzo in modo comprensibile
 
-Il totale dovrebbe essere immediatamente individuabile. Se esistono componenti separate, la suddivisione deve aiutare il cliente, non complicare la lettura. Per esempio, può avere senso distinguere trasporto e traghetto quando quest’ultimo dipende da una prenotazione specifica. Nelle missioni insulari, il metodo sul [costo del traghetto camion in Sardegna](/it/guide/costo-traghetto-camion-sardegna/) aiuta a mantenere riconoscibili preventivo marittimo, validità e costo terrestre. Dividere arbitrariamente carburante, usura e margine espone invece il modello interno senza chiarire il servizio.
+Il totale dovrebbe essere immediatamente individuabile. Se esistono componenti separate, la suddivisione deve aiutare il cliente, non complicare la lettura. Per esempio, può avere senso distinguere trasporto e traghetto quando quest’ultimo dipende da una prenotazione specifica. Nelle missioni insulari, il metodo sul [costo del traghetto camion in Sardegna](/it/guide/costo-traghetto-camion-sardegna/) aiuta a mantenere riconoscibili preventivo marittimo, validità e costo terrestre; per lo Stretto, la guida al [costo traghetto camion Sicilia](/it/guide/costo-traghetto-camion-sicilia/) separa direzione, scaglione e voci già incluse. Dividere arbitrariamente carburante, usura e margine espone invece il modello interno senza chiarire il servizio.
 
 Usare sempre la stessa valuta e la stessa convenzione per decimali e separatori. Se il trattamento di imposte, anticipazioni o altre voci richiede una formulazione precisa, il modello amministrativo va verificato con il proprio consulente. Una guida operativa non sostituisce tale verifica.
 

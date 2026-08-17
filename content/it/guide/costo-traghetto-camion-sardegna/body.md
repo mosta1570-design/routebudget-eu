@@ -255,4 +255,4 @@ Ripeti subito il controllo, senza aspettare il trimestre, quando cambiano rotta,
 - [ ] Il margine viene applicato dopo tutti i costi.
 - [ ] Fonte, data, scadenza e condizioni restano archiviate.
 
-La risposta professionale a “quanto costa il traghetto per il camion?” non è un numero copiato da internet. È un totale verificato, datato e riconciliabile, inserito nel costo completo prima di decidere il prezzo della tratta.
+La risposta professionale a “quanto costa il traghetto per il camion?” non è un numero copiato da internet. È un totale verificato, datato e riconciliabile, inserito nel costo completo prima di decidere il prezzo della tratta. Per un attraversamento breve dello Stretto, non riusare questi criteri o valori: consulta la guida distinta sul [costo traghetto camion Sicilia](/it/guide/costo-traghetto-camion-sicilia/).
