@@ -89,6 +89,8 @@ Il riepilogo generato riflette i dati inseriti. Prima della condivisione:
 
 RouteBudget conserva localmente i calcoli nell’archivio. L’archivio aiuta a riaprire una stima, ma non sostituisce un sistema documentale aziendale, una registrazione contabile o una procedura di conservazione richiesta.
 
+Il template RouteBudget indica una validità fissa di 14 giorni e non offre un campo per personalizzarla. Prima dell’invio, verificare che questo periodo sia adatto alla commessa; quando servono condizioni o scadenze diverse, gestirle nel proprio documento o processo esterno all’app.
+
 ## Versioni e modifiche dopo l’invio
 
 Se il cliente cambia data, tappa, peso dichiarato o servizio, non sovrascrivere mentalmente l’offerta precedente. Aggiornare il calcolo, generare una nuova versione e rendere riconoscibile la revisione.

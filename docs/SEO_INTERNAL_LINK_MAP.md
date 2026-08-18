@@ -1,13 +1,13 @@
 # RouteBudget EU — mappa internal link
 
-Data: 17 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
+Data: 18 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e link contestuali del Markdown/HTML statico.
 
 ## Entry points
 
 | Sorgente | Destinazioni HTML principali |
 | --- | --- |
-| Homepage statica | hub guide, hub calcolatori, landing app, privacy, termini, store |
-| Hub guide | tutti i 3 pillar e i 29 supporti |
+| Homepage statica | hub, landing app, preventivo PDF, tre guide Round 8, privacy, termini, store |
+| Hub guide | tutti i 3 pillar e i 32 supporti |
 | Hub calcolatori | tutti i 3 calcolatori |
 | Header/footer SEO | homepage, hub guide, hub calcolatori, landing app, privacy, termini |
 | Landing app | 3 pillar, 3 calcolatori, entrambi gli store |
@@ -31,6 +31,9 @@ Data: 17 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json`.
 | `guide/costo-traghetto-camion-sicilia/` | calcolo costo | costo/km | preventivo, Sardegna, ritorno a vuoto, calcolatore costo/km |
 | `guide/eurovignette-camion-2026/` | calcolo costo | costo/km | pedaggio Italia, Paesi Bassi, Germania, calcolatore costo/km |
 | `guide/pedaggio-camion-repubblica-ceca/` | calcolo costo | costo/km | pedaggio Italia, Germania, Austria, calcolatore costo/km |
+| `guide/pedaggio-camion-ungheria-2026/` | calcolo costo | costo/km | pedaggio Italia, Austria, Repubblica Ceca, calcolatore costo/km |
+| `guide/pedaggio-camion-danimarca-2026/` | calcolo costo | costo/km | pedaggio Italia, Eurovignette, Germania, calcolatore costo/km |
+| `guide/costo-traghetto-camion-calais-dover-2026/` | calcolo costo | costo/km | Sardegna, Sicilia, preventivo PDF, calcolatore costo/km |
 | `guide/tempi-guida-riposo-camion/` | calcolo costo | costo/km | costi diretti, costo orario, attese, calcolatore costo/km |
 | `guide/ritorno-a-vuoto-autotrasporto/` | calcolo costo | costo/km | costo/km guida, margine, due tool |
 | `guide/proteggere-margine-tratta/` | calcolo costo | costo/km | preventivo, errori tariffa, costo/km |
@@ -135,3 +138,12 @@ Il controllo generato deve continuare a chiudere con zero URL orfani e zero link
 - `calcolo-pedaggio-camion`, Germania e Austria → MYTO CZ Repubblica Ceca;
 - ogni nuova guida → pillar, calcolatore e tre contenuti adiacenti;
 - gate generato atteso: 41 route indexabili, 32 URL in `articles-it.xml`, zero route orfane e zero target o fragment rotti.
+
+## Gate internal link per la release 18 agosto
+
+- homepage statica e React → Ungheria, Danimarca e Calais–Dover; homepage statica → `preventivo-trasporto-pdf`;
+- hub guide → tutti i 32 supporti;
+- pillar `calcolo-costo-trasporto` → tutte e tre le nuove guide con anchor descrittivi;
+- `calcolo-pedaggio-camion` → HU-GO e KmToll senza trasformare la guida italiana in pagina Paese generica;
+- ogni nuova guida → pillar, calcolatore e tre contenuti adiacenti;
+- gate verificato: 44 route indexabili, 35 URL in `articles-it.xml`, zero route orfane, target o fragment rotti.

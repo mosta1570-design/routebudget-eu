@@ -1,0 +1,100 @@
+{
+  "slug": "costo-traghetto-camion-calais-dover-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo traghetto camion Calais–Dover 2026: nolo, BAF ed ETS",
+  "mobileH1": "Costo traghetto camion Calais–Dover: metodo 2026",
+  "description": "Metodo 2026 per leggere un preventivo freight Calais–Dover, separare nolo, BAF, ETS e costi stradali, poi attribuire il totale alla tratta senza doppioni.",
+  "eyebrow": "Manica · traghetto freight",
+  "published": "2026-08-18",
+  "modified": "2026-08-18",
+  "reviewed": "2026-08-18",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo traghetto Calais Dover camion",
+  "secondaryKeywords": [
+    "prezzo traghetto camion Calais Dover",
+    "nolo freight Calais Dover",
+    "BAF traghetto camion Manica",
+    "ETS Dover Calais camion",
+    "preventivo traghetto camion Inghilterra"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "traghetto camion Calais Dover",
+    "nolo freight",
+    "BAF per lane metre",
+    "EU ETS marittimo",
+    "check-in merci",
+    "costo tratta Regno Unito"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:costo-traghetto-camion-sardegna",
+    "guide:costo-traghetto-camion-sicilia",
+    "guide:preventivo-trasporto-pdf",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "costo-traghetto-camion-calais-dover-2026",
+  "canonical": "/it/guide/costo-traghetto-camion-calais-dover-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "DFDS — Douvres–Calais, rotta freight e supplementi",
+      "url": "https://www.dfds.com/fr-fr/ferries-fret-et-logistique/routes-et-horaires/douvres-calais",
+      "publishedOrUpdated": "Pagina live con BAF di agosto 2026, verificata il 18 agosto 2026",
+      "geography": "Calais, Francia–Dover, Regno Unito",
+      "accessedAt": "2026-08-18",
+      "supports": "Terminal freight, tipi di unità accettate, richiesta di quotazione e BAF mensile della rotta; la pagina avverte che possono applicarsi altri supplementi."
+    },
+    {
+      "label": "DFDS — Bunker Adjustment Factor",
+      "url": "https://www.dfds.com/en/freight-ferries-and-logistics/surcharges/baf-surcharges",
+      "publishedOrUpdated": "Tabella agosto 2026 basata sul periodo 20 giugno–20 luglio 2026",
+      "geography": "Rete freight DFDS, inclusa Dover–Calais",
+      "accessedAt": "2026-08-18",
+      "supports": "Metodo mensile BAF, valore MGO di riferimento e fascia applicabile per lane metre; dimostra perché il supplemento non è un prezzo fisso annuale."
+    },
+    {
+      "label": "DFDS — ETS surcharge updates",
+      "url": "https://www.dfds.com/en/freight-ferries-and-logistics/ets-surcharges",
+      "publishedOrUpdated": "Tabella agosto 2026; media EUA calcolata sul periodo 20 giugno–20 luglio 2026",
+      "geography": "Rete freight DFDS, inclusa Dover–Calais",
+      "accessedAt": "2026-08-18",
+      "supports": "Aggiornamento mensile ETS per lane metre, fascia della rotta Dover–Calais e inclusione dichiarata del premium FuelEU nella surcharge ETS dal 2025."
+    },
+    {
+      "label": "DFDS — Freight Surcharges 2026 Dover–Calais/Dunkirk",
+      "url": "https://assets.ctfassets.net/z860498abl84/7tc9ZRYcfXsFbKoDzE3Nzz/b12b41e7487d8961812487408d89ce61/Dover_Surcharges_2026.pdf",
+      "publishedOrUpdated": "Prospetto Freight Surcharges 2026, con port charge efficace dal 1° gennaio 2026",
+      "geography": "Dover–Calais e Dover–Dunkirk",
+      "accessedAt": "2026-08-18",
+      "supports": "Supplementi 2026 per merci pericolose, passeggeri aggiuntivi, port charge, unità fuori sagoma e demurrage; BAF ed ETS sono indicati come variabili mensili."
+    },
+    {
+      "label": "Port Boulogne Calais — e-border per i controlli doganali",
+      "url": "https://www.portboulognecalais.fr/en/cross-channel-freight/disembark-at-the-port-of-calais/with-e-border-organise-your-border-controls/",
+      "publishedOrUpdated": "Pagina operativa live verificata il 18 agosto 2026",
+      "geography": "Porto di Calais, Francia",
+      "accessedAt": "2026-08-18",
+      "supports": "Stati doganali verde e arancione per camion o rimorchi allo sbarco; conferma che il tempo operativo può estendersi oltre la sola navigazione."
+    },
+    {
+      "label": "Commissione europea — emissioni marittime nel sistema EU ETS",
+      "url": "https://climate.ec.europa.eu/eu-action/transport-decarbonisation/reducing-emissions-shipping-sector_en",
+      "publishedOrUpdated": "Pagina istituzionale aggiornata nel 2026 e verificata il 18 agosto 2026",
+      "geography": "Unione europea e viaggi marittimi da o verso porti UE",
+      "accessedAt": "2026-08-18",
+      "supports": "Perimetro normativo dell'EU ETS marittimo, inclusione di metano e protossido di azoto dal 2026 e trattamento dei viaggi tra porti UE e paesi terzi."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo 2026 per riconciliare nolo freight, BAF, ETS, check-in e gambe stradali Calais–Dover senza inventare un prezzo medio."
+}

@@ -81,10 +81,10 @@ for (const route of [...hubPaths, ...pagePaths]) {
     const tableCount = (html.match(/<table>/g) || []).length;
     const accessibleTableCount = (html.match(/<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole \d+"><table>/g) || []).length;
     assert.equal(accessibleTableCount, tableCount, `${route}: every data table needs a named keyboard-scroll region`);
-    if (sourcePage.meta.mobileH1) {
-      assert(html.includes(`<span class="seo-h1__desktop">${sourcePage.meta.title}</span>`), `${route}: desktop H1 variant missing`);
-      assert(html.includes(`<span class="seo-h1__mobile">${sourcePage.meta.mobileH1}</span>`), `${route}: mobile H1 variant missing`);
-    }
+    const h1Matches = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
+    assert.equal(h1Matches.length, 1, `${route}: exactly one semantic H1 required`);
+    assert.equal(h1Matches[0][1], escapeHtmlText(sourcePage.meta.title), `${route}: H1 must match escaped editorial title`);
+    assert(!html.includes('seo-h1__'), `${route}: responsive H1 text variants are not allowed`);
     if (sourcePage.meta.pillar) {
       const pillar = sourceById.get(resolveReferenceId(sourcePage.locale, sourcePage.meta.pillar));
       assert(pillar && html.includes(`href="${pillar.urlPath}"`), `${route}: visible pillar link missing`);
@@ -393,6 +393,17 @@ function decodeXml(value) {
     .replaceAll('&gt;', '>')
     .replaceAll('&#039;', "'")
     .replaceAll('&amp;', '&');
+}
+
+function escapeHtmlText(value) {
+  const entities = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;',
+  };
+  return String(value).replace(/[&<>"']/g, (character) => entities[character]);
 }
 
 assert.equal(decodeXml('&quot;'), '"');

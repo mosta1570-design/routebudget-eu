@@ -33,13 +33,16 @@
   .brand img{width:38px;height:38px;border-radius:10px;display:block}
   .brand b{font-size:17px;font-weight:800;letter-spacing:-.3px}
   .brand b span{color:var(--primary)}
+  .skip-link{position:fixed;inset-block-start:8px;inset-inline-start:8px;z-index:30;transform:translateY(-160%);background:#fff;color:#070B12;padding:10px 14px;border-radius:10px;font-weight:800;text-decoration:none}
+  .skip-link:focus{transform:none}
   .langs{display:flex;gap:6px}
   .langs button{
     font:inherit;font-size:13px;font-weight:700;cursor:pointer;color:var(--text2);
     background:var(--input);border:1px solid var(--divider);border-radius:var(--pill);
-    padding:7px 14px;transition:.15s;
+    min-width:44px;min-height:44px;padding:7px 14px;transition:.15s;
   }
-  .langs button.active{background:var(--primary);border-color:var(--primary);color:#fff}
+  .langs button.active{background:#1266A8;border-color:#1266A8;color:#fff}
+  a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:3px}
   .hero{padding:56px 0 28px;text-align:center}
   .hero .kicker{color:var(--primary);font-weight:800;letter-spacing:1.6px;font-size:12px;text-transform:uppercase}
   .hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;margin:10px 0 8px}
@@ -82,17 +85,18 @@
 </style>
 </head>
 <body data-active="it">
+<a class="skip-link" href="#legal-main">Vai al contenuto / Skip to content</a>
 <header>
   <div class="bar">
-    <a class="brand" href="index.html"><img src="logo-ui.png" alt="RouteBudget EU" /><b>RouteBudget<span>EU</span></b></a>
-    <div class="langs">
-      <button data-set="en">EN</button>
-      <button data-set="it" class="active">IT</button>
+    <a class="brand" href="/"><img src="logo-ui.png" alt="RouteBudget EU" /><b>RouteBudget<span>EU</span></b></a>
+    <div class="langs" role="group" aria-label="Lingua / Language">
+      <button data-set="en" aria-pressed="false">EN</button>
+      <button data-set="it" class="active" aria-pressed="true">IT</button>
     </div>
   </div>
 </header>
 
-<div class="wrap">
+<main class="wrap" id="legal-main" tabindex="-1">
   <div class="hero">
     <div class="kicker" data-lang="en">Privacy Policy</div>
     <div class="kicker" data-lang="it">Informativa sulla Privacy</div>
@@ -244,17 +248,21 @@
   </div>
 
   <footer>
-    <p>© 2026 RouteBudget EU · Eng. Mostafa · <a href="index.html" data-lang="en">Support</a><a href="index.html" data-lang="it">Assistenza</a> · <a href="terms.html" data-lang="en">Terms of Use</a><a href="terms.html" data-lang="it">Termini di Servizio</a></p>
+    <p>© 2026 RouteBudget EU · Eng. Mostafa · <a href="/" data-lang="en">Support</a><a href="/" data-lang="it">Assistenza</a> · <a href="terms.html" data-lang="en">Terms of Use</a><a href="terms.html" data-lang="it">Termini di Servizio</a></p>
   </footer>
-</div>
+</main>
 
 <script>
-  document.querySelectorAll('.langs button').forEach(function(b){
+  const languageButtons=document.querySelectorAll('.langs button');
+  languageButtons.forEach(function(b){
     b.addEventListener('click',function(){
       document.body.dataset.active=b.dataset.set;
       document.documentElement.lang=b.dataset.set;
-      document.querySelectorAll('.langs button').forEach(function(x){x.classList.remove('active')});
-      b.classList.add('active');
+      languageButtons.forEach(function(x){
+        const selected=x===b;
+        x.classList.toggle('active',selected);
+        x.setAttribute('aria-pressed',String(selected));
+      });
     });
   });
 </script>

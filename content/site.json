@@ -3,11 +3,11 @@
   "origin": "https://routebudget.eu",
   "basePath": "",
   "author": "Eng. Mostafa",
-  "coreLastModified": "2026-08-17",
+  "coreLastModified": "2026-08-18",
   "legalLastModified": "2026-08-01",
   "expectedPublished": {
     "pillar": 3,
-    "guide": 29,
+    "guide": 32,
     "calculator": 3,
     "landing": 1
   },

@@ -11,6 +11,7 @@ const schema = JSON.parse(await readFile(path.join(CONTENT, 'meta.schema.json'),
 const config = JSON.parse(await readFile(path.join(CONTENT, 'site.json'), 'utf8'));
 const expected = config.expectedPublished;
 const required = new Set(schema.required);
+const allowedFields = new Set(Object.keys(schema.properties));
 for (const field of ['status', 'author', 'reviewer', 'primaryKeyword', 'secondaryKeywords', 'cluster', 'relatedCalculator', 'appFeature', 'canonical', 'ogImage', 'noindex', 'sources', 'changeSummary']) {
   assert(required.has(field), `meta schema missing required field: ${field}`);
 }
@@ -29,6 +30,7 @@ for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
   for (const entry of entries.filter((item) => item.isDirectory())) {
     const meta = JSON.parse(await readFile(path.join(directory, entry.name, 'meta.json'), 'utf8'));
     for (const field of required) assert(Object.hasOwn(meta, field), `${section}/${entry.name}: schema field ${field} missing`);
+    for (const field of Object.keys(meta)) assert(allowedFields.has(field), `${section}/${entry.name}: unsupported schema field ${field}`);
     if (meta.status === 'published' && meta.noindex === false) {
       published += 1;
       counts[meta.kind] += 1;
