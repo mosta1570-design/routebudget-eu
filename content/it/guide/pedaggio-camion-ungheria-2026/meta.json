@@ -1,0 +1,100 @@
+{
+  "slug": "pedaggio-camion-ungheria-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion in Ungheria 2026: HU-GO, classi e costo tratta",
+  "mobileH1": "Pedaggio camion Ungheria 2026: guida HU-GO",
+  "description": "Come calcolare il pedaggio camion in Ungheria nel 2026: HU-GO oltre 3,5 t, classi J2-J5, biglietto di tratta, OBU e costo nel preventivo PDF.",
+  "eyebrow": "Ungheria · HU-GO 2026",
+  "published": "2026-08-18",
+  "modified": "2026-08-18",
+  "reviewed": "2026-08-18",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Ungheria",
+  "secondaryKeywords": [
+    "HU-GO camion 2026",
+    "calcolo pedaggio Ungheria camion",
+    "tariffe HU-GO 2026",
+    "biglietto di tratta HU-GO",
+    "classi J2 J3 J4 J5"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "HU-GO",
+    "pedaggio chilometrico Ungheria",
+    "classi J2-J5",
+    "biglietto di tratta",
+    "OBU camion",
+    "preventivo trasporto internazionale"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-austria",
+    "guide:pedaggio-camion-repubblica-ceca",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-ungheria-2026",
+  "canonical": "/it/guide/pedaggio-camion-ungheria-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Magyar Közút — cambiamenti HU-GO nel 2026",
+      "url": "https://nemzetiutdij.hu/en/news/changes-to-the-e-toll-system-in-2026",
+      "publishedOrUpdated": "Pubblicato il 10 dicembre 2025; misure applicabili nel 2026",
+      "geography": "Ungheria, rete HU-GO",
+      "accessedAt": "2026-08-18",
+      "supports": "Variazione delle tariffe dal 1° gennaio 2026, ampliamento della rete dal 1° luglio 2026 e aggiornamento delle sanzioni per le categorie J2-J5."
+    },
+    {
+      "label": "Magyar Közút — tabella ufficiale tariffe HU-GO 2026",
+      "url": "https://nemzetiutdij.hu/en/e-toll/etoll-tolls/toll-rates",
+      "publishedOrUpdated": "Tariffe lorde in vigore dal 1° gennaio 2026",
+      "geography": "Ungheria, autostrade e strade principali soggette a HU-GO",
+      "accessedAt": "2026-08-18",
+      "supports": "Componenti infrastruttura ed esternalità, valori HUF/km, categorie J2-J5, tipo di strada e classificazioni ambientali."
+    },
+    {
+      "label": "Magyar Közút — pagamenti, OBU e biglietto di tratta",
+      "url": "https://nemzetiutdij.hu/en/e-toll/etoll-additional-information/payment-information",
+      "publishedOrUpdated": "Pagina operativa corrente; validità del biglietto aggiornata dal 1° maggio 2026",
+      "geography": "Sistema elettronico HU-GO, Ungheria",
+      "accessedAt": "2026-08-18",
+      "supports": "Pagamento con OBU o biglietto di tratta, acquisto prima del viaggio, validità di 300 minuti, singola direzione, non trasferibilità e conferma del pagamento."
+    },
+    {
+      "label": "Magyar Közút — tratti stradali HU-GO",
+      "url": "https://nemzetiutdij.hu/en/e-toll/etoll-tolls/toll-sections",
+      "publishedOrUpdated": "Mappa e rinvio normativo della rete 2026",
+      "geography": "Ungheria, rete a pedaggio per veicoli oltre 3,5 t",
+      "accessedAt": "2026-08-18",
+      "supports": "Ambito della rete HU-GO, mappa informativa e rinvio al Decreto 25/2013 per l'elenco giuridicamente rilevante dei tratti."
+    },
+    {
+      "label": "HU-GO — modifica tariffaria del 1° marzo 2026",
+      "url": "https://www.hu-go.hu/articles/article/valtozas-az-e-utdij-rendszerben-2026-marcius-1-tol",
+      "publishedOrUpdated": "Aggiornamento pubblicato dopo il Decreto 2/2026 del 26 febbraio 2026",
+      "geography": "Ungheria, strade principali HU-GO",
+      "accessedAt": "2026-08-18",
+      "supports": "Conferma che dal 1° marzo 2026 non è entrato in vigore un ulteriore aumento della componente infrastrutturale sulle strade principali."
+    },
+    {
+      "label": "Magyar Közút — operatori OBU controllati",
+      "url": "https://nemzetiutdij.hu/en/e-toll/etoll-additional-information/audited-toll-declaration-operators",
+      "publishedOrUpdated": "Elenco operativo corrente verificato il 18 agosto 2026",
+      "geography": "Sistema elettronico HU-GO, Ungheria",
+      "accessedAt": "2026-08-18",
+      "supports": "Uso degli OBU degli operatori di dichiarazione sottoposti a controllo e avvertenza che un segnale acustico di altri dispositivi non prova la detrazione del pedaggio."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: guida operativa HU-GO 2026 per verificare il pedaggio ungherese e inserirlo una sola volta nel costo e nel preventivo della tratta."
+}

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -34,7 +34,36 @@ for (const [index, row] of rows.entries()) {
   assert(row.source_urls.split(';').every((url) => /^https:\/\//.test(url.trim())), `keyword row ${index + 2}: evidence URL invalid`);
 }
 
-console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents; no invented volume/CPC/difficulty.`);
+const publishedPages = [];
+for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
+  const directory = path.join(ROOT, 'content', 'it', section);
+  let entries = [];
+  try {
+    entries = await readdir(directory, { withFileTypes: true });
+  } catch (error) {
+    if (error?.code === 'ENOENT') continue;
+    throw error;
+  }
+  for (const entry of entries.filter((item) => item.isDirectory())) {
+    const meta = JSON.parse(await readFile(path.join(directory, entry.name, 'meta.json'), 'utf8'));
+    if (meta.status === 'published' && meta.noindex === false) {
+      publishedPages.push({ id: `${section}/${entry.name}`, canonical: meta.canonical, primaryKeyword: meta.primaryKeyword });
+    }
+  }
+}
+
+for (const page of publishedPages) {
+  const exactRows = rows.filter(
+    (row) => row.target_url === page.canonical && row.primary_keyword === page.primaryKeyword,
+  );
+  assert.equal(
+    exactRows.length,
+    1,
+    `${page.id}: keyword map must contain exactly one row matching canonical and primaryKeyword`,
+  );
+}
+
+console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents cover ${publishedPages.length} published pages; no invented volume/CPC/difficulty.`);
 
 function parseCsv(value) {
   const lines = value.trim().split(/\r?\n/);

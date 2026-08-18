@@ -7,8 +7,8 @@
   "description": "Metodo per stimare il pedaggio di un camion in Italia: classe, numero di assi, chilometri tariffari, tipo di tratta e concessionari da verificare.",
   "eyebrow": "Pedaggi camion · Metodo italiano",
   "published": "2026-08-11",
-  "modified": "2026-08-16",
-  "reviewed": "2026-08-16",
+  "modified": "2026-08-18",
+  "reviewed": "2026-08-18",
   "primaryKeyword": "calcolo pedaggio camion",
   "searchIntent": "informational-transactional",
   "topics": [
@@ -34,7 +34,7 @@
       "url": "https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio",
       "publishedOrUpdated": "Tariffe indicate dal gestore aggiornate al 1° gennaio 2026",
       "geography": "Italia — rete Autostrade per l'Italia",
-      "accessedAt": "2026-08-11",
+      "accessedAt": "2026-08-18",
       "supports": "Metodo tariffa unitaria per chilometri, IVA, arrotondamento, sistemi aperti e chiusi e gestione di tratte con più concessionari"
     },
     {
@@ -42,7 +42,7 @@
       "url": "https://www.autostrade.it/it/servizi-al-cliente/pedaggio/classi-di-pedaggio",
       "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
       "geography": "Italia — rete Autostrade per l'Italia",
-      "accessedAt": "2026-08-11",
+      "accessedAt": "2026-08-18",
       "supports": "Classificazione per altezza all'asse anteriore nei veicoli a due assi e per numero di assi nei veicoli e convogli più lunghi"
     },
     {
@@ -54,6 +54,8 @@
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "secondaryKeywords": [
+    "pedaggio camion Italia",
+    "pedaggio camion Italia 2026",
     "quanto costa pedaggio camion",
     "classe pedaggio camion assi",
     "pedaggio autostrada mezzi pesanti"
@@ -64,5 +66,5 @@
   "canonical": "/it/guide/calcolo-pedaggio-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunto il percorso Francia con concessionari e trafori, distinto dal metodo italiano."
+  "changeSummary": "Rafforzato l’intento pedaggio camion Italia 2026 senza creare una URL concorrente; fonti del gestore ricontrollate."
 }

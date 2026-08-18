@@ -21,7 +21,9 @@ import appCosts from '../assets/app-costs-it.png';
 import appIcon from '../assets/app-icon-ui.png';
 import appScenarios from '../assets/app-scenarios-it.png';
 import heroDesktop from '../assets/hero/routebudget-hero-desktop.mp4';
+import heroDesktopWebm from '../assets/hero/routebudget-hero-desktop.webm';
 import heroMobile from '../assets/hero/routebudget-hero-mobile.mp4';
+import heroMobileWebm from '../assets/hero/routebudget-hero-mobile.webm';
 import heroPoster from '../assets/hero/routebudget-hero-poster.webp';
 import {
   APP_STORE_URL,
@@ -737,7 +739,9 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
           >
             {mediaEnabled ? (
               <>
+                <source media="(max-width: 767px) and (prefers-reduced-motion: no-preference)" src={heroMobileWebm} type="video/webm" />
                 <source media="(max-width: 767px) and (prefers-reduced-motion: no-preference)" src={heroMobile} type="video/mp4" />
+                <source media="(min-width: 768px) and (prefers-reduced-motion: no-preference)" src={heroDesktopWebm} type="video/webm" />
                 <source media="(min-width: 768px) and (prefers-reduced-motion: no-preference)" src={heroDesktop} type="video/mp4" />
               </>
             ) : null}

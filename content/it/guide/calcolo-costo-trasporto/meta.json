@@ -6,8 +6,8 @@
   "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
   "eyebrow": "Guida al costo di tratta",
   "published": "2026-08-01",
-  "modified": "2026-08-16",
-  "reviewed": "2026-08-16",
+  "modified": "2026-08-18",
+  "reviewed": "2026-08-18",
   "primaryKeyword": "calcolo costo trasporto",
   "searchIntent": "informational",
   "topics": [
@@ -82,5 +82,5 @@
   "canonical": "/it/guide/calcolo-costo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunti percorsi verificati verso Francia, traghetto Sardegna e clausola carburante, mantenendo il pillar sul costo completo."
+  "changeSummary": "Aggiunti collegamenti contestuali a HU-GO, KmToll e Calais–Dover, mantenendo il metodo generale distinto dalle guide specialistiche."
 }

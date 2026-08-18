@@ -35,12 +35,23 @@ const APP_FEATURES = new Set([
   'local-archive',
   'pdf-quote',
 ]);
+const INTENT_FEATURE_COMPATIBILITY = {
+  'add-trip-costs': new Set(['complete-route-calculation', 'cost-breakdown', 'fuel-estimate']),
+  'complete-trip': new Set(['complete-route-calculation', 'cost-breakdown', 'cost-scenarios']),
+  'pdf-quote': new Set(['local-archive', 'pdf-quote']),
+  'protect-margin': new Set(['cost-breakdown', 'cost-scenarios', 'pdf-quote']),
+  unlimited: new Set(['local-archive']),
+};
 const UNSUPPORTED_PRODUCT_CLAIMS = [
   /Google Maps/i,
   /navigazione (?:GPS|turn-by-turn)/i,
   /pedaggi (?:live|in tempo reale)/i,
   /tracciamento (?:live|in tempo reale)/i,
   /RouteBudget[^.]{0,80}(?:ottimizza|sceglie) il percorso/i,
+  /RouteBudget (?:gestisce|offre|include) (?:la |un |una )?(?:fatturazione|TMS|ERP|flotta|database clienti)/i,
+  /RouteBudget (?:genera|crea|emette) (?:fatture|contratti|documenti fiscali)/i,
+  /RouteBudget (?:salva|sincronizza|archivia)[^.]{0,50}(?:nel cloud|i PDF|documenti)/i,
+  /RouteBudget (?:garantisce|assicura)[^.]{0,60}(?:profitto|margine|risparmio|conformit[aà]|precisione)/i,
 ];
 const CTA_COPY = {
   'complete-trip': {
@@ -64,9 +75,9 @@ const CTA_COPY = {
     body: 'Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo.',
   },
   unlimited: {
-    eyebrow: 'Archivio operativo',
-    title: 'Salva calcoli senza limite.',
-    body: 'Riapri le tratte, aggiorna le ipotesi e conserva uno storico locale nel flusso completo RouteBudget.',
+    eyebrow: 'Archivio locale',
+    title: 'Riapri i calcoli recenti.',
+    body: 'Ritrova le tratte salvate sul dispositivo, aggiorna le ipotesi e genera un nuovo riepilogo quando serve.',
   },
 };
 
@@ -257,7 +268,7 @@ function validatePage(page, directorySlug) {
   assert(/^\d{4}-\d{2}-\d{2}$/.test(meta.reviewed), `${id}: invalid reviewed date`);
   assert(new Date(meta.modified) >= new Date(meta.published), `${id}: modified predates published`);
   assert(new Date(meta.reviewed) >= new Date(meta.modified), `${id}: reviewed predates modified`);
-  const today = new Date().toISOString().slice(0, 10);
+  const today = dateInTimeZone(new Date(), 'Europe/Rome');
   assert(meta.published <= today, `${id}: published date is in the future`);
   assert(meta.modified <= today, `${id}: modified date is in the future`);
   assert(meta.reviewed <= today, `${id}: reviewed date is in the future`);
@@ -266,6 +277,9 @@ function validatePage(page, directorySlug) {
   assert(Array.isArray(meta.secondaryKeywords) && meta.secondaryKeywords.length >= 2, `${id}: at least two secondaryKeywords required`);
   assert(Array.isArray(meta.topics) && meta.topics.length >= 2, `${id}: at least two topics required`);
   assert(Array.isArray(meta.related) && meta.related.length >= 2, `${id}: at least two related links required`);
+  assert(new Set(meta.secondaryKeywords).size === meta.secondaryKeywords.length, `${id}: secondaryKeywords must be unique`);
+  assert(new Set(meta.topics).size === meta.topics.length, `${id}: topics must be unique`);
+  assert(new Set(meta.related).size === meta.related.length, `${id}: related links must be unique`);
   assert(Array.isArray(meta.sources), `${id}: sources must be an array`);
   assert(typeof meta.noindex === 'boolean', `${id}: noindex must be boolean`);
   assert(meta.status !== 'published' || meta.noindex === false, `${id}: published page cannot be noindex`);
@@ -275,6 +289,10 @@ function validatePage(page, directorySlug) {
   assert(APP_FEATURES.has(meta.appFeature), `${id}: unsupported appFeature`);
   assert(meta.relatedCalculator === null || typeof meta.relatedCalculator === 'string', `${id}: relatedCalculator must be a reference or null`);
   assert(Object.hasOwn(CTA_COPY, meta.conversionIntent), `${id}: unknown conversionIntent`);
+  assert(
+    INTENT_FEATURE_COMPATIBILITY[meta.conversionIntent].has(meta.appFeature),
+    `${id}: ${meta.appFeature} is incompatible with conversionIntent ${meta.conversionIntent}`,
+  );
   assert(!/^#\s/m.test(markdown), `${id}: body.md must not contain an H1`);
   assert(!/<[A-Za-z][^>]*>/.test(markdown), `${id}: raw HTML is not allowed in Markdown`);
   if (meta.status === 'published') {
@@ -292,6 +310,8 @@ function validatePage(page, directorySlug) {
     assert(typeof source.publishedOrUpdated === 'string' && source.publishedOrUpdated.trim(), `${id}: source publishedOrUpdated required`);
     assert(typeof source.geography === 'string' && source.geography.trim(), `${id}: source geography required`);
     assert(/^\d{4}-\d{2}-\d{2}$/.test(source.accessedAt), `${id}: source accessedAt must be YYYY-MM-DD`);
+    assert(source.accessedAt <= meta.reviewed, `${id}: source accessedAt cannot follow reviewed date`);
+    assert(source.accessedAt <= today, `${id}: source accessedAt cannot be in the future`);
     assert(typeof source.supports === 'string' && source.supports.trim(), `${id}: source claim description required`);
   }
 
@@ -301,6 +321,7 @@ function validatePage(page, directorySlug) {
       assert(meta.pillar === null, `${id}: pillar page must set pillar to null`);
     } else {
       assert(typeof meta.pillar === 'string', `${id}: supporting guide must name a pillar`);
+      assert(typeof meta.relatedCalculator === 'string', `${id}: supporting guide must name a related calculator`);
     }
     assert(meta.calculatorId === null, `${id}: guide calculatorId must be null`);
   } else if (section === 'calcolatori') {
@@ -317,6 +338,17 @@ function validatePage(page, directorySlug) {
     assert(meta.calculatorId === null, `${id}: landing calculatorId must be null`);
     assert(meta.pillar === null, `${id}: landing page must not claim a guide pillar`);
   }
+}
+
+function dateInTimeZone(value, timeZone) {
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(value);
+  const byType = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${byType.year}-${byType.month}-${byType.day}`;
 }
 
 function validateRelationships(allPages, byId) {
@@ -388,10 +420,7 @@ ${renderHead({
       <div class="seo-shell">
         ${renderBreadcrumb(page)}
         <p class="seo-eyebrow">${escapeHtml(page.meta.eyebrow)}</p>
-        <h1>${page.meta.mobileH1
-          ? `<span class="seo-h1__desktop">${escapeHtml(page.meta.title)}</span>
-          <span class="seo-h1__mobile">${escapeHtml(page.meta.mobileH1)}</span>`
-          : escapeHtml(page.meta.title)}</h1>
+        <h1>${escapeHtml(page.meta.title)}</h1>
         <p class="seo-hero__summary">${escapeHtml(page.meta.description)}</p>
         <div class="seo-meta" aria-label="Informazioni editoriali">
           <span>A cura di ${escapeHtml(page.meta.author)} · ${escapeHtml(config.name)}</span>

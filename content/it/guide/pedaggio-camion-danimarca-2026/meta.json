@@ -1,0 +1,108 @@
+{
+  "slug": "pedaggio-camion-danimarca-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion in Danimarca 2026: KmToll, CO₂ e ponti",
+  "mobileH1": "Pedaggio camion Danimarca 2026: KmToll e ponti",
+  "description": "Come calcolare il pedaggio camion in Danimarca nel 2026: KmToll per peso e CO₂, maggiorazione LEZ, ticket digitale e costi separati dei ponti.",
+  "eyebrow": "Danimarca · KmToll 2026",
+  "published": "2026-08-18",
+  "modified": "2026-08-18",
+  "reviewed": "2026-08-18",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Danimarca",
+  "secondaryKeywords": [
+    "KmToll Danimarca camion",
+    "pedaggio camion Danimarca 2026",
+    "tariffe KmToll CO2",
+    "pedaggio Storebælt camion",
+    "pedaggio Øresund camion"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "KmToll",
+    "pedaggio camion Danimarca",
+    "classe CO2",
+    "zone a basse emissioni",
+    "Storebælt",
+    "Øresund"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:eurovignette-camion-2026",
+    "guide:pedaggio-camion-germania",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-danimarca-2026",
+  "canonical": "/it/guide/pedaggio-camion-danimarca-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Vejafgifter.dk — Schema KmToll ufficiale",
+      "url": "https://vejafgifter.dk/en/",
+      "publishedOrUpdated": "Sistema operativo dal 1° gennaio 2025; pagina corrente verificata il 18 agosto 2026",
+      "geography": "Danimarca",
+      "accessedAt": "2026-08-18",
+      "supports": "Soglia di 12 t nel 2026, pedaggio chilometrico differenziato per CO2, rete di circa 10.900 km e uscita danese dall'Eurovignette dal 1° gennaio 2025."
+    },
+    {
+      "label": "Vejafgifter.dk — Annex B, tabella tariffaria KmToll versione 1.2",
+      "url": "https://vejafgifter.dk/media/rtopb53s/annex-b-tariff-table-_v12.pdf",
+      "publishedOrUpdated": "Versione 1.2 del 7 novembre 2025; prossima revisione indicata nel terzo trimestre 2026",
+      "geography": "Dominio KmToll, Danimarca",
+      "accessedAt": "2026-08-18",
+      "supports": "Tariffe in DKK/km per tre fasce di peso e cinque classi CO2, oltre agli importi aggiuntivi applicati nei segmenti dentro le zone a basse emissioni."
+    },
+    {
+      "label": "Vejafgifter.dk — Strade soggette a KmToll",
+      "url": "https://vejafgifter.dk/en/which-roads/",
+      "publishedOrUpdated": "Mappa e perimetro correnti verificati il 18 agosto 2026",
+      "geography": "Rete stradale danese",
+      "accessedAt": "2026-08-18",
+      "supports": "Perimetro di circa 10.900 km, obbligo di tenere attivo il GNSS sulla rete danese e trattamento separato dei pedaggi Storebælt e Øresund."
+    },
+    {
+      "label": "Vejafgifter.dk — KmToll ticket digitale",
+      "url": "https://www.vejafgifter.dk/en/digital-kmtoll-ticket/",
+      "publishedOrUpdated": "Procedura operativa corrente verificata il 18 agosto 2026",
+      "geography": "Danimarca",
+      "accessedAt": "2026-08-18",
+      "supports": "Acquisto prima della partenza, validità di 24 ore, andata e ritorno, dati e documenti richiesti ai camion immatricolati all'estero."
+    },
+    {
+      "label": "Vejafgifter.dk — Zone a basse emissioni",
+      "url": "https://vejafgifter.dk/en/low-emission-zones/",
+      "publishedOrUpdated": "Regole correnti verificate il 18 agosto 2026",
+      "geography": "Copenaghen, Frederiksberg, Odense, Aarhus e Aalborg",
+      "accessedAt": "2026-08-18",
+      "supports": "Maggiorazione KmToll del 50% nei segmenti LEZ e separazione tra pagamento del pedaggio e requisiti ambientali di accesso."
+    },
+    {
+      "label": "Storebælt — Prezzi business 2026",
+      "url": "https://storebaelt.dk/en/prices-and-discounts/business/",
+      "publishedOrUpdated": "Listino business 2026 verificato il 18 agosto 2026",
+      "geography": "Ponte Storebælt, Danimarca",
+      "accessedAt": "2026-08-18",
+      "supports": "Prezzi per singolo attraversamento, fasce di lunghezza, IVA inclusa e condizioni del Green discount per veicoli commerciali."
+    },
+    {
+      "label": "Øresundsbron — Prezzi business camion",
+      "url": "https://www.oresundsbron.com/en/business/truck",
+      "publishedOrUpdated": "Prezzi business correnti verificati il 18 agosto 2026",
+      "geography": "Ponte Øresund, Danimarca-Svezia",
+      "accessedAt": "2026-08-18",
+      "supports": "Prezzi per camion oltre 9 m con e senza contratto ØresundBUSINESS, volumi, IVA esclusa e condizioni speciali."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo operativo 2026 per verificare KmToll, distinguere CO2 e LEZ, aggiungere i ponti separati e trasferire il totale nel costo della tratta."
+}

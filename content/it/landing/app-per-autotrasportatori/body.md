@@ -30,14 +30,13 @@ Una stima utile parte da dati verificabili. A seconda della tratta e del mezzo, 
 
 - distanza operativa inserita dall’utente;
 - consumo e prezzo del carburante o altri input energetici pertinenti;
-- pedaggi stimati o importi da verificare;
-- costo del tempo dell’autista;
-- quota di usura e manutenzione;
-- costi fissi o specifici attribuiti alla missione;
+- pedaggio stimato oppure totale manuale verificato per la direzione;
+- costo orario dell’autista, applicato alla durata stimata dall’app;
+- quota di usura calcolata sulla distanza;
 - ritorno a vuoto o riposizionamento;
 - margine desiderato.
 
-RouteBudget combina questi input. Non misura automaticamente il costo reale della flotta e non certifica la correttezza del percorso. Se un valore cambia, anche il risultato cambia.
+RouteBudget combina questi input. L’app nativa non offre un campo libero per costi fissi, attese o spese specifiche della missione: queste voci vanno calcolate e gestite fuori dall’app, oppure riflesse in un input aziendale pertinente solo quando il metodo lo giustifica e senza contarle due volte. Non misura automaticamente il costo reale della flotta e non certifica la correttezza del percorso. Se un valore cambia, anche il risultato cambia.
 
 Per una verifica isolata dell’adeguamento carburante, il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) usa quattro input e una formula visibile. L’app mantiene invece il flusso completo della missione.
 
@@ -75,7 +74,7 @@ Questo esempio non contiene una tariffa consigliata. Mostra il vantaggio del pro
 
 ## Archivio locale: continuità senza promesse eccessive
 
-L’archivio locale consente di conservare e riaprire calcoli sul dispositivo. È utile per confrontare versioni e correggere una tratta, ma non va descritto come sistema contabile, cloud aziendale o conservazione legale. Backup e gestione del dispositivo restano parte delle procedure dell’utente.
+L’archivio locale consente di ritrovare, riaprire e correggere calcoli sul dispositivo. Non confronta automaticamente le versioni e non conserva una cronologia dei PDF: documenti inviati, revisioni e riferimenti vanno gestiti fuori dall’app. Non è un sistema contabile, cloud aziendale o di conservazione legale. Backup e gestione del dispositivo restano parte delle procedure dell’utente.
 
 Una buona abitudine è aggiungere alla propria documentazione esterna riferimento, data e versione del preventivo. In questo modo la stima locale resta collegata al documento effettivamente inviato.
 
