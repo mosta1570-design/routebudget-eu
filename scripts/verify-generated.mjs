@@ -83,8 +83,7 @@ for (const route of [...hubPaths, ...pagePaths]) {
     assert.equal(accessibleTableCount, tableCount, `${route}: every data table needs a named keyboard-scroll region`);
     const h1Matches = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
     assert.equal(h1Matches.length, 1, `${route}: exactly one semantic H1 required`);
-    const h1Text = decodeXml(h1Matches[0][1].replace(/<[^>]+>/g, '')).trim();
-    assert.equal(h1Text, sourcePage.meta.title, `${route}: H1 must match editorial title`);
+    assert.equal(h1Matches[0][1], escapeHtmlText(sourcePage.meta.title), `${route}: H1 must match escaped editorial title`);
     assert(!html.includes('seo-h1__'), `${route}: responsive H1 text variants are not allowed`);
     if (sourcePage.meta.pillar) {
       const pillar = sourceById.get(resolveReferenceId(sourcePage.locale, sourcePage.meta.pillar));
@@ -394,6 +393,17 @@ function decodeXml(value) {
     .replaceAll('&gt;', '>')
     .replaceAll('&#039;', "'")
     .replaceAll('&amp;', '&');
+}
+
+function escapeHtmlText(value) {
+  const entities = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;',
+  };
+  return String(value).replace(/[&<>"']/g, (character) => entities[character]);
 }
 
 assert.equal(decodeXml('&quot;'), '"');
