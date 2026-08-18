@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-17",
+  "revisionDate": "2026-08-18",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -71,7 +71,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-16"
+      "modified": "2026-08-18"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -83,7 +83,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-pedaggio-camion/",
       "indexable": true,
       "primaryKeyword": "calcolo pedaggio camion",
-      "modified": "2026-08-16"
+      "modified": "2026-08-18"
     },
     {
       "id": "it:guide:clausola-adeguamento-carburante-autotrasporto",
@@ -158,6 +158,18 @@
       "modified": "2026-08-12"
     },
     {
+      "id": "it:guide:costo-traghetto-camion-calais-dover-2026",
+      "url": "https://routebudget.eu/it/guide/costo-traghetto-camion-calais-dover-2026/",
+      "title": "Costo traghetto camion Calais–Dover 2026: nolo, BAF ed ETS",
+      "description": "Metodo 2026 per leggere un preventivo freight Calais–Dover, separare nolo, BAF, ETS e costi stradali, poi attribuire il totale alla tratta senza doppioni.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-traghetto-camion-calais-dover-2026/",
+      "indexable": true,
+      "primaryKeyword": "costo traghetto Calais Dover camion",
+      "modified": "2026-08-18"
+    },
+    {
       "id": "it:guide:costo-traghetto-camion-sardegna",
       "url": "https://routebudget.eu/it/guide/costo-traghetto-camion-sardegna/",
       "title": "Costo traghetto camion Sardegna 2026: nolo e supplementi",
@@ -230,6 +242,18 @@
       "modified": "2026-08-15"
     },
     {
+      "id": "it:guide:pedaggio-camion-danimarca-2026",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-danimarca-2026/",
+      "title": "Pedaggio camion in Danimarca 2026: KmToll, CO₂ e ponti",
+      "description": "Come calcolare il pedaggio camion in Danimarca nel 2026: KmToll per peso e CO₂, maggiorazione LEZ, ticket digitale e costi separati dei ponti.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-danimarca-2026/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Danimarca",
+      "modified": "2026-08-18"
+    },
+    {
       "id": "it:guide:pedaggio-camion-francia",
       "url": "https://routebudget.eu/it/guide/pedaggio-camion-francia/",
       "title": "Pedaggio camion Francia 2026: classi, Fréjus e Monte Bianco",
@@ -300,6 +324,18 @@
       "indexable": true,
       "primaryKeyword": "pedaggio camion Svizzera",
       "modified": "2026-08-14"
+    },
+    {
+      "id": "it:guide:pedaggio-camion-ungheria-2026",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-ungheria-2026/",
+      "title": "Pedaggio camion in Ungheria 2026: HU-GO, classi e costo tratta",
+      "description": "Come calcolare il pedaggio camion in Ungheria nel 2026: HU-GO oltre 3,5 t, classi J2-J5, biglietto di tratta, OBU e costo nel preventivo PDF.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-ungheria-2026/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Ungheria",
+      "modified": "2026-08-18"
     },
     {
       "id": "it:guide:preventivo-trasporto-pdf",
