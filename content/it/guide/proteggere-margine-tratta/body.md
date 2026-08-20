@@ -25,7 +25,7 @@ Il margine non può compensare un costo dimenticato. Prima di calcolarlo, verifi
 | Mezzo | usura, manutenzione e quota fissa sono rappresentate? |
 | Servizio | urgenza, attrezzature o tappe aggiuntive sono chiare? |
 
-Un costo operativo è sempre legato a ipotesi. Scriverle accanto al calcolo rende più semplice aggiornarlo quando il cliente cambia la richiesta.
+Un costo operativo è sempre legato a ipotesi. Scriverle accanto al calcolo rende più semplice aggiornarlo quando il cliente cambia la richiesta. La checklist sugli [errori nel calcolo della tariffa](/it/guide/errori-calcolo-tariffa-trasporto/) aiuta a trovare voci duplicate o assenti prima dello stress test.
 
 ## Ricarico e margine non sono la stessa percentuale
 

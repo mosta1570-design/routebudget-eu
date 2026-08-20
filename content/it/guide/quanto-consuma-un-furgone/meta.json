@@ -1,0 +1,82 @@
+{
+  "slug": "quanto-consuma-un-furgone",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Quanto consuma un furgone: diesel, elettrico e costo tratta",
+  "mobileH1": "Quanto consuma un furgone: diesel ed elettrico",
+  "description": "Metodo pratico per misurare quanto consuma un furgone diesel o elettrico, stimare una tratta e distinguere dati WLTP, uso reale e ricarica.",
+  "eyebrow": "Furgoni · Consumo reale per missione",
+  "published": "2026-08-20",
+  "modified": "2026-08-20",
+  "reviewed": "2026-08-20",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "quanto consuma un furgone",
+  "secondaryKeywords": [
+    "consumo furgone diesel",
+    "consumo furgone elettrico",
+    "consumo furgone frigo",
+    "consumo furgone cassonato"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "consumo furgone",
+    "litri per 100 km",
+    "kWh per 100 km",
+    "veicoli N1",
+    "costo energia tratta"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costo-furgone-per-km",
+    "guide:quanto-consuma-un-camion",
+    "guide:costo-autostrada-furgone",
+    "landing:app-per-autotrasportatori"
+  ],
+  "relatedCalculator": null,
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "fuel-estimate",
+  "translationGroup": "quanto-consuma-un-furgone",
+  "canonical": "/it/guide/quanto-consuma-un-furgone/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Fiat Professional — Ducato termico",
+      "url": "https://www.fiat.it/professional/modello/ducato-termico",
+      "publishedOrUpdated": "Gamma e dati WLTP correnti verificati il 20 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-20",
+      "supports": "Intervallo 8,2–13,2 l/100 km mostrato per la gamma Ducato diesel nel ciclo misto WLTP e presenza di dimensioni, portate e allestimenti differenti."
+    },
+    {
+      "label": "Fiat Professional — E-Ducato elettrico",
+      "url": "https://www.fiat.it/professional/modello/ducato-elettrico",
+      "publishedOrUpdated": "Gamma e avvertenze sull'autonomia correnti verificate il 20 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-20",
+      "supports": "Autonomia dichiarata fino a 424 km nel ciclo WLTP e avvertenza che il dato reale varia con guida, percorso, clima e sistemi di bordo."
+    },
+    {
+      "label": "Renault Professional — Simulatore autonomia e ricarica Trafic Van",
+      "url": "https://professional.renault.it/veicoli-commerciali/trafic-van/simulatore-autonomia.html",
+      "publishedOrUpdated": "Simulatore e note metodologiche correnti verificati il 20 agosto 2026",
+      "geography": "Italia e condizioni d'uso europee",
+      "accessedAt": "2026-08-20",
+      "supports": "Uso di consumo in kWh/100 km e prezzo per kWh, distinzione tra WLTP e autonomia reale stimata, influenza di strada, temperatura, guida e condizioni di ricarica."
+    },
+    {
+      "label": "Eurostat — Prezzi elettrici non domestici, secondo semestre 2025",
+      "url": "https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20260508-2",
+      "publishedOrUpdated": "8 maggio 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-20",
+      "supports": "Ultimo riepilogo disponibile al momento della revisione per una specifica fascia di consumo non domestico; utile come confronto esterno, non come tariffa del singolo operatore."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo per misurare e prevedere il consumo reale di furgoni diesel ed elettrici per missione, con profili separati per carico, allestimento e tratta."
+}

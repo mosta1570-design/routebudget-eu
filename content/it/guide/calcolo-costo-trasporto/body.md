@@ -35,6 +35,8 @@ Una struttura di base può essere espressa così:
 
 Ogni voce deve avere una regola chiara. Il carburante dipende da chilometri, consumo medio e prezzo al litro. L’autista dipende dal tempo operativo, non soltanto dalle ore con il veicolo in movimento. L’usura può essere rappresentata da una quota per chilometro, costruita su manutenzione, pneumatici e valore del mezzo. I costi fissi vengono invece ripartiti con un criterio stabile, per esempio sui chilometri produttivi o sulle giornate effettivamente disponibili.
 
+Per applicare insieme le tre componenti più visibili, consulta il metodo su come [calcolare carburante, pedaggi e autista](/it/guide/calcolare-carburante-pedaggi-autista/). Mantiene separate formule e unità prima di arrivare al totale.
+
 Il modello non deve essere complicato per forza. Deve però essere ripetibile: due persone che usano gli stessi dati dovrebbero arrivare allo stesso risultato e capire da dove proviene ogni importo.
 
 I valori indicativi dei costi di esercizio pubblicati dal MIT, aggiornati nella fonte consultata il 17 marzo 2026, sono un riferimento esterno utile per controllare le categorie. Non sono una tariffa universale e non sostituiscono i dati effettivi del mezzo o della missione.
@@ -139,6 +141,8 @@ Lo scopo non è prevedere ogni imprevisto, ma conoscere il punto in cui la tratt
 
 Il prezzo non nasce soltanto dalla somma delle spese. Considera anche la disponibilità richiesta, la complessità del servizio, la responsabilità operativa, le condizioni di pagamento e il margine necessario all’impresa. Questi elementi devono essere spiegabili senza nascondere costi o trasformare una stima in una promessa.
 
+Quando l'offerta arriva da un altro vettore, il controllo sulle [tariffe dei trazionisti](/it/guide/tariffe-trazionisti/) applica lo stesso costo completo alla decisione di accettare o rifiutare. Prima della conferma, la guida per [proteggere il margine della tratta](/it/guide/proteggere-margine-tratta/) aiuta a stressare ritorno, tempo e variazioni.
+
 Un processo ordinato mantiene tre valori separati:
 
 1. **costo operativo**, basato sugli input della tratta;
@@ -160,4 +164,4 @@ Questa separazione aiuta anche nelle trattative. Se il cliente chiede una riduzi
 - [ ] Esiste almeno uno scenario meno favorevole.
 - [ ] Il preventivo descrive chiaramente ciò che è incluso.
 
-Un calcolo completo non elimina l’incertezza, ma la rende visibile. Registrare dati, ipotesi e risultato permette di confrontare il preventivo con il consuntivo dopo il viaggio. È questo confronto, ripetuto nel tempo, che rende più affidabili consumo, tempi, quote di usura e costo per chilometro. Per continuare con scenari e PDF, consulta [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/).
+Un calcolo completo non elimina l’incertezza, ma la rende visibile. Registrare dati, ipotesi e risultato permette di confrontare il preventivo con il consuntivo dopo il viaggio. Prima dell'invio, passa anche dagli [errori nel calcolo della tariffa](/it/guide/errori-calcolo-tariffa-trasporto/): doppio conteggio e chilometri omessi possono sopravvivere a una formula corretta. Il confronto ripetuto rende più affidabili consumo, tempi, quote di usura e costo per chilometro. Per continuare con scenari e PDF, consulta [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/).

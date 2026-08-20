@@ -8,6 +8,7 @@ const docs = path.join(ROOT, 'docs');
 const keywordResearch = await readFile(path.join(docs, 'SEO_KEYWORD_RESEARCH_IT.md'), 'utf8');
 const serpResearch = await readFile(path.join(docs, 'SEO_SERP_RESEARCH_IT.md'), 'utf8');
 const csv = await readFile(path.join(docs, 'SEO_KEYWORD_MAP_IT.csv'), 'utf8');
+const round9Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_9_2026-08-20.json'), 'utf8'));
 const config = JSON.parse(await readFile(path.join(ROOT, 'content/site.json'), 'utf8'));
 const productionPrefix = `${config.basePath}/`;
 const localePrefixes = Object.keys(config.locales).map((locale) => `${productionPrefix}${locale}/`);
@@ -32,6 +33,31 @@ for (const [index, row] of rows.entries()) {
   );
   assert(['non disponibile', 'direzionale', 'verificato'].includes(row.volume_note.toLowerCase()), `keyword row ${index + 2}: metric label invalid`);
   assert(row.source_urls.split(';').every((url) => /^https:\/\//.test(url.trim())), `keyword row ${index + 2}: evidence URL invalid`);
+}
+
+assert.equal(round9Demand.schemaVersion, 1, 'Round 9 demand evidence schemaVersion mismatch');
+assert.equal(round9Demand.locale, 'it', 'Round 9 demand evidence must use Italian language');
+assert.equal(round9Demand.market, 'IT', 'Round 9 demand evidence must use Italian market');
+assert.match(round9Demand.provider, /Google Suggest/i, 'Round 9 demand evidence provider mismatch');
+assert.match(round9Demand.capturedAt, /^2026-08-20$/, 'Round 9 demand evidence capture date mismatch');
+assert(Array.isArray(round9Demand.candidates) && round9Demand.candidates.length === 3, 'Round 9 demand evidence must contain three selected candidates');
+for (const candidate of round9Demand.candidates) {
+  assert(candidate.primaryKeyword && candidate.canonical, 'Round 9 candidate identity missing');
+  assert.equal(candidate.signal, 'directional', `${candidate.primaryKeyword}: demand signal must stay directional`);
+  assert.equal(candidate.volume, null, `${candidate.primaryKeyword}: unverified volume must stay null`);
+  assert.equal(candidate.exactSuggestionReturned, true, `${candidate.primaryKeyword}: exact Suggest evidence missing`);
+  assert(/^https:\/\/suggestqueries\.google\.com\//.test(candidate.requestUrl), `${candidate.primaryKeyword}: Google Suggest request URL invalid`);
+  assert(candidate.requestUrl.includes('hl=it') && candidate.requestUrl.includes('gl=it'), `${candidate.primaryKeyword}: Italian Suggest parameters missing`);
+  assert(Array.isArray(candidate.returnedSuggestions) && candidate.returnedSuggestions.length > 0, `${candidate.primaryKeyword}: returned suggestions missing`);
+  assert(
+    candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.query.toLocaleLowerCase('it')),
+    `${candidate.primaryKeyword}: exact query not present in captured suggestions`,
+  );
+  assert.equal(
+    rows.filter((row) => row.target_url === candidate.canonical && row.primary_keyword === candidate.primaryKeyword).length,
+    1,
+    `${candidate.primaryKeyword}: demand evidence must map to exactly one keyword row`,
+  );
 }
 
 const publishedPages = [];
@@ -63,7 +89,7 @@ for (const page of publishedPages) {
   );
 }
 
-console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents cover ${publishedPages.length} published pages; no invented volume/CPC/difficulty.`);
+console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents cover ${publishedPages.length} published pages; Round 9 Suggest evidence is captured and no volume/CPC/difficulty is invented.`);
 
 function parseCsv(value) {
   const lines = value.trim().split(/\r?\n/);

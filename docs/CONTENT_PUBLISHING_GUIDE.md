@@ -84,7 +84,7 @@ Use `content/it/confronti/<slug>/` with `kind: "comparison"` only for a distinct
 | `cluster` | stable topical group |
 | `topics` | at least two closely related subjects |
 | `related` | at least two valid local references |
-| `relatedCalculator` | relevant calculator reference, also present in `related` |
+| `relatedCalculator` | relevant calculator reference, also present in `related`; use `null` when no web calculator truthfully matches the page |
 | `pillar` | `guide:<slug>` for guides, calculators, and comparisons; `null` on pillar |
 | `calculatorId` | `cost-per-km`, `fuel-trip`, or `fuel-surcharge` on the matching calculators; `null` on guides, pillars, and comparisons |
 | `conversionIntent` | `complete-trip`, `pdf-quote`, `protect-margin`, or `unlimited` |
@@ -127,8 +127,9 @@ Every supporting guide must connect:
 
 1. back to one pillar through `pillar`;
 2. to 2–5 related guides or calculators through `related`;
-3. to a truthful RouteBudget app capability through `conversionIntent`;
-4. to both verified store listings through generated CTA.
+3. receive contextual Markdown links from at least two other published content pages; hub navigation and generated cards do not satisfy this gate;
+4. to a truthful RouteBudget app capability through `conversionIntent`;
+5. to both verified store listings through generated CTA.
 
 Pillar pages should link to all important support pages in their cluster. Calculator pages link to explanatory guide, pillar, adjacent calculator, and app workflow. Use descriptive anchor meaning; avoid “click here.”
 

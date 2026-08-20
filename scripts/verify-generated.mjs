@@ -3,6 +3,8 @@ import { access, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { UNSUPPORTED_PRODUCT_CLAIMS } from './product-claim-rules.mjs';
+
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
 const CONTENT = path.join(ROOT, 'content');
@@ -23,13 +25,6 @@ const SECTION_LABELS = {
   confronti: 'Confronti',
   landing: 'App',
 };
-const UNSUPPORTED_PRODUCT_CLAIMS = [
-  /Google Maps/i,
-  /navigazione (?:GPS|turn-by-turn)/i,
-  /pedaggi (?:live|in tempo reale)/i,
-  /tracciamento (?:live|in tempo reale)/i,
-];
-
 const manifest = JSON.parse(await readFile(path.join(DIST, 'content-manifest.json'), 'utf8'));
 const sourcePages = await discoverSourcePages();
 const sourceById = new Map(sourcePages.map((page) => [page.id, page]));
@@ -97,6 +92,7 @@ for (const route of [...hubPaths, ...pagePaths]) {
 
   if (sourcePage?.section === 'calcolatori') {
     assert(html.includes('data-calculator='), `${route}: calculator form missing`);
+    assert(html.includes(`id="calculator-error-${sourcePage.meta.calculatorId}"`), `${route}: calculator error relationship id missing`);
     assert(html.includes('class="calculator-status seo-visually-hidden"'), `${route}: calculator status missing`);
     assert(html.includes('role="status"'), `${route}: calculator status role missing`);
     assert(html.includes('aria-live="polite"'), `${route}: calculator live region missing`);

@@ -1,13 +1,13 @@
 # RouteBudget EU — mappa internal link
 
-Data: 18 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e link contestuali del Markdown/HTML statico.
+Data: 20 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e link contestuali del Markdown/HTML statico.
 
 ## Entry points
 
 | Sorgente | Destinazioni HTML principali |
 | --- | --- |
 | Homepage statica | hub, landing app, preventivo PDF, tre guide Round 8, privacy, termini, store |
-| Hub guide | tutti i 3 pillar e i 32 supporti |
+| Hub guide | tutti i 3 pillar e i 35 supporti |
 | Hub calcolatori | tutti i 3 calcolatori |
 | Header/footer SEO | homepage, hub guide, hub calcolatori, landing app, privacy, termini |
 | Landing app | 3 pillar, 3 calcolatori, entrambi gli store |
@@ -34,6 +34,7 @@ Data: 18 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e li
 | `guide/pedaggio-camion-ungheria-2026/` | calcolo costo | costo/km | pedaggio Italia, Austria, Repubblica Ceca, calcolatore costo/km |
 | `guide/pedaggio-camion-danimarca-2026/` | calcolo costo | costo/km | pedaggio Italia, Eurovignette, Germania, calcolatore costo/km |
 | `guide/costo-traghetto-camion-calais-dover-2026/` | calcolo costo | costo/km | Sardegna, Sicilia, preventivo PDF, calcolatore costo/km |
+| `guide/bgtoll-camion-bulgaria-2026/` | calcolo costo | costo/km | pedaggio Italia, Ungheria, Repubblica Ceca, calcolatore costo/km |
 | `guide/tempi-guida-riposo-camion/` | calcolo costo | costo/km | costi diretti, costo orario, attese, calcolatore costo/km |
 | `guide/ritorno-a-vuoto-autotrasporto/` | calcolo costo | costo/km | costo/km guida, margine, due tool |
 | `guide/proteggere-margine-tratta/` | calcolo costo | costo/km | preventivo, errori tariffa, costo/km |
@@ -48,6 +49,8 @@ Data: 18 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e li
 | `guide/costi-fissi-variabili-autotrasporto/` | costi autotrasporto | costo/km | costo/km, margine, errori tariffa |
 | `guide/costo-chilometrico-camion/` | costi autotrasporto | costo/km | fissi/variabili, costi diretti, margine |
 | `guide/costo-furgone-per-km/` | costi autotrasporto | costo/km | fissi/variabili, ritorno a vuoto, tachigrafo furgoni 2026 |
+| `guide/quanto-consuma-un-furgone/` | costi autotrasporto | —, flusso N1 app | costo furgone/km, consumo camion, ritorno a vuoto, landing app |
+| `guide/costo-autostrada-furgone/` | costi autotrasporto | —, flusso N1 app | costo furgone/km, consumo furgone, pedaggio camion, landing app |
 | `guide/tachigrafo-furgoni-2026/` | costi autotrasporto | costo/km | costo N1, tempi guida, costo tratta |
 | `guide/tabelle-costi-autotrasporto-mit-2026/` | costi autotrasporto | costo/km | costo tratta, costo/km storico, fissi/variabili |
 | `guide/costo-orario-autista-camion/` | costi autotrasporto | costo/km | costo tratta, durata operativa, attese, calcolatore costo/km |
@@ -69,7 +72,7 @@ Data: 18 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e li
 
 - reference non risolta: build fallisce;
 - self-link metadata: build fallisce;
-- supporto senza pillar o senza calcolatore: build fallisce;
+- supporto senza pillar: build fallisce; `relatedCalculator` può essere nullo quando nessun tool web rappresenta correttamente il flusso, come per N1;
 - pagina pubblicata verso draft/noindex: build fallisce;
 - href/src o fragment rotto: `seo:links` fallisce;
 - route senza link in ingresso: `seo:links` fallisce;
@@ -147,3 +150,13 @@ Il controllo generato deve continuare a chiudere con zero URL orfani e zero link
 - `calcolo-pedaggio-camion` → HU-GO e KmToll senza trasformare la guida italiana in pagina Paese generica;
 - ogni nuova guida → pillar, calcolatore e tre contenuti adiacenti;
 - gate verificato: 44 route indexabili, 35 URL in `articles-it.xml`, zero route orfane, target o fragment rotti.
+
+## Gate internal link per la release 20 agosto
+
+- homepage statica e React → `bgtoll-camion-bulgaria-2026`, `quanto-consuma-un-furgone` e `costo-autostrada-furgone`;
+- hub guide → tutti i 35 supporti;
+- BGTOLL riceve ingressi da homepage, hub guide, `calcolo-pedaggio-camion` e Ungheria; restituisce link al pillar, calcolatore, guida italiana, Ungheria e Repubblica Ceca;
+- `quanto-consuma-un-furgone` riceve ingressi da homepage, landing app, hub, pillar costi, costo furgone/km, costo autostrada furgone e consumo camion;
+- `costo-autostrada-furgone` riceve ingressi da homepage, landing app, hub, pillar costi, costo furgone/km e guida pedaggio camion;
+- ogni nuova guida restituisce esattamente le relazioni dichiarate nel proprio `meta.json`; per le due guide N1 il passo di conversione è l'app, non un calcolatore web camion presentato come equivalente;
+- gate post-build atteso: 47 route indexabili, 38 URL in `articles-it.xml`, zero route orfane, target o fragment rotti.

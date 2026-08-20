@@ -128,7 +128,7 @@ const italian: SiteCopy = {
     titleLead: 'Il costo reale.',
     titleFocus: 'Prima di accettare la tratta.',
     body:
-      'RouteBudget mette nello stesso calcolo carburante, pedaggi, ore di guida, usura e margine. Vedi quanto costa il viaggio e quale prezzo proporre.',
+      'Per camion e furgoni N1, RouteBudget riunisce carburante o energia, pedaggi, tempo, usura e margine. Vedi quanto costa il viaggio e quale prezzo proporre.',
     appStoreCta: 'Scarica su App Store',
     methodCta: 'Guarda come funziona',
     availability: 'Disponibile per iPhone e Android',
@@ -145,7 +145,7 @@ const italian: SiteCopy = {
     exampleLabel: 'Esempio di calcolo',
     items: [
       { label: 'Carburante', value: '495,55 €', detail: 'Consumo e prezzo inseriti' },
-      { label: 'Pedaggi', value: '295,80 €', detail: 'Stima per mezzo e assi' },
+      { label: 'Pedaggi', value: '295,80 €', detail: 'Stima sostituibile con il totale verificato' },
       { label: 'Autista', value: '298,83 €', detail: 'Durata operativa e pause' },
       { label: 'Usura', value: '130,50 €', detail: 'Costo per chilometro' },
     ],
@@ -170,7 +170,7 @@ const italian: SiteCopy = {
     body:
       'RouteBudget segue il lavoro che fai davvero: raccogli i dati, confronti gli scenari, prepari il preventivo e conservi la tratta.',
     items: [
-      { title: 'Inserisci', text: 'Tratta, mezzo, carburante, costo autista e margine.' },
+      { title: 'Inserisci', text: 'Tratta, camion o furgone N1, energia, costo autista e margine.' },
       { title: 'Confronta', text: 'Minimo, Consigliato e Ideale con pareggio e utile per km.' },
       { title: 'Esporta', text: 'Un preventivo PDF professionale, con dettaglio costi opzionale.' },
       { title: 'Archivia', text: 'Calcoli salvati in locale, pronti da riaprire e aggiornare.' },
@@ -223,25 +223,25 @@ const italian: SiteCopy = {
         href: '/it/calcolatori/costo-carburante-viaggio/',
       },
       {
-        kind: 'Guida Ungheria 2026',
-        title: 'Pedaggio camion HU-GO',
-        text: 'Distingui HU-GO dalla vignetta, verifica categoria, rete e titolo prima di attribuire il costo alla tratta.',
-        action: 'Verifica HU-GO',
-        href: '/it/guide/pedaggio-camion-ungheria-2026/',
+        kind: 'Guida furgoni N1',
+        title: 'Quanto consuma un furgone',
+        text: 'Misura il consumo reale di diesel o energia e trasformalo in un input verificabile per la tratta.',
+        action: 'Misura il consumo',
+        href: '/it/guide/quanto-consuma-un-furgone/',
       },
       {
-        kind: 'Guida Danimarca 2026',
-        title: 'KmToll, CO₂ e ponti',
-        text: 'Calcola separatamente KmToll, maggiorazione LEZ, Storebælt e Øresund con le fonti correnti.',
-        action: 'Prepara il costo danese',
-        href: '/it/guide/pedaggio-camion-danimarca-2026/',
+        kind: 'Guida pedaggi N1',
+        title: 'Costo autostrada furgone',
+        text: 'Distingui classe A, B e numero di assi, poi inserisci il totale ufficiale senza duplicarlo.',
+        action: 'Verifica la classe',
+        href: '/it/guide/costo-autostrada-furgone/',
       },
       {
-        kind: 'Guida freight 2026',
-        title: 'Costo traghetto Calais–Dover',
-        text: 'Leggi un preventivo merci corrente, separa nolo, BAF ed ETS e completa il costo della missione.',
-        action: 'Controlla Calais–Dover',
-        href: '/it/guide/costo-traghetto-camion-calais-dover-2026/',
+        kind: 'Guida Bulgaria 2026',
+        title: 'BGTOLL camion',
+        text: 'Verifica massa, assi, EURO, classe CO₂ e percorso prima di portare il pedaggio nel preventivo.',
+        action: 'Prepara BGTOLL',
+        href: '/it/guide/bgtoll-camion-bulgaria-2026/',
       },
     ],
     hubAction: 'Esplora tutte le guide operative',
@@ -255,7 +255,12 @@ const italian: SiteCopy = {
       {
         question: 'Come viene calcolato il pedaggio?',
         answer:
-          'RouteBudget usa una stima operativa per classe veicolo, numero di assi e tratta. Quando necessario, l’app indica che l’importo va verificato o inserito manualmente secondo le tariffe ufficiali.',
+          'Per i mezzi pesanti RouteBudget usa una stima operativa basata su distanza, assi e massa, non una tariffa ufficiale di ogni strada. Per i profili N1 applica regole per Paese quando disponibili e può richiedere il totale manuale. Verifica sempre l’importo ufficiale e sostituisci la stima quando serve.',
+      },
+      {
+        question: 'Posso calcolare una tratta con un furgone N1?',
+        answer:
+          'Sì. Il profilo N1 distingue alimentazione diesel, benzina, GPL, metano o elettrica, dati di massa e rimorchio. Consumi, prezzi, pedaggi e condizioni della missione restano input da verificare.',
       },
       {
         question: 'Funziona offline?',
@@ -310,7 +315,7 @@ const english: SiteCopy = {
     titleLead: 'The real cost.',
     titleFocus: 'Before you accept the route.',
     body:
-      'RouteBudget puts fuel, tolls, driver time, wear and margin into one calculation. See what the trip costs and what price to quote.',
+      'For trucks and N1 vans, RouteBudget brings fuel or energy, tolls, time, wear and margin into one calculation. See what the trip costs and what price to quote.',
     appStoreCta: 'Download on the App Store',
     methodCta: 'See how it works',
     availability: 'Available for iPhone and Android',
@@ -327,7 +332,7 @@ const english: SiteCopy = {
     exampleLabel: 'Calculation example',
     items: [
       { label: 'Fuel', value: '€495.55', detail: 'Entered use and price' },
-      { label: 'Tolls', value: '€295.80', detail: 'Estimate by vehicle and axles' },
+      { label: 'Tolls', value: '€295.80', detail: 'Estimate replaceable with a verified total' },
       { label: 'Driver', value: '€298.83', detail: 'Operating time and breaks' },
       { label: 'Wear', value: '€130.50', detail: 'Cost per kilometre' },
     ],
@@ -352,7 +357,7 @@ const english: SiteCopy = {
     body:
       'RouteBudget follows the work you already do: collect inputs, compare scenarios, prepare the quote and keep the route.',
     items: [
-      { title: 'Enter', text: 'Route, vehicle, fuel, driver cost and margin.' },
+      { title: 'Enter', text: 'Route, truck or N1 van, energy, driver cost and margin.' },
       { title: 'Compare', text: 'Minimum, Recommended and Ideal, with break-even and profit per km.' },
       { title: 'Export', text: 'A professional PDF quote with optional cost detail.' },
       { title: 'Archive', text: 'Calculations saved locally, ready to reopen and update.' },
@@ -405,25 +410,25 @@ const english: SiteCopy = {
         href: '/it/calcolatori/costo-carburante-viaggio/',
       },
       {
-        kind: 'Hungary 2026 guide · Italian',
-        title: 'HU-GO truck toll',
-        text: 'Separate HU-GO from the vignette and verify category, network and road-use title before costing the trip.',
+        kind: 'N1 van guide · Italian',
+        title: 'How much fuel or energy a van uses',
+        text: 'Measure real diesel or energy use and turn it into a verified trip input.',
         action: 'Read in Italian',
-        href: '/it/guide/pedaggio-camion-ungheria-2026/',
+        href: '/it/guide/quanto-consuma-un-furgone/',
       },
       {
-        kind: 'Denmark 2026 guide · Italian',
-        title: 'KmToll, CO₂ and bridges',
-        text: 'Check KmToll, LEZ surcharge, Storebælt and Øresund separately using current official sources.',
+        kind: 'N1 toll guide · Italian',
+        title: 'Motorway cost for a van',
+        text: 'Check class A, B and axle count, then enter the official total without duplicating it.',
         action: 'Read in Italian',
-        href: '/it/guide/pedaggio-camion-danimarca-2026/',
+        href: '/it/guide/costo-autostrada-furgone/',
       },
       {
-        kind: 'Freight ferry guide · Italian',
-        title: 'Calais–Dover truck ferry cost',
-        text: 'Read a current freight quote, separate base freight, BAF and ETS, then complete the mission cost.',
+        kind: 'Bulgaria 2026 guide · Italian',
+        title: 'BGTOLL for trucks',
+        text: 'Verify mass, axles, EURO, CO₂ class and route before adding the toll to a quote.',
         action: 'Read in Italian',
-        href: '/it/guide/costo-traghetto-camion-calais-dover-2026/',
+        href: '/it/guide/bgtoll-camion-bulgaria-2026/',
       },
     ],
     hubAction: 'Explore all Italian operating guides',
@@ -437,7 +442,12 @@ const english: SiteCopy = {
       {
         question: 'How is the toll calculated?',
         answer:
-          'RouteBudget uses an operational estimate based on vehicle class, axle count and route. Where needed, the app tells you to verify or enter an amount manually using official tariffs.',
+          'For heavy vehicles RouteBudget uses an operational estimate based on entered distance, axles and mass, not an official tariff for every road. N1 profiles use country rules where available and may require a manual total. Always verify the official amount and replace the estimate when needed.',
+      },
+      {
+        question: 'Can I calculate a route for an N1 van?',
+        answer:
+          'Yes. The N1 profile distinguishes diesel, petrol, LPG, CNG or electric power, mass and trailer data. Consumption, prices, tolls and mission conditions remain inputs you must verify.',
       },
       {
         question: 'Does it work offline?',

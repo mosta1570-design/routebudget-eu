@@ -17,20 +17,20 @@ const HOME_META: Record<
   }
 > = {
   it: {
-    title: 'RouteBudget EU | Costi camion e preventivi PDF',
+    title: 'RouteBudget EU | Costi camion, furgoni N1 e PDF',
     description:
-      'RouteBudget EU calcola costi di tratta, pedaggi, carburante, ore di guida e margine. Preventivi PDF professionali per autotrasportatori europei.',
+      'RouteBudget EU stima costi, pedaggi, energia, tempo e margine per camion e furgoni N1. Crea preventivi PDF non vincolanti per la singola tratta.',
     socialDescription: 'Calcola il prezzo giusto prima di accettare la tratta.',
     ogLocale: 'it_IT',
-    imageAlt: 'RouteBudget EU, controllo dei costi di una tratta camion',
+    imageAlt: 'RouteBudget EU, controllo dei costi per camion e furgoni N1',
   },
   en: {
-    title: 'RouteBudget EU | Truck costs and PDF quotes',
+    title: 'RouteBudget EU | Truck, N1 van costs and PDF quotes',
     description:
-      'RouteBudget EU calculates route costs, tolls, fuel, driving hours and margin. Professional PDF quotes for European road transport.',
+      'RouteBudget EU estimates route costs, tolls, energy, time and margin for trucks and N1 vans, then creates a non-binding PDF quote.',
     socialDescription: 'Calculate the right price before accepting the route.',
     ogLocale: 'en_GB',
-    imageAlt: 'RouteBudget EU truck route cost control',
+    imageAlt: 'RouteBudget EU route cost control for trucks and N1 vans',
   },
 };
 

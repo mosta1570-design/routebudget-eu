@@ -1,6 +1,6 @@
 # RouteBudget EU — cluster SEO italiani
 
-Data architettura: 17 agosto 2026. Stato: inventario round 7 in validazione pre-release; baseline GSC 1–15 agosto 2026 registrata nella [baseline corrente](./GSC_BASELINE_2026-08-17.md) e nella [ricerca round 7](./SEO_RESEARCH_ROUND_7_2026-08-17.md).
+Data architettura: 20 agosto 2026. Stato: inventario Round 9 in validazione pre-release; baseline GSC 1–18 agosto 2026 registrata nella [baseline corrente](./GSC_BASELINE_2026-08-20.md) e nella [ricerca Round 9](./SEO_RESEARCH_ROUND_9_2026-08-20.md).
 
 ## Principio
 
@@ -9,10 +9,12 @@ RouteBudget non pubblica un blog generico. Ogni URL risolve un lavoro economico 
 Inventario iniziale validato:
 
 - 3 pillar;
-- 29 guide di supporto;
+- 35 guide di supporto;
 - 3 calcolatori gratuiti;
 - 1 landing app;
 - hub `/it/guide/` e `/it/calcolatori/`.
+
+Totale post-build atteso: **42 pagine contenuto**. La sitemap articoli conterrà 38 URL e l'insieme delle sitemap 47 URL indexabili; questi conteggi tecnici non equivalgono a URL già indicizzate da Google.
 
 I tre hub tematici candidati (`/it/costi-autotrasporto/`, `/it/preventivi-trasporto/`, `/it/margini-e-tariffe/`) restano architettura futura. Non vengono indicizzati finché non hanno abbastanza pagine distinte e dati Search Console che ne giustifichino utilità. Evita thin pages.
 
@@ -38,13 +40,17 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | `costo-traghetto-camion-sicilia` | Possiede attraversamento dello Stretto, direzione, scaglione MTL, inclusioni e tempo operativo | Costo verificato per leg, missione completa e PDF non vincolante |
 | `eurovignette-camion-2026` | Possiede tariffa temporale, Paesi aderenti, durata, assi e classi; separa l'uscita olandese | Totale pedaggi manuale con quota vignetta documentata |
 | `pedaggio-camion-repubblica-ceca` | Possiede MYTO CZ, rete pesanti, massa, assi, EURO, CO₂ e dispositivo | Calcolatore costo/km con importo MYTO verificato |
+| `pedaggio-camion-ungheria-2026` | Possiede HU-GO, classi J2–J5, OBU/route ticket e cambi 2026 | Calcolatore costo/km con importo HU-GO verificato |
+| `pedaggio-camion-danimarca-2026` | Possiede KmToll, CO₂, LEZ e ponti Storebælt/Øresund separati | Calcolatore costo/km con importi verificati |
+| `bgtoll-camion-bulgaria-2026` | Possiede BGTOLL, Route Pass, massa, assi, EURO/CO₂ e percorso dichiarato | Calcolatore costo/km con totale BGTOLL verificato |
+| `costo-traghetto-camion-calais-dover-2026` | Possiede preventivo freight, nolo, BAF/ETS e confine Calais–Dover | Costo terrestre, scenari e PDF con preventivo corrente |
 | `tempi-guida-riposo-camion` | Distingue le categorie di tempo e porta la durata pianificata nel costo | Calcolatore costo/km con ore verificate |
 | `ritorno-a-vuoto-autotrasporto` | Mostra effetto dei km non fatturati su tutte le voci | Calcolatore costo/km |
 | `proteggere-margine-tratta` | Stress test di costo, prezzo, margine e ricarico | Scenari RouteBudget |
 | calcolatore `costo-carburante-viaggio` | Litri e costo da km, L/100 km e prezzo inseriti | Aggiungere costi mancanti nell’app |
 | calcolatore `fuel-surcharge-autotrasporto` | Adeguamento carburante da base, quota e indice inseriti | Riportare variazione nella trattativa |
 
-GSC 1–15 agosto ha mostrato query distinte per consumo, costo e pedaggio: `consumo medio camion` 39 impressioni, `quanto consuma un camion` 30, `costo km camion` 17 e segnali minori sul cluster pedaggi. Le nuove guide entrano solo con Suggest italiano, SERP separata e fonte ufficiale; non sono copie della pagina italiana. I calcolatori eseguono soltanto formule dichiarate da input utente.
+La baseline GSC 1–18 agosto registra 23 clic e 1.741 impressioni aggregate. Non fornisce in questo Round un volume per le tre nuove query. BGTOLL entra con Suggest italiano direzionale, compito nazionale distinto e fonti ufficiali; non è una copia della pagina italiana. I calcolatori eseguono soltanto formule dichiarate da input utente.
 
 ## Cluster 2 — costi dell’autotrasporto
 
@@ -57,13 +63,15 @@ Search job: distinguere costi fissi, variabili e indiretti, quindi attribuirli a
 | `costi-fissi-variabili-autotrasporto` | Classifica e ripartisce le voci senza benchmark universali | Calcolatore costo/km |
 | `costo-chilometrico-camion` | Ricava un costo storico da spese e km dello stesso periodo | Confronto con nuova tratta |
 | `costo-furgone-per-km` | Separa costo N1, tempo, vuoti e km fatturabili dai parametri camion | Calcolatore costo/km usato con dati del mezzo corretto |
+| `quanto-consuma-un-furgone` | Misura L/100 km, km/l o kWh/100 km N1 per energia, carico e allestimento | Configurazione N1 e costo missione nell'app |
+| `costo-autostrada-furgone` | Separa categoria N1, classe tariffaria A/B e pedaggio ufficiale italiano | Totale verificato inserito una volta nel breakdown N1 |
 | `tachigrafo-furgoni-2026` | Verifica il perimetro transfrontaliero dal 1° luglio senza dire “tutti gli N1” | Costo della tratta con massa, attività e tempi verificati |
 | `tabelle-costi-autotrasporto-mit-2026` | Legge classi A–D e voci applicabili come benchmark datato | Confronto con dati reali nel calcolatore costo/km |
 | `costo-orario-autista-camion` | Separa costo aziendale, retribuzione e prezzo; costruisce un input orario | Calcolatore costo/km con dato aziendale |
 | `usura-manutenzione-camion` | Costruisce quota da storico aziendale evitando doppio conteggio | Inserimento quota nel calcolo |
 | calcolatore `costo-chilometrico-camion` | Stima costo totale, per km percorso e per km carico | Flusso completo RouteBudget |
 
-La guida costo/km e il calcolatore omonimo non competono: la prima usa il consuntivo di un periodo; il secondo stima una singola tratta da input dichiarati. La guida furgone possiede intento N1, validato da due query long-tail GSC; non riutilizza benchmark, esempi o regole camion come equivalenti.
+La guida costo/km e il calcolatore omonimo non competono: la prima usa il consuntivo di un periodo; il secondo stima una singola tratta da input dichiarati. `costo-furgone-per-km` possiede l'economia completa in €/km; `quanto-consuma-un-furgone` possiede il consumo per energia/allestimento; `costo-autostrada-furgone` possiede classe e pedaggio italiano. Nessuna riutilizza benchmark, esempi o regole camion come equivalenti.
 
 ## Cluster 3 — preventivi, tariffe e margine
 

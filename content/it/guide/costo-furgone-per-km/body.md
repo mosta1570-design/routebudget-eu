@@ -51,7 +51,7 @@ Per il carburante puoi usare:
 
 `costo carburante per km = consumo in l/100 km × prezzo per litro ÷ 100`
 
-Consumo e prezzo devono avere fonte e data. Le serie MASE aiutano a verificare l'andamento del mercato italiano; per il preventivo è spesso più rappresentativo il prezzo netto realmente pagato dall'impresa.
+Consumo e prezzo devono avere fonte e data. Le serie MASE aiutano a verificare l'andamento del mercato italiano; per il preventivo è spesso più rappresentativo il prezzo netto realmente pagato dall'impresa. La guida su [quanto consuma un furgone](/it/guide/quanto-consuma-un-furgone/) mostra come misurare il consumo del proprio N1 senza confondere dati WLTP e uso reale.
 
 ### Costi fissi e quote periodiche
 
@@ -126,9 +126,11 @@ Un passaggio leggibile è:
 
 Per le attività ricorrenti conviene distinguere tariffa base, costo per stop, tempo oltre franchigia e spese documentate. Una sola cifra al km può funzionare su tratte semplici, ma rischia di penalizzare giri urbani o consegne complesse.
 
-## Usare il calcolatore senza confondere le categorie
+## Usare RouteBudget con il profilo N1
 
-Il [calcolatore del costo chilometrico camion](/it/calcolatori/costo-chilometrico-camion/) offre una struttura preliminare per distanza, vuoti, carburante, ore e altre voci inserite dall'utente. Se lo usi come supporto per un furgone, sostituisci ogni parametro con dati del veicolo N1 e tratta separatamente gli elementi specifici non rappresentati. Il nome del calcolatore non trasforma dati camion in dati furgone.
+L'[app RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/) distingue il profilo N1 dal mezzo pesante: massa e rimorchio, alimentazione, consumo e tipo di operazione restano dati del veicolo scelto. Per l'autostrada, verifica classe e importo sul gestore e usa la guida al [costo autostrada del furgone](/it/guide/costo-autostrada-furgone/) prima di trasferire il totale nella stima. RouteBudget non assegna la classe ufficiale, non compra vignette e non sostituisce il calcolatore stradale.
+
+Il campo di ritorno dell'app rappresenta il rientro a vuoto. Un ritorno carico è una missione distinta. Attese, costi fissi e spese specifiche senza campo dedicato vanno gestiti fuori dall'app o incorporati in un input aziendale solo con un metodo documentato e senza doppio conteggio.
 
 Per un controllo periodico, conserva invece un prospetto per ogni mezzo con:
 

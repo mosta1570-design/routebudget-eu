@@ -68,6 +68,8 @@ Per quotare la missione puoi usare il totale del biglietto o la stima ufficiale 
 
 Un viaggio Verona–Budapest o Trieste–Győr attraversa più sistemi. Il numero HU-GO copre soltanto i segmenti ungheresi; vignette e pedaggi di Italia, Austria o Slovenia restano voci distinte. Lavora in questo ordine:
 
+Se la missione prosegue verso la Bulgaria, HU-GO termina al confine: calcola e documenta [BGTOLL camion](/it/guide/bgtoll-camion-bulgaria-2026/) come sistema separato, senza riutilizzare categoria o tariffa ungherese.
+
 1. fissa il camion reale, gli assi e l'eventuale rimorchio;
 2. definisci confine di ingresso, destinazione e percorso previsto;
 3. verifica sul portale ufficiale i tratti HU-GO e il totale in HUF;

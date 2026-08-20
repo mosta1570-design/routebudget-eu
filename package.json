@@ -19,13 +19,14 @@
     "seo:sitemap": "node scripts/verify-generated.mjs --scope sitemap",
     "seo:robots": "node scripts/verify-robots.mjs",
     "seo:hreflang": "node scripts/verify-generated.mjs --scope hreflang",
+    "seo:performance": "node scripts/verify-performance-budget.mjs",
     "seo:build": "npm run build",
     "seo:report": "node scripts/verify-seo-reports.mjs",
     "seo:gsc-analyze": "node scripts/analyze-gsc-export.mjs",
-    "seo:all": "npm run seo:build && npm run seo:audit && npm run seo:research-check && npm run seo:content-check && npm run seo:links && npm run seo:schema && npm run seo:sitemap && npm run seo:robots && npm run seo:hreflang && npm run seo:report",
+    "seo:all": "npm run seo:build && npm run seo:performance && npm run seo:audit && npm run seo:research-check && npm run seo:content-check && npm run seo:links && npm run seo:schema && npm run seo:sitemap && npm run seo:robots && npm run seo:hreflang && npm run seo:report",
     "lint": "eslint .",
     "preview": "vite preview",
-    "check": "npm run lint && npm run build && npm run content:verify"
+    "check": "npm run lint && npm run build && npm run seo:performance && npm run content:verify"
   },
   "dependencies": {
     "@fontsource/barlow": "^5.3.0",

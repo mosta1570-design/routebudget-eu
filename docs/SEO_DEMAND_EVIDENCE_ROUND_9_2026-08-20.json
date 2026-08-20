@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-20",
+  "locale": "it",
+  "market": "IT",
+  "provider": "Google Suggest public endpoint",
+  "method": {
+    "client": "firefox",
+    "hl": "it",
+    "gl": "it",
+    "interpretation": "Directional wording evidence only: a returned suggestion supports the phrasing and related search task, not monthly demand.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ]
+  },
+  "candidates": [
+    {
+      "primaryKeyword": "BGTOLL camion",
+      "canonical": "/it/guide/bgtoll-camion-bulgaria-2026/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=bgtoll%20camion",
+      "query": "bgtoll camion",
+      "returnedSuggestions": [
+        "bgtoll camion"
+      ],
+      "exactSuggestionReturned": true,
+      "signal": "directional",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns the Bulgarian BGTOLL and Route Pass task for vehicles over 3.5 t; it does not own Italian toll classes, HU-GO or MYTO CZ."
+    },
+    {
+      "primaryKeyword": "quanto consuma un furgone",
+      "canonical": "/it/guide/quanto-consuma-un-furgone/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=quanto%20consuma%20un%20furgone",
+      "query": "quanto consuma un furgone",
+      "returnedSuggestions": [
+        "quanto consuma un furgone diesel",
+        "quanto consuma un furgone 9 posti",
+        "quanto consuma un furgone",
+        "quanto consuma un furgone ducato",
+        "quanto consuma un furgone elettrico",
+        "quanto consuma un furgone camperizzato",
+        "quanto consuma un furgone a metano",
+        "quanto consuma un furgone daily",
+        "quanto consuma un furgone frigo",
+        "quanto consuma un furgone cassonato"
+      ],
+      "exactSuggestionReturned": true,
+      "signal": "directional",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns N1 consumption in L/100 km or kWh/100 km; the existing van-cost guide owns complete EUR/km economics and the truck guide remains heavy-vehicle specific."
+    },
+    {
+      "primaryKeyword": "costo autostrada furgone",
+      "canonical": "/it/guide/costo-autostrada-furgone/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20autostrada%20furgone",
+      "query": "costo autostrada furgone",
+      "returnedSuggestions": [
+        "costo autostrada furgone",
+        "calcolo costo autostrada furgone"
+      ],
+      "exactSuggestionReturned": true,
+      "signal": "directional",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns Italian motorway class and verified toll for a van; it does not own the full N1 cost per kilometre or the heavy-truck toll method."
+    }
+  ]
+}
