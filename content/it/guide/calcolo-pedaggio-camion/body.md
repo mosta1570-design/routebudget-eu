@@ -92,6 +92,8 @@ Se usi già un costo storico per km che comprende una quota media di pedaggi, de
 
 Sommare quota media e importo completo senza scorporo causa doppio conteggio.
 
+Questa pagina riguarda i mezzi pesanti. Per un N1 italiano, la guida al [costo autostrada del furgone](/it/guide/costo-autostrada-furgone/) separa classe A, B e classi per numero di assi senza trasferire automaticamente le regole camion.
+
 ## Il metodo italiano non vale automaticamente in tutta Europa
 
 Pedaggi e vignette per veicoli pesanti rientrano in un quadro europeo, ma sistemi, classi, reti e modalità di riscossione restano differenti tra Paesi. La Commissione europea mantiene una panoramica sul road charging; per il prezzo concreto occorre consultare l'autorità o il gestore del Paese attraversato.
@@ -100,7 +102,7 @@ Su una tratta internazionale costruisci una riga per ogni sistema: pedaggio a di
 
 Per il corridoio del Brennero, la guida al [pedaggio camion in Austria](/it/guide/pedaggio-camion-austria/) spiega il sistema GO-Maut, la soglia oltre 3,5 t, le categorie di assi e le classi EURO e CO₂. È un metodo distinto da quello dei concessionari italiani e l'importo resta da verificare presso ASFINAG.
 
-Altri sistemi richiedono controlli diversi: il [pedaggio camion nei Paesi Bassi](/it/guide/pedaggio-camion-paesi-bassi/) usa Vrachtwagenheffing e OBU dopo la fine dell'Eurovignetta, mentre l'[Eurovignette camion 2026](/it/guide/eurovignette-camion-2026/) resta una tariffa temporale nei Paesi ancora aderenti. Il [pedaggio camion in Belgio](/it/guide/pedaggio-camion-belgio/) va separato tra Fiandre, Vallonia e Bruxelles; il [pedaggio camion in Slovenia](/it/guide/pedaggio-camion-slovenia/) usa DarsGo per i mezzi oltre 3,5 t; il [pedaggio camion in Repubblica Ceca](/it/guide/pedaggio-camion-repubblica-ceca/) usa MYTO CZ e non la e-vignette auto. In [Ungheria](/it/guide/pedaggio-camion-ungheria-2026/) il sistema per i pesanti è HU-GO; in [Danimarca](/it/guide/pedaggio-camion-danimarca-2026/) KmToll, zone LEZ e ponti richiedono controlli separati. In [Francia](/it/guide/pedaggio-camion-francia/) vanno inoltre distinti rete del concessionario e attraversamenti Fréjus o Monte Bianco. Le guide possiedono quei sistemi nazionali e non sostituiscono i rispettivi portali ufficiali.
+Altri sistemi richiedono controlli diversi: il [pedaggio camion nei Paesi Bassi](/it/guide/pedaggio-camion-paesi-bassi/) usa Vrachtwagenheffing e OBU dopo la fine dell'Eurovignetta, mentre l'[Eurovignette camion 2026](/it/guide/eurovignette-camion-2026/) resta una tariffa temporale nei Paesi ancora aderenti. Il [pedaggio camion in Belgio](/it/guide/pedaggio-camion-belgio/) va separato tra Fiandre, Vallonia e Bruxelles; il [pedaggio camion in Slovenia](/it/guide/pedaggio-camion-slovenia/) usa DarsGo per i mezzi oltre 3,5 t; il [pedaggio camion in Repubblica Ceca](/it/guide/pedaggio-camion-repubblica-ceca/) usa MYTO CZ e non la e-vignette auto. In [Ungheria](/it/guide/pedaggio-camion-ungheria-2026/) il sistema per i pesanti è HU-GO; entrando in Bulgaria serve invece verificare separatamente [BGTOLL camion](/it/guide/bgtoll-camion-bulgaria-2026/). In [Danimarca](/it/guide/pedaggio-camion-danimarca-2026/) KmToll, zone LEZ e ponti richiedono controlli separati. In [Francia](/it/guide/pedaggio-camion-francia/) vanno inoltre distinti rete del concessionario e attraversamenti Fréjus o Monte Bianco. Le guide possiedono quei sistemi nazionali e non sostituiscono i rispettivi portali ufficiali.
 
 ## Esempio di scheda di controllo
 

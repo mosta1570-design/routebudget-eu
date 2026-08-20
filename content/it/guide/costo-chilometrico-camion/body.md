@@ -26,7 +26,7 @@ La formula generale è:
 
 `costo chilometrico = costi operativi del periodo ÷ chilometri totali pertinenti`
 
-Il numeratore deve comprendere le voci maturate nel periodo, non soltanto quelle già pagate. Manutenzione e pneumatici, per esempio, si consumano mentre il mezzo lavora anche se la fattura arriva in seguito.
+Il numeratore deve comprendere le voci maturate nel periodo, non soltanto quelle già pagate. Manutenzione e pneumatici, per esempio, si consumano mentre il mezzo lavora anche se la fattura arriva in seguito. Per costruire quella quota consulta il metodo su [usura e manutenzione del camion](/it/guide/usura-manutenzione-camion/) e documenta periodo e chilometri.
 
 Il denominatore richiede una scelta esplicita. Per misurare il costo del mezzo si usano normalmente i chilometri realmente percorsi: carichi, a vuoto e di servizio. Per misurare quanto costo deve essere recuperato dai chilometri venduti si può calcolare un secondo indicatore usando soltanto i chilometri fatturabili. I due valori rispondono a domande diverse e non devono essere confusi.
 

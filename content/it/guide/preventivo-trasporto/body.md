@@ -2,7 +2,7 @@
 
 Per preparare un preventivo di trasporto come vettore: conferma servizio e tratta, calcola il costo operativo, applica il criterio di margine, indica prezzo, inclusioni, esclusioni e validità, quindi verifica il PDF prima dell’invio. L’offerta deve far capire che cosa riceve il cliente senza esporre ogni costo interno.
 
-Questa guida parla agli autotrasportatori, ai padroncini e alle piccole imprese che devono formulare un’offerta di trasporto merci. Non è un comparatore per chi cerca un corriere o un servizio di spedizione. La preparazione inizia con un [calcolo interno della tratta](/it/guide/calcolo-costo-trasporto/); mantenere separati costo e offerta protegge i dati aziendali senza perdere trasparenza sul servizio.
+Questa guida parla agli autotrasportatori, ai padroncini e alle piccole imprese che devono formulare un’offerta di trasporto merci. Non è un comparatore per chi cerca un corriere o un servizio di spedizione. La preparazione inizia con un [calcolo interno della tratta](/it/guide/calcolo-costo-trasporto/); mantenere separati costo e offerta protegge i dati aziendali senza perdere trasparenza sul servizio. Per struttura, limiti e controlli del documento usa la guida dedicata al [preventivo di trasporto PDF](/it/guide/preventivo-trasporto-pdf/).
 
 ## Le informazioni da chiarire prima del prezzo
 
@@ -31,6 +31,8 @@ Il calcolo interno dovrebbe distinguere carburante, pedaggi, autista, usura, quo
 Questa formula è volutamente semplice. Il margine può essere calcolato come ricarico sul costo o come percentuale del prezzo finale; le due modalità non producono lo stesso risultato. È quindi necessario scegliere una convenzione e applicarla in modo coerente.
 
 Nel prezzo possono pesare anche disponibilità urgente, complessità, rischio di attesa, ritorno a vuoto e condizioni di pagamento. Non sono maggiorazioni automatiche: sono caratteristiche del servizio che l’impresa deve valutare e, quando rilevanti per il cliente, descrivere con chiarezza.
+
+Se ricevi il viaggio in subvezione, verifica prima se le [tariffe dei trazionisti](/it/guide/tariffe-trazionisti/) coprono chilometri reali, tempi e cassa. Qualunque sia il committente, prova almeno uno scenario meno favorevole per [proteggere il margine della tratta](/it/guide/proteggere-margine-tratta/) prima di inviare il prezzo.
 
 Se il servizio usa un criterio separato per l’adeguamento carburante, registra fonte, periodo e incidenza prima di inserirlo nell’offerta. Il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) mostra la formula; la guida alla [clausola di adeguamento carburante](/it/guide/clausola-adeguamento-carburante-autotrasporto/) spiega invece quali elementi documentare senza sostituire la verifica del contratto.
 

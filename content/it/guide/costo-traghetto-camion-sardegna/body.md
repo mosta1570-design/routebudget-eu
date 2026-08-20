@@ -240,6 +240,8 @@ Prima di ogni preventivo al cliente:
 
 Ripeti subito il controllo, senza aspettare il trimestre, quando cambiano rotta, compagnia, data, mezzo, lunghezza, tipo di merce, numero di autisti o composizione dei supplementi.
 
+Su un corridoio diverso, il [costo traghetto camion Calais–Dover](/it/guide/costo-traghetto-camion-calais-dover-2026/) usa preventivo freight, BAF ed ETS propri: non trasferire nolo o regole della Sardegna alla Manica.
+
 ## Checklist da 60 secondi
 
 - [ ] Ho un preventivo dell’ufficio merci valido per la partenza.

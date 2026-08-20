@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
 
+import { UNSUPPORTED_PRODUCT_CLAIMS } from './product-claim-rules.mjs';
+
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT_ROOT = path.join(ROOT, 'content');
 const OUTPUT_FLAG = process.argv.indexOf('--out');
@@ -42,17 +44,6 @@ const INTENT_FEATURE_COMPATIBILITY = {
   'protect-margin': new Set(['cost-breakdown', 'cost-scenarios', 'pdf-quote']),
   unlimited: new Set(['local-archive']),
 };
-const UNSUPPORTED_PRODUCT_CLAIMS = [
-  /Google Maps/i,
-  /navigazione (?:GPS|turn-by-turn)/i,
-  /pedaggi (?:live|in tempo reale)/i,
-  /tracciamento (?:live|in tempo reale)/i,
-  /RouteBudget[^.]{0,80}(?:ottimizza|sceglie) il percorso/i,
-  /RouteBudget (?:gestisce|offre|include) (?:la |un |una )?(?:fatturazione|TMS|ERP|flotta|database clienti)/i,
-  /RouteBudget (?:genera|crea|emette) (?:fatture|contratti|documenti fiscali)/i,
-  /RouteBudget (?:salva|sincronizza|archivia)[^.]{0,50}(?:nel cloud|i PDF|documenti)/i,
-  /RouteBudget (?:garantisce|assicura)[^.]{0,60}(?:profitto|margine|risparmio|conformit[aà]|precisione)/i,
-];
 const CTA_COPY = {
   'complete-trip': {
     eyebrow: 'Continua nell’app',
@@ -321,7 +312,6 @@ function validatePage(page, directorySlug) {
       assert(meta.pillar === null, `${id}: pillar page must set pillar to null`);
     } else {
       assert(typeof meta.pillar === 'string', `${id}: supporting guide must name a pillar`);
-      assert(typeof meta.relatedCalculator === 'string', `${id}: supporting guide must name a related calculator`);
     }
     assert(meta.calculatorId === null, `${id}: guide calculatorId must be null`);
   } else if (section === 'calcolatori') {
@@ -840,7 +830,7 @@ function renderCalculator(page) {
               <button class="button button--primary" type="submit">Calcola il costo per km</button>
             </div>
           </div>
-          <div class="calculator-error" role="alert" tabindex="-1" hidden></div>
+          <div id="calculator-error-${page.meta.calculatorId}" class="calculator-error" role="alert" tabindex="-1" hidden></div>
           <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
           <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
             <div class="calculator-result__lead"><span>Costo operativo stimato</span><strong data-result="totalOperationalCost">—</strong></div>
@@ -890,7 +880,7 @@ function renderCalculator(page) {
               <button class="button button--primary" type="submit">Calcola adeguamento</button>
             </div>
           </div>
-          <div class="calculator-error" role="alert" tabindex="-1" hidden></div>
+          <div id="calculator-error-${page.meta.calculatorId}" class="calculator-error" role="alert" tabindex="-1" hidden></div>
           <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
           <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
             <div class="calculator-result__lead"><span>Nolo aggiornato stimato</span><strong data-result="adjustedFreight">—</strong></div>
@@ -935,7 +925,7 @@ function renderCalculator(page) {
             <button class="button button--primary" type="submit">Calcola carburante</button>
           </div>
         </div>
-        <div class="calculator-error" role="alert" tabindex="-1" hidden></div>
+        <div id="calculator-error-${page.meta.calculatorId}" class="calculator-error" role="alert" tabindex="-1" hidden></div>
         <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
         <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
           <div class="calculator-result__lead"><span>Costo carburante stimato</span><strong data-result="totalFuelCost">—</strong></div>

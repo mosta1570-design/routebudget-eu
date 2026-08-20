@@ -38,6 +38,18 @@ Una stima utile parte da dati verificabili. A seconda della tratta e del mezzo, 
 
 RouteBudget combina questi input. L’app nativa non offre un campo libero per costi fissi, attese o spese specifiche della missione: queste voci vanno calcolate e gestite fuori dall’app, oppure riflesse in un input aziendale pertinente solo quando il metodo lo giustifica e senza contarle due volte. Non misura automaticamente il costo reale della flotta e non certifica la correttezza del percorso. Se un valore cambia, anche il risultato cambia.
 
+## Camion e furgoni N1 non usano lo stesso profilo
+
+RouteBudget distingue il flusso per mezzo pesante da quello per veicolo N1. Nel profilo N1 puoi registrare dati di massa e rimorchio, scegliere alimentazione diesel, benzina, GPL, metano o elettrica e usare il consumo nell’unità pertinente. Questo evita di trattare un furgone come un camion ridotto.
+
+La distinzione non rende automatici i dati. Consumo, prezzo al litro o al kWh, massa, classe e importi di pedaggio devono corrispondere al mezzo e alla missione. Le regole N1 per Paese aiutano a riconoscere quando serve una verifica, ma RouteBudget non compra vignette, non assegna una classe ufficiale e non sostituisce il calcolatore del gestore stradale.
+
+Per un viaggio con rimorchio controlla i dati del complesso prima del calcolo. Un ritorno carico va trattato come missione separata; il comando di ritorno dell'app rappresenta il rientro a vuoto.
+
+Prima di stimare una missione N1, misura [quanto consuma il furgone](/it/guide/quanto-consuma-un-furgone/) con dati del mezzo e verifica il [costo autostrada del furgone](/it/guide/costo-autostrada-furgone/) sul gestore pertinente. Queste guide preparano input migliori; non trasformano RouteBudget in navigatore o servizio di pedaggio.
+
+Per N1 oltre 2,5 t impiegati in trasporto internazionale o cabotaggio dal 1° luglio 2026, consulta anche la guida sul [tachigrafo per furgoni](/it/guide/tachigrafo-furgoni-2026/) e verifica ambito ed esenzioni sulle fonti competenti. L'app fornisce una stima economica, non un controllo del tachigrafo.
+
 Per una verifica isolata dell’adeguamento carburante, il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) usa quattro input e una formula visibile. L’app mantiene invece il flusso completo della missione.
 
 ## Dal costo ai tre scenari di prezzo

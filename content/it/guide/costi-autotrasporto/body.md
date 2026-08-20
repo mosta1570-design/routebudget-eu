@@ -1,6 +1,6 @@
 ## Risposta diretta: quali sono i costi dell’autotrasporto merci
 
-I costi dell’autotrasporto merci comprendono voci fisse, variabili, indirette e straordinarie. Gasolio e pedaggi sono visibili subito; leasing, assicurazione, autista, manutenzione, pneumatici, fermo mezzo e lavoro amministrativo devono essere attribuiti con un criterio coerente. Questa pagina costruisce la mappa economica dell’impresa, non il preventivo di una singola tratta.
+I costi dell’autotrasporto merci comprendono voci fisse, variabili, indirette e straordinarie. Gasolio e pedaggi sono visibili subito; leasing, assicurazione, autista, manutenzione, pneumatici, fermo mezzo e lavoro amministrativo devono essere attribuiti con un criterio coerente. La guida ai [costi fissi e variabili dell'autotrasporto](/it/guide/costi-fissi-variabili-autotrasporto/) approfondisce il criterio di classificazione. Questa pagina costruisce la mappa economica dell’impresa, non il preventivo di una singola tratta.
 
 Una piccola impresa non ha bisogno di un modello enorme. Ha bisogno di categorie stabili, dati aggiornati e un criterio coerente per assegnare i costi ai chilometri o alle giornate lavorate. Per una missione futura usa la guida al [calcolo del costo di trasporto](/it/guide/calcolo-costo-trasporto/) o il [calcolatore del costo km camion](/it/calcolatori/costo-chilometrico-camion/). Qui l’obiettivo è arrivare a una base gestionale utile, non sostituire contabilità o valutazioni fiscali.
 
@@ -47,11 +47,15 @@ La media generale è utile per il controllo, ma può nascondere differenze impor
 
 Il prezzo va aggiornato con una frequenza coerente con la volatilità osservata e con le modalità di acquisto dell’impresa. Le fonti pubbliche possono offrire un contesto, ma il calcolo di tratta dovrebbe riflettere il costo effettivo o il criterio aziendale scelto.
 
+Per i veicoli N1, la guida su [quanto consuma un furgone](/it/guide/quanto-consuma-un-furgone/) separa litri, chilometri, kWh e condizioni operative. Non trasferire automaticamente al furgone il consumo medio di un camion o il valore dichiarato di un modello diverso.
+
+Per il mezzo pesante, il metodo su [quanto consuma un camion](/it/guide/quanto-consuma-un-camion/) mostra come costruire un dato misurato per configurazione e missione anziché usare una media senza contesto.
+
 Quando il rapporto prevede un confronto fra prezzo base e prezzo successivo, il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) può isolare l’adeguamento. Non sostituisce la misurazione dei litri o il costo carburante reale.
 
 ## Pneumatici, manutenzione e usura
 
-Queste spese arrivano in momenti irregolari, mentre l’usura matura ogni giorno. Se vengono considerate soltanto quando compare la fattura, i mesi precedenti sembrano più redditizi di quanto siano stati.
+Queste spese arrivano in momenti irregolari, mentre l’usura matura ogni giorno. Se vengono considerate soltanto quando compare la fattura, i mesi precedenti sembrano più redditizi di quanto siano stati. La guida su [usura e manutenzione del camion](/it/guide/usura-manutenzione-camion/) costruisce una quota senza trasformarla in tariffa universale.
 
 Una quota per chilometro può essere costruita partendo dallo storico:
 
@@ -78,6 +82,8 @@ Le norme applicabili sui tempi di guida e riposo devono essere considerate nella
 ## Pedaggi, traghetti e accessi
 
 I costi di infrastruttura cambiano per Paese, percorso e caratteristiche del veicolo. Pedaggi autostradali, tunnel, ponti, traghetti e aree soggette a regole specifiche vanno registrati come voci distinguibili. In questo modo, quando cambia l’itinerario, non è necessario ricostruire l’intero costo.
+
+Per un N1 in Italia, il [costo autostrada del furgone](/it/guide/costo-autostrada-furgone/) parte dalla classe effettiva e dall'importo ufficiale della tratta. Altezza all'asse anteriore, assi e rimorchio possono cambiare il risultato: la sola parola “furgone” non identifica una tariffa.
 
 Una matrice di stima è utile nella fase iniziale, ma importi particolari richiedono una verifica presso le fonti o i gestori pertinenti. Anche parcheggi sicuri, prenotazioni e servizi obbligatori per un determinato carico possono appartenere alla tratta e non alla quota generale.
 
@@ -156,4 +162,4 @@ Archiviare l’origine dei dati è importante quanto il numero. Un importo senza
 - [ ] Il costo per km riporta periodo e voci incluse.
 - [ ] Preventivo e consuntivo vengono confrontati.
 
-La mappa dei costi diventa utile quando entra nelle decisioni quotidiane: selezione delle tratte, verifica dei prezzi, pianificazione del rientro e lettura del margine. Aggiornata con metodo, non promette un risultato, ma impedisce che spese note restino invisibili fino alla fine del mese. [RouteBudget per autotrasportatori e padroncini](/it/app-per-autotrasportatori/) porta queste voci nel flusso operativo della singola tratta.
+La mappa dei costi diventa utile quando entra nelle decisioni quotidiane: selezione delle tratte, verifica dei prezzi, pianificazione del rientro e lettura del margine. La guida su come [calcolare carburante, pedaggi e autista](/it/guide/calcolare-carburante-pedaggi-autista/) traduce tre voci principali nella singola missione. Aggiornata con metodo, la struttura non promette un risultato, ma impedisce che spese note restino invisibili fino alla fine del mese. [RouteBudget per autotrasportatori e padroncini](/it/app-per-autotrasportatori/) porta gli input supportati nel flusso operativo della tratta.

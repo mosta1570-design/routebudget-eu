@@ -237,7 +237,7 @@ li {
 .button--primary {
   background: var(--route);
   box-shadow: 0 16px 42px color-mix(in oklch, var(--route) 23%, transparent);
-  color: var(--ink);
+  color: var(--night-deep);
 }
 
 .button--primary:hover {
@@ -677,6 +677,12 @@ li {
   font-size: 0.82rem;
   line-height: 1.35;
   text-decoration: none;
+}
+
+.mobile-toc a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
 }
 
 .article-toc a:hover,

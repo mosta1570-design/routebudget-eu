@@ -1,0 +1,90 @@
+{
+  "slug": "costo-autostrada-furgone",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo autostrada furgone: classe A, B e calcolo pedaggio",
+  "mobileH1": "Costo autostrada furgone: classe e pedaggio",
+  "description": "Come calcolare il costo autostrada di un furgone: classe A o B, effetto di assi e rimorchio, tariffa 2026 e controllo del pedaggio sulla tratta.",
+  "eyebrow": "Furgoni N1 · Pedaggio Italia",
+  "published": "2026-08-20",
+  "modified": "2026-08-20",
+  "reviewed": "2026-08-20",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo autostrada furgone",
+  "secondaryKeywords": [
+    "calcolo costo autostrada furgone",
+    "pedaggio furgone autostrada",
+    "classe autostradale furgone",
+    "classe B pedaggio furgone"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "costo autostrada furgone",
+    "classi di pedaggio A e B",
+    "furgoni N1",
+    "rimorchio e numero di assi",
+    "pedaggio autostradale italiano"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costo-furgone-per-km",
+    "guide:quanto-consuma-un-furgone",
+    "guide:calcolo-pedaggio-camion",
+    "landing:app-per-autotrasportatori"
+  ],
+  "relatedCalculator": null,
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "costo-autostrada-furgone",
+  "canonical": "/it/guide/costo-autostrada-furgone/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Autostrade per l'Italia — Classi di pedaggio",
+      "url": "https://www.autostrade.it/it/servizi-al-cliente/pedaggio/classi-di-pedaggio",
+      "publishedOrUpdated": "Pagina istituzionale corrente verificata il 20 agosto 2026",
+      "geography": "Italia — rete Autostrade per l'Italia e criterio adottato sulla quasi totalità delle concessionarie",
+      "accessedAt": "2026-08-20",
+      "supports": "Classi A e B per veicoli a due assi in base all'altezza di 1,3 m misurata all'asse anteriore; classi 3, 4 e 5 per veicoli o convogli con più assi."
+    },
+    {
+      "label": "Autostrade per l'Italia — Come si calcola il pedaggio",
+      "url": "https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio",
+      "publishedOrUpdated": "Tariffe indicate dal gestore aggiornate al 1° gennaio 2026",
+      "geography": "Italia — rete Autostrade per l'Italia",
+      "accessedAt": "2026-08-20",
+      "supports": "Formula per chilometri e tariffa unitaria, valori 2026 comprensivi di IVA, pianura e montagna, ruolo delle concessionarie, arrotondamento e sistemi aperti o chiusi."
+    },
+    {
+      "label": "Autostrade per l'Italia — Carta dei Servizi 2026",
+      "url": "https://www.autostrade.it/documents/10279/48940298/0163BV6_Carta_servizi_Maggio29%401-82_v2_%2B29_05.pdf?item=pedaggio",
+      "publishedOrUpdated": "Dati aggiornati al 1° gennaio 2026",
+      "geography": "Italia — rete Autostrade per l'Italia",
+      "accessedAt": "2026-08-20",
+      "supports": "Conferma documentale delle cinque classi, componenti tariffarie 2026, IVA al 22%, arrotondamento e strumenti ufficiali per percorsi e pedaggi."
+    },
+    {
+      "label": "Autostrade per l'Italia — Calcolo percorso e pedaggio",
+      "url": "https://viabilita.autostrade.it/it/viabilita/traffico",
+      "publishedOrUpdated": "Strumento operativo corrente verificato il 20 agosto 2026",
+      "geography": "Italia — rete e tratte coperte dallo strumento Autostrade per l'Italia",
+      "accessedAt": "2026-08-20",
+      "supports": "Verifica operativa di percorso, caselli, lunghezza e pedaggio disponibile nell'interfaccia; il tipo di veicolo selezionabile deve corrispondere al mezzo da quotare."
+    },
+    {
+      "label": "EUR-Lex — Regolamento (UE) 2018/858, articolo 4",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32018R0858",
+      "publishedOrUpdated": "Regolamento del 30 maggio 2018 nella versione ufficiale consultata",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-20",
+      "supports": "Definizione della categoria N1 come veicolo progettato principalmente per merci con massa massima non superiore a 3,5 t; distinzione rispetto alla classe tariffaria autostradale."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo specifico per classificare un furgone, verificare il pedaggio ufficiale e trasferire il totale nel costo della missione senza duplicazioni."
+}

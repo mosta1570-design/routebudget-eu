@@ -7,8 +7,8 @@
   "description": "RouteBudget riunisce costi di tratta, tre scenari di prezzo, archivio locale e riepilogo PDF per autotrasportatori e piccole imprese.",
   "eyebrow": "RouteBudget per il lavoro quotidiano",
   "published": "2026-08-01",
-  "modified": "2026-08-08",
-  "reviewed": "2026-08-08",
+  "modified": "2026-08-20",
+  "reviewed": "2026-08-20",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "app per autotrasportatori",
@@ -18,7 +18,8 @@
     "calcolo margine autotrasporto",
     "software costo tratta camion",
     "software per autotrasportatori",
-    "app per padroncini"
+    "app per padroncini",
+    "app calcolo costi furgone N1"
   ],
   "searchIntent": "commercial-transactional",
   "conversionIntent": "complete-trip",
@@ -27,11 +28,11 @@
   "pillar": null,
   "related": [
     "guide:calcolo-costo-trasporto",
-    "guide:costi-autotrasporto",
+    "guide:costo-furgone-per-km",
+    "guide:quanto-consuma-un-furgone",
+    "guide:costo-autostrada-furgone",
     "guide:preventivo-trasporto",
-    "calcolatori:costo-chilometrico-camion",
-    "calcolatori:costo-carburante-viaggio",
-    "calcolatori:fuel-surcharge-autotrasporto"
+    "calcolatori:costo-chilometrico-camion"
   ],
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",
   "calculatorId": null,
@@ -43,7 +44,8 @@
     "app autotrasporto",
     "costo di tratta",
     "scenari di prezzo",
-    "preventivo PDF"
+    "preventivo PDF",
+    "veicoli N1"
   ],
   "sources": [
     {
@@ -63,5 +65,5 @@
       "supports": "Destinazione ufficiale Android del prodotto RouteBudget EU."
     }
   ],
-  "changeSummary": "Intenti software per autotrasportatori e app per padroncini chiariti senza promettere funzioni TMS; CTA store anticipata."
+  "changeSummary": "Aggiunto il perimetro verificato per furgoni N1, alimentazioni, rimorchio e limiti delle regole di pedaggio per Paese."
 }

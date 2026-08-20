@@ -17,6 +17,7 @@ for (const field of ['status', 'author', 'reviewer', 'primaryKeyword', 'secondar
 }
 
 const counts = { pillar: 0, guide: 0, calculator: 0, landing: 0 };
+const publishedPages = [];
 let published = 0;
 for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
   const directory = path.join(CONTENT, 'it', section);
@@ -34,6 +35,12 @@ for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
     if (meta.status === 'published' && meta.noindex === false) {
       published += 1;
       counts[meta.kind] += 1;
+      publishedPages.push({
+        id: `${section}/${entry.name}`,
+        kind: meta.kind,
+        canonical: meta.canonical,
+        body: await readFile(path.join(directory, entry.name, 'body.md'), 'utf8'),
+      });
     }
   }
 }
@@ -42,6 +49,16 @@ assert(expected && typeof expected === 'object', 'site.json: expectedPublished i
 for (const kind of Object.keys(counts)) {
   assert(Number.isInteger(expected[kind]) && expected[kind] >= 0, `site.json: invalid expectedPublished.${kind}`);
   assert.equal(counts[kind], expected[kind], `published ${kind} inventory differs from site.json`);
+}
+
+for (const guide of publishedPages.filter((page) => page.kind === 'guide')) {
+  const contextualSources = publishedPages.filter(
+    (page) => page.id !== guide.id && page.body.includes(`](${guide.canonical})`),
+  );
+  assert(
+    contextualSources.length >= 2,
+    `${guide.id}: needs contextual inbound links from at least two other published content pages`,
+  );
 }
 
 const temporaryOutput = await mkdtemp(path.join(os.tmpdir(), 'routebudget-seo-content-'));
@@ -55,4 +72,4 @@ try {
   await rm(temporaryOutput, { recursive: true, force: true });
 }
 
-console.log(`Content schema passed: ${published} published pages (${counts.pillar} pillars, ${counts.guide} supports, ${counts.calculator} calculators, ${counts.landing} app landing).`);
+console.log(`Content schema passed: ${published} published pages (${counts.pillar} pillars, ${counts.guide} supports, ${counts.calculator} calculators, ${counts.landing} app landing); every support guide has at least two contextual inbound sources.`);

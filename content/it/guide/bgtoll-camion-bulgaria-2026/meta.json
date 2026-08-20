@@ -1,0 +1,84 @@
+{
+  "slug": "bgtoll-camion-bulgaria-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "BGTOLL camion 2026: calcolo del pedaggio in Bulgaria",
+  "mobileH1": "BGTOLL camion 2026: guida al pedaggio bulgaro",
+  "description": "Come verificare BGTOLL camion nel 2026: mezzi oltre 3,5 t, peso, assi, EURO, CO2, classe stradale, Route Pass e costo nel preventivo PDF.",
+  "eyebrow": "Bulgaria · BGTOLL 2026",
+  "published": "2026-08-20",
+  "modified": "2026-08-20",
+  "reviewed": "2026-08-20",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "BGTOLL camion",
+  "secondaryKeywords": [
+    "pedaggio camion Bulgaria 2026",
+    "calcolo BGTOLL camion",
+    "Route Pass Bulgaria camion",
+    "tariffe BGTOLL CO2",
+    "pedaggio Bulgaria mezzi pesanti"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "BGTOLL",
+    "pedaggio chilometrico Bulgaria",
+    "Route Pass",
+    "servizio di bordo",
+    "massa e assi",
+    "classe EURO e CO2"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "calcolatori:costo-chilometrico-camion",
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-ungheria-2026",
+    "guide:pedaggio-camion-repubblica-ceca"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "bgtoll-camion-bulgaria-2026",
+  "canonical": "/it/guide/bgtoll-camion-bulgaria-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "BGTOLL — condizioni ufficiali del Route Pass",
+      "url": "https://web.bgtoll.bg/Content/tc/termsandconditions.html?languageCultureName=en-GB",
+      "publishedOrUpdated": "Condizioni operative correnti verificate il 20 agosto 2026",
+      "geography": "Bulgaria, rete stradale repubblicana a pedaggio",
+      "accessedAt": "2026-08-20",
+      "supports": "Soglia oltre 3,5 t, natura prepagata del Route Pass, dati da dichiarare, finestre di acquisto, validità di 24 ore e responsabilità per l'esattezza dei dati del veicolo."
+    },
+    {
+      "label": "BGTOLL — acquisto ufficiale Route Pass",
+      "url": "https://web.bgtoll.bg/RoutePass/Purchase",
+      "publishedOrUpdated": "Servizio operativo corrente verificato il 20 agosto 2026",
+      "geography": "Bulgaria, mezzi pesanti nazionali ed esteri",
+      "accessedAt": "2026-08-20",
+      "supports": "Selezione operativa tra camion fino a 12 t e oltre 12 t e acquisto del prodotto associato al percorso dichiarato."
+    },
+    {
+      "label": "BGTOLL — calcolatore ufficiale del pedaggio",
+      "url": "https://tollc.bgtoll.bg/",
+      "publishedOrUpdated": "Calcolatore operativo corrente verificato il 20 agosto 2026",
+      "geography": "Rete BGTOLL, Bulgaria",
+      "accessedAt": "2026-08-20",
+      "supports": "Calcolo per percorso con tipo di veicolo, fascia di massa, numero totale di assi, classe EURO, classe CO2, data e punti di transito."
+    },
+    {
+      "label": "Gazzetta ufficiale bulgara — Decreto n. 64 del 26 maggio 2026",
+      "url": "https://dv.parliament.bg/DVWeb/showMaterialDV.jsp?idMat=243642",
+      "publishedOrUpdated": "Pubblicato il 29 maggio 2026; in vigore dal 1° giugno 2026",
+      "geography": "Bulgaria, infrastruttura stradale a pagamento",
+      "accessedAt": "2026-08-20",
+      "supports": "Tariffe totali in euro/km differenziate per classe CO2, tipo e massa del veicolo, assi, categoria EURO e classe della strada."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: guida operativa BGTOLL 2026 per verificare il pedaggio bulgaro e inserirlo una sola volta nel costo e nel preventivo della tratta."
+}

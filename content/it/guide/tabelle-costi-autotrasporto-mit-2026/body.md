@@ -14,7 +14,7 @@ Il MIT ha pubblicato l’aggiornamento di marzo il **17 marzo 2026**. La pagina 
 
 ## Che cosa sono, e che cosa non sono
 
-Le tabelle traducono varie componenti di costo in intervalli annuali e in valori per chilometro. Offrono una base esterna per controllare se carburante, personale, manutenzione, pneumatici, assicurazione e altre voci del proprio modello sono plausibili rispetto alla classe considerata.
+Le tabelle traducono varie componenti di costo in intervalli annuali e in valori per chilometro. Offrono una base esterna per controllare se carburante, personale, manutenzione, pneumatici, assicurazione e altre voci del proprio modello sono plausibili rispetto alla classe considerata. La guida ai [costi fissi e variabili](/it/guide/costi-fissi-variabili-autotrasporto/) aiuta a confrontare la struttura MIT con il comportamento reale delle spese aziendali.
 
 Non sono una somma già pronta da copiare. Due imprese della stessa classe possono avere consumi, finanziamenti, costo del lavoro, percorrenze, condizioni assicurative e organizzazioni molto diverse. Anche due viaggi dello stesso mezzo possono produrre pedaggi, attese e chilometri a vuoto differenti.
 

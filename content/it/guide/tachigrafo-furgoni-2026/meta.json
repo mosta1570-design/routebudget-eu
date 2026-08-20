@@ -8,8 +8,8 @@
   "description": "Dal 1° luglio 2026 il tachigrafo riguarda alcuni furgoni oltre 2,5 t nei trasporti internazionali: perimetro, eccezioni, tempi e costi.",
   "eyebrow": "Furgoni internazionali dal 1° luglio",
   "published": "2026-08-13",
-  "modified": "2026-08-13",
-  "reviewed": "2026-08-13",
+  "modified": "2026-08-20",
+  "reviewed": "2026-08-20",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "tachigrafo furgoni 2026",
@@ -35,9 +35,9 @@
     "guide:costo-furgone-per-km",
     "guide:tempi-guida-riposo-camion",
     "guide:calcolo-costo-trasporto",
-    "calcolatori:costo-chilometrico-camion"
+    "landing:app-per-autotrasportatori"
   ],
-  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "relatedCalculator": null,
   "pillar": "guide:costi-autotrasporto",
   "calculatorId": null,
   "conversionIntent": "complete-trip",
@@ -72,5 +72,5 @@
       "supports": "Ambito di applicazione, esenzioni e regole europee sui periodi di guida, interruzione e riposo."
     }
   ],
-  "changeSummary": "Prima pubblicazione: perimetro 2026 del tachigrafo per furgoni, verifica pratica e impatto prudente sul costo della tratta."
+  "changeSummary": "Rimosso il collegamento improprio al calcolatore camion e collegata la pagina prodotto, più pertinente al flusso N1 dell’app."
 }

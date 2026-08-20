@@ -121,4 +121,4 @@ Evita anche il doppio conteggio. Se utilizzi già un costo chilometrico storico 
 - [ ] Scenario prudente provato quando il dato è variabile.
 - [ ] Carburante integrato una sola volta nel costo totale.
 
-Sapere quanto consuma un camion significa quindi saper descrivere il contesto del numero. Un dato misurato, segmentato e datato vale più di una media precisa solo in apparenza. Nel flusso [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/) puoi portare consumo, distanza e altre voci della missione in una stima unica, da verificare prima di inviare il preventivo.
+Sapere quanto consuma un camion significa quindi saper descrivere il contesto del numero. Un dato misurato, segmentato e datato vale più di una media precisa solo in apparenza. Per un N1 usa invece il metodo dedicato a [quanto consuma un furgone](/it/guide/quanto-consuma-un-furgone/), senza trasferire medie del mezzo pesante. Nel flusso [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/) puoi portare consumo, distanza e altre voci della missione in una stima unica, da verificare prima di inviare il preventivo.
