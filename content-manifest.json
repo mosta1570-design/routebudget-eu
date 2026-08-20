@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-18",
+  "revisionDate": "2026-08-20",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -11,7 +11,7 @@
       "canonical": "https://routebudget.eu/it/app-per-autotrasportatori/",
       "indexable": true,
       "primaryKeyword": "app per autotrasportatori",
-      "modified": "2026-08-08"
+      "modified": "2026-08-20"
     },
     {
       "id": "it:calcolatori:costo-carburante-viaggio",
@@ -48,6 +48,18 @@
       "indexable": true,
       "primaryKeyword": "calcolo fuel surcharge autotrasporto",
       "modified": "2026-08-16"
+    },
+    {
+      "id": "it:guide:bgtoll-camion-bulgaria-2026",
+      "url": "https://routebudget.eu/it/guide/bgtoll-camion-bulgaria-2026/",
+      "title": "BGTOLL camion 2026: calcolo del pedaggio in Bulgaria",
+      "description": "Come verificare BGTOLL camion nel 2026: mezzi oltre 3,5 t, peso, assi, EURO, CO2, classe stradale, Route Pass e costo nel preventivo PDF.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/bgtoll-camion-bulgaria-2026/",
+      "indexable": true,
+      "primaryKeyword": "BGTOLL camion",
+      "modified": "2026-08-20"
     },
     {
       "id": "it:guide:calcolare-carburante-pedaggi-autista",
@@ -122,6 +134,18 @@
       "modified": "2026-08-01"
     },
     {
+      "id": "it:guide:costo-autostrada-furgone",
+      "url": "https://routebudget.eu/it/guide/costo-autostrada-furgone/",
+      "title": "Costo autostrada furgone: classe A, B e calcolo pedaggio",
+      "description": "Come calcolare il costo autostrada di un furgone: classe A o B, effetto di assi e rimorchio, tariffa 2026 e controllo del pedaggio sulla tratta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-autostrada-furgone/",
+      "indexable": true,
+      "primaryKeyword": "costo autostrada furgone",
+      "modified": "2026-08-20"
+    },
+    {
       "id": "it:guide:costo-chilometrico-camion",
       "url": "https://routebudget.eu/it/guide/costo-chilometrico-camion/",
       "title": "Costo chilometrico storico del camion: periodo e consuntivo",
@@ -143,7 +167,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-furgone-per-km/",
       "indexable": true,
       "primaryKeyword": "costo furgone per km",
-      "modified": "2026-08-13"
+      "modified": "2026-08-20"
     },
     {
       "id": "it:guide:costo-orario-autista-camion",
@@ -386,6 +410,18 @@
       "modified": "2026-08-11"
     },
     {
+      "id": "it:guide:quanto-consuma-un-furgone",
+      "url": "https://routebudget.eu/it/guide/quanto-consuma-un-furgone/",
+      "title": "Quanto consuma un furgone: diesel, elettrico e costo tratta",
+      "description": "Metodo pratico per misurare quanto consuma un furgone diesel o elettrico, stimare una tratta e distinguere dati WLTP, uso reale e ricarica.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-furgone/",
+      "indexable": true,
+      "primaryKeyword": "quanto consuma un furgone",
+      "modified": "2026-08-20"
+    },
+    {
       "id": "it:guide:ritorno-a-vuoto-autotrasporto",
       "url": "https://routebudget.eu/it/guide/ritorno-a-vuoto-autotrasporto/",
       "title": "Ritorno a vuoto nell’autotrasporto: costi e prezzo della tratta",
@@ -419,7 +455,7 @@
       "canonical": "https://routebudget.eu/it/guide/tachigrafo-furgoni-2026/",
       "indexable": true,
       "primaryKeyword": "tachigrafo furgoni 2026",
-      "modified": "2026-08-13"
+      "modified": "2026-08-20"
     },
     {
       "id": "it:guide:tariffe-trazionisti",

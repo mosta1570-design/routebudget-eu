@@ -81,10 +81,17 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
   let started = false;
   let announcementFrame = null;
 
-  form.addEventListener('input', () => {
+  form.addEventListener('input', (event) => {
     if (!started) {
       started = true;
       emit('calculator_start', { calculator_id: form.dataset.calculator });
+    }
+
+    const input = event.target instanceof HTMLInputElement ? event.target : null;
+    if (input?.getAttribute('aria-invalid') === 'true') {
+      input.removeAttribute('aria-invalid');
+      const errorId = form.querySelector('.calculator-error')?.id;
+      if (errorId) removeDescription(input, errorId);
     }
   });
 
@@ -99,6 +106,7 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
       announcementFrame = null;
     }
     if (status) status.textContent = '';
+    clearInvalidFields(form, error.id);
 
     try {
       const result = calculate(form);
@@ -118,7 +126,16 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
         ? calculationError.message
         : 'Controlla i valori inseriti.';
       error.hidden = false;
-      error.focus();
+      const invalidInput = typeof calculationError?.fieldName === 'string'
+        ? form.elements.namedItem(calculationError.fieldName)
+        : null;
+      if (invalidInput instanceof HTMLInputElement) {
+        invalidInput.setAttribute('aria-invalid', 'true');
+        addDescription(invalidInput, error.id);
+        invalidInput.focus();
+      } else {
+        error.focus();
+      }
       emit('calculator_validation_error', {
         calculator_id: form.dataset.calculator,
         error_code: calculationError?.code || 'invalid_value',
@@ -134,7 +151,29 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
     form.querySelector('.calculator-error').textContent = '';
     form.querySelector('.calculator-result').hidden = true;
     form.querySelector('.calculator-status').textContent = '';
+    clearInvalidFields(form, form.querySelector('.calculator-error').id);
   });
+}
+
+function addDescription(input, id) {
+  const ids = new Set((input.getAttribute('aria-describedby') || '').split(/\s+/).filter(Boolean));
+  ids.add(id);
+  input.setAttribute('aria-describedby', [...ids].join(' '));
+}
+
+function removeDescription(input, id) {
+  const ids = (input.getAttribute('aria-describedby') || '')
+    .split(/\s+/)
+    .filter((value) => value && value !== id);
+  if (ids.length > 0) input.setAttribute('aria-describedby', ids.join(' '));
+  else input.removeAttribute('aria-describedby');
+}
+
+function clearInvalidFields(form, errorId) {
+  for (const input of form.querySelectorAll('input[aria-invalid="true"]')) {
+    input.removeAttribute('aria-invalid');
+    removeDescription(input, errorId);
+  }
 }
 
 function resultAnnouncement(calculator, result) {
@@ -196,7 +235,7 @@ function readNumber(form, name, required, strictlyPositive) {
 
   if (!raw) {
     if (required) {
-      throw validationError(`Inserisci un valore per “${label}”.`, 'required');
+      throw validationError(`Inserisci un valore per “${label}”.`, 'required', name);
     }
     return 0;
   }
@@ -205,19 +244,19 @@ function readNumber(form, name, required, strictlyPositive) {
     rejectAmbiguousGrouping: DECIMAL_FIELDS.has(name),
   });
   if (!Number.isFinite(value)) {
-    throw validationError(`“${label}” deve essere un numero positivo. Usa la virgola per i decimali (es. 4,5) e il punto solo per le migliaia (es. 1.000).`, 'invalid_format');
+    throw validationError(`“${label}” deve essere un numero positivo. Usa la virgola per i decimali (es. 4,5) e il punto solo per le migliaia (es. 1.000).`, 'invalid_format', name);
   }
 
   if (value < 0 || (strictlyPositive && value === 0)) {
-    throw validationError(`Controlla il valore di “${label}”.`, 'invalid_value');
+    throw validationError(`Controlla il valore di “${label}”.`, 'invalid_value', name);
   }
 
   if (value > LIMITS[name]) {
-    throw validationError(`“${label}” supera il limite previsto da questo calcolatore.`, 'out_of_range');
+    throw validationError(`“${label}” supera il limite previsto da questo calcolatore.`, 'out_of_range', name);
   }
 
   if (MINIMUMS[name] !== undefined && value < MINIMUMS[name]) {
-    throw validationError(`“${label}” deve essere almeno ${String(MINIMUMS[name]).replace('.', ',')}.`, 'out_of_range');
+    throw validationError(`“${label}” deve essere almeno ${String(MINIMUMS[name]).replace('.', ',')}.`, 'out_of_range', name);
   }
 
   return value;
@@ -252,8 +291,9 @@ function emit(event, detail) {
   window.RouteBudgetAnalytics?.emit(event, detail);
 }
 
-function validationError(message, code) {
+function validationError(message, code, fieldName) {
   const error = new Error(message);
   error.code = code;
+  error.fieldName = fieldName;
   return error;
 }
