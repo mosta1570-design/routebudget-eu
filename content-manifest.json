@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-20",
+  "revisionDate": "2026-08-21",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -16,14 +16,14 @@
     {
       "id": "it:calcolatori:costo-carburante-viaggio",
       "url": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
-      "title": "Calcolatore del costo carburante per un viaggio camion",
-      "description": "Calcola litri e costo stimato del carburante per andata e ritorno a vuoto usando distanza, consumo medio e prezzo al litro.",
+      "title": "Calcolatore carburante camion: litri e costo della tratta",
+      "description": "Inserisci distanza, consumo già noto e prezzo al litro per calcolare litri e costo carburante di andata e ritorno a vuoto.",
       "type": "calculator",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
       "indexable": true,
       "primaryKeyword": "calcolatore costo carburante viaggio",
-      "modified": "2026-08-11"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:calcolatori:costo-chilometrico-camion",
@@ -59,7 +59,7 @@
       "canonical": "https://routebudget.eu/it/guide/bgtoll-camion-bulgaria-2026/",
       "indexable": true,
       "primaryKeyword": "BGTOLL camion",
-      "modified": "2026-08-20"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:calcolare-carburante-pedaggi-autista",
@@ -95,7 +95,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-pedaggio-camion/",
       "indexable": true,
       "primaryKeyword": "calcolo pedaggio camion",
-      "modified": "2026-08-18"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:clausola-adeguamento-carburante-autotrasporto",
@@ -191,7 +191,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-traghetto-camion-calais-dover-2026/",
       "indexable": true,
       "primaryKeyword": "costo traghetto Calais Dover camion",
-      "modified": "2026-08-18"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:costo-traghetto-camion-sardegna",
@@ -203,7 +203,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-traghetto-camion-sardegna/",
       "indexable": true,
       "primaryKeyword": "costo traghetto camion Sardegna 2026",
-      "modified": "2026-08-16"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:costo-traghetto-camion-sicilia",
@@ -314,6 +314,18 @@
       "modified": "2026-08-15"
     },
     {
+      "id": "it:guide:pedaggio-camion-polonia-2026",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-polonia-2026/",
+      "title": "Pedaggio camion Polonia 2026: e-TOLL, rete, peso ed EURO",
+      "description": "Pedaggio camion in Polonia nel 2026: nuove tariffe e rete e-TOLL dal 1° febbraio, peso del complesso, classe EURO, registrazione e calcolo in PLN.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-polonia-2026/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Polonia 2026",
+      "modified": "2026-08-21"
+    },
+    {
       "id": "it:guide:pedaggio-camion-repubblica-ceca",
       "url": "https://routebudget.eu/it/guide/pedaggio-camion-repubblica-ceca/",
       "title": "Pedaggio camion Repubblica Ceca 2026: MYTO CZ",
@@ -323,7 +335,19 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-repubblica-ceca/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Repubblica Ceca 2026",
-      "modified": "2026-08-17"
+      "modified": "2026-08-21"
+    },
+    {
+      "id": "it:guide:pedaggio-camion-serbia-2026",
+      "url": "https://routebudget.eu/it/guide/pedaggio-camion-serbia-2026/",
+      "title": "Pedaggio camion Serbia 2026: categoria IV, tariffe e TAG",
+      "description": "Come verificare il pedaggio camion in Serbia nel 2026: categoria III o IV, tariffario ufficiale, TAG obbligatorio, Toll4All e costo nel preventivo PDF.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-serbia-2026/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio camion Serbia 2026",
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:pedaggio-camion-slovenia",
@@ -335,7 +359,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-slovenia/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Slovenia 2026",
-      "modified": "2026-08-15"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:pedaggio-camion-svizzera",
@@ -347,7 +371,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-svizzera/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Svizzera",
-      "modified": "2026-08-14"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:pedaggio-camion-ungheria-2026",
@@ -371,7 +395,7 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto PDF",
-      "modified": "2026-08-08"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:preventivo-trasporto",
@@ -400,14 +424,14 @@
     {
       "id": "it:guide:quanto-consuma-un-camion",
       "url": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
-      "title": "Quanto consuma un camion? Calcolo in l/100 km con dati reali",
-      "description": "Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli.",
+      "title": "Quanto consuma un camion? Consumo medio reale in l/100 km",
+      "description": "Come misurare il consumo medio reale di un camion in l/100 km, separare i profili di lavoro e usare il dato in una tratta senza medie ingannevoli.",
       "type": "guide",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
       "indexable": true,
       "primaryKeyword": "quanto consuma un camion",
-      "modified": "2026-08-11"
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:quanto-consuma-un-furgone",
@@ -492,6 +516,18 @@
       "indexable": true,
       "primaryKeyword": "calcolo tempi di guida e riposo camion",
       "modified": "2026-08-12"
+    },
+    {
+      "id": "it:guide:traghetto-camion-italia-grecia",
+      "url": "https://routebudget.eu/it/guide/traghetto-camion-italia-grecia/",
+      "title": "Traghetto camion Italia–Grecia: costo e preventivo cargo",
+      "description": "Come richiedere e confrontare un preventivo cargo Italia–Grecia per camion, includere supplementi e tempi e portare il totale verificato nel costo della tratta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/traghetto-camion-italia-grecia/",
+      "indexable": true,
+      "primaryKeyword": "traghetto camion Italia Grecia",
+      "modified": "2026-08-21"
     },
     {
       "id": "it:guide:usura-manutenzione-camion",
