@@ -8,8 +8,8 @@
   "description": "Come verificare il pedaggio camion in Slovenia nel 2026: DarsGo oltre 3,5 t, classi R2-R4, EURO e CO₂, OBU, pagamenti e tunnel Karavanke.",
   "eyebrow": "Slovenia · DarsGo 2026",
   "published": "2026-08-15",
-  "modified": "2026-08-15",
-  "reviewed": "2026-08-15",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Slovenia 2026",
@@ -52,15 +52,15 @@
       "url": "https://www.gov.si/en/topics/tolls/",
       "publishedOrUpdated": "Ultima modifica 4 giugno 2026",
       "geography": "Slovenia",
-      "accessedAt": "2026-08-15",
+      "accessedAt": "2026-08-21",
       "supports": "Soglia di 3,5 t, pedaggio a distanza, rete soggetta, variabili per tratta, assi ed EURO, disciplina separata del tunnel Karavanke."
     },
     {
       "label": "DarsGo — Calcolo dei pedaggi",
-      "url": "https://www.darsgo.si/portal/it/calcolo-dei-pedaggi",
-      "publishedOrUpdated": "Calcolatore operativo corrente verificato il 15 agosto 2026",
+      "url": "https://www.darsgo.si/portal/",
+      "publishedOrUpdated": "Portale operativo corrente verificato il 21 agosto 2026; la sezione di calcolo si apre dall'interfaccia",
       "geography": "Rete autostradale e superstradale DARS, Slovenia",
-      "accessedAt": "2026-08-15",
+      "accessedAt": "2026-08-21",
       "supports": "Verifica dell'importo per percorso e configurazione del veicolo senza riutilizzare una tabella tariffaria statica."
     },
   {
@@ -87,14 +87,6 @@
     "accessedAt": "2026-08-15",
     "supports": "Registrazione, classi CO2, assegnazione e uso dell'OBU, conteggio degli assi, pagamenti e segnali acustici DarsGo."
   },
-    {
-      "label": "DarsGo — Portale ufficiale in italiano",
-      "url": "https://www.darsgo.si/portal/it/casa",
-      "publishedOrUpdated": "Portale operativo corrente verificato il 15 agosto 2026",
-      "geography": "Slovenia",
-      "accessedAt": "2026-08-15",
-      "supports": "Accesso ufficiale a registrazione, dispositivo, punti di servizio, documenti, tariffe e strumenti DarsGo."
-    },
   {
     "label": "DARS — Pedaggio tunnel Karavanke",
     "url": "https://www.dars.si/karavanke",
@@ -104,5 +96,5 @@
     "supports": "Riscossione DarsGo per R2-R4, tariffe dedicate, IVA e assenza di modulazione EURO."
     }
   ],
-  "changeSummary": "Prima pubblicazione: guida operativa 2026 per verificare il pedaggio DarsGo sloveno e trasferirlo correttamente nel costo della tratta."
+  "changeSummary": "Sostituiti due deep link DarsGo non più disponibili con il portale operativo ufficiale verificato, senza cambiare il metodo di calcolo."
 }

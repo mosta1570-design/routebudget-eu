@@ -1,0 +1,84 @@
+{
+  "slug": "traghetto-camion-italia-grecia",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Traghetto camion Italia–Grecia: costo e preventivo cargo",
+  "mobileH1": "Traghetto camion Italia–Grecia: preventivo cargo",
+  "description": "Come richiedere e confrontare un preventivo cargo Italia–Grecia per camion, includere supplementi e tempi e portare il totale verificato nel costo della tratta.",
+  "eyebrow": "Adriatico · traghetto cargo",
+  "published": "2026-08-21",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "traghetto camion Italia Grecia",
+  "secondaryKeywords": [
+    "costo traghetto camion Italia Grecia",
+    "preventivo cargo Italia Grecia",
+    "traghetto TIR Ancona Grecia",
+    "traghetto camion Bari Grecia",
+    "nolo semirimorchio Italia Grecia"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "traghetto cargo Italia Grecia",
+    "preventivo camion Adriatico",
+    "semirimorchio accompagnato e non accompagnato",
+    "camion frigorifero",
+    "merci pericolose",
+    "FuelEU Maritime"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:costo-traghetto-camion-sardegna",
+    "guide:costo-traghetto-camion-calais-dover-2026",
+    "guide:preventivo-trasporto-pdf",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "traghetto-camion-italia-grecia",
+  "canonical": "/it/guide/traghetto-camion-italia-grecia/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Anek Lines Italia — Cargo Italia–Grecia",
+      "url": "https://anekitalia.com/cargo/",
+      "publishedOrUpdated": "Pagina cargo live verificata il 21 agosto 2026",
+      "geography": "Rotte cargo tra porti italiani e greci indicate dall'operatore",
+      "accessedAt": "2026-08-21",
+      "supports": "Richiesta di preventivo per veicoli commerciali, istruzioni operative, disponibilità condizionata delle prese reefer, limiti dimensionali, gestione dei trasporti eccezionali e restrizioni ADR dichiarate per alcune linee."
+    },
+    {
+      "label": "Minoan Lines — Servizio Cargo",
+      "url": "https://www.minoan.gr/en/cargo-en/cargo",
+      "publishedOrUpdated": "Pagina cargo live verificata il 21 agosto 2026",
+      "geography": "Servizi cargo Grecia–Italia dell'operatore",
+      "accessedAt": "2026-08-21",
+      "supports": "Esistenza di un servizio e di un sistema di prenotazione dedicati ai camion e capacità espressa in lane metres; non pubblica un prezzo universale utilizzato dalla guida."
+    },
+    {
+      "label": "Minoan Lines — Informazioni di imbarco Cargo",
+      "url": "https://www.minoan.gr/it/cargo-it/informazione-imbarco",
+      "publishedOrUpdated": "Istruzioni operative live verificate il 21 agosto 2026",
+      "geography": "Terminal cargo serviti da Minoan Lines",
+      "accessedAt": "2026-08-21",
+      "supports": "Presentazione al check-in con documenti almeno tre ore prima per i veicoli commerciali e almeno quattro ore prima per i rimorchi non accompagnati, salvo istruzioni della conferma corrente."
+    },
+    {
+      "label": "Commissione europea — FuelEU Maritime",
+      "url": "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en",
+      "publishedOrUpdated": "Pagina istituzionale aggiornata nel 2026 e verificata il 21 agosto 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-21",
+      "supports": "Finalità e ambito di FuelEU Maritime, pienamente applicabile dal 1° gennaio 2025 e basato sull'intensità dei gas serra dell'energia usata a bordo; non determina il supplemento commerciale del singolo viaggio."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo people-first per ottenere una quotazione cargo Italia–Grecia confrontabile e trasferire mare e pedaggi nel costo RouteBudget senza doppio conteggio."
+}

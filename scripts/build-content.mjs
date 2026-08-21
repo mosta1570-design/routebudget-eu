@@ -389,7 +389,7 @@ function renderPage(page) {
   return `<!doctype html>
 <html lang="${escapeHtml(config.locales[page.locale].languageTag)}">
 ${renderHead({
-    title: `${page.meta.title} | ${config.name}`,
+    title: documentTitle(page.meta.title),
     description: page.meta.description,
     canonicalPath: page.urlPath,
     type: isCalculator || isLanding ? 'website' : 'article',
@@ -413,7 +413,7 @@ ${renderHead({
         <h1>${escapeHtml(page.meta.title)}</h1>
         <p class="seo-hero__summary">${escapeHtml(page.meta.description)}</p>
         <div class="seo-meta" aria-label="Informazioni editoriali">
-          <span>A cura di ${escapeHtml(page.meta.author)} · ${escapeHtml(config.name)}</span>
+          <span>A cura di <a href="${config.basePath}/#autore">${escapeHtml(page.meta.author)}</a> · ${escapeHtml(config.name)}</span>
           <span>Revisione ${formatDate(page.meta.reviewed)}</span>
           <span>${readingMinutes} min di lettura</span>
         </div>
@@ -429,7 +429,7 @@ ${renderHead({
           ${renderSources(page)}
           <section class="editorial-note" aria-labelledby="nota-editoriale">
             <h2 id="nota-editoriale">Nota editoriale</h2>
-            <p>Contenuto operativo curato da RouteBudget EU e rivisto nella data indicata. Esempi e risultati sono stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta.</p>
+            <p><a href="${config.basePath}/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti ufficiali datate, esempio ricalcolato, controllo dei limiti del prodotto. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
           </section>
         </article>
       </div>
@@ -454,12 +454,12 @@ function renderHub(locale, section) {
   const title = isGuides
     ? 'Guide operative per calcolare costi e tariffe di trasporto'
     : isCalculators
-      ? 'Calcolatori per costi camion e viaggi'
+      ? 'Calcolatori camion: costo km, carburante e fuel surcharge'
       : 'Confronti operativi per decidere prezzo e margine';
   const description = isGuides
     ? 'Guide italiane per autisti, padroncini e piccole imprese: costo chilometrico, preventivi, margine, carburante, pedaggi e costi operativi.'
     : isCalculators
-      ? 'Calcolatori gratuiti e trasparenti per stimare costo chilometrico e carburante di un viaggio senza inviare dati a RouteBudget.'
+      ? 'Tre calcolatori gratuiti per costo chilometrico camion, carburante della tratta e fuel surcharge. Formule trasparenti e dati elaborati nel browser.'
       : 'Confronti trasparenti tra metodi e scenari economici per scegliere una tariffa di trasporto senza classifiche o promesse artificiali.';
   const canonicalPath = hubPath(locale, section);
   const hubSchema = {
@@ -485,7 +485,7 @@ function renderHub(locale, section) {
   return `<!doctype html>
 <html lang="${escapeHtml(localeConfig.languageTag)}">
 ${renderHead({
-    title: `${title} | ${config.name}`,
+    title: documentTitle(title),
     description,
     canonicalPath,
     type: 'website',
@@ -522,6 +522,11 @@ ${renderHead({
   ${renderFooter(locale)}
 </body>
 </html>`;
+}
+
+function documentTitle(editorialTitle) {
+  const branded = `${editorialTitle} | ${config.name}`;
+  return branded.length <= 75 ? branded : editorialTitle;
 }
 
 function renderHubEntries(sectionPages, section) {
@@ -971,6 +976,8 @@ function renderPageSchema(page) {
       '@type': 'Person',
       '@id': `${siteUrl}/#author`,
       name: page.meta.author,
+      url: `${siteUrl}/#autore`,
+      description: 'Sviluppatore indipendente di RouteBudget EU e responsabile di metodo, fonti e revisioni editoriali.',
       worksFor: { '@id': `${siteUrl}/#organization` },
     },
     {

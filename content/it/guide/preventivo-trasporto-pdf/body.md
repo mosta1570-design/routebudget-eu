@@ -12,7 +12,7 @@ RouteBudget aiuta a combinare gli input della tratta, confrontare tre scenari di
 | Scenario scelto | decidere quale prezzo proporre | responsabile commerciale |
 | PDF inviato | descrivere servizio e proposta | cliente |
 
-Il calcolo interno può contenere carburante, pedaggi, autista, usura, costi fissi e ritorno a vuoto. Non è necessario mostrare ogni voce al cliente. Tuttavia, il prezzo pubblicato nel documento deve restare collegato a una versione precisa del calcolo, altrimenti una modifica successiva rende difficile ricostruire la decisione.
+Nel flusso RouteBudget il calcolo interno usa carburante o energia, pedaggi, costo orario autista, usura modellata e ritorno a vuoto. Eventuali costi fissi aziendali, attese specifiche, traghetti o servizi speciali che non hanno un campo dedicato devono essere verificati e riconciliati fuori dall’app: non vanno nascosti dentro un input non pertinente. Non è necessario mostrare ogni voce al cliente, ma il prezzo pubblicato deve restare collegato alle ipotesi usate.
 
 ## Contenuti essenziali del preventivo
 
@@ -30,7 +30,26 @@ Il totale deve essere evidente, con valuta e trattamento delle voci amministrati
 
 ### Validità e passaggio successivo
 
-Indicare fino a quando la proposta resta valida e come il cliente può chiedere correzioni o confermare secondo il flusso concordato. La durata non deve essere copiata automaticamente: carburante, pedaggi e disponibilità possono cambiare, quindi va scelta in rapporto alla commessa.
+In un processo commerciale completo occorre chiarire fino a quando la proposta resta valida e come il cliente può chiedere correzioni o confermare. Nel PDF RouteBudget la validità è fissata a **14 giorni** e non è personalizzabile: verifica che sia adatta alla commessa. Se serve una scadenza diversa, gestiscila nel documento o nel processo esterno senza presentare il template dell’app come modificato.
+
+## Cosa contiene davvero il PDF RouteBudget
+
+Questa distinzione evita di promettere al cliente campi che il template non genera.
+
+| Elemento | Nel PDF RouteBudget | Controllo richiesto |
+| --- | --- | --- |
+| Origine, destinazione e chilometri | Sì | Verificare percorso e distanza inseriti |
+| Classe veicolo e durata operativa stimata | Sì | Non sostituisce pianificazione o verifica normativa |
+| Cronologia indicativa e soste modellate | Sì | Controllare fattibilità reale della missione |
+| Prezzo dello scenario selezionato | Sì | Verificare input e scenario prima di condividere |
+| Dettaglio carburante, pedaggi, autista, usura e ritorno | Opzionale | Compare solo attivando il dettaglio costi |
+| Tre scenari, utile e margine | Opzionale | Sono risultati degli input, non tariffe di mercato |
+| Data di emissione e validità | Sì | Validità fissa di 14 giorni |
+| Logo aziendale | Opzionale con Pro | Non trasforma il documento in white-label completo |
+| Cliente, riferimento pratica, note libere e firma | No | Aggiungerli nel processo esterno se necessari |
+| Condizioni personalizzate, IVA e imposte calcolate | No | Il PDF dichiara che IVA e imposte non sono incluse |
+
+Il documento è etichettato come stima non vincolante. Non è una fattura, un contratto, una prova del pedaggio pagato o il preventivo del fornitore di un servizio esterno.
 
 ## Dal calcolo ai tre scenari di prezzo
 
@@ -75,7 +94,7 @@ L’importo non rappresenta il costo o la tariffa reale della tratta. Serve solo
 
 Le esclusioni non devono diventare una pagina di formule generiche. Inserire solo quelle rilevanti alla commessa e usare parole comprensibili. Per clausole contrattuali, imposte o obblighi amministrativi, verificare il testo con consulenti qualificati.
 
-## Cosa controllare nel PDF RouteBudget
+## Controllo umano prima della condivisione
 
 Il riepilogo generato riflette i dati inseriti. Prima della condivisione:
 
@@ -87,9 +106,7 @@ Il riepilogo generato riflette i dati inseriti. Prima della condivisione:
 - assicurarsi che nessun input di prova sia rimasto nel documento;
 - completare fuori dall’app eventuali dati cliente o condizioni richieste dal processo.
 
-RouteBudget conserva localmente i calcoli nell’archivio. L’archivio aiuta a riaprire una stima, ma non sostituisce un sistema documentale aziendale, una registrazione contabile o una procedura di conservazione richiesta.
-
-Il template RouteBudget indica una validità fissa di 14 giorni e non offre un campo per personalizzarla. Prima dell’invio, verificare che questo periodo sia adatto alla commessa; quando servono condizioni o scadenze diverse, gestirle nel proprio documento o processo esterno all’app.
+RouteBudget conserva localmente lo snapshot del calcolo, non il file PDF inviato. Dall’Archivio puoi riaprire la stima e generare un nuovo PDF; data di emissione, lingua, logo e motore di calcolo possono riflettere il momento della nuova esportazione. Conserva quindi il documento effettivamente inviato e le sue condizioni nel sistema aziendale appropriato.
 
 ## Versioni e modifiche dopo l’invio
 

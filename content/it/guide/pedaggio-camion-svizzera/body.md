@@ -2,7 +2,7 @@
 
 Per un veicolo adibito al trasporto di merci con **peso totale autorizzato superiore a 3,5 tonnellate**, il costo stradale svizzero rilevante è la **TTPCP**, la tassa sul traffico pesante commisurata alle prestazioni. Nel 2026 la rilevazione opera nel quadro TTPCP III. Non basta comprare la vignetta usata per automobili e veicoli leggeri: quella non sostituisce la TTPCP dovuta da un camion assoggettato.
 
-La [formula ufficiale dell'UDSC](https://www.bazg.admin.ch/it/calcolo-della-ttpcp) può essere letta così:
+La [pagina ufficiale TTPCP dell'UDSC](https://www.bazg.admin.ch/it/tassa-sul-traffico-pesante-commisurata-alle-prestazioni-ttpcp) espone il calcolo basato su chilometri, peso determinante e classe di emissione. La formula può essere letta così:
 
 `TTPCP in CHF = km nel territorio doganale × peso determinante in tonnellate × tariffa in centesimi per tonnellata-km ÷ 100`
 
@@ -70,7 +70,7 @@ Questa distinzione impedisce un errore frequente: inserire le tonnellate di merc
 
 La terza variabile è la tariffa assegnata alla categoria di emissione pertinente. Va letta nella tabella ufficiale corrente, usando i documenti corretti del veicolo. Una classe EURO sbagliata cambia il calcolo e può creare differenze tra preventivo, registrazione e importo riscosso.
 
-Questa guida non trasforma una tariffa datata in un preset: valori e classificazioni possono essere aggiornati. Prima di quotare una corsa, apri il [calcolo TTPCP dell'UDSC](https://www.bazg.admin.ch/it/calcolo-della-ttpcp), controlla data e categoria e conserva una nota della verifica.
+Questa guida non trasforma una tariffa datata in un preset: valori e classificazioni possono essere aggiornati. Prima di quotare una corsa, apri la sezione di calcolo nella [pagina TTPCP dell'UDSC](https://www.bazg.admin.ch/it/tassa-sul-traffico-pesante-commisurata-alle-prestazioni-ttpcp), controlla data e categoria e conserva una nota della verifica.
 
 ## Esempio di calcolo senza una tariffa obsoleta
 

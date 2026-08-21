@@ -9,6 +9,7 @@ const keywordResearch = await readFile(path.join(docs, 'SEO_KEYWORD_RESEARCH_IT.
 const serpResearch = await readFile(path.join(docs, 'SEO_SERP_RESEARCH_IT.md'), 'utf8');
 const csv = await readFile(path.join(docs, 'SEO_KEYWORD_MAP_IT.csv'), 'utf8');
 const round9Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_9_2026-08-20.json'), 'utf8'));
+const round10Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_10_2026-08-21.json'), 'utf8'));
 const config = JSON.parse(await readFile(path.join(ROOT, 'content/site.json'), 'utf8'));
 const productionPrefix = `${config.basePath}/`;
 const localePrefixes = Object.keys(config.locales).map((locale) => `${productionPrefix}${locale}/`);
@@ -60,6 +61,37 @@ for (const candidate of round9Demand.candidates) {
   );
 }
 
+assert.equal(round10Demand.schemaVersion, 1, 'Round 10 demand evidence schemaVersion mismatch');
+assert.equal(round10Demand.locale, 'it', 'Round 10 demand evidence must use Italian language');
+assert.equal(round10Demand.market, 'IT', 'Round 10 demand evidence must use Italian market');
+assert.match(round10Demand.capturedAt, /^2026-08-21$/, 'Round 10 demand evidence capture date mismatch');
+assert(Array.isArray(round10Demand.providers) && round10Demand.providers.length >= 2, 'Round 10 demand evidence providers missing');
+assert(Array.isArray(round10Demand.candidates) && round10Demand.candidates.length === 3, 'Round 10 demand evidence must contain three selected candidates');
+for (const candidate of round10Demand.candidates) {
+  assert(candidate.primaryKeyword && candidate.canonical, 'Round 10 candidate identity missing');
+  assert.equal(candidate.volume, null, `${candidate.primaryKeyword}: unverified volume must stay null`);
+  assert(['directional', 'directional-serp-and-official-change'].includes(candidate.signal), `${candidate.primaryKeyword}: unsupported demand signal`);
+  assert(/^https:\/\/suggestqueries\.google\.com\//.test(candidate.requestUrl), `${candidate.primaryKeyword}: Google Suggest request URL invalid`);
+  assert(candidate.requestUrl.includes('hl=it') && candidate.requestUrl.includes('gl=it'), `${candidate.primaryKeyword}: Italian Suggest parameters missing`);
+  if (candidate.exactSuggestionReturned === true) {
+    assert(Array.isArray(candidate.returnedSuggestions) && candidate.returnedSuggestions.length > 0, `${candidate.primaryKeyword}: returned suggestions missing`);
+    assert(
+      candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.query.toLocaleLowerCase('it')),
+      `${candidate.primaryKeyword}: exact query not present in captured suggestions`,
+    );
+    assert.equal(candidate.signal, 'directional', `${candidate.primaryKeyword}: exact Suggest signal mismatch`);
+  } else {
+    assert.equal(candidate.exactSuggestionReturned, null, `${candidate.primaryKeyword}: unsupported exact Suggest state`);
+    assert.equal(candidate.signal, 'directional-serp-and-official-change', `${candidate.primaryKeyword}: fallback signal mismatch`);
+    assert(candidate.signalNote, `${candidate.primaryKeyword}: fallback evidence note missing`);
+  }
+  assert.equal(
+    rows.filter((row) => row.target_url === candidate.canonical && row.primary_keyword === candidate.primaryKeyword).length,
+    1,
+    `${candidate.primaryKeyword}: demand evidence must map to exactly one keyword row`,
+  );
+}
+
 const publishedPages = [];
 for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
   const directory = path.join(ROOT, 'content', 'it', section);
@@ -89,7 +121,7 @@ for (const page of publishedPages) {
   );
 }
 
-console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents cover ${publishedPages.length} published pages; Round 9 Suggest evidence is captured and no volume/CPC/difficulty is invented.`);
+console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents cover ${publishedPages.length} published pages; Round 9–10 demand evidence is captured and no volume/CPC/difficulty is invented.`);
 
 function parseCsv(value) {
   const lines = value.trim().split(/\r?\n/);

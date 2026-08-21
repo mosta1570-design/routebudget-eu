@@ -55,6 +55,8 @@ const editorial = {
     resourcesBody:
       'Approfondisci una voce di costo o prepara una tratta prima di aprire l’app.',
     supportLabel: 'Supporto diretto',
+    authorNote:
+      'Eng. Mostafa sviluppa RouteBudget EU e cura metodo, fonti e revisioni dei contenuti. Errori e correzioni possono essere segnalati direttamente.',
     downloadLabel: 'RouteBudget EU',
     downloadTrust: 'Gratis su App Store e Google Play · Acquisti in-app',
     imageAlts: {
@@ -109,6 +111,8 @@ const editorial = {
     resourcesHeading: 'Guides and calculators to check every assumption.',
     resourcesBody: 'Explore one cost line or prepare a route before opening the app.',
     supportLabel: 'Direct support',
+    authorNote:
+      'Eng. Mostafa develops RouteBudget EU and maintains its method, sources and editorial reviews. Errors and corrections can be reported directly.',
     downloadLabel: 'RouteBudget EU',
     downloadTrust: 'Free on the App Store and Google Play · In-App Purchases',
     imageAlts: {
@@ -427,6 +431,7 @@ export function ProductContinuation({ copy, locale }: ProductContinuationProps) 
             <p className="freight-kicker">{text.supportLabel}</p>
             <h2 id="freight-support-title">{copy.support.heading}</h2>
             <p>{copy.support.body}</p>
+            <p id="autore">{text.authorNote}</p>
             <a href={SUPPORT_EMAIL}>
               {copy.support.emailCta}
               <ArrowUpRight aria-hidden="true" size={18} />

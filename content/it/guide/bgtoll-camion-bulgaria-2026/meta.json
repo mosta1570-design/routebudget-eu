@@ -8,8 +8,8 @@
   "description": "Come verificare BGTOLL camion nel 2026: mezzi oltre 3,5 t, peso, assi, EURO, CO2, classe stradale, Route Pass e costo nel preventivo PDF.",
   "eyebrow": "Bulgaria · BGTOLL 2026",
   "published": "2026-08-20",
-  "modified": "2026-08-20",
-  "reviewed": "2026-08-20",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "BGTOLL camion",
@@ -80,5 +80,5 @@
       "supports": "Tariffe totali in euro/km differenziate per classe CO2, tipo e massa del veicolo, assi, categoria EURO e classe della strada."
     }
   ],
-  "changeSummary": "Prima pubblicazione: guida operativa BGTOLL 2026 per verificare il pedaggio bulgaro e inserirlo una sola volta nel costo e nel preventivo della tratta."
+  "changeSummary": "Aggiunto il passaggio contestuale al sistema serbo per evitare di riutilizzare classi e tariffe BGTOLL oltre confine."
 }

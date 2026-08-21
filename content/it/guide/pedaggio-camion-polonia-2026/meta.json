@@ -1,0 +1,100 @@
+{
+  "slug": "pedaggio-camion-polonia-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion Polonia 2026: e-TOLL, rete, peso ed EURO",
+  "mobileH1": "Pedaggio camion Polonia 2026: guida e-TOLL",
+  "description": "Pedaggio camion in Polonia nel 2026: nuove tariffe e rete e-TOLL dal 1° febbraio, peso del complesso, classe EURO, registrazione e calcolo in PLN.",
+  "eyebrow": "Polonia · e-TOLL 2026",
+  "published": "2026-08-21",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Polonia 2026",
+  "secondaryKeywords": [
+    "e-TOLL Polonia camion",
+    "tariffe e-TOLL 2026",
+    "pedaggio camion Polonia al km",
+    "calcolo e-TOLL Polonia",
+    "autostrade Polonia camion"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "e-TOLL Polonia",
+    "pedaggio camion Polonia",
+    "rete a pedaggio 2026",
+    "massa complesso veicolare",
+    "classe EURO",
+    "OBU"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:pedaggio-camion-germania",
+    "guide:pedaggio-camion-repubblica-ceca",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-polonia-2026",
+  "canonical": "/it/guide/pedaggio-camion-polonia-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "e-TOLL — cambi di rete e tariffe dal 1° febbraio 2026",
+      "url": "https://etoll.gov.pl/en/news/changes-to-the-e-toll-as-of-1-february-2026/",
+      "publishedOrUpdated": "19 gennaio 2026",
+      "geography": "Polonia",
+      "accessedAt": "2026-08-21",
+      "supports": "Obbligo oltre 3,5 t e per autobus, estensione di circa 645 km, rete complessiva di circa 5.869 km, entrata in vigore delle nuove tariffe e necessità di registrazione."
+    },
+    {
+      "label": "e-TOLL — tariffe e pagamenti",
+      "url": "https://etoll.gov.pl/en/e-toll-system/rates-and-payments/",
+      "publishedOrUpdated": "Tariffe operative dal 1° febbraio 2026; pagina corrente verificata il 21 agosto 2026",
+      "geography": "Rete e-TOLL, Polonia",
+      "accessedAt": "2026-08-21",
+      "supports": "Dipendenza da classe stradale, massa massima del veicolo o complesso e classe EURO; importi A/S e G/GP; conti prepagati e postpagati."
+    },
+    {
+      "label": "e-TOLL — classificatore ufficiale del veicolo",
+      "url": "https://etoll.gov.pl/en/vehicle-classification-tool/",
+      "publishedOrUpdated": "Configuratore corrente verificato il 21 agosto 2026",
+      "geography": "Polonia",
+      "accessedAt": "2026-08-21",
+      "supports": "Uso di massa massima autorizzata, massa del rimorchio e standard di emissione per determinare l'obbligo e le due tariffe PLN/km."
+    },
+    {
+      "label": "e-TOLL — rete stradale soggetta",
+      "url": "https://etoll.gov.pl/en/e-toll-system/toll-road-network/",
+      "publishedOrUpdated": "Rete efficace dal 1° febbraio 2026",
+      "geography": "Strade gestite da GDDKiA, Polonia",
+      "accessedAt": "2026-08-21",
+      "supports": "Mappa corrente e perimetro di circa 5.870 km di rete a pedaggio."
+    },
+    {
+      "label": "e-TOLL — registrazione",
+      "url": "https://etoll.gov.pl/en/registration-in-e-toll/",
+      "publishedOrUpdated": "Procedura corrente verificata il 21 agosto 2026",
+      "geography": "Operatori nazionali ed esteri in Polonia",
+      "accessedAt": "2026-08-21",
+      "supports": "Registrazione obbligatoria prima di guidare sui tratti GDDKiA soggetti e gestione tramite Online Customer Account."
+    },
+    {
+      "label": "e-TOLL — OBU ed ELS",
+      "url": "https://etoll.gov.pl/en/e-toll-system/obu-and-els-on-board-devices/",
+      "publishedOrUpdated": "Procedura corrente verificata il 21 agosto 2026",
+      "geography": "Polonia",
+      "accessedAt": "2026-08-21",
+      "supports": "Trasmissione GNSS, associazione del dispositivo al veicolo e necessità di attivarlo nell'Online Customer Account."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo operativo basato sulle fonti e-TOLL 2026 per distinguere rete, classe stradale, massa ed EURO e trasferire il pedaggio verificato nel preventivo senza doppioni."
+}

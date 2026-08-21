@@ -147,4 +147,4 @@ Pedaggio manuale è un override dell'andata. Un totale ufficiale aggiunto sia l�
 - ritorno vuoto distinto da un nuovo viaggio carico;
 - PDF descritto come preventivo, non come prova di pagamento.
 
-La regola finale è semplice: **BGTOLL stabilisce il costo ufficiale della strada bulgara; RouteBudget aiuta a capire se il prezzo copre l'intera missione**. Verifica prima il pedaggio sul canale ufficiale, poi trasformalo in una decisione commerciale controllabile.
+La regola finale è semplice: **BGTOLL stabilisce il costo ufficiale della strada bulgara; RouteBudget aiuta a capire se il prezzo copre l'intera missione**. Verifica prima il pedaggio sul canale ufficiale, poi trasformalo in una decisione commerciale controllabile. Se il corridoio prosegue nei Balcani occidentali, non riutilizzare classi o tariffe bulgare: la guida al [pedaggio camion Serbia 2026](/it/guide/pedaggio-camion-serbia-2026/) separa categoria IV, TAG e Toll4All.

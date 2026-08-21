@@ -143,4 +143,4 @@ Un ritorno vuoto può replicare parte del pedaggio e aggiunge comunque gasolio, 
 - costo distinto da prezzo, ricarico e margine;
 - PDF descritto come preventivo, non come prova di pagamento.
 
-La regola operativa è netta: **MYTO CZ determina il pedaggio ufficiale; RouteBudget aiuta a capire se il prezzo copre l'intera missione**. Verifica prima il sistema ceco, poi costruisci il preventivo sui costi completi. È il passaggio che trasforma una cifra di pedaggio in una decisione commerciale difendibile.
+La regola operativa è netta: **MYTO CZ determina il pedaggio ufficiale; RouteBudget aiuta a capire se il prezzo copre l'intera missione**. Verifica prima il sistema ceco, poi costruisci il preventivo sui costi completi. Se la missione continua verso est, la guida al [pedaggio camion Polonia 2026](/it/guide/pedaggio-camion-polonia-2026/) tratta separatamente rete e-TOLL, massa del complesso e classe EURO. È il passaggio che trasforma una cifra di pedaggio in una decisione commerciale difendibile.

@@ -7,8 +7,8 @@
   "description": "Metodo per stimare il pedaggio di un camion in Italia: classe, numero di assi, chilometri tariffari, tipo di tratta e concessionari da verificare.",
   "eyebrow": "Pedaggi camion · Metodo italiano",
   "published": "2026-08-11",
-  "modified": "2026-08-18",
-  "reviewed": "2026-08-18",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
   "primaryKeyword": "calcolo pedaggio camion",
   "searchIntent": "informational-transactional",
   "topics": [
@@ -66,5 +66,5 @@
   "canonical": "/it/guide/calcolo-pedaggio-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Rafforzato l’intento pedaggio camion Italia 2026 senza creare una URL concorrente; fonti del gestore ricontrollate."
+  "changeSummary": "Mantenuto l'intento Italia e aggiunti collegamenti contestuali ai sistemi distinti Serbia ed e-TOLL Polonia."
 }
