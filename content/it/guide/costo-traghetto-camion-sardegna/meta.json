@@ -8,8 +8,8 @@
   "description": "Metodo pratico per leggere un preventivo traghetto merci, distinguere nolo, metri lineari, ETS, bunker, FuelEU e autista, poi inserirlo nel costo della tratta.",
   "eyebrow": "Sardegna · traghetti merci",
   "published": "2026-08-16",
-  "modified": "2026-08-16",
-  "reviewed": "2026-08-16",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "costo traghetto camion Sardegna 2026",
@@ -96,5 +96,5 @@
       "supports": "Finalità e ambito di FuelEU Maritime, basato sull'intensità dei gas serra dell'energia usata a bordo; chiarisce che FuelEU non coincide con ETS o bunker surcharge."
     }
   ],
-  "changeSummary": "Prima pubblicazione: metodo 2026 per leggere un preventivo traghetto merci Sardegna, distinguere le componenti e trasferire il totale verificato nel costo della tratta."
+  "changeSummary": "Aggiunto il confine editoriale verso il preventivo cargo Italia–Grecia, evitando di trasferire criteri insulari a una rotta internazionale."
 }

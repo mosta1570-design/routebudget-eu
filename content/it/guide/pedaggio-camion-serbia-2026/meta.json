@@ -1,0 +1,92 @@
+{
+  "slug": "pedaggio-camion-serbia-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio camion Serbia 2026: categoria IV, tariffe e TAG",
+  "mobileH1": "Pedaggio camion Serbia 2026: categoria IV e TAG",
+  "description": "Come verificare il pedaggio camion in Serbia nel 2026: categoria III o IV, tariffario ufficiale, TAG obbligatorio, Toll4All e costo nel preventivo PDF.",
+  "eyebrow": "Serbia · pedaggi 2026",
+  "published": "2026-08-21",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio camion Serbia 2026",
+  "secondaryKeywords": [
+    "pedaggio autostradale camion Serbia",
+    "categoria IV Serbia camion",
+    "TAG camion Serbia",
+    "Toll4All Serbia camion",
+    "tariffe camion Serbia 2026"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "pedaggio camion Serbia",
+    "categoria IV",
+    "TAG obbligatorio",
+    "Toll4All",
+    "tariffario Putevi Srbije",
+    "preventivo trasporto internazionale"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:calcolo-pedaggio-camion",
+    "guide:bgtoll-camion-bulgaria-2026",
+    "guide:pedaggio-camion-ungheria-2026",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-camion-serbia-2026",
+  "canonical": "/it/guide/pedaggio-camion-serbia-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Putevi Srbije — classificazione veicoli e tariffario pedaggi",
+      "url": "https://www.putevi-srbije.rs/index.php/en/kategorizacija-vozila-cenovnik-putarine-2",
+      "publishedOrUpdated": "Tariffario corrente valido dal 1° luglio 2026",
+      "geography": "Serbia, autostrade e semiautostrade soggette a pedaggio",
+      "accessedAt": "2026-08-21",
+      "supports": "Variabili di classificazione, definizioni delle categorie III e IV, selezione di ingresso e uscita, importi in RSD ed EUR e conseguenze operative di un titolo di ingresso mancante o non valido."
+    },
+    {
+      "label": "Putevi Srbije — tariffario ufficiale in PDF dal 1° luglio 2026",
+      "url": "https://www.putevi-srbije.rs/images/pdf/cene_putarina_eng.pdf",
+      "publishedOrUpdated": "Valido dal 1° luglio 2026 alle ore 07:00",
+      "geography": "Serbia, sezioni Beograd–Presevo, Dimitrovgrad–Beograd, Presevo–Dimitrovgrad e altre direttrici pubblicate",
+      "accessedAt": "2026-08-21",
+      "supports": "Importi ufficiali per stazione e categoria; esempio Beograd–Presevo categoria IV pari a 12.340 RSD o 105,50 EUR nel tariffario datato."
+    },
+    {
+      "label": "Putevi Srbije — obbligo TAG e avvio della politica sanzionatoria",
+      "url": "https://www.putevi-srbije.rs/index.php/en/news-company/27-05-26-obavezna-upotreba-tag-ure%C4%91aja-za-teretna-vozila-primena-kaznene-politike-2",
+      "publishedOrUpdated": "Pubblicato il 27 maggio 2026; politica sanzionatoria dal 1° luglio 2026",
+      "geography": "Serbia, veicoli merci di categoria IV",
+      "accessedAt": "2026-08-21",
+      "supports": "Obbligo TAG in vigore dal 1° gennaio 2026, sanzioni dal 1° luglio 2026 e registrazione Toll4All come modalità ufficiale sulla sezione MLFF della tangenziale di Belgrado."
+    },
+    {
+      "label": "Putevi Srbije — pedaggio categoria IV sulla tangenziale di Belgrado",
+      "url": "https://www.putevi-srbije.rs/index.php/en/news-company/podsecamo-pocinje-naplata-putarine-za-vozila-iv-kategorije-na-obilaznici-oko-beograda-6",
+      "publishedOrUpdated": "Pubblicato il 30 marzo 2026; riscossione avviata il 1° aprile 2026",
+      "geography": "Tangenziale di Belgrado, sistema senza barriere MLFF",
+      "accessedAt": "2026-08-21",
+      "supports": "Uso esclusivo del TAG per la categoria IV sulla sezione, registrazione necessaria su Toll4All e trattamento dei TAG prepagati o postpagati già esistenti."
+    },
+    {
+      "label": "Putevi Srbije — riscossione elettronica ENP",
+      "url": "https://www.putevi-srbije.rs/index.php/en/etc-elektronic-toll-collection",
+      "publishedOrUpdated": "Pagina operativa corrente verificata il 21 agosto 2026",
+      "geography": "Serbia, rete di riscossione elettronica",
+      "accessedAt": "2026-08-21",
+      "supports": "Funzionamento del TAG, opzioni prepagato e postpagato, punti autorizzati e non trasferibilità del dispositivo per le categorie diverse dalla I."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: guida operativa al pedaggio camion Serbia 2026, categoria IV, TAG, Toll4All e attribuzione corretta del costo alla tratta."
+}

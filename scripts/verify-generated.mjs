@@ -105,8 +105,10 @@ for (const route of [`${BASE}/privacy.html`, `${BASE}/terms.html`]) {
   htmlByRoute.set(route, html);
   const canonical = capture(html, /<link rel="canonical" href="([^"]+)" \/>/, `${route}: canonical missing`);
   assert.equal(canonical, `${ORIGIN}${route}`, `${route}: canonical mismatch`);
+  assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1, `${route}: exactly one H1 required`);
+  const legalH1 = capture(html, /(<h1(?:\s[^>]*)?>[\s\S]*?<\/h1>)/, `${route}: H1 missing`);
   for (const locale of ['en', 'it']) {
-    assert.equal((html.match(new RegExp(`<h1[^>]*data-lang="${locale}"[^>]*>`, 'g')) || []).length, 1, `${route}: one ${locale} H1 required`);
+    assert.equal((legalH1.match(new RegExp(`<span[^>]*data-lang="${locale}"[^>]*>`, 'g')) || []).length, 1, `${route}: one ${locale} H1 label required`);
   }
   assert(html.includes('document.documentElement.lang='), `${route}: language switch must update document language`);
 }
@@ -198,6 +200,7 @@ function verifyIndexableDocument(route, html) {
   assert(/<meta name="robots" content="index,follow,max-image-preview:large" \/>/.test(html), `${route}: indexable robots directive missing`);
 
   const title = capture(html, /<title>([^<]+)<\/title>/, `${route}: title missing`);
+  assert(title.length <= 75, `${route}: final document title exceeds 75 characters`);
   assert(!titles.has(title), `${route}: duplicate title ${title}`);
   titles.add(title);
   const description = capture(html, /<meta\s+name="description"\s+content="([^"]+)"\s*\/>/, `${route}: description missing`);

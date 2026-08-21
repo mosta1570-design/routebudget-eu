@@ -4,7 +4,7 @@ Per un veicolo a motore con massa massima tecnicamente ammissibile **superiore a
 
 Nel 2026 l'importo dipende almeno da quattro elementi: percorso, numero di assi del complesso, classe EURO e classe di emissione di CO₂. Le classi CO₂ da 1 a 5 sono entrate nel sistema il **1° novembre 2025**, mentre l'allegato tariffario applicabile nel 2026 è in vigore dal **1° gennaio 2026**. Per questo non esiste un prezzo unico “Slovenia al chilometro” valido per ogni camion.
 
-La procedura più sicura è: definire la tratta reale, confermare i dati del veicolo, ottenere l'importo dal [calcolatore ufficiale DarsGo](https://www.darsgo.si/portal/it/calcolo-dei-pedaggi), annotare la data della verifica e inserire quel costo nel preventivo. Questa guida è aggiornata al **15 agosto 2026** e non replica una tabella tariffaria destinata a invecchiare.
+La procedura più sicura è: definire la tratta reale, confermare i dati del veicolo, aprire la sezione di calcolo nel [portale ufficiale DarsGo](https://www.darsgo.si/portal/), annotare la data della verifica e inserire quel costo nel preventivo. Questa guida è stata ricontrollata il **21 agosto 2026** e non replica una tabella tariffaria destinata a invecchiare.
 
 ## Vignetta o DarsGo: quale sistema si applica
 
@@ -62,7 +62,7 @@ Un altro dettaglio contabile è l'IVA: il tariffario legale espone le componenti
 
 ## Registrazione e unità DarsGo
 
-Prima di usare la rete, cliente e veicolo devono essere registrati. La procedura può essere avviata sul [portale ufficiale DarsGo](https://www.darsgo.si/portal/it/casa) oppure presso un punto DarsGo servis. In via ordinaria servono i dati del cliente, la targa, il numero di assi del veicolo trainante, la carta di circolazione e la prova della classe EURO.
+Prima di usare la rete, cliente e veicolo devono essere registrati. La procedura può essere avviata sul [portale ufficiale DarsGo](https://www.darsgo.si/portal/) oppure presso un punto DarsGo servis. In via ordinaria servono i dati del cliente, la targa, il numero di assi del veicolo trainante, la carta di circolazione e la prova della classe EURO.
 
 Dopo la registrazione e il pagamento del costo di emissione viene consegnata l'unità DarsGo. Il tariffario in vigore indica **10 euro IVA inclusa** per la prima emissione dell'OBU; verifica comunque il prezzo al momento della richiesta. Il dispositivo è associato a uno specifico veicolo, non è trasferibile liberamente tra targhe e deve essere montato secondo le istruzioni fornite.
 

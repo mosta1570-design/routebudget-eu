@@ -1,6 +1,8 @@
 ## Che cosa stima il calcolatore
 
-Questo strumento trasforma distanza, consumo medio e prezzo al litro in due risultati: litri stimati e costo carburante. Puoi aggiungere i chilometri di ritorno a vuoto per evitare che il preventivo consideri solo la parte caricata della missione.
+Questo strumento trasforma distanza, **consumo già noto** e prezzo al litro in due risultati: litri stimati e costo carburante. Puoi aggiungere i chilometri di ritorno a vuoto per evitare che il preventivo consideri solo la parte caricata della missione.
+
+Non stima quale dovrebbe essere il consumo medio del tuo mezzo. Se stai cercando “quanto consuma un camion” o devi ricavare i l/100 km dai rifornimenti, usa prima la guida per [misurare il consumo medio reale del camion](/it/guide/quanto-consuma-un-camion/), poi torna qui con il dato verificato.
 
 Il calcolo avviene nel browser. I valori inseriti non vengono inviati a RouteBudget e non vengono memorizzati dal calcolatore. Il risultato è una stima non vincolante: rifornimenti, variazioni di prezzo e consumo reale possono produrre un consuntivo diverso.
 
@@ -20,9 +22,9 @@ Usa la distanza che prevedi di percorrere, non quella in linea d’aria. Control
 
 Il campo “ritorno a vuoto” non deve essere usato solo quando torni al punto di partenza. Può rappresentare anche il riposizionamento necessario per raggiungere il carico successivo. Se una parte del ritorno è già coperta da un’altra commessa, attribuisci a ciascun lavoro un criterio coerente e documentabile.
 
-## Come scegliere il consumo medio
+## Il consumo è un input, non un risultato del calcolatore
 
-Il consumo dovrebbe provenire da dati del mezzo in condizioni simili:
+Inserisci un consumo proveniente da dati del mezzo in condizioni simili:
 
 - massa e tipo di carico;
 - percorso autostradale, urbano o montano;
@@ -31,7 +33,7 @@ Il consumo dovrebbe provenire da dati del mezzo in condizioni simili:
 - pneumatici, manutenzione e stile di guida;
 - presenza di ritorno scarico.
 
-Una media di flotta può essere utile per un controllo iniziale, ma rischia di nascondere differenze fra veicoli. Quando possibile, confronta litri acquistati e chilometri percorsi su più viaggi comparabili. Evita di scegliere il consumo migliore ottenuto in una singola tratta.
+Una media di flotta può essere utile per un controllo iniziale, ma rischia di nascondere differenze fra veicoli. Quando possibile, confronta litri acquistati e chilometri percorsi su più viaggi comparabili. Evita di scegliere il consumo migliore ottenuto in una singola tratta. Il metodo di misurazione resta nella guida dedicata; qui usi un dato già misurato per calcolare litri e costo.
 
 ## Quale prezzo carburante usare
 

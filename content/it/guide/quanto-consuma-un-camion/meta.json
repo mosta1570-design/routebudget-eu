@@ -2,13 +2,13 @@
   "slug": "quanto-consuma-un-camion",
   "kind": "guide",
   "locale": "it",
-  "title": "Quanto consuma un camion? Calcolo in l/100 km con dati reali",
-  "mobileH1": "Quanto consuma un camion? Calcolo pratico",
-  "description": "Come misurare quanto consuma un camion in l/100 km, leggere i fattori che cambiano il dato e stimare il carburante di una tratta senza medie ingannevoli.",
+  "title": "Quanto consuma un camion? Consumo medio reale in l/100 km",
+  "mobileH1": "Quanto consuma un camion? Consumo medio reale",
+  "description": "Come misurare il consumo medio reale di un camion in l/100 km, separare i profili di lavoro e usare il dato in una tratta senza medie ingannevoli.",
   "eyebrow": "Consumo camion · Metodo operativo",
   "published": "2026-08-11",
-  "modified": "2026-08-11",
-  "reviewed": "2026-08-11",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
   "primaryKeyword": "quanto consuma un camion",
   "searchIntent": "informational",
   "topics": [
@@ -45,9 +45,9 @@
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "secondaryKeywords": [
+    "consumo medio camion",
     "consumo camion litri 100 km",
-    "calcolo consumo gasolio camion",
-    "come calcolare consumo camion"
+    "calcolo consumo gasolio camion"
   ],
   "cluster": "costo-trasporto",
   "relatedCalculator": "calcolatori:costo-carburante-viaggio",
@@ -55,5 +55,5 @@
   "canonical": "/it/guide/quanto-consuma-un-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Nuova guida basata su intento di ricerca reale: metodo in l/100 km, segmentazione dei dati e passaggio dal consumo al costo tratta."
+  "changeSummary": "Rafforzata la proprietà dell'intento informativo sul consumo medio e separata dal calcolatore transazionale di litri e costo."
 }

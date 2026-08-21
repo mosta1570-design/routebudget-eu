@@ -1,6 +1,6 @@
 # RouteBudget EU — cluster SEO italiani
 
-Data architettura: 20 agosto 2026. Stato: inventario Round 9 in validazione pre-release; baseline GSC 1–18 agosto 2026 registrata nella [baseline corrente](./GSC_BASELINE_2026-08-20.md) e nella [ricerca Round 9](./SEO_RESEARCH_ROUND_9_2026-08-20.md).
+Data architettura: 21 agosto 2026. Stato: inventario Round 10 in validazione pre-release; baseline GSC 1–19 agosto 2026 registrata nella [baseline corrente](./GSC_BASELINE_2026-08-21.md) e nella [ricerca Round 10](./SEO_RESEARCH_ROUND_10_2026-08-21.md).
 
 ## Principio
 
@@ -9,12 +9,12 @@ RouteBudget non pubblica un blog generico. Ogni URL risolve un lavoro economico 
 Inventario iniziale validato:
 
 - 3 pillar;
-- 35 guide di supporto;
+- 38 guide di supporto;
 - 3 calcolatori gratuiti;
 - 1 landing app;
 - hub `/it/guide/` e `/it/calcolatori/`.
 
-Totale post-build atteso: **42 pagine contenuto**. La sitemap articoli conterrà 38 URL e l'insieme delle sitemap 47 URL indexabili; questi conteggi tecnici non equivalgono a URL già indicizzate da Google.
+Totale post-build atteso: **45 pagine contenuto**. La sitemap articoli conterrà 41 URL e l'insieme delle sitemap 50 URL indexabili; questi conteggi tecnici non equivalgono a URL già indicizzate da Google.
 
 I tre hub tematici candidati (`/it/costi-autotrasporto/`, `/it/preventivi-trasporto/`, `/it/margini-e-tariffe/`) restano architettura futura. Non vengono indicizzati finché non hanno abbastanza pagine distinte e dati Search Console che ne giustifichino utilità. Evita thin pages.
 
@@ -44,13 +44,18 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | `pedaggio-camion-danimarca-2026` | Possiede KmToll, CO₂, LEZ e ponti Storebælt/Øresund separati | Calcolatore costo/km con importi verificati |
 | `bgtoll-camion-bulgaria-2026` | Possiede BGTOLL, Route Pass, massa, assi, EURO/CO₂ e percorso dichiarato | Calcolatore costo/km con totale BGTOLL verificato |
 | `costo-traghetto-camion-calais-dover-2026` | Possiede preventivo freight, nolo, BAF/ETS e confine Calais–Dover | Costo terrestre, scenari e PDF con preventivo corrente |
+| `pedaggio-camion-serbia-2026` | Possiede categorie III/IV Putevi Srbije, tariffario RSD/EUR, TAG categoria IV e Toll4All | Calcolatore costo/km con importo ufficiale verificato |
+| `traghetto-camion-italia-grecia` | Possiede quotazione cargo adriatica per rotta, data, unità, autisti, reefer/ADR e check-in | Costo terrestre + mare, scenari e PDF non vincolante |
+| `pedaggio-camion-polonia-2026` | Possiede rete e-TOLL, massa complesso, classe EURO, PLN/km, registrazione e OBU/ELS | Calcolatore costo/km con importo e-TOLL verificato |
 | `tempi-guida-riposo-camion` | Distingue le categorie di tempo e porta la durata pianificata nel costo | Calcolatore costo/km con ore verificate |
 | `ritorno-a-vuoto-autotrasporto` | Mostra effetto dei km non fatturati su tutte le voci | Calcolatore costo/km |
 | `proteggere-margine-tratta` | Stress test di costo, prezzo, margine e ricarico | Scenari RouteBudget |
 | calcolatore `costo-carburante-viaggio` | Litri e costo da km, L/100 km e prezzo inseriti | Aggiungere costi mancanti nell’app |
 | calcolatore `fuel-surcharge-autotrasporto` | Adeguamento carburante da base, quota e indice inseriti | Riportare variazione nella trattativa |
 
-La baseline GSC 1–18 agosto registra 23 clic e 1.741 impressioni aggregate. Non fornisce in questo Round un volume per le tre nuove query. BGTOLL entra con Suggest italiano direzionale, compito nazionale distinto e fonti ufficiali; non è una copia della pagina italiana. I calcolatori eseguono soltanto formule dichiarate da input utente.
+La baseline GSC 1–19 agosto registra 23 clic e 1.749 impressioni aggregate. Non fornisce volume per le tre nuove query. Serbia e Italia–Grecia entrano con wording Suggest direzionale; Polonia con SERP italiana e cambi ufficiali 2026, senza dichiarare exact Suggest. `volume=null` per tutti. I calcolatori eseguono soltanto formule dichiarate da input utente.
+
+Il filtro GSC `consumo medio camion` ha diviso 35 impressioni sul calcolatore carburante, 16 sulla guida consumo, 1 sul hub e 1 sul calcolatore costo/km. Owner informativo resta `quanto-consuma-un-camion`; il tool carburante possiede soltanto il calcolo numerico da consumo già noto.
 
 ## Cluster 2 — costi dell’autotrasporto
 
@@ -98,12 +103,16 @@ Search job: trasformare il costo in proposta leggibile senza inventare un prezzo
 
 1. Ogni supporto include il pillar nella propria lista `related` e lo rende visibile nel rail.
 2. Ogni pillar restituisce link ai supporti principali del cluster.
-3. Ogni contenuto include `relatedCalculator`; il riferimento compare anche nei link correlati.
+3. Ogni contenuto include `relatedCalculator` quando un tool web rappresenta correttamente il compito; i flussi privi di equivalente usano `null` e convertono verso l'app senza claim impropri.
 4. Ogni pagina pubblicata ha 2–5 relazioni curate; i pillar possono superare cinque per restituire l’intero cluster.
 5. Guide e calcolatori sono raggiungibili dai due hub tramite anchor HTML.
 6. Homepage statica collega entrambi gli hub e landing app.
 7. CTA store appare dopo la risposta, usa URL reali e badge ufficiali, senza popup o urgenza.
 8. Anchor descrittivi; niente inserimento automatico su ogni keyword.
+
+Round 10 assegna ingressi contestuali da homepage, hub e almeno due pagine adiacenti a Serbia, Italia–Grecia e Polonia. I tre supporti restituiscono pillar, calcolatore e contenuti nazionali/corridoio pertinenti. Il grafo deve chiudere con zero URL orfane e zero link rotti.
+
+GSC rileva 0 link esterni e 90 interni. Nuovi contenuti e internal linking non sostituiscono autorità editoriale: crescita off-site deve arrivare da citazioni reali e pertinenti, non da acquisto link o directory massive.
 
 ## Backlog condizionato a dati
 
@@ -114,5 +123,6 @@ Search job: trasformare il costo in proposta leggibile senza inventare un prezzo
 - calcolatore tachigrafico o di conformità, solo con scope prodotto e revisione normativa dedicati;
 - hub tematici dedicati;
 - traduzioni.
+- guida `costo trasporto ADR` soltanto dopo scope prodotto e revisione legale/sicurezza; rifiutata nel Round 10 per mismatch con funzioni reali.
 
 Ogni candidato richiede SERP distinta, brief, fonti, product-truth review e almeno due link in ingresso. Traduzioni solo dopo segnali italiani o valore strategico verificato; canonical e hreflang reciproci solo quando entrambe le pagine esistono.

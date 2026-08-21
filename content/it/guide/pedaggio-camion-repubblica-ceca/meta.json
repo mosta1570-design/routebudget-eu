@@ -8,8 +8,8 @@
   "description": "Come stimare il pedaggio camion in Repubblica Ceca nel 2026: mezzi oltre 3,5 t, rete MYTO CZ, OBU, assi, classe CO₂ e costo nel preventivo.",
   "eyebrow": "Repubblica Ceca · MYTO 2026",
   "published": "2026-08-17",
-  "modified": "2026-08-17",
-  "reviewed": "2026-08-17",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Repubblica Ceca 2026",
@@ -79,5 +79,5 @@
       "supports": "Stima indicativa del pedaggio collegata al percorso selezionato e ai parametri del veicolo."
     }
   ],
-  "changeSummary": "Nuova guida 2026 al sistema MYTO CZ per inserire il pedaggio ceco verificato nel costo e nel preventivo di trasporto."
+  "changeSummary": "Aggiunto il collegamento contestuale a e-TOLL Polonia per separare i due sistemi sul corridoio internazionale."
 }

@@ -465,14 +465,12 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
   const [storeChooserOpen, setStoreChooserOpen] = useState(false);
-  const saveDataEnabled = Boolean(
-    (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData,
-  );
-  const [mediaEnabled, setMediaEnabled] = useState(
-    () => !saveDataEnabled && !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-  );
+  const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+  const saveDataEnabled = Boolean(connection?.saveData);
+  const constrainedConnection = saveDataEnabled || ['slow-2g', '2g'].includes(connection?.effectiveType ?? '');
+  const [mediaEnabled, setMediaEnabled] = useState(false);
   const [productRevealEnabled, setProductRevealEnabled] = useState(
-    () => !saveDataEnabled && window.matchMedia(PRODUCT_REVEAL_QUERY).matches,
+    () => !constrainedConnection && window.matchMedia(PRODUCT_REVEAL_QUERY).matches,
   );
   const closeMenuRef = useRef<HTMLButtonElement>(null);
   const menuOverlayRef = useRef<HTMLDivElement>(null);
@@ -488,10 +486,11 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
   useEffect(() => {
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
     let heroVisible = true;
+    let mediaReady = false;
 
     const syncPlayback = () => {
       const video = heroVideoRef.current;
-      const canPlay = !motionPreference.matches && !saveDataEnabled;
+      const canPlay = mediaReady && !motionPreference.matches && !constrainedConnection;
 
       setMediaEnabled(canPlay);
 
@@ -519,6 +518,10 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
     );
 
     syncPlayback();
+    const mediaTimer = window.setTimeout(() => {
+      mediaReady = true;
+      syncPlayback();
+    }, 1200);
     motionPreference.addEventListener('change', syncPlayback);
     document.addEventListener('visibilitychange', syncPlayback);
     if (heroVideoRef.current) {
@@ -529,17 +532,18 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
       motionPreference.removeEventListener('change', syncPlayback);
       document.removeEventListener('visibilitychange', syncPlayback);
       visibilityObserver.disconnect();
+      window.clearTimeout(mediaTimer);
     };
-  }, [saveDataEnabled]);
+  }, [constrainedConnection]);
 
   useEffect(() => {
     const revealPreference = window.matchMedia(PRODUCT_REVEAL_QUERY);
-    const syncReveal = () => setProductRevealEnabled(!saveDataEnabled && revealPreference.matches);
+    const syncReveal = () => setProductRevealEnabled(!constrainedConnection && revealPreference.matches);
 
     syncReveal();
     revealPreference.addEventListener('change', syncReveal);
     return () => revealPreference.removeEventListener('change', syncReveal);
-  }, [saveDataEnabled]);
+  }, [constrainedConnection]);
 
   useEffect(() => {
     if (!menuOpen && !demoOpen) {
@@ -753,7 +757,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
           <div aria-hidden="true" className="hero-product-reveal">
             <div className="hero-product-reveal__plane">
               <div className="hero-product-reveal__device">
-                <img alt="" decoding="async" fetchPriority="high" height="2400" src={appScenarios} width="1080" />
+                <img alt="" decoding="async" fetchPriority="low" height="2400" loading="lazy" src={appScenarios} width="1080" />
               </div>
             </div>
           </div>

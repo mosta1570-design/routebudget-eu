@@ -8,8 +8,8 @@
   "description": "Metodo 2026 per leggere un preventivo freight Calais–Dover, separare nolo, BAF, ETS e costi stradali, poi attribuire il totale alla tratta senza doppioni.",
   "eyebrow": "Manica · traghetto freight",
   "published": "2026-08-18",
-  "modified": "2026-08-18",
-  "reviewed": "2026-08-18",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "costo traghetto Calais Dover camion",
@@ -96,5 +96,5 @@
       "supports": "Perimetro normativo dell'EU ETS marittimo, inclusione di metano e protossido di azoto dal 2026 e trattamento dei viaggi tra porti UE e paesi terzi."
     }
   ],
-  "changeSummary": "Prima pubblicazione: metodo 2026 per riconciliare nolo freight, BAF, ETS, check-in e gambe stradali Calais–Dover senza inventare un prezzo medio."
+  "changeSummary": "Aggiunto il confine verso Italia–Grecia per evitare di riusare supplementi e condizioni della Manica su rotte adriatiche."
 }

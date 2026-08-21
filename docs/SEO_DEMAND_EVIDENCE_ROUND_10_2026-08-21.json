@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-21",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "Google Suggest public endpoint",
+    "Italian Google SERP review",
+    "official operator and institutional sources"
+  ],
+  "method": {
+    "suggestClient": "firefox",
+    "hl": "it",
+    "gl": "it",
+    "interpretation": "Directional wording and task evidence only. Suggest and SERP observations do not provide monthly demand or guarantee traffic.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "Keep volume null unless a dated Italy-specific dataset is available."
+  },
+  "candidates": [
+    {
+      "primaryKeyword": "pedaggio camion Serbia 2026",
+      "canonical": "/it/guide/pedaggio-camion-serbia-2026/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=pedaggio%20camion%20serbia",
+      "query": "pedaggio camion serbia",
+      "returnedSuggestions": [
+        "pedaggio camion serbia"
+      ],
+      "exactSuggestionReturned": true,
+      "signal": "directional",
+      "volume": null,
+      "decision": "publish",
+      "productFit": "A verified Serbian toll becomes one cost item in the trip breakdown, price scenarios and non-binding PDF.",
+      "productBoundary": "RouteBudget does not register or pay a TAG, access Toll4All or calculate the official Serbian toll live.",
+      "intentBoundary": "Owns Putevi Srbije categories III/IV, the current RSD/EUR tariff, category-IV TAG and Toll4All; it does not own BGTOLL, HU-GO or Italian toll classes.",
+      "sourceUrls": [
+        "https://www.putevi-srbije.rs/index.php/en/kategorizacija-vozila-cenovnik-putarine-2",
+        "https://www.putevi-srbije.rs/images/pdf/cene_putarina_eng.pdf",
+        "https://www.putevi-srbije.rs/index.php/en/news-company/27-05-26-obavezna-upotreba-tag-ure%C4%91aja-za-teretna-vozila-primena-kaznene-politike-2",
+        "https://www.putevi-srbije.rs/index.php/en/etc-elektronic-toll-collection"
+      ]
+    },
+    {
+      "primaryKeyword": "traghetto camion Italia Grecia",
+      "canonical": "/it/guide/traghetto-camion-italia-grecia/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=traghetto%20camion%20italia%20grecia",
+      "query": "traghetto camion italia grecia",
+      "returnedSuggestions": [
+        "traghetto camion italia grecia"
+      ],
+      "exactSuggestionReturned": true,
+      "signal": "directional",
+      "volume": null,
+      "decision": "publish",
+      "productFit": "Verified sea freight, supplements and operating time complete the trip cost, scenarios and PDF.",
+      "productBoundary": "RouteBudget does not book ferries, query live cargo rates or certify reefer, ADR or IMDG acceptance.",
+      "intentBoundary": "Owns the Italy-Greece Adriatic cargo quotation task. Sardinia, Sicily and Calais-Dover retain their own routes, operators and cost components.",
+      "sourceUrls": [
+        "https://anekitalia.com/cargo/",
+        "https://www.minoan.gr/en/cargo-en/cargo",
+        "https://www.minoan.gr/it/cargo-it/informazione-imbarco",
+        "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en"
+      ]
+    },
+    {
+      "primaryKeyword": "pedaggio camion Polonia 2026",
+      "canonical": "/it/guide/pedaggio-camion-polonia-2026/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=pedaggio%20camion%20polonia",
+      "query": "pedaggio camion polonia",
+      "returnedSuggestions": [],
+      "exactSuggestionReturned": null,
+      "signal": "directional-serp-and-official-change",
+      "volume": null,
+      "decision": "publish",
+      "signalNote": "No exact Suggest claim is made in this evidence file. Selection is supported by Italian SERP task fit and official network/rate changes effective 1 February 2026.",
+      "productFit": "A verified e-TOLL amount becomes one cost item in the trip breakdown, scenarios and non-binding PDF.",
+      "productBoundary": "RouteBudget does not register e-TOLL, transmit GNSS data, replace OBU/ELS or calculate official Polish tolls live.",
+      "intentBoundary": "Owns Polish e-TOLL network, vehicle-combination mass, EURO class, PLN/km rates and GNSS device workflow; it does not own German LKW-Maut or Czech MYTO CZ.",
+      "sourceUrls": [
+        "https://etoll.gov.pl/en/news/changes-to-the-e-toll-as-of-1-february-2026/",
+        "https://etoll.gov.pl/en/e-toll-system/rates-and-payments/",
+        "https://etoll.gov.pl/en/vehicle-classification-tool/",
+        "https://etoll.gov.pl/en/e-toll-system/toll-road-network/",
+        "https://etoll.gov.pl/en/registration-in-e-toll/",
+        "https://etoll.gov.pl/en/e-toll-system/obu-and-els-on-board-devices/"
+      ]
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "primaryKeyword": "costo trasporto ADR",
+      "volume": null,
+      "decision": "reject-round-10",
+      "reason": "The query is real but product fit is insufficient and legal/safety risk is high. RouteBudget does not classify dangerous goods, validate ADR documents or routes, certify compliance or provide a universal official surcharge.",
+      "replacement": "pedaggio camion Polonia 2026"
+    }
+  ],
+  "gscContext": {
+    "window": "2026-08-01/2026-08-19",
+    "clicks": 23,
+    "impressions": 1749,
+    "ctr": 0.013,
+    "averagePosition": 15.6,
+    "last7Impressions": 909,
+    "previous7Impressions": 598,
+    "last7Clicks": 11,
+    "previous7Clicks": 6,
+    "manualActions": 0,
+    "securityIssues": 0,
+    "externalLinks": 0,
+    "internalLinks": 90,
+    "cannibalization": {
+      "query": "consumo medio camion",
+      "pages": [
+        {
+          "canonical": "/it/calcolatori/costo-carburante-viaggio/",
+          "impressions": 35
+        },
+        {
+          "canonical": "/it/guide/quanto-consuma-un-camion/",
+          "impressions": 16
+        },
+        {
+          "canonical": "/it/calcolatori/",
+          "impressions": 1
+        },
+        {
+          "canonical": "/it/calcolatori/costo-chilometrico-camion/",
+          "impressions": 1
+        }
+      ],
+      "owner": "/it/guide/quanto-consuma-un-camion/"
+    }
+  }
+}

@@ -1,11 +1,11 @@
 # RouteBudget EU — report internal linking
 
-Verifica locale: 20 agosto 2026, dopo build Round 9. Comando: `node scripts/verify-generated.mjs --scope links`.
+Verifica locale: 21 agosto 2026, dopo build Round 10. Comando: `node scripts/verify-generated.mjs --scope links`.
 
 ## Risultato
 
-- URL canoniche/indexabili nel grafo: **47**.
-- Pagine contenuto: **42** — 3 pillar, 35 guide, 3 calcolatori e 1 landing.
+- URL canoniche/indexabili nel grafo: **50**.
+- Pagine contenuto: **45** — 3 pillar, 38 guide, 3 calcolatori e 1 landing.
 - Hub: **2**.
 - Core/legal: homepage, privacy, termini.
 - Broken href/src: **0**.
@@ -16,15 +16,15 @@ Verifica locale: 20 agosto 2026, dopo build Round 9. Comando: `node scripts/veri
 
 ## Copertura cluster
 
-| Gruppo | Link in ingresso alle nuove pagine | Esito |
-| --- | ---: | --- |
-| `bgtoll-camion-bulgaria-2026` | **4**: homepage, hub guide, guida pedaggio Italia, guida Ungheria | verificato nel grafo generato |
-| `quanto-consuma-un-furgone` | **7**: homepage, landing app, hub, pillar costi, costo furgone/km, costo autostrada furgone, consumo camion | verificato nel grafo generato |
-| `costo-autostrada-furgone` | **6**: homepage, landing app, hub, pillar costi, costo furgone/km, guida pedaggio camion | verificato nel grafo generato |
+| Gruppo | Ingressi editoriali principali | Esito |
+| --- | --- | --- |
+| `pedaggio-camion-serbia-2026` | homepage, hub guide, guida pedaggi camion, guida BGTOLL | verificato nel grafo generato |
+| `traghetto-camion-italia-grecia` | homepage, hub guide, guida traghetto Sardegna, guida Calais–Dover | verificato nel grafo generato |
+| `pedaggio-camion-polonia-2026` | homepage, hub guide, guida pedaggi camion, guida MYTO Repubblica Ceca | verificato nel grafo generato |
 
-I pillar restituiscono link ai supporti principali. Ogni guida supporto collega il proprio pillar. Le pagine camion dichiarano il calcolatore pertinente; le due nuove guide N1 usano `relatedCalculator: null` e convertono verso il flusso N1 reale nell'app, evitando di presentare un tool web camion come equivalente. Entrambi gli store appaiono come CTA dopo contenuto utile.
+I pillar restituiscono link ai supporti principali. Ogni guida supporto collega il proprio pillar. Le nuove pagine distinguono i compiti: categoria IV/TAG Serbia, quotazione cargo Italia–Grecia ed e-TOLL Polonia. RouteBudget riceve un costo già verificato e non viene presentato come sistema ufficiale di pedaggio, prenotazione o pagamento. Entrambi gli store appaiono come CTA dopo contenuto utile.
 
-La sitemap articoli generata contiene **38 URL**; `legal.xml` 2, `calculators-it.xml` 3 e `core.xml` 4, per 47 URL complessive. Le tre nuove canonical sono presenti in `articles-it.xml`.
+La sitemap articoli generata contiene **41 URL**; `legal.xml` 2, `calculators-it.xml` 3 e `core.xml` 4, per 50 URL complessive. Le tre nuove canonical sono presenti in `articles-it.xml`.
 
 ## Come viene misurato
 

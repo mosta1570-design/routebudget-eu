@@ -1,13 +1,13 @@
 # RouteBudget EU — mappa internal link
 
-Data: 20 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e link contestuali del Markdown/HTML statico.
+Data: 21 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e link contestuali del Markdown/HTML statico.
 
 ## Entry points
 
 | Sorgente | Destinazioni HTML principali |
 | --- | --- |
-| Homepage statica | hub, landing app, preventivo PDF, tre guide Round 8, privacy, termini, store |
-| Hub guide | tutti i 3 pillar e i 35 supporti |
+| Homepage statica | hub, landing app, preventivo PDF, tre guide Round 10, privacy, termini, store |
+| Hub guide | tutti i 3 pillar e i 38 supporti |
 | Hub calcolatori | tutti i 3 calcolatori |
 | Header/footer SEO | homepage, hub guide, hub calcolatori, landing app, privacy, termini |
 | Landing app | 3 pillar, 3 calcolatori, entrambi gli store |
@@ -35,6 +35,9 @@ Data: 20 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e li
 | `guide/pedaggio-camion-danimarca-2026/` | calcolo costo | costo/km | pedaggio Italia, Eurovignette, Germania, calcolatore costo/km |
 | `guide/costo-traghetto-camion-calais-dover-2026/` | calcolo costo | costo/km | Sardegna, Sicilia, preventivo PDF, calcolatore costo/km |
 | `guide/bgtoll-camion-bulgaria-2026/` | calcolo costo | costo/km | pedaggio Italia, Ungheria, Repubblica Ceca, calcolatore costo/km |
+| `guide/pedaggio-camion-serbia-2026/` | calcolo costo | costo/km | pedaggio Italia, BGTOLL, Ungheria, calcolatore costo/km |
+| `guide/traghetto-camion-italia-grecia/` | calcolo costo | costo/km | Sardegna, Calais–Dover, preventivo PDF, calcolatore costo/km |
+| `guide/pedaggio-camion-polonia-2026/` | calcolo costo | costo/km | pedaggio Italia, Germania, Repubblica Ceca, calcolatore costo/km |
 | `guide/tempi-guida-riposo-camion/` | calcolo costo | costo/km | costi diretti, costo orario, attese, calcolatore costo/km |
 | `guide/ritorno-a-vuoto-autotrasporto/` | calcolo costo | costo/km | costo/km guida, margine, due tool |
 | `guide/proteggere-margine-tratta/` | calcolo costo | costo/km | preventivo, errori tariffa, costo/km |
@@ -160,3 +163,13 @@ Il controllo generato deve continuare a chiudere con zero URL orfani e zero link
 - `costo-autostrada-furgone` riceve ingressi da homepage, landing app, hub, pillar costi, costo furgone/km e guida pedaggio camion;
 - ogni nuova guida restituisce esattamente le relazioni dichiarate nel proprio `meta.json`; per le due guide N1 il passo di conversione è l'app, non un calcolatore web camion presentato come equivalente;
 - gate post-build atteso: 47 route indexabili, 38 URL in `articles-it.xml`, zero route orfane, target o fragment rotti.
+
+## Gate internal link per la release 21 agosto
+
+- homepage statica e React → `pedaggio-camion-serbia-2026`, `traghetto-camion-italia-grecia` e `pedaggio-camion-polonia-2026`;
+- hub guide → tutti i 38 supporti;
+- Serbia riceve ingressi da homepage, hub guide, `calcolo-pedaggio-camion` e BGTOLL; restituisce pillar, tool, pedaggio Italia, Bulgaria e Ungheria;
+- Italia–Grecia riceve ingressi da homepage, hub guide, traghetto Sardegna e Calais–Dover; restituisce pillar, tool, Sardegna, Calais–Dover e preventivo PDF;
+- Polonia riceve ingressi da homepage, hub guide, `calcolo-pedaggio-camion` e Repubblica Ceca; restituisce pillar, tool, pedaggio Italia, Germania e Repubblica Ceca;
+- refresh `preventivo-trasporto-pdf` mantiene ingressi da homepage, pillar e nuove relazioni cargo; refresh consumo assegna owner informativo alla guida e porta il tool numerico verso essa;
+- gate post-build atteso: 50 route indexabili, 41 URL in `articles-it.xml`, zero route orfane, target o fragment rotti.

@@ -8,8 +8,8 @@
   "description": "Come calcolare il pedaggio camion in Svizzera con TTPCP III: chilometri, peso, classe di emissione, NMTS per veicoli esteri e verifica ufficiale.",
   "eyebrow": "Svizzera · TTPCP III",
   "published": "2026-08-14",
-  "modified": "2026-08-14",
-  "reviewed": "2026-08-14",
+  "modified": "2026-08-21",
+  "reviewed": "2026-08-21",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Svizzera",
@@ -49,18 +49,10 @@
     {
       "label": "UDSC — TTPCP e sistema TTPCP III",
       "url": "https://www.bazg.admin.ch/it/tassa-sul-traffico-pesante-commisurata-alle-prestazioni-ttpcp",
-      "publishedOrUpdated": "Contenuto operativo corrente al 14 agosto 2026",
+      "publishedOrUpdated": "Contenuto operativo corrente verificato il 21 agosto 2026",
       "geography": "Svizzera e Principato del Liechtenstein",
-      "accessedAt": "2026-08-14",
+      "accessedAt": "2026-08-21",
       "supports": "Ambito della TTPCP, soglia oltre 3,5 t, sistemi NETS, SET e NMTS, registrazione dei veicoli esteri."
-    },
-    {
-      "label": "UDSC — Calcolo della TTPCP",
-      "url": "https://www.bazg.admin.ch/it/calcolo-della-ttpcp",
-      "publishedOrUpdated": "Contenuto operativo corrente al 14 agosto 2026",
-      "geography": "Svizzera e Principato del Liechtenstein",
-      "accessedAt": "2026-08-14",
-      "supports": "Formula basata su chilometri, peso determinante e classe di emissione; regole sul peso dei convogli."
     },
     {
       "label": "UDSC — NMTS: registrazione e pagamento",
@@ -87,5 +79,5 @@
       "supports": "Tariffe ufficiali in centesimi per tonnellata-chilometro, compresa la categoria EURO 6 usata nell'esempio."
     }
   ],
-  "changeSummary": "Prima pubblicazione: guida operativa 2026 per verificare la TTPCP svizzera e inserirla nel costo completo della tratta."
+  "changeSummary": "Rimosso il deep link UDSC non più disponibile e consolidati formula e variabili nella pagina TTPCP ufficiale corrente."
 }

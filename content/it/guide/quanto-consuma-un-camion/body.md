@@ -1,6 +1,6 @@
 ## Quanto consuma un camion: la risposta utile parte dai tuoi dati
 
-Chiedere quanto consuma un camion non porta a un unico valore valido per ogni mezzo e tratta. Motore, massa, rimorchio, pendenza, traffico e velocità possono cambiare il risultato in modo sostanziale. Una media generica può servire come controllo iniziale, ma non dovrebbe diventare la base di un preventivo.
+Chiedere quanto consuma un camion non porta a un unico valore valido per ogni mezzo e tratta. Motore, massa, rimorchio, pendenza, traffico e velocità possono cambiare il risultato in modo sostanziale. Una media generica può servire come controllo iniziale, ma non dovrebbe diventare la base di un preventivo. Questa è la pagina dedicata a **misurare e interpretare il consumo medio**; il calcolatore separato serve dopo, quando i l/100 km sono già noti.
 
 Il dato operativo da cercare è il consumo del proprio veicolo in un contesto dichiarato: per esempio trattore e semirimorchio, carico medio, percorso autostradale e periodo estivo. Solo così il numero può essere confrontato con una nuova missione e trasformato in un costo carburante.
 
