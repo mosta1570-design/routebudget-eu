@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070B12" />
+    <meta name="description" content="Come strutturare in Excel anagrafiche, tariffe con decorrenza, dati di viaggio e versioni, poi controllare la tratta e preparare un PDF." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="RouteBudget EU" />
+    <meta property="og:title" content="Calcolo costi trasporto camion Excel: foglio, controlli e PDF" />
+    <meta property="og:description" content="Come strutturare in Excel anagrafiche, tariffe con decorrenza, dati di viaggio e versioni, poi controllare la tratta e preparare un PDF." />
+    <meta property="og:url" content="https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/" />
+    <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
+    <meta property="og:image:alt" content="RouteBudget EU — Calcolo costi trasporto camion Excel: foglio, controlli e PDF" />
+    <meta property="article:published_time" content="2026-08-22" />
+    <meta property="article:modified_time" content="2026-08-22" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calcolo costi trasporto camion Excel: foglio, controlli e PDF" />
+    <meta name="twitter:description" content="Come strutturare in Excel anagrafiche, tariffe con decorrenza, dati di viaggio e versioni, poi controllare la tratta e preparare un PDF." />
+    <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
+    <link rel="icon" type="image/png" href="/logo-ui.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/seo/seo.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","url":"https://routebudget.eu/#autore","description":"Sviluppatore indipendente di RouteBudget EU e responsabile di metodo, fonti e revisioni editoriali.","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Guide","item":"https://routebudget.eu/it/guide/"},{"@type":"ListItem","position":3,"name":"Calcolo costi trasporto camion Excel: foglio, controlli e PDF","item":"https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/"}]},{"@type":"Article","@id":"https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/#article","headline":"Calcolo costi trasporto camion Excel: foglio, controlli e PDF","description":"Come strutturare in Excel anagrafiche, tariffe con decorrenza, dati di viaggio e versioni, poi controllare la tratta e preparare un PDF.","url":"https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/","mainEntityOfPage":"https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/","datePublished":"2026-08-22","dateModified":"2026-08-22","inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"},"image":"https://routebudget.eu/og-cover.jpg","keywords":"calcolo costi trasporto camion excel, foglio Excel costi trasporto camion, Excel tariffe autotrasporto, modello calcolo viaggio camion Excel, preventivo trasporto da Excel a PDF","about":[{"@type":"Thing","name":"foglio Excel costi camion"},{"@type":"Thing","name":"tariffe con data di validità"},{"@type":"Thing","name":"controlli e versioni del calcolo"},{"@type":"Thing","name":"passaggio da Excel a PDF"}],"wordCount":1461,"timeRequired":"PT7M","citation":["https://www.forumexcel.it/forum/threads/gestione-spedizioni-su-strada.54288/","https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6","https://www.mimit.gov.it/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti","https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio"]}]}</script>
+    <script src="/seo/events.js" defer></script>
+
+    <title>Calcolo costi trasporto camion Excel: foglio, controlli e PDF</title>
+  </head>
+<body class="seo-body" data-content-id="it:guide:calcolo-costi-trasporto-camion-excel" data-page-type="guide" data-locale="it">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar"></span></div>
+  <header class="seo-header">
+    <div class="seo-header__inner">
+      <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
+        <img src="/logo-ui.png" width="42" height="42" alt="" />
+        <span>RouteBudget <small>EU</small></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+      </nav>
+      <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scopri l’app <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+  <main id="contenuto">
+    <section class="seo-hero">
+      <div class="seo-shell">
+        <nav class="breadcrumbs" aria-label="Percorso">
+    <a href="/">RouteBudget</a>
+    <span aria-hidden="true">/</span>
+    <a href="/it/guide/">Guide</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Calcolo costi trasporto camion Excel: foglio, controlli e PDF</span>
+  </nav>
+        <p class="seo-eyebrow">Gestione costi · Excel e preventivo</p>
+        <h1>Calcolo costi trasporto camion Excel: foglio, controlli e PDF</h1>
+        <p class="seo-hero__summary">Come strutturare in Excel anagrafiche, tariffe con decorrenza, dati di viaggio e versioni, poi controllare la tratta e preparare un PDF.</p>
+        <div class="seo-meta" aria-label="Informazioni editoriali">
+          <span>A cura di <a href="/#autore">Eng. Mostafa</a> · RouteBudget EU</span>
+          <span>Revisione 22 agosto 2026</span>
+          <span>7 min di lettura</span>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="seo-shell article-layout">
+      <div class="article-main">
+        <details class="mobile-toc">
+    <summary><span>Indice della guida</span><b aria-hidden="true">+</b></summary>
+    <ol>
+      <li><a href="#risposta-diretta-il-foglio-utile-non-e-una-formula-unica">Risposta diretta: il foglio utile non è una formula unica</a></li>
+<li><a href="#il-problema-reale-trovare-la-tariffa-valida-nel-giorno-del-viaggio">Il problema reale: trovare la tariffa valida nel giorno del viaggio</a></li>
+<li><a href="#architettura-consigliata-in-cinque-fogli">Architettura consigliata in cinque fogli</a></li>
+<li><a href="#blueprint-copiabile-per-tariffe-e-missioni">Blueprint copiabile per tariffe e missioni</a></li>
+<li><a href="#celle-di-calcolo-poche-leggibili-e-verificabili">Celle di calcolo: poche, leggibili e verificabili</a></li>
+<li><a href="#aggiornare-input-italiani-senza-trasformarli-in-verita-aziendale">Aggiornare input italiani senza trasformarli in verità aziendale</a></li>
+<li><a href="#versioni-come-evitare-che-il-passato-cambi-da-solo">Versioni: come evitare che il passato cambi da solo</a></li>
+<li><a href="#passaggio-mobile-dove-entra-routebudget">Passaggio mobile: dove entra RouteBudget</a></li>
+<li><a href="#checklist-prima-di-fidarsi-del-totale">Checklist prima di fidarsi del totale</a></li>
+    </ol>
+  </details>
+        <article class="seo-prose">
+          <h2 id="risposta-diretta-il-foglio-utile-non-e-una-formula-unica">Risposta diretta: il foglio utile non è una formula unica</h2>
+<p>Per fare il <strong>calcolo costi trasporto camion in Excel</strong> senza perdere il controllo, separa quattro cose: dati stabili del mezzo, valori aggiornabili, singole missioni e risultati congelati. Un listino modificato oggi non deve cambiare il preventivo inviato ieri. Una tariffa valida da maggio non deve essere applicata a una spedizione di aprile. E una cella vuota non deve diventare silenziosamente zero.</p>
+<p>La struttura più solida usa tabelle Excel, intervalli di validità, controlli visibili e un registro delle revisioni. Excel resta adatto per anagrafiche di flotta, listini e consuntivi. Fuori ufficio, RouteBudget può riunire i valori supportati di una singola tratta, mostrare tre scenari, salvarne il calcolo localmente e generare un PDF non vincolante.</p>
+<aside class="mobile-inline-cta" aria-label="Continua con RouteBudget">
+    <p class="rail-label">Prima di accettare</p>
+    <p class="mobile-inline-cta__title">Confronta la tenuta del margine.</p>
+    <p>Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo; il risultato resta una stima, non una garanzia di utile.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="inline" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="inline" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </aside><h2 id="il-problema-reale-trovare-la-tariffa-valida-nel-giorno-del-viaggio">Il problema reale: trovare la tariffa valida nel giorno del viaggio</h2>
+<p>Una discussione italiana su <a href="https://www.forumexcel.it/forum/threads/gestione-spedizioni-su-strada.54288/" rel="noreferrer">ForumExcel dedicata alla gestione delle spedizioni</a> parte da un caso concreto: registrare trasportatore, origine, destinazione, tipo di mezzo e data, poi recuperare un prezzo per tonnellata da un listino. La difficoltà nasce quando quella tariffa ha una decorrenza e una scadenza.</p>
+<p>È un problema gestionale, non soltanto di formula. Con intervalli sovrapposti, una ricerca può restituire il primo prezzo senza segnalare il conflitto. Senza scadenza, il vecchio valore può restare valido per sempre. Sovrascrivendo la riga precedente, non si ricostruisce più il calcolo storico.</p>
+<p>La regola pratica è: <strong>mai correggere una tariffa storica; chiudere la sua validità e aggiungere una nuova riga</strong>.</p>
+<h2 id="architettura-consigliata-in-cinque-fogli">Architettura consigliata in cinque fogli</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole 1"><table>
+<thead>
+<tr>
+<th>Foglio</th>
+<th>Contenuto</th>
+<th>Regola di controllo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>MEZZI</code></td>
+<td>ID mezzo, categoria, alimentazione, consumo aziendale, costo orario, criterio usura</td>
+<td>un ID univoco per ogni configurazione</td>
+</tr>
+<tr>
+<td><code>TARIFFE</code></td>
+<td>tratta, mezzo, vettore, validità, unità e importo</td>
+<td>nessun intervallo sovrapposto per la stessa chiave</td>
+</tr>
+<tr>
+<td><code>INPUT</code></td>
+<td>carburante, pedaggi, parametri e fonte con data</td>
+<td>vietati valori senza unità o data di acquisizione</td>
+</tr>
+<tr>
+<td><code>VIAGGI</code></td>
+<td>una riga per missione e dati usati nel preventivo</td>
+<td>celle obbligatorie e segnalazione degli errori</td>
+</tr>
+<tr>
+<td><code>REVISIONI</code></td>
+<td>versione, autore, data, motivo e risultato approvato</td>
+<td>nessuna versione inviata viene sovrascritta</td>
+</tr>
+</tbody></table></div>
+<p>Trasforma ogni area in una <strong>Tabella Excel</strong>, per esempio <code>tblMezzi</code>, <code>tblTariffe</code> e <code>tblViaggi</code>. Le formule strutturate resistono all’aggiunta di righe. Blocca le colonne formula e usa convalida dati per mezzo, vettore, unità e stato.</p>
+<h2 id="blueprint-copiabile-per-tariffe-e-missioni">Blueprint copiabile per tariffe e missioni</h2>
+<p>Nel foglio <code>TARIFFE</code> puoi partire da queste colonne:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole 2"><table>
+<thead>
+<tr>
+<th>ID_tariffa</th>
+<th>Tratta</th>
+<th>Mezzo</th>
+<th>Vettore</th>
+<th>Valida_dal</th>
+<th>Valida_al</th>
+<th>Unità</th>
+<th align="right">Importo</th>
+<th>Fonte</th>
+<th>Versione</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T-001</td>
+<td>BO-MI</td>
+<td>AUTOARTICOLATO</td>
+<td>V001</td>
+<td>01/01/2026</td>
+<td>31/03/2026</td>
+<td>€/t</td>
+<td align="right">31,50</td>
+<td>accordo 04</td>
+<td>1</td>
+</tr>
+<tr>
+<td>T-002</td>
+<td>BO-MI</td>
+<td>AUTOARTICOLATO</td>
+<td>V001</td>
+<td>01/04/2026</td>
+<td>30/06/2026</td>
+<td>€/t</td>
+<td align="right">33,00</td>
+<td>accordo 07</td>
+<td>2</td>
+</tr>
+</tbody></table></div>
+<p>Nel foglio <code>VIAGGI</code> usa almeno:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole 3"><table>
+<thead>
+<tr>
+<th>ID_viaggio</th>
+<th>Data</th>
+<th>Tratta</th>
+<th>Mezzo</th>
+<th>Vettore</th>
+<th>Unità_tariffa</th>
+<th align="right">Quantità</th>
+<th align="right">Km_andata</th>
+<th align="right">Km_ritorno</th>
+<th align="right">Consumo_L_100</th>
+<th align="right">Prezzo_L</th>
+<th align="right">Pedaggi</th>
+<th align="right">Ore</th>
+<th align="right">Costo_ora</th>
+<th align="right">Usura_Euro_km</th>
+<th align="right">Altri_costi</th>
+<th align="right">Margine</th>
+</tr>
+</thead>
+</table></div>
+<p>A destra degli input aggiungi colonne calcolate per <code>Corrispondenze</code>, <code>Tariffa_unitaria</code>, <code>Importo_listino</code>, chilometri, litri, carburante, autista, usura, costo missione e scenario di prezzo. Restano risultati della riga, non valori da digitare a mano.</p>
+<p>Prima di recuperare l’importo, conta quante tariffe soddisfano <strong>tutti</strong> i criteri. In una colonna <code>Corrispondenze</code>, con nomi di tabella coerenti, la logica può essere:</p>
+<p><code>=CONTA.PIÙ.SE(tblTariffe[Tratta];[@Tratta];tblTariffe[Mezzo];[@Mezzo];tblTariffe[Vettore];[@Vettore];tblTariffe[Unità];[@Unità_tariffa];tblTariffe[Valida_dal];"&lt;="&amp;[@Data];tblTariffe[Valida_al];"&gt;="&amp;[@Data])</code></p>
+<p>Il risultato accettabile è <code>1</code>. Se vale <code>0</code>, manca una tariffa valida. Se è maggiore di <code>1</code>, esiste una sovrapposizione. Mostra <code>VERIFICA</code> e impedisci l’approvazione; non prendere automaticamente il primo risultato.</p>
+<p>Quando il controllo vale uno, usa <code>FILTRO</code> o <code>SOMMA.PIÙ.SE</code> con gli stessi criteri per recuperare la <code>Tariffa_unitaria</code>. La funzione dipende dalla versione di Excel. Calcola poi <code>Importo_listino = Tariffa_unitaria × Quantità</code> soltanto quando le unità sono compatibili: tonnellate per <code>€/t</code>, chilometri fatturabili per <code>€/km</code>, oppure quantità <code>1</code> per una tariffa a viaggio. Conserva colonne separate per unità e quantità; sommare basi diverse produce un totale economicamente falso.</p>
+<h2 id="celle-di-calcolo-poche-leggibili-e-verificabili">Celle di calcolo: poche, leggibili e verificabili</h2>
+<p>Un blocco minimo per il viaggio può seguire questa logica:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole 4"><table>
+<thead>
+<tr>
+<th>Risultato</th>
+<th>Formula di esempio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Km totali</td>
+<td><code>=[@Km_andata]+[@Km_ritorno]</code></td>
+</tr>
+<tr>
+<td>Litri stimati</td>
+<td><code>=[@Km_totali]*[@Consumo_L_100]/100</code></td>
+</tr>
+<tr>
+<td>Costo carburante</td>
+<td><code>=[@Litri_stimati]*[@Prezzo_L]</code></td>
+</tr>
+<tr>
+<td>Costo autista</td>
+<td><code>=[@Ore]*[@Costo_ora]</code></td>
+</tr>
+<tr>
+<td>Usura aziendale</td>
+<td><code>=[@Km_totali]*[@Usura_Euro_km]</code></td>
+</tr>
+<tr>
+<td>Importo listino</td>
+<td><code>=[@Tariffa_unitaria]*[@Quantità]</code> dopo il controllo dell’unità</td>
+</tr>
+<tr>
+<td>Costo missione</td>
+<td><code>=[@Carburante]+[@Pedaggi]+[@Autista]+[@Usura]+[@Altri_costi]</code></td>
+</tr>
+<tr>
+<td>Prezzo con margine sul ricavo</td>
+<td><code>=[@Costo_missione]/(1-[@Margine])</code></td>
+</tr>
+</tbody></table></div>
+<p>Sono formule gestionali, non tariffe ufficiali. Dichiara se la percentuale è margine sul ricavo o ricarico sul costo: le due convenzioni danno risultati diversi. Imposta limiti ragionevoli e avvisi, per esempio consumo nullo, margine uguale o superiore al 100%, chilometri negativi, data fuori validità o pedaggio senza fonte.</p>
+<h2 id="aggiornare-input-italiani-senza-trasformarli-in-verita-aziendale">Aggiornare input italiani senza trasformarli in verità aziendale</h2>
+<p>Il foglio deve indicare <strong>origine e data</strong> di ogni valore esterno. Tre fonti rispondono a tre domande diverse.</p>
+<p>Le <a href="https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6" rel="noreferrer">tabelle MIT dei costi di esercizio aggiornate a marzo 2026</a> offrono valori indicativi per classi A–D. Il Ministero segnala l’aggiornamento di assicurazione, energia e pedaggiamenti. Usale come confronto per scoprire una voce anomala o mancante, non come listino da assegnare indistintamente a ogni mezzo. La guida alle <a href="/it/guide/tabelle-costi-autotrasporto-mit-2026/">tabelle costi autotrasporto MIT 2026</a> spiega come selezionare soltanto le componenti pertinenti.</p>
+<p>Gli <a href="https://www.mimit.gov.it/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti" rel="noreferrer">open data carburanti del MIMIT</a> contengono prezzi comunicati dai gestori e hanno frequenza quotidiana. Sono utili per un riferimento datato o una verifica territoriale; non coincidono necessariamente con il prezzo netto pagato dalla flotta, con gli sconti della carta carburante o con il rifornimento che avverrà durante il viaggio. Nel foglio conserva valore, unità, impianto o perimetro scelto, data e URL.</p>
+<p>Autostrade per l’Italia spiega che il <a href="https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio" rel="noreferrer">calcolo del pedaggio</a> dipende da classe del veicolo, chilometri tariffari, caratteristiche del tratto e concessionario. La pagina tratta inoltre IVA e arrotondamento e indica tariffe aggiornate al 1° gennaio 2026. Un costo medio per chilometro non sostituisce quindi il controllo della rotta e della classe; registra l’importo verificato e la data. Per il metodo completo consulta la guida al <a href="/it/guide/calcolo-pedaggio-camion/">calcolo del pedaggio camion</a>.</p>
+<h2 id="versioni-come-evitare-che-il-passato-cambi-da-solo">Versioni: come evitare che il passato cambi da solo</h2>
+<p>Ogni preventivo approvato dovrebbe avere un ID e una versione, per esempio <code>RB-2026-018-R1</code>. Nel foglio <code>REVISIONI</code> annota:</p>
+<ul>
+<li>data e ora del calcolo;</li>
+<li>responsabile della modifica;</li>
+<li>fonte e data di carburante e pedaggi;</li>
+<li>versione di listino applicata;</li>
+<li>celle o ipotesi cambiate;</li>
+<li>totale precedente e nuovo;</li>
+<li>stato: bozza, verificato, inviato o annullato.</li>
+</ul>
+<p>Prima dell’invio, copia i risultati in un registro protetto oppure esporta uno snapshot non modificabile secondo il processo documentale dell’impresa. Non conservare soltanto formule collegate a tabelle vive: al prossimo aggiornamento potresti non ricostruire il numero visto dal cliente.</p>
+<h2 id="passaggio-mobile-dove-entra-routebudget">Passaggio mobile: dove entra RouteBudget</h2>
+<p>Excel può restare la base aziendale per mezzi, consuntivi, listini e analisi mensili. RouteBudget è utile quando devi valutare <strong>una singola tratta</strong> con i valori già verificati: combina le voci supportate, presenta tre scenari di prezzo, conserva localmente lo snapshot del calcolo e genera un riepilogo PDF non vincolante.</p>
+<p>Il passaggio è manuale e va controllato. RouteBudget <strong>non importa né esporta file Excel</strong>, non sincronizza l’anagrafica clienti e non gestisce contratti o listini con decorrenza. Può stimare una distanza stradale da origine e destinazione, ma non guida l’autista svolta per svolta, non certifica l’idoneità del percorso per un mezzo pesante e non recupera la tariffa corrente dal concessionario. Nel profilo camion applica una quota usura fissa di <strong>0,15 €/km</strong>; nel profilo N1 la quota è modificabile. Se il criterio aziendale del foglio è diverso, confronta la differenza e non presentare i risultati come identici.</p>
+<p>Flusso prudente:</p>
+<ol>
+<li>verifica in Excel mezzo, listino e versione degli input;</li>
+<li>controlla percorso e pedaggi sulle fonti pertinenti;</li>
+<li>inserisci nell’app soltanto i valori supportati della missione;</li>
+<li>confronta i tre scenari senza trattarli come tariffe di mercato;</li>
+<li>genera il PDF e aprilo prima di condividerlo;</li>
+<li>conserva esternamente file inviato, dati cliente, condizioni e fonti.</li>
+</ol>
+<p>La guida al <a href="/it/guide/preventivo-trasporto-pdf/">preventivo trasporto PDF</a> chiarisce quali elementi sono presenti nel riepilogo RouteBudget e quali vanno completati fuori dall’app.</p>
+<h2 id="checklist-prima-di-fidarsi-del-totale">Checklist prima di fidarsi del totale</h2>
+<ul>
+<li> Ogni mezzo e tariffa ha un ID univoco.</li>
+<li> Decorrenza e scadenza sono entrambe compilate.</li>
+<li> Il controllo restituisce una sola tariffa valida.</li>
+<li> Unità, IVA e convenzione del margine sono dichiarate.</li>
+<li> Carburante e pedaggio riportano fonte e data.</li>
+<li> MIT è usato come benchmark, non come prezzo automatico.</li>
+<li> Km a vuoto e ore operative non sono nascosti.</li>
+<li> Celle formula sono protette e gli errori restano visibili.</li>
+<li> Ogni revisione inviata conserva uno snapshot.</li>
+<li> Il passaggio Excel–RouteBudget è stato verificato manualmente.</li>
+<li> Il PDF è stato aperto e controllato prima dell’invio.</li>
+</ul>
+<p>Un foglio professionale rende evidente <strong>quale dato era valido, da dove proveniva e quale versione ha prodotto il prezzo</strong>. Excel mantiene memoria e struttura; RouteBudget accelera il passaggio dalla tratta controllata agli scenari e al PDF, senza sostituire il sistema aziendale.</p>
+
+          <section class="sources" aria-labelledby="fonti-calcolo-costi-trasporto-camion-excel">
+    <h2 id="fonti-calcolo-costi-trasporto-camion-excel">Fonti e riferimenti</h2>
+    <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
+    <ul>
+      <li><a href="https://www.forumexcel.it/forum/threads/gestione-spedizioni-su-strada.54288/" rel="noreferrer">ForumExcel.it — Gestione spedizioni su strada</a><small>Caso reale di un foglio aziendale con trasportatore, origine, destinazione, mezzo, data e prezzo per tonnellata, e del problema di applicare la tariffa corretta nel relativo intervallo di validità. · Italia · consultata in data 22 agosto 2026</small></li>
+<li><a href="https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6" rel="noreferrer">MIT — Valori indicativi dei costi di esercizio, marzo 2026</a><small>Tabelle A–D 2026 e aggiornamento delle componenti assicurazione, energia e pedaggiamenti, da usare come riferimento indicativo e non come tariffa universale. · Italia · consultata in data 22 agosto 2026</small></li>
+<li><a href="https://www.mimit.gov.it/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti" rel="noreferrer">MIMIT — Carburanti: prezzi praticati e anagrafica degli impianti</a><small>Disponibilità, frequenza e perimetro degli open data sui prezzi carburante comunicati dai gestori degli impianti al Ministero. · Italia · consultata in data 22 agosto 2026</small></li>
+<li><a href="https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio" rel="noreferrer">Autostrade per l’Italia — Come si calcola il pedaggio</a><small>Dipendenza del pedaggio da classe, chilometri tariffari, caratteristiche della tratta e concessionario, con IVA e arrotondamento previsti. · Italia · consultata in data 22 agosto 2026</small></li>
+    </ul>
+  </section>
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p><a href="/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti primarie datate, esempio ricalcolato e controllo dei limiti del prodotto. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+          </section>
+        </article>
+      </div>
+      <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+        <nav class="article-toc" aria-label="Indice della guida">
+    <p class="rail-label">In questa guida</p>
+    <ol>
+      <li><a href="#risposta-diretta-il-foglio-utile-non-e-una-formula-unica">Risposta diretta: il foglio utile non è una formula unica</a></li>
+<li><a href="#il-problema-reale-trovare-la-tariffa-valida-nel-giorno-del-viaggio">Il problema reale: trovare la tariffa valida nel giorno del viaggio</a></li>
+<li><a href="#architettura-consigliata-in-cinque-fogli">Architettura consigliata in cinque fogli</a></li>
+<li><a href="#blueprint-copiabile-per-tariffe-e-missioni">Blueprint copiabile per tariffe e missioni</a></li>
+<li><a href="#celle-di-calcolo-poche-leggibili-e-verificabili">Celle di calcolo: poche, leggibili e verificabili</a></li>
+<li><a href="#aggiornare-input-italiani-senza-trasformarli-in-verita-aziendale">Aggiornare input italiani senza trasformarli in verità aziendale</a></li>
+<li><a href="#versioni-come-evitare-che-il-passato-cambi-da-solo">Versioni: come evitare che il passato cambi da solo</a></li>
+<li><a href="#passaggio-mobile-dove-entra-routebudget">Passaggio mobile: dove entra RouteBudget</a></li>
+<li><a href="#checklist-prima-di-fidarsi-del-totale">Checklist prima di fidarsi del totale</a></li>
+    </ol>
+  </nav>
+        <section class="rail-link">
+    <p class="rail-label">Guida pilastro</p>
+    <h2><a href="/it/guide/costi-autotrasporto/">Costi dell’autotrasporto merci: voci fisse, variabili e indirette</a></h2>
+    <p>Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.</p>
+  </section>
+        <section class="app-cta">
+    <p class="rail-label">Prima di accettare</p>
+    <h2>Confronta la tenuta del margine.</h2>
+    <p>Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo; il risultato resta una stima, non una garanzia di utile.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="article" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="article" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </section>
+      </aside>
+    </div>
+    <section class="related-section">
+    <div class="seo-shell">
+      <div class="related-section__heading">
+        <p class="seo-eyebrow">Continua il calcolo</p>
+        <h2>Passi collegati.</h2>
+      </div>
+      <div class="related-links">
+        <a href="/it/guide/costi-autotrasporto/">
+              <span>01</span>
+              <div><small>Guida pilastro</small><strong>Costi dell’autotrasporto merci: voci fisse, variabili e indirette</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/tabelle-costi-autotrasporto-mit-2026/">
+              <span>02</span>
+              <div><small>Guida pratica</small><strong>Tabelle costi autotrasporto MIT 2026: guida alle classi A–D</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/calcolo-pedaggio-camion/">
+              <span>03</span>
+              <div><small>Guida pratica</small><strong>Calcolo pedaggio camion: classe, assi, tratta e concessionario</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/preventivo-trasporto-pdf/">
+              <span>04</span>
+              <div><small>Guida pratica</small><strong>Preventivo di trasporto PDF: contenuti e controllo finale</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/calcolatori/costo-chilometrico-camion/">
+              <span>05</span>
+              <div><small>Calcolatore</small><strong>Costo km camion: calcolatore gratuito per una tratta</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer__inner">
+      <div>
+        <a class="seo-brand" href="/">
+          <img src="/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
+          <span>RouteBudget <small>EU</small></span>
+        </a>
+        <p>Costi chiari. Decisioni difendibili.</p>
+      </div>
+      <nav aria-label="Risorse e informazioni legali">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Termini</a>
+      </nav>
+      <p>© 2026 RouteBudget EU · Eng. Mostafa</p>
+    </div>
+  </footer>
+</body>
+</html>

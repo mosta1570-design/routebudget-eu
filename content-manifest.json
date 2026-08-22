@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-21",
+  "revisionDate": "2026-08-22",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -74,6 +74,18 @@
       "modified": "2026-08-12"
     },
     {
+      "id": "it:guide:calcolo-costi-trasporto-camion-excel",
+      "url": "https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/",
+      "title": "Calcolo costi trasporto camion Excel: foglio, controlli e PDF",
+      "description": "Come strutturare in Excel anagrafiche, tariffe con decorrenza, dati di viaggio e versioni, poi controllare la tratta e preparare un PDF.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/",
+      "indexable": true,
+      "primaryKeyword": "calcolo costi trasporto camion excel",
+      "modified": "2026-08-22"
+    },
+    {
       "id": "it:guide:calcolo-costo-trasporto",
       "url": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "title": "Calcolo del costo di trasporto: metodo completo per una tratta",
@@ -83,7 +95,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-18"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -95,7 +107,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-pedaggio-camion/",
       "indexable": true,
       "primaryKeyword": "calcolo pedaggio camion",
-      "modified": "2026-08-21"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:clausola-adeguamento-carburante-autotrasporto",
@@ -107,7 +119,7 @@
       "canonical": "https://routebudget.eu/it/guide/clausola-adeguamento-carburante-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "clausola adeguamento carburante autotrasporto",
-      "modified": "2026-08-16"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:costi-autotrasporto",
@@ -239,7 +251,19 @@
       "canonical": "https://routebudget.eu/it/guide/eurovignette-camion-2026/",
       "indexable": true,
       "primaryKeyword": "eurovignette camion 2026",
-      "modified": "2026-08-17"
+      "modified": "2026-08-22"
+    },
+    {
+      "id": "it:guide:pedaggio-a22-camion-2026",
+      "url": "https://routebudget.eu/it/guide/pedaggio-a22-camion-2026/",
+      "title": "Pedaggio A22 camion 2026: classe, caselli e costo nel preventivo",
+      "description": "Come verificare il pedaggio A22 di un camion nel 2026: classe Assi-Sagoma, caselli, calcolatore ufficiale e inserimento corretto nel preventivo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/pedaggio-a22-camion-2026/",
+      "indexable": true,
+      "primaryKeyword": "pedaggio A22 camion",
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:pedaggio-camion-austria",
@@ -251,7 +275,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-austria/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Austria",
-      "modified": "2026-08-15"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:pedaggio-camion-belgio",
@@ -275,7 +299,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-danimarca-2026/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Danimarca",
-      "modified": "2026-08-18"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:pedaggio-camion-francia",
@@ -287,7 +311,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-francia/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Francia 2026",
-      "modified": "2026-08-16"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:pedaggio-camion-germania",
@@ -299,7 +323,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-germania/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Germania",
-      "modified": "2026-08-15"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:pedaggio-camion-paesi-bassi",
@@ -311,7 +335,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-paesi-bassi/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Paesi Bassi 2026",
-      "modified": "2026-08-15"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:pedaggio-camion-polonia-2026",
@@ -347,7 +371,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-serbia-2026/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Serbia 2026",
-      "modified": "2026-08-21"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:pedaggio-camion-slovenia",
@@ -359,7 +383,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-slovenia/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Slovenia 2026",
-      "modified": "2026-08-21"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:pedaggio-camion-svizzera",
@@ -383,7 +407,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-ungheria-2026/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Ungheria",
-      "modified": "2026-08-18"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:preventivo-trasporto-pdf",
@@ -407,7 +431,19 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto",
-      "modified": "2026-08-16"
+      "modified": "2026-08-22"
+    },
+    {
+      "id": "it:guide:prezzo-gasolio-autotrasporto-preventivo",
+      "url": "https://routebudget.eu/it/guide/prezzo-gasolio-autotrasporto-preventivo/",
+      "title": "Prezzo gasolio autotrasporto: quale valore usare nel preventivo",
+      "description": "Come scegliere e documentare il prezzo del gasolio nel preventivo: costo aziendale, media MIMIT o riferimento mensile MASE.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/prezzo-gasolio-autotrasporto-preventivo/",
+      "indexable": true,
+      "primaryKeyword": "prezzo gasolio autotrasporto",
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:proteggere-margine-tratta",
@@ -431,7 +467,7 @@
       "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
       "indexable": true,
       "primaryKeyword": "quanto consuma un camion",
-      "modified": "2026-08-21"
+      "modified": "2026-08-22"
     },
     {
       "id": "it:guide:quanto-consuma-un-furgone",

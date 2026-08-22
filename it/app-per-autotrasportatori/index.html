@@ -95,7 +95,7 @@
 <li>consumo e prezzo del carburante o altri input energetici pertinenti;</li>
 <li>pedaggio stimato oppure totale manuale verificato per la direzione;</li>
 <li>costo orario dell’autista, applicato alla durata stimata dall’app;</li>
-<li>quota di usura calcolata sulla distanza;</li>
+<li>quota di usura calcolata sulla distanza: 0,15 €/km predefiniti e non modificabili nel profilo camion; input in centesimi/km modificabile nel profilo N1;</li>
 <li>ritorno a vuoto o riposizionamento;</li>
 <li>margine desiderato.</li>
 </ul>
@@ -145,7 +145,7 @@
 </ol>
 <p>Il flusso non elimina il controllo finale. Prima di inviare un documento, verificare cliente, servizio, condizioni, validità e dati amministrativi richiesti dal proprio processo.</p>
 <h2 id="esempio-didattico-di-utilizzo">Esempio didattico di utilizzo</h2>
-<p>Un trasportatore riceve una richiesta con 420 km carichi e prevede 160 km di rientro senza carico. Inserisce consumi aziendali, prezzo carburante, pedaggi verificati come input, costo del tempo e quota di usura. RouteBudget combina i valori e mostra i tre scenari.</p>
+<p>Un trasportatore riceve una richiesta con 420 km carichi e prevede 160 km di rientro senza carico. Inserisce consumi aziendali, prezzo carburante, pedaggi verificati come input e costo del tempo. Nel profilo camion RouteBudget applica anche la quota predefinita di usura di 0,15 €/km, che va confrontata fuori dall’app con il dato aziendale se questo è diverso; nel profilo N1 la quota è modificabile. L’app combina i valori supportati e mostra i tre scenari.</p>
 <p>Il responsabile nota che l’ipotesi di un carico di ritorno non è confermata. Mantiene quindi i 160 km nel costo, salva il calcolo e seleziona uno scenario prudente. Se il secondo carico viene confermato, riapre la stima e aggiorna i dati prima di generare un nuovo PDF.</p>
 <p>Questo esempio non contiene una tariffa consigliata. Mostra il vantaggio del processo: distinguere fatto, ipotesi e decisione.</p>
 <h2 id="archivio-locale-continuita-senza-promesse-eccessive">Archivio locale: continuità senza promesse eccessive</h2>
@@ -225,7 +225,7 @@
   </section>
           <section class="editorial-note" aria-labelledby="nota-editoriale">
             <h2 id="nota-editoriale">Nota editoriale</h2>
-            <p><a href="/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti ufficiali datate, esempio ricalcolato, controllo dei limiti del prodotto. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+            <p><a href="/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti primarie datate, esempio ricalcolato e controllo dei limiti del prodotto. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
           </section>
         </article>
       </div>
@@ -238,8 +238,8 @@
   </section>
         <section class="app-cta">
     <p class="rail-label">Continua nell’app</p>
-    <h2>Calcola la tratta completa.</h2>
-    <p>Aggiungi pedaggi, autista, usura, ritorno a vuoto e scenari di prezzo in un unico flusso.</p>
+    <h2>Completa la stima con le voci supportate.</h2>
+    <p>Riunisci carburante o energia, pedaggi, autista, usura, ritorno a vuoto e scenari; gestisci fuori dall’app eventuali voci non previste.</p>
     <div class="app-cta__actions store-badge-row">
     <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="article" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
     <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="article" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
