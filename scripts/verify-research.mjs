@@ -10,6 +10,7 @@ const serpResearch = await readFile(path.join(docs, 'SEO_SERP_RESEARCH_IT.md'), 
 const csv = await readFile(path.join(docs, 'SEO_KEYWORD_MAP_IT.csv'), 'utf8');
 const round9Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_9_2026-08-20.json'), 'utf8'));
 const round10Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_10_2026-08-21.json'), 'utf8'));
+const round11Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_11_2026-08-22.json'), 'utf8'));
 const config = JSON.parse(await readFile(path.join(ROOT, 'content/site.json'), 'utf8'));
 const productionPrefix = `${config.basePath}/`;
 const localePrefixes = Object.keys(config.locales).map((locale) => `${productionPrefix}${locale}/`);
@@ -92,6 +93,66 @@ for (const candidate of round10Demand.candidates) {
   );
 }
 
+assert.equal(round11Demand.schemaVersion, 1, 'Round 11 demand evidence schemaVersion mismatch');
+assert.equal(round11Demand.locale, 'it', 'Round 11 demand evidence must use Italian language');
+assert.equal(round11Demand.market, 'IT', 'Round 11 demand evidence must use Italian market');
+assert.match(round11Demand.capturedAt, /^2026-08-22$/, 'Round 11 demand evidence capture date mismatch');
+assert(Array.isArray(round11Demand.providers) && round11Demand.providers.length >= 2, 'Round 11 demand evidence providers missing');
+assert(Array.isArray(round11Demand.candidates) && round11Demand.candidates.length === 3, 'Round 11 demand evidence must contain three selected candidates');
+assert(
+  ['monthly_search_volume', 'cpc', 'keyword_difficulty'].every((metric) => round11Demand.method?.unavailableMetrics?.includes(metric)),
+  'Round 11 unavailable demand metrics must remain explicit',
+);
+assert.match(round11Demand.method?.volumePolicy ?? '', /volume null/i, 'Round 11 null-volume policy missing');
+
+let round11ExactSuggestions = 0;
+let round11DirectionalFallbacks = 0;
+for (const candidate of round11Demand.candidates) {
+  assert(candidate.primaryKeyword && candidate.canonical, 'Round 11 candidate identity missing');
+  assert.equal(candidate.volume, null, `${candidate.primaryKeyword}: unverified volume must stay null`);
+  assert(/^https:\/\/suggestqueries\.google\.com\//.test(candidate.requestUrl), `${candidate.primaryKeyword}: Google Suggest request URL invalid`);
+  assert(candidate.requestUrl.includes('hl=it') && candidate.requestUrl.includes('gl=it'), `${candidate.primaryKeyword}: Italian Suggest parameters missing`);
+  assert(Array.isArray(candidate.returnedSuggestions) && candidate.returnedSuggestions.length > 0, `${candidate.primaryKeyword}: returned suggestions missing`);
+  assert(Array.isArray(candidate.sourceUrls) && candidate.sourceUrls.length >= 2, `${candidate.primaryKeyword}: evidence sources missing`);
+  assert(candidate.sourceUrls.every((url) => /^https:\/\//.test(url)), `${candidate.primaryKeyword}: evidence source URL invalid`);
+
+  if (candidate.exactSuggestionReturned === true) {
+    round11ExactSuggestions += 1;
+    assert.equal(candidate.signal, 'directional', `${candidate.primaryKeyword}: exact Suggest signal mismatch`);
+    assert(
+      candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.primaryKeyword.toLocaleLowerCase('it')),
+      `${candidate.primaryKeyword}: exact primary query not present in captured suggestions`,
+    );
+  } else {
+    round11DirectionalFallbacks += 1;
+    assert.equal(candidate.exactSuggestionReturned, false, `${candidate.primaryKeyword}: unsupported exact Suggest state`);
+    assert.equal(candidate.primaryKeyword, 'pedaggio A22 camion', 'Round 11 fallback must stay limited to the A22 corridor');
+    assert.equal(candidate.signal, 'directional-corridor-and-official-change', `${candidate.primaryKeyword}: fallback signal mismatch`);
+    assert.match(candidate.signalNote ?? '', /not returned as an exact suggestion/i, `${candidate.primaryKeyword}: exact-match disclaimer missing`);
+    assert.match(candidate.signalNote ?? '', /1\.46%/, `${candidate.primaryKeyword}: dated official change missing`);
+    assert(
+      candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.query.toLocaleLowerCase('it')),
+      `${candidate.primaryKeyword}: directional corridor query missing`,
+    );
+    assert(
+      !candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.primaryKeyword.toLocaleLowerCase('it')),
+      `${candidate.primaryKeyword}: primary keyword must not be misreported as an exact suggestion`,
+    );
+  }
+
+  assert.equal(
+    rows.filter((row) => row.target_url === candidate.canonical && row.primary_keyword === candidate.primaryKeyword).length,
+    1,
+    `${candidate.primaryKeyword}: demand evidence must map to exactly one keyword row`,
+  );
+}
+assert.equal(round11ExactSuggestions, 2, 'Round 11 must preserve two exact autocomplete signals');
+assert.equal(round11DirectionalFallbacks, 1, 'Round 11 must preserve one non-exact A22 corridor signal');
+assert.equal(round11Demand.gscContext?.comparison?.currentImpressions, 808, 'Round 11 GSC current impressions mismatch');
+assert.equal(round11Demand.gscContext?.comparison?.previousImpressions, 628, 'Round 11 GSC previous impressions mismatch');
+assert.equal(round11Demand.gscContext?.manualActions, 0, 'Round 11 GSC manual actions mismatch');
+assert.equal(round11Demand.gscContext?.securityIssues, 0, 'Round 11 GSC security issues mismatch');
+
 const publishedPages = [];
 for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
   const directory = path.join(ROOT, 'content', 'it', section);
@@ -121,7 +182,7 @@ for (const page of publishedPages) {
   );
 }
 
-console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents cover ${publishedPages.length} published pages; Round 9–10 demand evidence is captured and no volume/CPC/difficulty is invented.`);
+console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents cover ${publishedPages.length} published pages; Round 9–11 demand evidence is captured and no volume/CPC/difficulty is invented.`);
 
 function parseCsv(value) {
   const lines = value.trim().split(/\r?\n/);

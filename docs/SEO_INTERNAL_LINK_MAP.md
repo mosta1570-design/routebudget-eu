@@ -1,13 +1,13 @@
 # RouteBudget EU — mappa internal link
 
-Data: 21 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e link contestuali del Markdown/HTML statico.
+Data: 22 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e link contestuali del Markdown/HTML statico.
 
 ## Entry points
 
 | Sorgente | Destinazioni HTML principali |
 | --- | --- |
-| Homepage statica | hub, landing app, preventivo PDF, tre guide Round 10, privacy, termini, store |
-| Hub guide | tutti i 3 pillar e i 38 supporti |
+| Homepage statica | hub, landing app, contenuti editoriali italiani in evidenza, privacy, termini, store |
+| Hub guide | tutti i 3 pillar e i 41 supporti |
 | Hub calcolatori | tutti i 3 calcolatori |
 | Header/footer SEO | homepage, hub guide, hub calcolatori, landing app, privacy, termini |
 | Landing app | 3 pillar, 3 calcolatori, entrambi gli store |
@@ -16,10 +16,12 @@ Data: 21 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e li
 
 | URL | Pillar in uscita | Calcolatore | Relazioni principali |
 | --- | --- | --- | --- |
-| `guide/calcolo-costo-trasporto/` | — | costo/km | costi, preventivo, costi diretti, margine, ritorno a vuoto, tre calcolatori |
+| `guide/calcolo-costo-trasporto/` | — | costo/km | costi, preventivo, Excel, A22, margine, ritorno a vuoto e tre calcolatori |
 | `guide/calcolare-carburante-pedaggi-autista/` | calcolo costo | carburante | costo/km, margine, entrambi i tool |
-| `guide/quanto-consuma-un-camion/` | calcolo costo | carburante | costi diretti, fissi/variabili, calcolatore carburante |
-| `guide/calcolo-pedaggio-camion/` | calcolo costo | costo/km | Austria, Eurovignette, Repubblica Ceca e calcolatore costo/km |
+| `guide/quanto-consuma-un-camion/` | calcolo costo | carburante | scelta del prezzo gasolio, costi diretti e calcolatore carburante |
+| `guide/prezzo-gasolio-autotrasporto-preventivo/` | calcolo costo | carburante | consumo camion, clausola carburante, fuel surcharge e costo tratta |
+| `guide/calcolo-pedaggio-camion/` | calcolo costo | costo/km | A22, pochi esempi esteri, hub guide e calcolatore costo/km |
+| `guide/pedaggio-a22-camion-2026/` | calcolo costo | costo/km | pedaggio Italia, costo tratta, ritorno a vuoto e usura |
 | `guide/pedaggio-camion-austria/` | calcolo costo | costo/km | pedaggio Italia, Repubblica Ceca, Slovenia, calcolatore costo/km |
 | `guide/pedaggio-camion-svizzera/` | calcolo costo | costo/km | pedaggio Italia, Austria, Germania, calcolatore costo/km |
 | `guide/pedaggio-camion-germania/` | calcolo costo | costo/km | pedaggio Italia, Paesi Bassi, Repubblica Ceca, calcolatore costo/km |
@@ -58,18 +60,19 @@ Data: 21 agosto 2026. Fonte: metadata validate in `content/it/**/meta.json` e li
 | `guide/tabelle-costi-autotrasporto-mit-2026/` | costi autotrasporto | costo/km | costo tratta, costo/km storico, fissi/variabili |
 | `guide/costo-orario-autista-camion/` | costi autotrasporto | costo/km | costo tratta, durata operativa, attese, calcolatore costo/km |
 | `guide/usura-manutenzione-camion/` | costi autotrasporto | costo/km | fissi/variabili, costo/km, costo tratta |
+| `guide/calcolo-costi-trasporto-camion-excel/` | costi autotrasporto | costo/km | tabelle MIT, pedaggio, preventivo PDF e controllo versioni |
 | `calcolatori/costo-chilometrico-camion/` | calcolo costo | carburante adiacente | guida costo/km, fissi/variabili, fuel surcharge, pillar, landing app |
 
 ## Cluster preventivi
 
 | URL | Pillar in uscita | Calcolatore | Relazioni principali |
 | --- | --- | --- | --- |
-| `guide/preventivo-trasporto/` | — | costo/km | costo tratta, costi, margine, errori, PDF, tre tool |
+| `guide/preventivo-trasporto/` | — | costo/km | costo tratta, controllo Excel, margine, errori, PDF e tre tool |
 | `guide/errori-calcolo-tariffa-trasporto/` | preventivo | costo/km | costo tratta, margine, costi diretti |
 | `guide/preventivo-trasporto-pdf/` | preventivo | costo/km | costo tratta, errori tariffa, margine |
 | `guide/tempi-attesa-carico-scarico-autotrasporto/` | preventivo | costo/km | costo tratta, costo orario, durata operativa, calcolatore costo/km |
 | `guide/tariffe-trazionisti/` | calcolo costo | costo/km | ritorno a vuoto, benchmark MIT, attese, calcolatore costo/km |
-| `guide/clausola-adeguamento-carburante-autotrasporto/` | calcolo costo | fuel surcharge | preventivo, margine, costo tratta, calcolatore fuel surcharge |
+| `guide/clausola-adeguamento-carburante-autotrasporto/` | calcolo costo | fuel surcharge | prezzo gasolio operativo, preventivo, margine e fuel surcharge |
 
 ## Regole automatiche
 
@@ -173,3 +176,13 @@ Il controllo generato deve continuare a chiudere con zero URL orfani e zero link
 - Polonia riceve ingressi da homepage, hub guide, `calcolo-pedaggio-camion` e Repubblica Ceca; restituisce pillar, tool, pedaggio Italia, Germania e Repubblica Ceca;
 - refresh `preventivo-trasporto-pdf` mantiene ingressi da homepage, pillar e nuove relazioni cargo; refresh consumo assegna owner informativo alla guida e porta il tool numerico verso essa;
 - gate post-build atteso: 50 route indexabili, 41 URL in `articles-it.xml`, zero route orfane, target o fragment rotti.
+
+## Gate internal link per la release 22 agosto
+
+- hub guide → tutti i 41 supporti;
+- `calcolo-costi-trasporto-camion-excel` riceve ingressi contestuali da `calcolo-costo-trasporto` e `preventivo-trasporto`;
+- `prezzo-gasolio-autotrasporto-preventivo` riceve ingressi contestuali da `quanto-consuma-un-camion` e `clausola-adeguamento-carburante-autotrasporto`;
+- `pedaggio-a22-camion-2026` riceve ingressi contestuali da `calcolo-pedaggio-camion` e `calcolo-costo-trasporto`;
+- i due pillar italiani eliminano gli elenchi artificiali di link Paese: mantengono A22 in priorità, 2–3 esempi internazionali e un solo percorso verso l'hub;
+- ogni nuova guida restituisce pillar, calcolatore e relazioni curate dichiarate nel proprio `meta.json`;
+- gate post-build atteso: 53 route indexabili, 44 URL in `articles-it.xml`, zero route orfane, target o fragment rotti.

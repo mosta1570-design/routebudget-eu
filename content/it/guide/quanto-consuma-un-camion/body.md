@@ -89,6 +89,8 @@ Dopo aver stimato i litri, applica un prezzo datato e coerente:
 
 Il prezzo può provenire dalle fatture o dal sistema carte carburante. Per confronti esterni, il MASE pubblica serie mensili italiane e la Commissione europea il Weekly Oil Bulletin. Queste fonti aiutano a collocare il prezzo nel tempo; non sostituiscono il prezzo netto realmente sostenuto dall'impresa.
 
+La guida su [quale prezzo del gasolio usare nel preventivo](/it/guide/prezzo-gasolio-autotrasporto-preventivo/) distingue costo aziendale previsto, prezzo pubblico di confronto e indice contrattuale. La scelta deve rappresentare dove e come l'impresa pensa di rifornire quella missione, con data, regime IVA e criterio annotati.
+
 Esempio illustrativo: 192,2 litri a 1,68 €/l producono 322,90 € arrotondati. Se il consumo passa da 31 a 34 l/100 km, gli stessi 620 km richiedono 210,8 litri. La differenza mostra perché conviene testare almeno due scenari prima di fissare il prezzo.
 
 Puoi eseguire questo passaggio con il [calcolatore del costo carburante del viaggio](/it/calcolatori/costo-carburante-viaggio/). Inserisci distanza, consumo e prezzo scelti da te; il risultato rimane una stima dipendente dagli input.

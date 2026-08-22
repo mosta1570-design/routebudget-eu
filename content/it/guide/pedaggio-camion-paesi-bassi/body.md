@@ -31,7 +31,7 @@ Per verificare l'obbligo, parti dalla categoria N2/N3 e dalla massa tecnica del 
 
 Dal 1° luglio 2026 i Paesi Bassi sono usciti dall'Eurovignetta e hanno adottato il pedaggio chilometrico. Il portale Eurovignettes conferma che una vignetta non è più richiesta per l'Olanda; la guida all'[Eurovignette camion 2026](/it/guide/eurovignette-camion-2026/) spiega il costo temporale che resta in uso in Svezia e Lussemburgo.
 
-Questo punto evita due errori opposti: acquistare una Eurovignetta pensando che paghi anche il tratto olandese, oppure credere che una OBU olandese copra automaticamente tutti gli altri paesi. In una missione Italia–Paesi Bassi ogni sistema nazionale va trattato separatamente. Per il transito confronta, per esempio, la [LKW-Maut tedesca](/it/guide/pedaggio-camion-germania/) e il [pedaggio camion in Belgio](/it/guide/pedaggio-camion-belgio/) se l'itinerario li attraversa.
+Questo punto evita due errori opposti: acquistare una Eurovignetta pensando che paghi anche il tratto olandese, oppure credere che una OBU olandese copra automaticamente tutti gli altri paesi. In una missione Italia–Paesi Bassi ogni sistema nazionale va trattato separatamente. Per il transito confronta, per esempio, la [LKW-Maut tedesca](/it/guide/pedaggio-camion-germania/) e il [pedaggio camion in Belgio](/it/guide/pedaggio-camion-belgio/) se l'itinerario li attraversa. Se il percorso prosegue verso la Scandinavia via Danimarca, anche [KmToll e i ponti danesi](/it/guide/pedaggio-camion-danimarca-2026/) restano fuori dal totale olandese.
 
 ## Dove si paga e quali chilometri usare
 

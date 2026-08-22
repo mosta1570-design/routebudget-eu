@@ -8,8 +8,8 @@
   "description": "Pedaggio camion nei Paesi Bassi dal 1° luglio 2026: tariffe al km, massa tecnica, classi CO₂ ed EURO, OBU e fine dell'Eurovignetta.",
   "eyebrow": "Paesi Bassi · Truck toll 2026",
   "published": "2026-08-15",
-  "modified": "2026-08-15",
-  "reviewed": "2026-08-15",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Paesi Bassi 2026",
@@ -106,5 +106,5 @@
       "supports": "Rilevanza operativa per vettori stranieri, obbligo OBU e passaggio da criterio forfettario a chilometri effettivamente percorsi."
     }
   ],
-  "changeSummary": "Prima pubblicazione: guida operativa alle due finestre tariffarie 2026, all'OBU e all'inserimento manuale del pedaggio olandese verificato nel costo della missione."
+  "changeSummary": "Aggiunto il passaggio contestuale dal sistema olandese a KmToll e ponti danesi per le missioni verso la Scandinavia."
 }

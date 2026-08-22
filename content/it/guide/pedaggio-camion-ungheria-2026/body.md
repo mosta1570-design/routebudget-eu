@@ -66,9 +66,9 @@ Per quotare la missione puoi usare il totale del biglietto o la stima ufficiale 
 
 ## Metodo pratico per una tratta Italia–Ungheria
 
-Un viaggio Verona–Budapest o Trieste–Győr attraversa più sistemi. Il numero HU-GO copre soltanto i segmenti ungheresi; vignette e pedaggi di Italia, Austria o Slovenia restano voci distinte. Lavora in questo ordine:
+Un viaggio Verona–Budapest o Trieste–Győr attraversa più sistemi. Il numero HU-GO copre soltanto i segmenti ungheresi; vignette e pedaggi di Italia, Austria o [Slovenia](/it/guide/pedaggio-camion-slovenia/) restano voci distinte. Lavora in questo ordine:
 
-Se la missione prosegue verso la Bulgaria, HU-GO termina al confine: calcola e documenta [BGTOLL camion](/it/guide/bgtoll-camion-bulgaria-2026/) come sistema separato, senza riutilizzare categoria o tariffa ungherese.
+Se la missione prosegue verso la Bulgaria, HU-GO termina al confine: calcola e documenta [BGTOLL camion](/it/guide/bgtoll-camion-bulgaria-2026/) come sistema separato. Per il ramo balcanico via [Serbia](/it/guide/pedaggio-camion-serbia-2026/) servono invece stazioni, categoria e TAG del sistema serbo. In entrambi i casi, non riutilizzare categoria o tariffa ungherese.
 
 1. fissa il camion reale, gli assi e l'eventuale rimorchio;
 2. definisci confine di ingresso, destinazione e percorso previsto;

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-22",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "Google Suggest public endpoint",
+    "Italian user-problem and SERP review",
+    "official Italian institutional and motorway sources"
+  ],
+  "method": {
+    "suggestClient": "firefox",
+    "hl": "it",
+    "gl": "it",
+    "interpretation": "Exact autocomplete confirms wording, not monthly demand. The A22 selection uses a broader corridor signal plus a dated official tariff change; the primary truck phrase is not claimed as an exact suggestion.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "Keep volume null unless a dated Italy-specific dataset is available."
+  },
+  "candidates": [
+    {
+      "primaryKeyword": "calcolo costi trasporto camion excel",
+      "canonical": "/it/guide/calcolo-costi-trasporto-camion-excel/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=calcolo%20costi%20trasporto%20camion%20excel",
+      "query": "calcolo costi trasporto camion excel",
+      "returnedSuggestions": [
+        "calcolo costi trasporto camion excel"
+      ],
+      "exactSuggestionReturned": true,
+      "signal": "directional",
+      "volume": null,
+      "decision": "publish",
+      "productFit": "Verified spreadsheet inputs can be handed manually to a supported single-route estimate, three price scenarios, local archive and non-binding PDF.",
+      "productBoundary": "RouteBudget does not import or export Excel files, manage clients or contracts, synchronize rate tables, or provide live routing and cost data.",
+      "intentBoundary": "Owns spreadsheet architecture, date validity, input controls, version history and mobile handoff. Generic trip-cost formulas remain with the existing cost pillar and calculator.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=calcolo%20costi%20trasporto%20camion%20excel",
+        "https://www.forumexcel.it/forum/threads/gestione-spedizioni-su-strada.54288/",
+        "https://www.forumexcel.it/forum/threads/tabella-costo-trasferimento.27322/",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.mimit.gov.it/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti",
+        "https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio"
+      ]
+    },
+    {
+      "primaryKeyword": "prezzo gasolio autotrasporto",
+      "canonical": "/it/guide/prezzo-gasolio-autotrasporto-preventivo/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=prezzo%20gasolio%20autotrasporto",
+      "query": "prezzo gasolio autotrasporto",
+      "returnedSuggestions": [
+        "prezzo gasolio autotrasporto"
+      ],
+      "exactSuggestionReturned": true,
+      "signal": "directional",
+      "volume": null,
+      "decision": "publish",
+      "productFit": "A dated and documented fuel-price input feeds the trip fuel estimate, price scenarios and non-binding PDF.",
+      "productBoundary": "RouteBudget does not fetch a live diesel price, import fleet invoices, calculate excise refunds or decide fiscal and contractual treatment.",
+      "intentBoundary": "Owns selection and documentation of the price input for today's quote. Fuel-consumption measurement and contractual fuel surcharge keep their existing owners.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=prezzo%20gasolio%20autotrasporto",
+        "https://www.mimit.gov.it/it/prezzi-carburanti-media-nazionale",
+        "https://www.mimit.gov.it/index.php/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti",
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "primaryKeyword": "pedaggio A22 camion",
+      "canonical": "/it/guide/pedaggio-a22-camion-2026/",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=pedaggio%20a22",
+      "query": "pedaggio a22",
+      "returnedSuggestions": [
+        "pedaggio a22",
+        "pedaggio a22 calcolo",
+        "pedaggio a22 brennero",
+        "pedaggio a22 portogallo",
+        "costo pedaggio a22",
+        "pagamento pedaggio a22",
+        "mancato pedaggio a22",
+        "aumento pedaggio a22"
+      ],
+      "exactSuggestionReturned": false,
+      "signal": "directional-corridor-and-official-change",
+      "signalNote": "The primary phrase 'pedaggio A22 camion' was not returned as an exact suggestion. Selection uses directional A22 corridor variants plus Autobrennero's official 1.46% tariff update effective 1 January 2026.",
+      "volume": null,
+      "decision": "publish",
+      "productFit": "A class-and-casello toll verified in the official A22 calculator becomes one trip-cost input for scenarios and the non-binding PDF.",
+      "productBoundary": "RouteBudget does not calculate or pay the official A22 toll live, choose the vehicle's official class, or replace Autobrennero's calculator.",
+      "intentBoundary": "Owns the A22 Italian corridor, Assi-Sagoma class, entrance/exit selection and 2026 tariff change. The general Italian toll method keeps its existing guide.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=pedaggio%20a22",
+        "https://www.autobrennero.it/it/in-viaggio/pedaggio/costi-autostrada/calcola-pedaggio_aKt10KBRuarchieslashU0DeUsJQ8SGt942ruW6cvmQNEaH2aawSMarchieuguale_p/",
+        "https://www.autobrennero.it/documenti/pedaggio/IT_tariffe%20A22_2026.pdf",
+        "https://www.autobrennero.it/documenti/pedaggio/IT_sistema%20assi-sagoma.pdf"
+      ]
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "primaryKeyword": "rimborso accise autotrasportatori 2026",
+      "volume": null,
+      "decision": "defer-round-11",
+      "reason": "Real task, but fiscal risk and quarterly maintenance are high and product conversion is less direct than documenting today's fuel input."
+    },
+    {
+      "primaryKeyword": "rimborso pedaggi autostradali autotrasportatori 2026",
+      "volume": null,
+      "decision": "defer-round-11",
+      "reason": "The 2026 application window had closed by 22 July and eligibility is narrower than a route-cost task for micro-carriers."
+    },
+    {
+      "primaryKeyword": "costo trasporto pallet",
+      "volume": null,
+      "decision": "backlog-round-11",
+      "reason": "RouteBudget does not model pallets, groupage, volume, handling or multi-stop pricing, so product fit is insufficient."
+    }
+  ],
+  "gscContext": {
+    "dataThrough": "2026-08-20",
+    "threeMonth": {
+      "clicks": 24,
+      "impressions": 1767,
+      "ctr": 0.014,
+      "averagePosition": 15.6
+    },
+    "comparison": {
+      "currentWindow": "2026-08-14/2026-08-20",
+      "previousWindow": "2026-08-07/2026-08-13",
+      "currentClicks": 10,
+      "previousClicks": 8,
+      "currentImpressions": 808,
+      "previousImpressions": 628,
+      "currentItalyClicks": 10,
+      "previousItalyClicks": 7,
+      "currentItalyImpressions": 696,
+      "previousItalyImpressions": 591
+    },
+    "manualActions": 0,
+    "securityIssues": 0,
+    "indexedPages": 40
+  }
+}

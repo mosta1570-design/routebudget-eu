@@ -32,7 +32,7 @@ Una stima utile parte da dati verificabili. A seconda della tratta e del mezzo, 
 - consumo e prezzo del carburante o altri input energetici pertinenti;
 - pedaggio stimato oppure totale manuale verificato per la direzione;
 - costo orario dell’autista, applicato alla durata stimata dall’app;
-- quota di usura calcolata sulla distanza;
+- quota di usura calcolata sulla distanza: 0,15 €/km predefiniti e non modificabili nel profilo camion; input in centesimi/km modificabile nel profilo N1;
 - ritorno a vuoto o riposizionamento;
 - margine desiderato.
 
@@ -78,7 +78,7 @@ Il flusso non elimina il controllo finale. Prima di inviare un documento, verifi
 
 ## Esempio didattico di utilizzo
 
-Un trasportatore riceve una richiesta con 420 km carichi e prevede 160 km di rientro senza carico. Inserisce consumi aziendali, prezzo carburante, pedaggi verificati come input, costo del tempo e quota di usura. RouteBudget combina i valori e mostra i tre scenari.
+Un trasportatore riceve una richiesta con 420 km carichi e prevede 160 km di rientro senza carico. Inserisce consumi aziendali, prezzo carburante, pedaggi verificati come input e costo del tempo. Nel profilo camion RouteBudget applica anche la quota predefinita di usura di 0,15 €/km, che va confrontata fuori dall’app con il dato aziendale se questo è diverso; nel profilo N1 la quota è modificabile. L’app combina i valori supportati e mostra i tre scenari.
 
 Il responsabile nota che l’ipotesi di un carico di ritorno non è confermata. Mantiene quindi i 160 km nel costo, salva il calcolo e seleziona uno scenario prudente. Se il secondo carico viene confermato, riapre la stima e aggiorna i dati prima di generare un nuovo PDF.
 

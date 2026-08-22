@@ -8,8 +8,8 @@
   "description": "Come stimare il pedaggio camion in Germania nel 2026: soglia oltre 3,5 t, rete Toll Collect, peso, assi, EURO, classe CO₂ e costo della tratta.",
   "eyebrow": "Germania · LKW-Maut 2026",
   "published": "2026-08-14",
-  "modified": "2026-08-15",
-  "reviewed": "2026-08-15",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Germania",
@@ -63,5 +63,5 @@
       "url": "https://www.toll-collect.de/en/toll_collect/rund_um_die_maut/meldungen/detailsseite_news_48128.html"
     }
   ],
-  "changeSummary": "Aggiunti collegamenti ai sistemi olandese e belga, mantenendo separato il metodo LKW-Maut tedesco."
+  "changeSummary": "Aggiunto il confine operativo Germania–Polonia con e-TOLL separato dalla LKW-Maut tedesca."
 }

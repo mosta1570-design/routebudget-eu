@@ -8,8 +8,8 @@
   "description": "Come verificare il pedaggio camion in Serbia nel 2026: categoria III o IV, tariffario ufficiale, TAG obbligatorio, Toll4All e costo nel preventivo PDF.",
   "eyebrow": "Serbia · pedaggi 2026",
   "published": "2026-08-21",
-  "modified": "2026-08-21",
-  "reviewed": "2026-08-21",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Serbia 2026",
@@ -88,5 +88,5 @@
       "supports": "Funzionamento del TAG, opzioni prepagato e postpagato, punti autorizzati e non trasferibilità del dispositivo per le categorie diverse dalla I."
     }
   ],
-  "changeSummary": "Prima pubblicazione: guida operativa al pedaggio camion Serbia 2026, categoria IV, TAG, Toll4All e attribuzione corretta del costo alla tratta."
+  "changeSummary": "Aggiunto il confine operativo Serbia–Bulgaria con BGTOLL separato, senza estendere categoria o importo serbo oltre la tratta verificata."
 }

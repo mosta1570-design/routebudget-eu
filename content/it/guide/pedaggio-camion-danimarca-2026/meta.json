@@ -8,8 +8,8 @@
   "description": "Come calcolare il pedaggio camion in Danimarca nel 2026: KmToll per peso e CO₂, maggiorazione LEZ, ticket digitale e costi separati dei ponti.",
   "eyebrow": "Danimarca · KmToll 2026",
   "published": "2026-08-18",
-  "modified": "2026-08-18",
-  "reviewed": "2026-08-18",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Danimarca",
@@ -104,5 +104,5 @@
       "supports": "Prezzi per camion oltre 9 m con e senza contratto ØresundBUSINESS, volumi, IVA esclusa e condizioni speciali."
     }
   ],
-  "changeSummary": "Prima pubblicazione: metodo operativo 2026 per verificare KmToll, distinguere CO2 e LEZ, aggiungere i ponti separati e trasferire il totale nel costo della tratta."
+  "changeSummary": "Collegato KmToll al perimetro Eurovignette corrente, mantenendo separati pedaggio danese, ponti e zone ambientali."
 }

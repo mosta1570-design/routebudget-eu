@@ -65,6 +65,8 @@ Un preventivo leggibile non deve diventare un rendiconto completo dell’impresa
 
 La scheda interna rende possibile spiegare una variazione senza esporre dettagli che non appartengono all’offerta commerciale.
 
+Quando questa scheda vive in un foglio di calcolo, conviene separare anagrafiche, tariffe con decorrenza, missioni e versioni. Il metodo per il [calcolo dei costi di trasporto camion in Excel](/it/guide/calcolo-costi-trasporto-camion-excel/) mostra come conservare il valore usato nel giorno del preventivo e passare poi a un PDF senza trasformare il foglio in una fonte tariffaria universale.
+
 ## Una struttura essenziale del preventivo
 
 Il documento può seguire un ordine stabile, facile da leggere anche da telefono.

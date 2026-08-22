@@ -6,8 +6,8 @@
   "description": "Come documentare e applicare nel 2026 la clausola carburante nei contratti di autotrasporto: soglia del 2%, fonti MASE, fatture e controlli.",
   "eyebrow": "Contratti di autotrasporto · Clausola carburante",
   "published": "2026-08-16",
-  "modified": "2026-08-16",
-  "reviewed": "2026-08-16",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "primaryKeyword": "clausola adeguamento carburante autotrasporto",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -107,5 +107,5 @@
   "canonical": "/it/guide/clausola-adeguamento-carburante-autotrasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Nuova guida contrattuale 2026 su clausola carburante, soglia del 2%, fonti mensili, documentazione e casi che richiedono consulenza."
+  "changeSummary": "Distinto l'indice mensile della clausola dal prezzo operativo del gasolio usato nel preventivo, preservando perimetro contrattuale e cautele professionali."
 }

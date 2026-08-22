@@ -1,0 +1,79 @@
+{
+  "slug": "prezzo-gasolio-autotrasporto-preventivo",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Prezzo gasolio autotrasporto: quale valore usare nel preventivo",
+  "description": "Come scegliere e documentare il prezzo del gasolio nel preventivo: costo aziendale, media MIMIT o riferimento mensile MASE.",
+  "eyebrow": "Preventivi di trasporto · Prezzo gasolio",
+  "published": "2026-08-22",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
+  "primaryKeyword": "prezzo gasolio autotrasporto",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "prezzo gasolio per preventivo trasporto",
+    "media nazionale carburanti MIMIT",
+    "costo aziendale carta carburante",
+    "riferimento mensile MASE"
+  ],
+  "related": [
+    "calcolatori:costo-carburante-viaggio",
+    "calcolatori:fuel-surcharge-autotrasporto",
+    "guide:clausola-adeguamento-carburante-autotrasporto",
+    "guide:calcolo-costo-trasporto"
+  ],
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "translationGroup": "prezzo-gasolio-autotrasporto-preventivo",
+  "sources": [
+    {
+      "label": "MIMIT — Prezzi medi nazionali dei carburanti",
+      "url": "https://www.mimit.gov.it/it/prezzi-carburanti-media-nazionale",
+      "publishedOrUpdated": "Valori giornalieri consultati il 22 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-22",
+      "supports": "Medie nazionali self del gasolio, distinte fra rete stradale e rete autostradale, usate nell'esempio datato della guida."
+    },
+    {
+      "label": "MIMIT — Open data prezzi praticati e anagrafica degli impianti",
+      "url": "https://www.mimit.gov.it/index.php/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti",
+      "publishedOrUpdated": "Dataset ad aggiornamento giornaliero; consultato il 22 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-22",
+      "supports": "Disponibilità dei dati giornalieri comunicati dai gestori e distinzione fra prezzi praticati e anagrafica degli impianti."
+    },
+    {
+      "label": "MASE — Prezzi mensili dei carburanti e combustibili",
+      "url": "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+      "publishedOrUpdated": "Serie mensile consultata il 22 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-22",
+      "supports": "Serie mensile in euro per 1.000 litri, metodo di media ponderata e riferimento utile per clausole contrattuali quando previsto."
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-22",
+      "supports": "Benchmark italiano dei costi di esercizio per classi di veicolo; non costituisce il prezzo effettivo di acquisto del gasolio della singola impresa."
+    }
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "prezzo gasolio per preventivo trasporto",
+    "media prezzo gasolio MIMIT",
+    "costo carburante autotrasportatore",
+    "quale prezzo gasolio usare nel preventivo"
+  ],
+  "cluster": "costo-trasporto",
+  "relatedCalculator": "calcolatori:costo-carburante-viaggio",
+  "appFeature": "fuel-estimate",
+  "canonical": "/it/guide/prezzo-gasolio-autotrasporto-preventivo/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Nuova guida italiana per scegliere un prezzo gasolio documentabile nel preventivo senza confonderlo con il fuel surcharge contrattuale."
+}

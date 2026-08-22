@@ -8,8 +8,8 @@
   "description": "Eurovignette camion 2026: dove serve dopo l'uscita dell'Olanda, tariffe per assi e classi CO₂, scelta della durata e costo nel preventivo.",
   "eyebrow": "Svezia e Lussemburgo · 2026",
   "published": "2026-08-17",
-  "modified": "2026-08-17",
-  "reviewed": "2026-08-17",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "eurovignette camion 2026",
@@ -74,5 +74,5 @@
       "supports": "Perimetro attuale limitato a Svezia e Lussemburgo, soglia minima di 12 tonnellate, validità elettronica, un'unica Eurovignette valida nei paesi aderenti, durata da un giorno a un anno e mezzi di pagamento accettati."
     }
   ],
-  "changeSummary": "Prima pubblicazione: guida 2026 al perimetro Svezia-Lussemburgo, alle tariffe per classe e assi e all'inserimento del costo verificato nel preventivo di trasporto."
+  "changeSummary": "Collegata la fine dell'Eurovignette danese al sistema KmToll, mantenendo il perimetro 2026 limitato a Svezia e Lussemburgo."
 }

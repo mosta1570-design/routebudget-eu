@@ -95,6 +95,8 @@ Sulla A13 del Brennero esiste inoltre una tariffa notturna dedicata tra le 22:00
 
 Per una tratta Italia–Austria questo dettaglio è decisivo. Un calcolo basato soltanto sui chilometri “Austria” può perdere proprio la sezione più costosa o applicare la tariffa ordinaria dove è prevista una struttura speciale.
 
+Se la missione prosegue oltre l'Austria, il confine chiude il perimetro GO-Maut: verso la [Slovenia entra DarsGo](/it/guide/pedaggio-camion-slovenia/), mentre verso l'[Ungheria entra HU-GO](/it/guide/pedaggio-camion-ungheria-2026/). Calcola quei segmenti nelle rispettive fonti e non trasferire assi o classe tariffaria austriaca da un sistema all'altro.
+
 Dividi quindi il percorso in righe controllabili:
 
 | Segmento | Dato da registrare |

@@ -8,8 +8,8 @@
   "description": "Come verificare il pedaggio camion in Slovenia nel 2026: DarsGo oltre 3,5 t, classi R2-R4, EURO e CO₂, OBU, pagamenti e tunnel Karavanke.",
   "eyebrow": "Slovenia · DarsGo 2026",
   "published": "2026-08-15",
-  "modified": "2026-08-21",
-  "reviewed": "2026-08-21",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Slovenia 2026",
@@ -96,5 +96,5 @@
     "supports": "Riscossione DarsGo per R2-R4, tariffe dedicate, IVA e assenza di modulazione EURO."
     }
   ],
-  "changeSummary": "Sostituiti due deep link DarsGo non più disponibili con il portale operativo ufficiale verificato, senza cambiare il metodo di calcolo."
+  "changeSummary": "Aggiunto il confine operativo DarsGo–HU-GO per le missioni Italia–Slovenia–Ungheria, mantenendo separati i due sistemi."
 }

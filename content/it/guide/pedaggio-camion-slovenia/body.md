@@ -100,6 +100,8 @@ Il tunnel Karavanke collega Slovenia e Austria ed è disciplinato con un pedaggi
 
 Annota frontiera, autostrade, svincoli, eventuali deviazioni e passaggio Karavanke. Calcola andata e ritorno separatamente se cambiano percorso o configurazione.
 
+Su una missione Italia–Slovenia–Ungheria, DarsGo termina al confine sloveno: il tratto successivo richiede una verifica distinta nel [sistema HU-GO ungherese](/it/guide/pedaggio-camion-ungheria-2026/). Non prolungare la tariffa slovena sui chilometri ungheresi.
+
 ### 2. Conferma il camion assegnato
 
 Rileva massa massima, targa, assi del complesso, EURO e classe CO₂. Un profilo generico di flotta non basta quando i veicoli hanno classificazioni diverse.

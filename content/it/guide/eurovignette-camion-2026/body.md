@@ -1,6 +1,6 @@
 ## Eurovignette camion 2026: risposta rapida
 
-Dal **1° luglio 2026 l'Eurovignette per camion serve ancora in Svezia e Lussemburgo**, non nei Paesi Bassi. L'Olanda è passata a un pedaggio chilometrico nazionale; la Danimarca aveva già lasciato il sistema il 1° gennaio 2025. Per un veicolo merci estero con massa complessiva di almeno 12 tonnellate, prima di usare le strade soggette in Svezia o Lussemburgo bisogna acquistare la vignetta elettronica con targa, paese di immatricolazione, classe corretta, assi e periodo di validità.
+Dal **1° luglio 2026 l'Eurovignette per camion serve ancora in Svezia e Lussemburgo**, non nei Paesi Bassi. L'Olanda è passata a un pedaggio chilometrico nazionale; la [Danimarca usa KmToll](/it/guide/pedaggio-camion-danimarca-2026/) dopo aver lasciato il sistema il 1° gennaio 2025. Per un veicolo merci estero con massa complessiva di almeno 12 tonnellate, prima di usare le strade soggette in Svezia o Lussemburgo bisogna acquistare la vignetta elettronica con targa, paese di immatricolazione, classe corretta, assi e periodo di validità.
 
 Il costo non dipende dai chilometri percorsi. È una tariffa **a tempo** — giornaliera, settimanale, mensile o annuale — determinata da classe CO₂, classe EURO quando prevista e gruppo di assi. Perciò non esiste un prezzo universale per un viaggio. Prima si verifica l'importo sul [tariffario Eurovignettes 2026](https://www.eurovignettes.eu/portal/en/tariffs/tariffs?reset=true); poi si decide come attribuirlo alla missione senza contarlo due volte.
 

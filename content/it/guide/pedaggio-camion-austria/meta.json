@@ -8,8 +8,8 @@
   "description": "Come stimare il pedaggio camion in Austria: soglia oltre 3,5 t, GO-Box, assi, classi EURO e CO₂, tratte speciali e verifica prima del preventivo.",
   "eyebrow": "Austria · Pedaggio GO",
   "published": "2026-08-13",
-  "modified": "2026-08-15",
-  "reviewed": "2026-08-15",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Austria",
@@ -62,5 +62,5 @@
       "url": "https://www.go-maut.at/it/pagine-informative/classi-di-emissione-di-co2/"
     }
   ],
-  "changeSummary": "Aggiunto il collegamento contestuale al sistema DarsGo sloveno, mantenendo separato il metodo GO-Maut austriaco."
+  "changeSummary": "Aggiunti i passaggi di confine verso DarsGo sloveno e HU-GO ungherese, senza trasferire classi o tariffe GO-Maut."
 }

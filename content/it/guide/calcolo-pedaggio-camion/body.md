@@ -62,6 +62,8 @@ Un itinerario lungo non usa necessariamente un'unica combinazione. Può attraver
 
 Questa sequenza è più robusta di un costo medio nazionale al km, soprattutto per missioni che attraversano molte reti.
 
+Per il tratto italiano dell'Autostrada del Brennero, l'approfondimento sul [pedaggio A22 camion 2026](/it/guide/pedaggio-a22-camion-2026/) applica questo controllo a classi Assi-Sagoma, casello di entrata e casello di uscita. Il valore operativo resta quello ottenuto dal calcolatore ufficiale A22 per il viaggio concreto.
+
 ## Stima preliminare e importo da pagare
 
 Nel preventivo servono due livelli distinti. La stima preliminare aiuta a decidere se la tratta può sostenere il prezzo proposto. L'importo operativo va invece controllato sul servizio del concessionario o sugli strumenti contrattuali usati dall'impresa.
@@ -102,7 +104,7 @@ Su una tratta internazionale costruisci una riga per ogni sistema: pedaggio a di
 
 Per il corridoio del Brennero, la guida al [pedaggio camion in Austria](/it/guide/pedaggio-camion-austria/) spiega il sistema GO-Maut, la soglia oltre 3,5 t, le categorie di assi e le classi EURO e CO₂. È un metodo distinto da quello dei concessionari italiani e l'importo resta da verificare presso ASFINAG.
 
-Altri sistemi richiedono controlli diversi: il [pedaggio camion nei Paesi Bassi](/it/guide/pedaggio-camion-paesi-bassi/) usa Vrachtwagenheffing e OBU dopo la fine dell'Eurovignetta, mentre l'[Eurovignette camion 2026](/it/guide/eurovignette-camion-2026/) resta una tariffa temporale nei Paesi ancora aderenti. Il [pedaggio camion in Belgio](/it/guide/pedaggio-camion-belgio/) va separato tra Fiandre, Vallonia e Bruxelles; il [pedaggio camion in Slovenia](/it/guide/pedaggio-camion-slovenia/) usa DarsGo per i mezzi oltre 3,5 t; il [pedaggio camion in Repubblica Ceca](/it/guide/pedaggio-camion-repubblica-ceca/) usa MYTO CZ e non la e-vignette auto. In [Polonia](/it/guide/pedaggio-camion-polonia-2026/) e-TOLL distingue rete, massa del complesso e classe EURO. In [Ungheria](/it/guide/pedaggio-camion-ungheria-2026/) il sistema per i pesanti è HU-GO; entrando in Bulgaria serve invece verificare separatamente [BGTOLL camion](/it/guide/bgtoll-camion-bulgaria-2026/), mentre la [Serbia](/it/guide/pedaggio-camion-serbia-2026/) usa categorie proprie e dal 2026 impone il TAG ai veicoli di categoria IV. In [Danimarca](/it/guide/pedaggio-camion-danimarca-2026/) KmToll, zone LEZ e ponti richiedono controlli separati. In [Francia](/it/guide/pedaggio-camion-francia/) vanno inoltre distinti rete del concessionario e attraversamenti Fréjus o Monte Bianco. Le guide possiedono quei sistemi nazionali e non sostituiscono i rispettivi portali ufficiali.
+Per altri corridoi bastano pochi esempi per capire il confine: la [LKW-Maut tedesca](/it/guide/pedaggio-camion-germania/) considera dati diversi dalla classe italiana, mentre in [Francia](/it/guide/pedaggio-camion-francia/) vanno separati concessionario e attraversamenti speciali. L'[hub delle guide](/it/guide/) raccoglie gli approfondimenti per gli altri Paesi; ciascuno rimanda al proprio sistema ufficiale senza trasformare questa pagina italiana in un elenco di link.
 
 ## Esempio di scheda di controllo
 
