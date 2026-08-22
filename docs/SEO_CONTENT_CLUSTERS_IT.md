@@ -1,6 +1,6 @@
 # RouteBudget EU — cluster SEO italiani
 
-Data architettura: 21 agosto 2026. Stato: inventario Round 10 in validazione pre-release; baseline GSC 1–19 agosto 2026 registrata nella [baseline corrente](./GSC_BASELINE_2026-08-21.md) e nella [ricerca Round 10](./SEO_RESEARCH_ROUND_10_2026-08-21.md).
+Data architettura: 22 agosto 2026. Stato: inventario Round 11 in validazione pre-release; baseline GSC corrente registrata nella [baseline del 22 agosto](./GSC_BASELINE_2026-08-22.md) e nella [ricerca Round 11](./SEO_RESEARCH_ROUND_11_2026-08-22.md).
 
 ## Principio
 
@@ -9,12 +9,12 @@ RouteBudget non pubblica un blog generico. Ogni URL risolve un lavoro economico 
 Inventario iniziale validato:
 
 - 3 pillar;
-- 38 guide di supporto;
+- 41 guide di supporto;
 - 3 calcolatori gratuiti;
 - 1 landing app;
 - hub `/it/guide/` e `/it/calcolatori/`.
 
-Totale post-build atteso: **45 pagine contenuto**. La sitemap articoli conterrà 41 URL e l'insieme delle sitemap 50 URL indexabili; questi conteggi tecnici non equivalgono a URL già indicizzate da Google.
+Totale post-build atteso: **48 pagine contenuto**. La sitemap articoli conterrà 44 URL e l'insieme delle sitemap 53 URL indexabili; questi conteggi tecnici non equivalgono a URL già indicizzate da Google.
 
 I tre hub tematici candidati (`/it/costi-autotrasporto/`, `/it/preventivi-trasporto/`, `/it/margini-e-tariffe/`) restano architettura futura. Non vengono indicizzati finché non hanno abbastanza pagine distinte e dati Search Console che ne giustifichino utilità. Evita thin pages.
 
@@ -28,7 +28,9 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | --- | --- | --- |
 | `calcolare-carburante-pedaggi-autista` | Allinea tre costi diretti e fonti di verifica | Calcolatore carburante o pillar |
 | `quanto-consuma-un-camion` | Misura l/100 km, fattori e profili usando dati del mezzo | Calcolatore carburante |
+| `prezzo-gasolio-autotrasporto-preventivo` | Sceglie un prezzo datato per la missione senza confondere costo aziendale, media pubblica e indice contrattuale | Calcolo carburante, scenario e PDF non vincolante |
 | `calcolo-pedaggio-camion` | Spiega classe, assi, km tariffari, concessionari e verifica | Calcolatore costo/km con importo controllato |
+| `pedaggio-a22-camion-2026` | Possiede classe Assi-Sagoma, caselli e aggiornamento Autobrennero 2026 senza pubblicare un prezzo universale | Importo A22 ufficiale nel costo tratta e nel PDF |
 | `pedaggio-camion-austria` | Possiede GO-Maut, assi, classi EURO/CO₂ e sezioni speciali austriache | Calcolatore costo/km con importo ASFINAG verificato |
 | `pedaggio-camion-svizzera` | Possiede TTPCP, peso determinante, classe emissioni e NMTS/TTPCP III | Calcolatore costo/km con importo UDSC verificato |
 | `pedaggio-camion-germania` | Possiede LKW-Maut, rete, massa tecnica, assi, EURO e classe CO₂ 2026 | Calcolatore costo/km con importo Toll Collect verificato |
@@ -53,7 +55,7 @@ Search job: raccogliere input e stimare un costo operativo completo prima di dis
 | calcolatore `costo-carburante-viaggio` | Litri e costo da km, L/100 km e prezzo inseriti | Aggiungere costi mancanti nell’app |
 | calcolatore `fuel-surcharge-autotrasporto` | Adeguamento carburante da base, quota e indice inseriti | Riportare variazione nella trattativa |
 
-La baseline GSC 1–19 agosto registra 23 clic e 1.749 impressioni aggregate. Non fornisce volume per le tre nuove query. Serbia e Italia–Grecia entrano con wording Suggest direzionale; Polonia con SERP italiana e cambi ufficiali 2026, senza dichiarare exact Suggest. `volume=null` per tutti. I calcolatori eseguono soltanto formule dichiarate da input utente.
+Round 11 usa domanda esclusivamente italiana: Suggest exact per `calcolo costi trasporto camion excel` e `prezzo gasolio autotrasporto`, problemi reali documentati nei forum italiani e un segnale direzionale A22 per calcolo, Brennero, costo e aumento. Nessuna evidenza fornisce volume mensile o garantisce traffico; per `pedaggio A22 camion` non viene dichiarato volume truck-specific. I calcolatori eseguono soltanto formule dichiarate da input utente.
 
 Il filtro GSC `consumo medio camion` ha diviso 35 impressioni sul calcolatore carburante, 16 sulla guida consumo, 1 sul hub e 1 sul calcolatore costo/km. Owner informativo resta `quanto-consuma-un-camion`; il tool carburante possiede soltanto il calcolo numerico da consumo già noto.
 
@@ -74,6 +76,7 @@ Search job: distinguere costi fissi, variabili e indiretti, quindi attribuirli a
 | `tabelle-costi-autotrasporto-mit-2026` | Legge classi A–D e voci applicabili come benchmark datato | Confronto con dati reali nel calcolatore costo/km |
 | `costo-orario-autista-camion` | Separa costo aziendale, retribuzione e prezzo; costruisce un input orario | Calcolatore costo/km con dato aziendale |
 | `usura-manutenzione-camion` | Costruisce quota da storico aziendale evitando doppio conteggio | Inserimento quota nel calcolo |
+| `calcolo-costi-trasporto-camion-excel` | Separa anagrafiche, tariffe con decorrenza, missioni, formule e versioni del foglio | Controllo mobile e PDF RouteBudget senza import/export Excel |
 | calcolatore `costo-chilometrico-camion` | Stima costo totale, per km percorso e per km carico | Flusso completo RouteBudget |
 
 La guida costo/km e il calcolatore omonimo non competono: la prima usa il consuntivo di un periodo; il secondo stima una singola tratta da input dichiarati. `costo-furgone-per-km` possiede l'economia completa in €/km; `quanto-consuma-un-furgone` possiede il consumo per energia/allestimento; `costo-autostrada-furgone` possiede classe e pedaggio italiano. Nessuna riutilizza benchmark, esempi o regole camion come equivalenti.
@@ -93,7 +96,7 @@ Search job: trasformare il costo in proposta leggibile senza inventare un prezzo
 | `tariffe-trazionisti` | Decide se una specifica offerta di subvezione copre km reali, tempo, vuoto, costi e cassa | Controllo missione e scenari RouteBudget |
 | `clausola-adeguamento-carburante-autotrasporto` | Documenta fonte, periodo, soglia e applicazione contrattuale senza replicare il calcolatore | Verifica formula, costo tratta e condizioni con il professionista pertinente |
 
-`preventivo-trasporto` copre il processo commerciale completo; `preventivo-trasporto-pdf` copre struttura e controllo del documento; `tariffe-trazionisti` parte invece da un'offerta ricevuta nella subvezione e termina con una decisione accept/reject. Il confine è registrato nella mappa keyword.
+`preventivo-trasporto` copre il processo commerciale completo; `preventivo-trasporto-pdf` copre struttura e controllo del documento; `calcolo-costi-trasporto-camion-excel` possiede architettura e versioni del foglio interno; `tariffe-trazionisti` parte invece da un'offerta ricevuta nella subvezione e termina con una decisione accept/reject. Il confine è registrato nella mappa keyword.
 
 ## Landing app
 
@@ -110,7 +113,7 @@ Search job: trasformare il costo in proposta leggibile senza inventare un prezzo
 7. CTA store appare dopo la risposta, usa URL reali e badge ufficiali, senza popup o urgenza.
 8. Anchor descrittivi; niente inserimento automatico su ogni keyword.
 
-Round 10 assegna ingressi contestuali da homepage, hub e almeno due pagine adiacenti a Serbia, Italia–Grecia e Polonia. I tre supporti restituiscono pillar, calcolatore e contenuti nazionali/corridoio pertinenti. Il grafo deve chiudere con zero URL orfane e zero link rotti.
+Round 11 assegna almeno due ingressi contestuali a ciascuna nuova guida: pillar costo e preventivo verso Excel; consumo e clausola verso prezzo gasolio; metodo pedaggio e pillar costo verso A22. I tre supporti restituiscono pillar, calcolatore e contenuti pertinenti. Il grafo deve chiudere con zero URL orfane e zero link rotti.
 
 GSC rileva 0 link esterni e 90 interni. Nuovi contenuti e internal linking non sostituiscono autorità editoriale: crescita off-site deve arrivare da citazioni reali e pertinenti, non da acquisto link o directory massive.
 

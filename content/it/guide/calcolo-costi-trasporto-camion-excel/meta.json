@@ -1,0 +1,80 @@
+{
+  "slug": "calcolo-costi-trasporto-camion-excel",
+  "kind": "guide",
+  "locale": "it",
+  "title": "Calcolo costi trasporto camion Excel: foglio, controlli e PDF",
+  "description": "Come strutturare in Excel anagrafiche, tariffe con decorrenza, dati di viaggio e versioni, poi controllare la tratta e preparare un PDF.",
+  "eyebrow": "Gestione costi · Excel e preventivo",
+  "published": "2026-08-22",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
+  "primaryKeyword": "calcolo costi trasporto camion excel",
+  "searchIntent": "informational-commercial",
+  "topics": [
+    "foglio Excel costi camion",
+    "tariffe con data di validità",
+    "controlli e versioni del calcolo",
+    "passaggio da Excel a PDF"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:tabelle-costi-autotrasporto-mit-2026",
+    "guide:calcolo-pedaggio-camion",
+    "guide:preventivo-trasporto-pdf",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "translationGroup": "calcolo-costi-trasporto-camion-excel",
+  "sources": [
+    {
+      "label": "ForumExcel.it — Gestione spedizioni su strada",
+      "url": "https://www.forumexcel.it/forum/threads/gestione-spedizioni-su-strada.54288/",
+      "publishedOrUpdated": "Discussione avviata il 23 dicembre 2021",
+      "geography": "Italia",
+      "accessedAt": "2026-08-22",
+      "supports": "Caso reale di un foglio aziendale con trasportatore, origine, destinazione, mezzo, data e prezzo per tonnellata, e del problema di applicare la tariffa corretta nel relativo intervallo di validità."
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-22",
+      "supports": "Tabelle A–D 2026 e aggiornamento delle componenti assicurazione, energia e pedaggiamenti, da usare come riferimento indicativo e non come tariffa universale."
+    },
+    {
+      "label": "MIMIT — Carburanti: prezzi praticati e anagrafica degli impianti",
+      "url": "https://www.mimit.gov.it/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti",
+      "publishedOrUpdated": "Dataset quotidiano; metadati aggiornati dal 10 febbraio 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-22",
+      "supports": "Disponibilità, frequenza e perimetro degli open data sui prezzi carburante comunicati dai gestori degli impianti al Ministero."
+    },
+    {
+      "label": "Autostrade per l’Italia — Come si calcola il pedaggio",
+      "url": "https://www.autostrade.it/it/il-pedaggio/come-si-calcola-il-pedaggio",
+      "publishedOrUpdated": "Tariffe indicate come aggiornate al 1° gennaio 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-22",
+      "supports": "Dipendenza del pedaggio da classe, chilometri tariffari, caratteristiche della tratta e concessionario, con IVA e arrotondamento previsti."
+    }
+  ],
+  "status": "published",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "secondaryKeywords": [
+    "foglio Excel costi trasporto camion",
+    "Excel tariffe autotrasporto",
+    "modello calcolo viaggio camion Excel",
+    "preventivo trasporto da Excel a PDF"
+  ],
+  "cluster": "costi-autotrasporto",
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "appFeature": "cost-breakdown",
+  "canonical": "/it/guide/calcolo-costi-trasporto-camion-excel/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "changeSummary": "Prima pubblicazione: architettura Excel con tariffe versionate, controlli di validità e passaggio trasparente dalla base aziendale alla stima di tratta e al PDF."
+}

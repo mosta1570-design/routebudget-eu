@@ -8,7 +8,7 @@ Per preparare un preventivo affidabile servono quindi tre controlli distinti:
 2. eventuale maggiorazione sui segmenti dentro una low emission zone;
 3. listino e contratto applicabile a ogni ponte attraversato.
 
-La Danimarca ha lasciato l'Eurovignette il **1° gennaio 2025**, quando è entrato in vigore KmToll. Comprare un'Eurovignette per un tratto svedese o lussemburghese non paga il tratto danese; dal 1° luglio 2026 neppure i Paesi Bassi usano più l'Eurovignette. Allo stesso modo, pagare KmToll non copre automaticamente né i ponti né i requisiti ambientali per entrare nelle città.
+La Danimarca ha lasciato l'[Eurovignette per camion](/it/guide/eurovignette-camion-2026/) il **1° gennaio 2025**, quando è entrato in vigore KmToll. Comprare una vignetta per un tratto svedese o lussemburghese non paga il tratto danese; dal 1° luglio 2026 neppure i Paesi Bassi usano più l'Eurovignette. Allo stesso modo, pagare KmToll non copre automaticamente né i ponti né i requisiti ambientali per entrare nelle città.
 
 ## Chi deve pagare nel 2026
 

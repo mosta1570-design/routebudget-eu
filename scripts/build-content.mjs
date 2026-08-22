@@ -47,8 +47,8 @@ const INTENT_FEATURE_COMPATIBILITY = {
 const CTA_COPY = {
   'complete-trip': {
     eyebrow: 'Continua nell’app',
-    title: 'Calcola la tratta completa.',
-    body: 'Aggiungi pedaggi, autista, usura, ritorno a vuoto e scenari di prezzo in un unico flusso.',
+    title: 'Completa la stima con le voci supportate.',
+    body: 'Riunisci carburante o energia, pedaggi, autista, usura, ritorno a vuoto e scenari; gestisci fuori dall’app eventuali voci non previste.',
   },
   'pdf-quote': {
     eyebrow: 'Dal calcolo al riepilogo',
@@ -62,8 +62,8 @@ const CTA_COPY = {
   },
   'protect-margin': {
     eyebrow: 'Prima di accettare',
-    title: 'Proteggi il margine della tratta.',
-    body: 'Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo.',
+    title: 'Confronta la tenuta del margine.',
+    body: 'Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo; il risultato resta una stima, non una garanzia di utile.',
   },
   unlimited: {
     eyebrow: 'Archivio locale',
@@ -385,6 +385,9 @@ function renderPage(page) {
   const pillar = page.meta.pillar ? pagesById.get(resolveReferenceId(page.locale, page.meta.pillar)) : null;
   const related = page.meta.related.map((reference) => pagesById.get(resolveReferenceId(page.locale, reference)));
   const schema = renderPageSchema(page);
+  const editorialMethod = page.meta.sources.length > 0
+    ? 'domanda operativa, fonti primarie datate, esempio ricalcolato e controllo dei limiti del prodotto'
+    : 'domanda operativa, metodo esplicito, esempio ricalcolato e controllo dei limiti del prodotto';
 
   return `<!doctype html>
 <html lang="${escapeHtml(config.locales[page.locale].languageTag)}">
@@ -429,7 +432,7 @@ ${renderHead({
           ${renderSources(page)}
           <section class="editorial-note" aria-labelledby="nota-editoriale">
             <h2 id="nota-editoriale">Nota editoriale</h2>
-            <p><a href="${config.basePath}/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti ufficiali datate, esempio ricalcolato, controllo dei limiti del prodotto. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+            <p><a href="${config.basePath}/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: ${editorialMethod}. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
           </section>
         </article>
       </div>

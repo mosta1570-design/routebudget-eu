@@ -2,8 +2,14 @@ import { useEffect, useRef } from 'react';
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, FileText, FolderClock } from 'lucide-react';
 
 import appArchive from '../assets/app-archive-it.png';
+import appArchiveAvif1080 from '../assets/app-archive-it-1080.avif';
+import appArchiveAvif540 from '../assets/app-archive-it-540.avif';
 import appCosts from '../assets/app-costs-it.png';
+import appCostsAvif1080 from '../assets/app-costs-it-1080.avif';
+import appCostsAvif540 from '../assets/app-costs-it-540.avif';
 import appScenarios from '../assets/app-scenarios-it.png';
+import appScenariosAvif1080 from '../assets/app-scenarios-it-1080.avif';
+import appScenariosAvif540 from '../assets/app-scenarios-it-540.avif';
 import { APP_STORE_URL, GOOGLE_PLAY_URL, STORE_BADGES, SUPPORT_EMAIL } from '../content/siteConfig';
 import type { Locale, SiteCopy } from '../content/siteCopy';
 
@@ -24,7 +30,7 @@ const editorial = {
     },
     calculationNote: 'Valori dimostrativi. Il risultato cambia con i dati inseriti.',
     productLabel: 'Il prodotto sul campo',
-    productProof: 'Schermate reali dell’app Android',
+    productProof: 'Schermate autentiche dell’app Android',
     productSteps: ['Confronta il prezzo', 'Verifica ogni costo', 'Riapri la tratta'],
     functionsLabel: 'Flusso operativo',
     functionsHeading: 'Dai dati al cliente, senza perdere il filo.',
@@ -61,8 +67,8 @@ const editorial = {
     downloadTrust: 'Gratis su App Store e Google Play · Acquisti in-app',
     imageAlts: {
       scenarios: 'Scenari Minimo, Consigliato e Ideale nell’app RouteBudget EU',
-      costs: 'Dettaglio reale dei costi di una tratta in RouteBudget EU',
-      archive: 'Archivio locale reale di RouteBudget EU su Android',
+      costs: 'Schermata dei costi di una tratta in RouteBudget EU',
+      archive: 'Schermata dell’Archivio locale RouteBudget EU su Android',
     },
   },
   en: {
@@ -81,7 +87,7 @@ const editorial = {
     },
     calculationNote: 'Demonstration values. Results change with the data entered.',
     productLabel: 'Product in the field',
-    productProof: 'Real Android app screens',
+    productProof: 'Authentic Android app screens',
     productSteps: ['Compare the price', 'Verify every cost', 'Reopen the route'],
     functionsLabel: 'Operating flow',
     functionsHeading: 'From data to customer, without losing the thread.',
@@ -117,8 +123,8 @@ const editorial = {
     downloadTrust: 'Free on the App Store and Google Play · In-App Purchases',
     imageAlts: {
       scenarios: 'Minimum, Recommended and Ideal scenarios in RouteBudget EU',
-      costs: 'Real route cost detail in RouteBudget EU',
-      archive: 'Real local RouteBudget EU Archive on Android',
+      costs: 'Route cost detail screen in RouteBudget EU',
+      archive: 'Local RouteBudget EU Archive screen on Android',
     },
   },
 } satisfies Record<Locale, object>;
@@ -139,15 +145,19 @@ function useFreightReveal() {
     if (reducedMotion.matches) return;
 
     const elements = Array.from(root.querySelectorAll<HTMLElement>('[data-reveal]'));
-    const pending: HTMLElement[] = [];
+    const visibility = elements.map((element) => ({
+      element,
+      visible: element.getBoundingClientRect().top < window.innerHeight * 0.92,
+    }));
+    const pending = visibility
+      .filter(({ visible }) => !visible)
+      .map(({ element }) => element);
 
-    elements.forEach((element) => {
-      if (element.getBoundingClientRect().top < window.innerHeight * 0.92) {
+    visibility
+      .filter(({ visible }) => visible)
+      .forEach(({ element }) => {
         element.dataset.revealed = 'true';
-      } else {
-        pending.push(element);
-      }
-    });
+      });
 
     root.dataset.revealReady = 'true';
 
@@ -178,6 +188,7 @@ export function ProductContinuation({ copy, locale }: ProductContinuationProps) 
   const productScreens = [
     {
       src: appScenarios,
+      avifSrcSet: `${appScenariosAvif540} 540w, ${appScenariosAvif1080} 1080w`,
       alt: text.imageAlts.scenarios,
       title: copy.showcase.screens[2],
       body: copy.showcase.captions[2],
@@ -185,6 +196,7 @@ export function ProductContinuation({ copy, locale }: ProductContinuationProps) 
     },
     {
       src: appCosts,
+      avifSrcSet: `${appCostsAvif540} 540w, ${appCostsAvif1080} 1080w`,
       alt: text.imageAlts.costs,
       title: copy.showcase.screens[1],
       body: copy.showcase.captions[1],
@@ -192,6 +204,7 @@ export function ProductContinuation({ copy, locale }: ProductContinuationProps) 
     },
     {
       src: appArchive,
+      avifSrcSet: `${appArchiveAvif540} 540w, ${appArchiveAvif1080} 1080w`,
       alt: text.imageAlts.archive,
       title: copy.showcase.screens[3],
       body: copy.showcase.captions[3],
@@ -286,14 +299,21 @@ export function ProductContinuation({ copy, locale }: ProductContinuationProps) 
             {productScreens.map((screen, index) => (
               <figure className={`freight-screen freight-screen--${index + 1}`} data-reveal key={screen.title}>
                 <div className="freight-screen__media">
-                  <img
-                    alt={screen.alt}
-                    decoding="async"
-                    height="2400"
-                    loading="lazy"
-                    src={screen.src}
-                    width="1080"
-                  />
+                  <picture>
+                    <source
+                      sizes="(max-width: 900px) 82vw, 30vw"
+                      srcSet={screen.avifSrcSet}
+                      type="image/avif"
+                    />
+                    <img
+                      alt={screen.alt}
+                      decoding="async"
+                      height="2400"
+                      loading="lazy"
+                      src={screen.src}
+                      width="1080"
+                    />
+                  </picture>
                 </div>
                 <figcaption className="freight-screen__caption">
                   <span>{screen.step}</span>
@@ -365,30 +385,34 @@ export function ProductContinuation({ copy, locale }: ProductContinuationProps) 
             </div>
           </header>
 
-          <dl className="freight-plans" data-reveal>
+          <div className="freight-plans" data-reveal>
             <div className="freight-plan">
-              <dt>{text.freeLabel}</dt>
-              <dd>
-                <strong>{text.freeValue}</strong>
-                <span>{text.freeText}</span>
-              </dd>
+              <dl className="freight-plan__terms">
+                <dt>{text.freeLabel}</dt>
+                <dd>
+                  <strong>{text.freeValue}</strong>
+                  <span>{text.freeText}</span>
+                </dd>
+              </dl>
               <a href="#scarica">
                 {text.pricingAction}
                 <ArrowDown aria-hidden="true" size={17} />
               </a>
             </div>
             <div className="freight-plan freight-plan--pro">
-              <dt>{text.proLabel}</dt>
-              <dd>
-                <strong>{text.proValue}</strong>
-                <span>{text.proText}</span>
-              </dd>
+              <dl className="freight-plan__terms">
+                <dt>{text.proLabel}</dt>
+                <dd>
+                  <strong>{text.proValue}</strong>
+                  <span>{text.proText}</span>
+                </dd>
+              </dl>
               <a href="#scarica">
                 {text.pricingAction}
                 <ArrowDown aria-hidden="true" size={17} />
               </a>
             </div>
-          </dl>
+          </div>
         </div>
       </section>
 

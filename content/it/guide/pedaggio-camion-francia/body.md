@@ -115,6 +115,8 @@ Confronta quindi:
 
 Scegliere il valico in base a una sola riga tariffaria può aumentare carburante, ore autista o chilometri a vuoto. Per un confronto alternativo verso altri corridoi alpini, consulta anche il [pedaggio camion in Svizzera](/it/guide/pedaggio-camion-svizzera/).
 
+Se la consegna prosegue dalla Francia verso il Belgio, il totale francese termina alla frontiera: [Viapass in Belgio](/it/guide/pedaggio-camion-belgio/) richiede una verifica distinta per regione, rete e veicolo. Non estendere la tariffa della concessionaria francese sui chilometri belgi.
+
 ## IVA, data tariffaria e documento da conservare
 
 “IVA inclusa” non significa “IVA uguale ovunque”. Per Monte Bianco e Fréjus, i listini 2026 distinguono lato Italia al 22% e lato Francia al 20%. Nelle reti francesi, le griglie della concessionaria indicano decorrenza e trattamento del prezzo; una griglia Sanef 2026, per esempio, espone tariffe TTC con TVA al 20%.

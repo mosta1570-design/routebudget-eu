@@ -87,9 +87,9 @@ Il calcolo di costo non sostituisce manutenzione prevista dal costruttore, contr
 
 ## Inserire la quota nella stima RouteBudget
 
-RouteBudget combina gli input dell’utente per stimare il costo operativo. Inserire una quota di usura/manutenzione costruita con metodo coerente, quindi verificare che non sia già compresa in un’altra voce. I tre scenari di prezzo aiutano a vedere l’effetto sul margine; non garantiscono utile né sostituiscono consuntivi.
+RouteBudget combina gli input dell’utente per stimare il costo operativo, ma la quota non è configurabile nello stesso modo per ogni mezzo. Nel profilo camion, la versione corrente applica automaticamente **0,15 €/km** come ipotesi di usura/manutenzione: l’utente non può sostituirla con la propria quota aziendale. Nel profilo furgone N1, invece, la quota in centesimi per chilometro è un input modificabile.
 
-Conservare localmente calcolo e data del parametro permette di riaprire una tratta sapendo quale ipotesi era attiva. Quando la quota cambia, aggiornare il calcolo prima di riutilizzare un vecchio preventivo.
+Se il consuntivo del camion produce una quota diversa da 0,15 €/km, trattare lo scarto come limite esplicito della stima e verificarlo fuori dall’app; il [calcolatore web del costo chilometrico](/it/calcolatori/costo-chilometrico-camion/) consente una quota manuale per questo controllo. I tre scenari aiutano a confrontare il margine sugli input supportati, ma non garantiscono utile né sostituiscono consuntivi. Per N1, aggiornare l’input prima di riutilizzare un vecchio calcolo quando cambia la quota aziendale.
 
 ## Limiti da tenere visibili
 

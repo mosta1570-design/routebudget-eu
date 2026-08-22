@@ -79,7 +79,7 @@ Il [tariffario PDF Putevi Srbije](https://www.putevi-srbije.rs/images/pdf/cene_p
 | --- | ---: | ---: |
 | Categoria IV, Beograd–Presevo | 12.340 RSD | 105,50 € |
 
-I 105,50 € sono un importo ufficiale per quella coppia di stazioni, quella categoria e quella decorrenza. Non sono una tariffa media serba e non coprono Slovenia, Croazia, Ungheria, Bulgaria o altri Paesi della missione. Prima di riutilizzarli devi verificare che percorso, categoria e listino siano ancora gli stessi.
+I 105,50 € sono un importo ufficiale per quella coppia di stazioni, quella categoria e quella decorrenza. Non sono una tariffa media serba e non coprono Slovenia, Croazia, Ungheria, [Bulgaria con BGTOLL](/it/guide/bgtoll-camion-bulgaria-2026/) o altri Paesi della missione. Prima di riutilizzarli devi verificare che percorso, categoria e listino siano ancora gli stessi.
 
 Per mostrare l'effetto sul costo, ipotizziamo — solo a scopo didattico — 320 € di carburante, 175 € di autista, 90 € di usura e 145 € di altri pedaggi verificati. Aggiungendo la quota serba ufficiale dell'esempio:
 

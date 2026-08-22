@@ -74,6 +74,8 @@ Questo è soltanto il pedaggio tedesco dell'esempio. Non comprende:
 
 La stessa tabella riporta valori diversi per classi CO₂, peso, assi e classe EURO differenti. Per questo il numero di 34,8 centesimi non deve diventare un preset universale: va riletto nella fonte ufficiale alla data di ogni offerta.
 
+Se la missione prosegue dalla Germania verso la Polonia, Toll Collect termina alla frontiera: il [pedaggio e-TOLL polacco](/it/guide/pedaggio-camion-polonia-2026/) usa rete, massa del complesso e classe EURO proprie. Calcola i due importi separatamente prima di sommarli nel costo della missione.
+
 ## Dal pedaggio ufficiale al prezzo della tratta
 
 Una volta ottenuto l'importo Toll Collect, il pedaggio entra nel costo diretto del viaggio:

@@ -6,8 +6,8 @@
   "description": "Come trasformare il costo di una tratta in un’offerta di trasporto merci chiara, con prezzo, inclusioni, esclusioni, validità e PDF verificato.",
   "eyebrow": "Guida al preventivo",
   "published": "2026-08-01",
-  "modified": "2026-08-16",
-  "reviewed": "2026-08-16",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "primaryKeyword": "preventivo trasporto",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -70,5 +70,5 @@
   "canonical": "/it/guide/preventivo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunti percorsi verso costo traghetto Sardegna e clausola carburante, distinti dal processo generale del preventivo."
+  "changeSummary": "Aggiunto un percorso contestuale al controllo Excel di tariffe, versioni e passaggio al PDF, distinto dal processo commerciale del preventivo."
 }

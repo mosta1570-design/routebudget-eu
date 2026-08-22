@@ -17,9 +17,14 @@ import {
 import { createPortal } from 'react-dom';
 
 import appArchive from '../assets/app-archive-it.png';
+import appArchiveAvif1080 from '../assets/app-archive-it-1080.avif';
+import appArchiveAvif540 from '../assets/app-archive-it-540.avif';
 import appCosts from '../assets/app-costs-it.png';
-import appIcon from '../assets/app-icon-ui.png';
+import appCostsAvif1080 from '../assets/app-costs-it-1080.avif';
+import appCostsAvif540 from '../assets/app-costs-it-540.avif';
 import appScenarios from '../assets/app-scenarios-it.png';
+import appScenariosAvif1080 from '../assets/app-scenarios-it-1080.avif';
+import appScenariosAvif540 from '../assets/app-scenarios-it-540.avif';
 import heroDesktop from '../assets/hero/routebudget-hero-desktop.mp4';
 import heroDesktopWebm from '../assets/hero/routebudget-hero-desktop.webm';
 import heroMobile from '../assets/hero/routebudget-hero-mobile.mp4';
@@ -38,6 +43,22 @@ type CinematicHeroProps = {
 };
 
 const PRODUCT_REVEAL_QUERY = '(min-width: 901px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)';
+const APP_ICON = '/logo-ui.png';
+
+type HeroVideoChoice = {
+  fallback?: string;
+  src: string;
+};
+
+function selectHeroVideo(): HeroVideoChoice {
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  const webm = isMobile ? heroMobileWebm : heroDesktopWebm;
+  const mp4 = isMobile ? heroMobile : heroDesktop;
+  const probe = document.createElement('video');
+  const supportsVp9 = probe.canPlayType('video/webm; codecs="vp9"') !== '';
+
+  return supportsVp9 ? { fallback: mp4, src: webm } : { src: mp4 };
+}
 
 type HeroLanguage = {
   navigationLabel: string;
@@ -87,7 +108,7 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
       'Carburante, pedaggi, ore, pause e usura in un unico costo. Scegli il margine e prepara il preventivo PDF.',
     primaryCta: 'Scarica gratis',
     downloadOptionsLabel: 'Scegli lo store per scaricare RouteBudget',
-    demoLabel: 'Vedi un calcolo reale',
+    demoLabel: 'Vedi un esempio completo',
     demoTitle: 'Un costo leggibile. Tre prezzi da confrontare.',
     demoIntro:
       'Schermate autentiche dell’app Android: composizione dei costi, scenari e Archivio locale.',
@@ -129,7 +150,7 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
       'Fuel, tolls, hours, breaks and wear in one operating cost. Choose your margin and prepare the PDF quote.',
     primaryCta: 'Download free',
     downloadOptionsLabel: 'Choose a store to download RouteBudget',
-    demoLabel: 'See a real calculation',
+    demoLabel: 'See a complete example',
     demoTitle: 'One readable cost. Three prices to compare.',
     demoIntro:
       'Authentic Android app screens: cost composition, scenarios and local Archive.',
@@ -164,23 +185,26 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
 
 const demoFrames: Record<
   Locale,
-  Array<{ image: string; alt: string; label: string; value: string }>
+  Array<{ image: string; avifSrcSet: string; alt: string; label: string; value: string }>
 > = {
   it: [
     {
       image: appScenarios,
+      avifSrcSet: `${appScenariosAvif540} 540w, ${appScenariosAvif1080} 1080w`,
       alt: 'RouteBudget mostra gli scenari Minimo, Consigliato e Ideale',
       label: 'SCENARI',
       value: '1.525,85 €',
     },
     {
       image: appCosts,
+      avifSrcSet: `${appCostsAvif540} 540w, ${appCostsAvif1080} 1080w`,
       alt: 'RouteBudget mostra carburante, pedaggi, autista e usura',
       label: 'COSTI',
       value: '1.220,68 €',
     },
     {
       image: appArchive,
+      avifSrcSet: `${appArchiveAvif540} 540w, ${appArchiveAvif1080} 1080w`,
       alt: 'RouteBudget mostra un calcolo salvato nell’Archivio locale',
       label: 'ARCHIVIO',
       value: 'SALVATO IN LOCALE',
@@ -189,18 +213,21 @@ const demoFrames: Record<
   en: [
     {
       image: appScenarios,
+      avifSrcSet: `${appScenariosAvif540} 540w, ${appScenariosAvif1080} 1080w`,
       alt: 'RouteBudget shows Minimum, Recommended and Ideal price scenarios',
       label: 'SCENARIOS',
       value: '€1,525.85',
     },
     {
       image: appCosts,
+      avifSrcSet: `${appCostsAvif540} 540w, ${appCostsAvif1080} 1080w`,
       alt: 'RouteBudget shows fuel, tolls, driver and wear costs',
       label: 'COSTS',
       value: '€1,220.68',
     },
     {
       image: appArchive,
+      avifSrcSet: `${appArchiveAvif540} 540w, ${appArchiveAvif1080} 1080w`,
       alt: 'RouteBudget shows a calculation saved in the local Archive',
       label: 'ARCHIVE',
       value: 'SAVED LOCALLY',
@@ -429,14 +456,21 @@ function DemoOverlay({
         {frames.map((frame, index) => (
           <figure className="demo-frame" key={frame.label}>
             <div className="demo-frame__image">
-              <img
-                alt={frame.alt}
-                decoding="async"
-                height="2400"
-                loading="lazy"
-                src={frame.image}
-                width="1080"
-              />
+              <picture>
+                <source
+                  sizes="(max-width: 900px) 78vw, 360px"
+                  srcSet={frame.avifSrcSet}
+                  type="image/avif"
+                />
+                <img
+                  alt={frame.alt}
+                  decoding="async"
+                  height="2400"
+                  loading="lazy"
+                  src={frame.image}
+                  width="1080"
+                />
+              </picture>
             </div>
             <figcaption>
               <span className="technical-label">
@@ -469,6 +503,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
   const saveDataEnabled = Boolean(connection?.saveData);
   const constrainedConnection = saveDataEnabled || ['slow-2g', '2g'].includes(connection?.effectiveType ?? '');
   const [mediaEnabled, setMediaEnabled] = useState(false);
+  const [heroVideo, setHeroVideo] = useState<HeroVideoChoice>(selectHeroVideo);
   const [productRevealEnabled, setProductRevealEnabled] = useState(
     () => !constrainedConnection && window.matchMedia(PRODUCT_REVEAL_QUERY).matches,
   );
@@ -707,6 +742,12 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
     stage?.style.setProperty('--spot-y', '38svh');
   };
 
+  const useFallbackVideo = () => {
+    setHeroVideo((current) => (
+      current.fallback ? { src: current.fallback } : current
+    ));
+  };
+
   return (
     <>
       <section
@@ -723,7 +764,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
             </div>
           ))}
           <div className="hero-opening__brand">
-            <img alt="" height="512" src={appIcon} width="512" />
+            <img alt="" height="96" src={APP_ICON} width="96" />
             <strong>ROUTEBUDGET EU</strong>
           </div>
         </div>
@@ -736,20 +777,13 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
             data-media-status="higgsfield-approved-original"
             loop
             muted
+            onError={useFallbackVideo}
             playsInline
             poster={heroPoster}
             preload={mediaEnabled ? 'metadata' : 'none'}
             ref={heroVideoRef}
-          >
-            {mediaEnabled ? (
-              <>
-                <source media="(max-width: 767px) and (prefers-reduced-motion: no-preference)" src={heroMobileWebm} type="video/webm" />
-                <source media="(max-width: 767px) and (prefers-reduced-motion: no-preference)" src={heroMobile} type="video/mp4" />
-                <source media="(min-width: 768px) and (prefers-reduced-motion: no-preference)" src={heroDesktopWebm} type="video/webm" />
-                <source media="(min-width: 768px) and (prefers-reduced-motion: no-preference)" src={heroDesktop} type="video/mp4" />
-              </>
-            ) : null}
-          </video>
+            src={mediaEnabled ? heroVideo.src : undefined}
+          />
         </div>
         <div aria-hidden="true" className="hero-stage__contrast" />
         <div aria-hidden="true" className="hero-stage__grid" />
@@ -757,7 +791,14 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
           <div aria-hidden="true" className="hero-product-reveal">
             <div className="hero-product-reveal__plane">
               <div className="hero-product-reveal__device">
-                <img alt="" decoding="async" fetchPriority="low" height="2400" loading="lazy" src={appScenarios} width="1080" />
+                <picture>
+                  <source
+                    sizes="340px"
+                    srcSet={`${appScenariosAvif540} 540w, ${appScenariosAvif1080} 1080w`}
+                    type="image/avif"
+                  />
+                  <img alt="" decoding="async" fetchPriority="low" height="2400" loading="lazy" src={appScenarios} width="1080" />
+                </picture>
               </div>
             </div>
           </div>
@@ -765,7 +806,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
         <div className="hero-shell">
           <nav aria-label={copy.navigationLabel} className="hero-navbar">
             <a aria-label="RouteBudget EU — Home" className="hero-brand" href="#top">
-              <img alt="" height="512" src={appIcon} width="512" />
+              <img alt="" height="96" src={APP_ICON} width="96" />
               <span>ROUTEBUDGET <b>EU</b></span>
             </a>
 
@@ -907,7 +948,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
           <h2 className="sr-only" id="mobile-menu-title">{copy.navigationLabel}</h2>
           <div className="mobile-nav-overlay__header">
             <a aria-label="RouteBudget EU — Home" className="hero-brand" href="#top" onClick={() => followMenuLink('#top')} tabIndex={menuOpen ? 0 : -1}>
-              <img alt="" height="512" src={appIcon} width="512" />
+              <img alt="" height="96" src={APP_ICON} width="96" />
               <span>ROUTEBUDGET <b>EU</b></span>
             </a>
             <button aria-label={copy.closeLabel} className="icon-control" onClick={() => closeMenu()} ref={closeMenuRef} tabIndex={menuOpen ? 0 : -1} type="button">

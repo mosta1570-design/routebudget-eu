@@ -94,6 +94,8 @@ Non proponiamo una formula contrattuale standard: una frase copiata può non cor
 
 Il [portale mensile MASE](https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti) esprime i valori in euro per 1.000 litri. Per gasolio e benzina considera i prezzi self-service e costruisce la media mensile ponderando le rilevazioni settimanali per i giorni di validità. Se il foglio richiede euro al litro, dividi per 1.000; non confrontare quel risultato con un dato netto IVA o con il prezzo aziendale di una singola carta carburante senza una regola documentata.
 
+Questo indice mensile risponde a una domanda diversa dal dato operativo di una singola missione. La guida al [prezzo gasolio da usare nel preventivo](/it/guide/prezzo-gasolio-autotrasporto-preventivo/) separa fattura o carta aziendale, dato pubblico di confronto e indice della clausola, evitando di usare automaticamente il valore MASE come previsione di rifornimento.
+
 Nel 2026 accise e misure temporanee hanno reso ancora più importante salvare il dato completo e la relativa nota metodologica. Modificare a posteriori il prezzo ministeriale per “correggere” una componente fiscale può allontanare il calcolo dalla fonte prevista. Quando il contratto non spiega quale base usare, fai verificare il criterio prima dell’applicazione.
 
 ## Procedura mensile: dal dato alla fattura

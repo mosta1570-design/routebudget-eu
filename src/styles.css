@@ -149,7 +149,7 @@ svg {
   min-height: 100svh;
   background:
     linear-gradient(90deg, rgba(7, 11, 18, 0.96) 0%, rgba(7, 11, 18, 0.82) 50%, rgba(7, 11, 18, 0.18) 100%),
-    url("/og-cover.jpg") center / cover no-repeat;
+    url("./assets/hero/routebudget-hero-poster.webp") center / cover no-repeat;
 }
 
 .static-home__hero {
@@ -311,6 +311,11 @@ svg {
 .hero-product-reveal__device img {
   width: 100%;
   height: auto;
+}
+
+.hero-product-reveal__device picture {
+  display: block;
+  width: 100%;
 }
 
 .hero-shell {
@@ -528,7 +533,6 @@ svg {
   color: rgba(238, 245, 255, 0.78);
   font-size: clamp(1rem, 1.25vw, 1.16rem);
   line-height: 1.65;
-  animation: hero-content-enter 0.78s 0.86s var(--ease-out) both;
 }
 
 .hero-actions {
@@ -812,7 +816,7 @@ svg {
   position: absolute;
   z-index: 40;
   inset: 0;
-  display: grid;
+  display: none;
   overflow: hidden;
   grid-template-columns: repeat(4, 1fr);
   pointer-events: none;
@@ -1114,6 +1118,10 @@ svg {
   height: auto;
   border-radius: 24px 24px 0 0;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.48);
+}
+
+.demo-frame__image picture {
+  display: block;
 }
 
 .demo-frame figcaption {
@@ -1466,6 +1474,10 @@ svg {
   transition: transform 0.72s var(--ease-out);
 }
 
+.freight-screen__media picture {
+  display: block;
+}
+
 .freight-screen:hover .freight-screen__media img {
   transform: translateY(-8px);
 }
@@ -1648,6 +1660,10 @@ svg {
   gap: 28px;
   border-bottom: 1px solid var(--line-strong);
   padding: 26px 0;
+}
+
+.freight-plan__terms {
+  display: contents;
 }
 
 .freight-plan dt {
@@ -1952,14 +1968,12 @@ svg {
 }
 
 .freight-root[data-reveal-ready="true"] [data-reveal]:not([data-revealed="true"]) {
-  opacity: 0.62;
+  opacity: 1;
   transform: translateY(22px);
 }
 
 .freight-root[data-reveal-ready="true"] [data-reveal] {
-  transition:
-    opacity var(--duration-scene) ease,
-    transform var(--duration-scene) var(--ease-out);
+  transition: transform var(--duration-scene) var(--ease-out);
 }
 
 .freight-root[data-reveal-ready="true"] [data-reveal][data-revealed="true"] {
@@ -2036,6 +2050,12 @@ svg {
   to { transform: translateX(520%) skewX(-12deg); opacity: 0; }
 }
 
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .hero-opening {
+    display: grid;
+  }
+}
+
 @media (max-width: 1180px) {
   .hero-desktop-nav {
     gap: 18px;
@@ -2077,6 +2097,15 @@ svg {
 }
 
 @media (max-width: 900px) {
+  .hero-navbar,
+  .hero-kicker,
+  .hero-headline span,
+  .hero-actions,
+  .hero-trust,
+  .hero-ledger {
+    animation: none;
+  }
+
   .hero-stage,
   .hero-shell {
     min-height: max(760px, 100svh);

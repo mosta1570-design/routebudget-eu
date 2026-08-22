@@ -1,0 +1,76 @@
+{
+  "slug": "pedaggio-a22-camion-2026",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Pedaggio A22 camion 2026: classe, caselli e costo nel preventivo",
+  "mobileH1": "Pedaggio A22 camion 2026: classe, caselli e costo",
+  "description": "Come verificare il pedaggio A22 di un camion nel 2026: classe Assi-Sagoma, caselli, calcolatore ufficiale e inserimento corretto nel preventivo.",
+  "eyebrow": "Italia · Autostrada del Brennero A22",
+  "published": "2026-08-22",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "pedaggio A22 camion",
+  "secondaryKeywords": [
+    "pedaggio A22 calcolo",
+    "pedaggio A22 Brennero",
+    "costo pedaggio A22",
+    "tariffe A22 camion 2026",
+    "classe pedaggio camion A22",
+    "aumento pedaggio A22 2026"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "pedaggio camion A22",
+    "Autostrada del Brennero",
+    "classi Assi-Sagoma",
+    "caselli A22",
+    "preventivo autotrasporto"
+  ],
+  "related": [
+    "guide:calcolo-pedaggio-camion",
+    "guide:calcolo-costo-trasporto",
+    "guide:ritorno-a-vuoto-autotrasporto",
+    "guide:usura-manutenzione-camion",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "pedaggio-a22-camion-2026",
+  "canonical": "/it/guide/pedaggio-a22-camion-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Autostrada del Brennero — Calcola pedaggio",
+      "url": "https://www.autobrennero.it/it/in-viaggio/pedaggio/costi-autostrada/calcola-pedaggio_aKt10KBRuarchieslashU0DeUsJQ8SGt942ruW6cvmQNEaH2aawSMarchieuguale_p/",
+      "publishedOrUpdated": "Tariffe e calcolatore 2026 correnti al 22 agosto 2026",
+      "geography": "Italia — Autostrada A22",
+      "accessedAt": "2026-08-22",
+      "supports": "Aggiornamento tariffario dell'1,46% dal 1° gennaio 2026, metodo di calcolo, arrotondamento, classi e verifica per casello di entrata e uscita."
+    },
+    {
+      "label": "Autostrada del Brennero — Tariffe A22 2026",
+      "url": "https://www.autobrennero.it/documenti/pedaggio/IT_tariffe%20A22_2026.pdf",
+      "publishedOrUpdated": "Tariffe in vigore dal 1° gennaio 2026",
+      "geography": "Italia — Autostrada A22",
+      "accessedAt": "2026-08-22",
+      "supports": "Prospetto ufficiale delle tariffe chilometriche A22 per le classi di pedaggio."
+    },
+    {
+      "label": "Autostrada del Brennero — Sistema Assi-Sagoma",
+      "url": "https://www.autobrennero.it/documenti/pedaggio/IT_sistema%20assi-sagoma.pdf",
+      "publishedOrUpdated": "Documento di classificazione corrente al 22 agosto 2026",
+      "geography": "Italia — Autostrada A22",
+      "accessedAt": "2026-08-22",
+      "supports": "Cinque classi Assi-Sagoma e classificazione dei veicoli o convogli con tre o più assi nelle classi 3, 4 e 5."
+    }
+  ],
+  "changeSummary": "Nuova guida A22 italiana: classe Assi-Sagoma, verifica casello-casello e uso del pedaggio ufficiale nel costo e nel PDF del preventivo."
+}

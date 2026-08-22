@@ -39,6 +39,8 @@ Per applicare insieme le tre componenti più visibili, consulta il metodo su com
 
 Il modello non deve essere complicato per forza. Deve però essere ripetibile: due persone che usano gli stessi dati dovrebbero arrivare allo stesso risultato e capire da dove proviene ogni importo.
 
+Se l'impresa conserva listini, decorrenze e missioni in un foglio, la guida al [calcolo dei costi di trasporto camion in Excel](/it/guide/calcolo-costi-trasporto-camion-excel/) propone una struttura verificabile in cinque fogli. Serve a evitare che una tariffa aggiornata modifichi retroattivamente viaggi già quotati; RouteBudget può poi affiancare il controllo mobile e il riepilogo PDF senza sostituire l'archivio aziendale.
+
 I valori indicativi dei costi di esercizio pubblicati dal MIT, aggiornati nella fonte consultata il 17 marzo 2026, sono un riferimento esterno utile per controllare le categorie. Non sono una tariffa universale e non sostituiscono i dati effettivi del mezzo o della missione.
 
 ## Carburante: usare il consumo del proprio mezzo
@@ -59,9 +61,11 @@ Se il rapporto separa un adeguamento rispetto a un prezzo base, usa il [calcolat
 
 Il pedaggio non è sempre proporzionale ai chilometri. Paese, infrastruttura, classe ambientale, numero di assi, massa, gallerie, ponti e valichi possono cambiare l’importo. Una stima iniziale è utile per valutare la tratta, ma prima di impegnarsi su percorsi particolari è prudente verificare le condizioni presso i gestori o le fonti ufficiali pertinenti.
 
+Per una missione italiana sull'Autostrada del Brennero, la guida al [pedaggio A22 camion 2026](/it/guide/pedaggio-a22-camion-2026/) separa classe Assi-Sagoma, caselli e importo ufficiale da inserire nel costo. Non usa un prezzo medio: il totale va verificato per la configurazione e il percorso effettivi.
+
 Nelle missioni oltre confine usa una riga per ogni sistema nazionale. Per esempio, il [pedaggio camion in Austria](/it/guide/pedaggio-camion-austria/) dipende dal GO-Maut, dagli assi, dalle classi EURO e CO₂ e dalle eventuali sezioni speciali: non può essere derivato dalla classe autostradale italiana.
 
-Lo stesso principio vale sui corridoi più a nord e a est. Nei [Paesi Bassi](/it/guide/pedaggio-camion-paesi-bassi/) il Vrachtwagenheffing ha sostituito l'Eurovignetta dal 1° luglio 2026; l'[Eurovignette camion 2026](/it/guide/eurovignette-camion-2026/) resta invece un costo temporale da verificare nei Paesi ancora aderenti. In [Belgio](/it/guide/pedaggio-camion-belgio/) il totale dipende anche dalla regione e dalla classe CO₂ applicabile; in [Slovenia](/it/guide/pedaggio-camion-slovenia/) i camion oltre 3,5 t usano DarsGo, non la vignetta dei veicoli leggeri; in [Repubblica Ceca](/it/guide/pedaggio-camion-repubblica-ceca/) serve separare MYTO CZ dalla e-vignette auto. Per l'[Ungheria](/it/guide/pedaggio-camion-ungheria-2026/) va verificato HU-GO, mentre in [Danimarca](/it/guide/pedaggio-camion-danimarca-2026/) KmToll e ponti restano voci distinte. Sul corridoio francese, il [pedaggio camion in Francia](/it/guide/pedaggio-camion-francia/) richiede di separare autostrada, concessionario ed eventuale Fréjus o Monte Bianco. Verifica ogni importo nel sistema ufficiale e somma le porzioni senza riutilizzare una media europea.
+Lo stesso principio vale fuori Italia, ma non serve trasformare il preventivo in un elenco di Paesi. Nei [Paesi Bassi](/it/guide/pedaggio-camion-paesi-bassi/) il Vrachtwagenheffing è un sistema chilometrico con OBU; in [Francia](/it/guide/pedaggio-camion-francia/) concessionario e attraversamenti speciali restano voci separate. Per altre destinazioni scegli la guida del Paese dall'[hub delle guide RouteBudget](/it/guide/) e verifica ogni importo nel sistema ufficiale pertinente, senza riutilizzare una media europea.
 
 Nella stessa area del calcolo conviene tenere separate altre spese di percorso:
 

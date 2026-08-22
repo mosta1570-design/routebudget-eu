@@ -8,8 +8,8 @@
   "description": "Come calcolare il pedaggio camion in Francia nel 2026: classi 3 e 4, concessionarie, Fréjus e Monte Bianco, IVA, andata e ritorno e verifica ufficiale.",
   "eyebrow": "Francia · Pedaggi 2026",
   "published": "2026-08-16",
-  "modified": "2026-08-16",
-  "reviewed": "2026-08-16",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Francia 2026",
@@ -109,5 +109,5 @@
       "supports": "Aumento 2026 dell'1,19%, valori comparati lato Italia e lato Francia, IVA 22% e 20%, classi 3 e 4 EURO 5-6 e scadenza dei biglietti andata-ritorno."
     }
   ],
-  "changeSummary": "Prima pubblicazione: metodo 2026 per distinguere pedaggio autostradale francese e trafori alpini, verificare classi 3-4 e sostituire la stima con il totale manuale controllato."
+  "changeSummary": "Aggiunto il confine operativo Francia–Belgio con Viapass separato dalle concessionarie e dai trafori francesi."
 }

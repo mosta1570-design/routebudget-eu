@@ -8,8 +8,8 @@
   "description": "Come calcolare il pedaggio camion in Ungheria nel 2026: HU-GO oltre 3,5 t, classi J2-J5, biglietto di tratta, OBU e costo nel preventivo PDF.",
   "eyebrow": "Ungheria · HU-GO 2026",
   "published": "2026-08-18",
-  "modified": "2026-08-18",
-  "reviewed": "2026-08-18",
+  "modified": "2026-08-22",
+  "reviewed": "2026-08-22",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Ungheria",
@@ -96,5 +96,5 @@
       "supports": "Uso degli OBU degli operatori di dichiarazione sottoposti a controllo e avvertenza che un segnale acustico di altri dispositivi non prova la detrazione del pedaggio."
     }
   ],
-  "changeSummary": "Prima pubblicazione: guida operativa HU-GO 2026 per verificare il pedaggio ungherese e inserirlo una sola volta nel costo e nel preventivo della tratta."
+  "changeSummary": "Aggiunti i confini operativi con DarsGo sloveno e pedaggio serbo, mantenendo HU-GO limitato ai segmenti ungheresi."
 }
