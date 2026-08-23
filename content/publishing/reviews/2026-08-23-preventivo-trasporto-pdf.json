@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-preventivo-trasporto-pdf",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "guide/preventivo-trasporto-pdf",
+  "contentFingerprint": "sha256:23471547f1288dc49faf0073dc1effc970a983a2f778a45973865e48c495eab5",
+  "artifactFingerprint": "sha256:7d49fb7c7557ec5eb1c285164e16b40f3b5f084f0eeb63f6c6319f0225537f5b",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated approval covers the narrowed topic metadata and unchanged PDF product boundary. No independent human or legal factual review is claimed."
+}

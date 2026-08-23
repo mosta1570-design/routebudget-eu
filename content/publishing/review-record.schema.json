@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://routebudget.eu/content/publishing/review-record.schema.json",
+  "title": "RouteBudget publication approval",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "id", "type", "reviewOperator", "reviewMode", "reviewedAt", "decision", "notes"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^review:[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "type": { "enum": ["migration-baseline", "editorial", "intent-exception", "retirement", "release-integrity"] },
+    "reviewOperator": { "type": "string", "minLength": 2 },
+    "reviewMode": { "enum": ["integrity-snapshot", "automated-with-owner-authorization"] },
+    "reviewedAt": { "type": "string", "format": "date" },
+    "decision": { "enum": ["baseline-snapshot", "approved", "rejected"] },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{7,40}$" },
+    "contentId": { "type": "string", "pattern": "^(guide|calcolatori|confronti|landing)/[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "canonical": { "type": "string", "pattern": "^/it/.+/$" },
+    "contentFingerprint": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "artifactFingerprint": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "ownerAuthorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approvedBy", "approvedAt", "basis"],
+      "properties": {
+        "approvedBy": { "type": "string", "minLength": 2 },
+        "approvedAt": { "type": "string", "format": "date" },
+        "basis": { "type": "string", "minLength": 40 }
+      }
+    },
+    "automatedChecks": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceCoverage": { "const": true },
+        "productClaims": { "const": true },
+        "italianIntent": { "const": true },
+        "seoContracts": { "const": true },
+        "accessibilityContracts": { "const": true },
+        "indexableInventory": { "const": true },
+        "generatedArtifacts": { "const": true },
+        "dependencyClosure": { "const": true }
+      }
+    },
+    "notes": { "type": "string", "minLength": 20 },
+    "pages": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+    },
+    "artifacts": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+    },
+    "intentException": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pages", "contentFingerprints", "rationaleFingerprint"],
+      "properties": {
+        "pages": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^(guide|calcolatori|confronti|landing)/[a-z0-9]+(?:-[a-z0-9]+)*$" }
+        },
+        "contentFingerprints": {
+          "type": "object",
+          "minProperties": 2,
+          "maxProperties": 2,
+          "additionalProperties": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+        },
+        "rationaleFingerprint": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+      }
+    },
+    "dependencyFingerprint": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "dependencyFiles": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+    },
+    "staticArtifacts": {
+      "type": "object",
+      "minProperties": 3,
+      "additionalProperties": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+    },
+    "transitiveArtifacts": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "type": { "const": "migration-baseline" },
+        "reviewMode": { "const": "integrity-snapshot" },
+        "decision": { "const": "baseline-snapshot" }
+      },
+      "required": ["sourceCommit", "pages", "artifacts"]
+    },
+    {
+      "properties": { "type": { "const": "editorial" } },
+      "required": ["contentId", "contentFingerprint", "artifactFingerprint", "ownerAuthorization", "automatedChecks"]
+    },
+    {
+      "properties": { "type": { "const": "intent-exception" } },
+      "required": ["intentException", "ownerAuthorization"]
+    },
+    {
+      "properties": { "type": { "const": "retirement" } },
+      "required": ["contentId", "canonical", "contentFingerprint", "ownerAuthorization"]
+    },
+    {
+      "properties": { "type": { "const": "release-integrity" } },
+      "required": ["dependencyFingerprint", "dependencyFiles", "staticArtifacts", "transitiveArtifacts", "ownerAuthorization", "automatedChecks"]
+    }
+  ]
+}

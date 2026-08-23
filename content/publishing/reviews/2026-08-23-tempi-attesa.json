@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-tempi-attesa",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "guide/tempi-attesa-carico-scarico-autotrasporto",
+  "contentFingerprint": "sha256:3df1f3935b0f0e573c098e7378b25bfdc80b1dd32b71ee05e3de43e150a5bebf",
+  "artifactFingerprint": "sha256:a8ae7ee4ad637465d4068b9a99a285cfa09bec5c6edb6cc439c625bc5ad120df",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated approval covers narrowed topic metadata and preserves the legal boundary. No independent human legal review or legal advice is claimed."
+}

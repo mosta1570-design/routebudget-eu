@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-ricarica-furgone-elettrico",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "calcolatori/quanto-costa-ricaricare-furgone-elettrico",
+  "contentFingerprint": "sha256:358f4552e511d6f8272b4b79a822d653c0c56c4459771e9c7663b9fd20049f59",
+  "artifactFingerprint": "sha256:e3df3a91d9f5be570a953bb6f50a2a3d58db76971bb72e84451732289781dee4",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated checks cover the Italian charging-session intent, official sources, formula fixtures, product boundaries, internal links and generated schema. No independent human specialist review is claimed."
+}

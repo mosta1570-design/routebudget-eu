@@ -6,8 +6,8 @@
   "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
   "eyebrow": "Guida al costo di tratta",
   "published": "2026-08-01",
-  "modified": "2026-08-22",
-  "reviewed": "2026-08-22",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "primaryKeyword": "calcolo costo trasporto",
   "searchIntent": "informational",
   "topics": [
@@ -44,6 +44,8 @@
     "calcolatori:costo-chilometrico-camion",
     "calcolatori:costo-carburante-viaggio",
     "calcolatori:fuel-surcharge-autotrasporto",
+    "calcolatori:tempi-guida-camion",
+    "calcolatori:prezzo-minimo-margine-tratta",
     "landing:app-per-autotrasportatori"
   ],
   "pillar": null,
@@ -82,5 +84,5 @@
   "canonical": "/it/guide/calcolo-costo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunti percorsi contestuali al controllo Excel e al pedaggio A22 verificato, mantenendo il metodo generale distinto dagli approfondimenti specialistici."
+  "changeSummary": "Collegati i nuovi strumenti per durata prudenziale e margine, mantenendo il metodo generale proprietario del calcolo completo della tratta."
 }

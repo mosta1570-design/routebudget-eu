@@ -137,12 +137,13 @@ Con `distanceKm=640`, `emptyReturnKm=120`, `32 L/100 km` e `1,75 €/L`: distanz
 - Il sito non fornisce un prezzo carburante live; l'utente inserisce il prezzo pertinente.
 - CTA: “Completa il costo con pedaggi, autista, usura e margine in RouteBudget”.
 
-## Tool 3 — margine trasporto
+## Tool 3 — prezzo del trasporto e margine
 
-- **URL:** `/it/calcolatori/margine-trasporto/`
-- **Lancio:** Mese 2, P1
-- **Intento:** “calcolatore margine trasporto”, “prezzo con margine”
-- **Guida madre:** `/it/guide/margine-trasporto-vs-ricarico/`
+- **URL:** `/it/calcolatori/prezzo-minimo-margine-tratta/`
+- **Lancio:** 23 agosto 2026, P0
+- **Intento:** “come calcolare il prezzo di un trasporto”, exact Google Suggest IT; secondarie “calcolo prezzo trasporto” e “prezzo minimo tratta camion”
+- **Guida madre:** `/it/guide/calcolo-costo-trasporto/`
+- **Confine:** converte costo completo + margine target in soglia e prezzo; l’analisi di sensibilità resta in `/it/guide/proteggere-margine-tratta/`.
 
 ### Input e formula
 

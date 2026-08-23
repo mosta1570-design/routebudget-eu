@@ -169,3 +169,5 @@ Questa separazione aiuta anche nelle trattative. Se il cliente chiede una riduzi
 - [ ] Il preventivo descrive chiaramente ciò che è incluso.
 
 Un calcolo completo non elimina l’incertezza, ma la rende visibile. Registrare dati, ipotesi e risultato permette di confrontare il preventivo con il consuntivo dopo il viaggio. Prima dell'invio, passa anche dagli [errori nel calcolo della tariffa](/it/guide/errori-calcolo-tariffa-trasporto/): doppio conteggio e chilometri omessi possono sopravvivere a una formula corretta. Il confronto ripetuto rende più affidabili consumo, tempi, quote di usura e costo per chilometro. Per continuare con scenari e PDF, consulta [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/).
+
+Due controlli mirati completano il metodo senza duplicarlo: il [calcolatore dei tempi di guida](/it/calcolatori/tempi-guida-camion/) rende visibile la durata prudenziale; il [calcolatore di prezzo minimo e margine](/it/calcolatori/prezzo-minimo-margine-tratta/) parte dal costo chiuso e distingue margine da ricarico.

@@ -6,8 +6,8 @@
   "description": "Come distinguere attesa e operazioni, applicare la franchigia di 90 minuti e trattare indennizzo, costo interno e prezzo nel preventivo.",
   "eyebrow": "Attese e preventivo",
   "published": "2026-08-12",
-  "modified": "2026-08-12",
-  "reviewed": "2026-08-12",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "primaryKeyword": "indennizzo tempi di attesa carico scarico autotrasporto",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -15,7 +15,7 @@
     "indennizzo autotrasporto",
     "franchigia 90 minuti",
     "costo operativo autista",
-    "preventivo trasporto"
+    "documentazione delle attese"
   ],
   "related": [
     "guide:preventivo-trasporto",
@@ -77,5 +77,5 @@
   "canonical": "/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Nuova guida operativa sulla disciplina delle attese e sulla separazione tra indennizzo, costo interno e prezzo commerciale."
+  "changeSummary": "Ristretto il tema a franchigia, indennizzo, costo e prova delle attese, evitando sovrapposizione con il preventivo di trasporto generale."
 }

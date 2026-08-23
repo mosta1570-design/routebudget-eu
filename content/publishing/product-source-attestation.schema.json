@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://routebudget.eu/content/publishing/product-source-attestation.schema.json",
+  "title": "RouteBudget independent app source attestation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "id", "verifiedAt", "repository", "testRun", "artifacts", "storeListings", "limitations"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "id": { "const": "app-source:3ea946e5" },
+    "verifiedAt": { "type": "string", "format": "date" },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "commit", "remote", "workingTree"],
+      "properties": {
+        "name": { "const": "RouteBudgetEU" },
+        "commit": { "const": "3ea946e5c988aca4da3c778544a5dd6b8391b750" },
+        "remote": { "type": "null" },
+        "workingTree": { "const": "clean-at-verification" }
+      }
+    },
+    "testRun": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command", "passed", "failed"],
+      "properties": {
+        "command": { "const": "npm test" },
+        "passed": { "const": 54 },
+        "failed": { "const": 0 }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "path", "sha256", "contains", "supports"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "path": { "type": "string", "pattern": "^src/.+\\.(?:ts|tsx)$" },
+          "sha256": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+          "contains": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 8 } },
+          "supports": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 3 } }
+        }
+      }
+    },
+    "storeListings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "platform", "url", "observedAt", "version"],
+        "properties": {
+          "id": { "const": "store:ios-app-store-6789717191" },
+          "platform": { "const": "ios" },
+          "url": { "const": "https://apps.apple.com/app/id6789717191" },
+          "observedAt": { "type": "string", "format": "date" },
+          "version": { "const": "1.5.1" }
+        }
+      }
+    },
+    "limitations": { "type": "string", "minLength": 80 }
+  }
+}

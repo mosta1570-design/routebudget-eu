@@ -1,0 +1,137 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-23",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "existing Italian keyword map",
+    "existing Search Console/SERP and official-source records"
+  ],
+  "method": {
+    "interpretation": "These URLs already own documented Italian intents. The 23 August changes only add contextual links or narrow metadata topics; they do not create new intent or factual claims.",
+    "unavailableMetrics": ["monthly_search_volume", "cpc", "keyword_difficulty"],
+    "volumePolicy": "No new volume claim is introduced for maintenance approval."
+  },
+  "candidates": [
+    {
+      "id": "demand:maintenance-calcolo-costo-trasporto",
+      "primaryKeyword": "calcolo costo trasporto",
+      "canonical": "/it/guide/calcolo-costo-trasporto/",
+      "query": "calcolo costo trasporto",
+      "signal": "existing-italian-intent-owner-maintenance",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The pillar owns the complete single-trip cost method; calculators execute narrower numerical tasks and supporting guides explain individual cost components.",
+      "productFit": "A contextual link to the released RouteBudget calculation flow helps readers move from method to a practical estimate.",
+      "productBoundary": "The maintenance adds discovery only and does not claim routing, live tolls, official tariffs or guaranteed profitability.",
+      "sourceUrls": ["https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"]
+    },
+    {
+      "id": "demand:maintenance-costi-autotrasporto",
+      "primaryKeyword": "costi autotrasporto",
+      "canonical": "/it/guide/costi-autotrasporto/",
+      "query": "costi autotrasporto",
+      "signal": "existing-italian-intent-owner-maintenance",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The pillar owns the company-wide cost model. The electric-van calculator owns only one charging session and cannot replace vehicle, labour, kilometre or indirect-cost analysis.",
+      "productFit": "The contextual link isolates a documented electric-energy input before the user returns to RouteBudget's wider cost workflow.",
+      "productBoundary": "The maintenance does not turn indicative MIT values into a tariff, benchmark promise or automatically updated company cost model.",
+      "sourceUrls": ["https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"]
+    },
+    {
+      "id": "demand:maintenance-costo-furgone-per-km",
+      "primaryKeyword": "costo furgone per km",
+      "canonical": "/it/guide/costo-furgone-per-km/",
+      "query": "costo furgone per km",
+      "signal": "existing-gsc-italian-intent-owner-maintenance",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The guide owns complete N1 economics in €/km across vehicle, work, kilometres and empty running. The calculator owns only grid energy, cost and theoretical time for one electric charging session.",
+      "productFit": "A contextual link lets an electric-van operator isolate charging energy before including the relevant input in RouteBudget's released cost breakdown.",
+      "productBoundary": "The update does not turn a charging-session result into universal N1 consumption, a full trip cost, a tariff, tax treatment or charging-route advice.",
+      "sourceUrls": ["https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"]
+    },
+    {
+      "id": "demand:maintenance-preventivo-trasporto-pdf",
+      "primaryKeyword": "preventivo trasporto PDF",
+      "canonical": "/it/guide/preventivo-trasporto-pdf/",
+      "query": "preventivo trasporto PDF",
+      "signal": "existing-italian-intent-owner-metadata-maintenance",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "This support guide owns document structure and presentation; the pillar owns the commercial process and the app landing owns the product decision.",
+      "productFit": "The metadata remains aligned with RouteBudget's released non-binding PDF quote and public store destinations.",
+      "productBoundary": "The PDF is not presented as an invoice, contract, legal template, fiscal document or cloud document archive.",
+      "sourceUrls": ["https://apps.apple.com/app/id6789717191", "https://play.google.com/store/apps/details?id=eu.routebudget.app"]
+    },
+    {
+      "id": "demand:maintenance-proteggere-margine-tratta",
+      "primaryKeyword": "analisi sensibilità margine tratta",
+      "canonical": "/it/guide/proteggere-margine-tratta/",
+      "query": "analisi sensibilità margine tratta",
+      "signal": "existing-italian-intent-owner-maintenance",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The guide owns sensitivity analysis and residual margin after cost and price are known. The calculator exclusively owns coverage threshold, `prezzo minimo tratta camion`, target-margin price and equivalent markup.",
+      "productFit": "A contextual link connects the decision method to RouteBudget's released cost-scenario feature without replacing the explanatory guide.",
+      "productBoundary": "No market tariff, guaranteed profit, accounting result or missing cost is inferred by the guide or calculator.",
+      "sourceUrls": ["https://docs.cargoffer.com/it/docs/company-openapi/calculate-minimum-price-for-freight-transport/"]
+    },
+    {
+      "id": "demand:maintenance-quanto-consuma-furgone",
+      "primaryKeyword": "quanto consuma un furgone",
+      "canonical": "/it/guide/quanto-consuma-un-furgone/",
+      "query": "quanto consuma un furgone",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=quanto%20consuma%20un%20furgone",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "quanto consuma un furgone diesel",
+        "quanto consuma un furgone 9 posti",
+        "quanto consuma un furgone",
+        "quanto consuma un furgone ducato",
+        "quanto consuma un furgone elettrico",
+        "quanto consuma un furgone camperizzato",
+        "quanto consuma un furgone a metano",
+        "quanto consuma un furgone daily",
+        "quanto consuma un furgone frigo",
+        "quanto consuma un furgone cassonato"
+      ],
+      "rawResponse": "[\"quanto consuma un furgone\",[\"quanto consuma un furgone diesel\",\"quanto consuma un furgone 9 posti\",\"quanto consuma un furgone\",\"quanto consuma un furgone ducato\",\"quanto consuma un furgone elettrico\",\"quanto consuma un furgone camperizzato\",\"quanto consuma un furgone a metano\",\"quanto consuma un furgone daily\",\"quanto consuma un furgone frigo\",\"quanto consuma un furgone cassonato\"],[],{\"google:suggestsubtypes\":[[512],[512],[22,30],[22,30],[22,30],[22,30],[22,30],[22,30],[22,30],[22,30]]}]",
+      "signal": "existing-exact-suggest-italian-intent-owner-maintenance",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The guide owns observed and planned road consumption in L/100 km or kWh/100 km. The electric-van calculator owns a separate charging session from capacity, delta SOC, entered losses, price and average grid power.",
+      "productFit": "The contextual link moves from a chosen and documented charging scenario to RouteBudget's released energy estimate without claiming that the app verifies the input.",
+      "productBoundary": "Neither page presents a universal consumption value, WLTP promise, live energy price, charging curve or charging-route plan.",
+      "sourceUrls": ["https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=quanto%20consuma%20un%20furgone", "https://www.fiat.it/professional/modello/ducato-termico"]
+    },
+    {
+      "id": "demand:maintenance-tempi-attesa",
+      "primaryKeyword": "indennizzo tempi di attesa carico scarico autotrasporto",
+      "canonical": "/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
+      "query": "indennizzo tempi di attesa carico scarico autotrasporto",
+      "signal": "existing-italian-legal-operational-owner-metadata-maintenance",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The guide owns the Italian waiting-time rule, evidence and commercial handling; the driving-time calculator does not calculate compensation or contractual rights.",
+      "productFit": "Metadata remains aligned with RouteBudget's PDF quote boundary while the separate calculator only estimates operational time cost.",
+      "productBoundary": "RouteBudget does not create legal proof, interpret a contract, calculate a guaranteed indemnity or replace professional legal review.",
+      "sourceUrls": ["https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25A04106&art.dataPubblicazioneGazzetta=2025-07-19&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1"]
+    },
+    {
+      "id": "demand:maintenance-tempi-guida-riposo",
+      "primaryKeyword": "calcolo tempi di guida e riposo camion",
+      "canonical": "/it/guide/tempi-guida-riposo-camion/",
+      "query": "calcolo tempi di guida e riposo camion",
+      "signal": "existing-italian-serp-task-owner-maintenance",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The guide owns chronology, driver history, tachograph-state distinctions, legal limits, exceptions and caveats. The calculator owns only a simplified duration and driver-time cost estimate from isolated entered hours.",
+      "productFit": "The contextual link supports RouteBudget's released complete-route calculation by turning planned time into an explicit operational input.",
+      "productBoundary": "The calculator does not read tachograph data, detect infringements, model every derogation or guarantee compliance.",
+      "sourceUrls": ["https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231", "https://transport.ec.europa.eu/transport-modes/road/tachograph_en?prefLang=it"]
+    }
+  ]
+}

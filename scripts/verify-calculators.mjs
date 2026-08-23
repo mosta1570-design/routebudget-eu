@@ -2,8 +2,11 @@ import assert from 'node:assert/strict';
 
 import {
   calculateCostPerKm,
+  calculateDrivingTime,
+  calculateElectricVanChargeCost,
   calculateFuelSurcharge,
   calculateFuelTrip,
+  calculateMinimumPriceMargin,
   parseItalianNumber,
 } from '../public/seo/calculators-core.js';
 
@@ -137,6 +140,89 @@ assert.throws(
   () => calculateFuelSurcharge({ baseFreight: 1_000, baseFuelPrice: Number.MIN_VALUE, currentFuelPrice: 1.7, fuelSharePercent: 30 }),
   /at least 0\.01/,
   'sub-cent base fuel price must be rejected before derived values overflow',
+);
+
+const drivingTime = calculateDrivingTime({
+  drivingHours: 9,
+  otherOperationalHours: 1.5,
+  driverHourlyCost: 26,
+});
+
+approximately(drivingTime.breakCount, 1);
+approximately(drivingTime.estimatedBreakHours, 0.75);
+approximately(drivingTime.totalOperationalHours, 11.25);
+approximately(drivingTime.driverCost, 292.5);
+assert.equal(drivingTime.regularDailyLimitExceeded, false);
+assert.equal(drivingTime.extendedDailyLimitExceeded, false);
+
+const continuedDrivingTime = calculateDrivingTime({
+  drivingHours: 9.1,
+  otherOperationalHours: 0,
+  driverHourlyCost: 0,
+});
+approximately(continuedDrivingTime.breakCount, 2);
+approximately(continuedDrivingTime.estimatedBreakHours, 1.5);
+assert.equal(continuedDrivingTime.regularDailyLimitExceeded, true);
+assert.equal(continuedDrivingTime.extendedDailyLimitExceeded, false);
+
+const exactFirstBlock = calculateDrivingTime({
+  drivingHours: 4.5,
+  otherOperationalHours: 0,
+  driverHourlyCost: 26,
+});
+approximately(exactFirstBlock.breakCount, 0);
+approximately(exactFirstBlock.estimatedBreakHours, 0);
+approximately(exactFirstBlock.totalOperationalHours, 4.5);
+
+const exactSecondBlock = calculateDrivingTime({
+  drivingHours: 9,
+  otherOperationalHours: 0,
+  driverHourlyCost: 26,
+});
+approximately(exactSecondBlock.breakCount, 1);
+approximately(exactSecondBlock.estimatedBreakHours, 0.75);
+approximately(exactSecondBlock.totalOperationalHours, 9.75);
+
+const minimumPrice = calculateMinimumPriceMargin({
+  operationalCost: 1_000,
+  targetMarginPercent: 20,
+});
+approximately(minimumPrice.breakEvenPrice, 1_000);
+approximately(minimumPrice.targetPrice, 1_250);
+approximately(minimumPrice.targetProfit, 250);
+approximately(minimumPrice.effectiveMarkupPercent, 25);
+
+assert.throws(
+  () => calculateMinimumPriceMargin({ operationalCost: 1_000, targetMarginPercent: 100 }),
+  /targetMarginPercent/,
+  'a 100 percent margin would create an infinite price',
+);
+
+const electricVanCharge = calculateElectricVanChargeCost({
+  batteryCapacityKWh: 80,
+  initialSocPercent: 20,
+  finalSocPercent: 80,
+  chargingLossPercent: 10,
+  energyPricePerKWh: 0.35,
+  averageGridPowerKw: 11,
+});
+approximately(electricVanCharge.socAddedPercent, 60);
+approximately(electricVanCharge.storedEnergyKWh, 48);
+approximately(electricVanCharge.gridEnergyKWh, 53.3333333333);
+approximately(electricVanCharge.energyLossKWh, 5.3333333333);
+approximately(electricVanCharge.chargeCost, 18.6666666667);
+approximately(electricVanCharge.theoreticalMinutes, 290.9090909091);
+
+assert.throws(
+  () => calculateElectricVanChargeCost({ ...electricVanCharge, batteryCapacityKWh: 80, initialSocPercent: 80, finalSocPercent: 20, chargingLossPercent: 10, energyPricePerKWh: 0.35, averageGridPowerKw: 11 }),
+  /final state of charge/,
+  'final state of charge must exceed initial state of charge',
+);
+
+assert.throws(
+  () => calculateElectricVanChargeCost({ batteryCapacityKWh: 80, initialSocPercent: 20, finalSocPercent: 80, chargingLossPercent: 100, energyPricePerKWh: 0.35, averageGridPowerKw: 11 }),
+  /charging loss/,
+  '100 percent charging loss would create an infinite energy result',
 );
 
 console.log('Calculator fixtures passed.');

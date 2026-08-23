@@ -316,7 +316,14 @@ function validatePage(page, directorySlug) {
     assert(meta.calculatorId === null, `${id}: guide calculatorId must be null`);
   } else if (section === 'calcolatori') {
     assert(meta.kind === 'calculator', `${id}: calculator section requires calculator kind`);
-    assert(['cost-per-km', 'fuel-trip', 'fuel-surcharge'].includes(meta.calculatorId), `${id}: unknown calculatorId`);
+    assert([
+      'cost-per-km',
+      'fuel-trip',
+      'fuel-surcharge',
+      'driving-time',
+      'minimum-price-margin',
+      'electric-van-charge-cost',
+    ].includes(meta.calculatorId), `${id}: unknown calculatorId`);
     assert(typeof meta.pillar === 'string', `${id}: calculator must name a pillar`);
   } else if (section === 'confronti') {
     assert(meta.kind === 'comparison', `${id}: comparison section requires comparison kind`);
@@ -457,12 +464,12 @@ function renderHub(locale, section) {
   const title = isGuides
     ? 'Guide operative per calcolare costi e tariffe di trasporto'
     : isCalculators
-      ? 'Calcolatori camion: costo km, carburante e fuel surcharge'
+      ? 'Strumenti operativi RouteBudget per preparare una tratta'
       : 'Confronti operativi per decidere prezzo e margine';
   const description = isGuides
     ? 'Guide italiane per autisti, padroncini e piccole imprese: costo chilometrico, preventivi, margine, carburante, pedaggi e costi operativi.'
     : isCalculators
-      ? 'Tre calcolatori gratuiti per costo chilometrico camion, carburante della tratta e fuel surcharge. Formule trasparenti e dati elaborati nel browser.'
+      ? `${sectionPages.length} strumenti gratuiti per controllare costi, tempo e prezzo prima di preparare una tratta. Formule trasparenti e dati elaborati nel browser.`
       : 'Confronti trasparenti tra metodi e scenari economici per scegliere una tariffa di trasporto senza classifiche o promesse artificiali.';
   const canonicalPath = hubPath(locale, section);
   const hubSchema = {
@@ -857,6 +864,146 @@ function renderCalculator(page) {
               <p class="rail-label">Dal costo al prezzo sostenibile</p>
               <h3>Completa la tratta in RouteBudget.</h3>
               <p>Aggiungi margine, scenari e preventivo PDF mantenendo insieme tutti i costi della tratta.</p>
+              ${renderStoreBadges(page.locale, 'complete_trip_app', 'after_result')}
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>`;
+  }
+
+  if (page.meta.calculatorId === 'driving-time') {
+    return `<section class="calculator-section" aria-labelledby="calculator-title">
+      <div class="seo-shell calculator-layout">
+        <div class="calculator-intro">
+          <p class="seo-eyebrow">Tempo operativo · stima semplificata</p>
+          <h2 id="calculator-title">Trasforma ore di guida in durata operativa.</h2>
+          <p>Il calcolo aggiunge 45 minuti tra un blocco completo di 4,5 ore e quello successivo, poi somma carico, scarico e altre attività. I dati restano nel browser.</p>
+          <p class="calculator-formula"><strong>Formula</strong><span>guida + altre attività + (interruzioni stimate tra blocchi × 45 min)</span></p>
+        </div>
+        <form class="calculator-form" data-calculator="driving-time" novalidate>
+          <div class="calculator-fields calculator-fields--compact">
+            ${numberField('drivingHours', 'Guida prevista', 'ore', 'es. 8,5', true)}
+            ${numberField('otherOperationalHours', 'Carico, scarico e altre attività (facoltativo)', 'ore', 'es. 1,5', false)}
+            ${numberField('driverHourlyCost', 'Costo orario attribuito (facoltativo)', '€ / ora', 'es. 26', false)}
+          </div>
+          <div class="calculator-form__footer">
+            <p id="calculator-number-format">Formato numeri: virgola per i decimali (4,5). I campi facoltativi vuoti valgono zero; senza costo orario ottieni solo la durata. Il modello stima pause tra blocchi e non verifica il tachigrafo.</p>
+            <div class="calculator-form__actions">
+              <button class="button button--quiet" type="reset">Ricomincia</button>
+              <button class="button button--primary" type="submit">Calcola durata e costo</button>
+            </div>
+          </div>
+          <div id="calculator-error-${page.meta.calculatorId}" class="calculator-error" role="alert" tabindex="-1" hidden></div>
+          <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+          <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
+            <div class="calculator-result__lead"><span>Durata operativa stimata</span><strong data-result="totalOperationalHours">—</strong></div>
+            <dl>
+              <div><dt>Guida inserita</dt><dd data-result="drivingHours">—</dd></div>
+              <div><dt>Interruzioni stimate tra blocchi</dt><dd data-result="breakCount">—</dd></div>
+              <div><dt>Pause stimate</dt><dd data-result="estimatedBreakHours">—</dd></div>
+              <div><dt>Altre attività</dt><dd data-result="otherOperationalHours">—</dd></div>
+              <div><dt>Costo autista attribuito</dt><dd data-result="driverCost">—</dd></div>
+            </dl>
+            <p class="calculator-result__notice" data-result-notice role="status" aria-live="polite" aria-atomic="true" hidden></p>
+            <p>Stima economica semplificata. Il bisogno legale effettivo dipende da ordine delle attività, fine turno, riposi, cronologia del conducente, eccezioni e registrazioni: controlla sempre tachigrafo e regole applicabili.</p>
+            <div class="calculator-result__cta">
+              <p class="rail-label">Dal tempo al costo della tratta</p>
+              <h3>Porta durata, soste e costi in RouteBudget.</h3>
+              <p>Nell’app il tempo operativo entra nel confronto tra costo, prezzo e preventivo PDF della missione.</p>
+              ${renderStoreBadges(page.locale, 'complete_trip_app', 'after_result')}
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>`;
+  }
+
+  if (page.meta.calculatorId === 'minimum-price-margin') {
+    return `<section class="calculator-section" aria-labelledby="calculator-title">
+      <div class="seo-shell calculator-layout">
+        <div class="calculator-intro">
+          <p class="seo-eyebrow">Prezzo tratta · margine trasparente</p>
+          <h2 id="calculator-title">Separa pareggio, margine e ricarico.</h2>
+          <p>Parti dal costo operativo già calcolato. Il margine è calcolato sul prezzo finale e resta distinto dal semplice ricarico applicato al costo.</p>
+          <p class="calculator-formula"><strong>Formula</strong><span>prezzo obiettivo = costo operativo ÷ (1 − margine sul prezzo)</span></p>
+        </div>
+        <form class="calculator-form" data-calculator="minimum-price-margin" novalidate>
+          <div class="calculator-fields calculator-fields--compact">
+            ${numberField('operationalCost', 'Costo operativo della tratta', '€', 'es. 1000', true)}
+            ${numberField('targetMarginPercent', 'Margine obiettivo sul prezzo', '%', 'es. 20', true)}
+          </div>
+          <div class="calculator-form__footer">
+            <p id="calculator-number-format">Formato numeri: virgola per i decimali. Inserisci un margine inferiore al 100%; imposte e voci non comprese nel costo restano escluse.</p>
+            <div class="calculator-form__actions">
+              <button class="button button--quiet" type="reset">Ricomincia</button>
+              <button class="button button--primary" type="submit">Calcola prezzo obiettivo</button>
+            </div>
+          </div>
+          <div id="calculator-error-${page.meta.calculatorId}" class="calculator-error" role="alert" tabindex="-1" hidden></div>
+          <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+          <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
+            <div class="calculator-result__lead"><span>Prezzo obiettivo stimato</span><strong data-result="targetPrice">—</strong></div>
+            <dl>
+              <div><dt>Pareggio operativo</dt><dd data-result="breakEvenPrice">—</dd></div>
+              <div><dt>Margine obiettivo</dt><dd data-result="targetMarginPercent">—</dd></div>
+              <div><dt>Differenza sopra il costo</dt><dd data-result="targetProfit">—</dd></div>
+              <div><dt>Aumento complessivo sul costo iniziale</dt><dd data-result="effectiveMarkupPercent">—</dd></div>
+            </dl>
+            <p>Stima commerciale, non garanzia di utile né indicazione fiscale. Verifica costi completi, IVA, condizioni, rischio di insoluto e prezzo accettabile per il servizio.</p>
+            <div class="calculator-result__cta">
+              <p class="rail-label">Prima di accettare la tratta</p>
+              <h3>Confronta gli scenari dentro RouteBudget.</h3>
+              <p>Usa costo completo, margine e condizioni reali per preparare un preventivo PDF coerente.</p>
+              ${renderStoreBadges(page.locale, 'compare_scenarios_app', 'after_result')}
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>`;
+  }
+
+  if (page.meta.calculatorId === 'electric-van-charge-cost') {
+    return `<section class="calculator-section" aria-labelledby="calculator-title">
+      <div class="seo-shell calculator-layout">
+        <div class="calculator-intro">
+          <p class="seo-eyebrow">Furgone elettrico · singola ricarica</p>
+          <h2 id="calculator-title">Calcola energia, costo e tempo teorico.</h2>
+          <p>Usa capacità della batteria, stato di carica, perdite, prezzo e potenza media realmente disponibili. Nessun valore viene precompilato o inviato a RouteBudget.</p>
+          <p class="calculator-formula"><strong>Formula</strong><span>energia rete = energia accumulata ÷ (1 − perdite)</span></p>
+        </div>
+        <form class="calculator-form" data-calculator="electric-van-charge-cost" novalidate>
+          <div class="calculator-fields calculator-fields--compact">
+            ${numberField('batteryCapacityKWh', 'Capacità utile della batteria', 'kWh', 'es. 80', true)}
+            ${numberField('initialSocPercent', 'Carica iniziale', '%', 'es. 20', true)}
+            ${numberField('finalSocPercent', 'Carica finale desiderata', '%', 'es. 80', true)}
+            ${numberField('chargingLossPercent', 'Perdite di ricarica stimate', '%', 'es. 10', true)}
+            ${numberField('energyPricePerKWh', 'Prezzo energia applicato', '€ / kWh', 'es. 0,35', true)}
+            ${numberField('averageGridPowerKw', 'Potenza media assorbita dalla rete', 'kW', 'es. 11', true)}
+          </div>
+          <div class="calculator-form__footer">
+            <p id="calculator-number-format">Formato numeri: virgola per i decimali. Perdite ammesse: 0–50%. Inserisci valori della batteria, del contratto o della colonnina: la pagina non usa una tariffa media.</p>
+            <div class="calculator-form__actions">
+              <button class="button button--quiet" type="reset">Ricomincia</button>
+              <button class="button button--primary" type="submit">Calcola ricarica</button>
+            </div>
+          </div>
+          <div id="calculator-error-${page.meta.calculatorId}" class="calculator-error" role="alert" tabindex="-1" hidden></div>
+          <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+          <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
+            <div class="calculator-result__lead"><span>Costo stimato della ricarica</span><strong data-result="chargeCost">—</strong></div>
+            <dl>
+              <div><dt>Percentuale aggiunta</dt><dd data-result="socAddedPercent">—</dd></div>
+              <div><dt>Energia accumulata nella batteria</dt><dd data-result="storedEnergyKWh">—</dd></div>
+              <div><dt>Energia prelevata dalla rete</dt><dd data-result="gridEnergyKWh">—</dd></div>
+              <div><dt>Perdite stimate</dt><dd data-result="energyLossKWh">—</dd></div>
+              <div><dt>Tempo teorico alla potenza media</dt><dd data-result="theoreticalMinutes">—</dd></div>
+            </dl>
+            <p>Tempo teorico: non modella curva di ricarica, taper, temperatura, limiti del veicolo o della colonnina, soste e costi a tempo. Verifica sempre ricevuta e potenza media effettiva.</p>
+            <div class="calculator-result__cta">
+              <p class="rail-label">Dalla ricarica al costo della tratta</p>
+              <h3>Porta energia e prezzo in RouteBudget.</h3>
+              <p>Nell’app aggiungi chilometri, pedaggi, tempo, usura, rientro e margine; poi prepara il riepilogo PDF della missione.</p>
               ${renderStoreBadges(page.locale, 'complete_trip_app', 'after_result')}
             </div>
           </section>

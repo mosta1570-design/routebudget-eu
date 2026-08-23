@@ -7,8 +7,8 @@
   "description": "Struttura pratica per trasformare una stima di tratta in un PDF leggibile, distinguendo calcolo interno, offerta commerciale e dati da verificare.",
   "eyebrow": "Dal calcolo al documento",
   "published": "2026-08-01",
-  "modified": "2026-08-21",
-  "reviewed": "2026-08-21",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "preventivo trasporto PDF",
@@ -38,7 +38,7 @@
   "noindex": false,
   "topics": [
     "preventivo PDF",
-    "offerta di trasporto",
+    "controllo del PDF",
     "controllo documenti",
     "scenario di prezzo"
   ],
@@ -60,5 +60,5 @@
       "supports": "Destinazione ufficiale Android e disponibilità del prodotto; le funzioni restano quelle dichiarate nella pagina."
     }
   ],
-  "changeSummary": "Aggiunta una mappa verificata dei campi presenti nel PDF RouteBudget e di quelli da gestire fuori dall'app, mantenendo separato l'intento PDF."
+  "changeSummary": "Ristretto il tema alla struttura e al controllo del PDF, lasciando l'intento generale di offerta alla guida pilastro sul preventivo."
 }

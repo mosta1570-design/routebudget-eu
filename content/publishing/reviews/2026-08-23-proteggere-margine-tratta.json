@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-proteggere-margine-tratta",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "guide/proteggere-margine-tratta",
+  "contentFingerprint": "sha256:5f0225d4da84e2bfefa599010c2e1d906c7f76e762d766c0ffc94fb218340689",
+  "artifactFingerprint": "sha256:fbd2c5bc4811a5d357cc3cbaf201e26c859012addbf1e90f8fc91bf34e11ba77",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated approval covers the new contextual margin-calculator link and intent boundary only. No independent human accounting or factual review is claimed."
+}

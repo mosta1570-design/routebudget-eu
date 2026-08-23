@@ -163,3 +163,5 @@ Archiviare l’origine dei dati è importante quanto il numero. Un importo senza
 - [ ] Preventivo e consuntivo vengono confrontati.
 
 La mappa dei costi diventa utile quando entra nelle decisioni quotidiane: selezione delle tratte, verifica dei prezzi, pianificazione del rientro e lettura del margine. La guida su come [calcolare carburante, pedaggi e autista](/it/guide/calcolare-carburante-pedaggi-autista/) traduce tre voci principali nella singola missione. Aggiornata con metodo, la struttura non promette un risultato, ma impedisce che spese note restino invisibili fino alla fine del mese. [RouteBudget per autotrasportatori e padroncini](/it/app-per-autotrasportatori/) porta gli input supportati nel flusso operativo della tratta.
+
+Per un veicolo commerciale elettrico, il calcolatore su [quanto costa ricaricare un furgone elettrico](/it/calcolatori/quanto-costa-ricaricare-furgone-elettrico/) isola energia di rete, costo e durata teorica di una sessione. Non sostituisce questa mappa aziendale: mezzo, lavoro, percorrenza, rientro e costi indiretti restano fuori.

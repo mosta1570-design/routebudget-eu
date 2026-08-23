@@ -27,19 +27,13 @@ Il margine non può compensare un costo dimenticato. Prima di calcolarlo, verifi
 
 Un costo operativo è sempre legato a ipotesi. Scriverle accanto al calcolo rende più semplice aggiornarlo quando il cliente cambia la richiesta. La checklist sugli [errori nel calcolo della tariffa](/it/guide/errori-calcolo-tariffa-trasporto/) aiuta a trovare voci duplicate o assenti prima dello stress test.
 
-## Ricarico e margine non sono la stessa percentuale
+Per controllare che la base includa famiglie di costo pertinenti, confrontala anche con i [valori indicativi MIT aggiornati a marzo 2026](https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6). Sono riferimenti per l'impresa italiana, non un listino né il prezzo della singola tratta: nello stress test varia i tuoi dati documentati, non trasformare le tabelle in una tariffa universale.
 
-Il ricarico viene applicato sul costo:
+## Questa guida non ricalcola il prezzo da una percentuale
 
-`prezzo = costo × (1 + percentuale di ricarico)`
+Margine sul prezzo e ricarico sul costo usano denominatori diversi, quindi l'impresa deve nominare l'indicatore scelto e mantenere la stessa convenzione tra preventivo e consuntivo. La conversione numerica da costo noto e margine target appartiene però al [calcolatore di prezzo minimo e margine](/it/calcolatori/prezzo-minimo-margine-tratta/), che mostra anche il ricarico equivalente.
 
-Il margine sul prezzo misura invece la quota del prezzo che resta dopo il costo:
-
-`prezzo = costo ÷ (1 - percentuale di margine)`
-
-Con un costo didattico di 1.000 €, un ricarico del 20% porta a 1.200 €. Un margine del 20% sul prezzo porta invece a 1.250 €, perché 250 € rappresentano il 20% di 1.250 €. Gli importi sono illustrativi e non costituiscono una raccomandazione commerciale.
-
-L’impresa deve scegliere quale indicatore usa, nominarlo correttamente e mantenere la convenzione tra calcolo, preventivo e consuntivo.
+Qui il lavoro comincia **dopo** che costo e prezzo sono stati definiti. Lo scopo è cambiare una sola ipotesi operativa alla volta e misurare quanto differenziale rimane, senza trasformare la guida in una seconda calcolatrice.
 
 ## Il punto di pareggio è una soglia, non un obiettivo
 
@@ -129,3 +123,5 @@ L’obiettivo non è giudicare una singola variazione, ma riconoscere schemi. Se
 - [ ] Il consuntivo aggiorna il modello futuro.
 
 Proteggere il margine significa soprattutto rendere visibili le decisioni. Un modello documentato non elimina gli imprevisti e non garantisce un risultato, ma mostra prima della conferma quanto spazio esiste e quali condizioni potrebbero consumarlo.
+
+Se il costo completo è già pronto, il [calcolatore di prezzo minimo e margine della tratta](/it/calcolatori/prezzo-minimo-margine-tratta/) separa soglia di copertura, margine sul prezzo e ricarico equivalente usando esclusivamente i dati inseriti.

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://routebudget.eu/content/publishing/product-features.schema.json",
+  "title": "RouteBudget source-verified product features",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "reviewedAt", "features"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "reviewedAt": { "type": "string", "format": "date" },
+    "features": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["status", "implementationPlatforms", "proof", "distributionEvidenceIds"],
+        "properties": {
+          "status": { "const": "verified-in-source" },
+          "implementationPlatforms": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "enum": ["ios", "android"] }
+          },
+          "proof": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["type", "attestationId", "artifactId"],
+              "properties": {
+                "type": { "const": "app-source-attestation" },
+                "attestationId": { "const": "app-source:3ea946e5" },
+                "artifactId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+              }
+            }
+          },
+          "distributionEvidenceIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^store:[a-z0-9]+(?:-[a-z0-9]+)*$" }
+          }
+        }
+      }
+    }
+  }
+}

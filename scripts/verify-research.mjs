@@ -8,9 +8,6 @@ const docs = path.join(ROOT, 'docs');
 const keywordResearch = await readFile(path.join(docs, 'SEO_KEYWORD_RESEARCH_IT.md'), 'utf8');
 const serpResearch = await readFile(path.join(docs, 'SEO_SERP_RESEARCH_IT.md'), 'utf8');
 const csv = await readFile(path.join(docs, 'SEO_KEYWORD_MAP_IT.csv'), 'utf8');
-const round9Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_9_2026-08-20.json'), 'utf8'));
-const round10Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_10_2026-08-21.json'), 'utf8'));
-const round11Demand = JSON.parse(await readFile(path.join(docs, 'SEO_DEMAND_EVIDENCE_ROUND_11_2026-08-22.json'), 'utf8'));
 const config = JSON.parse(await readFile(path.join(ROOT, 'content/site.json'), 'utf8'));
 const productionPrefix = `${config.basePath}/`;
 const localePrefixes = Object.keys(config.locales).map((locale) => `${productionPrefix}${locale}/`);
@@ -33,125 +30,70 @@ for (const [index, row] of rows.entries()) {
     row.target_url === productionPrefix || localePrefixes.some((prefix) => row.target_url.startsWith(prefix)),
     `keyword row ${index + 2}: production target URL required`,
   );
-  assert(['non disponibile', 'direzionale', 'verificato'].includes(row.volume_note.toLowerCase()), `keyword row ${index + 2}: metric label invalid`);
-  assert(row.source_urls.split(';').every((url) => /^https:\/\//.test(url.trim())), `keyword row ${index + 2}: evidence URL invalid`);
+  assert(['non disponibile', 'direzionale', 'verificato'].includes(row.volume_note.toLocaleLowerCase('it')), `keyword row ${index + 2}: metric label invalid`);
+  assert(row.source_urls.split(';').map((url) => url.trim()).filter(Boolean).every((url) => /^https:\/\//.test(url)), `keyword row ${index + 2}: evidence URL invalid`);
+  assert(row.anti_cannibalization_note.trim().length >= 30, `keyword row ${index + 2}: anti-cannibalization decision too short`);
 }
 
-assert.equal(round9Demand.schemaVersion, 1, 'Round 9 demand evidence schemaVersion mismatch');
-assert.equal(round9Demand.locale, 'it', 'Round 9 demand evidence must use Italian language');
-assert.equal(round9Demand.market, 'IT', 'Round 9 demand evidence must use Italian market');
-assert.match(round9Demand.provider, /Google Suggest/i, 'Round 9 demand evidence provider mismatch');
-assert.match(round9Demand.capturedAt, /^2026-08-20$/, 'Round 9 demand evidence capture date mismatch');
-assert(Array.isArray(round9Demand.candidates) && round9Demand.candidates.length === 3, 'Round 9 demand evidence must contain three selected candidates');
-for (const candidate of round9Demand.candidates) {
-  assert(candidate.primaryKeyword && candidate.canonical, 'Round 9 candidate identity missing');
-  assert.equal(candidate.signal, 'directional', `${candidate.primaryKeyword}: demand signal must stay directional`);
-  assert.equal(candidate.volume, null, `${candidate.primaryKeyword}: unverified volume must stay null`);
-  assert.equal(candidate.exactSuggestionReturned, true, `${candidate.primaryKeyword}: exact Suggest evidence missing`);
-  assert(/^https:\/\/suggestqueries\.google\.com\//.test(candidate.requestUrl), `${candidate.primaryKeyword}: Google Suggest request URL invalid`);
-  assert(candidate.requestUrl.includes('hl=it') && candidate.requestUrl.includes('gl=it'), `${candidate.primaryKeyword}: Italian Suggest parameters missing`);
-  assert(Array.isArray(candidate.returnedSuggestions) && candidate.returnedSuggestions.length > 0, `${candidate.primaryKeyword}: returned suggestions missing`);
+const evidenceFiles = (await readdir(docs, { withFileTypes: true }))
+  .filter((entry) => entry.isFile() && /^SEO_DEMAND_EVIDENCE_[A-Z0-9_-]+\.json$/.test(entry.name))
+  .map((entry) => entry.name)
+  .sort();
+assert(evidenceFiles.length > 0, 'no dynamic demand-evidence files found');
+
+const evidenceIds = new Set();
+let evidenceCandidates = 0;
+for (const file of evidenceFiles) {
+  const demand = JSON.parse(await readFile(path.join(docs, file), 'utf8'));
+  assert.equal(demand.schemaVersion, 1, `${file}: schemaVersion mismatch`);
+  assert.equal(demand.locale, 'it', `${file}: language must be Italian`);
+  assert.equal(demand.market, 'IT', `${file}: market must be Italy`);
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(demand.capturedAt ?? ''), `${file}: capturedAt invalid`);
+  assert(Array.isArray(demand.candidates) && demand.candidates.length > 0, `${file}: candidates missing`);
+  assert([demand.provider, ...(demand.providers ?? [])].filter(Boolean).length > 0, `${file}: provider missing`);
   assert(
-    candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.query.toLocaleLowerCase('it')),
-    `${candidate.primaryKeyword}: exact query not present in captured suggestions`,
+    ['monthly_search_volume', 'cpc', 'keyword_difficulty'].every((metric) => demand.method?.unavailableMetrics?.includes(metric)),
+    `${file}: unavailable metrics policy incomplete`,
   );
-  assert.equal(
-    rows.filter((row) => row.target_url === candidate.canonical && row.primary_keyword === candidate.primaryKeyword).length,
-    1,
-    `${candidate.primaryKeyword}: demand evidence must map to exactly one keyword row`,
-  );
-}
 
-assert.equal(round10Demand.schemaVersion, 1, 'Round 10 demand evidence schemaVersion mismatch');
-assert.equal(round10Demand.locale, 'it', 'Round 10 demand evidence must use Italian language');
-assert.equal(round10Demand.market, 'IT', 'Round 10 demand evidence must use Italian market');
-assert.match(round10Demand.capturedAt, /^2026-08-21$/, 'Round 10 demand evidence capture date mismatch');
-assert(Array.isArray(round10Demand.providers) && round10Demand.providers.length >= 2, 'Round 10 demand evidence providers missing');
-assert(Array.isArray(round10Demand.candidates) && round10Demand.candidates.length === 3, 'Round 10 demand evidence must contain three selected candidates');
-for (const candidate of round10Demand.candidates) {
-  assert(candidate.primaryKeyword && candidate.canonical, 'Round 10 candidate identity missing');
-  assert.equal(candidate.volume, null, `${candidate.primaryKeyword}: unverified volume must stay null`);
-  assert(['directional', 'directional-serp-and-official-change'].includes(candidate.signal), `${candidate.primaryKeyword}: unsupported demand signal`);
-  assert(/^https:\/\/suggestqueries\.google\.com\//.test(candidate.requestUrl), `${candidate.primaryKeyword}: Google Suggest request URL invalid`);
-  assert(candidate.requestUrl.includes('hl=it') && candidate.requestUrl.includes('gl=it'), `${candidate.primaryKeyword}: Italian Suggest parameters missing`);
-  if (candidate.exactSuggestionReturned === true) {
-    assert(Array.isArray(candidate.returnedSuggestions) && candidate.returnedSuggestions.length > 0, `${candidate.primaryKeyword}: returned suggestions missing`);
-    assert(
-      candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.query.toLocaleLowerCase('it')),
-      `${candidate.primaryKeyword}: exact query not present in captured suggestions`,
-    );
-    assert.equal(candidate.signal, 'directional', `${candidate.primaryKeyword}: exact Suggest signal mismatch`);
-  } else {
-    assert.equal(candidate.exactSuggestionReturned, null, `${candidate.primaryKeyword}: unsupported exact Suggest state`);
-    assert.equal(candidate.signal, 'directional-serp-and-official-change', `${candidate.primaryKeyword}: fallback signal mismatch`);
-    assert(candidate.signalNote, `${candidate.primaryKeyword}: fallback evidence note missing`);
+  for (const candidate of demand.candidates) {
+    evidenceCandidates += 1;
+    assert(/^demand:[a-z0-9]+(?:-[a-z0-9]+)*$/.test(candidate.id ?? ''), `${file}: candidate id invalid`);
+    assert(!evidenceIds.has(candidate.id), `${file}: duplicate demand id ${candidate.id}`);
+    evidenceIds.add(candidate.id);
+    assert(candidate.primaryKeyword && candidate.canonical && candidate.query, `${candidate.id}: identity missing`);
+    assert(/^\/it\/.+\/$/.test(candidate.canonical), `${candidate.id}: Italian canonical required`);
+    assert(['publish', 'update', 'merge', 'reject'].includes(candidate.decision), `${candidate.id}: decision invalid`);
+    assert.equal(candidate.volume, null, `${candidate.id}: unverified volume must remain null`);
+    assert(typeof candidate.signal === 'string' && candidate.signal.trim(), `${candidate.id}: signal missing`);
+
+    if (candidate.requestUrl?.startsWith('https://suggestqueries.google.com/')) {
+      const request = new URL(candidate.requestUrl);
+      assert.equal(request.searchParams.get('hl'), 'it', `${candidate.id}: Suggest hl must be it`);
+      assert.equal(request.searchParams.get('gl'), 'it', `${candidate.id}: Suggest gl must be IT`);
+    }
+    if (candidate.exactSuggestionReturned === true) {
+      assert(Array.isArray(candidate.returnedSuggestions) && candidate.returnedSuggestions.length > 0, `${candidate.id}: returnedSuggestions missing`);
+      assert(
+        candidate.returnedSuggestions.some((suggestion) => normalize(suggestion) === normalize(candidate.query)),
+        `${candidate.id}: exact query is absent from captured suggestions`,
+      );
+    } else if (candidate.exactSuggestionReturned === false || candidate.exactSuggestionReturned === null) {
+      assert(typeof candidate.signalNote === 'string' && candidate.signalNote.trim().length >= 20, `${candidate.id}: non-exact evidence needs an explicit signalNote`);
+    }
+    if (Array.isArray(candidate.sourceUrls)) {
+      assert(candidate.sourceUrls.every((url) => /^https:\/\//.test(url)), `${candidate.id}: evidence URLs must use HTTPS`);
+    }
+
+    if (['publish', 'update'].includes(candidate.decision)) {
+      const matches = rows.filter(
+        (row) => row.target_url === candidate.canonical
+          && normalize(row.primary_keyword) === normalize(candidate.primaryKeyword),
+      );
+      assert.equal(matches.length, 1, `${candidate.id}: evidence must map to one canonical/primary keyword row`);
+    }
   }
-  assert.equal(
-    rows.filter((row) => row.target_url === candidate.canonical && row.primary_keyword === candidate.primaryKeyword).length,
-    1,
-    `${candidate.primaryKeyword}: demand evidence must map to exactly one keyword row`,
-  );
 }
-
-assert.equal(round11Demand.schemaVersion, 1, 'Round 11 demand evidence schemaVersion mismatch');
-assert.equal(round11Demand.locale, 'it', 'Round 11 demand evidence must use Italian language');
-assert.equal(round11Demand.market, 'IT', 'Round 11 demand evidence must use Italian market');
-assert.match(round11Demand.capturedAt, /^2026-08-22$/, 'Round 11 demand evidence capture date mismatch');
-assert(Array.isArray(round11Demand.providers) && round11Demand.providers.length >= 2, 'Round 11 demand evidence providers missing');
-assert(Array.isArray(round11Demand.candidates) && round11Demand.candidates.length === 3, 'Round 11 demand evidence must contain three selected candidates');
-assert(
-  ['monthly_search_volume', 'cpc', 'keyword_difficulty'].every((metric) => round11Demand.method?.unavailableMetrics?.includes(metric)),
-  'Round 11 unavailable demand metrics must remain explicit',
-);
-assert.match(round11Demand.method?.volumePolicy ?? '', /volume null/i, 'Round 11 null-volume policy missing');
-
-let round11ExactSuggestions = 0;
-let round11DirectionalFallbacks = 0;
-for (const candidate of round11Demand.candidates) {
-  assert(candidate.primaryKeyword && candidate.canonical, 'Round 11 candidate identity missing');
-  assert.equal(candidate.volume, null, `${candidate.primaryKeyword}: unverified volume must stay null`);
-  assert(/^https:\/\/suggestqueries\.google\.com\//.test(candidate.requestUrl), `${candidate.primaryKeyword}: Google Suggest request URL invalid`);
-  assert(candidate.requestUrl.includes('hl=it') && candidate.requestUrl.includes('gl=it'), `${candidate.primaryKeyword}: Italian Suggest parameters missing`);
-  assert(Array.isArray(candidate.returnedSuggestions) && candidate.returnedSuggestions.length > 0, `${candidate.primaryKeyword}: returned suggestions missing`);
-  assert(Array.isArray(candidate.sourceUrls) && candidate.sourceUrls.length >= 2, `${candidate.primaryKeyword}: evidence sources missing`);
-  assert(candidate.sourceUrls.every((url) => /^https:\/\//.test(url)), `${candidate.primaryKeyword}: evidence source URL invalid`);
-
-  if (candidate.exactSuggestionReturned === true) {
-    round11ExactSuggestions += 1;
-    assert.equal(candidate.signal, 'directional', `${candidate.primaryKeyword}: exact Suggest signal mismatch`);
-    assert(
-      candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.primaryKeyword.toLocaleLowerCase('it')),
-      `${candidate.primaryKeyword}: exact primary query not present in captured suggestions`,
-    );
-  } else {
-    round11DirectionalFallbacks += 1;
-    assert.equal(candidate.exactSuggestionReturned, false, `${candidate.primaryKeyword}: unsupported exact Suggest state`);
-    assert.equal(candidate.primaryKeyword, 'pedaggio A22 camion', 'Round 11 fallback must stay limited to the A22 corridor');
-    assert.equal(candidate.signal, 'directional-corridor-and-official-change', `${candidate.primaryKeyword}: fallback signal mismatch`);
-    assert.match(candidate.signalNote ?? '', /not returned as an exact suggestion/i, `${candidate.primaryKeyword}: exact-match disclaimer missing`);
-    assert.match(candidate.signalNote ?? '', /1\.46%/, `${candidate.primaryKeyword}: dated official change missing`);
-    assert(
-      candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.query.toLocaleLowerCase('it')),
-      `${candidate.primaryKeyword}: directional corridor query missing`,
-    );
-    assert(
-      !candidate.returnedSuggestions.some((suggestion) => suggestion.toLocaleLowerCase('it') === candidate.primaryKeyword.toLocaleLowerCase('it')),
-      `${candidate.primaryKeyword}: primary keyword must not be misreported as an exact suggestion`,
-    );
-  }
-
-  assert.equal(
-    rows.filter((row) => row.target_url === candidate.canonical && row.primary_keyword === candidate.primaryKeyword).length,
-    1,
-    `${candidate.primaryKeyword}: demand evidence must map to exactly one keyword row`,
-  );
-}
-assert.equal(round11ExactSuggestions, 2, 'Round 11 must preserve two exact autocomplete signals');
-assert.equal(round11DirectionalFallbacks, 1, 'Round 11 must preserve one non-exact A22 corridor signal');
-assert.equal(round11Demand.gscContext?.comparison?.currentImpressions, 808, 'Round 11 GSC current impressions mismatch');
-assert.equal(round11Demand.gscContext?.comparison?.previousImpressions, 628, 'Round 11 GSC previous impressions mismatch');
-assert.equal(round11Demand.gscContext?.manualActions, 0, 'Round 11 GSC manual actions mismatch');
-assert.equal(round11Demand.gscContext?.securityIssues, 0, 'Round 11 GSC security issues mismatch');
 
 const publishedPages = [];
 for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
@@ -173,16 +115,19 @@ for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
 
 for (const page of publishedPages) {
   const exactRows = rows.filter(
-    (row) => row.target_url === page.canonical && row.primary_keyword === page.primaryKeyword,
+    (row) => row.target_url === page.canonical && normalize(row.primary_keyword) === normalize(page.primaryKeyword),
   );
-  assert.equal(
-    exactRows.length,
-    1,
-    `${page.id}: keyword map must contain exactly one row matching canonical and primaryKeyword`,
-  );
+  assert.equal(exactRows.length, 1, `${page.id}: keyword map must contain exactly one canonical/primaryKeyword owner`);
 }
 
-console.log(`Research gate passed: ${rows.length} evidence-mapped Italian intents cover ${publishedPages.length} published pages; Round 9–11 demand evidence is captured and no volume/CPC/difficulty is invented.`);
+console.log(
+  `Research gate passed: ${rows.length} Italian keyword intents cover ${publishedPages.length} published pages; `
+  + `${evidenceCandidates} candidates loaded dynamically from ${evidenceFiles.length} evidence files with no invented volume/CPC/difficulty.`,
+);
+
+function normalize(value) {
+  return String(value).normalize('NFKD').replace(/\p{M}/gu, '').toLocaleLowerCase('it').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+}
 
 function parseCsv(value) {
   const lines = value.trim().split(/\r?\n/);

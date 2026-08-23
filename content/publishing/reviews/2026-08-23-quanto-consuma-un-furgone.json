@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-quanto-consuma-un-furgone",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "guide/quanto-consuma-un-furgone",
+  "contentFingerprint": "sha256:d2a302392f1c064484c41c9e5fc3464594f8a2a5605c12a0cd66f0508944aaa9",
+  "artifactFingerprint": "sha256:592240482653c06eac4f8d51b0a02cbd60d3b98efe543ffbdeddce2085f77af7",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated approval covers the new contextual N1-calculator link and maintained consumption boundary. No independent human engineering review is claimed."
+}

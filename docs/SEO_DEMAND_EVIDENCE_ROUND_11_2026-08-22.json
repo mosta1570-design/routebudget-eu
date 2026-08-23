@@ -1,4 +1,5 @@
 {
+  "$schema": "../content/publishing/demand-evidence.schema.json",
   "schemaVersion": 1,
   "capturedAt": "2026-08-22",
   "locale": "it",
@@ -22,6 +23,7 @@
   },
   "candidates": [
     {
+      "id": "demand:round-11-costi-trasporto-excel",
       "primaryKeyword": "calcolo costi trasporto camion excel",
       "canonical": "/it/guide/calcolo-costi-trasporto-camion-excel/",
       "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=calcolo%20costi%20trasporto%20camion%20excel",
@@ -46,6 +48,7 @@
       ]
     },
     {
+      "id": "demand:round-11-prezzo-gasolio",
       "primaryKeyword": "prezzo gasolio autotrasporto",
       "canonical": "/it/guide/prezzo-gasolio-autotrasporto-preventivo/",
       "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=prezzo%20gasolio%20autotrasporto",
@@ -69,6 +72,7 @@
       ]
     },
     {
+      "id": "demand:round-11-pedaggio-a22",
       "primaryKeyword": "pedaggio A22 camion",
       "canonical": "/it/guide/pedaggio-a22-camion-2026/",
       "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=pedaggio%20a22",

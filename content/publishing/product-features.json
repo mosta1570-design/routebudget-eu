@@ -1,0 +1,62 @@
+{
+  "$schema": "./product-features.schema.json",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-23",
+  "features": {
+    "complete-route-calculation": {
+      "status": "verified-in-source",
+      "implementationPlatforms": ["ios", "android"],
+      "proof": [
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "heavy-route-calculation" },
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "n1-route-calculation" }
+      ],
+      "distributionEvidenceIds": ["store:ios-app-store-6789717191"]
+    },
+    "cost-breakdown": {
+      "status": "verified-in-source",
+      "implementationPlatforms": ["ios", "android"],
+      "proof": [
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "heavy-route-calculation" },
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "n1-route-calculation" },
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "quote-breakdown-screen" }
+      ],
+      "distributionEvidenceIds": ["store:ios-app-store-6789717191"]
+    },
+    "cost-scenarios": {
+      "status": "verified-in-source",
+      "implementationPlatforms": ["ios", "android"],
+      "proof": [
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "heavy-route-calculation" },
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "preventivo-template" }
+      ],
+      "distributionEvidenceIds": ["store:ios-app-store-6789717191"]
+    },
+    "fuel-estimate": {
+      "status": "verified-in-source",
+      "implementationPlatforms": ["ios", "android"],
+      "proof": [
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "heavy-route-calculation" },
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "n1-energy" }
+      ],
+      "distributionEvidenceIds": ["store:ios-app-store-6789717191"]
+    },
+    "local-archive": {
+      "status": "verified-in-source",
+      "implementationPlatforms": ["ios", "android"],
+      "proof": [
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "sqlite-persistence" },
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "history-service" }
+      ],
+      "distributionEvidenceIds": ["store:ios-app-store-6789717191"]
+    },
+    "pdf-quote": {
+      "status": "verified-in-source",
+      "implementationPlatforms": ["ios", "android"],
+      "proof": [
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "pdf-service" },
+        { "type": "app-source-attestation", "attestationId": "app-source:3ea946e5", "artifactId": "preventivo-template" }
+      ],
+      "distributionEvidenceIds": ["store:ios-app-store-6789717191"]
+    }
+  }
+}

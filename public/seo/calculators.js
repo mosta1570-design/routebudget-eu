@@ -1,7 +1,10 @@
 import {
   calculateCostPerKm,
+  calculateDrivingTime,
+  calculateElectricVanChargeCost,
   calculateFuelSurcharge,
   calculateFuelTrip,
+  calculateMinimumPriceMargin,
   parseItalianNumber,
 } from './calculators-core.js';
 
@@ -56,6 +59,16 @@ const LIMITS = {
   baseFuelPrice: 100,
   currentFuelPrice: 100,
   fuelSharePercent: 100,
+  drivingHours: 24,
+  otherOperationalHours: 24,
+  operationalCost: 10_000_000,
+  targetMarginPercent: 99.99,
+  batteryCapacityKWh: 500,
+  initialSocPercent: 100,
+  finalSocPercent: 100,
+  chargingLossPercent: 50,
+  energyPricePerKWh: 10,
+  averageGridPowerKw: 1_000,
 };
 
 const MINIMUMS = {
@@ -63,6 +76,12 @@ const MINIMUMS = {
   baseFuelPrice: 0.01,
   currentFuelPrice: 0.01,
   fuelSharePercent: 0.01,
+  operationalCost: 0.01,
+  targetMarginPercent: 0.01,
+  batteryCapacityKWh: 0.01,
+  finalSocPercent: 0.01,
+  energyPricePerKWh: 0.01,
+  averageGridPowerKw: 0.01,
 };
 
 const DECIMAL_FIELDS = new Set([
@@ -75,10 +94,21 @@ const DECIMAL_FIELDS = new Set([
   'baseFuelPrice',
   'currentFuelPrice',
   'fuelSharePercent',
+  'drivingHours',
+  'otherOperationalHours',
+  'operationalCost',
+  'targetMarginPercent',
+  'batteryCapacityKWh',
+  'initialSocPercent',
+  'finalSocPercent',
+  'chargingLossPercent',
+  'energyPricePerKWh',
+  'averageGridPowerKw',
 ]);
 
 for (const form of document.querySelectorAll('[data-calculator]')) {
   let started = false;
+  let completed = false;
   let announcementFrame = null;
 
   form.addEventListener('input', (event) => {
@@ -87,11 +117,23 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
       emit('calculator_start', { calculator_id: form.dataset.calculator });
     }
 
-    const input = event.target instanceof HTMLInputElement ? event.target : null;
-    if (input?.getAttribute('aria-invalid') === 'true') {
+    const input = event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement
+      ? event.target
+      : null;
+    const error = form.querySelector('.calculator-error');
+    const editsInvalidField = input?.getAttribute('aria-invalid') === 'true';
+    const editsRelation = error?.dataset.errorCode === 'invalid_relation'
+      && ['initialSocPercent', 'finalSocPercent'].includes(input?.name);
+
+    if (editsInvalidField) {
       input.removeAttribute('aria-invalid');
-      const errorId = form.querySelector('.calculator-error')?.id;
-      if (errorId) removeDescription(input, errorId);
+      if (error?.id) removeDescription(input, error.id);
+    }
+    if (editsRelation && error?.id) clearInvalidFields(form, error.id);
+    if ((editsInvalidField || editsRelation) && error) {
+      error.hidden = true;
+      error.textContent = '';
+      delete error.dataset.errorCode;
     }
   });
 
@@ -113,23 +155,33 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
 
       error.hidden = true;
       error.textContent = '';
+      delete error.dataset.errorCode;
       populateResult(form, result);
+      updateResultNotice(form, result);
       output.hidden = false;
       announcementFrame = requestAnimationFrame(() => {
         if (status) status.textContent = resultAnnouncement(form.dataset.calculator, result);
         announcementFrame = null;
       });
-      emit('calculator_complete', { calculator_id: form.dataset.calculator });
+      if (!started) {
+        started = true;
+        emit('calculator_start', { calculator_id: form.dataset.calculator });
+      }
+      if (!completed) {
+        completed = true;
+        emit('calculator_complete', { calculator_id: form.dataset.calculator });
+      }
     } catch (calculationError) {
       output.hidden = true;
       error.textContent = calculationError instanceof Error
         ? calculationError.message
         : 'Controlla i valori inseriti.';
+      error.dataset.errorCode = calculationError?.code || 'invalid_value';
       error.hidden = false;
       const invalidInput = typeof calculationError?.fieldName === 'string'
         ? form.elements.namedItem(calculationError.fieldName)
         : null;
-      if (invalidInput instanceof HTMLInputElement) {
+      if (invalidInput instanceof HTMLInputElement || invalidInput instanceof HTMLSelectElement) {
         invalidInput.setAttribute('aria-invalid', 'true');
         addDescription(invalidInput, error.id);
         invalidInput.focus();
@@ -147,8 +199,10 @@ for (const form of document.querySelectorAll('[data-calculator]')) {
     if (announcementFrame !== null) cancelAnimationFrame(announcementFrame);
     announcementFrame = null;
     started = false;
+    completed = false;
     form.querySelector('.calculator-error').hidden = true;
     form.querySelector('.calculator-error').textContent = '';
+    delete form.querySelector('.calculator-error').dataset.errorCode;
     form.querySelector('.calculator-result').hidden = true;
     form.querySelector('.calculator-status').textContent = '';
     clearInvalidFields(form, form.querySelector('.calculator-error').id);
@@ -170,13 +224,22 @@ function removeDescription(input, id) {
 }
 
 function clearInvalidFields(form, errorId) {
-  for (const input of form.querySelectorAll('input[aria-invalid="true"]')) {
+  for (const input of form.querySelectorAll('input[aria-invalid="true"], select[aria-invalid="true"]')) {
     input.removeAttribute('aria-invalid');
     removeDescription(input, errorId);
   }
 }
 
 function resultAnnouncement(calculator, result) {
+  if (calculator === 'driving-time') {
+    return `Calcolo completato. Tempo operativo totale: ${formatHours(result.totalOperationalHours)}. Pause stimate tra blocchi: ${formatHours(result.estimatedBreakHours)}.`;
+  }
+  if (calculator === 'minimum-price-margin') {
+    return `Calcolo completato. Prezzo obiettivo stimato: ${eur.format(result.targetPrice)}.`;
+  }
+  if (calculator === 'electric-van-charge-cost') {
+    return `Calcolo completato. Costo di ricarica stimato: ${eur.format(result.chargeCost)}. Energia prelevata dalla rete: ${decimal.format(result.gridEnergyKWh)} chilowattora.`;
+  }
   if (calculator === 'fuel-surcharge') {
     return `Calcolo completato. Nolo aggiornato stimato: ${eur.format(result.adjustedFreight)}. Adeguamento: ${signedEur.format(result.adjustmentAmount)}.`;
   }
@@ -187,13 +250,22 @@ function resultAnnouncement(calculator, result) {
 }
 
 function calculate(form) {
-  if (form.dataset.calculator === 'cost-per-km') {
-    return calculateCostPerKm(readCostPerKmInput(form));
+  switch (form.dataset.calculator) {
+    case 'cost-per-km':
+      return calculateCostPerKm(readCostPerKmInput(form));
+    case 'fuel-surcharge':
+      return calculateFuelSurcharge(readFuelSurchargeInput(form));
+    case 'fuel-trip':
+      return calculateFuelTrip(readFuelTripInput(form));
+    case 'driving-time':
+      return calculateDrivingTime(readDrivingTimeInput(form));
+    case 'minimum-price-margin':
+      return calculateMinimumPriceMargin(readMinimumPriceMarginInput(form));
+    case 'electric-van-charge-cost':
+      return calculateElectricVanChargeCost(readElectricVanChargeInput(form));
+    default:
+      throw validationError('Calcolatore non supportato.', 'invalid_value');
   }
-  if (form.dataset.calculator === 'fuel-surcharge') {
-    return calculateFuelSurcharge(readFuelSurchargeInput(form));
-  }
-  return calculateFuelTrip(readFuelTripInput(form));
 }
 
 function readCostPerKmInput(form) {
@@ -226,6 +298,42 @@ function readFuelSurchargeInput(form) {
     currentFuelPrice: readNumber(form, 'currentFuelPrice', true, true),
     fuelSharePercent: readNumber(form, 'fuelSharePercent', true, true),
   };
+}
+
+function readDrivingTimeInput(form) {
+  return {
+    drivingHours: readNumber(form, 'drivingHours', true, true),
+    otherOperationalHours: readNumber(form, 'otherOperationalHours', false, false),
+    driverHourlyCost: readNumber(form, 'driverHourlyCost', false, false),
+  };
+}
+
+function readMinimumPriceMarginInput(form) {
+  return {
+    operationalCost: readNumber(form, 'operationalCost', true, true),
+    targetMarginPercent: readNumber(form, 'targetMarginPercent', true, true),
+  };
+}
+
+function readElectricVanChargeInput(form) {
+  const input = {
+    batteryCapacityKWh: readNumber(form, 'batteryCapacityKWh', true, true),
+    initialSocPercent: readNumber(form, 'initialSocPercent', true, false),
+    finalSocPercent: readNumber(form, 'finalSocPercent', true, true),
+    chargingLossPercent: readNumber(form, 'chargingLossPercent', true, false),
+    energyPricePerKWh: readNumber(form, 'energyPricePerKWh', true, true),
+    averageGridPowerKw: readNumber(form, 'averageGridPowerKw', true, true),
+  };
+
+  if (input.finalSocPercent <= input.initialSocPercent) {
+    throw validationError(
+      '“Carica finale desiderata” deve essere superiore alla carica iniziale.',
+      'invalid_relation',
+      'finalSocPercent',
+    );
+  }
+
+  return input;
 }
 
 function readNumber(form, name, required, strictlyPositive) {
@@ -267,13 +375,23 @@ function populateResult(form, result) {
     const target = form.querySelector(`[data-result="${key}"]`);
     if (!target) continue;
 
-    if (key === 'fuelSharePercent') {
+    if (key.endsWith('KWh')) {
+      target.textContent = `${decimal.format(value)} kWh`;
+    } else if (key === 'theoreticalMinutes') {
+      target.textContent = formatChargeDuration(value);
+    } else if (key === 'socAddedPercent') {
+      target.textContent = `${plainPercentage.format(value)}%`;
+    } else if (key === 'breakCount') {
+      target.textContent = String(value);
+    } else if (key.endsWith('Hours')) {
+      target.textContent = formatHours(value);
+    } else if (['fuelSharePercent', 'targetMarginPercent'].includes(key)) {
       target.textContent = `${plainPercentage.format(value)}%`;
     } else if (key.endsWith('Percent')) {
       target.textContent = `${percentage.format(value)}%`;
     } else if (key === 'adjustmentAmount') {
       target.textContent = signedEur.format(value);
-    } else if (['baseFreight', 'adjustedFreight'].includes(key)) {
+    } else if (['baseFreight', 'adjustedFreight', 'breakEvenPrice', 'targetPrice', 'targetProfit'].includes(key)) {
       target.textContent = eur.format(value);
     } else if (key.endsWith('PerKm')) {
       target.textContent = `${eur.format(value)} / km`;
@@ -285,6 +403,44 @@ function populateResult(form, result) {
       target.textContent = `${kilometre.format(value)} km`;
     }
   }
+}
+
+function updateResultNotice(form, result) {
+  const notice = form.querySelector('[data-result-notice]');
+  if (!notice) return;
+
+  if (result.extendedDailyLimitExceeded) {
+    notice.textContent = 'Attenzione: la guida inserita supera 10 ore. Non usare questa stima come autorizzazione a guidare: verifica subito cronologia, estensioni ammesse, riposi e registrazioni del tachigrafo.';
+    notice.dataset.level = 'critical';
+    notice.setAttribute('role', 'alert');
+    notice.setAttribute('aria-live', 'assertive');
+    notice.hidden = false;
+  } else if (result.regularDailyLimitExceeded) {
+    notice.textContent = 'La guida inserita supera 9 ore. L’estensione fino a 10 ore è soggetta a limiti e condizioni: verifica tachigrafo, cronologia del conducente e riposi prima di pianificare.';
+    notice.dataset.level = 'warning';
+    notice.setAttribute('role', 'status');
+    notice.setAttribute('aria-live', 'polite');
+    notice.hidden = false;
+  } else {
+    notice.textContent = '';
+    notice.removeAttribute('data-level');
+    notice.setAttribute('role', 'status');
+    notice.setAttribute('aria-live', 'polite');
+    notice.hidden = true;
+  }
+}
+
+function formatChargeDuration(totalMinutes) {
+  const roundedMinutes = Math.round(totalMinutes);
+  const hours = Math.floor(roundedMinutes / 60);
+  const minutes = roundedMinutes % 60;
+  if (hours === 0) return `${minutes} min`;
+  if (minutes === 0) return `${hours} h`;
+  return `${hours} h ${String(minutes).padStart(2, '0')} min`;
+}
+
+function formatHours(totalHours) {
+  return formatChargeDuration(totalHours * 60);
 }
 
 function emit(event, detail) {

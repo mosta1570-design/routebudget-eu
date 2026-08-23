@@ -1,0 +1,116 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-23",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "Google Suggest hl=it gl=it",
+    "Italian Google SERP review",
+    "official Italian and European sources"
+  ],
+  "method": {
+    "interpretation": "Signals are kept separate: an authenticated GSC snapshot shows one first-party query, Google Suggest confirms exact Italian formulations for two tasks, and Italian-language result pages provide directional context. None is monthly search volume or a traffic forecast.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "Keep volume null unless a dated Italy-specific dataset is available. Suggest and GSC impressions are never converted into monthly volume."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-08-23",
+    "reportWindowLabel": "Ultimi 3 mesi — snapshot dell'interfaccia GSC",
+    "exactStartDate": null,
+    "exactEndDate": null,
+    "querySignals": [
+      {
+        "query": "calcolatore dei tempi di guida",
+        "impressions": 18,
+        "clicks": 0,
+        "averagePosition": 11.78,
+        "interpretation": "Segnale first-party della formulazione transazionale; non volume mensile e non previsione di traffico."
+      }
+    ],
+    "localEvidenceArtifact": "docs/evidence/gsc/2026-08-23-query-snapshot.json",
+    "limitations": [
+      "L'export completo resta fuori dal repository; è salvato un estratto redatto con riga esatta, hash SHA-256 e limiti dichiarati.",
+      "Le date esatte di inizio e fine e il breakdown query-per-pagina non erano inclusi nello snapshot ricevuto.",
+      "Le impressioni dipendono dalla visibilità già ottenuta dal sito e non misurano tutta la domanda italiana."
+    ]
+  },
+  "candidates": [
+    {
+      "id": "demand:round-12-tempi-guida-camion",
+      "primaryKeyword": "calcolatore dei tempi di guida",
+      "canonical": "/it/calcolatori/tempi-guida-camion/",
+      "query": "calcolatore dei tempi di guida",
+      "exactSuggestionReturned": null,
+      "signal": "first-party-gsc-query-and-directional-italian-serp-task",
+      "signalNote": "The authenticated last-three-month GSC export captured on 2026-08-23 contains the exact query `calcolatore dei tempi di guida` with 18 impressions, 0 clicks and average position 11.78. `Per camion` is an editorial product-fit expansion in the page title, not wording observed in GSC. Exact report dates, page split, autocomplete and volume are unavailable; impressions are not monthly search volume.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns a narrow numeric estimate from net driving, other work and 45-minute allowances between calculated driving blocks. The guide owns chronology, driver history, legal distinctions, limits and exceptions.",
+      "productFit": "The operational duration and driver-time cost can be transferred into RouteBudget's released complete-route calculation without claiming tachograph compliance.",
+      "productBoundary": "The web calculator is an estimate, not tachograph analysis, legal advice, infringement detection or a guarantee that a schedule is compliant.",
+      "sourceUrls": [
+        "https://cseautotrasporto.it/calcolatore-tempi-di-guida",
+        "https://www.webfleet.com/it_it/webfleet/lp/driving-time-calculator/",
+        "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A02006R0561-20241231",
+        "https://transport.ec.europa.eu/transport-modes/road/mobility-package-i/driving-rest-times_en"
+      ]
+    },
+    {
+      "id": "demand:round-12-margine-trasporto",
+      "primaryKeyword": "come calcolare il prezzo di un trasporto",
+      "canonical": "/it/calcolatori/prezzo-minimo-margine-tratta/",
+      "query": "come calcolare il prezzo di un trasporto",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=come%20calcolare%20il%20prezzo%20di%20un%20trasporto",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "come calcolare il prezzo di un trasporto"
+      ],
+      "rawResponse": "[\"come calcolare il prezzo di un trasporto\",[\"come calcolare il prezzo di un trasporto\"],[],{\"google:suggestsubtypes\":[[22,30]]}]",
+      "signal": "exact-google-suggest-it-and-official-cost-method",
+      "signalNote": "Google Suggest returned the exact Italian query with hl=it and gl=it on 2026-08-23. Exact wording confirms a real formulation, not monthly search volume, CPC, difficulty or expected traffic. MIT sources establish cost-input families but do not provide a universal transport price.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns `prezzo minimo tratta camion` as the coverage-threshold section and the numeric conversion from known complete cost plus target margin to price and equivalent markup. The guide begins after cost and price are known and owns sensitivity analysis and residual margin.",
+      "productFit": "RouteBudget already presents released price scenarios; the calculator gives a transparent web check before continuing the same margin decision in the app.",
+      "productBoundary": "It does not publish a market tariff, legal minimum, guaranteed profit, customer quote or tax/accounting result and does not infer missing operating costs.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=come%20calcolare%20il%20prezzo%20di%20un%20trasporto",
+        "https://docs.cargoffer.com/it/docs/company-openapi/calculate-minimum-price-for-freight-transport/",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/Legenda.pdf"
+      ]
+    },
+    {
+      "id": "demand:round-12-ricarica-furgone-elettrico",
+      "primaryKeyword": "quanto costa ricaricare un furgone elettrico",
+      "canonical": "/it/calcolatori/quanto-costa-ricaricare-furgone-elettrico/",
+      "query": "quanto costa ricaricare un furgone elettrico",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=quanto%20costa%20ricaricare%20un%20furgone%20elettrico",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "quanto costa ricaricare un furgone elettrico"
+      ],
+      "rawResponse": "[\"quanto costa ricaricare un furgone elettrico\",[\"quanto costa ricaricare un furgone elettrico\"],[],{\"google:suggestsubtypes\":[[512]]}]",
+      "signal": "exact-google-suggest-it-and-official-charging-scope",
+      "signalNote": "Google Suggest returned the exact Italian query with hl=it and gl=it on 2026-08-23. Exact wording confirms formulation, not search volume, CPC, difficulty or expected traffic.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns one electric-van charging session from usable capacity, start/end SOC, entered loss percentage, €/kWh and average grid power. The consumption guide owns kWh/100 km on the road; the cost-per-km guide owns full vehicle economics.",
+      "productFit": "RouteBudget supports an N1 electric profile and an energy-cost input for the complete trip. The web calculator provides a transparent charging-session check before the user documents the relevant energy price in that wider workflow.",
+      "productBoundary": "It does not calculate route consumption, charging stops, live tariffs, charging curves, station availability, battery health, tax treatment or the complete cost of a transport mission.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=quanto%20costa%20ricaricare%20un%20furgone%20elettrico",
+        "https://www.fiat.it/professional/modello/ducato-elettrico/ricarica-rapida",
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj?locale=it",
+        "https://www.arera.it/fileadmin/allegati/faq/faq_veicoli_ele.pdf"
+      ]
+    }
+  ]
+}

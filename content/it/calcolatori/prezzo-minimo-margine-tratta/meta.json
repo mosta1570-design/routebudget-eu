@@ -1,0 +1,67 @@
+{
+  "slug": "prezzo-minimo-margine-tratta",
+  "kind": "calculator",
+  "locale": "it",
+  "status": "published",
+  "title": "Come calcolare il prezzo di un trasporto: margine e soglia",
+  "mobileH1": "Prezzo del trasporto: costo e margine",
+  "description": "Parti dal costo completo della tratta e calcola soglia di copertura, prezzo con margine, differenza sul costo e ricarico equivalente.",
+  "eyebrow": "Calcolo prezzo trasporto",
+  "published": "2026-08-23",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "come calcolare il prezzo di un trasporto",
+  "secondaryKeywords": [
+    "calcolo prezzo trasporto",
+    "calcolo prezzo trasporto merci",
+    "prezzo minimo tratta camion",
+    "margine trasporto vs ricarico"
+  ],
+  "searchIntent": "transactional-commercial",
+  "cluster": "preventivi-trasporto",
+  "topics": [
+    "soglia di copertura costi",
+    "margine sul prezzo",
+    "ricarico sul costo",
+    "differenza fra prezzo e costo"
+  ],
+  "related": [
+    "guide:proteggere-margine-tratta",
+    "guide:preventivo-trasporto",
+    "guide:calcolo-costo-trasporto",
+    "guide:errori-calcolo-tariffa-trasporto",
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:tempi-guida-camion",
+    "landing:app-per-autotrasportatori"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": "minimum-price-margin",
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-scenarios",
+  "translationGroup": "calculator-minimum-price-margin-trip",
+  "canonical": "/it/calcolatori/prezzo-minimo-margine-tratta/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "Aggiornamento del 17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-23",
+      "supports": "Famiglie di costo dell'impresa italiana di autotrasporto e natura indicativa dei valori di riferimento; non fornisce una tariffa universale per la singola tratta."
+    },
+    {
+      "label": "MIT — Legenda dei valori indicativi dei costi di esercizio 2026",
+      "url": "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/Legenda.pdf",
+      "publishedOrUpdated": "Marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-23",
+      "supports": "Istruzioni per scegliere classe e voci pertinenti alla modalità di trasporto, evitando la somma indiscriminata dei riferimenti."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: converte un costo completo in soglia di copertura, prezzo da margine target e ricarico equivalente; non calcola utile netto né svolge analisi di sensibilità."
+}

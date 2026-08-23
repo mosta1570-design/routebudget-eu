@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-tempi-guida-riposo",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "guide/tempi-guida-riposo-camion",
+  "contentFingerprint": "sha256:3074cfc930a29b09f348f234339db757d704189709737dc2f1ab1eb298c23972",
+  "artifactFingerprint": "sha256:0cc8e717a3e861a274f7067a69bd02ebe478a01c67431c8a7048a68b469c4e4f",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated approval covers the new contextual driving-time-calculator link and maintained compliance disclaimer. No independent legal review is claimed."
+}

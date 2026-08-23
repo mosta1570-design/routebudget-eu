@@ -8,8 +8,8 @@
   "description": "Metodo pratico per misurare quanto consuma un furgone diesel o elettrico, stimare una tratta e distinguere dati WLTP, uso reale e ricarica.",
   "eyebrow": "Furgoni · Consumo reale per missione",
   "published": "2026-08-20",
-  "modified": "2026-08-20",
-  "reviewed": "2026-08-20",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "quanto consuma un furgone",
@@ -33,9 +33,9 @@
     "guide:costo-furgone-per-km",
     "guide:quanto-consuma-un-camion",
     "guide:costo-autostrada-furgone",
-    "landing:app-per-autotrasportatori"
+    "calcolatori:quanto-costa-ricaricare-furgone-elettrico"
   ],
-  "relatedCalculator": null,
+  "relatedCalculator": "calcolatori:quanto-costa-ricaricare-furgone-elettrico",
   "pillar": "guide:costi-autotrasporto",
   "calculatorId": null,
   "conversionIntent": "add-trip-costs",
@@ -78,5 +78,5 @@
       "supports": "Ultimo riepilogo disponibile al momento della revisione per una specifica fascia di consumo non domestico; utile come confronto esterno, non come tariffa del singolo operatore."
     }
   ],
-  "changeSummary": "Prima pubblicazione: metodo per misurare e prevedere il consumo reale di furgoni diesel ed elettrici per missione, con profili separati per carico, allestimento e tratta."
+  "changeSummary": "Collegato il calcolatore della singola sessione di ricarica, mantenendo separati consumo su strada in kWh/100 km, energia acquistata e costo aziendale per km."
 }

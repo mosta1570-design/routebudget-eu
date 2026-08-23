@@ -98,6 +98,12 @@ for (const route of [...hubPaths, ...pagePaths]) {
     assert(html.includes('role="status"'), `${route}: calculator status role missing`);
     assert(html.includes('aria-live="polite"'), `${route}: calculator live region missing`);
     assert(html.includes('calcolo locale'), `${route}: local-processing disclosure missing`);
+    if (sourcePage.meta.calculatorId === 'driving-time') {
+      assert(
+        /data-result-notice role="status" aria-live="polite" aria-atomic="true"/.test(html),
+        `${route}: driving-limit notice must be announced to assistive technology`,
+      );
+    }
   }
 }
 
@@ -200,10 +206,23 @@ assert(!/(?:localhost|127\.0\.0\.1|Disallow:\s*\/)/.test(robots), 'robots.txt co
 const eventAdapter = await readFile(path.join(DIST, 'seo/events.js'), 'utf8');
 assert(!/(?:fetch\s*\(|sendBeacon|XMLHttpRequest|gtag\s*\(|fbq\s*\()/.test(eventAdapter), 'event adapter must not send data or load analytics');
 assert(!eventAdapter.includes('path: window.location'), 'event payload must not expose raw page paths');
-for (const eventName of ['content_landing_view', 'store_outbound_click', 'language_select', 'calculator_start', 'calculator_complete', 'calculator_validation_error']) {
+for (const eventName of ['content_landing_view', 'store_outbound_click', 'language_select', 'calculator_start', 'calculator_complete', 'calculator_validation_error', 'pdf_sample_preview', 'pdf_sample_download']) {
   assert(eventAdapter.includes(eventName), `event adapter missing ${eventName}`);
 }
 assert(eventAdapter.includes('content_id'), 'event adapter must use stable content_id');
+assert(eventAdapter.includes('const SCHEMA_VERSION = 2'), 'event adapter schema version must match the canonical v2 contract');
+assert(eventAdapter.includes('REQUIRED_FIELDS'), 'event adapter must reject incomplete payloads');
+for (const calculatorId of ['driving-time', 'minimum-price-margin', 'electric-van-charge-cost']) {
+  assert(eventAdapter.includes(calculatorId), `event adapter missing calculator id ${calculatorId}`);
+}
+
+const calculatorAdapter = await readFile(path.join(DIST, 'seo/calculators.js'), 'utf8');
+assert(calculatorAdapter.includes('let completed = false'), 'calculator completion needs per-form deduplication state');
+assert(calculatorAdapter.includes('if (!completed)'), 'calculator_complete must be emitted once per calculation session');
+assert(calculatorAdapter.includes("completed = false;"), 'calculator reset must start a new calculation session');
+assert((calculatorAdapter.match(/if \(!started\)/g) || []).length >= 2, 'a valid submit must backfill calculator_start when browser autofill skips input events');
+assert(calculatorAdapter.includes('formatChargeDuration'), 'electric-van charge-duration formatting missing');
+assert(calculatorAdapter.includes('updateResultNotice'), 'driving-limit result notice missing');
 
 console.log(`SEO generated gate passed (${SCOPE}): ${sourcePages.length} pages, ${hubPaths.length} hubs, 4 child sitemaps, zero broken links/orphans.`);
 
