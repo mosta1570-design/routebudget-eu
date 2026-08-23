@@ -188,4 +188,4 @@ Italiano resta mercato iniziale. Tradurre solo pagine provate da dati italiani o
 
 ## 12. Uso di automazione o AI
 
-Automazione può aiutare struttura e controlli; non è fonte né revisore. Contenuto resta soggetto a verifica umana, prodotto e linguistica. Documentare uso materiale secondo policy interna; non generare esperienze, autori, dati, citazioni o consenso. Nessuna quota giornaliera: completezza e qualità prevalgono sul numero di pagine.
+Automazione può aiutare struttura e controlli; non è fonte né revisore. Contenuto resta soggetto a verifica umana, prodotto e linguistica. Dichiarare l’assistenza materiale nella nota editoriale visibile e documentarla nel flusso interno; non generare esperienze, autori, dati, citazioni o consenso. Nessuna quota giornaliera: completezza e qualità prevalgono sul numero di pagine.

@@ -6,8 +6,8 @@
   "description": "Come ricavare il costo orario aziendale di un autista camion, leggere i riferimenti 2026 e attribuire correttamente le ore a una tratta.",
   "eyebrow": "Costo del lavoro · Metodo 2026",
   "published": "2026-08-12",
-  "modified": "2026-08-12",
-  "reviewed": "2026-08-12",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "primaryKeyword": "costo orario autista camion",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -59,5 +59,5 @@
   "canonical": "/it/guide/costo-orario-autista-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Nuova guida sul calcolo del costo orario aziendale dell’autista, con riferimenti 2026 e controlli contro il doppio conteggio."
+  "changeSummary": "Chiarito subito che la guida riguarda il costo aziendale dell’autista nel trasporto merci, non servizi NCC o autista privato per passeggeri."
 }

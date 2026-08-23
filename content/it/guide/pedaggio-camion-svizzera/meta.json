@@ -8,8 +8,8 @@
   "description": "Come calcolare il pedaggio camion in Svizzera con TTPCP III: chilometri, peso, classe di emissione, NMTS per veicoli esteri e verifica ufficiale.",
   "eyebrow": "Svizzera · TTPCP III",
   "published": "2026-08-14",
-  "modified": "2026-08-21",
-  "reviewed": "2026-08-21",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "pedaggio camion Svizzera",
@@ -51,7 +51,7 @@
       "url": "https://www.bazg.admin.ch/it/tassa-sul-traffico-pesante-commisurata-alle-prestazioni-ttpcp",
       "publishedOrUpdated": "Contenuto operativo corrente verificato il 21 agosto 2026",
       "geography": "Svizzera e Principato del Liechtenstein",
-      "accessedAt": "2026-08-21",
+      "accessedAt": "2026-08-23",
       "supports": "Ambito della TTPCP, soglia oltre 3,5 t, sistemi NETS, SET e NMTS, registrazione dei veicoli esteri."
     },
     {
@@ -59,25 +59,25 @@
       "url": "https://www.bazg.admin.ch/it/nmts-tassa-registrazione-e-pagamento",
       "publishedOrUpdated": "Contenuto operativo corrente al 14 agosto 2026",
       "geography": "Veicoli immatricolati all'estero in Svizzera",
-      "accessedAt": "2026-08-14",
+      "accessedAt": "2026-08-23",
       "supports": "Registrazione NMTS prima dell'ingresso, dati richiesti, pianificatore e rettifica della corsa."
     },
     {
       "label": "UDSC — TTPCP III nell'ePortal",
-      "url": "https://www.bazg.admin.ch/it/sistema-ttpcp-iii-nell-eportal",
-      "publishedOrUpdated": "Contenuto operativo corrente al 14 agosto 2026",
+      "url": "https://www.bazg.admin.ch/it/onboarding-registrazione-per-i-servizi-digitali-della-dogana-svizzera-nell-eportal",
+      "publishedOrUpdated": "Contenuto operativo corrente verificato il 23 agosto 2026",
       "geography": "Svizzera e veicoli esteri",
-      "accessedAt": "2026-08-14",
+      "accessedAt": "2026-08-23",
       "supports": "Ruolo ePortal, documenti TTPCP e registrazione NETS dei veicoli stranieri."
     },
     {
-      "label": "UDSC — tariffe TTPCP valide dal 1° gennaio 2025",
-      "url": "https://www.bazg.admin.ch/dam/bazg/de/dokumente/abgaben/AVEA/AVAI/G%C3%BCltige%20LSVA-Tarife%20ab%2001.01.25.pdf.download.pdf/G%C3%BCltige%20LSVA-Tarife%20ab%2001.01.2025.pdf",
-      "publishedOrUpdated": "Tariffe valide dal 1° gennaio 2025, verificate il 14 agosto 2026",
+      "label": "UDSC — Regolamento 15-02 TTPCP, dicembre 2025",
+      "url": "https://www.bazg.admin.ch/dam/it/sd-web/kpSj-tYrf6uC/r_15-02-02_%20bestimmungen_lsva%20iii%20v1.1%20IT.pdf",
+      "publishedOrUpdated": "Regolamento 15-02, dicembre 2025, versione 1.1, verificato il 23 agosto 2026",
       "geography": "Svizzera e Principato del Liechtenstein",
-      "accessedAt": "2026-08-14",
-      "supports": "Tariffe ufficiali in centesimi per tonnellata-chilometro, compresa la categoria EURO 6 usata nell'esempio."
+      "accessedAt": "2026-08-23",
+      "supports": "Formula ufficiale della TTPCP, esempio documentale EURO 6 a 2,39 cent./tkm e rinvio alla tariffa corrente."
     }
   ],
-  "changeSummary": "Rimosso il deep link UDSC non più disponibile e consolidati formula e variabili nella pagina TTPCP ufficiale corrente."
+  "changeSummary": "Sostituiti due riferimenti UDSC non più raggiungibili con pagine ufficiali correnti per ePortal e disposizioni TTPCP III."
 }

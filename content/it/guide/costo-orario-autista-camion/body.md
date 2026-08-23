@@ -2,6 +2,8 @@
 
 Il **costo orario autista camion** utile per valutare una tratta non è lo stipendio netto del conducente. È il costo complessivo sostenuto dall’impresa per rendere disponibile quell’ora di lavoro, attribuito con un criterio gestionale coerente. Un metodo pratico parte dal costo annuo completo e lo divide per le ore produttive o ragionevolmente attribuibili alle missioni:
 
+Questa guida riguarda l’autotrasporto merci e il costo del lavoro di un autista dipendente dell’impresa. Non tratta servizi NCC, autista privato per passeggeri o tariffe orarie rivolte al consumatore.
+
 `costo orario aziendale = costo annuo completo dell’autista ÷ ore annue produttive attribuibili`
 
 Per la singola tratta:

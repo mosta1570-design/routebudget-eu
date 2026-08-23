@@ -50,6 +50,17 @@ type HeroVideoChoice = {
   src: string;
 };
 
+type NetworkConnection = {
+  addEventListener?: (type: 'change', listener: () => void) => void;
+  effectiveType?: string;
+  removeEventListener?: (type: 'change', listener: () => void) => void;
+  saveData?: boolean;
+};
+
+function isConstrainedConnection(connection?: NetworkConnection) {
+  return Boolean(connection?.saveData) || ['slow-2g', '2g', '3g'].includes(connection?.effectiveType ?? '');
+}
+
 function selectHeroVideo(): HeroVideoChoice {
   const isMobile = window.matchMedia('(max-width: 767px)').matches;
   const webm = isMobile ? heroMobileWebm : heroDesktopWebm;
@@ -499,9 +510,8 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
   const [storeChooserOpen, setStoreChooserOpen] = useState(false);
-  const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
-  const saveDataEnabled = Boolean(connection?.saveData);
-  const constrainedConnection = saveDataEnabled || ['slow-2g', '2g'].includes(connection?.effectiveType ?? '');
+  const connection = (navigator as Navigator & { connection?: NetworkConnection }).connection;
+  const [constrainedConnection, setConstrainedConnection] = useState(() => isConstrainedConnection(connection));
   const [mediaEnabled, setMediaEnabled] = useState(false);
   const [heroVideo, setHeroVideo] = useState<HeroVideoChoice>(selectHeroVideo);
   const [productRevealEnabled, setProductRevealEnabled] = useState(
@@ -517,6 +527,14 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
   const spotlightFrameRef = useRef<number | null>(null);
   const copy = heroLanguage[locale];
   const badges = STORE_BADGES[locale];
+
+  useEffect(() => {
+    const syncConnection = () => setConstrainedConnection(isConstrainedConnection(connection));
+
+    syncConnection();
+    connection?.addEventListener?.('change', syncConnection);
+    return () => connection?.removeEventListener?.('change', syncConnection);
+  }, [connection]);
 
   useEffect(() => {
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');

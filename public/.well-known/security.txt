@@ -1,0 +1,5 @@
+Contact: mailto:mosta1570@gmail.com
+Expires: 2027-08-22T23:59:59.000Z
+Preferred-Languages: it, en
+Canonical: https://routebudget.eu/.well-known/security.txt
+Policy: https://github.com/mosta1570-design/routebudget-eu/security/policy
