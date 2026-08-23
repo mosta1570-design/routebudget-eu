@@ -3,12 +3,12 @@
   "kind": "guide",
   "locale": "it",
   "status": "published",
-  "title": "Tempi di guida e riposo camion: calcolo del costo tratta",
-  "description": "Metodo pratico per stimare guida, interruzioni, riposi e durata operativa, così da includere correttamente il tempo nel costo di una tratta camion.",
-  "eyebrow": "Durata reale della tratta",
+  "title": "Tempi di guida e riposo camion: regole e sequenza",
+  "description": "Come distinguere guida, altre mansioni, disponibilità, interruzioni e riposi e costruire una timeline da verificare prima della tratta.",
+  "eyebrow": "Regole e timeline del conducente",
   "published": "2026-08-12",
-  "modified": "2026-08-12",
-  "reviewed": "2026-08-12",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "calcolo tempi di guida e riposo camion",
@@ -18,7 +18,7 @@
     "ore guida autista camion",
     "riposo giornaliero autista"
   ],
-  "searchIntent": "informational-commercial",
+  "searchIntent": "informational-regulatory",
   "cluster": "costo-trasporto",
   "topics": [
     "tempi di guida",
@@ -32,9 +32,9 @@
     "guide:calcolare-carburante-pedaggi-autista",
     "guide:costo-orario-autista-camion",
     "guide:tempi-attesa-carico-scarico-autotrasporto",
-    "calcolatori:costo-chilometrico-camion"
+    "calcolatori:tempi-guida-camion"
   ],
-  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "relatedCalculator": "calcolatori:tempi-guida-camion",
   "pillar": "guide:calcolo-costo-trasporto",
   "calculatorId": null,
   "conversionIntent": "complete-trip",
@@ -57,5 +57,5 @@
       "url": "https://www.ela.europa.eu/en/news/driving-and-rest-rules-and-compulsory-tachographs-apply-light-commercial-vehicles-cross-border"
     }
   ],
-  "changeSummary": "Prima pubblicazione: metodo prudente per trasformare guida, interruzioni, riposi e altre attività in durata e costo di tratta."
+  "changeSummary": "Ristretta la guida a regole, stati tachigrafici, sequenza, storia del conducente ed eccezioni; durata e costo numerici da ore isolate appartengono al calcolatore."
 }

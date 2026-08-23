@@ -1,0 +1,155 @@
+{
+  "$schema": "./publication-manifest.schema.json",
+  "schemaVersion": 1,
+  "locale": "it",
+  "market": "IT",
+  "baselineReviewId": "review:baseline-main-a952269",
+  "releaseIntegrityApprovalId": "review:2026-08-23-release-integrity",
+  "staticArtifacts": {
+    "/": "sha256:daf484597adbe1b83ef4cc909040a50e6a80cea9f99091bd5e34705183457467",
+    "/it/calcolatori/": "sha256:0c8741dd4501cf52a894d33d1a204f300a49285d06b37855a17a7936c5a7606f",
+    "/it/guide/": "sha256:2ba0b4f25ddbe972ca1cc5b5e09f82661db2cf3f808ba4ac234bc5c65e493d00",
+    "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
+    "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
+  },
+  "records": [
+    {
+      "contentId": "guide/calcolo-costo-trasporto",
+      "canonical": "/it/guide/calcolo-costo-trasporto/",
+      "audienceMarket": "IT",
+      "changeScope": "metadata-or-links",
+      "intentOwner": "calcolo costo trasporto",
+      "demandEvidenceId": "demand:maintenance-calcolo-costo-trasporto",
+      "approvalId": "review:2026-08-23-calcolo-costo-trasporto",
+      "productProofIds": ["complete-route-calculation"],
+      "primarySourceUrls": []
+    },
+    {
+      "contentId": "guide/costi-autotrasporto",
+      "canonical": "/it/guide/costi-autotrasporto/",
+      "audienceMarket": "IT",
+      "changeScope": "metadata-or-links",
+      "intentOwner": "costi autotrasporto",
+      "demandEvidenceId": "demand:maintenance-costi-autotrasporto",
+      "approvalId": "review:2026-08-23-costi-autotrasporto",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": []
+    },
+    {
+      "contentId": "guide/costo-furgone-per-km",
+      "canonical": "/it/guide/costo-furgone-per-km/",
+      "audienceMarket": "IT",
+      "changeScope": "metadata-or-links",
+      "intentOwner": "costo furgone per km",
+      "demandEvidenceId": "demand:maintenance-costo-furgone-per-km",
+      "approvalId": "review:2026-08-23-costo-furgone-per-km",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": []
+    },
+    {
+      "contentId": "guide/preventivo-trasporto-pdf",
+      "canonical": "/it/guide/preventivo-trasporto-pdf/",
+      "audienceMarket": "IT",
+      "changeScope": "metadata-or-links",
+      "intentOwner": "preventivo trasporto PDF",
+      "demandEvidenceId": "demand:maintenance-preventivo-trasporto-pdf",
+      "approvalId": "review:2026-08-23-preventivo-trasporto-pdf",
+      "productProofIds": ["pdf-quote"],
+      "primarySourceUrls": []
+    },
+    {
+      "contentId": "guide/proteggere-margine-tratta",
+      "canonical": "/it/guide/proteggere-margine-tratta/",
+      "audienceMarket": "IT",
+      "changeScope": "substantive-update",
+      "intentOwner": "analisi sensibilità margine tratta",
+      "demandEvidenceId": "demand:maintenance-proteggere-margine-tratta",
+      "approvalId": "review:2026-08-23-proteggere-margine-tratta",
+      "productProofIds": ["cost-scenarios"],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "contentId": "guide/quanto-consuma-un-furgone",
+      "canonical": "/it/guide/quanto-consuma-un-furgone/",
+      "audienceMarket": "IT",
+      "changeScope": "metadata-or-links",
+      "intentOwner": "quanto consuma un furgone",
+      "demandEvidenceId": "demand:maintenance-quanto-consuma-furgone",
+      "approvalId": "review:2026-08-23-quanto-consuma-un-furgone",
+      "productProofIds": ["fuel-estimate"],
+      "primarySourceUrls": []
+    },
+    {
+      "contentId": "guide/tempi-attesa-carico-scarico-autotrasporto",
+      "canonical": "/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
+      "audienceMarket": "IT",
+      "changeScope": "metadata-or-links",
+      "intentOwner": "indennizzo tempi di attesa carico scarico autotrasporto",
+      "demandEvidenceId": "demand:maintenance-tempi-attesa",
+      "approvalId": "review:2026-08-23-tempi-attesa",
+      "productProofIds": ["pdf-quote"],
+      "primarySourceUrls": []
+    },
+    {
+      "contentId": "guide/tempi-guida-riposo-camion",
+      "canonical": "/it/guide/tempi-guida-riposo-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "substantive-update",
+      "intentOwner": "calcolo tempi di guida e riposo camion",
+      "demandEvidenceId": "demand:maintenance-tempi-guida-riposo",
+      "approvalId": "review:2026-08-23-tempi-guida-riposo",
+      "productProofIds": ["complete-route-calculation"],
+      "primarySourceUrls": [
+        "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231",
+        "https://transport.ec.europa.eu/transport-modes/road/tachograph_en?prefLang=it"
+      ]
+    },
+    {
+      "contentId": "calcolatori/quanto-costa-ricaricare-furgone-elettrico",
+      "canonical": "/it/calcolatori/quanto-costa-ricaricare-furgone-elettrico/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "quanto costa ricaricare un furgone elettrico",
+      "demandEvidenceId": "demand:round-12-ricarica-furgone-elettrico",
+      "approvalId": "review:2026-08-23-ricarica-furgone-elettrico",
+      "productProofIds": ["fuel-estimate"],
+      "primarySourceUrls": [
+        "https://www.fiat.it/professional/modello/ducato-elettrico/ricarica-rapida",
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj?locale=it",
+        "https://www.arera.it/fileadmin/allegati/faq/faq_veicoli_ele.pdf"
+      ]
+    },
+    {
+      "contentId": "calcolatori/prezzo-minimo-margine-tratta",
+      "canonical": "/it/calcolatori/prezzo-minimo-margine-tratta/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "come calcolare il prezzo di un trasporto",
+      "demandEvidenceId": "demand:round-12-margine-trasporto",
+      "approvalId": "review:2026-08-23-margine-trasporto",
+      "productProofIds": ["cost-scenarios"],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/Legenda.pdf"
+      ]
+    },
+    {
+      "contentId": "calcolatori/tempi-guida-camion",
+      "canonical": "/it/calcolatori/tempi-guida-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "calcolatore dei tempi di guida",
+      "demandEvidenceId": "demand:round-12-tempi-guida-camion",
+      "approvalId": "review:2026-08-23-tempi-guida-camion",
+      "productProofIds": ["complete-route-calculation"],
+      "primarySourceUrls": [
+        "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A02006R0561-20241231",
+        "https://transport.ec.europa.eu/transport-modes/road/mobility-package-i/driving-rest-times_en"
+      ]
+    }
+  ],
+  "intentExceptions": [],
+  "retirements": []
+}

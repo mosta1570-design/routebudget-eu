@@ -151,3 +151,5 @@ Questa separazione è utile: consumo risponde a “quanta energia servirà”; l
 - [ ] PDF conservato insieme alle ipotesi usate.
 
 Sapere quanto consuma un furgone significa costruire un dato verificabile, non trovare una media rassicurante. Misura il mezzo nelle sue missioni, separa diesel ed elettrico, assegna un profilo ad allestimento e carico, quindi applica distanza e prezzo della tratta futura. Il risultato non sarà una promessa: sarà un'ipotesi leggibile che impresa, autista e cliente possono controllare.
+
+Per un furgone elettrico, consumo della missione e sessione di ricarica restano due misure diverse. Quando conosci capacità, SOC iniziale e finale, perdite, prezzo e potenza media, usa il calcolatore su [quanto costa ricaricare un furgone elettrico](/it/calcolatori/quanto-costa-ricaricare-furgone-elettrico/) per stimare energia dalla rete, costo e durata teorica. Non usare quel risultato come sostituto dei kWh/100 km su strada.

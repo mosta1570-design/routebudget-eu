@@ -1,0 +1,81 @@
+{
+  "$schema": "../product-source-attestation.schema.json",
+  "schemaVersion": 1,
+  "id": "app-source:3ea946e5",
+  "verifiedAt": "2026-08-23",
+  "repository": {
+    "name": "RouteBudgetEU",
+    "commit": "3ea946e5c988aca4da3c778544a5dd6b8391b750",
+    "remote": null,
+    "workingTree": "clean-at-verification"
+  },
+  "testRun": { "command": "npm test", "passed": 54, "failed": 0 },
+  "artifacts": [
+    {
+      "id": "heavy-route-calculation",
+      "path": "src/hooks/useRouteCalc.ts",
+      "sha256": "sha256:b52dc095e9a2000fc743a5be6d702acbbaf1ff94e89444542edc8f0226fa1300",
+      "contains": ["fuelCostCents", "recommendedPriceCents", "idealPriceCents"],
+      "supports": ["complete-route-calculation", "cost-breakdown", "cost-scenarios", "fuel-estimate"]
+    },
+    {
+      "id": "n1-route-calculation",
+      "path": "src/services/n1RouteCalculation.ts",
+      "sha256": "sha256:2ea8a5671376f07d793dec6bb1969660d83e99615cc82235e13480ff2730b445",
+      "contains": ["energyCostCents", "recommendedPriceCents", "vehicleCategory"],
+      "supports": ["complete-route-calculation", "cost-breakdown", "cost-scenarios", "fuel-estimate"]
+    },
+    {
+      "id": "quote-breakdown-screen",
+      "path": "src/screens/QuoteScreen.tsx",
+      "sha256": "sha256:8a122ccd6ff3693d33a283adf72170ff7c7f042180a481aca7ef39b03138fd88",
+      "contains": ["totalOperationalCostCents", "energyCostCents", "fuelCostCents"],
+      "supports": ["cost-breakdown"]
+    },
+    {
+      "id": "n1-energy",
+      "path": "src/services/n1Energy.ts",
+      "sha256": "sha256:50e4d02d0da2c7345b0e8511abb4beea94894a5398480f218efc694fa42dad9c",
+      "contains": ["totalCostCents", "returnCostCents"],
+      "supports": ["fuel-estimate"]
+    },
+    {
+      "id": "sqlite-persistence",
+      "path": "src/services/persistenceService.ts",
+      "sha256": "sha256:d76fd4bd5c58c8b4c44af11af58377c05612c5f197aa81e4b3fdef316e8efbb6",
+      "contains": ["CREATE TABLE IF NOT EXISTS routes_history"],
+      "supports": ["local-archive"]
+    },
+    {
+      "id": "history-service",
+      "path": "src/services/historyService.ts",
+      "sha256": "sha256:effc9368952635904dee33bb5272c9601fdc77b1cea5a5063942d2b496e9e6b3",
+      "contains": ["saveHistoryEntry", "SELECT * FROM routes_history"],
+      "supports": ["local-archive"]
+    },
+    {
+      "id": "pdf-service",
+      "path": "src/services/pdfService.ts",
+      "sha256": "sha256:d5962be54a5e374d7bf6dd8374f634390e6897c19994b2c9e8d9344b4759cb7e",
+      "contains": ["Print.printToFileAsync", "Sharing.shareAsync"],
+      "supports": ["pdf-quote"]
+    },
+    {
+      "id": "preventivo-template",
+      "path": "src/services/preventivoTemplate.ts",
+      "sha256": "sha256:2c84b64c26c6a535723519cdd86f6d92e3bcc75d4a2898b44ba3f3bbe0862120",
+      "contains": ["minimum: 'Minimo'", "recommended: 'Consigliato'", "ideal: 'Ideale'"],
+      "supports": ["pdf-quote", "cost-scenarios", "cost-breakdown"]
+    }
+  ],
+  "storeListings": [
+    {
+      "id": "store:ios-app-store-6789717191",
+      "platform": "ios",
+      "url": "https://apps.apple.com/app/id6789717191",
+      "observedAt": "2026-08-23",
+      "version": "1.5.1"
+    }
+  ],
+  "limitations": "This is a pinned local source-and-test attestation, not proof of an Android store release. Only the listed iOS App Store page was independently observed; Android is described solely as an implementation platform."
+}

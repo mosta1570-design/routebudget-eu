@@ -7,8 +7,8 @@
   "description": "Come calcolare il costo di un furgone per km con spese fisse, variabili, ore, vuoti e chilometri fatturabili, senza usare tariffe camion fuori contesto.",
   "eyebrow": "Furgoni N1 · Costo operativo",
   "published": "2026-08-11",
-  "modified": "2026-08-20",
-  "reviewed": "2026-08-20",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "primaryKeyword": "costo furgone per km",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -22,7 +22,7 @@
     "guide:quanto-consuma-un-furgone",
     "guide:costo-autostrada-furgone",
     "guide:tachigrafo-furgoni-2026",
-    "landing:app-per-autotrasportatori"
+    "calcolatori:quanto-costa-ricaricare-furgone-elettrico"
   ],
   "calculatorId": null,
   "pillar": "guide:costi-autotrasporto",
@@ -55,10 +55,10 @@
     "calcolo costi trasporto furgone"
   ],
   "cluster": "costi-autotrasporto",
-  "relatedCalculator": null,
+  "relatedCalculator": "calcolatori:quanto-costa-ricaricare-furgone-elettrico",
   "appFeature": "cost-breakdown",
   "canonical": "/it/guide/costo-furgone-per-km/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Rimosso il collegamento improprio al calcolatore camion e costruito il percorso N1 tra consumo, autostrada, tachigrafo e pagina prodotto."
+  "changeSummary": "Collegata la sessione di ricarica elettrica come sola voce energetica; questa guida resta proprietaria del costo N1 completo in €/km, storico e preventivo."
 }

@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-margine-trasporto",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "calcolatori/prezzo-minimo-margine-tratta",
+  "contentFingerprint": "sha256:8bf1fa70a3e4fe5d8232671383a166b43e22f3ccd944f22d96190ac5bcad6087",
+  "artifactFingerprint": "sha256:c80145427dbc1a2eba4814d990af322aa5a3dd4360b76d30172ed2869fe71ec3",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated checks cover margin formula fixtures, Italian intent, official cost-source metadata, product boundaries, links and schema. No independent accounting review is claimed."
+}

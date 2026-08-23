@@ -6,8 +6,8 @@
   "description": "Come stressare una stima di tratta variando carburante, attese, itinerario e ritorno a vuoto per capire quanto margine resta.",
   "eyebrow": "Stress test della tratta",
   "published": "2026-08-01",
-  "modified": "2026-08-01",
-  "reviewed": "2026-08-01",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "primaryKeyword": "analisi sensibilità margine tratta",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -21,25 +21,35 @@
     "guide:preventivo-trasporto",
     "guide:tariffe-trazionisti",
     "guide:errori-calcolo-tariffa-trasporto",
-    "calcolatori:costo-chilometrico-camion"
+    "calcolatori:prezzo-minimo-margine-tratta"
   ],
   "calculatorId": null,
   "pillar": "guide:calcolo-costo-trasporto",
   "conversionIntent": "protect-margin",
   "translationGroup": "proteggere-margine-tratta",
-  "sources": [],
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "Aggiornamento del 17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-23",
+      "supports": "Famiglie di costo e natura indicativa dei riferimenti per l'impresa italiana; le tabelle non costituiscono una tariffa universale per la singola tratta."
+    }
+  ],
   "status": "published",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "secondaryKeywords": [
     "margine trasporto",
-    "prezzo minimo tratta"
+    "stress test costo tratta",
+    "margine residuo trasporto"
   ],
   "cluster": "margini-e-tariffe",
-  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
   "appFeature": "cost-scenarios",
   "canonical": "/it/guide/proteggere-margine-tratta/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Schema editoriale e relazioni SEO normalizzati per il lancio italiano."
+  "changeSummary": "Ristretta la guida all'analisi di sensibilità e al margine residuo; formula, soglia di copertura e prezzo da margine target appartengono al calcolatore dedicato."
 }

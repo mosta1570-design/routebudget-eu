@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-costo-furgone-per-km",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "guide/costo-furgone-per-km",
+  "contentFingerprint": "sha256:d65048fac489887d641a9dabf0d1fa5716d2439bcc192c74c07dc4c14c39349b",
+  "artifactFingerprint": "sha256:5f0900ea092968c30889b69fc7e91600915092065af91e9a17fd493f9229f92e",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated approval covers the new contextual N1-calculator link and its topic/relationship metadata only. No independent human factual review is claimed."
+}

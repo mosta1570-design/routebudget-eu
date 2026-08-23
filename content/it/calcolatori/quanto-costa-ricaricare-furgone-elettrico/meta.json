@@ -1,0 +1,73 @@
+{
+  "slug": "quanto-costa-ricaricare-furgone-elettrico",
+  "kind": "calculator",
+  "locale": "it",
+  "status": "published",
+  "title": "Quanto costa ricaricare un furgone elettrico? Calcolatore",
+  "mobileH1": "Costo ricarica furgone elettrico",
+  "description": "Inserisci batteria, stato di carica, perdite, prezzo per kWh e potenza media per stimare energia dalla rete, costo e durata teorica della sessione.",
+  "eyebrow": "Calcolatore ricarica furgone elettrico",
+  "published": "2026-08-23",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "quanto costa ricaricare un furgone elettrico",
+  "secondaryKeywords": [
+    "calcolo costo ricarica furgone elettrico",
+    "kWh ricarica furgone elettrico",
+    "tempo ricarica furgone elettrico",
+    "costo ricarica van elettrico"
+  ],
+  "searchIntent": "transactional-informational",
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "costo sessione di ricarica",
+    "energia prelevata dalla rete",
+    "stato di carica batteria",
+    "perdite di ricarica",
+    "durata teorica"
+  ],
+  "related": [
+    "guide:quanto-consuma-un-furgone",
+    "guide:costo-furgone-per-km",
+    "guide:costi-autotrasporto",
+    "landing:app-per-autotrasportatori"
+  ],
+  "relatedCalculator": null,
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": "electric-van-charge-cost",
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "fuel-estimate",
+  "translationGroup": "calculator-electric-van-charge-cost",
+  "canonical": "/it/calcolatori/quanto-costa-ricaricare-furgone-elettrico/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Fiat Professional — ricarica E-Ducato",
+      "url": "https://www.fiat.it/professional/modello/ducato-elettrico/ricarica-rapida",
+      "publishedOrUpdated": "Pagina tecnica corrente verificata il 23 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-23",
+      "supports": "Capacità e potenza di ricarica dipendono dalla versione; i tempi dichiarati valgono in condizioni specifiche e la durata effettiva varia con stazione e condizioni d'uso."
+    },
+    {
+      "label": "EUR-Lex — Regolamento (UE) 2023/1804 sulle infrastrutture per combustibili alternativi",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1804/oj?locale=it",
+      "publishedOrUpdated": "Testo ufficiale consultato il 23 agosto 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-23",
+      "supports": "Gli obblighi di trasparenza dei prezzi ad hoc nei punti pubblici variano secondo caratteristiche e data del punto; l'utente deve verificare le componenti mostrate e l'applicabilità della regola."
+    },
+    {
+      "label": "ARERA — costi di ricarica e tariffe elettriche",
+      "url": "https://www.arera.it/fileadmin/allegati/faq/faq_veicoli_ele.pdf",
+      "publishedOrUpdated": "FAQ istituzionale consultata il 23 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-23",
+      "supports": "Le condizioni economiche della ricarica possono basarsi su energia, tempo, abbonamento o più componenti; un solo prezzo per kWh non descrive necessariamente il conto finale."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: calcolo isolato di una sessione di ricarica per furgone elettrico da capacità, delta SOC, perdite, prezzo e potenza media, distinto da consumo per 100 km e costo completo del mezzo."
+}

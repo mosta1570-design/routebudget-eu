@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-costi-autotrasporto",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "guide/costi-autotrasporto",
+  "contentFingerprint": "sha256:6b54b0a440aeb294ecc18327b0dd23316c2dabcf021f7ccd8b75b7e889904485",
+  "artifactFingerprint": "sha256:d2ec605068160d8676c82d701096c93e42f8f9974c3642cc7940d9ac693846a3",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated approval covers the new contextual N1-calculator link and metadata integrity only. No independent human or specialist factual review is claimed."
+}

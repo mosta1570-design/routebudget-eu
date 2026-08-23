@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-tempi-guida-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "calcolatori/tempi-guida-camion",
+  "contentFingerprint": "sha256:ae7d5ba1f8e4593c7a46721364f51ddfb1a55ea9d9237154bda041f332200471",
+  "artifactFingerprint": "sha256:e43d16153e8cbfe3162206b792c748dc474e13f86d4168e84a0521cd89541c5b",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated checks cover duration formula fixtures, Italian intent, EU source metadata, product boundaries, links and generated schema. No independent legal or tachograph review is claimed."
+}

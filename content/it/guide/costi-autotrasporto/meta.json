@@ -6,8 +6,8 @@
   "description": "Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.",
   "eyebrow": "Economia dell’autotrasporto",
   "published": "2026-08-01",
-  "modified": "2026-08-13",
-  "reviewed": "2026-08-13",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
   "primaryKeyword": "costi autotrasporto",
   "searchIntent": "informational",
   "topics": [
@@ -31,6 +31,7 @@
     "guide:errori-calcolo-tariffa-trasporto",
     "calcolatori:costo-chilometrico-camion",
     "calcolatori:fuel-surcharge-autotrasporto",
+    "calcolatori:quanto-costa-ricaricare-furgone-elettrico",
     "landing:app-per-autotrasportatori"
   ],
   "pillar": null,
@@ -69,5 +70,5 @@
   "canonical": "/it/guide/costi-autotrasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunti approfondimenti separati su tabelle MIT 2026 e obbligo tachigrafo per i furgoni transfrontalieri interessati."
+  "changeSummary": "Collegata la nuova stima transazionale N1 alla mappa generale dei costi, lasciando diesel, elettrico e singola missione al calcolatore dedicato."
 }

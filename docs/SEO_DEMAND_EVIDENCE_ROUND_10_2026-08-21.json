@@ -1,4 +1,5 @@
 {
+  "$schema": "../content/publishing/demand-evidence.schema.json",
   "schemaVersion": 1,
   "capturedAt": "2026-08-21",
   "locale": "it",
@@ -22,6 +23,7 @@
   },
   "candidates": [
     {
+      "id": "demand:round-10-pedaggio-serbia",
       "primaryKeyword": "pedaggio camion Serbia 2026",
       "canonical": "/it/guide/pedaggio-camion-serbia-2026/",
       "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=pedaggio%20camion%20serbia",
@@ -44,6 +46,7 @@
       ]
     },
     {
+      "id": "demand:round-10-traghetto-italia-grecia",
       "primaryKeyword": "traghetto camion Italia Grecia",
       "canonical": "/it/guide/traghetto-camion-italia-grecia/",
       "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=traghetto%20camion%20italia%20grecia",
@@ -66,6 +69,7 @@
       ]
     },
     {
+      "id": "demand:round-10-pedaggio-polonia",
       "primaryKeyword": "pedaggio camion Polonia 2026",
       "canonical": "/it/guide/pedaggio-camion-polonia-2026/",
       "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=pedaggio%20camion%20polonia",

@@ -1,0 +1,67 @@
+{
+  "slug": "tempi-guida-camion",
+  "kind": "calculator",
+  "locale": "it",
+  "status": "published",
+  "title": "Calcolatore dei tempi di guida per camion: pause e costo autista",
+  "mobileH1": "Tempi di guida camion: pause e costo",
+  "description": "Inserisci guida netta, altre attività e costo orario per stimare le pause tra blocchi da 4,5 ore, la durata operativa e il costo del tempo.",
+  "eyebrow": "Calcolatore tempo operativo",
+  "published": "2026-08-23",
+  "modified": "2026-08-23",
+  "reviewed": "2026-08-23",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "calcolatore dei tempi di guida",
+  "secondaryKeywords": [
+    "calcolatore tempi guida camion",
+    "calcolo pause camion 4 ore e 30",
+    "calcolo durata viaggio camion",
+    "costo tempo autista tratta"
+  ],
+  "searchIntent": "transactional-informational",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "tempi di guida camion",
+    "interruzione di 45 minuti",
+    "durata operativa",
+    "costo autista"
+  ],
+  "related": [
+    "guide:tempi-guida-riposo-camion",
+    "guide:costo-orario-autista-camion",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "guide:calcolo-costo-trasporto",
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:prezzo-minimo-margine-tratta",
+    "landing:app-per-autotrasportatori"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": "driving-time",
+  "conversionIntent": "complete-trip",
+  "appFeature": "complete-route-calculation",
+  "translationGroup": "calculator-driving-time-truck",
+  "canonical": "/it/calcolatori/tempi-guida-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "EUR-Lex — Regolamento (CE) n. 561/2006, testo consolidato",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A02006R0561-20241231",
+      "publishedOrUpdated": "Versione consolidata al 31 dicembre 2024",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-23",
+      "supports": "Articolo 7: interruzione di almeno 45 minuti dopo quattro ore e mezza di guida, salvo inizio di un riposo, e possibile frazionamento 15 più 30 minuti."
+    },
+    {
+      "label": "Commissione europea — FAQ ufficiali su tempi di guida e riposo",
+      "url": "https://transport.ec.europa.eu/transport-modes/road/mobility-package-i/driving-rest-times_en",
+      "publishedOrUpdated": "FAQ istituzionali correnti verificate il 23 agosto 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-23",
+      "supports": "Applicazione pratica dell'articolo 7, ordine delle interruzioni frazionate e distinzione tra regola generale e deroghe eccezionali."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: stima numerica semplificata di pause tra blocchi, durata e costo da ore inserite; sequenza normativa, storia del conducente ed eccezioni restano nella guida dedicata."
+}

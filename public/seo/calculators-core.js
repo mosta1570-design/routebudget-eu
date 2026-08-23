@@ -122,3 +122,96 @@ export function calculateFuelSurcharge(input) {
     adjustedFreight,
   };
 }
+
+export function calculateDrivingTime(input) {
+  requirePositive(input.drivingHours, 'drivingHours');
+  requireFiniteNonNegative(input.otherOperationalHours, 'otherOperationalHours');
+  requireFiniteNonNegative(input.driverHourlyCost, 'driverHourlyCost');
+
+  const drivingMinutes = input.drivingHours * 60;
+  // Add a conservative 45-minute allowance only between driving blocks. If
+  // work ends exactly at 4.5 or 9 hours, no trailing break is invented. The UI
+  // explains that this is economic planning, not a compliance decision.
+  const breakCount = Math.max(0, Math.ceil(drivingMinutes / 270) - 1);
+  const estimatedBreakHours = breakCount * 0.75;
+  const totalOperationalHours = input.drivingHours
+    + input.otherOperationalHours
+    + estimatedBreakHours;
+  const driverCost = totalOperationalHours * input.driverHourlyCost;
+
+  return {
+    drivingHours: input.drivingHours,
+    otherOperationalHours: input.otherOperationalHours,
+    breakCount,
+    estimatedBreakHours,
+    totalOperationalHours,
+    driverCost,
+    regularDailyLimitExceeded: input.drivingHours > 9,
+    extendedDailyLimitExceeded: input.drivingHours > 10,
+  };
+}
+
+export function calculateMinimumPriceMargin(input) {
+  requirePositive(input.operationalCost, 'operationalCost');
+  requirePositive(input.targetMarginPercent, 'targetMarginPercent');
+
+  if (input.targetMarginPercent >= 100) {
+    throw new RangeError('targetMarginPercent must be lower than 100');
+  }
+
+  const breakEvenPrice = input.operationalCost;
+  const targetPrice = input.operationalCost / (1 - input.targetMarginPercent / 100);
+  const targetProfit = targetPrice - input.operationalCost;
+  const effectiveMarkupPercent = ((targetPrice / input.operationalCost) - 1) * 100;
+
+  if (![targetPrice, targetProfit, effectiveMarkupPercent].every(Number.isFinite)) {
+    throw new RangeError('minimum price result must be finite');
+  }
+
+  return {
+    breakEvenPrice,
+    targetPrice,
+    targetProfit,
+    targetMarginPercent: input.targetMarginPercent,
+    effectiveMarkupPercent,
+  };
+}
+
+export function calculateElectricVanChargeCost(input) {
+  requirePositive(input.batteryCapacityKWh, 'batteryCapacityKWh');
+  requireFiniteNonNegative(input.initialSocPercent, 'initialSocPercent');
+  requirePositive(input.finalSocPercent, 'finalSocPercent');
+  requireFiniteNonNegative(input.chargingLossPercent, 'chargingLossPercent');
+  requirePositive(input.energyPricePerKWh, 'energyPricePerKWh');
+  requirePositive(input.averageGridPowerKw, 'averageGridPowerKw');
+
+  if (input.initialSocPercent > 100 || input.finalSocPercent > 100) {
+    throw new RangeError('state of charge must not exceed 100 percent');
+  }
+  if (input.finalSocPercent <= input.initialSocPercent) {
+    throw new RangeError('final state of charge must exceed initial state of charge');
+  }
+  if (input.chargingLossPercent >= 100) {
+    throw new RangeError('charging loss must be lower than 100 percent');
+  }
+
+  const socAddedPercent = input.finalSocPercent - input.initialSocPercent;
+  const storedEnergyKWh = input.batteryCapacityKWh * (socAddedPercent / 100);
+  const gridEnergyKWh = storedEnergyKWh / (1 - input.chargingLossPercent / 100);
+  const energyLossKWh = gridEnergyKWh - storedEnergyKWh;
+  const chargeCost = gridEnergyKWh * input.energyPricePerKWh;
+  const theoreticalMinutes = (gridEnergyKWh / input.averageGridPowerKw) * 60;
+
+  if (![gridEnergyKWh, energyLossKWh, chargeCost, theoreticalMinutes].every(Number.isFinite)) {
+    throw new RangeError('electric van charge result must be finite');
+  }
+
+  return {
+    socAddedPercent,
+    storedEnergyKWh,
+    gridEnergyKWh,
+    energyLossKWh,
+    chargeCost,
+    theoreticalMinutes,
+  };
+}

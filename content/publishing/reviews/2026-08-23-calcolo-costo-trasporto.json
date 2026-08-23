@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-23-calcolo-costo-trasporto",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-23",
+  "decision": "approved",
+  "contentId": "guide/calcolo-costo-trasporto",
+  "contentFingerprint": "sha256:0df41f3620e92ba5b35dda8e001cc379020848cbcccac110246635188c570091",
+  "artifactFingerprint": "sha256:584ac9ed9bededf710e5d9e42c06892ef10eadc092e0bac60896c359525a382c",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-23",
+    "basis": "Explicit owner authorization in the active Codex task to implement and publish this RouteBudget batch; this records authorization, not an independent human factual review."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated approval covers the new contextual calculator link and metadata integrity only. No independent human or specialist factual review is claimed."
+}

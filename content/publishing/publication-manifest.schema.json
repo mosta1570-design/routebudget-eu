@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://routebudget.eu/content/publishing/publication-manifest.schema.json",
+  "title": "RouteBudget publication manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "locale",
+    "market",
+    "baselineReviewId",
+    "releaseIntegrityApprovalId",
+    "staticArtifacts",
+    "records",
+    "intentExceptions",
+    "retirements"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "locale": { "const": "it" },
+    "market": { "const": "IT" },
+    "baselineReviewId": { "type": "string", "pattern": "^review:[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "releaseIntegrityApprovalId": { "type": "string", "pattern": "^review:[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "staticArtifacts": {
+      "type": "object",
+      "minProperties": 3,
+      "additionalProperties": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "./publication-record.schema.json" }
+    },
+    "intentExceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["pages", "approvalId", "rationale"],
+        "properties": {
+          "pages": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^(guide|calcolatori|confronti|landing)/[a-z0-9]+(?:-[a-z0-9]+)*$" }
+          },
+          "approvalId": { "type": "string", "pattern": "^review:[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "rationale": { "type": "string", "minLength": 40 }
+        }
+      }
+    },
+    "retirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["contentId", "previousCanonical", "previousFingerprint", "approvalId"],
+        "properties": {
+          "contentId": { "type": "string", "pattern": "^(guide|calcolatori|confronti|landing)/[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "previousCanonical": { "type": "string", "pattern": "^/it/.+/$" },
+          "previousFingerprint": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+          "approvalId": { "type": "string", "pattern": "^review:[a-z0-9]+(?:-[a-z0-9]+)*$" }
+        }
+      }
+    }
+  }
+}

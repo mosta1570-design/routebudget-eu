@@ -116,14 +116,16 @@ Questa sezione è l'unico contratto canonico per eventi trasmessi. I segnali bro
 | `cta_click` | attivazione di una CTA interna o non-store | base + CTA | non duplicare un clic store |
 | `store_outbound_click` | attivazione del link App Store o Google Play | base + CTA + destinazione | misura soltanto il clic in uscita |
 | `calculator_start` | prima interazione valida con il tool | base + calcolatore | una volta per caricamento; nessun valore input |
-| `calculator_complete` | risultato valido mostrato | base + calcolatore | nessun risultato, costo o classe di importo |
+| `calculator_complete` | primo risultato valido mostrato | base + calcolatore | una volta per sessione del form; “Ricomincia” apre una nuova sessione; nessun risultato, costo o classe di importo |
 | `calculator_validation_error` | errore mostrato dopo un tentativo | base + calcolatore + `error_code` | codice enumerato, mai testo o valore inserito |
+| `pdf_sample_preview` | apertura esplicita dell’anteprima del PDF dimostrativo | base + `asset_id` + posizione | soltanto per asset dimostrativi allowlisted; mai per un PDF utente |
+| `pdf_sample_download` | download esplicito del PDF dimostrativo | base + `asset_id` + posizione | misura il download del campione, non la creazione di un preventivo nell’app |
 
 ### Proprietà base e valori controllati
 
 | Proprietà | Valori ammessi |
 | --- | --- |
-| `schema_version` | versione intera della tassonomia, per esempio `1` |
+| `schema_version` | versione intera della tassonomia; versione corrente `2` |
 | `locale` | codice supportato, inizialmente `it` |
 | `content_id` | ID editoriale stabile, non URL completa |
 | `page_type` | `landing`, `hub`, `pillar`, `guide`, `calculator`, `comparison`, `product`, `legal` |
@@ -131,7 +133,8 @@ Questa sezione è l'unico contratto canonico per eventi trasmessi. I segnali bro
 | `cta_id` | uno degli ID del registro CTA |
 | `cta_position` | `inline`, `after_result`, `end`, `header`, `footer` |
 | `destination` | `internal`, `app_store`, `google_play` |
-| `calculator_id` | ID stabile dello strumento |
+| `calculator_id` | `cost-per-km`, `fuel-trip`, `fuel-surcharge`, `driving-time`, `minimum-price-margin`, `electric-van-charge-cost` |
+| `asset_id` | `preventivo-pdf-sample` |
 | `target_locale` | codice lingua supportato |
 | `error_code` | enum tecnico documentato, per esempio `required`, `out_of_range`, `invalid_format` |
 
@@ -183,6 +186,8 @@ La Privacy e i Termini pubblici correnti descrivono l'app. Non devono essere int
 - Generare `content_id` e `calculator_id` dall'inventario editoriale, non dal contenuto dell'utente.
 - Derivare `source_class` nel browser, inviare solo la classe e scartare immediatamente il referrer completo.
 - Inviare `store_outbound_click` una sola volta per attivazione e non anche `cta_click`.
+- Emettere `calculator_complete` al primo risultato valido; non duplicarlo se l’utente ricalcola nello stesso form senza usare “Ricomincia”.
+- Collegare gli eventi PDF solo a controlli espliciti con `data-analytics-event` e `asset_id` allowlisted; nessuna inferenza automatica da URL o estensione file.
 - Non bloccare `href`, apertura in nuova scheda o navigazione se il trasporto dell'evento fallisce.
 - Evitare identificatori persistenti e deduplicazione tra dispositivi.
 - Limitare accesso e conservazione al minimo approvato; non riutilizzare eventi per pubblicità, profilazione o vendita.

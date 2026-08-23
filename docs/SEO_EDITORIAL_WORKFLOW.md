@@ -164,6 +164,17 @@ Approvazione pubblicazione:
 
 Non registrare account, token, email private o dati di lettori.
 
+Il registro eseguibile vive in `content/publishing/`:
+
+- `publication-manifest.json` collega ogni pagina nuova o modificata a `demandEvidenceId`, confine d'intento, prova prodotto, fonti primarie e approvazione;
+- `reviews/*.json` lega l'approvazione alla fingerprint esatta di `meta.json` + `body.md`, quindi ogni modifica successiva invalida il record;
+- `product-features.json` accetta soltanto funzioni rilasciate con prova versionata nel repository;
+- `scripts/verify-publish-gate.mjs` controlla mercato IT, cannibalizzazione, fonti, link, CTA e parità dello schema generato.
+
+Il record `migration-baseline` è soltanto uno snapshot d'integrità delle pagine già pubblicate: non certifica una revisione umana e non autorizza modifiche future. Un record con `reviewMode: automated-with-owner-authorization` dichiara espressamente controlli automatizzati e autorizzazione del proprietario; non deve essere descritto come revisione umana, legale, contabile o specialistica indipendente.
+
+Eseguire `npm run seo:publish-gate` dopo il build oppure `npm run seo:all`, che include la gate. Non aggiornare una fingerprint per far passare CI: correggere il contenuto/evidenza e registrare una nuova decisione.
+
 ## 9. Pubblicazione e scoperta
 
 Dopo deploy separatamente autorizzato:
