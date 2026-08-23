@@ -62,7 +62,7 @@ const editorial = {
       'Approfondisci una voce di costo o prepara una tratta prima di aprire l’app.',
     supportLabel: 'Supporto diretto',
     authorNote:
-      'Eng. Mostafa sviluppa RouteBudget EU e cura metodo, fonti e revisioni dei contenuti. Errori e correzioni possono essere segnalati direttamente.',
+      'Eng. Mostafa sviluppa RouteBudget EU e cura metodo, fonti e revisioni. Strumenti di intelligenza artificiale possono assistere ricerca e struttura; fonti, limiti e pubblicazione restano sotto la sua responsabilità. Errori e correzioni possono essere segnalati direttamente.',
     downloadLabel: 'RouteBudget EU',
     downloadTrust: 'Gratis su App Store e Google Play · Acquisti in-app',
     imageAlts: {
@@ -118,7 +118,7 @@ const editorial = {
     resourcesBody: 'Explore one cost line or prepare a route before opening the app.',
     supportLabel: 'Direct support',
     authorNote:
-      'Eng. Mostafa develops RouteBudget EU and maintains its method, sources and editorial reviews. Errors and corrections can be reported directly.',
+      'Eng. Mostafa develops RouteBudget EU and maintains its method, sources and editorial reviews. AI tools may assist research and structure; sources, limitations and publication remain his responsibility. Errors and corrections can be reported directly.',
     downloadLabel: 'RouteBudget EU',
     downloadTrust: 'Free on the App Store and Google Play · In-App Purchases',
     imageAlts: {

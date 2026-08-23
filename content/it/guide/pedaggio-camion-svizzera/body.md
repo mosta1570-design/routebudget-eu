@@ -78,7 +78,7 @@ Supponi che il pianificatore ufficiale restituisca 210 km imponibili e che il pe
 
 `210 km × 40 t × tariffa ufficiale in centesimi per tonnellata-km ÷ 100`
 
-Nel documento tariffario ufficiale valido dal 1° gennaio 2025 e verificato il 14 agosto 2026, la categoria EURO 6 è indicata a 2,39 centesimi per tonnellata-km. Applicata soltanto come esempio datato, la formula diventa `210 × 40 × 2,39 ÷ 100 = 200,76 CHF`.
+Nel **Regolamento 15-02 di dicembre 2025**, versione 1.1, consultato il 23 agosto 2026, l’esempio ufficiale usa 2,39 centesimi per tonnellata-km per un veicolo EURO 6. Il documento stesso rinvia alla pagina TTPCP per la tariffa in vigore. Usando 2,39 soltanto come esempio documentale datato, la formula diventa `210 × 40 × 2,39 ÷ 100 = 200,76 CHF`.
 
 Non sostituire l'ultimo elemento con una media trovata in un forum o con il costo di un altro camion. Riapri la tariffa corrente dell'esatta categoria, poi usa l'importo risultante in franchi svizzeri come voce distinta.
 

@@ -68,6 +68,7 @@ for (const route of [...hubPaths, ...pagePaths]) {
   verifySchema(route, schema, sourcePage);
 
   if (sourcePage) {
+    assert(html.includes('Strumenti di intelligenza artificiale possono assistere'), `${route}: transparent AI-assistance disclosure missing`);
     assert(html.includes(config.appStoreUrl), `${route}: App Store CTA missing`);
     assert(html.includes(config.googlePlayUrl), `${route}: Google Play CTA missing`);
     assert(html.includes('store-badges/app-store-it.svg'), `${route}: official App Store badge missing`);
@@ -106,6 +107,7 @@ for (const route of [`${BASE}/privacy.html`, `${BASE}/terms.html`]) {
   const canonical = capture(html, /<link rel="canonical" href="([^"]+)" \/>/, `${route}: canonical missing`);
   assert.equal(canonical, `${ORIGIN}${route}`, `${route}: canonical mismatch`);
   assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1, `${route}: exactly one H1 required`);
+  assert(/<meta name="referrer" content="strict-origin-when-cross-origin" \/>/.test(html), `${route}: strict referrer policy missing`);
   const legalH1 = capture(html, /(<h1(?:\s[^>]*)?>[\s\S]*?<\/h1>)/, `${route}: H1 missing`);
   for (const locale of ['en', 'it']) {
     assert.equal((legalH1.match(new RegExp(`<span[^>]*data-lang="${locale}"[^>]*>`, 'g')) || []).length, 1, `${route}: one ${locale} H1 label required`);
@@ -122,6 +124,7 @@ assert(landingGraph.some((entry) => entry['@type'] === 'Organization' && entry['
 const landingWebsite = landingGraph.find((entry) => entry['@type'] === 'WebSite');
 assert.equal(landingWebsite?.publisher?.['@id'], `${ORIGIN}/#organization`, 'landing WebSite publisher must use Organization identity');
 assert(landing.includes('data-static-home'), 'landing must contain useful static HTML before client rendering');
+assert(landing.includes('Strumenti di intelligenza artificiale possono assistere'), 'landing transparent AI-assistance disclosure missing');
 assert(!/<noscript>[\s\S]*?<h1(?:\s|>)/.test(landing), 'landing must not duplicate H1 inside noscript');
 assert(landing.includes(`${BASE}/seo/events.js`), 'landing event hook missing');
 
@@ -153,6 +156,7 @@ for (const asset of [
   'privacy.html',
   'terms.html',
   '404.html',
+  '.well-known/security.txt',
 ]) {
   await access(path.join(DIST, asset));
 }
@@ -169,7 +173,21 @@ assert(responsiveCss.includes('.store-badge-row'), 'responsive official store ba
 
 const notFound = await readFile(path.join(DIST, '404.html'), 'utf8');
 assert(/name="robots" content="noindex,follow"/.test(notFound), '404 page must be noindex,follow');
+assert(/<meta name="referrer" content="strict-origin-when-cross-origin" \/>/.test(notFound), '404 page strict referrer policy missing');
 assert.equal((notFound.match(/<h1(?:\s|>)/g) || []).length, 1, '404 page requires one H1');
+
+const securityTxt = await readFile(path.join(DIST, '.well-known/security.txt'), 'utf8');
+assert(securityTxt.includes('Contact: mailto:mosta1570@gmail.com'), 'security.txt contact missing');
+assert(securityTxt.includes(`Canonical: ${ORIGIN}/.well-known/security.txt`), 'security.txt canonical mismatch');
+assert(securityTxt.includes('Preferred-Languages: it, en'), 'security.txt preferred languages missing');
+assert(securityTxt.includes('Policy: https://github.com/mosta1570-design/routebudget-eu/security/policy'), 'security.txt policy missing');
+const securityExpiry = capture(securityTxt, /^Expires: ([^\n]+)$/m, 'security.txt expiry missing');
+const securityExpiryMs = Date.parse(securityExpiry);
+const securityExpiryLimit = new Date();
+securityExpiryLimit.setUTCFullYear(securityExpiryLimit.getUTCFullYear() + 1);
+assert(Number.isFinite(securityExpiryMs), 'security.txt expiry must be an RFC 3339 timestamp');
+assert(securityExpiryMs > Date.now(), 'security.txt has expired');
+assert(securityExpiryMs <= securityExpiryLimit.getTime(), 'security.txt expiry must be within one year');
 
 await verifySitemaps(sourcePages, hubPaths, pagePaths);
 await verifyHreflang(sourcePages, htmlByRoute);
@@ -198,6 +216,8 @@ function verifyIndexableDocument(route, html) {
   assert(!/(?:\bTODO\b|\bTBD\b|lorem ipsum|da completare)/i.test(html), `${route}: placeholder content leaked`);
   for (const pattern of UNSUPPORTED_PRODUCT_CLAIMS) assert(!pattern.test(html), `${route}: unsupported product claim ${pattern}`);
   assert(/<meta name="robots" content="index,follow,max-image-preview:large" \/>/.test(html), `${route}: indexable robots directive missing`);
+  assert(/<meta name="referrer" content="strict-origin-when-cross-origin" \/>/.test(html), `${route}: strict referrer policy missing`);
+  assert(!html.includes('rel="manifest"'), `${route}: heavyweight web manifest must not load on indexable pages`);
 
   const title = capture(html, /<title>([^<]+)<\/title>/, `${route}: title missing`);
   assert(title.length <= 75, `${route}: final document title exceeds 75 characters`);

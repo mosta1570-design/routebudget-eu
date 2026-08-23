@@ -432,7 +432,7 @@ ${renderHead({
           ${renderSources(page)}
           <section class="editorial-note" aria-labelledby="nota-editoriale">
             <h2 id="nota-editoriale">Nota editoriale</h2>
-            <p><a href="${config.basePath}/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: ${editorialMethod}. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+            <p><a href="${config.basePath}/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: ${editorialMethod}. Strumenti di intelligenza artificiale possono assistere ricerca, confronto e prima struttura; metodo, fonti, calcoli, limiti del prodotto e decisione di pubblicazione restano sotto la responsabilità dell’autore. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
           </section>
         </article>
       </div>
@@ -616,6 +616,7 @@ function renderHead({ title, description, canonicalPath, type, modified, publish
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#070B12" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="description" content="${escapeAttr(description)}" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="${escapeAttr(canonical)}" />
@@ -635,7 +636,6 @@ function renderHead({ title, description, canonicalPath, type, modified, publish
     <meta name="twitter:description" content="${escapeAttr(description)}" />
     <meta name="twitter:image" content="${escapeAttr(ogImage)}" />
     <link rel="icon" type="image/png" href="${config.basePath}/logo-ui.png" />
-    <link rel="manifest" href="${config.basePath}/site.webmanifest" />
     <link rel="stylesheet" href="${config.basePath}/seo/seo.css" />
     <script type="application/ld+json">${safeJson(schema)}</script>
     <script src="${config.basePath}/seo/events.js" defer></script>
