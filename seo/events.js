@@ -1,6 +1,8 @@
 (() => {
   const EVENT_NAME = 'routebudget:analytics';
-  const SCHEMA_VERSION = 1;
+  const SCHEMA_VERSION = 2;
+  const HOME_LOCALE_KEY = 'routebudget-site-locale';
+  const SUPPORTED_LOCALES = new Set(['it', 'en']);
   const PAGE_TYPES = new Set(['landing', 'hub', 'pillar', 'guide', 'calculator', 'comparison', 'product', 'legal']);
   const CTA_IDS = new Set([
     'download_app_generic',
@@ -9,7 +11,19 @@
     'compare_scenarios_app',
     'create_pdf_quote',
     'continue_unlimited_pro',
+    'demo-app-store',
+    'demo-google-play',
+    'download-app-store',
+    'download-google-play',
+    'hero-app-store',
+    'hero-google-play',
+    'hero-nav-download',
+    'hero-primary-download',
+    'hero-product-demo',
+    'mobile-menu-app-store',
+    'mobile-menu-google-play',
   ]);
+  const PDF_SAMPLE_IDS = new Set(['preventivo-pdf-sample']);
   const EVENT_FIELDS = {
     content_landing_view: ['source_class'],
     language_select: ['target_locale'],
@@ -18,24 +32,45 @@
     calculator_start: ['calculator_id'],
     calculator_complete: ['calculator_id'],
     calculator_validation_error: ['calculator_id', 'error_code'],
+    pdf_sample_preview: ['asset_id', 'cta_position'],
+    pdf_sample_download: ['asset_id', 'cta_position'],
+  };
+  const REQUIRED_FIELDS = {
+    content_landing_view: ['source_class'],
+    language_select: ['target_locale'],
+    cta_click: ['cta_id', 'cta_position', 'destination'],
+    store_outbound_click: ['cta_id', 'cta_position', 'destination'],
+    calculator_start: ['calculator_id'],
+    calculator_complete: ['calculator_id'],
+    calculator_validation_error: ['calculator_id', 'error_code'],
+    pdf_sample_preview: ['asset_id', 'cta_position'],
+    pdf_sample_download: ['asset_id', 'cta_position'],
   };
   const VALUE_RULES = {
     source_class: (value) => ['organic_search', 'direct', 'referral', 'unknown'].includes(value),
-    target_locale: (value) => /^[a-z]{2}$/.test(value),
+    target_locale: (value) => SUPPORTED_LOCALES.has(value),
     cta_id: (value) => CTA_IDS.has(value),
     cta_position: (value) => ['inline', 'after_result', 'end', 'header', 'footer'].includes(value),
     destination: (value) => ['internal', 'app_store', 'google_play'].includes(value),
-    calculator_id: (value) => ['cost-per-km', 'fuel-trip', 'fuel-surcharge'].includes(value),
+    calculator_id: (value) => [
+      'cost-per-km',
+      'fuel-trip',
+      'fuel-surcharge',
+      'driving-time',
+      'minimum-price-margin',
+      'electric-van-charge-cost',
+    ].includes(value),
     error_code: (value) => ['required', 'invalid_format', 'invalid_value', 'out_of_range'].includes(value),
+    asset_id: (value) => PDF_SAMPLE_IDS.has(value),
   };
+  let activeLocale = initialPageLocale();
 
   function pageContext() {
-    const locale = document.body?.dataset.locale || document.documentElement.lang.split('-')[0] || 'it';
     const pageType = document.body?.dataset.pageType || inferPageType(window.location.pathname);
     const contentId = document.body?.dataset.contentId || inferContentId(window.location.pathname, pageType);
     return {
       schema_version: SCHEMA_VERSION,
-      locale: /^[a-z]{2}$/.test(locale) ? locale : 'it',
+      locale: SUPPORTED_LOCALES.has(activeLocale) ? activeLocale : 'it',
       content_id: /^[a-z0-9:-]+$/.test(contentId) ? contentId : 'routebudget-home',
       page_type: PAGE_TYPES.has(pageType) ? pageType : 'product',
     };
@@ -50,6 +85,7 @@
       const value = detail[field];
       if (VALUE_RULES[field]?.(value)) payload[field] = value;
     }
+    if (REQUIRED_FIELDS[event].some((field) => !Object.hasOwn(payload, field))) return false;
 
     window.dispatchEvent(new CustomEvent(EVENT_NAME, { detail: Object.freeze(payload) }));
     return true;
@@ -82,39 +118,68 @@
   }
 
   document.addEventListener('click', (event) => {
-    const anchor = event.target instanceof Element ? event.target.closest('a[href]') : null;
-    if (!anchor) return;
+    const control = event.target instanceof Element
+      ? event.target.closest('a[href], button[data-analytics-id], [data-analytics-event^="pdf_sample_"]')
+      : null;
+    if (!control) return;
 
-    const destination = classifyStoreDestination(anchor.href);
+    const destination = control.tagName === 'A' ? classifyStoreDestination(control.href) : null;
 
     if (destination) {
       emit('store_outbound_click', {
-        cta_id: CTA_IDS.has(anchor.dataset.analyticsId)
-          ? anchor.dataset.analyticsId
+        cta_id: CTA_IDS.has(control.dataset.analyticsId)
+          ? control.dataset.analyticsId
           : 'download_app_generic',
-        cta_position: inferPosition(anchor),
+        cta_position: inferPosition(control),
         destination,
       });
       return;
     }
 
-    if (anchor.dataset.analyticsEvent === 'cta_click') {
+    if (['pdf_sample_preview', 'pdf_sample_download'].includes(control.dataset.analyticsEvent)) {
+      emit(control.dataset.analyticsEvent, {
+        asset_id: control.dataset.analyticsAssetId,
+        cta_position: inferPosition(control),
+      });
+      return;
+    }
+
+    if (control.dataset.analyticsEvent === 'cta_click'
+      || (control.tagName === 'BUTTON' && CTA_IDS.has(control.dataset.analyticsId))) {
       emit('cta_click', {
-        cta_id: anchor.dataset.analyticsId,
-        cta_position: inferPosition(anchor),
+        cta_id: control.dataset.analyticsId,
+        cta_position: inferPosition(control),
         destination: 'internal',
       });
     }
   });
 
-  let previousLanguage = pageContext().locale;
+  let previousLanguage = activeLocale;
   new MutationObserver(() => {
     const nextLanguage = document.documentElement.lang.split('-')[0];
-    if (nextLanguage && nextLanguage !== previousLanguage) {
+    if (!SUPPORTED_LOCALES.has(nextLanguage)) return;
+    activeLocale = nextLanguage;
+    if (nextLanguage !== previousLanguage) {
       emit('language_select', { target_locale: nextLanguage });
       previousLanguage = nextLanguage;
     }
   }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  function initialPageLocale() {
+    const markupLocale = document.body?.dataset.locale
+      || document.documentElement.lang.split('-')[0]
+      || 'it';
+    if (document.body?.dataset.contentId !== 'routebudget-home') {
+      return SUPPORTED_LOCALES.has(markupLocale) ? markupLocale : 'it';
+    }
+    try {
+      const storedLocale = window.localStorage.getItem(HOME_LOCALE_KEY);
+      if (SUPPORTED_LOCALES.has(storedLocale)) return storedLocale;
+    } catch {
+      // Storage may be unavailable in privacy-restricted contexts.
+    }
+    return SUPPORTED_LOCALES.has(markupLocale) ? markupLocale : 'it';
+  }
 
   function inferPageType(pathname) {
     if (pathname.endsWith('/privacy.html') || pathname.endsWith('/terms.html')) return 'legal';
@@ -155,13 +220,13 @@
     return null;
   }
 
-  function inferPosition(anchor) {
-    const declared = anchor.dataset.analyticsPosition;
+  function inferPosition(control) {
+    const declared = control.dataset.analyticsPosition;
     if (['inline', 'after_result', 'end', 'header', 'footer'].includes(declared)) return declared;
-    if (anchor.closest('header')) return 'header';
-    if (anchor.closest('footer')) return 'footer';
-    if (anchor.closest('.calculator-result')) return 'after_result';
-    if (anchor.closest('.app-cta, .index-conversion')) return 'end';
+    if (control.closest('header, .hero-navbar')) return 'header';
+    if (control.closest('footer, .mobile-nav-overlay__footer')) return 'footer';
+    if (control.closest('.calculator-result')) return 'after_result';
+    if (control.closest('.app-cta, .index-conversion, .freight-download, .demo-overlay__stores')) return 'end';
     return 'inline';
   }
 })();

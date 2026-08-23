@@ -50,6 +50,42 @@
       "modified": "2026-08-16"
     },
     {
+      "id": "it:calcolatori:prezzo-minimo-margine-tratta",
+      "url": "https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/",
+      "title": "Come calcolare il prezzo di un trasporto: margine e soglia",
+      "description": "Parti dal costo completo della tratta e calcola soglia di copertura, prezzo con margine, differenza sul costo e ricarico equivalente.",
+      "type": "calculator",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/",
+      "indexable": true,
+      "primaryKeyword": "come calcolare il prezzo di un trasporto",
+      "modified": "2026-08-23"
+    },
+    {
+      "id": "it:calcolatori:quanto-costa-ricaricare-furgone-elettrico",
+      "url": "https://routebudget.eu/it/calcolatori/quanto-costa-ricaricare-furgone-elettrico/",
+      "title": "Quanto costa ricaricare un furgone elettrico? Calcolatore",
+      "description": "Inserisci batteria, stato di carica, perdite, prezzo per kWh e potenza media per stimare energia dalla rete, costo e durata teorica della sessione.",
+      "type": "calculator",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/calcolatori/quanto-costa-ricaricare-furgone-elettrico/",
+      "indexable": true,
+      "primaryKeyword": "quanto costa ricaricare un furgone elettrico",
+      "modified": "2026-08-23"
+    },
+    {
+      "id": "it:calcolatori:tempi-guida-camion",
+      "url": "https://routebudget.eu/it/calcolatori/tempi-guida-camion/",
+      "title": "Calcolatore dei tempi di guida per camion: pause e costo autista",
+      "description": "Inserisci guida netta, altre attività e costo orario per stimare le pause tra blocchi da 4,5 ore, la durata operativa e il costo del tempo.",
+      "type": "calculator",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/calcolatori/tempi-guida-camion/",
+      "indexable": true,
+      "primaryKeyword": "calcolatore dei tempi di guida",
+      "modified": "2026-08-23"
+    },
+    {
       "id": "it:guide:bgtoll-camion-bulgaria-2026",
       "url": "https://routebudget.eu/it/guide/bgtoll-camion-bulgaria-2026/",
       "title": "BGTOLL camion 2026: calcolo del pedaggio in Bulgaria",
@@ -95,7 +131,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-22"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -131,7 +167,7 @@
       "canonical": "https://routebudget.eu/it/guide/costi-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "costi autotrasporto",
-      "modified": "2026-08-13"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:costi-fissi-variabili-autotrasporto",
@@ -179,7 +215,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-furgone-per-km/",
       "indexable": true,
       "primaryKeyword": "costo furgone per km",
-      "modified": "2026-08-20"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:costo-orario-autista-camion",
@@ -419,7 +455,7 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto PDF",
-      "modified": "2026-08-21"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:preventivo-trasporto",
@@ -455,7 +491,7 @@
       "canonical": "https://routebudget.eu/it/guide/proteggere-margine-tratta/",
       "indexable": true,
       "primaryKeyword": "analisi sensibilità margine tratta",
-      "modified": "2026-08-01"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:quanto-consuma-un-camion",
@@ -479,7 +515,7 @@
       "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-furgone/",
       "indexable": true,
       "primaryKeyword": "quanto consuma un furgone",
-      "modified": "2026-08-20"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:ritorno-a-vuoto-autotrasporto",
@@ -539,19 +575,19 @@
       "canonical": "https://routebudget.eu/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "indennizzo tempi di attesa carico scarico autotrasporto",
-      "modified": "2026-08-12"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:tempi-guida-riposo-camion",
       "url": "https://routebudget.eu/it/guide/tempi-guida-riposo-camion/",
-      "title": "Tempi di guida e riposo camion: calcolo del costo tratta",
-      "description": "Metodo pratico per stimare guida, interruzioni, riposi e durata operativa, così da includere correttamente il tempo nel costo di una tratta camion.",
+      "title": "Tempi di guida e riposo camion: regole e sequenza",
+      "description": "Come distinguere guida, altre mansioni, disponibilità, interruzioni e riposi e costruire una timeline da verificare prima della tratta.",
       "type": "guide",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/guide/tempi-guida-riposo-camion/",
       "indexable": true,
       "primaryKeyword": "calcolo tempi di guida e riposo camion",
-      "modified": "2026-08-12"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:traghetto-camion-italia-grecia",

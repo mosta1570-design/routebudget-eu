@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070B12" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="description" content="Parti dal costo completo della tratta e calcola soglia di copertura, prezzo con margine, differenza sul costo e ricarico equivalente." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="RouteBudget EU" />
+    <meta property="og:title" content="Come calcolare il prezzo di un trasporto: margine e soglia | RouteBudget EU" />
+    <meta property="og:description" content="Parti dal costo completo della tratta e calcola soglia di copertura, prezzo con margine, differenza sul costo e ricarico equivalente." />
+    <meta property="og:url" content="https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/" />
+    <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
+    <meta property="og:image:alt" content="RouteBudget EU — Come calcolare il prezzo di un trasporto: margine e soglia | RouteBudget EU" />
+    <meta property="article:published_time" content="2026-08-23" />
+    <meta property="article:modified_time" content="2026-08-23" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Come calcolare il prezzo di un trasporto: margine e soglia | RouteBudget EU" />
+    <meta name="twitter:description" content="Parti dal costo completo della tratta e calcola soglia di copertura, prezzo con margine, differenza sul costo e ricarico equivalente." />
+    <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
+    <link rel="icon" type="image/png" href="/logo-ui.png" />
+    <link rel="stylesheet" href="/seo/seo.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","url":"https://routebudget.eu/#autore","description":"Sviluppatore indipendente di RouteBudget EU e responsabile di metodo, fonti e revisioni editoriali.","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Calcolatori","item":"https://routebudget.eu/it/calcolatori/"},{"@type":"ListItem","position":3,"name":"Come calcolare il prezzo di un trasporto: margine e soglia","item":"https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/"}]},{"@type":"WebApplication","@id":"https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/#calculator","name":"Come calcolare il prezzo di un trasporto: margine e soglia","description":"Parti dal costo completo della tratta e calcola soglia di copertura, prezzo con margine, differenza sul costo e ricarico equivalente.","url":"https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/","applicationCategory":"BusinessApplication","operatingSystem":"Qualsiasi browser moderno","browserRequirements":"JavaScript abilitato per il calcolo interattivo","isAccessibleForFree":true,"inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"}}]}</script>
+    <script src="/seo/events.js" defer></script>
+    <script type="module" src="/seo/calculators.js"></script>
+    <title>Come calcolare il prezzo di un trasporto: margine e soglia | RouteBudget EU</title>
+  </head>
+<body class="seo-body" data-content-id="it:calcolatori:prezzo-minimo-margine-tratta" data-page-type="calculator" data-locale="it">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <header class="seo-header">
+    <div class="seo-header__inner">
+      <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
+        <img src="/logo-ui.png" width="42" height="42" alt="" />
+        <span>RouteBudget <small>EU</small></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+      </nav>
+      <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scopri l’app <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+  <main id="contenuto">
+    <section class="seo-hero">
+      <div class="seo-shell">
+        <nav class="breadcrumbs" aria-label="Percorso">
+    <a href="/">RouteBudget</a>
+    <span aria-hidden="true">/</span>
+    <a href="/it/calcolatori/">Calcolatori</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Come calcolare il prezzo di un trasporto: margine e soglia</span>
+  </nav>
+        <p class="seo-eyebrow">Calcolo prezzo trasporto</p>
+        <h1>Come calcolare il prezzo di un trasporto: margine e soglia</h1>
+        <p class="seo-hero__summary">Parti dal costo completo della tratta e calcola soglia di copertura, prezzo con margine, differenza sul costo e ricarico equivalente.</p>
+        <div class="seo-meta" aria-label="Informazioni editoriali">
+          <span>A cura di <a href="/#autore">Eng. Mostafa</a> · RouteBudget EU</span>
+          <span>Revisione 23 agosto 2026</span>
+          <span>5 min di lettura</span>
+        </div>
+
+      </div>
+    </section>
+    <section class="calculator-section" aria-labelledby="calculator-title">
+      <div class="seo-shell calculator-layout">
+        <div class="calculator-intro">
+          <p class="seo-eyebrow">Prezzo tratta · margine trasparente</p>
+          <h2 id="calculator-title">Separa pareggio, margine e ricarico.</h2>
+          <p>Parti dal costo operativo già calcolato. Il margine è calcolato sul prezzo finale e resta distinto dal semplice ricarico applicato al costo.</p>
+          <p class="calculator-formula"><strong>Formula</strong><span>prezzo obiettivo = costo operativo ÷ (1 − margine sul prezzo)</span></p>
+        </div>
+        <form class="calculator-form" data-calculator="minimum-price-margin" novalidate>
+          <div class="calculator-fields calculator-fields--compact">
+            <label class="calculator-field" for="field-operationalCost">
+    <span>Costo operativo della tratta <b aria-hidden="true">*</b></span>
+    <span class="calculator-input"><input id="field-operationalCost" name="operationalCost" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 1000" required /><small>€</small></span>
+  </label>
+            <label class="calculator-field" for="field-targetMarginPercent">
+    <span>Margine obiettivo sul prezzo <b aria-hidden="true">*</b></span>
+    <span class="calculator-input"><input id="field-targetMarginPercent" name="targetMarginPercent" type="text" inputmode="decimal" autocomplete="off" aria-describedby="calculator-number-format" placeholder="es. 20" required /><small>%</small></span>
+  </label>
+          </div>
+          <div class="calculator-form__footer">
+            <p id="calculator-number-format">Formato numeri: virgola per i decimali. Inserisci un margine inferiore al 100%; imposte e voci non comprese nel costo restano escluse.</p>
+            <div class="calculator-form__actions">
+              <button class="button button--quiet" type="reset">Ricomincia</button>
+              <button class="button button--primary" type="submit">Calcola prezzo obiettivo</button>
+            </div>
+          </div>
+          <div id="calculator-error-minimum-price-margin" class="calculator-error" role="alert" tabindex="-1" hidden></div>
+          <p class="calculator-status seo-visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+          <section class="calculator-result" aria-label="Risultato del calcolo" hidden>
+            <div class="calculator-result__lead"><span>Prezzo obiettivo stimato</span><strong data-result="targetPrice">—</strong></div>
+            <dl>
+              <div><dt>Pareggio operativo</dt><dd data-result="breakEvenPrice">—</dd></div>
+              <div><dt>Margine obiettivo</dt><dd data-result="targetMarginPercent">—</dd></div>
+              <div><dt>Differenza sopra il costo</dt><dd data-result="targetProfit">—</dd></div>
+              <div><dt>Aumento complessivo sul costo iniziale</dt><dd data-result="effectiveMarkupPercent">—</dd></div>
+            </dl>
+            <p>Stima commerciale, non garanzia di utile né indicazione fiscale. Verifica costi completi, IVA, condizioni, rischio di insoluto e prezzo accettabile per il servizio.</p>
+            <div class="calculator-result__cta">
+              <p class="rail-label">Prima di accettare la tratta</p>
+              <h3>Confronta gli scenari dentro RouteBudget.</h3>
+              <p>Usa costo completo, margine e condizioni reali per preparare un preventivo PDF coerente.</p>
+              <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="after_result" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="after_result" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+            </div>
+          </section>
+        </form>
+      </div>
+    </section>
+    <div class="seo-shell article-layout">
+      <div class="article-main">
+
+        <article class="seo-prose">
+          <h2 id="parti-dal-costo-non-da-una-percentuale-isolata">Parti dal costo, non da una percentuale isolata</h2>
+<p>Questo <strong>calcolatore del margine trasporto</strong> trasforma un costo di tratta già verificato in quattro numeri leggibili: soglia di copertura dei costi, prezzo con il margine scelto, differenza in euro e ricarico equivalente sul costo. Il <strong>calcolo locale</strong> resta nel browser e non salva gli importi. Non suggerisce una tariffa di mercato e non può sapere quanto accetterà il cliente.</p>
+<p>Servono due input:</p>
+<ul>
+<li>costo operativo completo della missione;</li>
+<li>margine target espresso come percentuale del prezzo finale.</li>
+</ul>
+<p>“Completo” è la parola decisiva. Se nel costo mancano ritorno a vuoto, attese, pedaggi o quota del mezzo, il risultato sarà matematicamente corretto ma commercialmente fragile. Lo strumento non inventa ciò che non hai inserito.</p>
+<h2 id="le-formule-senza-confondere-margine-e-ricarico">Le formule, senza confondere margine e ricarico</h2>
+<p>La soglia di copertura è uguale al costo dichiarato:</p>
+<p><code>prezzo di copertura = costo operativo inserito</code></p>
+<p>Per ottenere il margine target sul prezzo finale:</p>
+<p><code>prezzo obiettivo = costo operativo ÷ (1 − margine target)</code></p>
+<p><code>differenza sul costo = prezzo obiettivo − costo operativo</code></p>
+<p><code>ricarico equivalente = differenza sul costo ÷ costo operativo</code></p>
+<p>Il margine usa come denominatore il prezzo di vendita. Il ricarico usa il costo. Per questo applicare “più 20%” al costo non produce un margine del 20% sul prezzo.</p>
+<p>Il campo margine deve essere maggiore di 0% e inferiore al 100%. A 100% il denominatore diventa zero e non esiste un prezzo finito. Percentuali molto alte possono produrre un valore matematico valido ma privo di senso per il servizio concreto: il controllo commerciale resta umano.</p>
+<h2 id="esempio-verificabile-costo-1-000-margine-20">Esempio verificabile: costo 1.000 €, margine 20%</h2>
+<p>Supponiamo che la missione abbia un costo operativo completo di <strong>1.000 €</strong> e un margine obiettivo del <strong>20% sul prezzo finale</strong>.</p>
+<p>Il pareggio operativo è <strong>1.000 €</strong>. Il prezzo obiettivo è:</p>
+<p><code>1.000 € ÷ (1 − 0,20) = 1.250 €</code></p>
+<p>La differenza sul costo è <strong>250 €</strong>. Il controllo del margine dà:</p>
+<p><code>250 ÷ 1.250 = 20%</code></p>
+<p>Il ricarico equivalente sul costo è invece:</p>
+<p><code>250 ÷ 1.000 = 25%</code></p>
+<p>Se si aggiungesse invece semplicemente il 20% al costo, il prezzo sarebbe 1.200 € e il margine reale sul prezzo sarebbe <code>200 ÷ 1.200</code>, cioè <strong>16,67%</strong>. Il modulo mantiene visibili margine sul prezzo e ricarico sul costo.</p>
+<p>L’esempio è didattico. Non afferma che 1.250 € sia competitivo, obbligatorio o adeguato a una tratta reale.</p>
+<h2 id="prima-di-premere-calcola-chiudi-il-perimetro-del-costo">Prima di premere “Calcola”: chiudi il perimetro del costo</h2>
+<p>Per una missione camion, controlla almeno:</p>
+<ul>
+<li>chilometri carichi, trasferimenti e rientro a vuoto;</li>
+<li>carburante o energia su distanza e consumo coerenti;</li>
+<li>pedaggi, vignette, traghetti e accessi pertinenti;</li>
+<li>ore dell’autista, pause, carico, scarico e attese previste;</li>
+<li>usura, pneumatici e manutenzione attribuita;</li>
+<li>quota dei costi fissi secondo un denominatore realistico;</li>
+<li>servizi speciali e spese documentate;</li>
+<li>rischio operativo che l’impresa decide di valorizzare.</li>
+</ul>
+<p>Le tabelle MIT sui valori indicativi dei costi di esercizio aiutano a riconoscere famiglie di costo e classi di veicolo. Non sono un listino da copiare nella singola offerta. La legenda ministeriale invita a scegliere le voci pertinenti alla modalità di trasporto; sommarle tutte senza criterio può gonfiare il costo, mentre ignorarne alcune lo rende incompleto.</p>
+<p>Se parti ancora da componenti separate, usa prima il <a href="/it/guide/calcolo-costo-trasporto/">metodo per il costo completo del trasporto</a> o il <a href="/it/calcolatori/costo-chilometrico-camion/">calcolatore del costo chilometrico camion</a>. Questo strumento inizia dove quei calcoli finiscono.</p>
+<h2 id="prezzo-minimo-significa-soglia-interna-non-tariffa-ufficiale">“Prezzo minimo” significa soglia interna, non tariffa ufficiale</h2>
+<p>Nel modulo il prezzo minimo è chiamato anche <strong>soglia di copertura costi</strong>. È il valore che eguaglia esclusivamente il costo inserito dall’utente. Non contiene automaticamente:</p>
+<ul>
+<li>margine;</li>
+<li>imposte o IVA;</li>
+<li>interessi e costo del capitale;</li>
+<li>perdite di altre missioni;</li>
+<li>franchigie, penali o rischio di insoluto;</li>
+<li>un compenso “di mercato” per urgenza o qualità del servizio.</li>
+</ul>
+<p>Un valore sopra la soglia crea un differenziale positivo rispetto al costo inserito, ma non prova un utile netto aziendale. Un valore sotto la soglia segnala che, con quegli input, la missione non copre il costo dichiarato. Non è una consulenza fiscale, contabile o legale.</p>
+<p>Se vuoi capire quanto il risultato resiste a gasolio, attese o ritorni diversi, passa alla guida per <a href="/it/guide/proteggere-margine-tratta/">proteggere il margine della tratta</a>. Questo modulo risponde invece a una domanda più stretta: quale prezzo corrisponde al costo e al margine inseriti.</p>
+<h2 id="dove-finisce-il-calcolatore-e-inizia-l-analisi-di-sensibilita">Dove finisce il calcolatore e inizia l'analisi di sensibilità</h2>
+<p>Questo modulo mantiene fermi i due valori inseriti: costo operativo e margine target. Non modifica carburante, chilometri, attese o rientro per cercare uno scenario più prudente. Di conseguenza il risultato risponde a <strong>quale prezzo corrisponde a quel margine su quel costo</strong>, non a quanto il prezzo resisterebbe a un imprevisto.</p>
+<p>Per stressare le ipotesi usa la guida sull'<a href="/it/guide/proteggere-margine-tratta/">analisi di sensibilità del margine</a>, che confronta scenari e margine residuo. Torna qui quando hai un costo completo e vuoi convertirlo in soglia di copertura e prezzo con margine. La checklist sugli <a href="/it/guide/errori-calcolo-tariffa-trasporto/">errori nel calcolo della tariffa</a> aiuta invece a trovare esclusioni e doppioni prima di inserire il costo.</p>
+<h2 id="dal-risultato-al-preventivo">Dal risultato al preventivo</h2>
+<p>Il numero da inviare non basta. Un preventivo professionale dovrebbe rendere chiari almeno servizio, prezzo, validità, inclusioni, esclusioni e condizioni applicabili. Non serve mostrare al cliente ogni costo interno, ma l’impresa deve poter ricostruire come è arrivata al prezzo.</p>
+<p>La guida al <a href="/it/guide/preventivo-trasporto/">preventivo di trasporto</a> separa il calcolo interno dal documento commerciale. Ricontrolla sempre arrotondamento, IVA, condizioni e dati del cliente prima dell’invio.</p>
+<h2 id="quando-passare-a-routebudget">Quando passare a RouteBudget</h2>
+<p>Questo calcolatore lavora su un costo totale già pronto e non salva una pratica. Nell’app RouteBudget puoi riunire le voci supportate della tratta, confrontare gli scenari Minimo, Consigliato e Ideale e generare un riepilogo PDF non vincolante. L’Archivio locale permette di riaprire il calcolo secondo le funzioni disponibili.</p>
+<p>Gli scenari non garantiscono profitto e non sostituiscono il controllo dell’impresa. Eventuali costi senza campo dedicato vanno gestiti separatamente e senza doppio conteggio. Usa RouteBudget per rendere coerente il passaggio <strong>tratta → costo → prezzo → PDF</strong>, poi applica la tua verifica commerciale prima di accettare il lavoro.</p>
+
+          <section class="sources" aria-labelledby="fonti-prezzo-minimo-margine-tratta">
+    <h2 id="fonti-prezzo-minimo-margine-tratta">Fonti e riferimenti</h2>
+    <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
+    <ul>
+      <li><a href="https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6" rel="noreferrer">MIT — Valori indicativi dei costi di esercizio, marzo 2026</a><small>Famiglie di costo dell&#039;impresa italiana di autotrasporto e natura indicativa dei valori di riferimento; non fornisce una tariffa universale per la singola tratta. · Italia · consultata in data 23 agosto 2026</small></li>
+<li><a href="https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/Legenda.pdf" rel="noreferrer">MIT — Legenda dei valori indicativi dei costi di esercizio 2026</a><small>Istruzioni per scegliere classe e voci pertinenti alla modalità di trasporto, evitando la somma indiscriminata dei riferimenti. · Italia · consultata in data 23 agosto 2026</small></li>
+    </ul>
+  </section>
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p><a href="/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti primarie datate, esempio ricalcolato e controllo dei limiti del prodotto. Strumenti di intelligenza artificiale possono assistere ricerca, confronto e prima struttura; metodo, fonti, calcoli, limiti del prodotto e decisione di pubblicazione restano sotto la responsabilità dell’autore. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+          </section>
+        </article>
+      </div>
+      <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+
+        <section class="rail-link">
+    <p class="rail-label">Guida pilastro</p>
+    <h2><a href="/it/guide/calcolo-costo-trasporto/">Calcolo del costo di trasporto: metodo completo per una tratta</a></h2>
+    <p>Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.</p>
+  </section>
+        <section class="app-cta">
+    <p class="rail-label">Prima di accettare</p>
+    <h2>Confronta la tenuta del margine.</h2>
+    <p>Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo; il risultato resta una stima, non una garanzia di utile.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="article" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="article" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </section>
+      </aside>
+    </div>
+    <section class="related-section">
+    <div class="seo-shell">
+      <div class="related-section__heading">
+        <p class="seo-eyebrow">Continua il calcolo</p>
+        <h2>Passi collegati.</h2>
+      </div>
+      <div class="related-links">
+        <a href="/it/guide/proteggere-margine-tratta/">
+              <span>01</span>
+              <div><small>Guida pratica</small><strong>Analisi di sensibilità del margine per una tratta camion</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/preventivo-trasporto/">
+              <span>02</span>
+              <div><small>Guida pilastro</small><strong>Preventivo trasporto per autotrasportatori: costo e offerta</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/calcolo-costo-trasporto/">
+              <span>03</span>
+              <div><small>Guida pilastro</small><strong>Calcolo del costo di trasporto: metodo completo per una tratta</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/errori-calcolo-tariffa-trasporto/">
+              <span>04</span>
+              <div><small>Guida pratica</small><strong>Errori nella tariffa di trasporto: 10 controlli prima dell’offerta</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/calcolatori/costo-chilometrico-camion/">
+              <span>05</span>
+              <div><small>Calcolatore</small><strong>Costo km camion: calcolatore gratuito per una tratta</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/calcolatori/tempi-guida-camion/">
+              <span>06</span>
+              <div><small>Calcolatore</small><strong>Calcolatore dei tempi di guida per camion: pause e costo autista</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/app-per-autotrasportatori/">
+              <span>07</span>
+              <div><small>App RouteBudget</small><strong>App per autotrasportatori: calcola costi, prezzo e preventivo</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer__inner">
+      <div>
+        <a class="seo-brand" href="/">
+          <img src="/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
+          <span>RouteBudget <small>EU</small></span>
+        </a>
+        <p>Costi chiari. Decisioni difendibili.</p>
+      </div>
+      <nav aria-label="Risorse e informazioni legali">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Termini</a>
+      </nav>
+      <p>© 2026 RouteBudget EU · Eng. Mostafa</p>
+    </div>
+  </footer>
+</body>
+</html>
