@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-22",
+  "revisionDate": "2026-08-23",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -191,7 +191,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-orario-autista-camion/",
       "indexable": true,
       "primaryKeyword": "costo orario autista camion",
-      "modified": "2026-08-12"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:costo-traghetto-camion-calais-dover-2026",
@@ -395,7 +395,7 @@
       "canonical": "https://routebudget.eu/it/guide/pedaggio-camion-svizzera/",
       "indexable": true,
       "primaryKeyword": "pedaggio camion Svizzera",
-      "modified": "2026-08-21"
+      "modified": "2026-08-23"
     },
     {
       "id": "it:guide:pedaggio-camion-ungheria-2026",
