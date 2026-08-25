@@ -1,0 +1,74 @@
+{
+  "slug": "guadagno-padroncino-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Guadagno padroncino camion: calcolarlo senza confondere incasso e utile",
+  "mobileH1": "Guadagno padroncino: incasso, margine e utile",
+  "description": "Metodo per stimare quanto resta a un padroncino dopo costi di tratta, costi mensili e contributi, usando missioni reali invece di uno stipendio medio.",
+  "eyebrow": "Padroncini · Controllo economico",
+  "published": "2026-08-25",
+  "modified": "2026-08-25",
+  "reviewed": "2026-08-25",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "guadagno padroncino camion",
+  "secondaryKeywords": [
+    "quanto guadagna un padroncino con camion proprio",
+    "utile mensile padroncino",
+    "margine impresa autotrasporto individuale",
+    "conto economico padroncino camion"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "margini-e-tariffe",
+  "topics": [
+    "fatturato e utile del padroncino",
+    "margine per missione",
+    "costi mensili del camion",
+    "contributi e cassa",
+    "punto di pareggio operativo"
+  ],
+  "related": [
+    "guide:tariffe-trazionisti",
+    "guide:proteggere-margine-tratta",
+    "guide:preventivo-trasporto",
+    "guide:trasporto-spot-significato",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:preventivo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-scenarios",
+  "translationGroup": "guadagno-padroncino-camion",
+  "canonical": "/it/guide/guadagno-padroncino-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-25",
+      "supports": "Famiglie di costo e valori indicativi aggiornati per imprese italiane di autotrasporto; benchmark da confrontare con i dati dell'impresa, non stima del guadagno individuale."
+    },
+    {
+      "label": "INPS — Circolare 14/2026, contribuzione artigiani e commercianti",
+      "url": "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.02.circolare-numero-14-del-09-02-2026_15162.html",
+      "publishedOrUpdated": "9 febbraio 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-25",
+      "supports": "Contribuzione 2026 per gestioni artigiani e commercianti, con minimale e quote sul reddito; applicabilità al singolo padroncino da verificare con consulente."
+    },
+    {
+      "label": "INPS — Simulatore contributi artigiani e commercianti",
+      "url": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.simulatore-calcolo-contributi-artigiani-e-commercianti.html",
+      "publishedOrUpdated": "3 luglio 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-25",
+      "supports": "Strumento ufficiale per simulare la contribuzione previdenziale usando reddito, mesi di attività e situazione dichiarata."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo originale missione-mese-cassa per il padroncino, senza inventare stipendio medio, tariffa universale o utile fiscale."
+}

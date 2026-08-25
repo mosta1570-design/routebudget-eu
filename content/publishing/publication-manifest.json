@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-08-23-release-integrity",
+  "releaseIntegrityApprovalId": "review:2026-08-25-release-integrity",
   "staticArtifacts": {
-    "/": "sha256:daf484597adbe1b83ef4cc909040a50e6a80cea9f99091bd5e34705183457467",
+    "/": "sha256:feeb1b5cd557257f1312830788607afe4359cb38816ad3a03b566c78e43f4700",
     "/it/calcolatori/": "sha256:0c8741dd4501cf52a894d33d1a204f300a49285d06b37855a17a7936c5a7606f",
-    "/it/guide/": "sha256:2ba0b4f25ddbe972ca1cc5b5e09f82661db2cf3f808ba4ac234bc5c65e493d00",
+    "/it/guide/": "sha256:f05566439f6aeeb2a92cdbf4fb3b0fdd53afe1c225cb76324466fadfccec46f6",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
     "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
   },
@@ -147,6 +147,51 @@
       "primarySourceUrls": [
         "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A02006R0561-20241231",
         "https://transport.ec.europa.eu/transport-modes/road/mobility-package-i/driving-rest-times_en"
+      ]
+    },
+    {
+      "contentId": "guide/conviene-comprare-furgone-elettrico",
+      "canonical": "/it/guide/conviene-comprare-furgone-elettrico/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "conviene comprare un furgone elettrico",
+      "demandEvidenceId": "demand:round-13-conviene-furgone-elettrico",
+      "approvalId": "review:2026-08-25-conviene-furgone-elettrico",
+      "productProofIds": ["fuel-estimate"],
+      "primarySourceUrls": [
+        "https://www.arera.it/fileadmin/allegati/faq/faq_veicoli_ele.pdf",
+        "https://www.arera.it/atti-e-provvedimenti/dettaglio/25/22-25",
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj?locale=it"
+      ]
+    },
+    {
+      "contentId": "guide/guadagno-padroncino-camion",
+      "canonical": "/it/guide/guadagno-padroncino-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "guadagno padroncino camion",
+      "demandEvidenceId": "demand:round-13-guadagno-padroncino-camion",
+      "approvalId": "review:2026-08-25-guadagno-padroncino-camion",
+      "productProofIds": ["cost-scenarios"],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.02.circolare-numero-14-del-09-02-2026_15162.html",
+        "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.simulatore-calcolo-contributi-artigiani-e-commercianti.html"
+      ]
+    },
+    {
+      "contentId": "guide/trasporto-spot-significato",
+      "canonical": "/it/guide/trasporto-spot-significato/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "trasporto spot significato",
+      "demandEvidenceId": "demand:round-13-trasporto-spot",
+      "approvalId": "review:2026-08-25-trasporto-spot",
+      "productProofIds": ["cost-scenarios"],
+      "primarySourceUrls": [
+        "https://www.iru.org/resources/iru-library/european-road-freight-rate-development-benchmark-q2-2026",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=005G0306&atto.dataPubblicazioneGazzetta=2006-01-09&qId=&tipoDettaglio=multivigenza"
       ]
     }
   ],

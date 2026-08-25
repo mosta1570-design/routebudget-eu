@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-25-conviene-furgone-elettrico",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-25",
+  "decision": "approved",
+  "contentId": "guide/conviene-comprare-furgone-elettrico",
+  "contentFingerprint": "sha256:b097b15202cee94be38d72fc318b9f87aa039911dd485c7ce5c083c2fa517ce2",
+  "artifactFingerprint": "sha256:08a482999b848ad14289e86539ee88137e653f4bc905d66f8d2b9b4d562754e4",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-25",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget and create three rare, useful Italian articles through the publication gate."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review verifies exact Italian demand wording, two-gate decision structure, recalculable examples, Italian regulator sources, internal boundaries and verified N1 energy product fit. It does not claim independent human review or a purchase recommendation."
+}

@@ -1,0 +1,113 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-25",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "Google Suggest hl=it gl=it",
+    "Italian Google SERP review",
+    "official Italian and European sources",
+    "authenticated Google Search Console diagnosis"
+  ],
+  "method": {
+    "interpretation": "Each publication candidate needs exact Italian wording, a distinct operator job, a verified RouteBudget feature and current sources. Suggest confirms formulation only. It is not monthly search volume, keyword difficulty, CPC or a traffic forecast.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "Volume remains null. No metric is inferred from autocomplete, current rankings or the site's existing impressions."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-08-25",
+    "latestCompleteDate": "2026-08-23",
+    "diagnosisArtifact": "docs/GSC_BASELINE_2026-08-25.md",
+    "limitations": [
+      "Search Console reporting lag means 24 and 25 August are not completed comparison days.",
+      "Observed impressions measure the site's obtained visibility, not total Italian demand.",
+      "Temporal alignment with an update is strong evidence but not a site-specific penalty notice from Google."
+    ]
+  },
+  "candidates": [
+    {
+      "id": "demand:round-13-guadagno-padroncino-camion",
+      "primaryKeyword": "guadagno padroncino camion",
+      "canonical": "/it/guide/guadagno-padroncino-camion/",
+      "query": "guadagno padroncino camion",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=guadagno%20padroncino%20camion",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "guadagno padroncino camion"
+      ],
+      "rawResponse": "[\"guadagno padroncino camion\",[\"guadagno padroncino camion\"],[],{\"google:suggestsubtypes\":[[512]]}]",
+      "signal": "exact-google-suggest-it-and-current-italian-cost-contribution-sources",
+      "signalNote": "Google Suggest returned the exact Italian formulation on 2026-08-25. Italian results often answer with unsupported salary figures; this page instead owns a reproducible mission-to-month method and links official MIT and INPS inputs. No volume or earnings promise is declared.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns the transition from mission contribution margin to monthly operating result, cash and separately verified contributions. Tariffe trazionisti owns acceptance of a sub-haulage offer; costo chilometrico owns historical cost per kilometre.",
+      "productFit": "RouteBudget's released cost scenarios and local archive support repeatable per-mission inputs before the owner completes accounting outside the app.",
+      "productBoundary": "No tax return, bookkeeping, contribution calculation, bank reconciliation, average salary or guaranteed net profit.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=guadagno%20padroncino%20camion",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.02.circolare-numero-14-del-09-02-2026_15162.html",
+        "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.simulatore-calcolo-contributi-artigiani-e-commercianti.html"
+      ]
+    },
+    {
+      "id": "demand:round-13-conviene-furgone-elettrico",
+      "primaryKeyword": "conviene comprare un furgone elettrico",
+      "canonical": "/it/guide/conviene-comprare-furgone-elettrico/",
+      "query": "conviene comprare un furgone elettrico",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=conviene%20comprare%20un%20furgone%20elettrico",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "conviene comprare un furgone elettrico"
+      ],
+      "rawResponse": "[\"conviene comprare un furgone elettrico\",[\"conviene comprare un furgone elettrico\"],[],{\"google:suggestsubtypes\":[[22,30]]}]",
+      "signal": "exact-google-suggest-it-and-italian-regulator-scope",
+      "signalNote": "Google Suggest returned the exact Italian decision query on 2026-08-25. ARERA confirms charging cost varies by supply, infrastructure and context. This supports an input-driven test, not a universal electric-versus-diesel verdict.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns two sequential purchase gates: route feasibility and annual incremental economics. The charging calculator owns one charging session; the N1 consumption guide owns measured kWh/100 km; costo furgone per km owns full historical or forecast unit cost.",
+      "productFit": "RouteBudget's verified N1 electric profile and energy estimate let operators test their own mission inputs before a wider investment decision.",
+      "productBoundary": "No vehicle recommendation, live charging map, battery-health analysis, charging curve, tax advice, incentive eligibility or TCO guarantee.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=conviene%20comprare%20un%20furgone%20elettrico",
+        "https://www.arera.it/fileadmin/allegati/faq/faq_veicoli_ele.pdf",
+        "https://www.arera.it/atti-e-provvedimenti/dettaglio/25/22-25",
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj?locale=it",
+        "https://www.fiat.it/professional/modello/ducato-elettrico/ricarica-rapida"
+      ]
+    },
+    {
+      "id": "demand:round-13-trasporto-spot",
+      "primaryKeyword": "trasporto spot significato",
+      "canonical": "/it/guide/trasporto-spot-significato/",
+      "query": "trasporto spot significato",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=trasporto%20spot%20significato",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "trasporto spot significato"
+      ],
+      "rawResponse": "[\"trasporto spot significato\",[\"trasporto spot significato\"],[],{\"google:suggestsubtypes\":[[22,30]]}]",
+      "signal": "exact-google-suggest-it-and-current-european-market-context",
+      "signalNote": "Google Suggest returned the exact Italian formulation on 2026-08-25. TIMOCOM supports the short-term market definition and IRU provides dated European context. Neither provides a live Italian lane rate, so the page owns a cost-based accept-negotiate-decline method.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns definition plus a ten-minute decision on one short-term load. Tariffe trazionisti owns a sub-haulage relationship offer; ritorno a vuoto owns allocation of unbilled kilometres; prezzo minimo calculator owns numeric cost-to-price conversion.",
+      "productFit": "RouteBudget's released cost scenarios and PDF quote support a documented evaluation of the specific spot mission.",
+      "productBoundary": "No freight exchange, load matching, customer verification, live market quote, legal interpretation or payment guarantee.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=trasporto%20spot%20significato",
+        "https://www.timocom.it/lexicon/il-dizionario-del-trasporto/mercato-spot",
+        "https://www.iru.org/resources/iru-library/european-road-freight-rate-development-benchmark-q2-2026",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=005G0306&atto.dataPubblicazioneGazzetta=2006-01-09&qId=&tipoDettaglio=multivigenza"
+      ]
+    }
+  ]
+}

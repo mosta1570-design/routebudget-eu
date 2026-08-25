@@ -129,3 +129,13 @@ GSC rileva 0 link esterni e 90 interni. Nuovi contenuti e internal linking non s
 - guida `costo trasporto ADR` soltanto dopo scope prodotto e revisione legale/sicurezza; rifiutata nel Round 10 per mismatch con funzioni reali.
 
 Ogni candidato richiede SERP distinta, brief, fonti, product-truth review e almeno due link in ingresso. Traduzioni solo dopo segnali italiani o valore strategico verificato; canonical e hreflang reciproci solo quando entrambe le pagine esistono.
+
+## Round 13 — decisioni operative italiane
+
+| Pagina | Cluster | Ruolo unico | Confine prodotto |
+| --- | --- | --- | --- |
+| `guadagno-padroncino-camion` | preventivi, tariffe e margine | missione → risultato mese → cassa → obblighi esterni | nessuna contabilità, imposta, contribuzione o promessa di utile |
+| `conviene-comprare-furgone-elettrico` | costi dell'autotrasporto | fattibilità dei giri prima, convenienza incrementale poi | nessun consiglio di acquisto, TCO garantito o colonnina live |
+| `trasporto-spot-significato` | preventivi, tariffe e margine | definizione più decisione su una singola offerta breve | nessuna borsa carichi, quotazione live o verifica cliente |
+
+Le tre pagine si collegano soltanto quando il passaggio operativo è reale: carico spot nel conto del padroncino; tecnologia del mezzo nel costo mensile; missione occasionale nel profilo energetico N1. Non esiste variante geografica, sinonimica o tradotta automatica. Il batch del 25 agosto risponde a tre lavori distinti verificati; non istituisce una cadenza fissa di tre URL al giorno.
