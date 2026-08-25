@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-25-trasporto-spot",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-25",
+  "decision": "approved",
+  "contentId": "guide/trasporto-spot-significato",
+  "contentFingerprint": "sha256:9c3d7030188bc5c5bd61d6df634a1318caf999a27f58967b091effa344326d75",
+  "artifactFingerprint": "sha256:58be9266b90e021d5be6205ada32e37a3f9e3dba163c5bb2338e493b02a92f3f",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-25",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget and create three rare, useful Italian articles through the publication gate."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review verifies sector definition, accept-negotiate-decline workflow, EU-index limitation, Italian cost sources, distinct intent and verified scenario product fit. It does not claim live freight rates, customer verification or independent human review."
+}

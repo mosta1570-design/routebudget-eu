@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-25-guadagno-padroncino-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-25",
+  "decision": "approved",
+  "contentId": "guide/guadagno-padroncino-camion",
+  "contentFingerprint": "sha256:b6055e8f748c0d018ae37b2f3514f23d680060017033aa7399ea1a911f981488",
+  "artifactFingerprint": "sha256:b62bd70856b412af6ffa195b8c7a63743bf8d739e830ec7982371550d9be3158",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-25",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget and create three rare, useful Italian articles through the publication gate."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review verifies mission-to-month ownership, separation of revenue, operating result and cash, MIT and INPS evidence, examples and product limits. It does not claim an average income, accounting result or independent human factual review."
+}

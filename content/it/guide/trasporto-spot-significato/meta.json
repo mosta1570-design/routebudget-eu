@@ -1,0 +1,82 @@
+{
+  "slug": "trasporto-spot-significato",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Trasporto spot: significato e controllo del carico prima di accettare",
+  "mobileH1": "Trasporto spot: il carico conviene davvero?",
+  "description": "Che cosa significa trasporto spot e come valutare un'offerta singola con km reali, vuoto, ore, pedaggi, costi e margine, senza copiare indici europei.",
+  "eyebrow": "Mercato spot · Decisione tratta",
+  "published": "2026-08-25",
+  "modified": "2026-08-25",
+  "reviewed": "2026-08-25",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "trasporto spot significato",
+  "secondaryKeywords": [
+    "carico spot autotrasporto",
+    "offerta spot camion",
+    "valutare tratta occasionale",
+    "prezzo carico spot"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "margini-e-tariffe",
+  "topics": [
+    "definizione mercato spot",
+    "offerta di trasporto a breve termine",
+    "controllo costo missione",
+    "ritorno a vuoto e attese",
+    "decisione accetta negozia rifiuta"
+  ],
+  "related": [
+    "guide:tariffe-trazionisti",
+    "guide:ritorno-a-vuoto-autotrasporto",
+    "guide:guadagno-padroncino-camion",
+    "guide:preventivo-trasporto",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:preventivo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-scenarios",
+  "translationGroup": "trasporto-spot-significato",
+  "canonical": "/it/guide/trasporto-spot-significato/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "TIMOCOM — Dizionario del trasporto: mercato spot",
+      "url": "https://www.timocom.it/lexicon/il-dizionario-del-trasporto/mercato-spot",
+      "publishedOrUpdated": "Pagina consultata il 25 agosto 2026",
+      "geography": "Italia / Europa",
+      "accessedAt": "2026-08-25",
+      "supports": "Definizione settoriale del mercato spot come luogo economico per trasporti da compiere a breve termine."
+    },
+    {
+      "label": "IRU — European Road Freight Rate Development Benchmark Q2 2026",
+      "url": "https://www.iru.org/resources/iru-library/european-road-freight-rate-development-benchmark-q2-2026",
+      "publishedOrUpdated": "11 agosto 2026",
+      "geography": "Europa",
+      "accessedAt": "2026-08-25",
+      "supports": "Indice europeo 2026 che distingue andamento spot e contract; contesto aggregato, non tariffa italiana né prezzo per una tratta."
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-25",
+      "supports": "Famiglie di costo e valori indicativi italiani per controllare voci omesse; non listino spot o tariffa minima."
+    },
+    {
+      "label": "Normattiva — Decreto legislativo 21 novembre 2005, n. 286",
+      "url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=005G0306&atto.dataPubblicazioneGazzetta=2006-01-09&qId=&tipoDettaglio=multivigenza",
+      "publishedOrUpdated": "Testo vigente consultato il 25 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-25",
+      "supports": "Quadro italiano del contratto di trasporto e soggetti; il termine commerciale spot non sostituisce qualificazione e verifica del rapporto."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: definizione separata da metodo operativo di dieci minuti per decidere una singola offerta, senza fingere quotazioni live o tariffe italiane."
+}

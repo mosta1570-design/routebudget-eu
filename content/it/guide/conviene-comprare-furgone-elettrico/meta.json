@@ -1,0 +1,82 @@
+{
+  "slug": "conviene-comprare-furgone-elettrico",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Conviene comprare un furgone elettrico? Test sui tuoi giri, non sulla media",
+  "mobileH1": "Conviene un furgone elettrico per i tuoi giri?",
+  "description": "Metodo per confrontare furgone elettrico e diesel su autonomia utile, carico, ricarica, costo energia, fermo e differenza annua, senza promesse TCO.",
+  "eyebrow": "Furgoni N1 · Decisione operativa",
+  "published": "2026-08-25",
+  "modified": "2026-08-25",
+  "reviewed": "2026-08-25",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "conviene comprare un furgone elettrico",
+  "secondaryKeywords": [
+    "furgone elettrico conviene per lavoro",
+    "confronto costi furgone elettrico diesel",
+    "autonomia utile furgone elettrico consegne",
+    "punto di pareggio furgone elettrico"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "profilo missioni N1",
+    "autonomia e carico utile",
+    "ricarica privata e pubblica",
+    "costo energetico per km",
+    "differenza annua e investimento"
+  ],
+  "related": [
+    "guide:costo-furgone-per-km",
+    "guide:quanto-consuma-un-furgone",
+    "guide:guadagno-padroncino-camion",
+    "guide:costi-autotrasporto",
+    "calcolatori:quanto-costa-ricaricare-furgone-elettrico"
+  ],
+  "relatedCalculator": "calcolatori:quanto-costa-ricaricare-furgone-elettrico",
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "fuel-estimate",
+  "translationGroup": "conviene-comprare-furgone-elettrico",
+  "canonical": "/it/guide/conviene-comprare-furgone-elettrico/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "ARERA — Mobilità elettrica: domande e risposte",
+      "url": "https://www.arera.it/fileadmin/allegati/faq/faq_veicoli_ele.pdf",
+      "publishedOrUpdated": "Documento istituzionale consultato il 25 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-25",
+      "supports": "Variabilità del costo di ricarica secondo fornitura, infrastruttura, potenza e contesto privato o pubblico; nessun prezzo unico."
+    },
+    {
+      "label": "ARERA — Delibera 22/2025/R/eel sulla mobilità elettrica",
+      "url": "https://www.arera.it/atti-e-provvedimenti/dettaglio/25/22-25",
+      "publishedOrUpdated": "29 gennaio 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-08-25",
+      "supports": "Quadro aggiornato per ricarica privata e requisiti della tariffa dedicata alle infrastrutture pubbliche."
+    },
+    {
+      "label": "Regolamento (UE) 2023/1804 — Infrastruttura per combustibili alternativi",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1804/oj?locale=it",
+      "publishedOrUpdated": "22 settembre 2023",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-25",
+      "supports": "Quadro AFIR per infrastrutture e informazioni di ricarica; non garantisce disponibilità o prezzo su una missione."
+    },
+    {
+      "label": "Fiat Professional — E-Ducato, ricarica rapida",
+      "url": "https://www.fiat.it/professional/modello/ducato-elettrico/ricarica-rapida",
+      "publishedOrUpdated": "Pagina prodotto consultata il 25 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-25",
+      "supports": "Esempio ufficiale di dati dichiarati dal costruttore su batteria e ricarica; valori da verificare per versione e condizioni."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: test in due porte — fattibilità operativa e convenienza economica — basato sui giri reali dell'impresa, non su una media promozionale."
+}
