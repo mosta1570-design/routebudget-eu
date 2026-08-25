@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-23",
+  "revisionDate": "2026-08-25",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -158,6 +158,18 @@
       "modified": "2026-08-22"
     },
     {
+      "id": "it:guide:conviene-comprare-furgone-elettrico",
+      "url": "https://routebudget.eu/it/guide/conviene-comprare-furgone-elettrico/",
+      "title": "Conviene comprare un furgone elettrico? Test sui tuoi giri, non sulla media",
+      "description": "Metodo per confrontare furgone elettrico e diesel su autonomia utile, carico, ricarica, costo energia, fermo e differenza annua, senza promesse TCO.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/conviene-comprare-furgone-elettrico/",
+      "indexable": true,
+      "primaryKeyword": "conviene comprare un furgone elettrico",
+      "modified": "2026-08-25"
+    },
+    {
       "id": "it:guide:costi-autotrasporto",
       "url": "https://routebudget.eu/it/guide/costi-autotrasporto/",
       "title": "Costi dell’autotrasporto merci: voci fisse, variabili e indirette",
@@ -288,6 +300,18 @@
       "indexable": true,
       "primaryKeyword": "eurovignette camion 2026",
       "modified": "2026-08-22"
+    },
+    {
+      "id": "it:guide:guadagno-padroncino-camion",
+      "url": "https://routebudget.eu/it/guide/guadagno-padroncino-camion/",
+      "title": "Guadagno padroncino camion: calcolarlo senza confondere incasso e utile",
+      "description": "Metodo per stimare quanto resta a un padroncino dopo costi di tratta, costi mensili e contributi, usando missioni reali invece di uno stipendio medio.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/guadagno-padroncino-camion/",
+      "indexable": true,
+      "primaryKeyword": "guadagno padroncino camion",
+      "modified": "2026-08-25"
     },
     {
       "id": "it:guide:pedaggio-a22-camion-2026",
@@ -600,6 +624,18 @@
       "indexable": true,
       "primaryKeyword": "traghetto camion Italia Grecia",
       "modified": "2026-08-21"
+    },
+    {
+      "id": "it:guide:trasporto-spot-significato",
+      "url": "https://routebudget.eu/it/guide/trasporto-spot-significato/",
+      "title": "Trasporto spot: significato e controllo del carico prima di accettare",
+      "description": "Che cosa significa trasporto spot e come valutare un'offerta singola con km reali, vuoto, ore, pedaggi, costi e margine, senza copiare indici europei.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/trasporto-spot-significato/",
+      "indexable": true,
+      "primaryKeyword": "trasporto spot significato",
+      "modified": "2026-08-25"
     },
     {
       "id": "it:guide:usura-manutenzione-camion",
