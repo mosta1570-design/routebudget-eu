@@ -1409,6 +1409,16 @@ svg {
   line-height: 1.5;
 }
 
+.freight-field-note {
+  margin: 0;
+  border-top: 1px solid var(--line);
+  padding: 18px clamp(22px, 4vw, 54px);
+  background: rgba(47, 143, 229, 0.045);
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
 .freight-product {
   background:
     linear-gradient(180deg, #090e16, #0d141f 70%, #090e16);

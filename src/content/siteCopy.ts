@@ -58,6 +58,7 @@ export type SiteCopy = {
   equation: {
     heading: string;
     body: string;
+    fieldNote: string;
     exampleLabel: string;
     items: EquationItem[];
     resultLabel: string;
@@ -139,9 +140,11 @@ const italian: SiteCopy = {
     decisionMeta: 'Esempio: 870 km · margine 20%',
   },
   equation: {
-    heading: 'Ogni costo entra nel prezzo.',
+    heading: 'Ogni costo supportato entra nel prezzo.',
     body:
-      'Un viaggio può sembrare redditizio finché non aggiungi tempo, pedaggi e chilometri a vuoto. RouteBudget ricompone il conto prima della decisione.',
+      'Un viaggio può sembrare redditizio finché non aggiungi tempo, pedaggi e chilometri a vuoto. RouteBudget ricompone le voci supportate prima della decisione e rende visibili i limiti della stima.',
+    fieldNote:
+      'Nota dalla ricerca sul campo: attese, carico, scarico e costi fissi continuano anche quando il mezzo non percorre chilometri. RouteBudget valorizza le voci oggi supportate; tempi o quote aziendali non modellati restano un controllo esterno da documentare, senza doppio conteggio.',
     exampleLabel: 'Esempio di calcolo',
     items: [
       { label: 'Carburante', value: '495,55 €', detail: 'Consumo e prezzo inseriti' },
@@ -243,6 +246,27 @@ const italian: SiteCopy = {
         action: 'Prepara la A22',
         href: '/it/guide/pedaggio-a22-camion-2026/',
       },
+      {
+        kind: 'Decisione del padroncino',
+        title: 'Quanto guadagna davvero un padroncino',
+        text: 'Separa fatturato, costi fissi, tempo impegnato, ritorno a vuoto e utile reale prima di valutare una tratta.',
+        action: 'Controlla il margine',
+        href: '/it/guide/guadagno-padroncino-camion/',
+      },
+      {
+        kind: 'Mercato spot',
+        title: 'Trasporto spot: quando il prezzo regge',
+        text: 'Confronta offerta urgente, chilometri completi, attese e rientro prima di accettare un viaggio una tantum.',
+        action: 'Valuta la tratta spot',
+        href: '/it/guide/trasporto-spot-significato/',
+      },
+      {
+        kind: 'Furgone N1',
+        title: 'Furgone elettrico: convenienza reale',
+        text: 'Confronta energia, ricarica, percorrenza, carico utile e costo operativo senza fermarti al prezzo del kWh.',
+        action: 'Confronta gli scenari',
+        href: '/it/guide/conviene-comprare-furgone-elettrico/',
+      },
     ],
     hubAction: 'Esplora tutte le guide operative',
   },
@@ -326,9 +350,11 @@ const english: SiteCopy = {
     decisionMeta: 'Example: 870 km · 20% margin',
   },
   equation: {
-    heading: 'Every cost belongs in the price.',
+    heading: 'Every supported cost belongs in the price.',
     body:
-      'A trip can look profitable until you add time, tolls and the empty return. RouteBudget rebuilds the calculation before you decide.',
+      'A trip can look profitable until you add time, tolls and the empty return. RouteBudget rebuilds supported cost lines before the decision and keeps estimate limits visible.',
+    fieldNote:
+      'Field-research note: waiting, loading, unloading and fixed costs continue even when the vehicle is not moving. RouteBudget values the inputs it currently supports; unmodelled time or company overhead remains a documented external check, without double counting.',
     exampleLabel: 'Calculation example',
     items: [
       { label: 'Fuel', value: '€495.55', detail: 'Entered use and price' },
@@ -429,6 +455,27 @@ const english: SiteCopy = {
         text: 'Verify class, entry and exit toll booths and Autobrennero amount before adding it to the route.',
         action: 'Read in Italian',
         href: '/it/guide/pedaggio-a22-camion-2026/',
+      },
+      {
+        kind: 'Owner-operator decision · Italian',
+        title: 'What an owner-operator really earns',
+        text: 'Separate revenue, fixed costs, committed time, empty return and real profit before judging a route.',
+        action: 'Read in Italian',
+        href: '/it/guide/guadagno-padroncino-camion/',
+      },
+      {
+        kind: 'Spot market · Italian',
+        title: 'Spot transport: when the price works',
+        text: 'Compare an urgent offer with full kilometres, waiting time and return conditions before accepting it.',
+        action: 'Read in Italian',
+        href: '/it/guide/trasporto-spot-significato/',
+      },
+      {
+        kind: 'N1 van · Italian',
+        title: 'Electric van: real-world economics',
+        text: 'Compare energy, charging, mileage, payload and operating cost instead of stopping at the price per kWh.',
+        action: 'Read in Italian',
+        href: '/it/guide/conviene-comprare-furgone-elettrico/',
       },
     ],
     hubAction: 'Explore all Italian operating guides',

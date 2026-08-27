@@ -56,6 +56,7 @@ Fonti ammesse:
 
 - query/pagine reali Search Console;
 - SERP italiana osservata e datata;
+- ricerca qualitativa con operatori, consenso esplicito e note anonimizzate;
 - domanda supporto anonimizzata;
 - lacuna in cluster esistente;
 - modifica di fonte ufficiale;
@@ -63,6 +64,8 @@ Fonti ammesse:
 - compito pratico risolvibile da guida, tabella o calcolatore.
 
 Registrare problema, lettore, evidenza, cluster, differenza, rischio di manutenzione e conversione pertinente. Scartare idee senza utilità originale o con intento già posseduto.
+
+La ricerca qualitativa può provare che un problema operativo esiste e può migliorare esempi, formule candidate e limiti del prodotto. Non prova da sola volume di ricerca, tariffa, obbligo legale o accuratezza di una formula. Google Suggest prova la formulazione di una query, non il suo volume. Una nuova URL richiede anche almeno un segnale di domanda italiana: query GSC, intervallo Keyword Planner Italia, andamento Google Trends Italia o gap SERP documentato. Senza questo segnale, aggiornare una pagina esistente o mantenere l'idea in ricerca.
 
 ## 4. Ricerca `researching`
 

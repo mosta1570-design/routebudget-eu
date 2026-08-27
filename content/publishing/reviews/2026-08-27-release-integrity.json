@@ -1,0 +1,46 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-27-release-integrity",
+  "type": "release-integrity",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-27",
+  "decision": "approved",
+  "dependencyFingerprint": "sha256:2ad61dc61e53c202eb78cd000338e4dca8260a4187149de6b1cb19403d260024",
+  "dependencyFiles": {
+    "content/site.json": "sha256:a062d9e385df62a5812e67a170c330bc2cf6bb0f8f72ad5211ad4d9df38a5d11",
+    "content/sources.json": "sha256:7cf629dfaef5fd7d35e2a5f0aa65f5a7e4a23ae90069fdb33c7d9d759133f3c8",
+    "package-lock.json": "sha256:239ba379b02324b5087969ecc219d7c3951be19c9b566b7b1d56926af6620f10",
+    "package.json": "sha256:d4715987c9ef0a74f6da0d383204d72658e3a7d0cc968aefde2a6d6eebe2bb48",
+    "public/seo/calculators-core.js": "sha256:7cd6ea73cde2129bf65cf4451ab9cf1706abcc2e4b3dbd363d5a1c4824eac846",
+    "public/seo/calculators.js": "sha256:ff8a882ef4a691475208c69b072e743fc01d7baba9e47fad9b1c04a3573572d5",
+    "public/seo/events.js": "sha256:a31a2a86c7120087cc2c5cb3cee5c0ec400239062d1b0dae1ff29fa751f30038",
+    "public/seo/seo.css": "sha256:17fe35fe5f6721cb23b95e56c2fbb85feed3a4de6cb1dab3a2675533597f66c7",
+    "scripts/build-content.mjs": "sha256:497474ebc38178911c187b9c7f1f707c841890c078e30031fbcc117a5833f621",
+    "scripts/product-claim-rules.mjs": "sha256:8044cdcdbaf779c8acc61e1c75accd207bd5777826ff07145c15349da2eb32a5"
+  },
+  "staticArtifacts": {
+    "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
+    "/it/calcolatori/": "sha256:0c8741dd4501cf52a894d33d1a204f300a49285d06b37855a17a7936c5a7606f",
+    "/it/guide/": "sha256:f05566439f6aeeb2a92cdbf4fb3b0fdd53afe1c225cb76324466fadfccec46f6",
+    "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
+    "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
+  },
+  "transitiveArtifacts": {
+    "guide/calcolare-carburante-pedaggi-autista": "sha256:b9ed396ccd0eda3439b6b7d0e5a2b631092fe51dc4e128f741a2457e413223d3",
+    "guide/costo-orario-autista-camion": "sha256:ec498b51c9a6b33c271874e52e684f4ab8eabd3666681e923d7ea26a260982ed",
+    "guide/tachigrafo-furgoni-2026": "sha256:beb259a132b73838ffecc9091042f2682279dcc87a5f617eae59c42712ae3206"
+  },
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-27",
+    "basis": "Explicit owner authorization in the active Codex task to use the supplied RouteBudget field-research log, harden the website, and prepare the resulting recovery patch through the publication gate."
+  },
+  "automatedChecks": {
+    "indexableInventory": true,
+    "generatedArtifacts": true,
+    "dependencyClosure": true
+  },
+  "notes": "Pins the 54-page indexable inventory after adding an anonymized field-research boundary note, contextual homepage links to the latest Italian resources, and stable client configuration that prevents editorial inventory changes from churning the homepage bundle hash. No independent legal, accounting or human factual review is claimed."
+}
