@@ -1,8 +1,10 @@
 import type { Locale } from './siteCopy';
-import site from '../../content/site.json';
 
-export const APP_STORE_URL = site.appStoreUrl;
-export const GOOGLE_PLAY_URL = site.googlePlayUrl;
+// Keep client runtime configuration independent from editorial inventory.
+// Content-only releases update content/site.json and must not invalidate the
+// homepage bundle hash while crawlers can still hold cached HTML.
+export const APP_STORE_URL = 'https://apps.apple.com/app/id6789717191';
+export const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=eu.routebudget.app';
 export const SUPPORT_EMAIL = 'mailto:mosta1570@gmail.com';
 
 export const STORE_BADGES = {

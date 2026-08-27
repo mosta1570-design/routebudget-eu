@@ -4,6 +4,14 @@ import path from 'node:path';
 
 const ASSETS = path.resolve('dist/assets');
 const files = await readdir(ASSETS);
+const siteConfigSource = await readFile(path.resolve('src/content/siteConfig.ts'), 'utf8');
+
+const importsEditorialInventory = (siteConfigSource.match(/^\s*import\b[\s\S]*?;/gm) ?? [])
+  .some((statement) => /['"][^'"]*content\/site\.json['"]/.test(statement));
+
+if (importsEditorialInventory) {
+  throw new Error('Homepage client config must not import editorial content/site.json; content-only releases would churn the bundle hash');
+}
 
 const budgets = {
   javascriptGzip: 90 * 1024,

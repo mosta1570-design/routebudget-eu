@@ -272,6 +272,7 @@ export function ProductContinuation({ copy, locale }: ProductContinuationProps) 
                 <p className="freight-ledger__note">{text.calculationNote}</p>
               </div>
             </div>
+            <p className="freight-field-note">{copy.equation.fieldNote}</p>
           </div>
         </div>
       </section>

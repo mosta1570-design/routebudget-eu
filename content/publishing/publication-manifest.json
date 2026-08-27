@@ -4,9 +4,9 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-08-25-release-integrity",
+  "releaseIntegrityApprovalId": "review:2026-08-27-release-integrity",
   "staticArtifacts": {
-    "/": "sha256:feeb1b5cd557257f1312830788607afe4359cb38816ad3a03b566c78e43f4700",
+    "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
     "/it/calcolatori/": "sha256:0c8741dd4501cf52a894d33d1a204f300a49285d06b37855a17a7936c5a7606f",
     "/it/guide/": "sha256:f05566439f6aeeb2a92cdbf4fb3b0fdd53afe1c225cb76324466fadfccec46f6",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
