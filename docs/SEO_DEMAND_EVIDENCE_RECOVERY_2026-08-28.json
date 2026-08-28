@@ -1,0 +1,44 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-28",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "existing Italian keyword and Search Console intent records",
+    "Italian Ministry of Labour official sector tables"
+  ],
+  "method": {
+    "interpretation": "This recovery updates an existing Italian intent owner after Search Console showed that the page still receives impressions but needs a clearer, reproducible operator answer. Official 2026 labour-cost tables validate the subject and inputs; obtained impressions do not represent total market demand.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "Volume remains null. No traffic, ranking or conversion forecast is inferred."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-08-28",
+    "purpose": "Recovery of an existing Italian query owner, not creation of a speculative keyword page."
+  },
+  "candidates": [
+    {
+      "id": "demand:recovery-costo-orario-autista-camion",
+      "primaryKeyword": "costo orario autista camion",
+      "canonical": "/it/guide/costo-orario-autista-camion/",
+      "query": "costo orario autista camion",
+      "signal": "existing-italian-intent-owner-with-current-official-labour-cost-source",
+      "signalNote": "The page already owns a distinct Italian operator query in the approved keyword map. The Ministry of Labour publishes 2026 sector tables for average hourly labour cost, supporting a practical input-driven answer rather than a generic salary article.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "This guide owns the company hourly cost of the driver and its allocation to one mission. The broader cost pillar owns all company costs; the kilometre calculator owns route-level numerical execution.",
+      "productFit": "RouteBudget lets an operator enter a verified hourly driver cost with distance, fuel, tolls, wear, empty return and margin, then compare a client price against the mission cost.",
+      "productBoundary": "RouteBudget does not calculate payroll, net salary, social contributions, official labour-table classifications, live tolls or a universal hourly tariff.",
+      "sourceUrls": [
+        "https://www.lavoro.gov.it/temi-e-priorita/rapporti-di-lavoro-e-relazioni-industriali/focus/settore-della-logistica-trasporto-merci-spedizione"
+      ]
+    }
+  ]
+}

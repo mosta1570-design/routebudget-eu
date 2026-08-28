@@ -53,6 +53,8 @@ Supponiamo inoltre che il contratto attribuisca 45 minuti all’esecuzione del c
 
 Anche senza indennizzo legale, il fermo può costare all’impresa: la soglia non cancella costo del lavoro, indisponibilità del mezzo o perdita della consegna successiva.
 
+Nelle note di ricerca operativa raccolte per RouteBudget ricorre un problema concreto: durante la sosta il camion non produce chilometri fatturabili, ma continuano a pesare il tempo dell’autista, l’impegno del mezzo e l’eventuale ripianificazione della missione successiva. È un’osservazione di lavoro, non una misura statistica e non dimostra da sola il diritto a un indennizzo.
+
 Una stima interna leggibile può partire da:
 
 ```text
@@ -65,6 +67,39 @@ ore operative × costo orario dell’autista
 Il costo orario dell’autista non coincide con la sua retribuzione netta. Per impostare correttamente questa voce è utile la guida sul [costo orario dell’autista di camion](/it/guide/costo-orario-autista-camion/). Il mezzo fermo può inoltre assorbire una quota di leasing, assicurazione, struttura o opportunità, ma ogni componente va inserita una sola volta: se è già compresa nella quota fissa, aggiungerla di nuovo crea un doppio conteggio.
 
 Un’attesa non diventa pausa solo perché il veicolo è fermo. La classificazione tachigrafica dipende da attività e disponibilità effettive del conducente e resta distinta dalla verifica dei [tempi di guida e riposo del camion](/it/guide/tempi-guida-riposo-camion/).
+
+## Caso operativo ricalcolabile: consegna a un centro distributivo
+
+Questo caso riproduce una situazione quotidiana plausibile per un piccolo vettore italiano. Orari e costi sono ipotesi dichiarate: sostituendoli con i propri dati si ottiene un calcolo verificabile, non una tariffa di mercato.
+
+Un camion arriva per lo scarico alle 06:30, come da slot. L’operazione materiale inizia alle 08:40 e termina alle 09:30.
+
+| Dato | Valore dell’esempio | Come sostituirlo |
+| --- | ---: | --- |
+| Attesa prima dello scarico | 130 min | Inizio materiale − arrivo |
+| Esecuzione materiale | 50 min | Fine − inizio materiale |
+| Permanenza totale sul sito | 180 min | Fine − arrivo |
+| Tempo incluso nel prezzo commerciale | 60 min | Condizione concordata nel preventivo |
+| Tempo aggiuntivo per il costo interno | 120 min = 2 h | Permanenza − tempo incluso |
+| Costo pieno autista | 29 €/h | Proprio costo aziendale |
+| Quota del mezzo fermo | 18 €/h | Quota documentata, senza doppioni |
+| Ripianificazione direttamente collegata | 8 € | Costo specifico effettivamente sostenuto |
+
+Il costo interno aggiuntivo dell’esempio è:
+
+```text
+2 h × (29 €/h + 18 €/h) + 8 € = 102 €
+```
+
+Se l’impresa vuole che il prezzo commerciale copra questo costo lasciando un margine del 15% sul prezzo, il calcolo è:
+
+```text
+prezzo commerciale minimo = 102 € ÷ (1 − 0,15) = 120 €
+```
+
+I 120 euro sono una scelta economica dell’impresa, non l’indennizzo previsto dalla legge. Sul piano normativo, l’attesa di 130 minuti supera di 40 minuti la franchigia di 90: la formula teorica produce una unità di indennizzo. L’importo di tale unità va verificato per la data dell’evento, insieme a responsabilità e documentazione. Anche i 60 minuti inclusi nel prezzo sono una condizione commerciale: non modificano la franchigia legale.
+
+Per rifare il caso basta sostituire cinque dati: permanenza totale, minuti inclusi, costo pieno dell’autista, quota del mezzo e costo specifico. Se il tempo aggiuntivo è zero, il costo interno aggiuntivo della formula è zero; l’eventuale verifica dell’indennizzo resta separata.
 
 ## Dal costo interno al prezzo commerciale
 
@@ -80,6 +115,14 @@ In un preventivo è più chiaro:
 - evitare di addebitare in anticipo un indennizzo come se fosse già maturato.
 
 Una voce commerciale del tipo “tempo aggiuntivo presso il sito” non dovrebbe essere presentata come “indennizzo di legge” se è semplicemente un prezzo contrattuale. Viceversa, una richiesta formulata sulla base della disciplina non dovrebbe usare una tariffa interna senza verificare l’importo legale aggiornato. Nel [preventivo di trasporto](/it/guide/preventivo-trasporto/) conviene rendere visibili ipotesi, inclusioni, esclusioni e validità, lasciando i dati sensibili di costo nel calcolo interno.
+
+### Testo di lavoro da affiancare al PDF
+
+Il testo seguente è una traccia informativa da adattare al servizio e far verificare da un professionista. Non è una clausola legale pronta all’uso e non va presentato come contenuto generato automaticamente da RouteBudget.
+
+> **Tempi presso carico e scarico.** Il corrispettivo comprende fino a **[X minuti]** presso ciascun sito, calcolati secondo **[evento iniziale e finale concordati]**. Il tempo commerciale aggiuntivo, quando registrato con **[documenti/orari concordati]**, è valorizzato a **[Y euro per ora o frazione / altro criterio]**, previa verifica delle condizioni applicabili. Questa voce commerciale non sostituisce, limita né quantifica l’eventuale indennizzo previsto dalla disciplina vigente sui tempi di attesa e di esecuzione materiale.
+
+Prima di affiancarlo al PDF del preventivo, compilare ogni parentesi, verificare coerenza con contratto e ordine di trasporto e specificare se carico e scarico hanno condizioni diverse. Evitare formule come “100 euro automatici dopo 90 minuti”: confondono prezzo concordato, importo legalmente vigente e verifica del caso concreto.
 
 ## Quali orari e documenti raccogliere
 
@@ -122,10 +165,13 @@ Il PDF dell’app riepiloga la stima ma non offre un campo libero per clausole p
 - [ ] I tempi contrattuali delle operazioni sono disponibili.
 - [ ] La franchigia è applicata separatamente.
 - [ ] L’importo annualmente vigente è stato verificato.
-- [ ] Il costo interno comprende tempo e mezzo senza doppioni.
-- [ ] Le condizioni commerciali sono scritte con termini non ambigui.
+- [ ] Il costo interno usa ore e costi aziendali documentati, senza doppioni.
+- [ ] Il prezzo commerciale è calcolato separatamente dal costo e dall’indennizzo.
+- [ ] Minuti inclusi, criterio degli extra e prova degli orari sono espliciti.
+- [ ] La traccia allegata al PDF è stata compilata e verificata per quel rapporto.
+- [ ] Il PDF non presenta una stima RouteBudget come prova del tempo trascorso.
 - [ ] Contratto, responsabilità e documenti sono stati esaminati da chi è competente.
 
 ## Fonti e metodo
 
-La regola è stata verificata sulla comunicazione del [MIT del 19 maggio 2025](https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture) e sul [testo coordinato dell’articolo 4 del decreto-legge 73/2025 con la legge di conversione 105/2025](https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25A04106&art.dataPubblicazioneGazzetta=2025-07-19&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1). Il chiarimento [FIAP dell’8 ottobre 2025](https://www.fiapautotrasporti.it/le-ultime-notizie/attese-al-carico-e-allo-scarico-fiap-chiarisce-come-funziona-la-regola-dei-90-minuti/) supporta la distinzione operativa e l’attenzione alla documentazione. L’analisi di [Uomini e Trasporti del 23 ottobre 2024](https://www.uominietrasporti.it/centonumeri/autisti-e-dintorni/435-e-il-tempo-di-attesa-media-di-un-camion-al-carico-scarico/) descrive la dimensione pratica del problema su dati di settore, ma non è usata come fonte normativa. Tutte le fonti sono state ricontrollate il 12 agosto 2026.
+La regola è stata verificata sulla comunicazione del [MIT del 19 maggio 2025](https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture) e sul [testo coordinato dell’articolo 4 del decreto-legge 73/2025 con la legge di conversione 105/2025](https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25A04106&art.dataPubblicazioneGazzetta=2025-07-19&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1). Il chiarimento [FIAP dell’8 ottobre 2025](https://www.fiapautotrasporti.it/le-ultime-notizie/attese-al-carico-e-allo-scarico-fiap-chiarisce-come-funziona-la-regola-dei-90-minuti/) supporta la distinzione operativa e l’attenzione alla documentazione. L’analisi di [Uomini e Trasporti del 23 ottobre 2024](https://www.uominietrasporti.it/centonumeri/autisti-e-dintorni/435-e-il-tempo-di-attesa-media-di-un-camion-al-carico-scarico/) descrive la dimensione pratica del problema su dati di settore, ma non è usata come fonte normativa. Le due fonti istituzionali sono state ricontrollate il 28 agosto 2026; le altre fonti restano contestuali e non normative.

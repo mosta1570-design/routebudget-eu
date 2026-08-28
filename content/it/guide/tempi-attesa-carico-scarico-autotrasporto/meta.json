@@ -6,8 +6,8 @@
   "description": "Come distinguere attesa e operazioni, applicare la franchigia di 90 minuti e trattare indennizzo, costo interno e prezzo nel preventivo.",
   "eyebrow": "Attese e preventivo",
   "published": "2026-08-12",
-  "modified": "2026-08-23",
-  "reviewed": "2026-08-23",
+  "modified": "2026-08-28",
+  "reviewed": "2026-08-28",
   "primaryKeyword": "indennizzo tempi di attesa carico scarico autotrasporto",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -34,7 +34,7 @@
       "url": "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
       "publishedOrUpdated": "19 maggio 2025; pagina modificata il 10 giugno 2025",
       "geography": "Italia",
-      "accessedAt": "2026-08-12",
+      "accessedAt": "2026-08-28",
       "supports": "Franchigia di 90 minuti per ogni operazione, importo base dell’indennizzo per ora o frazione e rivalutazione annuale."
     },
     {
@@ -42,7 +42,7 @@
       "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25A04106&art.dataPubblicazioneGazzetta=2025-07-19&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
       "publishedOrUpdated": "Decreto-legge 21 maggio 2025, n. 73, in vigore dal 21 maggio 2025; testo coordinato con le modifiche della legge di conversione 18 luglio 2025, n. 105, in vigore dal 20 luglio 2025",
       "geography": "Italia",
-      "accessedAt": "2026-08-12",
+      "accessedAt": "2026-08-28",
       "supports": "Testo coordinato dell’articolo 4 su franchigia, indennizzo, prova, responsabilità, eccezioni e rivalutazione."
     },
     {
@@ -75,7 +75,7 @@
   "relatedCalculator": "calcolatori:costo-chilometrico-camion",
   "appFeature": "pdf-quote",
   "canonical": "/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
-  "ogImage": "/og-cover.jpg",
+  "ogImage": "/og/tempi-attesa-carico-scarico.png",
   "noindex": false,
-  "changeSummary": "Ristretto il tema a franchigia, indennizzo, costo e prova delle attese, evitando sovrapposizione con il preventivo di trasporto generale."
+  "changeSummary": "Separati costo interno, indennizzo legale e condizione commerciale; aggiunti caso ricalcolabile, traccia informativa da affiancare al PDF e checklist documentale."
 }
