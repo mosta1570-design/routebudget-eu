@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-25",
+  "revisionDate": "2026-08-28",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -239,7 +239,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-orario-autista-camion/",
       "indexable": true,
       "primaryKeyword": "costo orario autista camion",
-      "modified": "2026-08-23"
+      "modified": "2026-08-28"
     },
     {
       "id": "it:guide:costo-traghetto-camion-calais-dover-2026",
@@ -599,7 +599,7 @@
       "canonical": "https://routebudget.eu/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "indennizzo tempi di attesa carico scarico autotrasporto",
-      "modified": "2026-08-23"
+      "modified": "2026-08-28"
     },
     {
       "id": "it:guide:tempi-guida-riposo-camion",
@@ -635,7 +635,7 @@
       "canonical": "https://routebudget.eu/it/guide/trasporto-spot-significato/",
       "indexable": true,
       "primaryKeyword": "trasporto spot significato",
-      "modified": "2026-08-25"
+      "modified": "2026-08-28"
     },
     {
       "id": "it:guide:usura-manutenzione-camion",
