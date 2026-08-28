@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-28-trasporto-spot",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-28",
+  "decision": "approved",
+  "contentId": "guide/trasporto-spot-significato",
+  "contentFingerprint": "sha256:e59b4fae444f4379dad0e35d1123c6a8c188fdcfb7fb98e92015098633b53d34",
+  "artifactFingerprint": "sha256:c8db619b0a0fabbdcc991859346c3fc6064a09cb5081ea2c2f9ce02ce36f36ff",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-28",
+    "basis": "Explicit owner authorization in the active Codex task to execute the RouteBudget Recovery Sprint, publish through PR, deploy, and request reindexing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review verifies the Italian spot-transport intent, calculation arithmetic, accept-negotiate-decline workflow, web-calculator reproducibility and explicit app limits. No live freight rate, guaranteed margin or independent human factual review is claimed."
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-28-tempi-attesa",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-28",
+  "decision": "approved",
+  "contentId": "guide/tempi-attesa-carico-scarico-autotrasporto",
+  "contentFingerprint": "sha256:a8deb08c64e2e3d6bc30abd551cbe0c701506352607dad797c2fb9dc0f66b535",
+  "artifactFingerprint": "sha256:a4c7d2b2ab65f47f2eeeb7e56b8cc067a85e48cbb7c908c41f5adcfe51ab7fa5",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-28",
+    "basis": "Explicit owner authorization in the active Codex task to execute the RouteBudget Recovery Sprint, publish through PR, deploy, and request reindexing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review verifies the current Italian institutional sources, separate legal and commercial calculations, reproducible arithmetic, evidence checklist and RouteBudget PDF limits. It is not legal advice or an independent human legal review."
+}

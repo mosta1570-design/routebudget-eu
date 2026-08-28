@@ -6,7 +6,15 @@ Per il vettore la domanda utile arriva subito dopo la definizione: il prezzo off
 
 `risultato spot stimato = corrispettivo comparabile − costo completo della missione`
 
-Il costo completo comprende km reali, energia, pedaggi, ore, attese, usura, quota fissa e ritorno o riposizionamento. Un indice europeo può descrivere il mercato; non può sostituire questi input né diventare tariffa italiana per il singolo carico.
+Per questa decisione aziendale il costo completo dovrebbe comprendere km reali, energia, pedaggi, ore, attese, usura, quota fissa e ritorno o riposizionamento. RouteBudget attuale calcola carburante, pedaggi, usura e costo del tempo; la quota fissa resta un controllo esterno finché la funzione dedicata non sarà disponibile. Un indice europeo può descrivere il mercato; non può sostituire questi input né diventare tariffa italiana per il singolo carico.
+
+Per un padroncino, quindi, “trasporto spot” non è soltanto una definizione da conoscere. È una decisione da prendere prima di impegnare camion, ore e liquidità:
+
+- **accetta** se il prezzo supera costo completo e margine obiettivo con dati confermati;
+- **negozia** se il lavoro resta sopra pareggio ma vuoto, attesa o pedaggi comprimono il margine;
+- **rifiuta** se condizioni essenziali mancano o uno scenario ragionevole produce una perdita.
+
+Queste soglie dipendono dai costi dell'impresa. Non esiste un prezzo spot universale valido per ogni camion o rotta.
 
 ## Cosa cambia rispetto a un lavoro ricorrente
 
@@ -61,24 +69,66 @@ Quando un dato è incerto, costruisci scenari nominati:
 
 Non creare uno scenario “ottimista” contando un carico futuro come ricavo. Se arriva e viene confermato, diventa una nuova condizione. La [guida al ritorno a vuoto](/it/guide/ritorno-a-vuoto-autotrasporto/) mostra come attribuire i km non fatturati senza promettere che una borsa carichi li eliminerà.
 
-## Esempio: offerta valida solo se il ritorno esiste
+## Esempio riproducibile con i calcolatori web RouteBudget
 
-Numeri inventati, netto IVA, nessun benchmark di mercato. Offerta spot: 1.080 € per 610 km caricati. Il camion deve percorrere 40 km per il ritiro. Dopo consegna sono possibili 210 km a vuoto per tornare in un'area utile.
+Caso didattico, importi netti IVA: non è una quotazione ricevuta, una tariffa media o un benchmark di mercato. Serve a mostrare una decisione ricostruibile con i due calcolatori web RouteBudget.
 
-| Voce | Scenario con ritorno confermato | Scenario prudente a vuoto |
-| --- | ---: | ---: |
-| Km totali attribuiti alla missione | 680 km | 860 km |
-| Energia | 395 € | 499 € |
-| Pedaggi e parcheggi | 132 € | 168 € |
-| Tempo operativo | 318 € | 406 € |
-| Usura/manutenzione | 122 € | 155 € |
-| Quota costi fissi | 88 € | 111 € |
-| Costo completo | 1.055 € | 1.339 € |
-| Risultato su 1.080 € | +25 € | −259 € |
+### Dati inseriti
 
-L'offerta non è “buona a 1,77 €/km” solo perché `1.080 ÷ 610 = 1,77`. Sui km reali diventa 1,59 €/km nel primo scenario e 1,26 €/km nel secondo. Soprattutto, il risultato completo passa da quasi pareggio a perdita.
+- andata attribuita al carico: **565 km**, inclusi 45 km per raggiungere il ritiro;
+- ritorno non coperto: **260 km a vuoto**;
+- consumo impostato: **30 l/100 km**;
+- prezzo gasolio impostato: **1,70 €/l**;
+- pedaggi stimati: **125 € andata + 50 € ritorno**;
+- usura impostata: **0,20 €/km**;
+- costo autista impostato: **28 €/h**;
+- tempo andata: **11 ore**, inclusi guida, operazioni e un'ora di attesa;
+- tempo ritorno: **4,5 ore**;
+- margine obiettivo: **15%**.
 
-Decisione corretta: non fingere che il ritorno sia certo. Chiedere conferma, negoziare prezzo o condizione, oppure rifiutare se il rischio non è sostenibile.
+I valori sono ipotesi dichiarate del caso. Sostituiscili con consumo, costo orario, usura, percorso e pedaggi della tua impresa.
+
+Per riprodurre esattamente questo caso, inserisci chilometri carichi e a vuoto, consumo, pedaggi, ore, costo autista e usura nel [calcolatore del costo chilometrico](/it/calcolatori/costo-chilometrico-camion/); porta poi il costo totale nel [calcolatore di prezzo minimo e margine](/it/calcolatori/prezzo-minimo-margine-tratta/). Nell’app attuale usura e durata dei mezzi pesanti sono stimate automaticamente: non aspettarti che gli stessi input manuali producano lo stesso esempio senza questo passaggio web.
+
+### Calcolo del costo
+
+`carburante andata = 565 ÷ 100 × 30 × 1,70 = 288,15 €`
+
+`usura andata = 565 × 0,20 = 113,00 €`
+
+`autista andata = 11 × 28 = 308,00 €`
+
+`costo andata = 288,15 + 125 + 113 + 308 = 834,15 €`
+
+`carburante ritorno = 260 ÷ 100 × 30 × 1,70 = 132,60 €`
+
+`usura ritorno = 260 × 0,20 = 52,00 €`
+
+`autista ritorno = 4,5 × 28 = 126,00 €`
+
+`ritorno a vuoto = 132,60 + 50 + 52 + 126 = 360,60 €`
+
+`costo totale = 834,15 + 360,60 = 1.194,75 €`
+
+Il prezzo minimo di pareggio del caso è quindi **1.194,75 €**.
+
+Con margine obiettivo del 15%:
+
+`prezzo consigliato = 1.194,75 ÷ (1 − 0,15) = 1.405,59 €`
+
+RouteBudget arrotonda al centesimo superiore. Il prezzo ideale del modello, pari al consigliato più 10%, diventa **1.546,15 €**.
+
+### Tre offerte, tre decisioni
+
+| Offerta spot | Profitto stimato | Margine sul prezzo | Lettura operativa |
+| --- | ---: | ---: | --- |
+| 1.450 € | +255,25 € | 17,6% | **Accetta**, se dati, fattibilità e controparte superano i controlli |
+| 1.320 € | +125,25 € | 9,5% | **Negozia**: sopra pareggio, sotto il margine obiettivo del 15% |
+| 1.120 € | −74,75 € | −6,7% | **Rifiuta** o cambia condizioni: il prezzo non copre il costo stimato |
+
+Un'ora di attesa è già attribuita manualmente alle 11 ore di andata. Se l'attesa sale di tre ore non remunerate, il costo aumenta di `3 × 28 = 84 €`: costo totale **1.278,75 €** e prezzo consigliato **1.504,42 €**. Distanza identica, decisione diversa. Questo passaggio non dimostra l'esistenza di un contatore automatico dedicato all'attesa: il tempo non modellato dalla versione in uso resta un controllo esterno da documentare senza duplicare il costo autista.
+
+Il ritorno a vuoto resta nel conto finché un altro lavoro non è confermato e calcolato separatamente. Una possibilità futura non è un ricavo.
 
 ## Accetta, negozia o rifiuta: regola documentabile
 
@@ -123,11 +173,22 @@ Per un furgone elettrico, missione occasionale può uscire dal profilo stabile d
 
 Per un padroncino, registra il risultato spot nello stesso schema delle missioni ricorrenti. Solo così il [guadagno mensile del padroncino](/it/guide/guadagno-padroncino-camion/) non viene gonfiato da fatturato occasionale che ha consumato più ore, vuoto e cassa.
 
+## Cosa ha aggiunto la ricerca sul campo RouteBudget
+
+Il registro di ricerca RouteBudget, aggiornato il 27 agosto 2026, raccoglie contributi esplorativi ottenuti dichiarando in anticipo lo scopo di sviluppo del prodotto. Non è un sondaggio rappresentativo e non stabilisce prezzi di mercato.
+
+Due osservazioni, senza trasformarle in citazioni o regole universali, rafforzano questo controllo spot:
+
+- un professionista ha distinto costi variabili e costi fissi, osservando che attese, guasti e ritardi occupano il mezzo anche quando non producono chilometri;
+- un altro contributo ha indicato ritorno vuoto, luogo di rifornimento e differenza fra percorso pianificato e reale come variabili operative importanti.
+
+Queste evidenze spiegano perché distanza caricata e prezzo al chilometro non bastano. Non dimostrano una tariffa italiana e non autorizzano a inserire automaticamente nuove formule nel prodotto. Il motore dei costi fissi per giorno o ora e il confronto pianificato/effettivo restano aree di sviluppo da verificare con test e competenza contabile italiana.
+
 ## RouteBudget: controllo economico e PDF, non borsa carichi
 
-RouteBudget permette di impostare origine, destinazione, mezzo, energia, pedaggi, tempo, usura, ritorno e margine; confrontare scenari; archiviare localmente il calcolo e generare un PDF della stima.
+RouteBudget usa nel nucleo documentato carburante, pedaggi, usura e costo del tempo per andata e ritorno; calcola costo totale, pareggio, prezzo consigliato, prezzo ideale, profitto e margine. Permette di conservare il calcolo e generare un PDF della stima.
 
-Non trova carichi, non mostra prezzi spot live, non verifica clienti, non interpreta contratto, non garantisce pagamento e non sostituisce consulenza legale o contabile. Il PDF documenta una proposta o stima: non crea da solo accordo né prova tutte le condizioni.
+Non trova carichi, non mostra prezzi spot live, non verifica clienti, non interpreta contratto, non garantisce pagamento e non sostituisce consulenza legale o contabile. Il PDF documenta una proposta o stima: non crea da solo accordo né prova tutte le condizioni. Ripartizione automatica dei costi fissi, importazione telematica e confronto pianificato/effettivo non vanno presentati come funzioni già disponibili finché non saranno implementati e verificati.
 
 ## Checklist prima del sì
 
@@ -144,3 +205,5 @@ Non trova carichi, non mostra prezzi spot live, non verifica clienti, non interp
 - [ ] Assunzioni e validità finiscono nel riepilogo.
 
 Capire il significato di trasporto spot è il primo passo. Il secondo è impedire che urgenza e disponibilità del camion sostituiscano il calcolo. Dieci minuti di dati, due scenari e un risultato documentato valgono più di una tariffa media senza percorso, tempo o ritorno.
+
+Se hai già chiuso il costo, [confronta pareggio e margine](/it/calcolatori/prezzo-minimo-margine-tratta/). Per salvare il calcolo e generare il PDF, usa [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/), verificando sempre gli input prima dell’invio.

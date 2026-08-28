@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-28-costo-orario-autista-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-28",
+  "decision": "approved",
+  "contentId": "guide/costo-orario-autista-camion",
+  "contentFingerprint": "sha256:c13e4058086ec5abbc5c363f9003f0e07b9e35e78fbf9beae7382130d6079e43",
+  "artifactFingerprint": "sha256:3589f75e7eabe83eaf317e40aa4dfa55f22cabf0bf9848074b77ff144ab11ff7",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-28",
+    "basis": "Explicit owner authorization in the active Codex task to execute the RouteBudget Recovery Sprint, publish through PR, deploy, and request reindexing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review verifies the official Italian labour-cost source, reproducible arithmetic, distinct operator intent, product limits and anti-double-counting guidance. It is not an independent human labour, payroll or accounting review."
+}

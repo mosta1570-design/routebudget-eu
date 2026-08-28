@@ -1358,12 +1358,12 @@ function renderSitemaps() {
   const files = Object.fromEntries(
     Object.entries(groups).map(([relativePath, entries]) => [relativePath, renderUrlSet(entries)]),
   );
-  files['sitemap.xml'] = renderSitemapIndex(
-    Object.entries(groups).map(([relativePath, entries]) => ({
-      path: `${config.basePath}/${relativePath}`,
-      lastmod: latestDate(entries.map((entry) => entry.lastmod).filter(Boolean)),
-    })),
-  );
+  // Keep the root sitemap deliberately flat while inventory is far below the
+  // 50,000 URL protocol limit. Search Console reads every child sitemap but
+  // has repeatedly failed to parse the otherwise-valid sitemap index at this
+  // URL. A root urlset removes that extra processing layer; child sitemaps stay
+  // available for section-level diagnostics and direct submission.
+  files['sitemap.xml'] = renderUrlSet(Object.values(groups).flat());
   return files;
 }
 
@@ -1379,21 +1379,6 @@ ${sorted
     )
     .join('\n')}
 </urlset>
-`;
-}
-
-function renderSitemapIndex(entries) {
-  const sorted = [...entries].sort((a, b) => a.path.localeCompare(b.path));
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sorted
-    .map(
-      (entry) => `  <sitemap>
-    <loc>${escapeXml(absoluteUrl(entry.path))}</loc>${entry.lastmod ? `\n    <lastmod>${entry.lastmod}</lastmod>` : ''}
-  </sitemap>`,
-    )
-    .join('\n')}
-</sitemapindex>
 `;
 }
 

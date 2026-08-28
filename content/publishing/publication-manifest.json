@@ -4,7 +4,7 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-08-27-release-integrity",
+  "releaseIntegrityApprovalId": "review:2026-08-28-release-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
     "/it/calcolatori/": "sha256:0c8741dd4501cf52a894d33d1a204f300a49285d06b37855a17a7936c5a7606f",
@@ -47,6 +47,19 @@
       "primarySourceUrls": []
     },
     {
+      "contentId": "guide/costo-orario-autista-camion",
+      "canonical": "/it/guide/costo-orario-autista-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "substantive-update",
+      "intentOwner": "costo orario autista camion",
+      "demandEvidenceId": "demand:recovery-costo-orario-autista-camion",
+      "approvalId": "review:2026-08-28-costo-orario-autista-camion",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": [
+        "https://www.lavoro.gov.it/temi-e-priorita/rapporti-di-lavoro-e-relazioni-industriali/focus/settore-della-logistica-trasporto-merci-spedizione"
+      ]
+    },
+    {
       "contentId": "guide/preventivo-trasporto-pdf",
       "canonical": "/it/guide/preventivo-trasporto-pdf/",
       "audienceMarket": "IT",
@@ -85,12 +98,15 @@
       "contentId": "guide/tempi-attesa-carico-scarico-autotrasporto",
       "canonical": "/it/guide/tempi-attesa-carico-scarico-autotrasporto/",
       "audienceMarket": "IT",
-      "changeScope": "metadata-or-links",
+      "changeScope": "substantive-update",
       "intentOwner": "indennizzo tempi di attesa carico scarico autotrasporto",
       "demandEvidenceId": "demand:maintenance-tempi-attesa",
-      "approvalId": "review:2026-08-23-tempi-attesa",
+      "approvalId": "review:2026-08-28-tempi-attesa",
       "productProofIds": ["pdf-quote"],
-      "primarySourceUrls": []
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
+        "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25A04106&art.dataPubblicazioneGazzetta=2025-07-19&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1"
+      ]
     },
     {
       "contentId": "guide/tempi-guida-riposo-camion",
@@ -186,7 +202,7 @@
       "changeScope": "new-content",
       "intentOwner": "trasporto spot significato",
       "demandEvidenceId": "demand:round-13-trasporto-spot",
-      "approvalId": "review:2026-08-25-trasporto-spot",
+      "approvalId": "review:2026-08-28-trasporto-spot",
       "productProofIds": ["cost-scenarios"],
       "primarySourceUrls": [
         "https://www.iru.org/resources/iru-library/european-road-freight-rate-development-benchmark-q2-2026",

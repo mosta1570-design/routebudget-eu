@@ -285,16 +285,12 @@ function verifySchema(route, schema, sourcePage) {
 }
 
 async function verifySitemaps(pages, hubs, paths) {
-  const expectedChildren = [
-    `${BASE}/sitemaps/articles-it.xml`,
-    `${BASE}/sitemaps/calculators-it.xml`,
-    `${BASE}/sitemaps/core.xml`,
-    `${BASE}/sitemaps/legal.xml`,
-  ];
-  const indexXml = await readFile(path.join(DIST, 'sitemap.xml'), 'utf8');
-  assert(indexXml.includes('<sitemapindex '), 'sitemap.xml must be a sitemap index');
-  const children = extractLocPaths(indexXml);
-  assert.deepEqual(children.sort(), expectedChildren.sort(), 'sitemap index children mismatch');
+  const rootXml = await readFile(path.join(DIST, 'sitemap.xml'), 'utf8');
+  assert(rootXml.includes('<urlset '), 'sitemap.xml must be a flat root URL set');
+  const rootLocations = extractLocPaths(rootXml);
+  assert.equal(rootLocations.length, generatedRoutes.length, 'sitemap.xml must expose every indexable URL directly');
+  assert.equal(new Set(rootLocations).size, rootLocations.length, 'sitemap.xml contains duplicate URLs');
+  for (const date of rootXml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)) assert.match(date[1], /^\d{4}-\d{2}-\d{2}$/, 'sitemap.xml: invalid lastmod');
 
   const expected = {
     'articles-it.xml': paths.filter((route) => {
@@ -317,6 +313,7 @@ async function verifySitemaps(pages, hubs, paths) {
   }
   assert.equal(new Set(all).size, all.length, 'URL appears in more than one child sitemap');
   assert.deepEqual(new Set(all), new Set(generatedRoutes), 'sitemap URLs must match canonical indexable routes');
+  assert.deepEqual(new Set(rootLocations), new Set(all), 'root sitemap must match child sitemap URL inventory');
 }
 
 function extractLocPaths(xml) {

@@ -8,8 +8,8 @@
   "description": "Che cosa significa trasporto spot e come valutare un'offerta singola con km reali, vuoto, ore, pedaggi, costi e margine, senza copiare indici europei.",
   "eyebrow": "Mercato spot · Decisione tratta",
   "published": "2026-08-25",
-  "modified": "2026-08-25",
-  "reviewed": "2026-08-25",
+  "modified": "2026-08-28",
+  "reviewed": "2026-08-28",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "trasporto spot significato",
@@ -42,7 +42,7 @@
   "appFeature": "cost-scenarios",
   "translationGroup": "trasporto-spot-significato",
   "canonical": "/it/guide/trasporto-spot-significato/",
-  "ogImage": "/og-cover.jpg",
+  "ogImage": "/og/trasporto-spot-significato.png",
   "noindex": false,
   "sources": [
     {
@@ -78,5 +78,5 @@
       "supports": "Quadro italiano del contratto di trasporto e soggetti; il termine commerciale spot non sostituisce qualificazione e verifica del rapporto."
     }
   ],
-  "changeSummary": "Prima pubblicazione: definizione separata da metodo operativo di dieci minuti per decidere una singola offerta, senza fingere quotazioni live o tariffe italiane."
+  "changeSummary": "Recovery Sprint: aggiunto caso RouteBudget riproducibile con ritorno a vuoto, attesa e margine per decidere accetta/negozia/rifiuta; integrate evidenze esplorative del registro di ricerca e chiariti limiti delle funzioni non ancora disponibili."
 }
