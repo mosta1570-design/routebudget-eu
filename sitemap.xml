@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://routebudget.eu/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/app-per-autotrasportatori/</loc>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/bgtoll-camion-bulgaria-2026/</loc>
@@ -117,6 +117,10 @@
     <lastmod>2026-08-25</lastmod>
   </url>
   <url>
+    <loc>https://routebudget.eu/it/guide/idoneita-finanziaria-autotrasporto/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
     <loc>https://routebudget.eu/it/guide/pedaggio-a22-camion-2026/</loc>
     <lastmod>2026-08-22</lastmod>
   </url>
@@ -193,6 +197,10 @@
     <lastmod>2026-08-23</lastmod>
   </url>
   <url>
+    <loc>https://routebudget.eu/it/guide/quanto-costa-aprire-ditta-trasporti/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
     <loc>https://routebudget.eu/it/guide/ritorno-a-vuoto-autotrasporto/</loc>
     <lastmod>2026-08-01</lastmod>
   </url>
@@ -215,6 +223,10 @@
   <url>
     <loc>https://routebudget.eu/it/guide/tempi-guida-riposo-camion/</loc>
     <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://routebudget.eu/it/guide/tempi-pagamento-autotrasporto/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/traghetto-camion-italia-grecia/</loc>

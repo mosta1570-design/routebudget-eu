@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-28",
+  "revisionDate": "2026-08-29",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -314,6 +314,18 @@
       "modified": "2026-08-25"
     },
     {
+      "id": "it:guide:idoneita-finanziaria-autotrasporto",
+      "url": "https://routebudget.eu/it/guide/idoneita-finanziaria-autotrasporto/",
+      "title": "Idoneità finanziaria autotrasporto: controllo annuale 2026",
+      "description": "Guida operativa al requisito annuale di idoneità finanziaria nell'autotrasporto: importi, prove, scadenze interne ed errori da evitare.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/idoneita-finanziaria-autotrasporto/",
+      "indexable": true,
+      "primaryKeyword": "idoneità finanziaria autotrasporto",
+      "modified": "2026-08-29"
+    },
+    {
       "id": "it:guide:pedaggio-a22-camion-2026",
       "url": "https://routebudget.eu/it/guide/pedaggio-a22-camion-2026/",
       "title": "Pedaggio A22 camion 2026: classe, caselli e costo nel preventivo",
@@ -542,6 +554,18 @@
       "modified": "2026-08-23"
     },
     {
+      "id": "it:guide:quanto-costa-aprire-ditta-trasporti",
+      "url": "https://routebudget.eu/it/guide/quanto-costa-aprire-ditta-trasporti/",
+      "title": "Quanto costa aprire una ditta di trasporti: budget reale",
+      "description": "Metodo italiano per stimare requisiti, mezzo, avvio e capitale circolante di una ditta di autotrasporto senza affidarsi a un totale standard.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/quanto-costa-aprire-ditta-trasporti/",
+      "indexable": true,
+      "primaryKeyword": "quanto costa aprire una ditta di trasporti",
+      "modified": "2026-08-29"
+    },
+    {
       "id": "it:guide:ritorno-a-vuoto-autotrasporto",
       "url": "https://routebudget.eu/it/guide/ritorno-a-vuoto-autotrasporto/",
       "title": "Ritorno a vuoto nell’autotrasporto: costi e prezzo della tratta",
@@ -612,6 +636,18 @@
       "indexable": true,
       "primaryKeyword": "calcolo tempi di guida e riposo camion",
       "modified": "2026-08-23"
+    },
+    {
+      "id": "it:guide:tempi-pagamento-autotrasporto",
+      "url": "https://routebudget.eu/it/guide/tempi-pagamento-autotrasporto/",
+      "title": "Tempi di pagamento autotrasporto: 60 giorni e costo di cassa",
+      "description": "Come controllare scadenza, documenti, interessi e fabbisogno di cassa di una missione di autotrasporto senza confondere utile e incasso.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/tempi-pagamento-autotrasporto/",
+      "indexable": true,
+      "primaryKeyword": "tempi di pagamento autotrasporto",
+      "modified": "2026-08-29"
     },
     {
       "id": "it:guide:traghetto-camion-italia-grecia",
