@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-08-28-release-integrity",
+  "releaseIntegrityApprovalId": "review:2026-08-29-release-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
     "/it/calcolatori/": "sha256:0c8741dd4501cf52a894d33d1a204f300a49285d06b37855a17a7936c5a7606f",
-    "/it/guide/": "sha256:f05566439f6aeeb2a92cdbf4fb3b0fdd53afe1c225cb76324466fadfccec46f6",
+    "/it/guide/": "sha256:b0fdb3f5d8584845efc8a77add8a7d489472e39a616800104246a69dc6facb6b",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
     "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
   },
@@ -208,6 +208,51 @@
         "https://www.iru.org/resources/iru-library/european-road-freight-rate-development-benchmark-q2-2026",
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
         "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=005G0306&atto.dataPubblicazioneGazzetta=2006-01-09&qId=&tipoDettaglio=multivigenza"
+      ]
+    },
+    {
+      "contentId": "guide/quanto-costa-aprire-ditta-trasporti",
+      "canonical": "/it/guide/quanto-costa-aprire-ditta-trasporti/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "quanto costa aprire una ditta di trasporti",
+      "demandEvidenceId": "demand:round-14-aprire-ditta-trasporti",
+      "approvalId": "review:2026-08-29-aprire-ditta-trasporti",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": [
+        "https://www.mo.camcom.it/sportello-genesi/sportello-genesi/modulistica/autotrasporto-merci-conto-terzi-scheda-informativa",
+        "https://www.mit.gov.it/node/2666",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "contentId": "guide/idoneita-finanziaria-autotrasporto",
+      "canonical": "/it/guide/idoneita-finanziaria-autotrasporto/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "idoneità finanziaria autotrasporto",
+      "demandEvidenceId": "demand:round-14-idoneita-finanziaria",
+      "approvalId": "review:2026-08-29-idoneita-finanziaria",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": [
+        "https://mit.gov.it/normativa/circolare-protocollo-n-4499-del-17022026",
+        "https://eur-lex.europa.eu/legal-content/IT/ALL/?uri=CELEX%3A32009R1071",
+        "https://www.mo.camcom.it/sportello-genesi/sportello-genesi/modulistica/autotrasporto-merci-conto-terzi-scheda-informativa"
+      ]
+    },
+    {
+      "contentId": "guide/tempi-pagamento-autotrasporto",
+      "canonical": "/it/guide/tempi-pagamento-autotrasporto/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "tempi di pagamento autotrasporto",
+      "demandEvidenceId": "demand:round-14-tempi-pagamento",
+      "approvalId": "review:2026-08-29-tempi-pagamento",
+      "productProofIds": ["pdf-quote"],
+      "primarySourceUrls": [
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legge%3A2008-06-25%3B112~art83bis-com17=",
+        "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
+        "https://www.mit.gov.it/normativa/decreto-legislativo-numero-286-del-21112005"
       ]
     }
   ],

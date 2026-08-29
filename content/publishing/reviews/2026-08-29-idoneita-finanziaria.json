@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-29-idoneita-finanziaria",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-29",
+  "decision": "approved",
+  "contentId": "guide/idoneita-finanziaria-autotrasporto",
+  "contentFingerprint": "sha256:df14a7577ee9d1ce02ff1ececb7f0c9df1402f443453e99e9cca44e885501fb1",
+  "artifactFingerprint": "sha256:0840ad6f07da7fb5482ee9c222b8e45286593d506bd5ee911864959171fef848",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-29",
+    "basis": "Explicit owner authorization in the active Codex task to audit RouteBudget, create rare Italian content, publish it, submit sitemaps and request indexing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review verifies current MIT Circular 4499/2026, European source scope, annual workflow, heavy-vehicle arithmetic and strict separation between legal proof, liquidity and app costing. No certification, renewal service or independent legal review is claimed."
+}

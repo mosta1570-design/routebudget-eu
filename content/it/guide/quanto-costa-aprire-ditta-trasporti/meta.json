@@ -1,0 +1,74 @@
+{
+  "slug": "quanto-costa-aprire-ditta-trasporti",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Quanto costa aprire una ditta di trasporti: budget reale",
+  "mobileH1": "Aprire una ditta di trasporti: il budget reale",
+  "description": "Metodo italiano per stimare requisiti, mezzo, avvio e capitale circolante di una ditta di autotrasporto senza affidarsi a un totale standard.",
+  "eyebrow": "Avvio impresa · Budget",
+  "published": "2026-08-29",
+  "modified": "2026-08-29",
+  "reviewed": "2026-08-29",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "quanto costa aprire una ditta di trasporti",
+  "secondaryKeywords": [
+    "budget apertura impresa autotrasporto",
+    "costi iniziali ditta trasporti merci",
+    "capitale circolante nuova impresa trasporti",
+    "avviare autotrasporto conto terzi"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "avvio-impresa-autotrasporto",
+  "topics": [
+    "requisiti di accesso alla professione",
+    "investimento nel mezzo",
+    "costi di avvio",
+    "capitale circolante",
+    "test economico delle missioni"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:guadagno-padroncino-camion",
+    "guide:idoneita-finanziaria-autotrasporto",
+    "guide:tempi-pagamento-autotrasporto",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "complete-trip",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "quanto-costa-aprire-ditta-trasporti",
+  "canonical": "/it/guide/quanto-costa-aprire-ditta-trasporti/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Camera di Commercio di Modena — Autotrasporto merci conto terzi",
+      "url": "https://www.mo.camcom.it/sportello-genesi/sportello-genesi/modulistica/autotrasporto-merci-conto-terzi-scheda-informativa",
+      "publishedOrUpdated": "Scheda corrente verificata nel 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-29",
+      "supports": "Requisiti, gestore dei trasporti, idoneità finanziaria, Albo, REN e adempimenti di avvio; procedure territoriali da confermare con l'ufficio competente."
+    },
+    {
+      "label": "MIT — Requisiti per l'accesso alla professione",
+      "url": "https://www.mit.gov.it/node/2666",
+      "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+      "geography": "Italia",
+      "accessedAt": "2026-08-29",
+      "supports": "Quadro nazionale di onorabilità, idoneità professionale e finanziaria, stabilimento, REN e Albo."
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-29",
+      "supports": "Famiglie di costo utili al piano operativo; valori indicativi, non preventivo di avvio né tariffa universale."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: modello requisiti-investimento-circolante fondato su fonti italiane e missioni verificabili, senza costo iniziale universale."
+}

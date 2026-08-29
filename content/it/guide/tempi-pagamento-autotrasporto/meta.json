@@ -1,0 +1,74 @@
+{
+  "slug": "tempi-pagamento-autotrasporto",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Tempi di pagamento autotrasporto: 60 giorni e costo di cassa",
+  "mobileH1": "Pagamenti autotrasporto: 60 giorni e cassa",
+  "description": "Come controllare scadenza, documenti, interessi e fabbisogno di cassa di una missione di autotrasporto senza confondere utile e incasso.",
+  "eyebrow": "Credito cliente · Liquidità",
+  "published": "2026-08-29",
+  "modified": "2026-08-29",
+  "reviewed": "2026-08-29",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "tempi di pagamento autotrasporto",
+  "secondaryKeywords": [
+    "pagamento fattura trasporto 60 giorni",
+    "ritardo pagamento vettore",
+    "costo finanziario credito autotrasporto",
+    "scadenzario fatture trasporto merci"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "preventivi-trasporto",
+  "topics": [
+    "termine massimo di pagamento",
+    "data di emissione fattura",
+    "interessi moratori",
+    "fabbisogno finanziario della missione",
+    "controllo documentale del credito"
+  ],
+  "related": [
+    "guide:tariffe-trazionisti",
+    "guide:preventivo-trasporto",
+    "guide:preventivo-trasporto-pdf",
+    "guide:quanto-costa-aprire-ditta-trasporti",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:preventivo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "pdf-quote",
+  "appFeature": "pdf-quote",
+  "translationGroup": "tempi-pagamento-autotrasporto",
+  "canonical": "/it/guide/tempi-pagamento-autotrasporto/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Normattiva — Articolo 83-bis del decreto-legge 112/2008",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legge%3A2008-06-25%3B112~art83bis-com17=",
+      "publishedOrUpdated": "Testo vigente consultato il 29 agosto 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-29",
+      "supports": "Termine massimo di 60 giorni dalla data di emissione della fattura e richiamo agli interessi moratori."
+    },
+    {
+      "label": "MIT — Misure su attese e tempi di pagamento",
+      "url": "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
+      "publishedOrUpdated": "19 maggio 2025; modificata il 10 giugno 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-08-29",
+      "supports": "Intervento sui ritardi reiterati e diffusi e ruolo attribuito ad AGCM; sintesi istituzionale, non procedura per il singolo credito."
+    },
+    {
+      "label": "MIT — Decreto legislativo 286/2005",
+      "url": "https://www.mit.gov.it/normativa/decreto-legislativo-numero-286-del-21112005",
+      "publishedOrUpdated": "Testo istituzionale consultato nella versione corrente",
+      "geography": "Italia",
+      "accessedAt": "2026-08-29",
+      "supports": "Elementi essenziali del contratto scritto, compresi corrispettivo e modalità di pagamento."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo scadenza-documenti-cassa per una missione, distinto dal calcolo del margine e senza trasformare il PDF app in contratto o fattura."
+}
