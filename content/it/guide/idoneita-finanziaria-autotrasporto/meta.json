@@ -1,0 +1,74 @@
+{
+  "slug": "idoneita-finanziaria-autotrasporto",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Idoneità finanziaria autotrasporto: controllo annuale 2026",
+  "mobileH1": "Idoneità finanziaria: controllo annuale 2026",
+  "description": "Guida operativa al requisito annuale di idoneità finanziaria nell'autotrasporto: importi, prove, scadenze interne ed errori da evitare.",
+  "eyebrow": "REN · Continuità operativa",
+  "published": "2026-08-29",
+  "modified": "2026-08-29",
+  "reviewed": "2026-08-29",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "idoneità finanziaria autotrasporto",
+  "secondaryKeywords": [
+    "rinnovo idoneità finanziaria trasportatore",
+    "dimostrazione annuale capacità finanziaria camion",
+    "requisito finanziario REN 2026",
+    "attestazione idoneità finanziaria vettore"
+  ],
+  "searchIntent": "informational-compliance",
+  "cluster": "avvio-impresa-autotrasporto",
+  "topics": [
+    "dimostrazione annuale",
+    "capitale e riserve",
+    "attestazione del revisore",
+    "garanzia bancaria o assicurativa",
+    "coerenza con parco veicoli"
+  ],
+  "related": [
+    "guide:quanto-costa-aprire-ditta-trasporti",
+    "guide:costi-autotrasporto",
+    "guide:guadagno-padroncino-camion",
+    "guide:tabelle-costi-autotrasporto-mit-2026",
+    "guide:tempi-pagamento-autotrasporto"
+  ],
+  "relatedCalculator": null,
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "idoneita-finanziaria-autotrasporto",
+  "canonical": "/it/guide/idoneita-finanziaria-autotrasporto/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Circolare 4499 del 17 febbraio 2026",
+      "url": "https://mit.gov.it/normativa/circolare-protocollo-n-4499-del-17022026",
+      "publishedOrUpdated": "Pubblicata il 23 febbraio 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-29",
+      "supports": "Chiarimenti sulla dimostrazione annuale dell'idoneità finanziaria per trasportatori su strada."
+    },
+    {
+      "label": "EUR-Lex — Regolamento (CE) 1071/2009, articolo 7",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/ALL/?uri=CELEX%3A32009R1071",
+      "publishedOrUpdated": "Testo normativo europeo consultato nella versione disponibile",
+      "geography": "Unione europea",
+      "accessedAt": "2026-08-29",
+      "supports": "Condizioni europee del requisito, dimostrazione annuale e soglie base di capitale e riserve."
+    },
+    {
+      "label": "Camera di Commercio di Modena — Autotrasporto merci conto terzi",
+      "url": "https://www.mo.camcom.it/sportello-genesi/sportello-genesi/modulistica/autotrasporto-merci-conto-terzi-scheda-informativa",
+      "publishedOrUpdated": "Scheda corrente verificata nel 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-29",
+      "supports": "Applicazione operativa italiana: requisito annuale, importi per veicoli pesanti e strumenti di dimostrazione indicati dalla scheda camerale."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: controllo annuale documentale e operativo basato sulla circolare MIT 4499/2026, con separazione netta dalla liquidità di cassa."
+}

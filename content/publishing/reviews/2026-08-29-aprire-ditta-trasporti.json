@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-29-aprire-ditta-trasporti",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-29",
+  "decision": "approved",
+  "contentId": "guide/quanto-costa-aprire-ditta-trasporti",
+  "contentFingerprint": "sha256:448a0c665e7bce7fa7338a5430bc2f84f9d885ec243f52d98e10d74baac19281",
+  "artifactFingerprint": "sha256:90dbcf4544e1cc57e06b8203f7472677261ec0f51608e9998ef80790cb1e54de",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-29",
+    "basis": "Explicit owner authorization in the active Codex task to audit RouteBudget, create rare Italian content, publish it, submit sitemaps and request indexing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review verifies exact Italian wording, GSC mismatch evidence, official startup requirements, original budget method and explicit product limits. No universal startup price, eligibility decision or independent human factual review is claimed."
+}

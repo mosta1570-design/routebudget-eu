@@ -1,0 +1,119 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-29",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "authenticated Google Search Console diagnosis",
+    "Google Suggest hl=it gl=it",
+    "Italian Google SERP review",
+    "official Italian and European sources"
+  ],
+  "method": {
+    "interpretation": "Search Console proves acquired Italian wording; Suggest confirms live formulation; primary sources define the job. No autocomplete result is represented as search volume, difficulty, CPC or ranking forecast.",
+    "unavailableMetrics": ["monthly_search_volume", "cpc", "keyword_difficulty"],
+    "volumePolicy": "Volume is null. The batch is admitted only when intent is distinct, product fit is truthful and current official sources exist."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-08-29",
+    "latestCompleteDate": "2026-08-26",
+    "observations": [
+      "The exact query quanto costa aprire una ditta di trasporti produced 2 impressions at average position 54 on the mismatched costi-autotrasporto page.",
+      "Manual Actions and Security Issues both report no issues.",
+      "The indexing report contains only the expected HTTP redirect plus two discovered pages already under validation; no crawl outage was found."
+    ],
+    "limitations": [
+      "GSC impressions are visibility already obtained by this site, not total Italian demand.",
+      "Performance data after 26 August was not complete at capture time.",
+      "Indexing requests and sitemap submission do not guarantee indexing or rankings."
+    ]
+  },
+  "rejectedCandidates": [
+    {
+      "query": "calcolo percorso camion",
+      "reason": "Observed in GSC and Suggest but rejected because RouteBudget is not a truck-restriction navigator and cannot satisfy ADR, height, weight, ZTL or closure routing intent."
+    },
+    {
+      "query": "contratto di trasporto fac simile",
+      "reason": "Exact Suggest exists, but a downloadable legal template would need specialist legal ownership and RouteBudget's PDF is a non-binding estimate, not a contract."
+    },
+    {
+      "query": "offerta di trasporto",
+      "reason": "Rejected as a new URL because the existing preventivo-trasporto page already owns all observed impressions."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "demand:round-14-aprire-ditta-trasporti",
+      "primaryKeyword": "quanto costa aprire una ditta di trasporti",
+      "canonical": "/it/guide/quanto-costa-aprire-ditta-trasporti/",
+      "query": "quanto costa aprire una ditta di trasporti",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=quanto%20costa%20aprire%20una%20ditta%20di%20trasporti",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": ["quanto costa aprire una ditta di trasporti"],
+      "rawResponse": "[\"quanto costa aprire una ditta di trasporti\",[\"quanto costa aprire una ditta di trasporti\"],[],{\"google:suggestsubtypes\":[[512]]}]",
+      "signal": "exact-google-suggest-it-plus-gsc-acquired-query",
+      "signalNote": "Exact Italian wording appeared in Google Suggest and had two GSC impressions on a mismatched general-cost page. The new page answers the separate pre-launch budget decision without inventing a universal startup total.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns pre-launch requirements, investment and working-capital budget. Costi-autotrasporto owns operating cost categories after the business exists; guadagno-padroncino owns monthly operating result.",
+      "productFit": "RouteBudget's verified trip cost breakdown lets a founder test whether forecast missions support the operating plan after regulatory eligibility is separately checked.",
+      "productBoundary": "No business registration, permit application, tax plan, financing offer, insurance quote, guaranteed startup cost or legal eligibility decision.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=quanto%20costa%20aprire%20una%20ditta%20di%20trasporti",
+        "https://www.mo.camcom.it/sportello-genesi/sportello-genesi/modulistica/autotrasporto-merci-conto-terzi-scheda-informativa",
+        "https://www.mit.gov.it/node/2666",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "id": "demand:round-14-idoneita-finanziaria",
+      "primaryKeyword": "idoneità finanziaria autotrasporto",
+      "canonical": "/it/guide/idoneita-finanziaria-autotrasporto/",
+      "query": "idoneità finanziaria autotrasporto",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=idoneita%20finanziaria%20autotrasporto",
+      "exactSuggestionReturned": null,
+      "returnedSuggestions": ["idoneità finanziaria autotrasporto"],
+      "rawResponse": "Google Suggest hl=it gl=it returned the accented topic for the unaccented request on 2026-08-29.",
+      "signal": "directional-google-suggest-it-plus-current-mit-2026-circular",
+      "signalNote": "Google Suggest returned the Italian topic and MIT published Circular 4499 in February 2026 specifically on annual proof. This is a current continuity-of-operation job, not a generic finance article.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns annual proof, documents and fleet consistency. The startup-budget page owns pre-launch investment; guadagno-padroncino owns operating result and cash.",
+      "productFit": "RouteBudget's verified cost breakdown supports separate monitoring of mission economics while the company maintains legal financial-standing proof through competent authorities and professionals.",
+      "productBoundary": "RouteBudget does not calculate, certify, renew or transmit financial standing and does not replace a reviser, bank, insurer, Motorizzazione office or professional adviser.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=idoneita%20finanziaria%20autotrasporto",
+        "https://mit.gov.it/normativa/circolare-protocollo-n-4499-del-17022026",
+        "https://eur-lex.europa.eu/legal-content/IT/ALL/?uri=CELEX%3A32009R1071",
+        "https://www.mo.camcom.it/sportello-genesi/sportello-genesi/modulistica/autotrasporto-merci-conto-terzi-scheda-informativa"
+      ]
+    },
+    {
+      "id": "demand:round-14-tempi-pagamento",
+      "primaryKeyword": "tempi di pagamento autotrasporto",
+      "canonical": "/it/guide/tempi-pagamento-autotrasporto/",
+      "query": "tempi di pagamento autotrasporto",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=tempi%20di%20pagamento%20autotrasporto",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": ["tempi di pagamento autotrasporto"],
+      "rawResponse": "[\"tempi di pagamento autotrasporto\",[\"tempi di pagamento autotrasporto\"],[],{\"google:suggestsubtypes\":[[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-current-italian-primary-law",
+      "signalNote": "Google Suggest returned the exact Italian wording. Article 83-bis provides the sector-specific maximum term, while MIT documents policy attention to repeated and widespread payment violations.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns invoice due date, evidence and financing gap after a mission. Tariffe-trazionisti owns accept-or-reject of a sub-haulage offer; guadagno-padroncino owns monthly profit and cash separation.",
+      "productFit": "RouteBudget's verified quote PDF can document the economic estimate that precedes invoicing; the operator must keep payment terms, invoice and credit control in the appropriate external process.",
+      "productBoundary": "No invoicing, debt collection, legal notice, interest calculation, accounting ledger, payment guarantee or contract creation.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=tempi%20di%20pagamento%20autotrasporto",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legge%3A2008-06-25%3B112~art83bis-com17=",
+        "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
+        "https://www.mit.gov.it/normativa/decreto-legislativo-numero-286-del-21112005"
+      ]
+    }
+  ]
+}

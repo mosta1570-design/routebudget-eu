@@ -184,5 +184,41 @@
     "geography": "Germania",
     "accessedAt": "2026-08-14",
     "supports": "Riclassificazione CO₂ 2026 dei camion oltre 16 t, possibile passaggio da classe 3 a 2 o 1 e conseguente aumento del pedaggio"
+  },
+  "https://www.mit.gov.it/node/2666": {
+    "publishedOrUpdated": "Pagina istituzionale consultata nella versione corrente",
+    "geography": "Italia",
+    "accessedAt": "2026-08-29",
+    "supports": "Quadro dei requisiti per l'accesso alla professione di trasportatore su strada, REN e Albo"
+  },
+  "https://www.mo.camcom.it/sportello-genesi/sportello-genesi/modulistica/autotrasporto-merci-conto-terzi-scheda-informativa": {
+    "publishedOrUpdated": "Scheda corrente verificata nel 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-29",
+    "supports": "Requisiti, gestore dei trasporti, idoneità finanziaria, Albo, REN e principali adempimenti per autotrasporto merci conto terzi"
+  },
+  "https://mit.gov.it/normativa/circolare-protocollo-n-4499-del-17022026": {
+    "publishedOrUpdated": "Circolare 17 febbraio 2026; pubblicata il 23 febbraio 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-29",
+    "supports": "Chiarimenti sulla dimostrazione annuale del requisito di idoneità finanziaria per trasportatori su strada"
+  },
+  "https://eur-lex.europa.eu/legal-content/IT/ALL/?uri=CELEX%3A32009R1071": {
+    "publishedOrUpdated": "Regolamento (CE) 1071/2009 consultato nella versione disponibile",
+    "geography": "Unione europea",
+    "accessedAt": "2026-08-29",
+    "supports": "Articolo 7: condizioni europee dell'idoneità finanziaria, dimostrazione annuale e soglie base"
+  },
+  "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legge%3A2008-06-25%3B112~art83bis-com17=": {
+    "publishedOrUpdated": "Articolo 83-bis, testo vigente consultato il 29 agosto 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-29",
+    "supports": "Termine massimo di pagamento dei corrispettivi nel trasporto merci su strada e interessi moratori"
+  },
+  "https://www.mit.gov.it/normativa/decreto-legislativo-numero-286-del-21112005": {
+    "publishedOrUpdated": "Testo istituzionale consultato nella versione corrente",
+    "geography": "Italia",
+    "accessedAt": "2026-08-29",
+    "supports": "Forma del contratto di trasporto merci su strada ed elementi essenziali, compresi corrispettivo e modalità di pagamento"
   }
 }
