@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-29",
+  "revisionDate": "2026-08-30",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -218,6 +218,18 @@
       "modified": "2026-08-08"
     },
     {
+      "id": "it:guide:costo-fermo-camion",
+      "url": "https://routebudget.eu/it/guide/costo-fermo-camion/",
+      "title": "Costo fermo camion: quanto perde davvero una giornata ferma",
+      "description": "Metodo per stimare il costo interno di un camion fermo separando struttura, autista, spese dirette e capacità persa senza sommare ricavi inesistenti.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-fermo-camion/",
+      "indexable": true,
+      "primaryKeyword": "costo fermo camion",
+      "modified": "2026-08-30"
+    },
+    {
       "id": "it:guide:costo-furgone-per-km",
       "url": "https://routebudget.eu/it/guide/costo-furgone-per-km/",
       "title": "Costo furgone per km: formula completa per veicoli N1",
@@ -240,6 +252,18 @@
       "indexable": true,
       "primaryKeyword": "costo orario autista camion",
       "modified": "2026-08-28"
+    },
+    {
+      "id": "it:guide:costo-pneumatici-camion",
+      "url": "https://routebudget.eu/it/guide/costo-pneumatici-camion/",
+      "title": "Costo pneumatici camion: calcolo per km senza doppioni",
+      "description": "Metodo operativo per calcolare il costo pneumatici di trattore e semirimorchio per chilometro, con durata, servizi, riserva e controllo dei doppioni.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-pneumatici-camion/",
+      "indexable": true,
+      "primaryKeyword": "costo pneumatici camion",
+      "modified": "2026-08-30"
     },
     {
       "id": "it:guide:costo-traghetto-camion-calais-dover-2026",
@@ -480,6 +504,18 @@
       "indexable": true,
       "primaryKeyword": "pedaggio camion Ungheria",
       "modified": "2026-08-22"
+    },
+    {
+      "id": "it:guide:preventivo-consuntivo-viaggio-camion",
+      "url": "https://routebudget.eu/it/guide/preventivo-consuntivo-viaggio-camion/",
+      "title": "Preventivo e consuntivo viaggio camion: trova il margine perso",
+      "description": "Scheda pratica per confrontare costi previsti e reali di un viaggio camion senza modificare il preventivo storico, con scostamenti e margine effettivo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/preventivo-consuntivo-viaggio-camion/",
+      "indexable": true,
+      "primaryKeyword": "preventivo consuntivo viaggio camion",
+      "modified": "2026-08-30"
     },
     {
       "id": "it:guide:preventivo-trasporto-pdf",

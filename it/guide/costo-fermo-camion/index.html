@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070B12" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="description" content="Metodo per stimare il costo interno di un camion fermo separando struttura, autista, spese dirette e capacità persa senza sommare ricavi inesistenti." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://routebudget.eu/it/guide/costo-fermo-camion/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="RouteBudget EU" />
+    <meta property="og:title" content="Costo fermo camion: quanto perde davvero una giornata ferma" />
+    <meta property="og:description" content="Metodo per stimare il costo interno di un camion fermo separando struttura, autista, spese dirette e capacità persa senza sommare ricavi inesistenti." />
+    <meta property="og:url" content="https://routebudget.eu/it/guide/costo-fermo-camion/" />
+    <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
+    <meta property="og:image:alt" content="RouteBudget EU — Costo fermo camion: quanto perde davvero una giornata ferma" />
+    <meta property="article:published_time" content="2026-08-30" />
+    <meta property="article:modified_time" content="2026-08-30" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Costo fermo camion: quanto perde davvero una giornata ferma" />
+    <meta name="twitter:description" content="Metodo per stimare il costo interno di un camion fermo separando struttura, autista, spese dirette e capacità persa senza sommare ricavi inesistenti." />
+    <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
+    <link rel="icon" type="image/png" href="/logo-ui.png" />
+    <link rel="stylesheet" href="/seo/seo.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","url":"https://routebudget.eu/#autore","description":"Sviluppatore indipendente di RouteBudget EU e responsabile di metodo, fonti e revisioni editoriali.","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/guide/costo-fermo-camion/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Guide","item":"https://routebudget.eu/it/guide/"},{"@type":"ListItem","position":3,"name":"Costo fermo camion: quanto perde davvero una giornata ferma","item":"https://routebudget.eu/it/guide/costo-fermo-camion/"}]},{"@type":"Article","@id":"https://routebudget.eu/it/guide/costo-fermo-camion/#article","headline":"Costo fermo camion: quanto perde davvero una giornata ferma","description":"Metodo per stimare il costo interno di un camion fermo separando struttura, autista, spese dirette e capacità persa senza sommare ricavi inesistenti.","url":"https://routebudget.eu/it/guide/costo-fermo-camion/","mainEntityOfPage":"https://routebudget.eu/it/guide/costo-fermo-camion/","datePublished":"2026-08-30","dateModified":"2026-08-30","inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"},"image":"https://routebudget.eu/og-cover.jpg","keywords":"costo fermo camion, costo camion fermo al giorno, quanto costa un camion fermo, costo inattività camion, fermo mezzo autotrasporto","about":[{"@type":"Thing","name":"fermo camion"},{"@type":"Thing","name":"costi fissi giornalieri"},{"@type":"Thing","name":"tempo autista"},{"@type":"Thing","name":"capacità produttiva"},{"@type":"Thing","name":"doppio conteggio"}],"wordCount":1035,"timeRequired":"PT5M","citation":["https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6","https://www.logisticaefficiente.it/le/network-e-trasporti/gestione-trasporti/calcolo-tariffa-di-trasporto-dai-driver-di-costo-al-prezzo-di-mercato.html"]}]}</script>
+    <script src="/seo/events.js" defer></script>
+
+    <title>Costo fermo camion: quanto perde davvero una giornata ferma</title>
+  </head>
+<body class="seo-body" data-content-id="it:guide:costo-fermo-camion" data-page-type="guide" data-locale="it">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar"></span></div>
+  <header class="seo-header">
+    <div class="seo-header__inner">
+      <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
+        <img src="/logo-ui.png" width="42" height="42" alt="" />
+        <span>RouteBudget <small>EU</small></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+      </nav>
+      <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scopri l’app <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+  <main id="contenuto">
+    <section class="seo-hero">
+      <div class="seo-shell">
+        <nav class="breadcrumbs" aria-label="Percorso">
+    <a href="/">RouteBudget</a>
+    <span aria-hidden="true">/</span>
+    <a href="/it/guide/">Guide</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Costo fermo camion: quanto perde davvero una giornata ferma</span>
+  </nav>
+        <p class="seo-eyebrow">Fermo mezzo · Costo interno</p>
+        <h1>Costo fermo camion: quanto perde davvero una giornata ferma</h1>
+        <p class="seo-hero__summary">Metodo per stimare il costo interno di un camion fermo separando struttura, autista, spese dirette e capacità persa senza sommare ricavi inesistenti.</p>
+        <div class="seo-meta" aria-label="Informazioni editoriali">
+          <span>A cura di <a href="/#autore">Eng. Mostafa</a> · RouteBudget EU</span>
+          <span>Revisione 30 agosto 2026</span>
+          <span>5 min di lettura</span>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="seo-shell article-layout">
+      <div class="article-main">
+        <details class="mobile-toc">
+    <summary><span>Indice della guida</span><b aria-hidden="true">+</b></summary>
+    <ol>
+      <li><a href="#prima-domanda-quale-fermo-stai-misurando">Prima domanda: quale fermo stai misurando?</a></li>
+<li><a href="#quattro-blocchi-senza-sovrapporli">Quattro blocchi, senza sovrapporli</a></li>
+<li><a href="#caso-ricalcolabile-quattro-ore-di-fermo">Caso ricalcolabile: quattro ore di fermo</a></li>
+<li><a href="#caso-di-una-giornata-intera-senza-missione">Caso di una giornata intera senza missione</a></li>
+<li><a href="#fermo-programmato-costo-o-investimento">Fermo programmato: costo o investimento?</a></li>
+<li><a href="#costo-interno-prezzo-e-diritto-sono-tre-piani">Costo interno, prezzo e diritto sono tre piani</a></li>
+<li><a href="#come-usare-routebudget-senza-attribuirgli-funzioni-inesistenti">Come usare RouteBudget senza attribuirgli funzioni inesistenti</a></li>
+<li><a href="#registro-minimo-del-fermo">Registro minimo del fermo</a></li>
+<li><a href="#fonti-e-metodo">Fonti e metodo</a></li>
+    </ol>
+  </details>
+        <article class="seo-prose">
+          <p>Il <strong>costo fermo camion</strong> non coincide con il fatturato medio di una giornata e non è automaticamente un danno risarcibile. Per una decisione interna servono quattro blocchi distinti: quota di struttura che continua, costo del personale impegnato, spese provocate dal fermo e margine di una missione realmente persa.</p>
+<p>Questa separazione evita due errori opposti: considerare il camion fermo “a costo zero” perché non consuma gasolio, oppure sommare costo e intero ricavo mancato come se fossero entrambi perdite aggiuntive.</p>
+<p>Il fermo è un approfondimento della mappa generale dei <a href="/it/guide/costi-autotrasporto/">costi dell’autotrasporto</a>, non una nuova tariffa media.</p>
+<h2 id="prima-domanda-quale-fermo-stai-misurando">Prima domanda: quale fermo stai misurando?</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole 1"><table>
+<thead>
+<tr>
+<th>Tipo di fermo</th>
+<th>Durata utile</th>
+<th>Dati principali</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Manutenzione programmata</td>
+<td>ore o giorni indisponibili</td>
+<td>piano officina, mezzo sostitutivo, missioni ripianificate</td>
+</tr>
+<tr>
+<td>Guasto imprevisto</td>
+<td>dall’arresto al ritorno operativo</td>
+<td>soccorso, officina, pernottamento, ritardi, sostituzione</td>
+</tr>
+<tr>
+<td>Attesa presso cliente</td>
+<td>arrivo, inizio e fine operazione</td>
+<td>orari, autista, mezzo impegnato, prova documentale</td>
+</tr>
+<tr>
+<td>Mancanza di lavoro</td>
+<td>giornata disponibile ma non venduta</td>
+<td>costi fissi, disponibilità reale, nessun ricavo attribuito</td>
+</tr>
+<tr>
+<td>Blocco amministrativo</td>
+<td>periodo di indisponibilità</td>
+<td>costi continui e causa da verificare con professionista</td>
+</tr>
+</tbody></table></div>
+<p>Un’attesa al magazzino ha regole economiche e documentali diverse da un guasto. Per franchigia, indennizzo e prova consulta la guida specifica sui <a href="/it/guide/tempi-attesa-carico-scarico-autotrasporto/">tempi di attesa al carico e scarico</a>; non trasferire automaticamente quelle regole a ogni fermo.</p>
+<aside class="mobile-inline-cta" aria-label="Continua con RouteBudget">
+    <p class="rail-label">Prima di accettare</p>
+    <p class="mobile-inline-cta__title">Confronta la tenuta del margine.</p>
+    <p>Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo; il risultato resta una stima, non una garanzia di utile.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="inline" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="inline" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </aside><h2 id="quattro-blocchi-senza-sovrapporli">Quattro blocchi, senza sovrapporli</h2>
+<h3 id="1-quota-fissa-assorbita">1. Quota fissa assorbita</h3>
+<p>Leasing o ammortamento gestionale, assicurazioni, bollo, parcheggio, abbonamenti e parte della struttura non scompaiono quando il mezzo si ferma. Per un costo giornaliero:</p>
+<pre><code>quota fissa per giornata produttiva =
+costi fissi attribuiti al mezzo nel periodo
+÷ giornate produttive realistiche del periodo
+</code></pre>
+<p>Per un fermo di poche ore può essere più leggibile:</p>
+<pre><code>quota fissa oraria =
+costi fissi attribuiti al mezzo
+÷ ore produttive realistiche
+</code></pre>
+<p>Non usare contemporaneamente quota giornaliera e oraria per stesso intervallo. La guida sui <a href="/it/guide/costi-fissi-variabili-autotrasporto/">costi fissi e variabili</a> spiega come scegliere il denominatore.</p>
+<h3 id="2-costo-del-personale-impegnato">2. Costo del personale impegnato</h3>
+<p>Se autista resta a disposizione, gestisce soccorso, attende officina o non può essere assegnato ad altra missione, il tempo può avere un costo interno. Usa il costo aziendale pertinente, non il netto in busta e non una tariffa cliente.</p>
+<pre><code>costo personale del fermo = ore impegnate × costo aziendale orario
+</code></pre>
+<p>Verifica componenti nella guida al <a href="/it/guide/costo-orario-autista-camion/">costo orario dell’autista</a>. Se salario è già incluso nella quota fissa scelta, separalo prima di aggiungerlo qui.</p>
+<h3 id="3-spese-direttamente-causate">3. Spese direttamente causate</h3>
+<p>Queste sono fatture o costi collegabili all’evento:</p>
+<ul>
+<li>soccorso stradale;</li>
+<li>diagnosi e riparazione;</li>
+<li>mezzo sostitutivo;</li>
+<li>trasbordo o deposito;</li>
+<li>viaggio, vitto o pernottamento aggiuntivo;</li>
+<li>penali o addebiti soltanto se documentati e applicabili.</li>
+</ul>
+<p>Una manutenzione maturata per chilometro prima del guasto non diventa interamente “costo del fermo”. Se già accantonata nella quota usura, registra differenza tra costo effettivo e riserva senza sommare due volte stessa spesa.</p>
+<h3 id="4-contributo-perso-non-fatturato-intero">4. Contributo perso, non fatturato intero</h3>
+<p>Una missione cancellata può avere un margine perso. Il ricavo previsto conteneva però costi variabili che non saranno sostenuti. Per analisi interna:</p>
+<pre><code>contributo previsto della missione =
+prezzo concordato
+− costi variabili evitabili
+− costi incrementali necessari
+</code></pre>
+<p>Usa questo blocco solo se missione era concreta, non recuperata e dati sono documentabili. Non sommare intero prezzo della missione a costi fissi: il prezzo include costi che potrebbero non essersi verificati.</p>
+<h2 id="caso-ricalcolabile-quattro-ore-di-fermo">Caso ricalcolabile: quattro ore di fermo</h2>
+<p>Numeri seguenti sono ipotesi didattiche. Non rappresentano costo medio italiano né quantificazione legale.</p>
+<p>Un piccolo vettore attribuisce 7.200 € di costi fissi mensili al mezzo e pianifica 20 giornate produttive da 9 ore. Durante una missione il camion resta fermo quattro ore; autista rimane impegnato e vengono sostenuti 65 € di spese direttamente collegate.</p>
+<pre><code>quota fissa giornaliera = 7.200 € ÷ 20 = 360 €
+quota fissa oraria = 360 € ÷ 9 = 40 €/h
+quota struttura per 4 h = 160 €
+
+costo autista = 4 h × 30 €/h = 120 €
+spese dirette = 65 €
+
+costo interno osservato = 160 + 120 + 65 = 345 €
+</code></pre>
+<p>Nessuna missione successiva è cancellata: contributo perso è quindi zero nell’esempio. Se azienda recupera ritardo senza costi ulteriori, non deve inventare un “mancato fatturato” per completare formula.</p>
+<h2 id="caso-di-una-giornata-intera-senza-missione">Caso di una giornata intera senza missione</h2>
+<p>Se mezzo resta disponibile ma non riceve lavoro, consumo variabile può essere quasi nullo; quota fissa continua. Il costo interno della giornata è almeno quota fissa attribuita, più eventuale personale o servizi non riallocabili.</p>
+<p>Non esiste però un cliente al quale imputare automaticamente tale giornata. Serve al controllo gestionale: mostra quante giornate produttive devono sostenere struttura e aiuta a non dividere i costi annuali per chilometri irrealistici.</p>
+<h2 id="fermo-programmato-costo-o-investimento">Fermo programmato: costo o investimento?</h2>
+<p>Manutenzione programmata riduce disponibilità ma può evitare eventi più costosi. Nel consuntivo mantieni due viste:</p>
+<ol>
+<li><strong>cassa:</strong> fatture e pagamenti del periodo;</li>
+<li><strong>economica:</strong> quota maturata per km o tempo e scostamento dalla riserva.</li>
+</ol>
+<p>Attribuire tutta fattura al solo viaggio successivo crea una tariffa instabile. Ignorare fattura perché “era pianificata” nasconde costo reale. La <a href="/it/guide/usura-manutenzione-camion/">quota di usura e manutenzione</a> deve essere aggiornata con storico coerente.</p>
+<p>Se intervento riguarda gomme, usa prima scheda sul <a href="/it/guide/costo-pneumatici-camion/">costo pneumatici del camion</a> per separare quota maturata e spesa eccezionale. Per misurare quanto evento ha spostato utile della missione, conserva offerta e compila il <a href="/it/guide/preventivo-consuntivo-viaggio-camion/">preventivo-consuntivo del viaggio</a>.</p>
+<h2 id="costo-interno-prezzo-e-diritto-sono-tre-piani">Costo interno, prezzo e diritto sono tre piani</h2>
+<ul>
+<li><strong>Costo interno:</strong> quanto struttura assorbe durante indisponibilità.</li>
+<li><strong>Prezzo commerciale:</strong> condizione concordata con cliente per servizi o tempi extra.</li>
+<li><strong>Indennizzo o danno:</strong> richiede presupposti, documenti e verifica giuridica specifica.</li>
+</ul>
+<p>Questa pagina calcola primo piano. Non stabilisce responsabilità, importi risarcibili, penali o diritto a indennizzo. Per controversie servono contratto, prove e professionista competente.</p>
+<h2 id="come-usare-routebudget-senza-attribuirgli-funzioni-inesistenti">Come usare RouteBudget senza attribuirgli funzioni inesistenti</h2>
+<p>RouteBudget stima costo di una missione usando carburante, pedaggi stimati, autista, usura/manutenzione, ritorno e scenari di prezzo. Non calcola automaticamente danno da fermo, disponibilità flotta o rimborso legale.</p>
+<p>Uso corretto:</p>
+<ol>
+<li>calcola missione prima dell’accettazione;</li>
+<li>salva scenario scelto nell’archivio locale;</li>
+<li>se compare un fermo, conserva durata e costi fuori dall’app;</li>
+<li>verifica quali costi della missione restano e quali sono evitati;</li>
+<li>ricalcola solo per analisi interna o nuova offerta, senza riscrivere silenziosamente preventivo storico;</li>
+<li>usa il <a href="/it/calcolatori/prezzo-minimo-margine-tratta/">calcolatore del prezzo minimo</a> per vedere effetto della nuova base di costo.</li>
+</ol>
+<p>Il PDF RouteBudget è una stima commerciale non vincolante; non prova causa, durata o responsabilità del fermo.</p>
+<h2 id="registro-minimo-del-fermo">Registro minimo del fermo</h2>
+<ul>
+<li> Mezzo e configurazione identificati.</li>
+<li> Inizio e fine del fermo registrati.</li>
+<li> Causa tenuta distinta da responsabilità legale.</li>
+<li> Ore di autista effettivamente impegnate.</li>
+<li> Costi fissi ripartiti una sola volta.</li>
+<li> Spese dirette collegate a documenti.</li>
+<li> Costi variabili evitati sottratti dal contributo perso.</li>
+<li> Missione persa concreta, non ipotetica.</li>
+<li> Preventivo storico conservato immutato.</li>
+<li> Eventuale richiesta economica verificata fuori dal calcolo interno.</li>
+</ul>
+<h2 id="fonti-e-metodo">Fonti e metodo</h2>
+<p>Le categorie sono confrontate con i <a href="https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6" rel="noreferrer">valori indicativi MIT di marzo 2026</a>. Il metodo di attribuzione per giornate operative è coerente con l’esempio italiano sui <a href="https://www.logisticaefficiente.it/le/network-e-trasporti/gestione-trasporti/calcolo-tariffa-di-trasporto-dai-driver-di-costo-al-prezzo-di-mercato.html" rel="noreferrer">driver di costo e tariffa</a>. Nessuna fonte viene usata per dichiarare un costo giornaliero universale o un danno automatico.</p>
+
+          <section class="sources" aria-labelledby="fonti-costo-fermo-camion">
+    <h2 id="fonti-costo-fermo-camion">Fonti e riferimenti</h2>
+    <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
+    <ul>
+      <li><a href="https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6" rel="noreferrer">MIT — Valori indicativi dei costi di esercizio, marzo 2026</a><small>Famiglie di costo che continuano o maturano durante l&#039;attività; valori indicativi, non quantificazione universale del danno da fermo. · Italia · consultata in data 30 agosto 2026</small></li>
+<li><a href="https://www.logisticaefficiente.it/le/network-e-trasporti/gestione-trasporti/calcolo-tariffa-di-trasporto-dai-driver-di-costo-al-prezzo-di-mercato.html" rel="noreferrer">Logistica Efficiente — Driver di costo e tariffa di trasporto</a><small>Esempio italiano di attribuzione dei costi fissi alle giornate operative della flotta; supporto metodologico, non fonte normativa né tariffa corrente. · Italia · consultata in data 30 agosto 2026</small></li>
+    </ul>
+  </section>
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p><a href="/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti primarie datate, esempio ricalcolato e controllo dei limiti del prodotto. Strumenti di intelligenza artificiale possono assistere ricerca, confronto e prima struttura; metodo, fonti, calcoli, limiti del prodotto e decisione di pubblicazione restano sotto la responsabilità dell’autore. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+          </section>
+        </article>
+      </div>
+      <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+        <nav class="article-toc" aria-label="Indice della guida">
+    <p class="rail-label">In questa guida</p>
+    <ol>
+      <li><a href="#prima-domanda-quale-fermo-stai-misurando">Prima domanda: quale fermo stai misurando?</a></li>
+<li><a href="#quattro-blocchi-senza-sovrapporli">Quattro blocchi, senza sovrapporli</a></li>
+<li><a href="#caso-ricalcolabile-quattro-ore-di-fermo">Caso ricalcolabile: quattro ore di fermo</a></li>
+<li><a href="#caso-di-una-giornata-intera-senza-missione">Caso di una giornata intera senza missione</a></li>
+<li><a href="#fermo-programmato-costo-o-investimento">Fermo programmato: costo o investimento?</a></li>
+<li><a href="#costo-interno-prezzo-e-diritto-sono-tre-piani">Costo interno, prezzo e diritto sono tre piani</a></li>
+<li><a href="#come-usare-routebudget-senza-attribuirgli-funzioni-inesistenti">Come usare RouteBudget senza attribuirgli funzioni inesistenti</a></li>
+<li><a href="#registro-minimo-del-fermo">Registro minimo del fermo</a></li>
+<li><a href="#fonti-e-metodo">Fonti e metodo</a></li>
+    </ol>
+  </nav>
+        <section class="rail-link">
+    <p class="rail-label">Guida pilastro</p>
+    <h2><a href="/it/guide/costi-autotrasporto/">Costi dell’autotrasporto merci: voci fisse, variabili e indirette</a></h2>
+    <p>Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.</p>
+  </section>
+        <section class="app-cta">
+    <p class="rail-label">Prima di accettare</p>
+    <h2>Confronta la tenuta del margine.</h2>
+    <p>Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo; il risultato resta una stima, non una garanzia di utile.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="article" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="article" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </section>
+      </aside>
+    </div>
+    <section class="related-section">
+    <div class="seo-shell">
+      <div class="related-section__heading">
+        <p class="seo-eyebrow">Continua il calcolo</p>
+        <h2>Passi collegati.</h2>
+      </div>
+      <div class="related-links">
+        <a href="/it/guide/costi-autotrasporto/">
+              <span>01</span>
+              <div><small>Guida pilastro</small><strong>Costi dell’autotrasporto merci: voci fisse, variabili e indirette</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/costi-fissi-variabili-autotrasporto/">
+              <span>02</span>
+              <div><small>Guida pratica</small><strong>Costi fissi e variabili nell’autotrasporto: come separarli</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/costo-orario-autista-camion/">
+              <span>03</span>
+              <div><small>Guida pratica</small><strong>Costo orario autista camion 2026: metodo e dati ufficiali</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/guide/tempi-attesa-carico-scarico-autotrasporto/">
+              <span>04</span>
+              <div><small>Guida pratica</small><strong>Attese carico e scarico: 90 minuti e indennizzo nel 2026</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+<a href="/it/calcolatori/prezzo-minimo-margine-tratta/">
+              <span>05</span>
+              <div><small>Calcolatore</small><strong>Come calcolare il prezzo di un trasporto: margine e soglia</strong></div>
+              <b aria-hidden="true">↗</b>
+            </a>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer__inner">
+      <div>
+        <a class="seo-brand" href="/">
+          <img src="/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
+          <span>RouteBudget <small>EU</small></span>
+        </a>
+        <p>Costi chiari. Decisioni difendibili.</p>
+      </div>
+      <nav aria-label="Risorse e informazioni legali">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Termini</a>
+      </nav>
+      <p>© 2026 RouteBudget EU · Eng. Mostafa</p>
+    </div>
+  </footer>
+</body>
+</html>
