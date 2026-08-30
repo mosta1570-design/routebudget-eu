@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-08-29-release-integrity",
+  "releaseIntegrityApprovalId": "review:2026-08-30-release-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
     "/it/calcolatori/": "sha256:0c8741dd4501cf52a894d33d1a204f300a49285d06b37855a17a7936c5a7606f",
-    "/it/guide/": "sha256:b0fdb3f5d8584845efc8a77add8a7d489472e39a616800104246a69dc6facb6b",
+    "/it/guide/": "sha256:58f34ac1cf1bb4f9ea721005214038bd583b15ef1f85a4c1f35f3c0597253ecc",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
     "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
   },
@@ -253,6 +253,46 @@
         "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legge%3A2008-06-25%3B112~art83bis-com17=",
         "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
         "https://www.mit.gov.it/normativa/decreto-legislativo-numero-286-del-21112005"
+      ]
+    },
+    {
+      "contentId": "guide/costo-pneumatici-camion",
+      "canonical": "/it/guide/costo-pneumatici-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "costo pneumatici camion",
+      "demandEvidenceId": "demand:round-15-costo-pneumatici-camion",
+      "approvalId": "review:2026-08-30-costo-pneumatici-camion",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/TABELLA%20D_Costi%20Esercizio%20Imprese_Modello%20costi_mar2026_pedaggi%20al%20netto%20IVA.pdf"
+      ]
+    },
+    {
+      "contentId": "guide/costo-fermo-camion",
+      "canonical": "/it/guide/costo-fermo-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "costo fermo camion",
+      "demandEvidenceId": "demand:round-15-costo-fermo-camion",
+      "approvalId": "review:2026-08-30-costo-fermo-camion",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "contentId": "guide/preventivo-consuntivo-viaggio-camion",
+      "canonical": "/it/guide/preventivo-consuntivo-viaggio-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "preventivo consuntivo viaggio camion",
+      "demandEvidenceId": "demand:round-15-preventivo-consuntivo-viaggio-camion",
+      "approvalId": "review:2026-08-30-preventivo-consuntivo-viaggio-camion",
+      "productProofIds": ["local-archive", "cost-scenarios", "pdf-quote"],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
     }
   ],

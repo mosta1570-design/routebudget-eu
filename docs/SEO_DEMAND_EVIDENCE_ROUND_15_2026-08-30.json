@@ -1,0 +1,116 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-30",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "authenticated Google Search Console diagnosis",
+    "Google Suggest hl=it gl=it",
+    "Italian Google SERP review",
+    "consented operator research",
+    "official Italian sources"
+  ],
+  "method": {
+    "interpretation": "Suggest validates wording, Search Console diagnoses site visibility, Italian sources define cost categories and consented field research identifies operational jobs. No source is represented as monthly volume, keyword difficulty, CPC or ranking forecast.",
+    "unavailableMetrics": ["monthly_search_volume", "cpc", "keyword_difficulty"],
+    "volumePolicy": "Volume remains null. Publication requires a distinct intent, an original operational asset, truthful product fit and at least one non-social source."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-08-30",
+    "latestCompleteDate": "2026-08-27",
+    "observations": [
+      "Completed week 21-27 August recorded 56 impressions and 1 click versus 808 impressions and 10 clicks on 14-20 August.",
+      "Loss affected many unrelated Italian pages at once while inspected pages remained indexed, crawl allowed, fetched successfully and self-canonical.",
+      "The collapse began with the 18-21 August 2026 Google spam update; this is evidence of site-wide algorithmic reassessment, not proof of a manual action."
+    ],
+    "limitations": [
+      "Timing and scope support the diagnosis but do not reveal Google's private scoring factors.",
+      "Autocomplete is directional wording evidence, not volume.",
+      "Indexing or sitemap submission cannot guarantee recovery or rankings."
+    ]
+  },
+  "rejectedCandidates": [
+    {
+      "query": "costi chilometrici camion",
+      "reason": "Rejected as a new URL because existing truck cost calculator and consuntivo cost guide already own that broad intent."
+    },
+    {
+      "query": "costi fissi camion al giorno",
+      "reason": "Rejected as a standalone new intent because existing fixed-versus-variable guide owns allocation; the approved stopped-truck page owns only incident and inactivity analysis."
+    },
+    {
+      "query": "preventivo consuntivo trasporto",
+      "reason": "No transport-specific Suggest result was returned. It is not claimed as high-volume; a narrower field-research page is admitted only as a measurable long-tail experiment."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "demand:round-15-costo-pneumatici-camion",
+      "primaryKeyword": "costo pneumatici camion",
+      "canonical": "/it/guide/costo-pneumatici-camion/",
+      "query": "costo pneumatici camion",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20pneumatici%20camion",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": ["costo pneumatici camion"],
+      "rawResponse": "[\"costo pneumatici camion\",[\"costo pneumatici camion\"],[],{\"google:suggestsubtypes\":[[512]]}]",
+      "signal": "exact-google-suggest-it-plus-current-mit-cost-category-plus-consented-field-need",
+      "signalNote": "Exact Italian wording is returned by Suggest; MIT tables isolate tires as a cost component; consented operator research asks for an axle-aware model and double-count protection.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns the detailed tire-set and axle-group worksheet. Usura-manutenzione owns the broader maintenance reserve; costo-chilometrico owns whole-vehicle period cost.",
+      "productFit": "RouteBudget's verified cost breakdown accepts an aggregate wear and maintenance component after the operator calculates a non-duplicated tire share.",
+      "productBoundary": "No tire ledger, axle inventory, safety diagnosis, lifetime guarantee, failure forecast or automatic separation of tires from current wear input.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20pneumatici%20camion",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/TABELLA%20D_Costi%20Esercizio%20Imprese_Modello%20costi_mar2026_pedaggi%20al%20netto%20IVA.pdf"
+      ]
+    },
+    {
+      "id": "demand:round-15-costo-fermo-camion",
+      "primaryKeyword": "costo fermo camion",
+      "canonical": "/it/guide/costo-fermo-camion/",
+      "query": "costo camion fermo",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20camion%20fermo",
+      "exactSuggestionReturned": false,
+      "returnedSuggestions": ["costo fermo camion"],
+      "rawResponse": "[\"costo camion fermo\",[\"costo fermo camion\"],[],{\"google:suggestsubtypes\":[[22,30]]}]",
+      "signal": "normalized-google-suggest-it-plus-italian-cost-allocation-method-plus-consented-field-need",
+      "signalNote": "Suggest normalizes the request to the selected Italian phrase. Italian cost methodology and field research both identify the economic problem of fixed costs continuing while kilometers stop.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns internal cost of downtime and a concrete stopped-truck event. Costi-fissi-variabili owns general classification; tempi-attesa owns the Italian 90-minute legal and documentary job.",
+      "productFit": "RouteBudget's verified cost breakdown provides the baseline mission estimate that can be preserved and compared with a separately documented stop event.",
+      "productBoundary": "No downtime module, fleet availability, legal liability, compensation calculation, damage valuation, workshop diagnosis or automatic lost-revenue claim.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20camion%20fermo",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://www.logisticaefficiente.it/le/network-e-trasporti/gestione-trasporti/calcolo-tariffa-di-trasporto-dai-driver-di-costo-al-prezzo-di-mercato.html"
+      ]
+    },
+    {
+      "id": "demand:round-15-preventivo-consuntivo-viaggio-camion",
+      "primaryKeyword": "preventivo consuntivo viaggio camion",
+      "canonical": "/it/guide/preventivo-consuntivo-viaggio-camion/",
+      "query": "preventivo consuntivo viaggio camion",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=preventivo%20consuntivo%20trasporto",
+      "exactSuggestionReturned": false,
+      "returnedSuggestions": [],
+      "rawResponse": "[\"preventivo consuntivo trasporto\",[]]",
+      "signal": "consented-field-research-plus-italian-commercial-category-evidence-no-volume-claim",
+      "signalNote": "Consented operator research identifies immutable estimate versus actual variance as a concrete product job. Italian transport software confirms the category, but Suggest returned no transport-specific result; this is explicitly treated as a long-tail experiment.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns immutable estimate, actual-cost worksheet and variance diagnosis after one trip. Proteggere-margine owns pre-trip sensitivity; guadagno-padroncino owns monthly business result.",
+      "productFit": "RouteBudget's verified local archive, cost scenarios and PDF quote can preserve the planned snapshot before an external manual actual-cost worksheet is completed.",
+      "productBoundary": "No automatic actual-cost report, invoice reconciliation, telematics import, realized-profit calculation, shared cloud archive or silent mutation of historical quotes.",
+      "sourceUrls": [
+        "https://www.ideagrip.it/moduli/analisi-costi/",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    }
+  ]
+}

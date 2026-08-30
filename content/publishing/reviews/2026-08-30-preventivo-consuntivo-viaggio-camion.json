@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-30-preventivo-consuntivo-viaggio-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-30",
+  "decision": "approved",
+  "contentId": "guide/preventivo-consuntivo-viaggio-camion",
+  "contentFingerprint": "sha256:93ae106dae418c57de6ac764de35513d09ee3c986f2ab9d0bd886f10d11c88b0",
+  "artifactFingerprint": "sha256:c2154d85a571a71c0c705e99fc597d4ebe70e68e2fe4df199992a5d05f893836",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-30",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget's visibility loss and create three rare, professional Italian articles from the supplied consented field-research log."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Consented field job, Italian category evidence, immutable snapshot, exact arithmetic and product boundaries were checked. Page is disclosed as a no-volume long-tail experiment and does not claim automatic actual-cost or telematics features."
+}

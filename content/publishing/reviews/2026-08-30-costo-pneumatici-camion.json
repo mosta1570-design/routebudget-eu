@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-30-costo-pneumatici-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-30",
+  "decision": "approved",
+  "contentId": "guide/costo-pneumatici-camion",
+  "contentFingerprint": "sha256:90522d88b09474ee7ae39c82b884cd27b5f571c032e49d403f9bafa76e5b696f",
+  "artifactFingerprint": "sha256:7dfe16b7e13864403faeeeb2b26f12261f8269de51776d67cb45ff7d701c7037",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-30",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget's visibility loss and create three rare, professional Italian articles from the supplied consented field-research log."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Exact Italian wording, current MIT cost categories, original axle-group worksheet, ricalculable example and explicit tire-ledger and safety limits were checked. No search volume, tire lifetime or safety outcome is claimed."
+}

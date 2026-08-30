@@ -220,5 +220,17 @@
     "geography": "Italia",
     "accessedAt": "2026-08-29",
     "supports": "Forma del contratto di trasporto merci su strada ed elementi essenziali, compresi corrispettivo e modalità di pagamento"
+  },
+  "https://www.logisticaefficiente.it/le/network-e-trasporti/gestione-trasporti/calcolo-tariffa-di-trasporto-dai-driver-di-costo-al-prezzo-di-mercato.html": {
+    "publishedOrUpdated": "Approfondimento metodologico consultato nel 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-30",
+    "supports": "Esempio di attribuzione dei costi fissi alle giornate operative della flotta; non fonte normativa o tariffa corrente"
+  },
+  "https://www.ideagrip.it/moduli/analisi-costi/": {
+    "publishedOrUpdated": "Pagina prodotto consultata nel 2026",
+    "geography": "Italia",
+    "accessedAt": "2026-08-30",
+    "supports": "Evidenza commerciale dell'esistenza del lavoro preventivo-consuntivo nel trasporto; non prova di volume né fonte normativa"
   }
 }

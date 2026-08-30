@@ -1,0 +1,66 @@
+{
+  "slug": "costo-pneumatici-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo pneumatici camion: calcolo per km senza doppioni",
+  "mobileH1": "Costo pneumatici camion per km",
+  "description": "Metodo operativo per calcolare il costo pneumatici di trattore e semirimorchio per chilometro, con durata, servizi, riserva e controllo dei doppioni.",
+  "eyebrow": "Costo tecnico · Pneumatici",
+  "published": "2026-08-30",
+  "modified": "2026-08-30",
+  "reviewed": "2026-08-30",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo pneumatici camion",
+  "secondaryKeywords": [
+    "costo pneumatici camion al km",
+    "costo gomme camion",
+    "quota pneumatici autotrasporto",
+    "costo pneumatici semirimorchio"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "pneumatici camion",
+    "costo per chilometro",
+    "durata pneumatici",
+    "trattore e semirimorchio",
+    "doppio conteggio"
+  ],
+  "related": [
+    "guide:usura-manutenzione-camion",
+    "guide:costo-chilometrico-camion",
+    "guide:preventivo-consuntivo-viaggio-camion",
+    "guide:costi-autotrasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "complete-trip",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "costo-pneumatici-camion",
+  "canonical": "/it/guide/costo-pneumatici-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-30",
+      "supports": "Le tabelle italiane trattano i pneumatici come componente autonoma dei costi di esercizio; i valori sono indicativi e non sostituiscono i dati del mezzo."
+    },
+    {
+      "label": "MIT — Tabella D dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/TABELLA%20D_Costi%20Esercizio%20Imprese_Modello%20costi_mar2026_pedaggi%20al%20netto%20IVA.pdf",
+      "publishedOrUpdated": "Marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-30",
+      "supports": "Riferimento ufficiale per distinguere pneumatici, manutenzione e altre voci nella classe di veicolo pertinente, senza ricavare una tariffa universale."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: scheda originale per asse e gruppo ruota, formula per km, caso ricalcolabile e protezione dal doppio conteggio."
+}
