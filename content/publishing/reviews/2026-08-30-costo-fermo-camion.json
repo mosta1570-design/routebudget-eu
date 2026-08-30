@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-30-costo-fermo-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-30",
+  "decision": "approved",
+  "contentId": "guide/costo-fermo-camion",
+  "contentFingerprint": "sha256:bb0de4e6319b26f8ab83031247bb974d9ced2b0853efdd86bcada17604409cbc",
+  "artifactFingerprint": "sha256:9971d9d83d4bc574eb6b3325a9f567a758b3d31512f7146349a82884eee39d5b",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-30",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget's visibility loss and create three rare, professional Italian articles from the supplied consented field-research log."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Normalized Italian Suggest wording, current MIT categories, four-block downtime model and double-count checks were reviewed. Internal cost is kept separate from revenue, compensation, liability and legal damage."
+}

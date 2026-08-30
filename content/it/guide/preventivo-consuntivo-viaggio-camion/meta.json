@@ -1,0 +1,66 @@
+{
+  "slug": "preventivo-consuntivo-viaggio-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Preventivo e consuntivo viaggio camion: trova il margine perso",
+  "mobileH1": "Preventivo vs consuntivo del viaggio",
+  "description": "Scheda pratica per confrontare costi previsti e reali di un viaggio camion senza modificare il preventivo storico, con scostamenti e margine effettivo.",
+  "eyebrow": "Controllo viaggio · Scostamenti",
+  "published": "2026-08-30",
+  "modified": "2026-08-30",
+  "reviewed": "2026-08-30",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "preventivo consuntivo viaggio camion",
+  "secondaryKeywords": [
+    "costo preventivo e consuntivo trasporto",
+    "scostamento costi viaggio camion",
+    "margine reale trasporto",
+    "costo effettivo tratta camion"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "margini-e-tariffe",
+  "topics": [
+    "preventivo viaggio",
+    "consuntivo trasporto",
+    "scostamento costi",
+    "margine effettivo",
+    "archivio storico"
+  ],
+  "related": [
+    "guide:proteggere-margine-tratta",
+    "guide:costo-pneumatici-camion",
+    "guide:guadagno-padroncino-camion",
+    "guide:preventivo-trasporto-pdf",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:guadagno-padroncino-camion",
+  "calculatorId": null,
+  "conversionIntent": "pdf-quote",
+  "appFeature": "local-archive",
+  "translationGroup": "preventivo-consuntivo-viaggio-camion",
+  "canonical": "/it/guide/preventivo-consuntivo-viaggio-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-30",
+      "supports": "Categorie e riferimenti esterni utili al controllo delle voci di costo; valori indicativi, non sostituti del consuntivo aziendale."
+    },
+    {
+      "label": "Ideagrip — Analisi costi a preventivo e consuntivo",
+      "url": "https://www.ideagrip.it/moduli/analisi-costi/",
+      "publishedOrUpdated": "Pagina prodotto consultata nel 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-30",
+      "supports": "Conferma commerciale dell'esistenza del lavoro gestionale preventivo-versus-consuntivo nel trasporto; non fonte normativa e non prova di volume di ricerca."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: snapshot immutabile, matrice scostamenti, caso numerico ricalcolabile e limiti espliciti dell'archivio RouteBudget."
+}

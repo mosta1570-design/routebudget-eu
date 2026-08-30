@@ -1,0 +1,66 @@
+{
+  "slug": "costo-fermo-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo fermo camion: quanto perde davvero una giornata ferma",
+  "mobileH1": "Costo fermo camion: calcolo reale",
+  "description": "Metodo per stimare il costo interno di un camion fermo separando struttura, autista, spese dirette e capacità persa senza sommare ricavi inesistenti.",
+  "eyebrow": "Fermo mezzo · Costo interno",
+  "published": "2026-08-30",
+  "modified": "2026-08-30",
+  "reviewed": "2026-08-30",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo fermo camion",
+  "secondaryKeywords": [
+    "costo camion fermo al giorno",
+    "quanto costa un camion fermo",
+    "costo inattività camion",
+    "fermo mezzo autotrasporto"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "fermo camion",
+    "costi fissi giornalieri",
+    "tempo autista",
+    "capacità produttiva",
+    "doppio conteggio"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "guide:costo-orario-autista-camion",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "costo-fermo-camion",
+  "canonical": "/it/guide/costo-fermo-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-30",
+      "supports": "Famiglie di costo che continuano o maturano durante l'attività; valori indicativi, non quantificazione universale del danno da fermo."
+    },
+    {
+      "label": "Logistica Efficiente — Driver di costo e tariffa di trasporto",
+      "url": "https://www.logisticaefficiente.it/le/network-e-trasporti/gestione-trasporti/calcolo-tariffa-di-trasporto-dai-driver-di-costo-al-prezzo-di-mercato.html",
+      "publishedOrUpdated": "Approfondimento metodologico consultato nel 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-08-30",
+      "supports": "Esempio italiano di attribuzione dei costi fissi alle giornate operative della flotta; supporto metodologico, non fonte normativa né tariffa corrente."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: modello a quattro blocchi per il fermo, caso ricalcolabile, separazione tra costo, mancato margine e indennizzo."
+}
