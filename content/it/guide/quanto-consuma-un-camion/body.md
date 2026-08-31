@@ -45,6 +45,22 @@ Con dati di bordo o telematica il principio non cambia. Conviene conservare alme
 
 L'AdBlue e l'energia delle attrezzature non vanno sommati ai litri di gasolio. Restano costi operativi, ma richiedono una riga distinta per non alterare il consumo del motore.
 
+## Scheda minima per costruire un consumo utilizzabile
+
+Il dato diventa utile quando puoi ricostruire da quale lavoro proviene. Per ogni rilevazione conserva una riga con campi comparabili, senza affidarti alla memoria dell’autista o al solo totale della carta carburante.
+
+| Campo | Che cosa annotare | Errore che evita |
+| --- | --- | --- |
+| Periodo | data iniziale e finale | confrontare stagioni o prezzi senza accorgersene |
+| Mezzo | targa interna o identificativo e configurazione | unire veicoli con consumi diversi |
+| Missione | carico, tratta e profilo strada | usare una media autostradale per un giro urbano |
+| Chilometri | iniziali, finali, carichi e a vuoto | dividere i litri per soli km fatturati |
+| Carburante | litri e tipo di rifornimento | confondere pieno e rabbocco |
+| Ore al minimo | dato disponibile o nota operativa | attribuire tutto il consumo ai km |
+| Anomalie | deviazione, coda, guasto, meteo o gruppo frigo | trattare un viaggio eccezionale come riferimento |
+
+Calcola i l/100 km per ogni riga valida, poi raggruppa solo missioni abbastanza simili. Non esiste un numero universale di viaggi che renda automaticamente affidabile la media: aumenta il campione finché aggiungere una tratta comparabile non sposta più il valore in modo rilevante per il tuo preventivo. Se i risultati restano dispersi, usa scenario base e prudente invece di nascondere la variabilità in una cifra sola.
+
 ## I fattori che cambiano il consumo
 
 ### Massa e distribuzione del carico

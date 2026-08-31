@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-31-proteggere-margine-tratta",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-31",
+  "decision": "approved",
+  "contentId": "guide/proteggere-margine-tratta",
+  "contentFingerprint": "sha256:120540c85c3fb9338fc43d22c1fb260973b901613088976f93ee52425d418fb8",
+  "artifactFingerprint": "sha256:42079b5816a16478c81e260351e37602775ca2f191e2ed03fc1f08978d17ba55",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-31",
+    "basis": "Explicit owner request in the active Codex task to run a professional whole-site RouteBudget recovery campaign, fix structural issues and improve Italian operator value without errors."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers dated fuel sensitivity evidence, residual-margin intent ownership, formula boundaries and verified scenario claims. No independent accounting review is claimed."
+}

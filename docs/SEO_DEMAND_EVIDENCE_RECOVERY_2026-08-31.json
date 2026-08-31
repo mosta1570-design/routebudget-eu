@@ -1,0 +1,112 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-31",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "Google Search Console page history for sc-domain:routebudget.eu",
+    "Italian government transport and fuel sources",
+    "existing Italian RouteBudget intent map"
+  ],
+  "method": {
+    "interpretation": "Recovery updates existing Italian intent owners that lost broad page-level visibility after 18 August. It adds operator tools and clearer decision paths without creating new URLs, changing query ownership or claiming search volume.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "No volume, ranking, traffic or conversion forecast is inferred. Search Console history proves prior Google exposure for these exact URLs, not total Italian demand."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-08-31",
+    "purpose": "Improve existing high-loss Italian pages and preserve one URL per intent."
+  },
+  "candidates": [
+    {
+      "id": "demand:recovery-costo-carburante-viaggio-20260831",
+      "primaryKeyword": "calcolatore costo carburante viaggio",
+      "canonical": "/it/calcolatori/costo-carburante-viaggio/",
+      "query": "calcolatore costo carburante viaggio",
+      "signal": "existing-italian-calculator-with-gsc-page-history-and-current-fuel-source",
+      "signalNote": "Search Console previously exposed the calculator before the sitewide decline. MASE and European fuel series support a dated sensitivity method rather than a universal fuel price.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The calculator owns litres and fuel cost from entered distance, measured consumption and price. The consumption guide owns measurement; the cost-per-km calculator owns the wider mission.",
+      "productFit": "RouteBudget can carry the verified fuel input into the released wider route-cost workflow with other supported cost components.",
+      "productBoundary": "Neither web calculator nor app supplies a guaranteed live fuel price, future price, route, official tariff or final profitability result.",
+      "sourceUrls": [
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+        "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+      ]
+    },
+    {
+      "id": "demand:recovery-quanto-consuma-camion-20260831",
+      "primaryKeyword": "quanto consuma un camion",
+      "canonical": "/it/guide/quanto-consuma-un-camion/",
+      "query": "quanto consuma un camion",
+      "signal": "existing-italian-guide-with-gsc-page-history-and-official-cost-context",
+      "signalNote": "Search Console previously exposed this exact guide. Current official sources support a measured, segmented input workflow and reject one universal consumption number.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The guide owns measurement and interpretation of l/100 km. The fuel calculator owns litres and cost after consumption is known; cost-per-km owns complete mission economics.",
+      "productFit": "A measured consumption profile is a relevant input to RouteBudget's released fuel estimate and full route-cost workflow.",
+      "productBoundary": "RouteBudget does not read telematics, diagnose a vehicle, provide a universal consumption benchmark or guarantee final fuel use.",
+      "sourceUrls": [
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "id": "demand:recovery-costo-km-camion-20260831",
+      "primaryKeyword": "costo km camion",
+      "canonical": "/it/calcolatori/costo-chilometrico-camion/",
+      "query": "costo km camion",
+      "signal": "existing-italian-calculator-with-gsc-page-history-and-mit-cost-reference",
+      "signalNote": "Search Console previously exposed this exact calculator. MIT cost families support the completeness check while company inputs remain authoritative for the actual mission.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The calculator owns forecast cost per travelled and loaded kilometre for one mission. The historical guide owns period accounting; the margin calculator owns final price scenarios.",
+      "productFit": "The result connects directly to RouteBudget's released cost breakdown and scenario workflow without claiming a market tariff.",
+      "productBoundary": "RouteBudget does not calculate a live route, official minimum tariff, legal price, tax result or guaranteed margin.",
+      "sourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "id": "demand:recovery-calcolo-costo-trasporto-20260831",
+      "primaryKeyword": "calcolo costo trasporto",
+      "canonical": "/it/guide/calcolo-costo-trasporto/",
+      "query": "calcolo costo trasporto",
+      "signal": "existing-italian-pillar-with-gsc-page-history-and-current-mit-reference",
+      "signalNote": "Search Console previously exposed the pillar. The recovery adds an operator go/no-go sequence while retaining the existing complete-trip intent and official cost reference.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The pillar owns the complete single-mission cost method. Supporting guides own one component and calculators execute narrower numerical tasks.",
+      "productFit": "The method maps to RouteBudget's released complete route calculation, cost breakdown, scenarios and PDF estimate.",
+      "productBoundary": "The app does not replace dispatch, routing, live toll lookup, accounting, invoicing, legal review or an official market tariff.",
+      "sourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "id": "demand:recovery-proteggere-margine-20260831",
+      "primaryKeyword": "analisi sensibilità margine tratta",
+      "canonical": "/it/guide/proteggere-margine-tratta/",
+      "query": "analisi sensibilità margine tratta",
+      "signal": "existing-italian-intent-owner-with-current-cost-and-fuel-sources",
+      "signalNote": "The existing page owns sensitivity analysis. MASE and MIT support dated fuel and cost-family inputs while the update avoids inventing market demand or a universal safety margin.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The guide owns residual-margin stress testing after cost and price are known. The price calculator owns coverage threshold, target margin and equivalent markup.",
+      "productFit": "RouteBudget's released scenario feature lets an operator compare supported price scenarios after building the mission cost.",
+      "productBoundary": "No page or app result guarantees profit, predicts fuel, supplies missing costs or replaces accounting and commercial judgment.",
+      "sourceUrls": [
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    }
+  ]
+}

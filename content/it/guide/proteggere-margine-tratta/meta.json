@@ -6,8 +6,8 @@
   "description": "Come stressare una stima di tratta variando carburante, attese, itinerario e ritorno a vuoto per capire quanto margine resta.",
   "eyebrow": "Stress test della tratta",
   "published": "2026-08-01",
-  "modified": "2026-08-23",
-  "reviewed": "2026-08-23",
+  "modified": "2026-08-31",
+  "reviewed": "2026-08-31",
   "primaryKeyword": "analisi sensibilità margine tratta",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -35,6 +35,10 @@
       "geography": "Italia",
       "accessedAt": "2026-08-23",
       "supports": "Famiglie di costo e natura indicativa dei riferimenti per l'impresa italiana; le tabelle non costituiscono una tariffa universale per la singola tratta."
+    },
+    {
+      "label": "MASE — Prezzi mensili dei carburanti",
+      "url": "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti"
     }
   ],
   "status": "published",
@@ -51,5 +55,5 @@
   "canonical": "/it/guide/proteggere-margine-tratta/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Ristretta la guida all'analisi di sensibilità e al margine residuo; formula, soglia di copertura e prezzo da margine target appartengono al calcolatore dedicato."
+  "changeSummary": "Aggiunta una seconda fonte italiana per datare lo scenario carburante e rafforzato il controllo del margine residuo senza creare una seconda calcolatrice."
 }

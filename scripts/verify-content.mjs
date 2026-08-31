@@ -39,6 +39,7 @@ for (const section of ['guide', 'calcolatori', 'confronti', 'landing']) {
         id: `${section}/${entry.name}`,
         kind: meta.kind,
         canonical: meta.canonical,
+        sourceCount: meta.sources.length,
         body: await readFile(path.join(directory, entry.name, 'body.md'), 'utf8'),
       });
     }
@@ -49,6 +50,10 @@ assert(expected && typeof expected === 'object', 'site.json: expectedPublished i
 for (const kind of Object.keys(counts)) {
   assert(Number.isInteger(expected[kind]) && expected[kind] >= 0, `site.json: invalid expectedPublished.${kind}`);
   assert.equal(counts[kind], expected[kind], `published ${kind} inventory differs from site.json`);
+}
+
+for (const page of publishedPages) {
+  assert(page.sourceCount >= 2, `${page.id}: every published page needs at least two verifiable sources`);
 }
 
 for (const guide of publishedPages.filter((page) => page.kind === 'guide')) {

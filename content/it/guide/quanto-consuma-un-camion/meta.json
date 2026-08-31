@@ -7,8 +7,8 @@
   "description": "Come misurare il consumo medio reale di un camion in l/100 km, separare i profili di lavoro e usare il dato in una tratta senza medie ingannevoli.",
   "eyebrow": "Consumo camion · Metodo operativo",
   "published": "2026-08-11",
-  "modified": "2026-08-22",
-  "reviewed": "2026-08-22",
+  "modified": "2026-08-31",
+  "reviewed": "2026-08-31",
   "primaryKeyword": "quanto consuma un camion",
   "searchIntent": "informational",
   "topics": [
@@ -55,5 +55,5 @@
   "canonical": "/it/guide/quanto-consuma-un-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Collegati consumo misurato e scelta datata del prezzo gasolio, mantenendo separati intento informativo e calcolo transazionale di litri e costo."
+  "changeSummary": "Aggiunta una scheda di rilevazione per separare profili di missione e impedire che una media di flotta non confrontabile entri nel preventivo."
 }

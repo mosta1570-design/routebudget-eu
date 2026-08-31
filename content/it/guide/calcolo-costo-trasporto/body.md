@@ -27,6 +27,21 @@ La qualità del risultato dipende soprattutto dagli input. Prima di applicare un
 
 La distanza commerciale indicata dal cliente può essere diversa dai chilometri realmente percorsi. Un accesso industriale, un divieto per mezzi pesanti o la necessità di raggiungere un punto di lavaggio possono aggiungere strada e tempo. È quindi preferibile annotare l’origine della distanza: itinerario verificato, dato storico, navigazione o stima iniziale.
 
+## Controllo go/no-go prima di confermare la tratta
+
+Quando l’offerta arriva al telefono o in chat, la decisione deve restare rapida senza diventare cieca. Usa questo ordine: se manca un dato decisivo, non sostituirlo con una media favorevole; prepara uno scenario prudente oppure chiedi chiarimento.
+
+| Passaggio | Domanda | Esito operativo |
+| --- | --- | --- |
+| 1. Perimetro | origine, destinazione, km reali, carico e orari sono chiari? | se no, stima dichiarata o richiesta dati |
+| 2. Ritorno | esiste un carico confermato dopo la consegna? | se no, includi vuoto o scenario senza ritorno |
+| 3. Tempo | carico, scarico, attese e pause entrano nelle ore? | se no, il costo autista è incompleto |
+| 4. Percorso | pedaggi, traghetti, accessi e parcheggi sono separati? | se no, tieni una riserva esplicita |
+| 5. Mezzo | usura e quota fissa sono già comprese altrove? | elimina doppioni, non le voci |
+| 6. Prezzo | il prezzo supera il costo anche nello scenario meno favorevole? | se no, rinegozia o rifiuta consapevolmente |
+
+Il controllo non decide al posto dell’impresa. Rende visibile perché la tratta viene accettata, rinegoziata o rifiutata. Se il prezzo regge solo con ritorno sperato, zero attesa e consumo migliore dello storico, non è uno scenario base: è una combinazione ottimistica da segnalare prima dell’impegno.
+
 ## Un modello semplice del costo operativo
 
 Una struttura di base può essere espressa così:

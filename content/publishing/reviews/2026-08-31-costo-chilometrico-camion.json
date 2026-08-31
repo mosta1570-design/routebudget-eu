@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-31-costo-chilometrico-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-31",
+  "decision": "approved",
+  "contentId": "calcolatori/costo-chilometrico-camion",
+  "contentFingerprint": "sha256:255db7f1d9e45aab97287d6df2889d90508bbf94bb1b4b3083bfccc1b0977efe",
+  "artifactFingerprint": "sha256:960671b2748e1e309e0475804929b4affd819dcb898a63c7a2b7ecacf142da55",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-31",
+    "basis": "Explicit owner request in the active Codex task to run a professional whole-site RouteBudget recovery campaign, fix structural issues and improve Italian operator value without errors."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers the decision boundary between cost per kilometre and final price, internal links, source coverage and verified product claims. No independent review is claimed."
+}
