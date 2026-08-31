@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-30",
+  "revisionDate": "2026-08-31",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -23,7 +23,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
       "indexable": true,
       "primaryKeyword": "calcolatore costo carburante viaggio",
-      "modified": "2026-08-21"
+      "modified": "2026-08-31"
     },
     {
       "id": "it:calcolatori:costo-chilometrico-camion",
@@ -35,7 +35,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
       "indexable": true,
       "primaryKeyword": "costo km camion",
-      "modified": "2026-08-11"
+      "modified": "2026-08-31"
     },
     {
       "id": "it:calcolatori:fuel-surcharge-autotrasporto",
@@ -131,7 +131,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-23"
+      "modified": "2026-08-31"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -563,7 +563,7 @@
       "canonical": "https://routebudget.eu/it/guide/proteggere-margine-tratta/",
       "indexable": true,
       "primaryKeyword": "analisi sensibilità margine tratta",
-      "modified": "2026-08-23"
+      "modified": "2026-08-31"
     },
     {
       "id": "it:guide:quanto-consuma-un-camion",
@@ -575,7 +575,7 @@
       "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
       "indexable": true,
       "primaryKeyword": "quanto consuma un camion",
-      "modified": "2026-08-22"
+      "modified": "2026-08-31"
     },
     {
       "id": "it:guide:quanto-consuma-un-furgone",
