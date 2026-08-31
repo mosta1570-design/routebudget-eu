@@ -25,6 +25,12 @@ const SECTION_LABELS = {
   confronti: 'Confronti',
   landing: 'App',
 };
+const CANONICAL_SITEMAPS = [
+  'sitemaps/core.xml',
+  'sitemaps/articles-it.xml',
+  'sitemaps/calculators-it.xml',
+  'sitemaps/legal.xml',
+];
 const manifest = JSON.parse(await readFile(path.join(DIST, 'content-manifest.json'), 'utf8'));
 const sourcePages = await discoverSourcePages();
 const sourceById = new Map(sourcePages.map((page) => [page.id, page]));
@@ -200,7 +206,10 @@ await verifyHreflang(sourcePages, htmlByRoute);
 
 const robots = await readFile(path.join(DIST, 'robots.txt'), 'utf8');
 assert(robots.includes('User-agent: *\nAllow: /'), 'robots.txt must allow public crawling');
-assert(robots.includes(`Sitemap: ${ORIGIN}${BASE}/sitemap.xml`), 'robots.txt sitemap URL mismatch');
+for (const sitemap of CANONICAL_SITEMAPS) {
+  assert(robots.includes(`Sitemap: ${ORIGIN}${BASE}/${sitemap}`), `robots.txt missing canonical sitemap ${sitemap}`);
+}
+assert(!robots.includes(`Sitemap: ${ORIGIN}${BASE}/sitemap.xml`), 'robots.txt must not advertise failed legacy root sitemap');
 assert(!/(?:localhost|127\.0\.0\.1|Disallow:\s*\/)/.test(robots), 'robots.txt contains unsafe production rule');
 
 const eventAdapter = await readFile(path.join(DIST, 'seo/events.js'), 'utf8');
