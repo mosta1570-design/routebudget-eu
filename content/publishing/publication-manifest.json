@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-08-30-release-integrity",
+  "releaseIntegrityApprovalId": "review:2026-08-31-release-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
-    "/it/calcolatori/": "sha256:0c8741dd4501cf52a894d33d1a204f300a49285d06b37855a17a7936c5a7606f",
-    "/it/guide/": "sha256:58f34ac1cf1bb4f9ea721005214038bd583b15ef1f85a4c1f35f3c0597253ecc",
+    "/it/calcolatori/": "sha256:9512b7135db1821934acd3f6a1109a484c85178ee4711e7efbee25d7a4e6186d",
+    "/it/guide/": "sha256:1277aa19482a1296ab7315d9b10c096800ad561858a01808b07f896a2872b90d",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
     "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
   },
@@ -17,12 +17,14 @@
       "contentId": "guide/calcolo-costo-trasporto",
       "canonical": "/it/guide/calcolo-costo-trasporto/",
       "audienceMarket": "IT",
-      "changeScope": "metadata-or-links",
+      "changeScope": "substantive-update",
       "intentOwner": "calcolo costo trasporto",
-      "demandEvidenceId": "demand:maintenance-calcolo-costo-trasporto",
-      "approvalId": "review:2026-08-23-calcolo-costo-trasporto",
+      "demandEvidenceId": "demand:recovery-calcolo-costo-trasporto-20260831",
+      "approvalId": "review:2026-08-31-calcolo-costo-trasporto",
       "productProofIds": ["complete-route-calculation"],
-      "primarySourceUrls": []
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
     },
     {
       "contentId": "guide/costi-autotrasporto",
@@ -76,10 +78,25 @@
       "audienceMarket": "IT",
       "changeScope": "substantive-update",
       "intentOwner": "analisi sensibilità margine tratta",
-      "demandEvidenceId": "demand:maintenance-proteggere-margine-tratta",
-      "approvalId": "review:2026-08-23-proteggere-margine-tratta",
+      "demandEvidenceId": "demand:recovery-proteggere-margine-20260831",
+      "approvalId": "review:2026-08-31-proteggere-margine-tratta",
       "productProofIds": ["cost-scenarios"],
       "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti"
+      ]
+    },
+    {
+      "contentId": "guide/quanto-consuma-un-camion",
+      "canonical": "/it/guide/quanto-consuma-un-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "substantive-update",
+      "intentOwner": "quanto consuma un camion",
+      "demandEvidenceId": "demand:recovery-quanto-consuma-camion-20260831",
+      "approvalId": "review:2026-08-31-quanto-consuma-camion",
+      "productProofIds": ["fuel-estimate"],
+      "primarySourceUrls": [
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
     },
@@ -120,6 +137,33 @@
       "primarySourceUrls": [
         "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231",
         "https://transport.ec.europa.eu/transport-modes/road/tachograph_en?prefLang=it"
+      ]
+    },
+    {
+      "contentId": "calcolatori/costo-carburante-viaggio",
+      "canonical": "/it/calcolatori/costo-carburante-viaggio/",
+      "audienceMarket": "IT",
+      "changeScope": "substantive-update",
+      "intentOwner": "calcolatore costo carburante viaggio",
+      "demandEvidenceId": "demand:recovery-costo-carburante-viaggio-20260831",
+      "approvalId": "review:2026-08-31-costo-carburante-viaggio",
+      "productProofIds": ["fuel-estimate"],
+      "primarySourceUrls": [
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+        "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+      ]
+    },
+    {
+      "contentId": "calcolatori/costo-chilometrico-camion",
+      "canonical": "/it/calcolatori/costo-chilometrico-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "substantive-update",
+      "intentOwner": "costo km camion",
+      "demandEvidenceId": "demand:recovery-costo-km-camion-20260831",
+      "approvalId": "review:2026-08-31-costo-chilometrico-camion",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
     },
     {

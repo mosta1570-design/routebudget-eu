@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-31-calcolo-costo-trasporto",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-31",
+  "decision": "approved",
+  "contentId": "guide/calcolo-costo-trasporto",
+  "contentFingerprint": "sha256:0a8a615454bd06a516fefa2f37b83213afc5b67a7e9739a80b9f0b45978b8dd6",
+  "artifactFingerprint": "sha256:216204e10d7ad2b255b2c8348ef2394d2ca9de8de2dba5487cfae7316ebd10d1",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-31",
+    "basis": "Explicit owner request in the active Codex task to run a professional whole-site RouteBudget recovery campaign, fix structural issues and improve Italian operator value without errors."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers the go/no-go operator sequence, complete-trip intent ownership, source coverage and product limits. No independent human transport or accounting review is claimed."
+}

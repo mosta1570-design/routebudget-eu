@@ -59,6 +59,8 @@ Per ogni tratta, provare almeno:
 4. itinerario previsto e alternativa realistica;
 5. volume di km e ore leggermente maggiore.
 
+Per lo scenario carburante annota sempre fonte e mese. Il [MASE pubblica prezzi mensili italiani](https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti), utili come confronto datato; il prezzo effettivo dell’impresa resta il dato più pertinente. Lo stress test deve cambiare una variabile riconoscibile, non aggiungere una percentuale generica senza origine.
+
 Se una variazione modesta azzera il margine, la proposta è fragile. Si può rivedere il prezzo, chiarire le esclusioni, chiedere dati mancanti o decidere che la tratta non è coerente con il proprio modello.
 
 ## Esempio di scenario

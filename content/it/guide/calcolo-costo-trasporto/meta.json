@@ -6,8 +6,8 @@
   "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
   "eyebrow": "Guida al costo di tratta",
   "published": "2026-08-01",
-  "modified": "2026-08-23",
-  "reviewed": "2026-08-23",
+  "modified": "2026-08-31",
+  "reviewed": "2026-08-31",
   "primaryKeyword": "calcolo costo trasporto",
   "searchIntent": "informational",
   "topics": [
@@ -84,5 +84,5 @@
   "canonical": "/it/guide/calcolo-costo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Collegati i nuovi strumenti per durata prudenziale e margine, mantenendo il metodo generale proprietario del calcolo completo della tratta."
+  "changeSummary": "Aggiunto un controllo go/no-go basato su dati mancanti, costo completo e scenario avverso per decidere una tratta prima della conferma."
 }

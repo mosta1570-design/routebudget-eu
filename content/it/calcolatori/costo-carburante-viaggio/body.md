@@ -72,6 +72,22 @@ Una stima diventa più utile quando non guardi un solo scenario. Prova almeno du
 
 Nell’esempio, un aumento di 0,10 €/L pesa circa 24,32 € sul viaggio complessivo. Un consumo di 34 L/100 km, a distanza e prezzo invariati, porta i litri a 258,4 e il costo a circa 452,20 €. Questo non prevede il futuro: rende visibile quanto la proposta dipende da un’ipotesi.
 
+## Quanto vale ogni centesimo prima di accettare
+
+Per capire subito se un’offerta è fragile, non serve rifare tutto il preventivo a mente. Dopo aver ottenuto i litri totali, calcola il peso di una variazione del prezzo:
+
+`impatto di 0,01 €/L = litri totali stimati × 0,01 €`
+
+Nell’esempio da 243,2 litri, ogni centesimo al litro cambia il costo di circa **2,43 €**. Cinque centesimi valgono circa 12,16 €; dieci centesimi 24,32 €. Questo indicatore consente tre controlli rapidi:
+
+| Domanda prima della conferma | Controllo |
+| --- | --- |
+| Quanto carburante assorbe il margine disponibile? | confronta litri × variazione con la differenza tra prezzo e costo |
+| Il preventivo resterà valido per più giorni? | annota fonte, data e validità del prezzo usato |
+| Sono previsti rifornimenti in Paesi diversi? | prova prezzi distinti o uno scenario prudente dichiarato |
+
+Il [portale mensile MASE](https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti) e il Weekly Oil Bulletin aiutano a collocare il prezzo nel tempo. Non sostituiscono fattura, sconto o carta carburante dell’impresa. Se la variazione plausibile consuma lo spazio disponibile, il problema non si risolve scegliendo un consumo ottimistico: va rivisto prezzo, validità o criterio di adeguamento.
+
 ## Dal carburante al costo completo della tratta
 
 Il carburante è spesso visibile e facile da aggiornare, ma non deve assorbire tutta l’attenzione. Una tratta sostenibile considera anche:

@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-31-costo-carburante-viaggio",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-31",
+  "decision": "approved",
+  "contentId": "calcolatori/costo-carburante-viaggio",
+  "contentFingerprint": "sha256:0fa8928f8809774a92ee29e921892893d72c28d489f6a79f49db500d4d26ff0a",
+  "artifactFingerprint": "sha256:de26437bc5c3c188b6119a28ed81a3100671babae80b0b51579e5ad4050bcbfe",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-31",
+    "basis": "Explicit owner request in the active Codex task to run a professional whole-site RouteBudget recovery campaign, fix structural issues and improve Italian operator value without errors."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers fuel-cent sensitivity, Italian source coverage, formula consistency and product boundaries. No independent human financial or factual review is claimed."
+}

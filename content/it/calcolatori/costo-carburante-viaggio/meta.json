@@ -6,8 +6,8 @@
   "description": "Inserisci distanza, consumo già noto e prezzo al litro per calcolare litri e costo carburante di andata e ritorno a vuoto.",
   "eyebrow": "Calcolatore carburante viaggio",
   "published": "2026-08-01",
-  "modified": "2026-08-21",
-  "reviewed": "2026-08-21",
+  "modified": "2026-08-31",
+  "reviewed": "2026-08-31",
   "primaryKeyword": "calcolatore costo carburante viaggio",
   "searchIntent": "transactional-informational",
   "topics": [
@@ -32,6 +32,10 @@
     {
       "label": "Commissione europea — Weekly Oil Bulletin",
       "url": "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+    },
+    {
+      "label": "MASE — Prezzi mensili dei carburanti",
+      "url": "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti"
     }
   ],
   "status": "published",
@@ -47,5 +51,5 @@
   "canonical": "/it/calcolatori/costo-carburante-viaggio/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Separato l'intento di calcolo del costo dall'intento informativo sul consumo medio, con input e collegamento alla guida resi espliciti."
+  "changeSummary": "Aggiunta una regola di sensibilità per misurare l'impatto di ogni centesimo al litro e una seconda fonte italiana datata per il confronto del prezzo."
 }

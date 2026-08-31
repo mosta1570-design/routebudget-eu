@@ -85,6 +85,16 @@ Confronta le componenti prima del totale. Se il carburante domina, controlla con
 
 Esegui almeno una prova prudente: aumenta prezzo carburante, ore operative o chilometri a vuoto. La sensibilità non predice il futuro, ma mostra quali ipotesi possono rendere fragile un’offerta.
 
+## Il controllo che trasforma il risultato in una decisione
+
+Dopo il calcolo conserva tre numeri distinti:
+
+1. **costo per km percorso**, utile per capire l’efficienza fisica della missione;
+2. **costo per km carico**, utile per vedere quanto devono recuperare i chilometri venduti;
+3. **prezzo proposto**, che deve coprire il costo completo e il criterio commerciale scelto.
+
+Se il cliente offre un prezzo totale, confrontalo prima con il costo operativo, non con una media €/km trovata online. Se offre una tariffa per km carico, moltiplicala solo per i km a cui si applica e verifica che il ricavo risultante copra anche ritorno, ore e spese fisse. Il [calcolatore di prezzo minimo e margine](/it/calcolatori/prezzo-minimo-margine-tratta/) parte dal costo chiuso e mostra separatamente soglia di copertura, margine sul prezzo e ricarico equivalente.
+
 ## Dal costo km camion alla tariffa proposta
 
 Per calcolare il costo al km, dividi il totale operativo per i chilometri coerenti con la decisione. Per definire quanto chiedere al cliente, parti invece dal costo completo, verifica che nessuna voce sia stata esclusa e applica il criterio di margine scelto. Ricarico sul costo e margine sul prezzo finale non sono equivalenti.

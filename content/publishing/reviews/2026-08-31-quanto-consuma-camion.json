@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-08-31-quanto-consuma-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-08-31",
+  "decision": "approved",
+  "contentId": "guide/quanto-consuma-un-camion",
+  "contentFingerprint": "sha256:1e488b24325b115eb7e652a667152d81c4e5d902d8279318e2344d74967ed384",
+  "artifactFingerprint": "sha256:f59526fa566bf1fb7782325f77e5d3dcf0d0b4f00032fe42a3e3b1f27f13cfc9",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-08-31",
+    "basis": "Explicit owner request in the active Codex task to run a professional whole-site RouteBudget recovery campaign, fix structural issues and improve Italian operator value without errors."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers the reusable consumption record, unit consistency, scenario caveats, source coverage and non-telematics product boundary. No independent human review is claimed."
+}

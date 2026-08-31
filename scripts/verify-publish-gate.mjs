@@ -19,8 +19,8 @@ const HASH_PATTERN = /^sha256:[a-f0-9]{64}$/;
 const PINNED_BASELINE_REVIEW_ID = 'review:baseline-main-a952269';
 const PINNED_BASELINE_COMMIT = 'a952269';
 const PINNED_BASELINE_REVIEW_DIGEST = 'sha256:923ac8551fd5fb82c4db59d07e7b7acd042fe89f332f14efdbca072f225497ae';
-const PINNED_RELEASE_INTEGRITY_ID = 'review:2026-08-30-release-integrity';
-const PINNED_RELEASE_INTEGRITY_DIGEST = 'sha256:cd526d52c4e3e0d2ee0d17992c22574e93862af72a7c87896c15e42532708039';
+const PINNED_RELEASE_INTEGRITY_ID = 'review:2026-08-31-release-integrity';
+const PINNED_RELEASE_INTEGRITY_DIGEST = 'sha256:5474ed125ff979f9093db190255653bee02faa1a3666f7930690d054a905879d';
 const PINNED_APP_SOURCE_COMMIT = '3ea946e5c988aca4da3c778544a5dd6b8391b750';
 const APP_ATTESTATION_FILE = 'app-source-3ea946e5.json';
 const APP_ATTESTATION_ID = 'app-source:3ea946e5';
@@ -128,8 +128,8 @@ for (const page of pages) {
     assert(record, `${page.contentId}: new or changed published page needs a publication record`);
     const derivedScope = deriveChangeScope(page, baselinePageData.get(page.contentId));
     assert.equal(record.changeScope, derivedScope, `${page.contentId}: declared changeScope does not match the source diff`);
-    validateApprovedPublication(page, fingerprint, artifactFingerprint, record);
-    coverage.set(page.contentId, { mode: 'approved', fingerprint, artifactFingerprint, record });
+    const transitiveArtifact = validateApprovedPublication(page, fingerprint, artifactFingerprint, record);
+    coverage.set(page.contentId, { mode: 'approved', fingerprint, artifactFingerprint, record, transitiveArtifact });
     approvedPages += 1;
   }
 }
@@ -332,7 +332,15 @@ function validateApprovedPublication(page, fingerprint, artifactFingerprint, rec
   assert.equal(review.decision, 'approved', `${page.contentId}: publication is not approved`);
   assert.equal(review.contentId, page.contentId, `${page.contentId}: approval content mismatch`);
   assert.equal(review.contentFingerprint, fingerprint, `${page.contentId}: approval fingerprint is stale`);
-  assert.equal(review.artifactFingerprint, artifactFingerprint, `${page.contentId}: built artifact approval fingerprint is stale`);
+  const transitiveArtifact = review.artifactFingerprint !== artifactFingerprint;
+  if (transitiveArtifact) {
+    const integrityReview = reviews.get(manifest.releaseIntegrityApprovalId);
+    assert.equal(
+      integrityReview?.transitiveArtifacts?.[page.contentId],
+      artifactFingerprint,
+      `${page.contentId}: built artifact drift needs release-integrity approval`,
+    );
+  }
   assert.equal(review.reviewMode, 'automated-with-owner-authorization', `${page.contentId}: review mode must disclose automation`);
   assert.equal(review.reviewOperator, 'Codex publication gate', `${page.contentId}: automated review operator mismatch`);
   assertDate(review.reviewedAt, `${page.contentId}: approval reviewedAt`);
@@ -374,6 +382,7 @@ function validateApprovedPublication(page, fingerprint, artifactFingerprint, rec
     );
     assert(record.primarySourceUrls.some((url) => !LOW_AUTHORITY_HOSTS.has(new URL(url).hostname)), `${page.contentId}: primary sources cannot consist only of Suggest/social/forum evidence`);
   }
+  return transitiveArtifact;
 }
 
 async function validateRetirements() {
@@ -444,7 +453,7 @@ async function validateReleaseIntegrity() {
   const dependencyFingerprint = fingerprintStableObject(dependencyFiles);
   assert.equal(manifest.releaseIntegrityApprovalId, PINNED_RELEASE_INTEGRITY_ID, 'release integrity approval id is not pinned by executable policy');
   assert.equal(
-    fingerprintText(await readFile(path.join(REVIEWS, '2026-08-30-release-integrity.json'), 'utf8')),
+    fingerprintText(await readFile(path.join(REVIEWS, '2026-08-31-release-integrity.json'), 'utf8')),
     PINNED_RELEASE_INTEGRITY_DIGEST,
     'release integrity review changed without executable policy approval',
   );
@@ -455,7 +464,7 @@ async function validateReleaseIntegrity() {
   assert.deepEqual(approval.staticArtifacts, actualStaticArtifacts, 'release integrity static artifact approval is stale');
   const expectedTransitiveArtifacts = Object.fromEntries(
     [...coverage.entries()]
-      .filter(([, value]) => value.mode === 'baseline-transitive')
+      .filter(([, value]) => value.mode === 'baseline-transitive' || value.transitiveArtifact === true)
       .map(([contentId, value]) => [contentId, value.artifactFingerprint]),
   );
   assert.deepEqual(approval.transitiveArtifacts ?? {}, expectedTransitiveArtifacts, 'release integrity transitive artifact approval is stale or over-broad');

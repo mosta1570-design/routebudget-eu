@@ -80,6 +80,33 @@ const CTA_ID_BY_INTENT = {
   unlimited: 'continue_unlimited_pro',
 };
 
+const PAGE_DECISION_COPY = {
+  'complete-route-calculation': {
+    prepare: 'Chilometri, consumo, pedaggi, ore, ritorno e margine.',
+    continue: 'Riunisci le voci, confronta gli scenari e prepara il PDF della stima.',
+  },
+  'cost-breakdown': {
+    prepare: 'Distanza, ore, costi del mezzo e spese della missione.',
+    continue: 'Confronta ogni componente senza perdere ritorno e costi indiretti.',
+  },
+  'cost-scenarios': {
+    prepare: 'Costo completo, prezzo proposto e variabili ancora incerte.',
+    continue: 'Confronta soglia, prezzo consigliato e prezzo ideale prima di accettare.',
+  },
+  'fuel-estimate': {
+    prepare: 'Chilometri totali, consumo misurato e prezzo carburante con data.',
+    continue: 'Porta il carburante nel costo completo insieme alle altre voci della missione.',
+  },
+  'local-archive': {
+    prepare: 'Preventivo iniziale e consuntivo dello stesso viaggio.',
+    continue: 'Conserva i calcoli sul dispositivo e riaprili quando cambiano le ipotesi.',
+  },
+  'pdf-quote': {
+    prepare: 'Costi verificati, ipotesi, inclusioni ed esclusioni.',
+    continue: 'Esporta un riepilogo PDF della stima e integra le condizioni commerciali.',
+  },
+};
+
 const config = JSON.parse(await readFile(path.join(CONTENT_ROOT, 'site.json'), 'utf8'));
 const sourceRegistry = JSON.parse(await readFile(path.join(CONTENT_ROOT, 'sources.json'), 'utf8'));
 validateConfig(config);
@@ -419,7 +446,6 @@ ${renderHead({
     <section class="seo-hero">
       <div class="seo-shell">
         ${renderBreadcrumb(page)}
-        <p class="seo-eyebrow">${escapeHtml(page.meta.eyebrow)}</p>
         <h1>${escapeHtml(page.meta.title)}</h1>
         <p class="seo-hero__summary">${escapeHtml(page.meta.description)}</p>
         <div class="seo-meta" aria-label="Informazioni editoriali">
@@ -430,6 +456,7 @@ ${renderHead({
         ${isLanding ? `<div class="seo-hero__store-cta" aria-label="Scarica RouteBudget"><p>Disponibile per iOS e Android.</p>${renderStoreBadges(page.locale, 'complete_trip_app', 'header')}</div>` : ''}
       </div>
     </section>
+    ${renderDecisionStrip(page)}
     ${isCalculator ? renderCalculator(page) : ''}
     <div class="seo-shell article-layout">
       <div class="article-main">
@@ -510,17 +537,16 @@ ${renderHead({
     <section class="seo-hero seo-hero--index">
       <div class="seo-shell">
         <nav class="breadcrumbs" aria-label="Percorso"><a href="${config.basePath}/">RouteBudget</a><span aria-hidden="true">/</span><span aria-current="page">${sectionLabel(section)}</span></nav>
-        <p class="seo-eyebrow">Centro operativo · ${escapeHtml(localeConfig.language)}</p>
         <h1>${escapeHtml(title)}</h1>
         <p class="seo-hero__summary">${escapeHtml(description)}</p>
       </div>
     </section>
+    ${renderHubNavigator(sectionPages, section)}
     <section class="seo-index seo-shell" aria-label="${isGuides ? 'Guide pubblicate' : isCalculators ? 'Calcolatori disponibili' : 'Confronti pubblicati'}">
       ${renderHubEntries(sectionPages, section)}
     </section>
     <section class="seo-shell index-conversion">
       <div>
-        <p class="seo-eyebrow">Quando serve il flusso completo</p>
         <h2>Dalla stima al preventivo, nello stesso calcolo.</h2>
       </div>
       <div>
@@ -559,8 +585,7 @@ function renderHubEntries(sectionPages, section) {
   <ol class="editorial-list">
     ${sorted
       .map(
-        (page, index) => `<li>
-          <span class="editorial-list__number">${String(index + 1).padStart(2, '0')}</span>
+        (page) => `<li>
           <div>
             <p class="editorial-list__type">${page.meta.kind === 'pillar' ? 'Guida pilastro' : page.meta.kind === 'calculator' ? 'Calcolatore' : page.meta.kind === 'comparison' ? 'Confronto operativo' : 'Guida pratica'}</p>
             <h2><a href="${page.urlPath}">${escapeHtml(page.meta.title)}</a></h2>
@@ -583,14 +608,13 @@ function renderGuidePaths(sectionPages) {
   </div>
   <div class="guide-paths">
     ${pillars
-      .map((pillar, pathIndex) => {
+      .map((pillar) => {
         const pillarReference = `guide:${pillar.meta.slug}`;
         const children = guides
           .filter((guide) => guide.meta.pillar === pillarReference)
           .sort((a, b) => a.meta.title.localeCompare(b.meta.title, 'it'));
         return `<section class="guide-path" aria-labelledby="guide-path-${escapeAttr(pillar.meta.slug)}">
           <header class="guide-path__header">
-            <span class="guide-path__number">${String(pathIndex + 1).padStart(2, '0')}</span>
             <div>
               <p class="editorial-list__type">Percorso operativo</p>
               <h2 id="guide-path-${escapeAttr(pillar.meta.slug)}"><a href="${pillar.urlPath}">${escapeHtml(pillar.meta.title)}</a></h2>
@@ -601,8 +625,7 @@ function renderGuidePaths(sectionPages) {
           <ol class="guide-path__list">
             ${children
               .map(
-                (guide, index) => `<li>
-                  <span>${String(index + 1).padStart(2, '0')}</span>
+                (guide) => `<li>
                   <div><h3><a href="${guide.urlPath}">${escapeHtml(guide.meta.title)}</a></h3><p>${escapeHtml(guide.meta.description)}</p></div>
                   <a href="${guide.urlPath}" aria-label="Apri: ${escapeAttr(guide.meta.title)}"><span aria-hidden="true">↗</span></a>
                 </li>`,
@@ -664,9 +687,62 @@ function renderHeader(locale) {
         ${pages.some((page) => page.locale === locale && page.section === 'confronti') ? `<a href="${hubPath(locale, 'confronti')}">Confronti</a>` : ''}
         <a href="${appLandingPath(locale)}">App</a>
       </nav>
-      <a class="seo-header__app" href="${appLandingPath(locale)}">Scopri l’app <span aria-hidden="true">→</span></a>
+      <a class="seo-header__app" href="${appLandingPath(locale)}">Scarica RouteBudget</a>
     </div>
   </header>`;
+}
+
+function renderDecisionStrip(page) {
+  const copy = PAGE_DECISION_COPY[page.meta.appFeature];
+  const outcome = page.meta.kind === 'calculator'
+    ? 'Una stima immediata con i dati inseriti da te.'
+    : page.meta.kind === 'pillar'
+      ? 'Un metodo completo per una decisione di tratta.'
+      : page.meta.kind === 'landing'
+        ? 'Un controllo chiaro delle funzioni e dei limiti del prodotto.'
+        : 'Un passaggio operativo da applicare al prossimo preventivo.';
+  const sourceLabel = page.meta.sources.length === 1 ? '1 fonte verificabile' : `${page.meta.sources.length} fonti verificabili`;
+  return `<section class="decision-strip" aria-label="Come usare questa risorsa">
+    <div class="seo-shell decision-strip__inner">
+      <div><span>Risultato</span><strong>${escapeHtml(outcome)}</strong><small>${sourceLabel} · revisione ${formatDate(page.meta.reviewed)}</small></div>
+      <div><span>Prepara</span><strong>${escapeHtml(copy.prepare)}</strong></div>
+      <div><span>Continua nell’app</span><strong>${escapeHtml(copy.continue)}</strong></div>
+    </div>
+  </section>`;
+}
+
+function renderHubNavigator(sectionPages, section) {
+  const bySlug = new Map(sectionPages.map((page) => [page.meta.slug, page]));
+  const definitions = section === 'calcolatori'
+    ? [
+        ['costo-carburante-viaggio', 'Calcolare litri e costo gasolio', 'Hai già km, consumo e prezzo al litro.'],
+        ['costo-chilometrico-camion', 'Trovare il costo reale per km', 'Vuoi includere vuoto, autista, pedaggi, usura e costi fissi.'],
+        ['tempi-guida-camion', 'Stimare durata e costo autista', 'Devi rendere visibili blocchi di guida, pause e altre attività.'],
+        ['prezzo-minimo-margine-tratta', 'Decidere il prezzo minimo', 'Conosci il costo e vuoi verificare soglia, margine e ricarico.'],
+        ['fuel-surcharge-autotrasporto', 'Aggiornare la quota carburante', 'Devi confrontare prezzo base e prezzo corrente senza doppio conteggio.'],
+        ['quanto-costa-ricaricare-furgone-elettrico', 'Stimare una ricarica del furgone', 'Conosci capacità, consumo elettrico e prezzo dell’energia.'],
+      ]
+    : section === 'guide'
+      ? [
+          ['calcolo-costo-trasporto', 'Accettare o rifiutare una tratta', 'Costruisci il costo della missione prima di discutere il prezzo.'],
+          ['costi-autotrasporto', 'Capire dove sparisce il margine', 'Separa costi fissi, variabili, indiretti e costo del fermo.'],
+          ['preventivo-trasporto', 'Preparare un’offerta difendibile', 'Trasforma costo e condizioni in un preventivo leggibile.'],
+          ['proteggere-margine-tratta', 'Stressare il prezzo prima della conferma', 'Prova carburante, attese, ritorno a vuoto e scenari meno favorevoli.'],
+        ]
+      : [];
+  const entries = definitions
+    .map(([slug, title, description]) => ({ page: bySlug.get(slug), title, description }))
+    .filter(({ page }) => page);
+  if (entries.length === 0) return '';
+  return `<section class="hub-navigator seo-shell" aria-labelledby="hub-navigator-title">
+    <div class="hub-navigator__heading">
+      <h2 id="hub-navigator-title">Parti dalla decisione che devi prendere.</h2>
+      <p>Scegli il problema operativo, poi usa dati della tua impresa. Nessuna media viene trasformata in tariffa universale.</p>
+    </div>
+    <ul>
+      ${entries.map(({ page, title, description }) => `<li><a href="${page.urlPath}"><span><strong>${escapeHtml(title)}</strong><small>${escapeHtml(description)}</small></span><b>Apri</b></a></li>`).join('\n')}
+    </ul>
+  </section>`;
 }
 
 function renderFooter(locale) {
@@ -786,16 +862,14 @@ function renderRelated(related) {
   return `<section class="related-section">
     <div class="seo-shell">
       <div class="related-section__heading">
-        <p class="seo-eyebrow">Continua il calcolo</p>
-        <h2>Passi collegati.</h2>
+        <h2>Prossimo controllo.</h2>
       </div>
       <div class="related-links">
         ${related
           .map(
-            (page, index) => `<a href="${page.urlPath}">
-              <span>${String(index + 1).padStart(2, '0')}</span>
+            (page) => `<a href="${page.urlPath}">
               <div><small>${page.section === 'calcolatori' ? 'Calcolatore' : page.section === 'confronti' ? 'Confronto operativo' : page.section === 'landing' ? 'App RouteBudget' : page.meta.kind === 'pillar' ? 'Guida pilastro' : 'Guida pratica'}</small><strong>${escapeHtml(page.meta.title)}</strong></div>
-              <b aria-hidden="true">↗</b>
+              <b>Apri</b>
             </a>`,
           )
           .join('\n')}
