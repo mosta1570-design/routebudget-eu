@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://routebudget.eu/sitemap.xml
+Sitemap: https://routebudget.eu/sitemaps/core.xml
+Sitemap: https://routebudget.eu/sitemaps/articles-it.xml
+Sitemap: https://routebudget.eu/sitemaps/calculators-it.xml
+Sitemap: https://routebudget.eu/sitemaps/legal.xml
