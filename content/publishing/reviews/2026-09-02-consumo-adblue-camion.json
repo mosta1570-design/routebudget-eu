@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-02-consumo-adblue-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-02",
+  "decision": "approved",
+  "contentId": "guide/consumo-adblue-camion",
+  "contentFingerprint": "sha256:cb285c9cdb3c28714ad6cde39bbad9373e2f5a00e1c1be1d10c75364c9a3dfd2",
+  "artifactFingerprint": "sha256:3e5e1f9e111573e36e4db13ec7c4d49b6bfba8ac56ef3a2658e5c6840ff968bf",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-02",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget, strengthen useful Italian-market pages and publish three rare evidence-led articles."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers same-period AdBlue measurement, ratio arithmetic, ACEA range limits, worked trip cost and the app's non-automatic AdBlue boundary. No independent human review is claimed."
+}

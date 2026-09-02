@@ -1,0 +1,74 @@
+{
+  "slug": "costo-leasing-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo leasing camion: canone, anticipo e quota per tratta",
+  "mobileH1": "Costo leasing camion per tratta",
+  "description": "Come leggere anticipo, canoni, spese e riscatto del leasing camion e trasformarli in una quota gestionale per km senza doppio conteggio.",
+  "eyebrow": "Costi fissi · Leasing",
+  "published": "2026-09-02",
+  "modified": "2026-09-02",
+  "reviewed": "2026-09-02",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo leasing camion",
+  "secondaryKeywords": [
+    "leasing camion costo mensile",
+    "quota leasing camion per km",
+    "anticipo e riscatto leasing camion",
+    "canone camion costo tratta"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "leasing finanziario",
+    "quota fissa del mezzo",
+    "anticipo canoni e riscatto",
+    "costo per chilometro",
+    "cassa e costo gestionale"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "guide:costo-assicurazione-camion",
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "costo-leasing-camion",
+  "canonical": "/it/guide/costo-leasing-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-02",
+      "supports": "Costo del veicolo e costi di esercizio come componenti da attribuire in modo coerente; tabelle indicative e non offerta di finanziamento."
+    },
+    {
+      "label": "Banca d'Italia — Glossario della Centrale dei rischi",
+      "url": "https://www.bancaditalia.it/compiti/vigilanza/normativa/archivio-norme/circolari/c139/2025.02.13/Circolare-139-21-aggiornamento.pdf",
+      "publishedOrUpdated": "21° aggiornamento, febbraio 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-09-02",
+      "supports": "Definizione di leasing finanziario: bene concesso contro canone e facoltà di acquisto finale a prezzo prestabilito; non determina il trattamento contabile del singolo contratto."
+    },
+    {
+      "label": "ACI — Metodologia dei costi chilometrici",
+      "url": "https://www.aci.it/fileadmin/documenti/servizi_online/Costi_chilometrici/Metodologia_2018.pdf",
+      "publishedOrUpdated": "Metodologia 2018, consultata il 2 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-02",
+      "supports": "Separazione fra costi annui non proporzionali alla percorrenza e costi proporzionali, con ammortamento del capitale nel costo d'uso del veicolo."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: lettura del contratto, distinzione cassa-costo, modello anticipo-canoni-riscatto ed esempio per km con controllo dei doppioni."
+}

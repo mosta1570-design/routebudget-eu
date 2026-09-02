@@ -1,0 +1,134 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-02",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "authenticated Google Search Console diagnosis",
+    "Google Suggest hl=it gl=it",
+    "Italian Google SERP review",
+    "official Italian and European sources"
+  ],
+  "method": {
+    "interpretation": "Search Console identifies a site-wide ranking reassessment beginning 19 August. Suggest validates exact Italian wording, while official sources define the cost components. No signal is represented as monthly search volume, CPC, difficulty or ranking forecast.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "Volume remains null. Publication requires distinct ownership, a ricalculable operational asset, Italian wording, primary-source support and truthful product boundaries."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-09-02",
+    "dropComparison": "2026-08-19/2026-09-01 versus 2026-08-05/2026-08-18",
+    "observations": [
+      "Clicks fell from 19 to 1 and impressions from 1570 to 105; average position worsened from 14.6 to 27.7.",
+      "The loss begins on 19 August, one day after the official August 2026 spam update started, and affects unrelated query families at once.",
+      "Manual Actions and Security Issues report no issues; current sitemaps are successful and inspected priority URLs are crawlable, fetched and self-canonical.",
+      "The Links report shows zero detected external links, so authority remains a confirmed structural weakness independent of sitemap health."
+    ],
+    "limitations": [
+      "Timing and scope support an algorithmic reassessment diagnosis but do not expose Google's private page or site signals.",
+      "Search Console links and indexing reports can lag recent releases.",
+      "Publication, sitemap submission and indexing requests cannot guarantee recovery or rankings."
+    ]
+  },
+  "rejectedCandidates": [
+    {
+      "query": "credito imposta gasolio autotrasporto 2026",
+      "reason": "Current Italian demand is strong, but the job is fiscal, deadline-sensitive and outside RouteBudget's verified features; publishing it would weaken topical and product fit."
+    },
+    {
+      "query": "supplemento carburante autotrasporto 2026",
+      "reason": "Rejected as a new URL because the existing fuel-surcharge calculator and fuel-adjustment clause guide already own formula and contractual intent."
+    },
+    {
+      "query": "indennità trasferta autista camion",
+      "reason": "Rejected as a new URL because the driver-hourly-cost guide already owns employer cost and the app has no separate payroll or daily-allowance field."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "demand:round-16-costo-assicurazione-camion",
+      "primaryKeyword": "costo assicurazione camion",
+      "canonical": "/it/guide/costo-assicurazione-camion/",
+      "query": "costo assicurazione camion",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20assicurazione%20camion",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "costo assicurazione camion",
+        "costo assicurazione camion patente c",
+        "costo assicurazione camion 3 assi",
+        "costo medio assicurazione camion"
+      ],
+      "rawResponse": "[\"costo assicurazione camion\",[\"costo assicurazione camion\",\"costo assicurazione camion patente c\",\"costo assicurazione camion 3 assi\",\"costo medio assicurazione camion\"],[],{\"google:suggestsubtypes\":[[512],[22,30],[22,30],[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-current-mit-cost-component",
+      "signalNote": "Exact Italian wording and three related phrasings are returned. MIT specifically updated the insurance component in March 2026; ACI includes RCA in total vehicle-use cost.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns policy inventory, period matching and insurance-only allocation per kilometre or day. General cost pages retain classification and whole-vehicle totals.",
+      "productFit": "The verified cost breakdown and the web cost-per-kilometre calculator use a documented aggregate fixed-cost share before margin scenarios are applied.",
+      "productBoundary": "RouteBudget does not quote insurance, read policies, price risk, verify coverage or provide a dedicated native-app insurance field.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20assicurazione%20camion",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://web.aci.it/servizi/calcolo-costi-chilometrici/",
+        "https://www.ivass.it/consumatori/rc-auto/assicurazione-veicoli-italia/index.html"
+      ]
+    },
+    {
+      "id": "demand:round-16-costo-leasing-camion",
+      "primaryKeyword": "costo leasing camion",
+      "canonical": "/it/guide/costo-leasing-camion/",
+      "query": "costo leasing camion",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20leasing%20camion",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "costo leasing camion"
+      ],
+      "rawResponse": "[\"costo leasing camion\",[\"costo leasing camion\"],[],{\"google:suggestsubtypes\":[[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-italian-contract-and-cost-method",
+      "signalNote": "Google Suggest returns the exact Italian wording. Banca d'Italia defines the contract structure, while MIT and ACI support vehicle-cost allocation without producing a universal offer.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns contract cash-flow capture, managerial allocation and double-count control for leasing. Startup, fixed-versus-variable and cost-per-kilometre pages keep their broader decisions.",
+      "productFit": "A validated leasing share completes fixed costs before the verified cost breakdown, cost scenarios and price-margin decision are used.",
+      "productBoundary": "RouteBudget does not compare finance offers, calculate accounting or tax treatment, read contracts, forecast rates or expose a dedicated native-app leasing field.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20leasing%20camion",
+        "https://www.bancaditalia.it/compiti/vigilanza/normativa/archivio-norme/circolari/c139/2025.02.13/Circolare-139-21-aggiornamento.pdf",
+        "https://www.aci.it/fileadmin/documenti/servizi_online/Costi_chilometrici/Metodologia_2018.pdf",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "id": "demand:round-16-consumo-adblue-camion",
+      "primaryKeyword": "consumo AdBlue camion",
+      "canonical": "/it/guide/consumo-adblue-camion/",
+      "query": "consumo adblue camion",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=consumo%20adblue%20camion",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "consumo adblue camion",
+        "consumo medio adblue camion"
+      ],
+      "rawResponse": "[\"consumo adblue camion\",[\"consumo adblue camion\",\"consumo medio adblue camion\"],[],{\"google:suggestsubtypes\":[[512],[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-european-technical-reference",
+      "signalNote": "Exact Italian wording and the average-consumption variant are returned. ACEA supplies only a 2–6% orientation, making an original same-period fleet register more useful than copied litres per 1000 km.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns AdBlue-to-diesel measurement, litres and trip cost. The truck-consumption guide owns diesel l/100 km, and the fuel calculator owns diesel litres and cost only.",
+      "productFit": "The method starts from RouteBudget's verified fuel estimate and adds a separately documented operating cost before the complete trip price is judged.",
+      "productBoundary": "RouteBudget does not automatically calculate AdBlue, diagnose SCR systems, certify fluid quality, predict failures or expose an AdBlue line in the native PDF.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=consumo%20adblue%20camion",
+        "https://www.acea.auto/fact/diesel-exhaust-fluid-adblue/",
+        "https://www.volkswagen-veicolicommerciali.it/it/service/servizi-e-assistenza/ricambi-oli-motore-fluidi/liquido-adblue.html",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    }
+  ]
+}

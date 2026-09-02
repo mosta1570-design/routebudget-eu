@@ -6,8 +6,8 @@
   "description": "Calcola costo totale, costo per km percorso e costo per km carico con carburante, pedaggi, autista, usura, costi fissi e ritorno a vuoto.",
   "eyebrow": "Calcolatore costo per km",
   "published": "2026-08-01",
-  "modified": "2026-08-31",
-  "reviewed": "2026-08-31",
+  "modified": "2026-09-02",
+  "reviewed": "2026-09-02",
   "primaryKeyword": "costo km camion",
   "searchIntent": "transactional-informational",
   "topics": [
@@ -21,6 +21,8 @@
     "guide:calcolo-pedaggio-camion",
     "guide:costo-furgone-per-km",
     "guide:costi-fissi-variabili-autotrasporto",
+    "guide:costo-assicurazione-camion",
+    "guide:costo-leasing-camion",
     "guide:calcolo-costo-trasporto",
     "calcolatori:costo-carburante-viaggio",
     "calcolatori:fuel-surcharge-autotrasporto",
@@ -59,5 +61,5 @@
   "canonical": "/it/calcolatori/costo-chilometrico-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunto il passaggio decisionale dal costo per km al prezzo minimo, separando copertura operativa, margine e condizioni commerciali."
+  "changeSummary": "Mantenuta la distinzione costo-prezzo e aggiunti percorsi documentati per costruire assicurazione e leasing nella quota fissa senza doppioni."
 }

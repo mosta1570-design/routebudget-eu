@@ -58,6 +58,8 @@ L’usura per chilometro può comprendere manutenzione, pneumatici e una riserva
 
 I due campi sono facoltativi perché il calcolatore non inventa valori medi. Lasciarli a zero significa escluderli, non dimostrare che il costo non esiste.
 
+Costruisci la quota prima dell’inserimento: la guida sul [costo assicurazione camion](/it/guide/costo-assicurazione-camion/) usa premi e percorrenza reali; quella sul [costo leasing camion](/it/guide/costo-leasing-camion/) controlla anticipo, canoni, spese e riscatto. Il calcolatore riceve il totale in €/km, ma non decide quali voci appartengono al tuo contratto.
+
 ## Esempio verificabile
 
 Considera queste ipotesi illustrative:

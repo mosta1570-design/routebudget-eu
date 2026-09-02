@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-02-quanto-consuma-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-02",
+  "decision": "approved",
+  "contentId": "guide/quanto-consuma-un-camion",
+  "contentFingerprint": "sha256:15b1caec48c66afc1b5a4cfc6335311fb4378093f5179e93f632a26289d1a852",
+  "artifactFingerprint": "sha256:c526100ba3f9c1a5b304fd6ace505ddac8ddab621127c1718a6d21e637774648",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-02",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget, strengthen useful Italian-market pages and publish three rare evidence-led articles."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers the new boundary link between diesel consumption and separately measured AdBlue plus metadata freshness. Existing calculations and caveats remain intact."
+}

@@ -45,6 +45,8 @@ Con dati di bordo o telematica il principio non cambia. Conviene conservare alme
 
 L'AdBlue e l'energia delle attrezzature non vanno sommati ai litri di gasolio. Restano costi operativi, ma richiedono una riga distinta per non alterare il consumo del motore.
 
+Per trasformare quella riga in litri e costo della missione, usa il metodo dedicato al [consumo AdBlue del camion](/it/guide/consumo-adblue-camion/): abbina AdBlue e gasolio sullo stesso intervallo, ricava il rapporto reale e non attribuire all’app un calcolo automatico che non esegue.
+
 ## Scheda minima per costruire un consumo utilizzabile
 
 Il dato diventa utile quando puoi ricostruire da quale lavoro proviene. Per ogni rilevazione conserva una riga con campi comparabili, senza affidarti alla memoria dell’autista o al solo totale della carta carburante.

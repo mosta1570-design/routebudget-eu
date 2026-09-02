@@ -1,0 +1,74 @@
+{
+  "slug": "costo-assicurazione-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo assicurazione camion: quota per km senza medie inventate",
+  "mobileH1": "Costo assicurazione camion per km",
+  "description": "Metodo pratico per trasformare i premi assicurativi reali del camion in una quota per km o per giornata, senza doppioni nel costo della tratta.",
+  "eyebrow": "Costi fissi · Assicurazione",
+  "published": "2026-09-02",
+  "modified": "2026-09-02",
+  "reviewed": "2026-09-02",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo assicurazione camion",
+  "secondaryKeywords": [
+    "costo medio assicurazione camion",
+    "costo assicurazione camion 3 assi",
+    "assicurazione camion per km",
+    "quota assicurazione autotrasporto"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "premio assicurativo",
+    "quota fissa per chilometro",
+    "coperture del mezzo",
+    "costo della tratta",
+    "doppio conteggio"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costi-fissi-variabili-autotrasporto",
+    "guide:costo-leasing-camion",
+    "calcolatori:costo-chilometrico-camion",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "costo-assicurazione-camion",
+  "canonical": "/it/guide/costo-assicurazione-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-02",
+      "supports": "Assicurazione come componente distinta dei costi di esercizio dell'autotrasporto e aggiornamento specifico della voce a marzo 2026; valori indicativi, non preventivo assicurativo."
+    },
+    {
+      "label": "ACI — Calcolo dei costi chilometrici",
+      "url": "https://web.aci.it/servizi/calcolo-costi-chilometrici/",
+      "publishedOrUpdated": "Servizio corrente consultato il 2 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-02",
+      "supports": "Assicurazione RCA e ammortamento come componenti del costo totale d'uso del veicolo; disponibilità di costi chilometrici per autocarri su richiesta."
+    },
+    {
+      "label": "IVASS — Assicurazione R.C. veicoli in Italia",
+      "url": "https://www.ivass.it/consumatori/rc-auto/assicurazione-veicoli-italia/index.html",
+      "publishedOrUpdated": "Pagina corrente consultata il 2 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-02",
+      "supports": "Elementi del contratto RC, attestato di rischio e condizioni che impediscono di trattare un premio medio trovato online come costo del proprio mezzo."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: scheda polizze, perimetro delle coperture, due denominatori operativi ed esempio ricalcolabile per attribuire il premio alla tratta senza doppioni."
+}
