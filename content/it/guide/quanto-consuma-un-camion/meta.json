@@ -7,8 +7,8 @@
   "description": "Come misurare il consumo medio reale di un camion in l/100 km, separare i profili di lavoro e usare il dato in una tratta senza medie ingannevoli.",
   "eyebrow": "Consumo camion · Metodo operativo",
   "published": "2026-08-11",
-  "modified": "2026-08-31",
-  "reviewed": "2026-08-31",
+  "modified": "2026-09-02",
+  "reviewed": "2026-09-02",
   "primaryKeyword": "quanto consuma un camion",
   "searchIntent": "informational",
   "topics": [
@@ -21,6 +21,7 @@
     "guide:calcolo-costo-trasporto",
     "guide:calcolare-carburante-pedaggi-autista",
     "guide:costi-fissi-variabili-autotrasporto",
+    "guide:consumo-adblue-camion",
     "calcolatori:costo-carburante-viaggio"
   ],
   "calculatorId": null,
@@ -55,5 +56,5 @@
   "canonical": "/it/guide/quanto-consuma-un-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunta una scheda di rilevazione per separare profili di missione e impedire che una media di flotta non confrontabile entri nel preventivo."
+  "changeSummary": "Mantenuta la scheda di rilevazione e aggiunto il percorso separato AdBlue-gasolio per evitare che fluidi diversi alterino il consumo o vengano contati due volte."
 }

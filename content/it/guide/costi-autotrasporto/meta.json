@@ -6,8 +6,8 @@
   "description": "Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.",
   "eyebrow": "Economia dell’autotrasporto",
   "published": "2026-08-01",
-  "modified": "2026-08-23",
-  "reviewed": "2026-08-23",
+  "modified": "2026-09-02",
+  "reviewed": "2026-09-02",
   "primaryKeyword": "costi autotrasporto",
   "searchIntent": "informational",
   "topics": [
@@ -24,6 +24,9 @@
     "guide:costo-furgone-per-km",
     "guide:tachigrafo-furgoni-2026",
     "guide:tabelle-costi-autotrasporto-mit-2026",
+    "guide:costo-assicurazione-camion",
+    "guide:costo-leasing-camion",
+    "guide:consumo-adblue-camion",
     "guide:costo-orario-autista-camion",
     "guide:tempi-attesa-carico-scarico-autotrasporto",
     "guide:usura-manutenzione-camion",
@@ -70,5 +73,5 @@
   "canonical": "/it/guide/costi-autotrasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Collegata la nuova stima transazionale N1 alla mappa generale dei costi, lasciando diesel, elettrico e singola missione al calcolatore dedicato."
+  "changeSummary": "Rafforzata la mappa dei costi con percorsi contestuali verso assicurazione, leasing e AdBlue, mantenendo separati costi fissi, consumo e doppio conteggio."
 }

@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-02-costo-assicurazione-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-02",
+  "decision": "approved",
+  "contentId": "guide/costo-assicurazione-camion",
+  "contentFingerprint": "sha256:9e725a5a806171734d7a2ab930bfbc22f2a44e83c515a19b4fdf17c51a609d69",
+  "artifactFingerprint": "sha256:f0137af4a49bc8e9f79a66c3a6f92de9576deb5f8d79f5f7a328a71b326e87d4",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-02",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget, strengthen useful Italian-market pages and publish three rare evidence-led articles."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers policy-period allocation, per-kilometre arithmetic, no-average safeguards, official sources and the verified fixed-cost product boundary. No independent human review is claimed."
+}

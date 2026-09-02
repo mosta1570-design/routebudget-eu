@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-08-31-release-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-02-release-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
     "/it/calcolatori/": "sha256:9512b7135db1821934acd3f6a1109a484c85178ee4711e7efbee25d7a4e6186d",
-    "/it/guide/": "sha256:1277aa19482a1296ab7315d9b10c096800ad561858a01808b07f896a2872b90d",
+    "/it/guide/": "sha256:dae170ae9ad0b0a6bad824a3209e2fab07009b12c44df8a79e72a0c1b9be7274",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
     "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
   },
@@ -30,12 +30,14 @@
       "contentId": "guide/costi-autotrasporto",
       "canonical": "/it/guide/costi-autotrasporto/",
       "audienceMarket": "IT",
-      "changeScope": "metadata-or-links",
+      "changeScope": "substantive-update",
       "intentOwner": "costi autotrasporto",
       "demandEvidenceId": "demand:maintenance-costi-autotrasporto",
-      "approvalId": "review:2026-08-23-costi-autotrasporto",
+      "approvalId": "review:2026-09-02-costi-autotrasporto",
       "productProofIds": ["cost-breakdown"],
-      "primarySourceUrls": []
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
     },
     {
       "contentId": "guide/costo-furgone-per-km",
@@ -93,7 +95,7 @@
       "changeScope": "substantive-update",
       "intentOwner": "quanto consuma un camion",
       "demandEvidenceId": "demand:recovery-quanto-consuma-camion-20260831",
-      "approvalId": "review:2026-08-31-quanto-consuma-camion",
+      "approvalId": "review:2026-09-02-quanto-consuma-camion",
       "productProofIds": ["fuel-estimate"],
       "primarySourceUrls": [
         "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
@@ -160,7 +162,7 @@
       "changeScope": "substantive-update",
       "intentOwner": "costo km camion",
       "demandEvidenceId": "demand:recovery-costo-km-camion-20260831",
-      "approvalId": "review:2026-08-31-costo-chilometrico-camion",
+      "approvalId": "review:2026-09-02-costo-chilometrico-camion",
       "productProofIds": ["cost-breakdown"],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
@@ -336,6 +338,51 @@
       "approvalId": "review:2026-08-30-preventivo-consuntivo-viaggio-camion",
       "productProofIds": ["local-archive", "cost-scenarios", "pdf-quote"],
       "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "contentId": "guide/costo-assicurazione-camion",
+      "canonical": "/it/guide/costo-assicurazione-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "costo assicurazione camion",
+      "demandEvidenceId": "demand:round-16-costo-assicurazione-camion",
+      "approvalId": "review:2026-09-02-costo-assicurazione-camion",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+        "https://web.aci.it/servizi/calcolo-costi-chilometrici/",
+        "https://www.ivass.it/consumatori/rc-auto/assicurazione-veicoli-italia/index.html"
+      ]
+    },
+    {
+      "contentId": "guide/costo-leasing-camion",
+      "canonical": "/it/guide/costo-leasing-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "costo leasing camion",
+      "demandEvidenceId": "demand:round-16-costo-leasing-camion",
+      "approvalId": "review:2026-09-02-costo-leasing-camion",
+      "productProofIds": ["cost-breakdown"],
+      "primarySourceUrls": [
+        "https://www.bancaditalia.it/compiti/vigilanza/normativa/archivio-norme/circolari/c139/2025.02.13/Circolare-139-21-aggiornamento.pdf",
+        "https://www.aci.it/fileadmin/documenti/servizi_online/Costi_chilometrici/Metodologia_2018.pdf",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "contentId": "guide/consumo-adblue-camion",
+      "canonical": "/it/guide/consumo-adblue-camion/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "consumo AdBlue camion",
+      "demandEvidenceId": "demand:round-16-consumo-adblue-camion",
+      "approvalId": "review:2026-09-02-consumo-adblue-camion",
+      "productProofIds": ["fuel-estimate"],
+      "primarySourceUrls": [
+        "https://www.acea.auto/fact/diesel-exhaust-fluid-adblue/",
+        "https://www.volkswagen-veicolicommerciali.it/it/service/servizi-e-assistenza/ricambi-oli-motore-fluidi/liquido-adblue.html",
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
     }

@@ -1,0 +1,74 @@
+{
+  "slug": "consumo-adblue-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Consumo AdBlue camion: litri, costo viaggio e dato reale",
+  "mobileH1": "Consumo AdBlue camion e costo viaggio",
+  "description": "Come misurare il consumo AdBlue del camion rispetto al gasolio, stimare litri e costo della tratta e sostituire le percentuali generiche con dati aziendali.",
+  "eyebrow": "Carburante · Costo accessorio",
+  "published": "2026-09-02",
+  "modified": "2026-09-02",
+  "reviewed": "2026-09-02",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "consumo AdBlue camion",
+  "secondaryKeywords": [
+    "consumo medio AdBlue camion",
+    "litri AdBlue per 1000 km camion",
+    "costo AdBlue viaggio camion",
+    "rapporto AdBlue gasolio camion"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "consumo AdBlue",
+    "rapporto con il gasolio",
+    "costo della tratta",
+    "registro rifornimenti",
+    "scenario di consumo"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:quanto-consuma-un-camion",
+    "guide:prezzo-gasolio-autotrasporto-preventivo",
+    "calcolatori:costo-carburante-viaggio",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-carburante-viaggio",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "fuel-estimate",
+  "translationGroup": "consumo-adblue-camion",
+  "canonical": "/it/guide/consumo-adblue-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "ACEA — Diesel exhaust fluid, AdBlue",
+      "url": "https://www.acea.auto/fact/diesel-exhaust-fluid-adblue/",
+      "publishedOrUpdated": "Scheda tecnica corrente consultata il 2 settembre 2026",
+      "geography": "Unione europea",
+      "accessedAt": "2026-09-02",
+      "supports": "Funzione dell'AdBlue nei sistemi SCR e intervallo orientativo del 2–6% del volume di gasolio; non previsione per un singolo camion."
+    },
+    {
+      "label": "Volkswagen Veicoli Commerciali — AdBlue",
+      "url": "https://www.volkswagen-veicolicommerciali.it/it/service/servizi-e-assistenza/ricambi-oli-motore-fluidi/liquido-adblue.html",
+      "publishedOrUpdated": "Pagina tecnica corrente consultata il 2 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-02",
+      "supports": "Dipendenza del consumo da stile di guida, temperatura di esercizio e temperatura ambiente; supporta l'uso del dato reale del mezzo."
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-02",
+      "supports": "Quadro italiano corrente delle componenti di costo dell'autotrasporto; riferimento indicativo, non prezzo AdBlue live."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: registro abbinato gasolio-AdBlue, rapporto misurato, esempio per missione e scenari 2–6% con chiaro limite della funzione app."
+}

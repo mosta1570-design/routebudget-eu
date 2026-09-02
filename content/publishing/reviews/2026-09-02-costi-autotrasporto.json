@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-02-costi-autotrasporto",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-02",
+  "decision": "approved",
+  "contentId": "guide/costi-autotrasporto",
+  "contentFingerprint": "sha256:b0786ac2a4e518697bb18fb313066f02197b066f14a4d7d8f13ec892dc84ac1a",
+  "artifactFingerprint": "sha256:666a14c503e013a4e97279bb15fbc66a0aa1f0f231f83014e5bafecf9525e311",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-02",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget, strengthen useful Italian-market pages and publish three rare evidence-led articles."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers new contextual links to insurance, leasing and AdBlue cost methods plus metadata freshness. Existing cost taxonomy and product boundaries remain intact."
+}

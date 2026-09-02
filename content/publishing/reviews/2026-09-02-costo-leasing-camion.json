@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-02-costo-leasing-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-02",
+  "decision": "approved",
+  "contentId": "guide/costo-leasing-camion",
+  "contentFingerprint": "sha256:c8f74f7c8564a6d0d1a0955ac618cb3d18380c46609c92388e1d28f90aa57e72",
+  "artifactFingerprint": "sha256:282090a1f508be4f2701cc50ee4e61fadb8a031a902dbc0fc811f35728a20fef",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-02",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget, strengthen useful Italian-market pages and publish three rare evidence-led articles."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers contract cash-flow capture, managerial allocation, double-count controls, worked arithmetic and truthful financing boundaries. No independent human review is claimed."
+}

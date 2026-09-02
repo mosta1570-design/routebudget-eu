@@ -35,6 +35,8 @@ Per trasformare il totale annuale in una quota utile alla singola tratta serve u
 
 Un’alternativa è calcolare un costo fisso per giornata disponibile. Questo metodo può essere adatto a lavori in cui il tempo di occupazione del mezzo pesa più della distanza. L’importante è non applicare contemporaneamente due quote che coprono la stessa spesa.
 
+Per due voci spesso nascoste nel totale, usa schede separate: il [costo assicurazione del camion](/it/guide/costo-assicurazione-camion/) parte dai premi reali e il [costo leasing del camion](/it/guide/costo-leasing-camion/) riconcilia anticipo, canoni, spese e riscatto. Solo dopo confluiscono in una quota fissa, senza duplicare polizza, ammortamento o servizi già inclusi.
+
 ## Carburante: la voce più visibile, non la più semplice
 
 Il carburante varia con distanza, consumo e prezzo al litro. Per seguirlo bene servono almeno tre dati separati:
@@ -52,6 +54,8 @@ Per i veicoli N1, la guida su [quanto consuma un furgone](/it/guide/quanto-consu
 Per il mezzo pesante, il metodo su [quanto consuma un camion](/it/guide/quanto-consuma-un-camion/) mostra come costruire un dato misurato per configurazione e missione anziché usare una media senza contesto.
 
 Quando il rapporto prevede un confronto fra prezzo base e prezzo successivo, il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) può isolare l’adeguamento. Non sostituisce la misurazione dei litri o il costo carburante reale.
+
+Se il mezzo usa SCR, registra anche il [consumo AdBlue del camion](/it/guide/consumo-adblue-camion/) in una riga distinta: rapportarlo al gasolio osservato evita di nasconderlo nella manutenzione o di applicare una percentuale due volte.
 
 ## Pneumatici, manutenzione e usura
 

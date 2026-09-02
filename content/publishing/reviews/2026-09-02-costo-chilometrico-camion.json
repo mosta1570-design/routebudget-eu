@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-02-costo-chilometrico-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-02",
+  "decision": "approved",
+  "contentId": "calcolatori/costo-chilometrico-camion",
+  "contentFingerprint": "sha256:4e6e75271be1e71e803666ab9fd046cca2db46d38b1d938cfe8cb20c5f3691e4",
+  "artifactFingerprint": "sha256:d1482176c300d79022447f784856cc971636a23d12950b03dbe56fcc6215a8cf",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-02",
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget, strengthen useful Italian-market pages and publish three rare evidence-led articles."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers new inputs for insurance and leasing allocations, internal-link context and metadata freshness. Calculator meaning and verified app boundary remain unchanged."
+}
