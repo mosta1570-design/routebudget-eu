@@ -7,12 +7,12 @@
   "reviewMode": "automated-with-owner-authorization",
   "reviewedAt": "2026-09-02",
   "decision": "approved",
-  "dependencyFingerprint": "sha256:20a7369704b239e3eb7a27721f09deea5bf7897bff8e16d2d2290a597ddb1914",
+  "dependencyFingerprint": "sha256:394cfaa656425339a6331daffc332207736b621e045d91cb7817116ed3fcdec0",
   "dependencyFiles": {
     "content/site.json": "sha256:c0d95e549ffa71c6d2dbb00bc0a56d53f4bfbdd0c87a0ad579af62dc59702716",
     "content/sources.json": "sha256:84a16b100aff448255224cf82a64199febc8662976b7d9bcae0fed7301bc8dd2",
-    "package-lock.json": "sha256:239ba379b02324b5087969ecc219d7c3951be19c9b566b7b1d56926af6620f10",
-    "package.json": "sha256:d4715987c9ef0a74f6da0d383204d72658e3a7d0cc968aefde2a6d6eebe2bb48",
+    "package-lock.json": "sha256:b6144526cdbb192cc726f12c4604dc1e6acc5c29e94d42800c1e02fbd689ab7e",
+    "package.json": "sha256:47d435948c6b779e0cea00e183adafb83f67a6ee0c61cfc3c51b976ee3514956",
     "public/seo/calculators-core.js": "sha256:7cd6ea73cde2129bf65cf4451ab9cf1706abcc2e4b3dbd363d5a1c4824eac846",
     "public/seo/calculators.js": "sha256:ff8a882ef4a691475208c69b072e743fc01d7baba9e47fad9b1c04a3573572d5",
     "public/seo/events.js": "sha256:a31a2a86c7120087cc2c5cb3cee5c0ec400239062d1b0dae1ff29fa751f30038",
@@ -86,12 +86,12 @@
   "ownerAuthorization": {
     "approvedBy": "Eng. Mostafa",
     "approvedAt": "2026-09-02",
-    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget, strengthen useful Italian-market pages and publish three rare evidence-led articles."
+    "basis": "Explicit owner request in the active Codex task to diagnose RouteBudget, fix every confirmed defect or vulnerability, strengthen Italian-market pages and publish the verified release."
   },
   "automatedChecks": {
     "indexableInventory": true,
     "generatedArtifacts": true,
     "dependencyClosure": true
   },
-  "notes": "Approves generated artifacts for 63 Italian content pages, two hubs and five static routes after the September recovery batch. It does not claim independent human review, ranking recovery or traffic guarantees."
+  "notes": "Approves generated artifacts for 63 Italian content pages, two hubs and five static routes after the September recovery batch and the sanitize-html 2.17.7 security update. It does not claim independent human review, ranking recovery or traffic guarantees."
 }
