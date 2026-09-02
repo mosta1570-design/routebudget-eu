@@ -1808,16 +1808,16 @@ li {
     font-size: 1.1rem;
   }
 
-  .seo-header nav a {
-    font-size: 0.8rem;
+  .seo-header nav {
+    display: none;
   }
 
   .seo-header__inner {
     gap: 10px;
   }
 
-  .seo-header nav {
-    gap: 10px;
+  .seo-header__app {
+    margin-left: auto;
   }
 
   .seo-hero h1 {

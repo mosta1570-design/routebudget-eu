@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://routebudget.eu/it/calcolatori/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/calcolatori/fuel-surcharge-autotrasporto/</loc>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/bgtoll-camion-bulgaria-2026/</loc>
@@ -65,16 +65,24 @@
     <lastmod>2026-08-22</lastmod>
   </url>
   <url>
+    <loc>https://routebudget.eu/it/guide/consumo-adblue-camion/</loc>
+    <lastmod>2026-09-02</lastmod>
+  </url>
+  <url>
     <loc>https://routebudget.eu/it/guide/conviene-comprare-furgone-elettrico/</loc>
     <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/costi-autotrasporto/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/costi-fissi-variabili-autotrasporto/</loc>
     <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://routebudget.eu/it/guide/costo-assicurazione-camion/</loc>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/costo-autostrada-furgone/</loc>
@@ -91,6 +99,10 @@
   <url>
     <loc>https://routebudget.eu/it/guide/costo-furgone-per-km/</loc>
     <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://routebudget.eu/it/guide/costo-leasing-camion/</loc>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/costo-orario-autista-camion/</loc>
@@ -202,7 +214,7 @@
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/quanto-consuma-un-camion/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://routebudget.eu/it/guide/quanto-consuma-un-furgone/</loc>

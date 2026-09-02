@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-08-31",
+  "revisionDate": "2026-09-02",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -35,7 +35,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
       "indexable": true,
       "primaryKeyword": "costo km camion",
-      "modified": "2026-08-31"
+      "modified": "2026-09-02"
     },
     {
       "id": "it:calcolatori:fuel-surcharge-autotrasporto",
@@ -158,6 +158,18 @@
       "modified": "2026-08-22"
     },
     {
+      "id": "it:guide:consumo-adblue-camion",
+      "url": "https://routebudget.eu/it/guide/consumo-adblue-camion/",
+      "title": "Consumo AdBlue camion: litri, costo viaggio e dato reale",
+      "description": "Come misurare il consumo AdBlue del camion rispetto al gasolio, stimare litri e costo della tratta e sostituire le percentuali generiche con dati aziendali.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/consumo-adblue-camion/",
+      "indexable": true,
+      "primaryKeyword": "consumo AdBlue camion",
+      "modified": "2026-09-02"
+    },
+    {
       "id": "it:guide:conviene-comprare-furgone-elettrico",
       "url": "https://routebudget.eu/it/guide/conviene-comprare-furgone-elettrico/",
       "title": "Conviene comprare un furgone elettrico? Test sui tuoi giri, non sulla media",
@@ -179,7 +191,7 @@
       "canonical": "https://routebudget.eu/it/guide/costi-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "costi autotrasporto",
-      "modified": "2026-08-23"
+      "modified": "2026-09-02"
     },
     {
       "id": "it:guide:costi-fissi-variabili-autotrasporto",
@@ -192,6 +204,18 @@
       "indexable": true,
       "primaryKeyword": "costi fissi e variabili autotrasporto",
       "modified": "2026-08-01"
+    },
+    {
+      "id": "it:guide:costo-assicurazione-camion",
+      "url": "https://routebudget.eu/it/guide/costo-assicurazione-camion/",
+      "title": "Costo assicurazione camion: quota per km senza medie inventate",
+      "description": "Metodo pratico per trasformare i premi assicurativi reali del camion in una quota per km o per giornata, senza doppioni nel costo della tratta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-assicurazione-camion/",
+      "indexable": true,
+      "primaryKeyword": "costo assicurazione camion",
+      "modified": "2026-09-02"
     },
     {
       "id": "it:guide:costo-autostrada-furgone",
@@ -240,6 +264,18 @@
       "indexable": true,
       "primaryKeyword": "costo furgone per km",
       "modified": "2026-08-23"
+    },
+    {
+      "id": "it:guide:costo-leasing-camion",
+      "url": "https://routebudget.eu/it/guide/costo-leasing-camion/",
+      "title": "Costo leasing camion: canone, anticipo e quota per tratta",
+      "description": "Come leggere anticipo, canoni, spese e riscatto del leasing camion e trasformarli in una quota gestionale per km senza doppio conteggio.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-leasing-camion/",
+      "indexable": true,
+      "primaryKeyword": "costo leasing camion",
+      "modified": "2026-09-02"
     },
     {
       "id": "it:guide:costo-orario-autista-camion",
@@ -575,7 +611,7 @@
       "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
       "indexable": true,
       "primaryKeyword": "quanto consuma un camion",
-      "modified": "2026-08-31"
+      "modified": "2026-09-02"
     },
     {
       "id": "it:guide:quanto-consuma-un-furgone",
