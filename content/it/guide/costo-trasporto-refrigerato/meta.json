@@ -1,0 +1,74 @@
+{
+  "slug": "costo-trasporto-refrigerato",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo trasporto refrigerato: calcolo camion frigo senza medie false",
+  "mobileH1": "Costo trasporto refrigerato",
+  "description": "Calcola il costo di un trasporto refrigerato separando tratta, gruppo frigo, ore, lavaggio, soste e requisiti ATP, senza inventare un sovrapprezzo fisso.",
+  "eyebrow": "Camion frigo · Catena del freddo",
+  "published": "2026-09-03",
+  "modified": "2026-09-03",
+  "reviewed": "2026-09-03",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo trasporto refrigerato",
+  "secondaryKeywords": [
+    "costo trasporto camion frigo",
+    "calcolo tariffa trasporto refrigerato",
+    "costo gruppo frigo camion",
+    "preventivo trasporto temperatura controllata"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "preventivi-trasporto",
+  "topics": [
+    "costo camion frigo",
+    "energia gruppo refrigerante",
+    "tempo a temperatura controllata",
+    "pulizia e sanificazione",
+    "requisiti ATP"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:preventivo-trasporto",
+    "guide:quanto-consuma-un-furgone",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:preventivo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-breakdown",
+  "translationGroup": "costo-trasporto-refrigerato",
+  "canonical": "/it/guide/costo-trasporto-refrigerato/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "UNECE — Testo e stato dell'accordo ATP",
+      "url": "https://unece.org/transport/road-transport/text-and-status-agreement",
+      "publishedOrUpdated": "Versione ATP valida dal 25 agosto 2026",
+      "geography": "Trasporto internazionale fra parti contraenti",
+      "accessedAt": "2026-09-03",
+      "supports": "Perimetro dell'accordo sul trasporto internazionale di derrate deperibili e sulle attrezzature speciali utilizzate; il testo corrente non stabilisce una tariffa commerciale."
+    },
+    {
+      "label": "MIT — Stazioni di prova ed esperti ATP",
+      "url": "https://www.mit.gov.it/index.php/documentazione/trasporto-merci-deperibili-atp-stazioni-di-prova-ed-esperti-per-i-controlli-tecnici",
+      "publishedOrUpdated": "Pagina modificata il 7 novembre 2024",
+      "geography": "Italia",
+      "accessedAt": "2026-09-03",
+      "supports": "Esistenza di stazioni di prova ed esperti per i controlli tecnici dei veicoli ATP; la stima economica non sostituisce certificazione o controllo tecnico."
+    },
+    {
+      "label": "EUR-Lex — Regolamento (CE) n. 852/2004 sull'igiene dei prodotti alimentari",
+      "url": "https://eur-lex.europa.eu/eli/reg/2004/852/oj/ita",
+      "publishedOrUpdated": "Testo ufficiale UE",
+      "geography": "Unione europea",
+      "accessedAt": "2026-09-03",
+      "supports": "Requisiti igienici applicabili al trasporto alimentare, inclusi pulizia dei vani e, quando necessario, mantenimento e controllo di temperature appropriate."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: modello a due contatori — km del veicolo e ore del gruppo frigo — con esempio ricalcolabile, confini ATP e checklist operativa per il preventivo."
+}

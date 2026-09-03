@@ -1,0 +1,66 @@
+{
+  "slug": "costo-traforo-monte-bianco-camion",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo Traforo Monte Bianco camion 2026: classi 3 e 4",
+  "mobileH1": "Costo Monte Bianco camion 2026",
+  "description": "Tariffe ufficiali 2026 del Traforo Monte Bianco per camion classe 3 e 4, validità del ritorno e metodo per inserirle una volta nel costo tratta.",
+  "eyebrow": "Italia–Francia · Pedaggi speciali",
+  "published": "2026-09-03",
+  "modified": "2026-09-03",
+  "reviewed": "2026-09-03",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo traforo monte bianco camion",
+  "secondaryKeywords": [
+    "traforo Monte Bianco camion",
+    "tariffa Monte Bianco mezzi pesanti 2026",
+    "pedaggio Monte Bianco classe 4",
+    "costo tunnel Monte Bianco camion"
+  ],
+  "searchIntent": "informational-transactional",
+  "cluster": "costo-trasporto",
+  "topics": [
+    "tariffe Monte Bianco 2026",
+    "classe 3 e classe 4",
+    "biglietto andata ritorno camion",
+    "pedaggio speciale",
+    "costo tratta Italia Francia"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:pedaggio-camion-francia",
+    "guide:calcolo-pedaggio-camion",
+    "guide:ritorno-a-vuoto-autotrasporto",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "add-trip-costs",
+  "appFeature": "complete-route-calculation",
+  "translationGroup": "costo-traforo-monte-bianco-camion",
+  "canonical": "/it/guide/costo-traforo-monte-bianco-camion/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Traforo del Monte Bianco-GEIE — Carta dei servizi 2026",
+      "url": "https://www.tunnelmb.net/public/files/301/01-carta-dei-servizi-ita-2026.pdf",
+      "publishedOrUpdated": "Tariffe dal 1° gennaio 2026",
+      "geography": "Lato Italia, collegamento Italia–Francia",
+      "accessedAt": "2026-09-03",
+      "supports": "Tariffe lato Italia IVA 22% inclusa per classi 3 e 4, validità andata/ritorno, regole principali di circolazione e limiti di ammissibilità indicati dal gestore."
+    },
+    {
+      "label": "Traforo del Monte Bianco-GEIE — Calendario previsionale gennaio–agosto 2026",
+      "url": "https://tunnelmb.net/public/files/46577/23-gennaio-agosto-10-app-2025.pdf",
+      "publishedOrUpdated": "Edizione ottobre 2025 per gennaio–agosto 2026",
+      "geography": "Collegamento Italia–Francia",
+      "accessedAt": "2026-09-03",
+      "supports": "Metodo ufficiale di comunicazione di chiusure e senso unico alternato e avvertenza che il calendario previsionale può cambiare; le date del documento non vanno riutilizzate dopo agosto 2026."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: scheda ufficiale 2026 per classi pesanti, scelta corretta fra corsa semplice e andata/ritorno, esempio di costo completo e controlli anti-doppione."
+}

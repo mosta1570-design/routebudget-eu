@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-03-costo-trasporto-refrigerato",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-03",
+  "decision": "approved",
+  "contentId": "guide/costo-trasporto-refrigerato",
+  "contentFingerprint": "sha256:9f7d69e8f93da660a5f06869a1529edae9938627889020fbe6dccda01a41f6de",
+  "artifactFingerprint": "sha256:d689ede4189f2ff5e4408b7a72cc0a87d546c45550c1218a5c518fedbd84dce2",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-03",
+    "basis": "Explicit owner request in the active Codex task to repeat the recovery plan, fix deficits, publish high-quality Italian pages and strengthen search visibility."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers current ATP context, EU hygiene scope, two-counter cost method, example arithmetic, equipment double-count prevention and explicit temperature-monitoring product boundaries. No independent human review is claimed."
+}

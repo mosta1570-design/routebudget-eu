@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-03-costo-traforo-monte-bianco-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-03",
+  "decision": "approved",
+  "contentId": "guide/costo-traforo-monte-bianco-camion",
+  "contentFingerprint": "sha256:b037b360070a14d010fd9e057332aa5cdcbf9ccf92c7e5153e89e00dfc79fc0f",
+  "artifactFingerprint": "sha256:1dd322c6e08ffbfa9b86069d60bda05f0e0d31b70d5ee219df246e0ef045e0eb",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-03",
+    "basis": "Explicit owner request in the active Codex task to repeat the recovery plan, fix deficits, publish high-quality Italian pages and strengthen search visibility."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers the official 2026 Italian-side class 3 and 4 tariff, return-ticket validity, arithmetic, admissibility caveats, double-count prevention and manual-toll product boundary. No independent human review is claimed."
+}

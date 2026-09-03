@@ -6,8 +6,8 @@
   "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
   "eyebrow": "Guida al costo di tratta",
   "published": "2026-08-01",
-  "modified": "2026-08-31",
-  "reviewed": "2026-08-31",
+  "modified": "2026-09-03",
+  "reviewed": "2026-09-03",
   "primaryKeyword": "calcolo costo trasporto",
   "searchIntent": "informational",
   "topics": [
@@ -30,6 +30,9 @@
     "guide:pedaggio-camion-belgio",
     "guide:pedaggio-camion-slovenia",
     "guide:pedaggio-camion-francia",
+    "guide:costo-traforo-monte-bianco-camion",
+    "guide:costo-trasporto-pallet",
+    "guide:costo-trasporto-refrigerato",
     "guide:costo-traghetto-camion-sardegna",
     "guide:costo-traghetto-camion-sicilia",
     "guide:eurovignette-camion-2026",
@@ -84,5 +87,5 @@
   "canonical": "/it/guide/calcolo-costo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunto un controllo go/no-go basato su dati mancanti, costo completo e scenario avverso per decidere una tratta prima della conferma."
+  "changeSummary": "Aggiunti percorsi distinti per pallet, refrigerato e Monte Bianco e collegamenti operativi verso foglio versionato, PDF, pagamenti e pedaggio N1 senza fondere intenti diversi."
 }

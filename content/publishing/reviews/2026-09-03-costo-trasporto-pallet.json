@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-03-costo-trasporto-pallet",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-03",
+  "decision": "approved",
+  "contentId": "guide/costo-trasporto-pallet",
+  "contentFingerprint": "sha256:9a59fa840f3c0aa8a4dfdd77b61376e0b1f64e7801fa30e0f7a8b6856e7424c1",
+  "artifactFingerprint": "sha256:d7dbb4c6be23575ddbc61aea41c1e02782a97050e1b94b807c87aa242da45f63",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-03",
+    "basis": "Explicit owner request in the active Codex task to repeat the recovery plan, fix deficits, publish high-quality Italian pages and strengthen search visibility."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers EPAL format facts, dedicated versus groupage boundary, cost-order formula, margin arithmetic, worked example and the absence of pallet functions in RouteBudget. No market-average tariff is claimed; no independent human review is claimed."
+}
