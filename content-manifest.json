@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-09-02",
+  "revisionDate": "2026-09-03",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -131,7 +131,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-08-31"
+      "modified": "2026-09-03"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -191,7 +191,7 @@
       "canonical": "https://routebudget.eu/it/guide/costi-autotrasporto/",
       "indexable": true,
       "primaryKeyword": "costi autotrasporto",
-      "modified": "2026-09-02"
+      "modified": "2026-09-03"
     },
     {
       "id": "it:guide:costi-fissi-variabili-autotrasporto",
@@ -302,6 +302,18 @@
       "modified": "2026-08-30"
     },
     {
+      "id": "it:guide:costo-traforo-monte-bianco-camion",
+      "url": "https://routebudget.eu/it/guide/costo-traforo-monte-bianco-camion/",
+      "title": "Costo Traforo Monte Bianco camion 2026: classi 3 e 4",
+      "description": "Tariffe ufficiali 2026 del Traforo Monte Bianco per camion classe 3 e 4, validità del ritorno e metodo per inserirle una volta nel costo tratta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-traforo-monte-bianco-camion/",
+      "indexable": true,
+      "primaryKeyword": "costo traforo monte bianco camion",
+      "modified": "2026-09-03"
+    },
+    {
       "id": "it:guide:costo-traghetto-camion-calais-dover-2026",
       "url": "https://routebudget.eu/it/guide/costo-traghetto-camion-calais-dover-2026/",
       "title": "Costo traghetto camion Calais–Dover 2026: nolo, BAF ed ETS",
@@ -336,6 +348,30 @@
       "indexable": true,
       "primaryKeyword": "costo traghetto camion Sicilia 2026",
       "modified": "2026-08-17"
+    },
+    {
+      "id": "it:guide:costo-trasporto-pallet",
+      "url": "https://routebudget.eu/it/guide/costo-trasporto-pallet/",
+      "title": "Costo trasporto pallet: calcolo del prezzo minimo per spedizione",
+      "description": "Metodo operativo per calcolare il costo di un trasporto pallet da tratta, spazio, peso, soste e movimentazioni, senza copiare tariffe medie.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-trasporto-pallet/",
+      "indexable": true,
+      "primaryKeyword": "costo trasporto pallet",
+      "modified": "2026-09-03"
+    },
+    {
+      "id": "it:guide:costo-trasporto-refrigerato",
+      "url": "https://routebudget.eu/it/guide/costo-trasporto-refrigerato/",
+      "title": "Costo trasporto refrigerato: calcolo camion frigo senza medie false",
+      "description": "Calcola il costo di un trasporto refrigerato separando tratta, gruppo frigo, ore, lavaggio, soste e requisiti ATP, senza inventare un sovrapprezzo fisso.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-trasporto-refrigerato/",
+      "indexable": true,
+      "primaryKeyword": "costo trasporto refrigerato",
+      "modified": "2026-09-03"
     },
     {
       "id": "it:guide:errori-calcolo-tariffa-trasporto",

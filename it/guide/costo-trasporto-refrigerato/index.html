@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070B12" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="description" content="Calcola il costo di un trasporto refrigerato separando tratta, gruppo frigo, ore, lavaggio, soste e requisiti ATP, senza inventare un sovrapprezzo fisso." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://routebudget.eu/it/guide/costo-trasporto-refrigerato/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="RouteBudget EU" />
+    <meta property="og:title" content="Costo trasporto refrigerato: calcolo camion frigo senza medie false" />
+    <meta property="og:description" content="Calcola il costo di un trasporto refrigerato separando tratta, gruppo frigo, ore, lavaggio, soste e requisiti ATP, senza inventare un sovrapprezzo fisso." />
+    <meta property="og:url" content="https://routebudget.eu/it/guide/costo-trasporto-refrigerato/" />
+    <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
+    <meta property="og:image:alt" content="RouteBudget EU — Costo trasporto refrigerato: calcolo camion frigo senza medie false" />
+    <meta property="article:published_time" content="2026-09-03" />
+    <meta property="article:modified_time" content="2026-09-03" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Costo trasporto refrigerato: calcolo camion frigo senza medie false" />
+    <meta name="twitter:description" content="Calcola il costo di un trasporto refrigerato separando tratta, gruppo frigo, ore, lavaggio, soste e requisiti ATP, senza inventare un sovrapprezzo fisso." />
+    <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
+    <link rel="icon" type="image/png" href="/logo-ui.png" />
+    <link rel="stylesheet" href="/seo/seo.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","url":"https://routebudget.eu/#autore","description":"Sviluppatore indipendente di RouteBudget EU e responsabile di metodo, fonti e revisioni editoriali.","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/guide/costo-trasporto-refrigerato/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Guide","item":"https://routebudget.eu/it/guide/"},{"@type":"ListItem","position":3,"name":"Costo trasporto refrigerato: calcolo camion frigo senza medie false","item":"https://routebudget.eu/it/guide/costo-trasporto-refrigerato/"}]},{"@type":"Article","@id":"https://routebudget.eu/it/guide/costo-trasporto-refrigerato/#article","headline":"Costo trasporto refrigerato: calcolo camion frigo senza medie false","description":"Calcola il costo di un trasporto refrigerato separando tratta, gruppo frigo, ore, lavaggio, soste e requisiti ATP, senza inventare un sovrapprezzo fisso.","url":"https://routebudget.eu/it/guide/costo-trasporto-refrigerato/","mainEntityOfPage":"https://routebudget.eu/it/guide/costo-trasporto-refrigerato/","datePublished":"2026-09-03","dateModified":"2026-09-03","inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"},"image":"https://routebudget.eu/og-cover.jpg","keywords":"costo trasporto refrigerato, costo trasporto camion frigo, calcolo tariffa trasporto refrigerato, costo gruppo frigo camion, preventivo trasporto temperatura controllata","about":[{"@type":"Thing","name":"costo camion frigo"},{"@type":"Thing","name":"energia gruppo refrigerante"},{"@type":"Thing","name":"tempo a temperatura controllata"},{"@type":"Thing","name":"pulizia e sanificazione"},{"@type":"Thing","name":"requisiti ATP"}],"wordCount":1119,"timeRequired":"PT6M","citation":["https://unece.org/transport/road-transport/text-and-status-agreement","https://www.mit.gov.it/index.php/documentazione/trasporto-merci-deperibili-atp-stazioni-di-prova-ed-esperti-per-i-controlli-tecnici","https://eur-lex.europa.eu/eli/reg/2004/852/oj/ita"]}]}</script>
+    <script src="/seo/events.js" defer></script>
+
+    <title>Costo trasporto refrigerato: calcolo camion frigo senza medie false</title>
+  </head>
+<body class="seo-body" data-content-id="it:guide:costo-trasporto-refrigerato" data-page-type="guide" data-locale="it">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar"></span></div>
+  <header class="seo-header">
+    <div class="seo-header__inner">
+      <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
+        <img src="/logo-ui.png" width="42" height="42" alt="" />
+        <span>RouteBudget <small>EU</small></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+      </nav>
+      <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scarica RouteBudget</a>
+    </div>
+  </header>
+  <main id="contenuto">
+    <section class="seo-hero">
+      <div class="seo-shell">
+        <nav class="breadcrumbs" aria-label="Percorso">
+    <a href="/">RouteBudget</a>
+    <span aria-hidden="true">/</span>
+    <a href="/it/guide/">Guide</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Costo trasporto refrigerato: calcolo camion frigo senza medie false</span>
+  </nav>
+        <h1>Costo trasporto refrigerato: calcolo camion frigo senza medie false</h1>
+        <p class="seo-hero__summary">Calcola il costo di un trasporto refrigerato separando tratta, gruppo frigo, ore, lavaggio, soste e requisiti ATP, senza inventare un sovrapprezzo fisso.</p>
+        <div class="seo-meta" aria-label="Informazioni editoriali">
+          <span>A cura di <a href="/#autore">Eng. Mostafa</a> · RouteBudget EU</span>
+          <span>Revisione 3 settembre 2026</span>
+          <span>6 min di lettura</span>
+        </div>
+
+      </div>
+    </section>
+    <section class="decision-strip" aria-label="Come usare questa risorsa">
+    <div class="seo-shell decision-strip__inner">
+      <div><span>Risultato</span><strong>Un passaggio operativo da applicare al prossimo preventivo.</strong><small>3 fonti verificabili · revisione 3 settembre 2026</small></div>
+      <div><span>Prepara</span><strong>Distanza, ore, costi del mezzo e spese della missione.</strong></div>
+      <div><span>Continua nell’app</span><strong>Confronta ogni componente senza perdere ritorno e costi indiretti.</strong></div>
+    </div>
+  </section>
+
+    <div class="seo-shell article-layout">
+      <div class="article-main">
+        <details class="mobile-toc">
+    <summary><span>Indice della guida</span><b aria-hidden="true">+</b></summary>
+    <ol>
+      <li><a href="#risposta-diretta-servono-due-contatori-chilometri-e-ore-frigo">Risposta diretta: servono due contatori, chilometri e ore frigo</a></li>
+<li><a href="#la-formula-operativa">La formula operativa</a></li>
+<li><a href="#scheda-commessa-domande-prima-del-numero">Scheda commessa: domande prima del numero</a></li>
+<li><a href="#atp-e-igiene-costo-non-significa-conformita">ATP e igiene: costo non significa conformità</a></li>
+<li><a href="#misurare-il-gruppo-frigo-senza-inventare-percentuali">Misurare il gruppo frigo senza inventare percentuali</a></li>
+<li><a href="#quota-attrezzatura-non-nasconderla-nell-usura-generica">Quota attrezzatura: non nasconderla nell&#039;usura generica</a></li>
+<li><a href="#esempio-ricalcolabile">Esempio ricalcolabile</a></li>
+<li><a href="#attese-il-camion-fermo-puo-continuare-a-consumare">Attese: il camion fermo può continuare a consumare</a></li>
+<li><a href="#dal-calcolo-routebudget-al-preventivo">Dal calcolo RouteBudget al preventivo</a></li>
+<li><a href="#errori-tipici">Errori tipici</a></li>
+<li><a href="#checklist-prima-di-accettare">Checklist prima di accettare</a></li>
+<li><a href="#fonti-e-limiti">Fonti e limiti</a></li>
+    </ol>
+  </details>
+        <article class="seo-prose">
+          <h2 id="risposta-diretta-servono-due-contatori-chilometri-e-ore-frigo">Risposta diretta: servono due contatori, chilometri e ore frigo</h2>
+<p>Il <strong>costo di un trasporto refrigerato</strong> parte dal costo normale della missione e aggiunge ciò che esiste perché la merce viaggia a temperatura controllata. Il metodo più utile usa due contatori distinti:</p>
+<ul>
+<li>chilometri e tempo operativo del veicolo;</li>
+<li>ore effettive del gruppo refrigerante, comprese preriscaldamento o preraffreddamento, attese e soste pertinenti.</li>
+</ul>
+<p>Un sovrapprezzo percentuale copiato da un'altra tratta può nascondere consumo del gruppo, lavaggio, controlli, attrezzatura, tempi più lunghi e ritorno. Calcola ogni voce dal dato dell'impresa; poi verifica il prezzo e il margine.</p>
+<p>RouteBudget calcola le voci supportate della tratta e produce scenari e PDF. Non controlla la temperatura, non legge il gruppo frigo, non gestisce certificati ATP o registratori, non dimostra la catena del freddo e non offre un campo dedicato ai costi refrigerati. Queste voci vanno calcolate e documentate fuori dall'app.</p>
+<aside class="mobile-inline-cta" aria-label="Continua con RouteBudget">
+    <p class="rail-label">Prima di accettare</p>
+    <p class="mobile-inline-cta__title">Confronta la tenuta del margine.</p>
+    <p>Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo; il risultato resta una stima, non una garanzia di utile.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="inline" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="inline" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </aside><h2 id="la-formula-operativa">La formula operativa</h2>
+<pre><code>costo refrigerato = costo base della missione
+                   + energia del gruppo frigo
+                   + quota attrezzatura e manutenzione attribuita
+                   + preparazione, pulizia e sanificazione
+                   + tempo extra e attese
+                   + altri requisiti verificati della commessa
+</code></pre>
+<p>Il costo base comprende carburante o energia di trazione, pedaggi, autista, usura, ritorno e quote aziendali applicabili. Non sommare una seconda volta voci già presenti.</p>
+<p>Per un gruppo alimentato separatamente a gasolio:</p>
+<pre><code>litri gruppo = consumo misurato in l/h × ore di funzionamento
+costo energia frigo = litri gruppo × prezzo effettivo €/l
+</code></pre>
+<p>Per un impianto elettrico usa energia acquistata e costo coerente:</p>
+<pre><code>costo energia frigo = kWh misurati × prezzo effettivo €/kWh
+</code></pre>
+<p>Non trasformare l/ora in l/100 km: preraffreddamento e attesa consumano anche a veicolo fermo.</p>
+<h2 id="scheda-commessa-domande-prima-del-numero">Scheda commessa: domande prima del numero</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole 1"><table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Perché serve</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Prodotto e temperatura richiesta</td>
+<td>definisce perimetro operativo da confermare</td>
+</tr>
+<tr>
+<td>Temperatura al carico</td>
+<td>il mezzo non sempre deve abbattere prodotto caldo</td>
+</tr>
+<tr>
+<td>Durata prevista porta a porta</td>
+<td>guida ore frigo e rischio di attesa</td>
+</tr>
+<tr>
+<td>Numero di aperture porte</td>
+<td>può cambiare ciclo e recupero termico</td>
+</tr>
+<tr>
+<td>Mono o multitemperatura</td>
+<td>modifica configurazione e disponibilità mezzo</td>
+</tr>
+<tr>
+<td>Volume, peso e disposizione</td>
+<td>influenza capacità e circolazione dell'aria</td>
+</tr>
+<tr>
+<td>Lavaggio o sanificazione richiesta</td>
+<td>crea costo e tempo documentabili</td>
+</tr>
+<tr>
+<td>Registrazione e documenti</td>
+<td>chiarisce prove da consegnare al cliente</td>
+</tr>
+<tr>
+<td>ATP e scadenze del mezzo</td>
+<td>verifica idoneità, non solo prezzo</td>
+</tr>
+<tr>
+<td>Piano in caso di guasto</td>
+<td>espone costi e responsabilità da gestire</td>
+</tr>
+</tbody></table></div>
+<p>La scheda commerciale non sostituisce procedure HACCP, istruzioni del caricatore, manuali dell'allestitore o obblighi normativi. Serve a impedire che il preventivo nasca con requisiti mancanti.</p>
+<h2 id="atp-e-igiene-costo-non-significa-conformita">ATP e igiene: costo non significa conformità</h2>
+<p>L'accordo ATP riguarda il trasporto internazionale di determinate derrate deperibili e le attrezzature speciali utilizzate. UNECE pubblica una versione valida dal <strong>25 agosto 2026</strong>. Il MIT mantiene riferimenti a stazioni di prova ed esperti per i controlli tecnici in Italia.</p>
+<p>Il regolamento UE sull'igiene degli alimenti richiede che vani e contenitori usati per il trasporto siano mantenuti puliti e, quando necessario, che temperature appropriate possano essere mantenute e controllate. Questi riferimenti aiutano a costruire la checklist; non dicono quanto deve costare la tua commessa.</p>
+<p>Prima dell'offerta, chi gestisce il trasporto deve verificare campo applicabile, classe del mezzo, certificati, condizioni della merce e procedure del cliente. Un PDF economico non certifica conformità.</p>
+<h2 id="misurare-il-gruppo-frigo-senza-inventare-percentuali">Misurare il gruppo frigo senza inventare percentuali</h2>
+<p>Costruisci uno storico per <strong>mezzo + gruppo + setpoint + stagione + profilo missione</strong>. Registra:</p>
+<ul>
+<li>ore motore del gruppo all'inizio e alla fine;</li>
+<li>energia o litri riforniti in un periodo confrontabile;</li>
+<li>temperatura esterna e setpoint;</li>
+<li>carico già alla temperatura corretta o da recuperare;</li>
+<li>numero e durata delle aperture;</li>
+<li>tratte urbane, autostrada e soste;</li>
+<li>manutenzioni o anomalie.</li>
+</ul>
+<p>Calcola valori prudenti solo da missioni simili. Una media annuale unica può sottostimare estate, multi-drop o attesa con porte aperte. Se mancano dati, usa temporaneamente il dato tecnico della configurazione corretta e dichiarane il limite; sostituiscilo appena hai misure reali.</p>
+<h2 id="quota-attrezzatura-non-nasconderla-nell-usura-generica">Quota attrezzatura: non nasconderla nell'usura generica</h2>
+<p>Il gruppo frigo ha acquisto o canone, manutenzione, controlli e possibile fermo. Definisci un bacino coerente:</p>
+<pre><code>quota frigo per ora = costi annui attribuibili al gruppo ÷ ore frigo realistiche annue
+quota della missione = quota frigo per ora × ore frigo previste
+</code></pre>
+<p>In alternativa, una flotta può usare una quota per giornata o missione quando il proprio controllo di gestione lo giustifica. Non dividere per ore teoriche massime. Se canone o costo fisso generale include già attrezzatura e manutenzione, non duplicare la quota.</p>
+<h2 id="esempio-ricalcolabile">Esempio ricalcolabile</h2>
+<p>Esempio didattico, non tariffa di mercato:</p>
+<ul>
+<li>costo base della missione verificato: 690 €;</li>
+<li>durata gruppo prevista: 9 ore;</li>
+<li>consumo storico comparabile: 2,4 l/h;</li>
+<li>prezzo interno del gasolio gruppo: 1,72 €/l;</li>
+<li>lavaggio richiesto e documentato: 45 €;</li>
+<li>1,5 ore operative extra a 25 €/h;</li>
+<li>margine desiderato sul ricavo: 14%.</li>
+</ul>
+<pre><code>energia gruppo = 9 × 2,4 × 1,72 = 37,15 €
+tempo extra = 1,5 × 25 = 37,50 €
+costo completo = 690 + 37,15 + 45 + 37,50 = 809,65 €
+prezzo minimo = 809,65 ÷ 0,86 = 941,45 €
+</code></pre>
+<p>Manca una quota attrezzatura? Va aggiunta prima del margine. Il gruppo lavorerà 12 ore invece di 9? Cambiano energia, usura e forse tempo autista. Ricalcola; non applicare un supplemento casuale a fine preventivo.</p>
+<h2 id="attese-il-camion-fermo-puo-continuare-a-consumare">Attese: il camion fermo può continuare a consumare</h2>
+<p>Nel refrigerato, una coda non è solo costo autista. Il gruppo può restare acceso e la missione successiva può saltare. Per ogni attesa separa:</p>
+<pre><code>costo attesa = ore × costo operativo del tempo
+             + ore gruppo × costo energia frigo
+             + eventuale quota attrezzatura applicabile
+</code></pre>
+<p>Non presentare automaticamente questa formula come indennizzo dovuto. Condizioni contrattuali e disciplina applicabile richiedono verifica separata. La guida sulle <a href="/it/guide/tempi-attesa-carico-scarico-autotrasporto/">attese a carico e scarico</a> mostra come documentare arrivo, inizio, fine e causa.</p>
+<h2 id="dal-calcolo-routebudget-al-preventivo">Dal calcolo RouteBudget al preventivo</h2>
+<p>Flusso prudente:</p>
+<ol>
+<li>calcola in RouteBudget distanza, rientro, trazione, pedaggi, autista e usura;</li>
+<li>verifica tempi e percorso con gli strumenti operativi dell'impresa;</li>
+<li>calcola fuori dall'app energia gruppo, quota attrezzatura, lavaggio e requisiti speciali;</li>
+<li>riconcilia tutte le voci in un costo completo;</li>
+<li>applica margine o ricarico dichiarando la convenzione;</li>
+<li>genera il PDF RouteBudget come riepilogo della base supportata;</li>
+<li>aggiungi nel processo esterno temperatura, documenti e condizioni che il template non contiene.</li>
+</ol>
+<p>Il PDF RouteBudget è una stima non vincolante. Non è un certificato ATP, un registro temperatura, una prova di consegna o un piano HACCP. Se il cliente richiede questi documenti, elencali e gestiscili separatamente.</p>
+<h2 id="errori-tipici">Errori tipici</h2>
+<ul>
+<li>Applicare un “+20% frigo” senza dati del mezzo.</li>
+<li>Usare soli chilometri e ignorare ore del gruppo.</li>
+<li>Confondere carburante trazione e carburante refrigerazione.</li>
+<li>Dimenticare preraffreddamento, attese e aperture multiple.</li>
+<li>Conteggiare due volte manutenzione già nella quota fissa.</li>
+<li>Trattare temperatura richiesta come garantita dal preventivo.</li>
+<li>Presentare ATP come tariffa o attestazione generata dall'app.</li>
+<li>Trascurare pulizia, incompatibilità del carico e ritorno.</li>
+<li>Inviare un PDF senza condizioni di temperatura e documenti richiesti.</li>
+</ul>
+<h2 id="checklist-prima-di-accettare">Checklist prima di accettare</h2>
+<ul>
+<li> Prodotto, setpoint e temperatura al ritiro confermati.</li>
+<li> Mezzo, gruppo e documenti verificati.</li>
+<li> Ore frigo previste oltre ai chilometri.</li>
+<li> Consumo basato su configurazione e periodo comparabili.</li>
+<li> Lavaggio, preparazione e multi-drop valorizzati.</li>
+<li> Attese e ritorno inclusi.</li>
+<li> Quote fisse senza doppio conteggio.</li>
+<li> Margine applicato al costo completo.</li>
+<li> PDF distinto da prova temperatura e certificati.</li>
+<li> Piano di revisione se cambiano orari o requisiti.</li>
+</ul>
+<p>Il costo refrigerato diventa difendibile quando ogni euro risponde a una causa: strada, tempo, freddo, attrezzatura o servizio. RouteBudget rende solida la base della tratta; misure del gruppo e documenti dell'impresa completano la decisione.</p>
+<h2 id="fonti-e-limiti">Fonti e limiti</h2>
+<p>UNECE pubblica <a href="https://unece.org/transport/road-transport/text-and-status-agreement" rel="noreferrer">testo e stato dell'accordo ATP</a>. Il <a href="https://www.mit.gov.it/index.php/documentazione/trasporto-merci-deperibili-atp-stazioni-di-prova-ed-esperti-per-i-controlli-tecnici" rel="noreferrer">MIT elenca stazioni ed esperti ATP</a>. Il <a href="https://eur-lex.europa.eu/eli/reg/2004/852/oj/ita" rel="noreferrer">regolamento (CE) n. 852/2004</a> tratta requisiti igienici del trasporto alimentare. Le fonti definiscono controlli e perimetro, non un prezzo universale; tariffe, consumi e responsabilità vanno verificati per impresa e commessa.</p>
+
+          <section class="sources" aria-labelledby="fonti-costo-trasporto-refrigerato">
+    <h2 id="fonti-costo-trasporto-refrigerato">Fonti e riferimenti</h2>
+    <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
+    <ul>
+      <li><a href="https://unece.org/transport/road-transport/text-and-status-agreement" rel="noreferrer">UNECE — Testo e stato dell&#039;accordo ATP</a><small>Perimetro dell&#039;accordo sul trasporto internazionale di derrate deperibili e sulle attrezzature speciali utilizzate; il testo corrente non stabilisce una tariffa commerciale. · Trasporto internazionale fra parti contraenti · consultata in data 3 settembre 2026</small></li>
+<li><a href="https://www.mit.gov.it/index.php/documentazione/trasporto-merci-deperibili-atp-stazioni-di-prova-ed-esperti-per-i-controlli-tecnici" rel="noreferrer">MIT — Stazioni di prova ed esperti ATP</a><small>Esistenza di stazioni di prova ed esperti per i controlli tecnici dei veicoli ATP; la stima economica non sostituisce certificazione o controllo tecnico. · Italia · consultata in data 3 settembre 2026</small></li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2004/852/oj/ita" rel="noreferrer">EUR-Lex — Regolamento (CE) n. 852/2004 sull&#039;igiene dei prodotti alimentari</a><small>Requisiti igienici applicabili al trasporto alimentare, inclusi pulizia dei vani e, quando necessario, mantenimento e controllo di temperature appropriate. · Unione europea · consultata in data 3 settembre 2026</small></li>
+    </ul>
+  </section>
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p><a href="/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti primarie datate, esempio ricalcolato e controllo dei limiti del prodotto. Strumenti di intelligenza artificiale possono assistere ricerca, confronto e prima struttura; metodo, fonti, calcoli, limiti del prodotto e decisione di pubblicazione restano sotto la responsabilità dell’autore. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+          </section>
+        </article>
+      </div>
+      <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+        <nav class="article-toc" aria-label="Indice della guida">
+    <p class="rail-label">In questa guida</p>
+    <ol>
+      <li><a href="#risposta-diretta-servono-due-contatori-chilometri-e-ore-frigo">Risposta diretta: servono due contatori, chilometri e ore frigo</a></li>
+<li><a href="#la-formula-operativa">La formula operativa</a></li>
+<li><a href="#scheda-commessa-domande-prima-del-numero">Scheda commessa: domande prima del numero</a></li>
+<li><a href="#atp-e-igiene-costo-non-significa-conformita">ATP e igiene: costo non significa conformità</a></li>
+<li><a href="#misurare-il-gruppo-frigo-senza-inventare-percentuali">Misurare il gruppo frigo senza inventare percentuali</a></li>
+<li><a href="#quota-attrezzatura-non-nasconderla-nell-usura-generica">Quota attrezzatura: non nasconderla nell&#039;usura generica</a></li>
+<li><a href="#esempio-ricalcolabile">Esempio ricalcolabile</a></li>
+<li><a href="#attese-il-camion-fermo-puo-continuare-a-consumare">Attese: il camion fermo può continuare a consumare</a></li>
+<li><a href="#dal-calcolo-routebudget-al-preventivo">Dal calcolo RouteBudget al preventivo</a></li>
+<li><a href="#errori-tipici">Errori tipici</a></li>
+<li><a href="#checklist-prima-di-accettare">Checklist prima di accettare</a></li>
+<li><a href="#fonti-e-limiti">Fonti e limiti</a></li>
+    </ol>
+  </nav>
+        <section class="rail-link">
+    <p class="rail-label">Guida pilastro</p>
+    <h2><a href="/it/guide/preventivo-trasporto/">Preventivo trasporto per autotrasportatori: costo e offerta</a></h2>
+    <p>Come trasformare il costo di una tratta in un’offerta di trasporto merci chiara, con prezzo, inclusioni, esclusioni, validità e PDF verificato.</p>
+  </section>
+        <section class="app-cta">
+    <p class="rail-label">Prima di accettare</p>
+    <h2>Confronta la tenuta del margine.</h2>
+    <p>Confronta prezzo minimo, consigliato e ideale prima di impegnare mezzo e tempo; il risultato resta una stima, non una garanzia di utile.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="article" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="compare_scenarios_app" data-analytics-position="article" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </section>
+      </aside>
+    </div>
+    <section class="related-section">
+    <div class="seo-shell">
+      <div class="related-section__heading">
+        <h2>Prossimo controllo.</h2>
+      </div>
+      <div class="related-links">
+        <a href="/it/guide/calcolo-costo-trasporto/">
+              <div><small>Guida pilastro</small><strong>Calcolo del costo di trasporto: metodo completo per una tratta</strong></div>
+              <b>Apri</b>
+            </a>
+<a href="/it/guide/preventivo-trasporto/">
+              <div><small>Guida pilastro</small><strong>Preventivo trasporto per autotrasportatori: costo e offerta</strong></div>
+              <b>Apri</b>
+            </a>
+<a href="/it/guide/quanto-consuma-un-furgone/">
+              <div><small>Guida pratica</small><strong>Quanto consuma un furgone: diesel, elettrico e costo tratta</strong></div>
+              <b>Apri</b>
+            </a>
+<a href="/it/guide/tempi-attesa-carico-scarico-autotrasporto/">
+              <div><small>Guida pratica</small><strong>Attese carico e scarico: 90 minuti e indennizzo nel 2026</strong></div>
+              <b>Apri</b>
+            </a>
+<a href="/it/calcolatori/prezzo-minimo-margine-tratta/">
+              <div><small>Calcolatore</small><strong>Come calcolare il prezzo di un trasporto: margine e soglia</strong></div>
+              <b>Apri</b>
+            </a>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer__inner">
+      <div>
+        <a class="seo-brand" href="/">
+          <img src="/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
+          <span>RouteBudget <small>EU</small></span>
+        </a>
+        <p>Costi chiari. Decisioni difendibili.</p>
+      </div>
+      <nav aria-label="Risorse e informazioni legali">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Termini</a>
+      </nav>
+      <p>© 2026 RouteBudget EU · Eng. Mostafa</p>
+    </div>
+  </footer>
+</body>
+</html>
