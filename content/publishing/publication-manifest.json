@@ -4,7 +4,7 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-09-03-release-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-03-scroll-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
     "/it/calcolatori/": "sha256:9512b7135db1821934acd3f6a1109a484c85178ee4711e7efbee25d7a4e6186d",
