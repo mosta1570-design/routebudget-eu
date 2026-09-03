@@ -124,9 +124,50 @@ assert.equal(harness.events.length, eventCount, 'rejected payloads must not disp
 
 console.log('Browser-local event contract passed: locale hydration, CTA/store, PDF sample, and allowlist enforcement.');
 
-function bootAdapter({ storedLocale }) {
+const touch = bootAdapter({ readingProgress: true, progressMatches: false });
+assert.equal(touch.windowListeners.size, 0, 'touch/reduced-motion reading must not install scroll or resize handlers');
+assert.equal(touch.progressWrites.length, 0, 'touch reading must not write the progress layer');
+touch.setProgressMatches(true);
+assert.equal(touch.windowListeners.size, 2, 'desktop can enable progress after a media change');
+touch.window.scrollY = 100;
+touch.windowListeners.get('scroll')();
+touch.windowListeners.get('scroll')();
+assert.equal(touch.frames.size, 1, 'scroll events must coalesce into one animation frame');
+touch.flushFrames();
+assert.equal(touch.progressWrites.at(-1), 'scaleX(0.5)', 'desktop progress must reflect document position');
+touch.window.scrollY = -50;
+touch.windowListeners.get('scroll')();
+touch.flushFrames();
+assert.equal(touch.progressWrites.at(-1), 'scaleX(0)', 'rubber-band overscroll must clamp to zero');
+touch.window.scrollY = 10_000;
+touch.windowListeners.get('scroll')();
+touch.flushFrames();
+assert.equal(touch.progressWrites.at(-1), 'scaleX(1)', 'bottom overscroll must clamp to one');
+touch.windowListeners.get('resize')();
+touch.setProgressMatches(false);
+assert.equal(touch.frames.size, 0, 'switching to touch/reduced-motion must cancel queued work');
+assert.equal(touch.windowListeners.size, 0, 'switching modes must detach both listeners');
+assert.equal(touch.progressWrites.at(-1), null, 'disabled progress must clear its inline transform');
+touch.setProgressMatches(true);
+assert.equal(touch.windowListeners.size, 2, 're-enabling desktop progress must not duplicate listeners');
+console.log('Reading motion passed: zero touch scroll work, desktop coalescing, overscroll bounds, media changes, and cancellation.');
+
+function bootAdapter({ storedLocale, readingProgress = false, progressMatches = true }) {
   const events = [];
   const listeners = new Map();
+  const windowListeners = new Map();
+  const frames = new Map();
+  const progressWrites = [];
+  let frameId = 0;
+  let mediaCallback;
+  const progressMedia = {
+    matches: progressMatches,
+    addEventListener: (_name, callback) => { mediaCallback = callback; },
+  };
+  const progressBar = { style: {
+    set transform(value) { progressWrites.push(value); },
+    removeProperty: () => progressWrites.push(null),
+  } };
   let mutationCallback = null;
   const documentElement = { lang: 'it', scrollHeight: 1_000 };
   const document = {
@@ -139,7 +180,7 @@ function bootAdapter({ storedLocale }) {
     },
     documentElement,
     referrer: '',
-    querySelector: () => null,
+    querySelector: () => readingProgress ? progressBar : null,
     addEventListener: (name, listener) => listeners.set(name, listener),
   };
   class FakeCustomEvent {
@@ -157,11 +198,15 @@ function bootAdapter({ storedLocale }) {
   }
   const window = {
     innerHeight: 800,
+    scrollY: 0,
     location: { hostname: 'routebudget.eu', pathname: '/' },
     localStorage: { getItem: (key) => key === 'routebudget-site-locale' ? storedLocale : null },
     dispatchEvent: (event) => events.push({ ...event.detail }),
-    requestAnimationFrame: (callback) => callback(),
-    addEventListener() {},
+    matchMedia: () => progressMedia,
+    requestAnimationFrame: (callback) => { frames.set(++frameId, callback); return frameId; },
+    cancelAnimationFrame: (id) => frames.delete(id),
+    addEventListener: (name, callback) => windowListeners.set(name, callback),
+    removeEventListener: (name) => windowListeners.delete(name),
   };
 
   vm.runInNewContext(source, {
@@ -175,6 +220,15 @@ function bootAdapter({ storedLocale }) {
   }, { filename: 'events.js' });
 
   return {
+    windowListeners,
+    frames,
+    progressWrites,
+    setProgressMatches(matches) { progressMedia.matches = matches; mediaCallback(); },
+    flushFrames() {
+      const queued = [...frames.values()];
+      frames.clear();
+      queued.forEach((callback) => callback());
+    },
     click(control) {
       listeners.get('click')({ target: control });
     },
