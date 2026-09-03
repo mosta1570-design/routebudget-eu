@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-03-costi-autotrasporto",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-03",
+  "decision": "approved",
+  "contentId": "guide/costi-autotrasporto",
+  "contentFingerprint": "sha256:d7bb614cadbe38302c2b9f834b9937acd8b27ad93e39bbe8f3e76cf003c9a04b",
+  "artifactFingerprint": "sha256:351ee585b2a129d80ac3421ce6c0f69b91bffa2bbbf963a4757010f212763583",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-03",
+    "basis": "Explicit owner request in the active Codex task to repeat the recovery plan, fix deficits, publish high-quality Italian pages and strengthen search visibility."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers the expanded cost map and contextual crawl support for four existing backlog pages. Links are grouped by operational task and do not merge keyword ownership. No independent human review is claimed."
+}

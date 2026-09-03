@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-03-calcolo-costo-trasporto",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-03",
+  "decision": "approved",
+  "contentId": "guide/calcolo-costo-trasporto",
+  "contentFingerprint": "sha256:24b04d0e815dede4c45dcbcffdc2434e0f008c84e3fad2a021f43002ce0e58b7",
+  "artifactFingerprint": "sha256:16cece139110b6b6a5b07d11470e5d2397d1d31118487b2b1098c84ef54bf617",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-03",
+    "basis": "Explicit owner request in the active Codex task to repeat the recovery plan, fix deficits, publish high-quality Italian pages and strengthen search visibility."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review covers contextual links to three distinct cost decisions and two crawl paths to each indexing-backlog URL. Existing calculation method and source claims are unchanged. No independent human review is claimed."
+}

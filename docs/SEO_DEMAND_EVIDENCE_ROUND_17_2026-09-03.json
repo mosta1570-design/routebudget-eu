@@ -1,0 +1,138 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-03",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "authenticated Google Search Console diagnosis",
+    "Google Suggest hl=it gl=it",
+    "official Italian and European sources"
+  ],
+  "method": {
+    "interpretation": "Search Console first isolates losses caused by temporary irrelevant private-driver queries. Google Suggest validates exact Italian problem wording. Official sources define technical facts and current tariffs. No signal is represented as monthly search volume, CPC, difficulty or ranking forecast.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "selectionRule": "Publish only an exact Italian suggestion with distinct intent ownership, direct RouteBudget cost or quote use, a recalculable operational asset, two contextual inbound links and explicit product boundaries."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-09-03",
+    "comparison": "latest 7 days versus previous 7 days",
+    "metrics": {
+      "clicks": "0 versus 1",
+      "impressions": "36 versus 69",
+      "ctr": "0% versus 1.4%",
+      "averagePosition": "41.8 versus 20.4"
+    },
+    "rootCause": "The costo-orario-autista-camion page lost 46 impressions while its average position improved from 2.5 to 1.5. Lost queries were unrelated private-driver and chauffeur-rental terms. This one corrected mismatch exceeds the net site loss of 33 impressions.",
+    "deviceEvidence": "Desktop impressions increased from 21 to 31; mobile fell from 47 to 5, matching the same irrelevant-query correction rather than a confirmed mobile technical fault.",
+    "indexingBacklog": [
+      "/it/guide/tempi-pagamento-autotrasporto/ — crawled, currently not indexed",
+      "/it/guide/calcolo-costi-trasporto-camion-excel/ — crawled, currently not indexed",
+      "/it/guide/costo-autostrada-furgone/ — discovered, currently not indexed",
+      "/it/guide/preventivo-trasporto-pdf/ — discovered, currently not indexed"
+    ],
+    "limitations": [
+      "Search Console does not expose a private ranking-cause label.",
+      "Indexing is controlled by Google and cannot be guaranteed by sitemap or request submission.",
+      "Directional Suggest data proves wording appears in suggestions, not volume or commercial value."
+    ]
+  },
+  "rejectedCandidates": [
+    {
+      "query": "costo trasporto al quintale",
+      "reason": "Exact Suggest signal exists, but this round rejects a separate URL because unit-based allocation overlaps the pallet decision and would risk thin cannibalization."
+    },
+    {
+      "query": "quanto costa mantenere un camion",
+      "reason": "Exact Suggest signal exists, but existing cost pillars already own complete annual and per-kilometre cost. A new URL would duplicate the established cluster."
+    },
+    {
+      "query": "costo traforo frejus camion",
+      "reason": "Exact Suggest signal exists, but publishing both alpine tunnels in one batch would repeat structure and dilute internal links; Monte Bianco has a verified 2026 operator tariff and wins this round."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "demand:round-17-costo-trasporto-pallet",
+      "primaryKeyword": "costo trasporto pallet",
+      "canonical": "/it/guide/costo-trasporto-pallet/",
+      "query": "costo trasporto pallet",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20trasporto%20pallet",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "costo trasporto pallet",
+        "costo trasporto pallet italia",
+        "calcolo costo trasporto pallet"
+      ],
+      "rawResponse": "[\"costo trasporto pallet\",[\"costo trasporto pallet\",\"costo trasporto pallet italia\",\"calcolo costo trasporto pallet\"],[],{\"google:suggestsubtypes\":[[22,30],[22,30],[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-official-pallet-and-cost-sources",
+      "signalNote": "Exact wording plus Italy and calculation variants are returned. EPAL defines the load carrier while MIT supports cost components, leaving a clear carrier-side calculation gap.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns order and pallet allocation from real mission cost, space, weight and handling. General trip-cost pages retain total mission ownership.",
+      "productFit": "RouteBudget calculates the supported mission base and price scenarios before external pallet-specific costs are added and the PDF is prepared.",
+      "productBoundary": "RouteBudget does not count pallets, optimize loading, calculate volumetric weight, book groupage or expose a dedicated price-per-pallet field.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20trasporto%20pallet",
+        "https://it.epal-pallets.org/centro-stampa/schede-tecniche/",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "id": "demand:round-17-costo-trasporto-refrigerato",
+      "primaryKeyword": "costo trasporto refrigerato",
+      "canonical": "/it/guide/costo-trasporto-refrigerato/",
+      "query": "costo trasporto refrigerato",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20trasporto%20refrigerato",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "costo trasporto refrigerato"
+      ],
+      "rawResponse": "[\"costo trasporto refrigerato\",[\"costo trasporto refrigerato\"],[],{\"google:suggestsubtypes\":[[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-current-atp-and-eu-rules",
+      "signalNote": "Exact Italian wording is returned. Current ATP, MIT technical-control and EU hygiene sources define a real operational boundary without supplying a universal market price.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns refrigerated incremental cost using vehicle kilometres and refrigeration-unit hours. Vehicle-consumption and general-cost pages retain their wider intents.",
+      "productFit": "RouteBudget supplies the supported route-cost base; the carrier adds measured refrigeration energy, equipment, washing and extra-time costs before margin review.",
+      "productBoundary": "RouteBudget does not monitor temperature, read refrigeration units, manage ATP certificates, prove cold-chain compliance or add a dedicated refrigerated-cost line.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20trasporto%20refrigerato",
+        "https://unece.org/transport/road-transport/text-and-status-agreement",
+        "https://www.mit.gov.it/index.php/documentazione/trasporto-merci-deperibili-atp-stazioni-di-prova-ed-esperti-per-i-controlli-tecnici",
+        "https://eur-lex.europa.eu/eli/reg/2004/852/oj/ita"
+      ]
+    },
+    {
+      "id": "demand:round-17-costo-traforo-monte-bianco-camion",
+      "primaryKeyword": "costo traforo monte bianco camion",
+      "canonical": "/it/guide/costo-traforo-monte-bianco-camion/",
+      "query": "costo traforo monte bianco camion",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20traforo%20monte%20bianco%20camion",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "costo traforo monte bianco camion",
+        "traforo monte bianco camion"
+      ],
+      "rawResponse": "[\"costo traforo monte bianco camion\",[\"costo traforo monte bianco camion\",\"traforo monte bianco camion\"],[],{\"google:suggestsubtypes\":[[512],[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-current-official-operator-tariff",
+      "signalNote": "Exact Italian wording and a broader heavy-vehicle variant are returned. The operator's 2026 service charter provides current class 3 and 4 prices and ticket validity.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns Monte Bianco 2026 class and ticket choice. France toll, general toll-calculation and route-cost pages retain broader network and method intent.",
+      "productFit": "The verified operator amount can be entered once in RouteBudget's supported manual toll input before the complete trip cost and price scenarios are reviewed.",
+      "productBoundary": "RouteBudget does not fetch live Monte Bianco tariffs, determine vehicle class, check closures, certify admissibility or provide heavy-vehicle navigation.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20traforo%20monte%20bianco%20camion",
+        "https://www.tunnelmb.net/public/files/301/01-carta-dei-servizi-ita-2026.pdf",
+        "https://tunnelmb.net/public/files/46577/23-gennaio-agosto-10-app-2025.pdf"
+      ]
+    }
+  ]
+}

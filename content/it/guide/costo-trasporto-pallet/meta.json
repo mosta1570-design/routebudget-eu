@@ -1,0 +1,66 @@
+{
+  "slug": "costo-trasporto-pallet",
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "title": "Costo trasporto pallet: calcolo del prezzo minimo per spedizione",
+  "mobileH1": "Costo trasporto pallet: prezzo minimo",
+  "description": "Metodo operativo per calcolare il costo di un trasporto pallet da tratta, spazio, peso, soste e movimentazioni, senza copiare tariffe medie.",
+  "eyebrow": "Preventivi · Pallet",
+  "published": "2026-09-03",
+  "modified": "2026-09-03",
+  "reviewed": "2026-09-03",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "primaryKeyword": "costo trasporto pallet",
+  "secondaryKeywords": [
+    "costo trasporto pallet Italia",
+    "calcolo costo trasporto pallet",
+    "prezzo trasporto bancale",
+    "costo pallet per spedizione"
+  ],
+  "searchIntent": "informational-commercial",
+  "cluster": "preventivi-trasporto",
+  "topics": [
+    "costo per pallet",
+    "spazio e peso tassabile",
+    "presa e consegna",
+    "movimentazione bancali",
+    "prezzo minimo di trasporto"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:preventivo-trasporto",
+    "guide:ritorno-a-vuoto-autotrasporto",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:preventivo-trasporto",
+  "calculatorId": null,
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-scenarios",
+  "translationGroup": "costo-trasporto-pallet",
+  "canonical": "/it/guide/costo-trasporto-pallet/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "EPAL Italia — Schede tecniche pallet",
+      "url": "https://it.epal-pallets.org/centro-stampa/schede-tecniche/",
+      "publishedOrUpdated": "Schede tecniche correnti consultate il 3 settembre 2026",
+      "geography": "Italia ed Europa",
+      "accessedAt": "2026-09-03",
+      "supports": "Dimensioni dei diversi formati EPAL, compreso l'Euro pallet EPAL 1 da 800 × 1200 mm; il formato non determina da solo il prezzo del trasporto."
+    },
+    {
+      "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
+      "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
+      "publishedOrUpdated": "17 marzo 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-03",
+      "supports": "Componenti italiane del costo di esercizio da usare come controllo del costo vettore, non come tariffa per pallet o listino commerciale universale."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: metodo dedicato per trasformare il costo completo della missione in costo ordine e costo pallet, con controlli su sagoma, peso, soste, movimentazioni e margine."
+}
