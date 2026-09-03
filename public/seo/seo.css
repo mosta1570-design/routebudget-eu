@@ -78,19 +78,21 @@ html {
   scrollbar-color: var(--steel) var(--night-deep);
 }
 
-::-webkit-scrollbar {
-  width: 11px;
-  height: 11px;
-}
+@media (hover: hover) and (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--night-deep);
-}
+  ::-webkit-scrollbar-track {
+    background: var(--night-deep);
+  }
 
-::-webkit-scrollbar-thumb {
-  border: 3px solid var(--night-deep);
-  border-radius: 999px;
-  background: var(--steel);
+  ::-webkit-scrollbar-thumb {
+    border: 3px solid var(--night-deep);
+    border-radius: 999px;
+    background: var(--steel);
+  }
 }
 
 body {
@@ -622,6 +624,7 @@ li {
   width: 100%;
   margin-top: 1.8rem;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-inline: contain;
   scrollbar-gutter: stable;
 }
@@ -1896,6 +1899,35 @@ li {
 
   .reading-progress {
     display: none;
+  }
+
+  /* Small data tables belong to the vertical reading flow, not a nested
+     scrolling view. Keep wide comparison matrices horizontally accessible. */
+  .seo-prose .table-scroll {
+    scrollbar-gutter: auto;
+  }
+
+  .seo-prose .table-scroll[data-columns="2"],
+  .seo-prose .table-scroll[data-columns="3"] {
+    overflow: visible;
+  }
+
+  .seo-prose .table-scroll[data-columns="2"] table,
+  .seo-prose .table-scroll[data-columns="3"] table {
+    table-layout: fixed;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .seo-prose .table-scroll[data-columns="2"] :is(th, td),
+  .seo-prose .table-scroll[data-columns="3"] :is(th, td) {
+    min-width: 0;
+    padding-inline: 10px;
+    vertical-align: top;
+  }
+
+  .seo-prose .table-scroll[data-columns="2"] th:first-child {
+    width: 36%;
   }
 
   .seo-prose h2,

@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-09-03-scroll-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-03-table-scroll-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
-    "/it/calcolatori/": "sha256:9512b7135db1821934acd3f6a1109a484c85178ee4711e7efbee25d7a4e6186d",
-    "/it/guide/": "sha256:a90039b5457058f62906b5d896141f408c971a598161dc169c7f6c1d5c29a460",
+    "/it/calcolatori/": "sha256:c294c9d4bfc52ddac2c70897555a5b2638babbd00e2a3b059cd5ad76ad9e8a37",
+    "/it/guide/": "sha256:d166576eec9e2dcc009ba8d6a2145c180358e84ccaf6ebbdbce3a1448ae6f5d6",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
     "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
   },

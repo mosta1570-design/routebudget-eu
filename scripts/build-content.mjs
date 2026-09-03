@@ -1,4 +1,5 @@
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -111,6 +112,15 @@ const config = JSON.parse(await readFile(path.join(CONTENT_ROOT, 'site.json'), '
 const sourceRegistry = JSON.parse(await readFile(path.join(CONTENT_ROOT, 'sources.json'), 'utf8'));
 validateConfig(config);
 const siteUrl = `${config.origin}${config.basePath}`;
+// Public assets bypass Vite's hashed bundle names. Give each reading asset a
+// deterministic URL so repeat visitors do not reuse pre-deployment CSS/JS.
+const readingAssetUrls = Object.fromEntries(await Promise.all(
+  ['seo/seo.css', 'seo/events.js'].map(async (asset) => {
+    const bytes = await readFile(path.join(ROOT, 'public', asset));
+    const version = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
+    return [asset, `${config.basePath}/${asset}?v=${version}`];
+  }),
+));
 const allPages = await loadPages();
 const pages = allPages.filter((page) => page.meta.status === 'published' && page.meta.noindex === false);
 const pagesById = new Map(pages.map((page) => [page.id, page]));
@@ -666,9 +676,9 @@ function renderHead({ title, description, canonicalPath, type, modified, publish
     <meta name="twitter:description" content="${escapeAttr(description)}" />
     <meta name="twitter:image" content="${escapeAttr(ogImage)}" />
     <link rel="icon" type="image/png" href="${config.basePath}/logo-ui.png" />
-    <link rel="stylesheet" href="${config.basePath}/seo/seo.css" />
+    <link rel="stylesheet" href="${readingAssetUrls['seo/seo.css']}" />
     <script type="application/ld+json">${safeJson(schema)}</script>
-    <script src="${config.basePath}/seo/events.js" defer></script>
+    <script src="${readingAssetUrls['seo/events.js']}" defer></script>
     ${calculator ? `<script type="module" src="${config.basePath}/seo/calculators.js"></script>` : ''}
     <title>${escapeHtml(title)}</title>
   </head>`;
@@ -1356,7 +1366,9 @@ function renderMarkdown(markdown) {
   let tableIndex = 0;
   return sanitized.replace(/<table>[\s\S]*?<\/table>/g, (table) => {
     tableIndex += 1;
-    return `<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole ${tableIndex}">${table}</div>`;
+    const header = table.match(/<thead>([\s\S]*?)<\/thead>/)?.[1] ?? '';
+    const columns = (header.match(/<th(?:\s|>)/g) ?? []).length;
+    return `<div class="table-scroll" data-columns="${columns}" tabindex="0" role="region" aria-label="Tabella dati ${tableIndex}">${table}</div>`;
   });
 }
 

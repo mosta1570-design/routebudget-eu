@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { access, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -63,11 +64,19 @@ const titles = new Set();
 const descriptions = new Set();
 const htmlByRoute = new Map();
 const incoming = new Map(generatedRoutes.map((route) => [route, 0]));
+const readingAssets = await Promise.all(['seo/seo.css', 'seo/events.js'].map(async (asset) => {
+  const bytes = await readFile(path.join(DIST, asset));
+  const version = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
+  return `${BASE}/${asset}?v=${version}`;
+}));
 
 for (const route of [...hubPaths, ...pagePaths]) {
   const html = await readFile(routeToFile(route), 'utf8');
   htmlByRoute.set(route, html);
   verifyIndexableDocument(route, html);
+  for (const asset of readingAssets) {
+    assert(html.includes(`"${asset}"`), `${route}: reading asset must carry its content version: ${asset}`);
+  }
 
   const sourcePage = sourcePages.find((page) => page.urlPath === route);
   const schema = parseSchema(route, html);
@@ -81,8 +90,12 @@ for (const route of [...hubPaths, ...pagePaths]) {
     assert(html.includes('store-badges/google-play-it.png'), `${route}: official Google Play badge missing`);
     assert(html.includes('data-analytics-event="store_outbound"'), `${route}: product CTA event contract missing`);
     const tableCount = (html.match(/<table>/g) || []).length;
-    const accessibleTableCount = (html.match(/<div class="table-scroll" tabindex="0" role="region" aria-label="Tabella dati scorrevole \d+"><table>/g) || []).length;
+    const accessibleTableCount = (html.match(/<div class="table-scroll" data-columns="\d+" tabindex="0" role="region" aria-label="Tabella dati \d+"><table>/g) || []).length;
     assert.equal(accessibleTableCount, tableCount, `${route}: every data table needs a named keyboard-scroll region`);
+    for (const match of html.matchAll(/<div class="table-scroll" data-columns="(\d+)"[^>]*><table>([\s\S]*?)<\/table>/g)) {
+      const header = match[2].match(/<thead>([\s\S]*?)<\/thead>/)?.[1] ?? '';
+      assert.equal(Number(match[1]), (header.match(/<th(?:\s|>)/g) ?? []).length, `${route}: table column count must match semantic headers`);
+    }
     const h1Matches = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
     assert.equal(h1Matches.length, 1, `${route}: exactly one semantic H1 required`);
     assert.equal(h1Matches[0][1], escapeHtmlText(sourcePage.meta.title), `${route}: H1 must match escaped editorial title`);

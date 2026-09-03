@@ -72,6 +72,13 @@ for (const profile of profiles) {
             progressDisplay: bar && getComputedStyle(bar).display,
             progressWrites: window.__progressWrites,
             tableCount: document.querySelectorAll('.table-scroll').length,
+            tables: [...document.querySelectorAll('.table-scroll')].map((table) => ({
+              columns: Number(table.dataset.columns),
+              overflowX: getComputedStyle(table).overflowX,
+              overflowY: getComputedStyle(table).overflowY,
+              excessWidth: table.scrollWidth - table.clientWidth,
+              excessHeight: table.scrollHeight - table.clientHeight,
+            })),
           };
         });
         if (profile.touch && ui.headerPosition) {
@@ -81,6 +88,17 @@ for (const profile of profiles) {
           assert.equal(ui.progressWrites, 0, `${route}: touch scrolling must not update progress style`);
         }
         if (!profile.touch && ui.headerPosition) assert.equal(ui.headerPosition, 'sticky', `${route}: desktop navigation behavior must be preserved`);
+        for (const table of ui.tables) {
+          if (profile.touch && [2, 3].includes(table.columns)) {
+            assert.equal(table.overflowX, 'visible', `${route}: simple touch table must not create a nested scroller`);
+            assert.equal(table.overflowY, 'visible', `${route}: simple touch table must remain in document flow`);
+            assert(table.excessWidth <= 1, `${route}: wrapped touch table must fit the viewport`);
+          } else {
+            assert.equal(table.overflowX, 'auto', `${route}: wide/desktop tables must retain horizontal scrolling`);
+            assert.equal(table.overflowY, 'hidden', `${route}: horizontal tables must not capture vertical scrolling`);
+            assert(table.excessHeight <= 1, `${route}: table contents must not be clipped vertically`);
+          }
+        }
         assert.equal(errors.length, 0, `${route}: page errors: ${errors.join('; ')}`);
         if (screenshotRoutes.has(route)) {
           const name = route === '/' ? 'home' : route.split('/').filter(Boolean).at(-1);
