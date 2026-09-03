@@ -1879,7 +1879,39 @@ li {
   }
 }
 
+/* Keep long-form touch reading in normal document flow. In particular, avoid
+   fixed/sticky backdrop sampling while iOS browser toolbars resize the viewport.
+   Desktop retains the existing sticky navigation and reading progress. */
+@media (max-width: 980px), (hover: none), (pointer: coarse) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .seo-header {
+    position: relative;
+    background: var(--night-deep);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .reading-progress {
+    display: none;
+  }
+
+  .seo-prose h2,
+  .seo-prose h3,
+  .seo-prose h4,
+  .sources h2,
+  .editorial-note h2 {
+    scroll-margin-top: 28px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .reading-progress {
+    display: none;
+  }
+
   html {
     scroll-behavior: auto;
   }

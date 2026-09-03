@@ -102,19 +102,38 @@
 
   const readingProgress = document.querySelector('.reading-progress__bar');
   if (readingProgress) {
+    // Touch reading stays on the native scrolling path: no fixed progress layer
+    // or scroll-driven DOM writes while browser toolbars expand and collapse.
+    const progressMedia = window.matchMedia('(min-width: 981px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
     let progressFrame = null;
+    let progressActive = false;
     const updateReadingProgress = () => {
+      progressFrame = null;
+      if (!progressActive) return;
       const scrollable = document.documentElement.scrollHeight - window.innerHeight;
       const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
       readingProgress.style.transform = `scaleX(${progress})`;
-      progressFrame = null;
     };
     const requestReadingProgress = () => {
       if (progressFrame === null) progressFrame = window.requestAnimationFrame(updateReadingProgress);
     };
-    updateReadingProgress();
-    window.addEventListener('scroll', requestReadingProgress, { passive: true });
-    window.addEventListener('resize', requestReadingProgress);
+    const syncReadingProgress = () => {
+      if (progressActive === progressMedia.matches) return;
+      progressActive = progressMedia.matches;
+      if (progressActive) {
+        updateReadingProgress();
+        window.addEventListener('scroll', requestReadingProgress, { passive: true });
+        window.addEventListener('resize', requestReadingProgress);
+      } else {
+        window.removeEventListener('scroll', requestReadingProgress);
+        window.removeEventListener('resize', requestReadingProgress);
+        if (progressFrame !== null) window.cancelAnimationFrame(progressFrame);
+        progressFrame = null;
+        readingProgress.style.removeProperty('transform');
+      }
+    };
+    syncReadingProgress();
+    progressMedia.addEventListener('change', syncReadingProgress);
   }
 
   document.addEventListener('click', (event) => {
