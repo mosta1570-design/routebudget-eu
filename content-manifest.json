@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-09-03",
+  "revisionDate": "2026-09-04",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -146,6 +146,18 @@
       "modified": "2026-08-22"
     },
     {
+      "id": "it:guide:calcolo-peso-volumetrico",
+      "url": "https://routebudget.eu/it/guide/calcolo-peso-volumetrico/",
+      "title": "Calcolo peso volumetrico: quale peso conta nel preventivo?",
+      "description": "Calcola volume e peso volumetrico con unità corrette. Esempio pallet, coefficiente contrattuale e scheda per controllare il peso tassabile prima del preventivo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/calcolo-peso-volumetrico/",
+      "indexable": true,
+      "primaryKeyword": "calcolo peso volumetrico",
+      "modified": "2026-09-04"
+    },
+    {
       "id": "it:guide:clausola-adeguamento-carburante-autotrasporto",
       "url": "https://routebudget.eu/it/guide/clausola-adeguamento-carburante-autotrasporto/",
       "title": "Clausola adeguamento carburante autotrasporto: guida 2026",
@@ -156,6 +168,18 @@
       "indexable": true,
       "primaryKeyword": "clausola adeguamento carburante autotrasporto",
       "modified": "2026-08-22"
+    },
+    {
+      "id": "it:guide:consegna-con-sponda-idraulica",
+      "url": "https://routebudget.eu/it/guide/consegna-con-sponda-idraulica/",
+      "title": "Consegna con sponda idraulica: cosa include e quali costi verificare",
+      "description": "Scarico senza muletto: cosa comprende la sponda idraulica, quali accessi verificare e come evitare supplementi duplicati. Scheda pronta per chiedere l'offerta.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/consegna-con-sponda-idraulica/",
+      "indexable": true,
+      "primaryKeyword": "consegna con sponda idraulica",
+      "modified": "2026-09-04"
     },
     {
       "id": "it:guide:consumo-adblue-camion",
@@ -350,6 +374,18 @@
       "modified": "2026-08-17"
     },
     {
+      "id": "it:guide:costo-trasporto-dedicato",
+      "url": "https://routebudget.eu/it/guide/costo-trasporto-dedicato/",
+      "title": "Costo trasporto dedicato: quando conviene rispetto al groupage",
+      "description": "Confronta dedicato e groupage sullo stesso servizio: missione completa, esempio di costo, margine e condizioni da verificare prima di accettare o inviare il prezzo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-trasporto-dedicato/",
+      "indexable": true,
+      "primaryKeyword": "costo trasporto dedicato",
+      "modified": "2026-09-04"
+    },
+    {
       "id": "it:guide:costo-trasporto-pallet",
       "url": "https://routebudget.eu/it/guide/costo-trasporto-pallet/",
       "title": "Costo trasporto pallet: calcolo del prezzo minimo per spedizione",
@@ -359,7 +395,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-trasporto-pallet/",
       "indexable": true,
       "primaryKeyword": "costo trasporto pallet",
-      "modified": "2026-09-03"
+      "modified": "2026-09-04"
     },
     {
       "id": "it:guide:costo-trasporto-refrigerato",
@@ -599,7 +635,7 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto PDF",
-      "modified": "2026-08-23"
+      "modified": "2026-09-04"
     },
     {
       "id": "it:guide:preventivo-trasporto",
