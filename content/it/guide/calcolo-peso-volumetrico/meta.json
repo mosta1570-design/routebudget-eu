@@ -1,0 +1,65 @@
+{
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "published": "2026-09-04",
+  "modified": "2026-09-04",
+  "reviewed": "2026-09-04",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "searchIntent": "informational-commercial",
+  "cluster": "preventivi-trasporto",
+  "calculatorId": null,
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "slug": "calcolo-peso-volumetrico",
+  "title": "Calcolo peso volumetrico: quale peso conta nel preventivo?",
+  "mobileH1": "Peso volumetrico: calcolo e peso tassabile",
+  "description": "Calcola volume e peso volumetrico con unità corrette. Esempio pallet, coefficiente contrattuale e scheda per controllare il peso tassabile prima del preventivo.",
+  "eyebrow": "Spedizioni · Peso tassabile",
+  "primaryKeyword": "calcolo peso volumetrico",
+  "secondaryKeywords": [
+    "peso tassabile trasporto",
+    "rapporto peso volume spedizione",
+    "peso volumetrico pallet",
+    "coefficiente peso volumetrico"
+  ],
+  "topics": [
+    "misurazione colli",
+    "coefficiente kg per metro cubo",
+    "peso lordo e tassabile",
+    "verifica conteggio vettore"
+  ],
+  "related": [
+    "guide:preventivo-trasporto",
+    "guide:costo-trasporto-pallet",
+    "guide:preventivo-trasporto-pdf",
+    "guide:costo-trasporto-dedicato",
+    "calcolatori:costo-chilometrico-camion"
+  ],
+  "relatedCalculator": "calcolatori:costo-chilometrico-camion",
+  "pillar": "guide:preventivo-trasporto",
+  "conversionIntent": "complete-trip",
+  "appFeature": "complete-route-calculation",
+  "sources": [
+    {
+      "label": "BRT — Per spedire, pagina 6",
+      "url": "https://www.brt.it/wp-content/uploads/sites/275/2023/07/Per-Spedire.pdf",
+      "publishedOrUpdated": "Data editoriale non indicata; consultato il 4 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-04",
+      "supports": "Formula volume per coefficiente contrattuale; 300 kg/m³ è il riferimento dell'esempio stradale, non un coefficiente universale garantito."
+    },
+    {
+      "label": "DHL Italia — Calcolo dei pesi addebitabili",
+      "url": "https://www.dhl.com/it-it/home/global-forwarding/centro-di-formazione-sul-trasporto-merci/calcolo-dei-pesi-addebitabili.html",
+      "publishedOrUpdated": "Data editoriale non indicata; consultato il 4 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-04",
+      "supports": "Distinzione tra peso lordo e volumetrico; criterio del maggiore e variabilità dei rapporti nel trasporto terrestre."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: esempio originale 200/432/288 kg, formula con unità, controllo del criterio contrattuale e scheda richiesta. Non è un nuovo listino pallet o una funzione del prodotto.",
+  "translationGroup": "calcolo-peso-volumetrico",
+  "canonical": "/it/guide/calcolo-peso-volumetrico/"
+}

@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-09-03-table-scroll-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-04-editorial-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
     "/it/calcolatori/": "sha256:c294c9d4bfc52ddac2c70897555a5b2638babbd00e2a3b059cd5ad76ad9e8a37",
-    "/it/guide/": "sha256:d166576eec9e2dcc009ba8d6a2145c180358e84ccaf6ebbdbce3a1448ae6f5d6",
+    "/it/guide/": "sha256:ff808877f5ed58f2f80dc082a61ff6f6ac07e1982b5faf94df0b4085ba8e0bf0",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
     "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
   },
@@ -21,7 +21,9 @@
       "intentOwner": "calcolo costo trasporto",
       "demandEvidenceId": "demand:recovery-calcolo-costo-trasporto-20260831",
       "approvalId": "review:2026-09-03-calcolo-costo-trasporto",
-      "productProofIds": ["complete-route-calculation"],
+      "productProofIds": [
+        "complete-route-calculation"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
@@ -34,7 +36,9 @@
       "intentOwner": "costi autotrasporto",
       "demandEvidenceId": "demand:maintenance-costi-autotrasporto",
       "approvalId": "review:2026-09-03-costi-autotrasporto",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
@@ -47,7 +51,9 @@
       "intentOwner": "costo furgone per km",
       "demandEvidenceId": "demand:maintenance-costo-furgone-per-km",
       "approvalId": "review:2026-08-23-costo-furgone-per-km",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": []
     },
     {
@@ -58,7 +64,9 @@
       "intentOwner": "costo orario autista camion",
       "demandEvidenceId": "demand:recovery-costo-orario-autista-camion",
       "approvalId": "review:2026-08-28-costo-orario-autista-camion",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://www.lavoro.gov.it/temi-e-priorita/rapporti-di-lavoro-e-relazioni-industriali/focus/settore-della-logistica-trasporto-merci-spedizione"
       ]
@@ -70,8 +78,10 @@
       "changeScope": "metadata-or-links",
       "intentOwner": "preventivo trasporto PDF",
       "demandEvidenceId": "demand:maintenance-preventivo-trasporto-pdf",
-      "approvalId": "review:2026-08-23-preventivo-trasporto-pdf",
-      "productProofIds": ["pdf-quote"],
+      "approvalId": "review:2026-09-04-preventivo-trasporto-pdf",
+      "productProofIds": [
+        "pdf-quote"
+      ],
       "primarySourceUrls": []
     },
     {
@@ -82,7 +92,9 @@
       "intentOwner": "analisi sensibilità margine tratta",
       "demandEvidenceId": "demand:recovery-proteggere-margine-20260831",
       "approvalId": "review:2026-08-31-proteggere-margine-tratta",
-      "productProofIds": ["cost-scenarios"],
+      "productProofIds": [
+        "cost-scenarios"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
         "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti"
@@ -96,7 +108,9 @@
       "intentOwner": "quanto consuma un camion",
       "demandEvidenceId": "demand:recovery-quanto-consuma-camion-20260831",
       "approvalId": "review:2026-09-02-quanto-consuma-camion",
-      "productProofIds": ["fuel-estimate"],
+      "productProofIds": [
+        "fuel-estimate"
+      ],
       "primarySourceUrls": [
         "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
@@ -110,7 +124,9 @@
       "intentOwner": "quanto consuma un furgone",
       "demandEvidenceId": "demand:maintenance-quanto-consuma-furgone",
       "approvalId": "review:2026-08-23-quanto-consuma-un-furgone",
-      "productProofIds": ["fuel-estimate"],
+      "productProofIds": [
+        "fuel-estimate"
+      ],
       "primarySourceUrls": []
     },
     {
@@ -121,7 +137,9 @@
       "intentOwner": "indennizzo tempi di attesa carico scarico autotrasporto",
       "demandEvidenceId": "demand:maintenance-tempi-attesa",
       "approvalId": "review:2026-08-28-tempi-attesa",
-      "productProofIds": ["pdf-quote"],
+      "productProofIds": [
+        "pdf-quote"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
         "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=25A04106&art.dataPubblicazioneGazzetta=2025-07-19&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1"
@@ -135,7 +153,9 @@
       "intentOwner": "calcolo tempi di guida e riposo camion",
       "demandEvidenceId": "demand:maintenance-tempi-guida-riposo",
       "approvalId": "review:2026-08-23-tempi-guida-riposo",
-      "productProofIds": ["complete-route-calculation"],
+      "productProofIds": [
+        "complete-route-calculation"
+      ],
       "primarySourceUrls": [
         "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:02006R0561-20241231",
         "https://transport.ec.europa.eu/transport-modes/road/tachograph_en?prefLang=it"
@@ -149,7 +169,9 @@
       "intentOwner": "calcolatore costo carburante viaggio",
       "demandEvidenceId": "demand:recovery-costo-carburante-viaggio-20260831",
       "approvalId": "review:2026-08-31-costo-carburante-viaggio",
-      "productProofIds": ["fuel-estimate"],
+      "productProofIds": [
+        "fuel-estimate"
+      ],
       "primarySourceUrls": [
         "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
         "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
@@ -163,7 +185,9 @@
       "intentOwner": "costo km camion",
       "demandEvidenceId": "demand:recovery-costo-km-camion-20260831",
       "approvalId": "review:2026-09-02-costo-chilometrico-camion",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
@@ -176,7 +200,9 @@
       "intentOwner": "quanto costa ricaricare un furgone elettrico",
       "demandEvidenceId": "demand:round-12-ricarica-furgone-elettrico",
       "approvalId": "review:2026-08-23-ricarica-furgone-elettrico",
-      "productProofIds": ["fuel-estimate"],
+      "productProofIds": [
+        "fuel-estimate"
+      ],
       "primarySourceUrls": [
         "https://www.fiat.it/professional/modello/ducato-elettrico/ricarica-rapida",
         "https://eur-lex.europa.eu/eli/reg/2023/1804/oj?locale=it",
@@ -191,7 +217,9 @@
       "intentOwner": "come calcolare il prezzo di un trasporto",
       "demandEvidenceId": "demand:round-12-margine-trasporto",
       "approvalId": "review:2026-08-23-margine-trasporto",
-      "productProofIds": ["cost-scenarios"],
+      "productProofIds": [
+        "cost-scenarios"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
         "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/Legenda.pdf"
@@ -205,7 +233,9 @@
       "intentOwner": "calcolatore dei tempi di guida",
       "demandEvidenceId": "demand:round-12-tempi-guida-camion",
       "approvalId": "review:2026-08-23-tempi-guida-camion",
-      "productProofIds": ["complete-route-calculation"],
+      "productProofIds": [
+        "complete-route-calculation"
+      ],
       "primarySourceUrls": [
         "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A02006R0561-20241231",
         "https://transport.ec.europa.eu/transport-modes/road/mobility-package-i/driving-rest-times_en"
@@ -219,7 +249,9 @@
       "intentOwner": "conviene comprare un furgone elettrico",
       "demandEvidenceId": "demand:round-13-conviene-furgone-elettrico",
       "approvalId": "review:2026-08-25-conviene-furgone-elettrico",
-      "productProofIds": ["fuel-estimate"],
+      "productProofIds": [
+        "fuel-estimate"
+      ],
       "primarySourceUrls": [
         "https://www.arera.it/fileadmin/allegati/faq/faq_veicoli_ele.pdf",
         "https://www.arera.it/atti-e-provvedimenti/dettaglio/25/22-25",
@@ -234,7 +266,9 @@
       "intentOwner": "guadagno padroncino camion",
       "demandEvidenceId": "demand:round-13-guadagno-padroncino-camion",
       "approvalId": "review:2026-08-25-guadagno-padroncino-camion",
-      "productProofIds": ["cost-scenarios"],
+      "productProofIds": [
+        "cost-scenarios"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
         "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.02.circolare-numero-14-del-09-02-2026_15162.html",
@@ -249,7 +283,9 @@
       "intentOwner": "trasporto spot significato",
       "demandEvidenceId": "demand:round-13-trasporto-spot",
       "approvalId": "review:2026-08-28-trasporto-spot",
-      "productProofIds": ["cost-scenarios"],
+      "productProofIds": [
+        "cost-scenarios"
+      ],
       "primarySourceUrls": [
         "https://www.iru.org/resources/iru-library/european-road-freight-rate-development-benchmark-q2-2026",
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
@@ -264,7 +300,9 @@
       "intentOwner": "quanto costa aprire una ditta di trasporti",
       "demandEvidenceId": "demand:round-14-aprire-ditta-trasporti",
       "approvalId": "review:2026-08-29-aprire-ditta-trasporti",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://www.mo.camcom.it/sportello-genesi/sportello-genesi/modulistica/autotrasporto-merci-conto-terzi-scheda-informativa",
         "https://www.mit.gov.it/node/2666",
@@ -279,7 +317,9 @@
       "intentOwner": "idoneità finanziaria autotrasporto",
       "demandEvidenceId": "demand:round-14-idoneita-finanziaria",
       "approvalId": "review:2026-08-29-idoneita-finanziaria",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://mit.gov.it/normativa/circolare-protocollo-n-4499-del-17022026",
         "https://eur-lex.europa.eu/legal-content/IT/ALL/?uri=CELEX%3A32009R1071",
@@ -294,7 +334,9 @@
       "intentOwner": "tempi di pagamento autotrasporto",
       "demandEvidenceId": "demand:round-14-tempi-pagamento",
       "approvalId": "review:2026-08-29-tempi-pagamento",
-      "productProofIds": ["pdf-quote"],
+      "productProofIds": [
+        "pdf-quote"
+      ],
       "primarySourceUrls": [
         "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legge%3A2008-06-25%3B112~art83bis-com17=",
         "https://www.mit.gov.it/comunicazione/news/autotrasporto-misure-significative-nel-decreto-infrastrutture",
@@ -309,7 +351,9 @@
       "intentOwner": "costo pneumatici camion",
       "demandEvidenceId": "demand:round-15-costo-pneumatici-camion",
       "approvalId": "review:2026-08-30-costo-pneumatici-camion",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
         "https://www.mit.gov.it/nfsmitgov/files/media/documentazione/2026-03/TABELLA%20D_Costi%20Esercizio%20Imprese_Modello%20costi_mar2026_pedaggi%20al%20netto%20IVA.pdf"
@@ -323,7 +367,9 @@
       "intentOwner": "costo fermo camion",
       "demandEvidenceId": "demand:round-15-costo-fermo-camion",
       "approvalId": "review:2026-08-30-costo-fermo-camion",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
@@ -336,7 +382,11 @@
       "intentOwner": "preventivo consuntivo viaggio camion",
       "demandEvidenceId": "demand:round-15-preventivo-consuntivo-viaggio-camion",
       "approvalId": "review:2026-08-30-preventivo-consuntivo-viaggio-camion",
-      "productProofIds": ["local-archive", "cost-scenarios", "pdf-quote"],
+      "productProofIds": [
+        "local-archive",
+        "cost-scenarios",
+        "pdf-quote"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
@@ -349,7 +399,9 @@
       "intentOwner": "costo assicurazione camion",
       "demandEvidenceId": "demand:round-16-costo-assicurazione-camion",
       "approvalId": "review:2026-09-02-costo-assicurazione-camion",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6",
         "https://web.aci.it/servizi/calcolo-costi-chilometrici/",
@@ -364,7 +416,9 @@
       "intentOwner": "costo leasing camion",
       "demandEvidenceId": "demand:round-16-costo-leasing-camion",
       "approvalId": "review:2026-09-02-costo-leasing-camion",
-      "productProofIds": ["cost-breakdown"],
+      "productProofIds": [
+        "cost-breakdown"
+      ],
       "primarySourceUrls": [
         "https://www.bancaditalia.it/compiti/vigilanza/normativa/archivio-norme/circolari/c139/2025.02.13/Circolare-139-21-aggiornamento.pdf",
         "https://www.aci.it/fileadmin/documenti/servizi_online/Costi_chilometrici/Metodologia_2018.pdf",
@@ -379,7 +433,9 @@
       "intentOwner": "consumo AdBlue camion",
       "demandEvidenceId": "demand:round-16-consumo-adblue-camion",
       "approvalId": "review:2026-09-02-consumo-adblue-camion",
-      "productProofIds": ["fuel-estimate"],
+      "productProofIds": [
+        "fuel-estimate"
+      ],
       "primarySourceUrls": [
         "https://www.acea.auto/fact/diesel-exhaust-fluid-adblue/",
         "https://www.volkswagen-veicolicommerciali.it/it/service/servizi-e-assistenza/ricambi-oli-motore-fluidi/liquido-adblue.html",
@@ -393,8 +449,11 @@
       "changeScope": "new-content",
       "intentOwner": "costo trasporto pallet",
       "demandEvidenceId": "demand:round-17-costo-trasporto-pallet",
-      "approvalId": "review:2026-09-03-costo-trasporto-pallet",
-      "productProofIds": ["cost-scenarios", "pdf-quote"],
+      "approvalId": "review:2026-09-04-costo-trasporto-pallet",
+      "productProofIds": [
+        "cost-scenarios",
+        "pdf-quote"
+      ],
       "primarySourceUrls": [
         "https://it.epal-pallets.org/centro-stampa/schede-tecniche/",
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
@@ -408,7 +467,10 @@
       "intentOwner": "costo trasporto refrigerato",
       "demandEvidenceId": "demand:round-17-costo-trasporto-refrigerato",
       "approvalId": "review:2026-09-03-costo-trasporto-refrigerato",
-      "productProofIds": ["cost-breakdown", "cost-scenarios"],
+      "productProofIds": [
+        "cost-breakdown",
+        "cost-scenarios"
+      ],
       "primarySourceUrls": [
         "https://unece.org/transport/road-transport/text-and-status-agreement",
         "https://www.mit.gov.it/index.php/documentazione/trasporto-merci-deperibili-atp-stazioni-di-prova-ed-esperti-per-i-controlli-tecnici",
@@ -423,10 +485,60 @@
       "intentOwner": "costo traforo monte bianco camion",
       "demandEvidenceId": "demand:round-17-costo-traforo-monte-bianco-camion",
       "approvalId": "review:2026-09-03-costo-traforo-monte-bianco-camion",
-      "productProofIds": ["complete-route-calculation"],
+      "productProofIds": [
+        "complete-route-calculation"
+      ],
       "primarySourceUrls": [
         "https://www.tunnelmb.net/public/files/301/01-carta-dei-servizi-ita-2026.pdf",
         "https://tunnelmb.net/public/files/46577/23-gennaio-agosto-10-app-2025.pdf"
+      ]
+    },
+    {
+      "contentId": "guide/calcolo-peso-volumetrico",
+      "canonical": "/it/guide/calcolo-peso-volumetrico/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "calcolo peso volumetrico",
+      "demandEvidenceId": "demand:round-18-calcolo-peso-volumetrico",
+      "approvalId": "review:2026-09-04-calcolo-peso-volumetrico",
+      "productProofIds": [
+        "complete-route-calculation"
+      ],
+      "primarySourceUrls": [
+        "https://www.brt.it/wp-content/uploads/sites/275/2023/07/Per-Spedire.pdf",
+        "https://www.dhl.com/it-it/home/global-forwarding/centro-di-formazione-sul-trasporto-merci/calcolo-dei-pesi-addebitabili.html"
+      ]
+    },
+    {
+      "contentId": "guide/consegna-con-sponda-idraulica",
+      "canonical": "/it/guide/consegna-con-sponda-idraulica/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "consegna con sponda idraulica",
+      "demandEvidenceId": "demand:round-18-consegna-con-sponda-idraulica",
+      "approvalId": "review:2026-09-04-consegna-con-sponda-idraulica",
+      "productProofIds": [
+        "pdf-quote"
+      ],
+      "primarySourceUrls": [
+        "https://www.corbettispedizioni.it/it/trasporti/trasporto-con-sponda-idraulica",
+        "https://palletways.online/it/termini-e-condizioni/"
+      ]
+    },
+    {
+      "contentId": "guide/costo-trasporto-dedicato",
+      "canonical": "/it/guide/costo-trasporto-dedicato/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "costo trasporto dedicato",
+      "demandEvidenceId": "demand:round-18-costo-trasporto-dedicato",
+      "approvalId": "review:2026-09-04-costo-trasporto-dedicato",
+      "productProofIds": [
+        "cost-scenarios"
+      ],
+      "primarySourceUrls": [
+        "https://www.dhl.com/it-it/home/spedizioni/soluzioni-di-trasporto-ltl.html",
+        "https://www.maliktrasporti.it/service/trasporto-dedicato/"
       ]
     }
   ],

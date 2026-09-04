@@ -1,0 +1,65 @@
+{
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "published": "2026-09-04",
+  "modified": "2026-09-04",
+  "reviewed": "2026-09-04",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "searchIntent": "informational-commercial",
+  "cluster": "preventivi-trasporto",
+  "calculatorId": null,
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "slug": "consegna-con-sponda-idraulica",
+  "title": "Consegna con sponda idraulica: cosa include e quali costi verificare",
+  "mobileH1": "Consegna con sponda: servizi e costi",
+  "description": "Scarico senza muletto: cosa comprende la sponda idraulica, quali accessi verificare e come evitare supplementi duplicati. Scheda pronta per chiedere l'offerta.",
+  "eyebrow": "Consegne · Servizi accessori",
+  "primaryKeyword": "consegna con sponda idraulica",
+  "secondaryKeywords": [
+    "scarico pallet senza muletto",
+    "supplemento sponda idraulica",
+    "ritiro e consegna con sponda idraulica",
+    "cosa comprende consegna con sponda"
+  ],
+  "topics": [
+    "attrezzatura scarico",
+    "accesso punto consegna",
+    "perimetro servizio",
+    "supplemento per operazione"
+  ],
+  "related": [
+    "guide:preventivo-trasporto",
+    "guide:costo-trasporto-pallet",
+    "guide:preventivo-trasporto-pdf",
+    "guide:tempi-attesa-carico-scarico-autotrasporto",
+    "guide:costo-trasporto-dedicato"
+  ],
+  "relatedCalculator": null,
+  "pillar": "guide:preventivo-trasporto",
+  "conversionIntent": "pdf-quote",
+  "appFeature": "pdf-quote",
+  "sources": [
+    {
+      "label": "Corbetti Spedizioni — Trasporto con sponda idraulica",
+      "url": "https://www.corbettispedizioni.it/it/trasporti/trasporto-con-sponda-idraulica",
+      "publishedOrUpdated": "Data editoriale non indicata; consultato il 4 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-04",
+      "supports": "Servizio per luoghi privi di mezzi di sollevamento; sponda e transpallet come attrezzature da concordare."
+    },
+    {
+      "label": "Palletways Online Italia — Termini e condizioni",
+      "url": "https://palletways.online/it/termini-e-condizioni/",
+      "publishedOrUpdated": "Data editoriale non indicata; consultato il 4 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-04",
+      "supports": "Perimetro di consegna a piano strada, accessi e superfici richiesti dal singolo servizio; non un limite universale di tutti i vettori."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: distinzione fra messa a terra, movimentazione interna e consegna al piano, scenario 600 kg, scheda di conferma e controllo del doppio addebito.",
+  "translationGroup": "consegna-con-sponda-idraulica",
+  "canonical": "/it/guide/consegna-con-sponda-idraulica/"
+}

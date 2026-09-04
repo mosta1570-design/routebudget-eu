@@ -1,0 +1,65 @@
+{
+  "kind": "guide",
+  "locale": "it",
+  "status": "published",
+  "published": "2026-09-04",
+  "modified": "2026-09-04",
+  "reviewed": "2026-09-04",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "searchIntent": "informational-commercial",
+  "cluster": "preventivi-trasporto",
+  "calculatorId": null,
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "slug": "costo-trasporto-dedicato",
+  "title": "Costo trasporto dedicato: quando conviene rispetto al groupage",
+  "mobileH1": "Trasporto dedicato: costo e convenienza",
+  "description": "Confronta dedicato e groupage sullo stesso servizio: missione completa, esempio di costo, margine e condizioni da verificare prima di accettare o inviare il prezzo.",
+  "eyebrow": "Scelta servizio · Mezzo riservato",
+  "primaryKeyword": "costo trasporto dedicato",
+  "secondaryKeywords": [
+    "trasporto dedicato significato",
+    "trasporto dedicato o groupage",
+    "preventivo mezzo riservato",
+    "quando conviene trasporto dedicato"
+  ],
+  "topics": [
+    "esclusività veicolo",
+    "confronto livello servizio",
+    "costo missione riservata",
+    "soglia convenienza committente"
+  ],
+  "related": [
+    "guide:calcolo-costo-trasporto",
+    "guide:ritorno-a-vuoto-autotrasporto",
+    "guide:costo-trasporto-pallet",
+    "guide:preventivo-trasporto-pdf",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "pillar": "guide:calcolo-costo-trasporto",
+  "conversionIntent": "protect-margin",
+  "appFeature": "cost-scenarios",
+  "sources": [
+    {
+      "label": "DHL Italia — Soluzioni di trasporto LTL",
+      "url": "https://www.dhl.com/it-it/home/spedizioni/soluzioni-di-trasporto-ltl.html",
+      "publishedOrUpdated": "Data editoriale non indicata; consultato il 4 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-04",
+      "supports": "Distinzione tra spazio condiviso LTL, FTL e PTL; confronto di capacità e servizio, senza una soglia universale."
+    },
+    {
+      "label": "Malik Trasporti — Trasporto dedicato",
+      "url": "https://www.maliktrasporti.it/service/trasporto-dedicato/",
+      "publishedOrUpdated": "Data editoriale non indicata; consultato il 4 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-04",
+      "supports": "Operatore italiano: mezzo riservato, esigenze di tempi e merce, fattori di prezzo. Le promesse commerciali dell'operatore non sono garanzie RouteBudget."
+    }
+  ],
+  "changeSummary": "Prima pubblicazione: separa esclusività, groupage e acquisto spot; costo originale di una missione 480 km, margine e sensibilità del committente senza tariffe medie inventate.",
+  "translationGroup": "costo-trasporto-dedicato",
+  "canonical": "/it/guide/costo-trasporto-dedicato/"
+}

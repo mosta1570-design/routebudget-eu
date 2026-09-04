@@ -16,6 +16,8 @@ Nel flusso RouteBudget il calcolo interno usa carburante o energia, pedaggi, cos
 
 ## Contenuti essenziali del preventivo
 
+Prima di chiudere il prezzo, controlla tre dati spesso lasciati impliciti: [peso volumetrico e criterio tassabile](/it/guide/calcolo-peso-volumetrico/), [scarico con sponda e punto di deposito](/it/guide/consegna-con-sponda-idraulica/), [mezzo dedicato oppure groupage](/it/guide/costo-trasporto-dedicato/). Questi dettagli restano nella scheda esterna del servizio: il PDF dell'app non li inserisce automaticamente.
+
 ### Identità e riferimenti
 
 Inserire offerente, contatti, destinatario, data e un riferimento univoco secondo il processo dell’impresa. Il logo migliora riconoscibilità, ma non sostituisce i dati necessari a identificare le parti.

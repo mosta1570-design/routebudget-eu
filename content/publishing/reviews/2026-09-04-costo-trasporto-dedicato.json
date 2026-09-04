@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-04",
+  "decision": "approved",
+  "id": "review:2026-09-04-costo-trasporto-dedicato",
+  "type": "editorial",
+  "contentId": "guide/costo-trasporto-dedicato",
+  "contentFingerprint": "sha256:d07b750b5e35480f4ae210bc2a8c60f177948e131dbd2d71831608d24e604736",
+  "artifactFingerprint": "sha256:c8a4d5e92ceb10020219fb59b59b457f93d040b77fd382304747b1ffd7bfc710",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-04",
+    "basis": "Explicit owner request in the active task to research and write three or four distinct professional Italian articles, follow the publication gate, publish the site, and submit sitemap and indexing requests to Google and Bing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated source, arithmetic, internal-link, Italian intent and product-boundary review. Worked examples are hypothetical, not market tariffs or customer cases. Exact Suggest confirms wording, not volume/trend. No independent human or specialist review is claimed."
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-04",
+  "decision": "approved",
+  "id": "review:2026-09-04-consegna-con-sponda-idraulica",
+  "type": "editorial",
+  "contentId": "guide/consegna-con-sponda-idraulica",
+  "contentFingerprint": "sha256:696d50a815c83e90de0ddba4161f5cc95170413e689f73ebe9e8acc89482bd7f",
+  "artifactFingerprint": "sha256:ff1b684407b6fcb849f0e549bfb2c775ee9cf1ca54b2b9b80e50bfce6b4c629b",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-04",
+    "basis": "Explicit owner request in the active task to research and write three or four distinct professional Italian articles, follow the publication gate, publish the site, and submit sitemap and indexing requests to Google and Bing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated source, arithmetic, internal-link, Italian intent and product-boundary review. Worked examples are hypothetical, not market tariffs or customer cases. Exact Suggest confirms wording, not volume/trend. No independent human or specialist review is claimed."
+}

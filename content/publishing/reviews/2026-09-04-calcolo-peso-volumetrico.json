@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-04",
+  "decision": "approved",
+  "id": "review:2026-09-04-calcolo-peso-volumetrico",
+  "type": "editorial",
+  "contentId": "guide/calcolo-peso-volumetrico",
+  "contentFingerprint": "sha256:15e69b348f5717c13b4171a6ed5979602c73e23d1cf7833dabdfadef5562474a",
+  "artifactFingerprint": "sha256:a41293631b31e5032d49139745572783a487f589aa05e4ef1492e209d3d17af8",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-04",
+    "basis": "Explicit owner request in the active task to research and write three or four distinct professional Italian articles, follow the publication gate, publish the site, and submit sitemap and indexing requests to Google and Bing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated source, arithmetic, internal-link, Italian intent and product-boundary review. Worked examples are hypothetical, not market tariffs or customer cases. Exact Suggest confirms wording, not volume/trend. No independent human or specialist review is claimed."
+}
