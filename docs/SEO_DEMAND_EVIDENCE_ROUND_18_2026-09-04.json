@@ -1,0 +1,160 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-04",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "Google Suggest hl=it gl=it, directly captured",
+    "Italian first-party carriers and service documentation"
+  ],
+  "method": {
+    "interpretation": "Exact Italian suggestions establish wording, not search volume or trend growth. First-party Italian carrier explanations establish operational relevance; original examples and worksheets address decisions before quotation.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty",
+      "search_trend_growth"
+    ],
+    "selectionRule": "Three distinct intents, exact Suggest evidence, observed Italian SERP gap, at least two directly reviewed first-party sources, original worked example, truthful product boundary and two contextual inbound links. No fourth near-duplicate.",
+    "serpObservation": {
+      "capturedAt": "2026-09-04",
+      "engine": "Google Search, live browser results",
+      "parameters": "hl=it&gl=it&pws=0",
+      "context": "Desktop browser. Footer confirmed Italia, Milano and non-personalized results. These observations are a dated sample, not exhaustive competitor coverage or a keyword-volume measurement. AI Overview and ads are not factual sources.",
+      "queries": [
+        {
+          "query": "calcolo peso volumetrico",
+          "observedResults": [
+            "https://www.sda.it/wps/portal/SDAit/Calcola%20il%20peso%20volumetrico/",
+            "https://www.spediresubito.com/blog/calcolo-metri-cubi-peso-volumetrico",
+            "https://www.dhl.com/it-it/home/global-forwarding/centro-di-formazione-sul-trasporto-merci/calcolo-dei-pesi-addebitabili.html",
+            "https://www.dsv.com/it-it/sostegno/faq/calcolatore-di-peso-volumetrico"
+          ],
+          "dominantFormat": "Carrier calculators and formula explainers; related searches name individual couriers.",
+          "gapInference": "Formula coverage already exists. The narrower opportunity is an auditable before-quote worksheet: 200 kg actual versus 432 kg contractual volumetric, then 288 kg after a stated packaging change, with unit checks, non-stackability limits and explicit exclusion of guaranteed tariff savings. SDA's directly opened tool uses a service-specific divisor; DHL explains mode-specific rules. The new guide does not replace either carrier's tariff or claim competitors lack all these topics."
+        },
+        {
+          "query": "consegna con sponda idraulica",
+          "observedResults": [
+            "https://www.pesenti.com/it/servizi-con-furgone-con-sponda-idraulica",
+            "https://www.spediscionline.it/it/ritiro-e-consegna-merce-con-sponda-idraulica.html",
+            "https://www.salti.eu/it/servizi/consegne-con-sponda-idraulica",
+            "https://cattrento.com/consegne-con-sponda/"
+          ],
+          "observedQuestion": "Cosa vuol dire consegna con sponda idraulica?",
+          "dominantFormat": "Carrier service and quote-request pages describing unloading equipment.",
+          "gapInference": "The directly reviewed Pesenti page covers equipment and access well. RouteBudget's distinct contribution is the customer's pre-quote confirmation workflow: unloading at ground level versus inside/upstairs, both pickup and delivery constraints, and reconciling included versus extra liftgate charges without double counting. This is a scoped workflow opportunity, not a claim that the service itself is rare."
+        },
+        {
+          "query": "costo trasporto dedicato",
+          "observedResults": [
+            "https://www.paccofacile.it/richiesta-preventivo/step1",
+            "https://www.gopressa.com/servizi/tariffe-trasporti-dedicati/",
+            "https://amg-trans.eu/it/blog/groupage-vs-trasporto-dedicato-cosa-conviene-per-costi-e-tempi/",
+            "https://www.cargopedia.it/calcolatore-del-prezzo-di-trasporto"
+          ],
+          "observedQuestions": ["Come si calcola il prezzo di un trasporto?", "Qual è il prezzo al km per il trasporto?"],
+          "dominantFormat": "Quote forms, carrier tariffs, estimators and dedicated/groupage comparisons.",
+          "gapInference": "The directly reviewed AMG comparison already covers empty return and service tradeoffs. Our incremental task is a reproducible 480 km carrier cost sheet with separate driver, technical and structure costs, margin versus markup, then a shipper comparison using a transparent sensitivity threshold. No copied market prices, legal thresholds or promised transit-time improvement."
+        }
+      ]
+    }
+  },
+  "rejectedCandidates": [
+    {
+      "query": "peso tassabile trasporto",
+      "reason": "Consolidated into the volumetric-weight article: same measurement and tariff-basis task."
+    },
+    {
+      "query": "consegna al piano costo",
+      "reason": "Discussed only to distinguish scope in liftgate guide; a separate fourth page would be too close in this batch."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "demand:round-18-calcolo-peso-volumetrico",
+      "primaryKeyword": "calcolo peso volumetrico",
+      "canonical": "/it/guide/calcolo-peso-volumetrico/",
+      "query": "calcolo peso volumetrico",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=calcolo%20peso%20volumetrico",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "calcolo peso volumetrico",
+        "calcolo peso volumetrico brt",
+        "calcolo peso volumetrico gls",
+        "calcolo peso volumetrico dhl",
+        "calcolo peso volumetrico sda",
+        "calcolo peso volumetrico poste italiane",
+        "calcolo peso volumetrico fedex",
+        "calcolo peso volumetrico ups",
+        "calcolo peso volumetrico online",
+        "calcolo peso volumetrico fercam"
+      ],
+      "rawResponse": "[\"calcolo peso volumetrico\",[\"calcolo peso volumetrico\",\"calcolo peso volumetrico brt\",\"calcolo peso volumetrico gls\",\"calcolo peso volumetrico dhl\",\"calcolo peso volumetrico sda\",\"calcolo peso volumetrico poste italiane\",\"calcolo peso volumetrico fedex\",\"calcolo peso volumetrico ups\",\"calcolo peso volumetrico online\",\"calcolo peso volumetrico fercam\"],[],{\"google:suggestsubtypes\":[[512],[512],[512],[512],[512],[512],[512],[512],[512],[512]]}]",
+      "signal": "exact-google-suggest-it-plus-first-party-operational-evidence",
+      "signalNote": "Exact query returned on 4 September 2026. Sources reviewed in Italian. Monthly volume and growth unknown; not described as proven high-volume or trending.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns dimension measurement, kg/m³ conversion and contractual chargeable-weight verification, not the generic pallet price.",
+      "productFit": "RouteBudget supplies supported owned-vehicle mission costs after shipment data are verified externally.",
+      "productBoundary": "No volumetric calculator, dimensions, tariff comparison or carrier booking in the app.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=calcolo%20peso%20volumetrico",
+        "https://www.brt.it/wp-content/uploads/sites/275/2023/07/Per-Spedire.pdf",
+        "https://www.dhl.com/it-it/home/global-forwarding/centro-di-formazione-sul-trasporto-merci/calcolo-dei-pesi-addebitabili.html"
+      ]
+    },
+    {
+      "id": "demand:round-18-consegna-con-sponda-idraulica",
+      "primaryKeyword": "consegna con sponda idraulica",
+      "canonical": "/it/guide/consegna-con-sponda-idraulica/",
+      "query": "consegna con sponda idraulica",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=consegna%20con%20sponda%20idraulica",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "consegna con sponda idraulica",
+        "consegna con sponda idraulica in inglese",
+        "ritiro e consegna con sponda idraulica",
+        "cosa vuol dire consegna con sponda idraulica"
+      ],
+      "rawResponse": "[\"consegna con sponda idraulica\",[\"consegna con sponda idraulica\",\"consegna con sponda idraulica in inglese\",\"ritiro e consegna con sponda idraulica\",\"cosa vuol dire consegna con sponda idraulica\"],[],{\"google:suggestsubtypes\":[[512],[512],[22,30],[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-first-party-operational-evidence",
+      "signalNote": "Exact query returned on 4 September 2026. Sources reviewed in Italian. Monthly volume and growth unknown; not described as proven high-volume or trending.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns unloading equipment, confirmed access, delivery scope and accessory-charge reconciliation, not a general transport or waiting-time tariff.",
+      "productFit": "RouteBudget provides supported route estimates and a non-binding PDF; external operational confirmation is separate.",
+      "productBoundary": "No liftgate booking, capability checking, handling supplement field or personalized PDF notes.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=consegna%20con%20sponda%20idraulica",
+        "https://www.corbettispedizioni.it/it/trasporti/trasporto-con-sponda-idraulica",
+        "https://palletways.online/it/termini-e-condizioni/"
+      ]
+    },
+    {
+      "id": "demand:round-18-costo-trasporto-dedicato",
+      "primaryKeyword": "costo trasporto dedicato",
+      "canonical": "/it/guide/costo-trasporto-dedicato/",
+      "query": "costo trasporto dedicato",
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20trasporto%20dedicato",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "costo trasporto dedicato"
+      ],
+      "rawResponse": "[\"costo trasporto dedicato\",[\"costo trasporto dedicato\"],[],{\"google:suggestsubtypes\":[[22,30]]}]",
+      "signal": "exact-google-suggest-it-plus-first-party-operational-evidence",
+      "signalNote": "Exact query returned on 4 September 2026. Sources reviewed in Italian. Monthly volume and growth unknown; not described as proven high-volume or trending.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns reserved-vehicle versus shared-service decision, full mission cost and shipper price/service sensitivity; spot keeps its procurement intent.",
+      "productFit": "RouteBudget supports route cost and price scenarios for a carrier's dedicated mission.",
+      "productBoundary": "No freight exchange, carrier-offer comparison, availability checks or guarantees of arrival times.",
+      "sourceUrls": [
+        "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=costo%20trasporto%20dedicato",
+        "https://www.dhl.com/it-it/home/spedizioni/soluzioni-di-trasporto-ltl.html",
+        "https://www.maliktrasporti.it/service/trasporto-dedicato/"
+      ]
+    }
+  ]
+}

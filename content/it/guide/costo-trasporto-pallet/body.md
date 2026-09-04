@@ -8,6 +8,8 @@ RouteBudget aiuta a stimare le voci supportate della tratta — chilometri, carb
 
 ## Scheda pallet prima del prezzo
 
+Se la merce occupa molto spazio rispetto al peso, verifica il [calcolo del peso volumetrico](/it/guide/calcolo-peso-volumetrico/) prima di applicare la tariffa del vettore. Se manca il muletto, chiarisci il perimetro della [consegna con sponda idraulica](/it/guide/consegna-con-sponda-idraulica/). Per scegliere fra spazio condiviso e mezzo riservato, confronta il [costo del trasporto dedicato](/it/guide/costo-trasporto-dedicato/) sullo stesso livello di servizio.
+
 Chiedi dati che cambiano davvero mezzo e costo. Una riga per ordine dovrebbe contenere almeno:
 
 | Campo | Perché cambia il preventivo |

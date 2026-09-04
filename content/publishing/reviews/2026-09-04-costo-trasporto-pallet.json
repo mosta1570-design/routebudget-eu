@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-04",
+  "decision": "approved",
+  "id": "review:2026-09-04-costo-trasporto-pallet",
+  "type": "editorial",
+  "contentId": "guide/costo-trasporto-pallet",
+  "contentFingerprint": "sha256:ce77e6a44ed1e58c13034ce9d804cc90d5c343cad18d4c3ae03c5e429b7544bd",
+  "artifactFingerprint": "sha256:46808f005d0c3720653d5549bacc2abb65c25cb3fef2eadfd7d57c74eecb2d94",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-04",
+    "basis": "Explicit owner request in the active task to research and write three or four distinct professional Italian articles, follow the publication gate, publish the site, and submit sitemap and indexing requests to Google and Bing."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Automated review of contextual internal-link addition; original product boundaries, source dates and publication dates remain intact. No independent human review is claimed."
+}

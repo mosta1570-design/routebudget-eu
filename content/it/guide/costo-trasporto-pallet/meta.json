@@ -8,8 +8,8 @@
   "description": "Metodo operativo per calcolare il costo di un trasporto pallet da tratta, spazio, peso, soste e movimentazioni, senza copiare tariffe medie.",
   "eyebrow": "Preventivi · Pallet",
   "published": "2026-09-03",
-  "modified": "2026-09-03",
-  "reviewed": "2026-09-03",
+  "modified": "2026-09-04",
+  "reviewed": "2026-09-04",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "costo trasporto pallet",
@@ -62,5 +62,5 @@
       "supports": "Componenti italiane del costo di esercizio da usare come controllo del costo vettore, non come tariffa per pallet o listino commerciale universale."
     }
   ],
-  "changeSummary": "Prima pubblicazione: metodo dedicato per trasformare il costo completo della missione in costo ordine e costo pallet, con controlli su sagoma, peso, soste, movimentazioni e margine."
+  "changeSummary": "Aggiunti collegamenti contestuali a peso volumetrico, scarico con sponda e scelta del dedicato per verificare i dati prima della quotazione; contenuto e limiti del prodotto preservati."
 }
