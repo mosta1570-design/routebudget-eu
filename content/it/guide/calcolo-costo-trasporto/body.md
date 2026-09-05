@@ -68,6 +68,8 @@ La formula operativa più comune è:
 
 Il consumo dichiarato dal costruttore è un riferimento, non la fotografia di ogni viaggio. Carico, pendenza, traffico, temperatura, velocità e stile di guida possono modificare il dato. Per le decisioni quotidiane è più utile una media ricavata dallo stesso veicolo su tratte comparabili, aggiornata periodicamente.
 
+Se manca quel dato, usa il metodo per [misurare il consumo del camion senza sbagliare la media](/it/guide/quanto-consuma-un-camion/). Se invece lo conosci, il [calcolatore carburante del viaggio](/it/calcolatori/costo-carburante-viaggio/) trasforma direttamente consumo, chilometri e prezzo nei litri e nell'importo da riportare nella scheda.
+
 Anche il prezzo del carburante va trattato con coerenza. Si può usare il prezzo dell’ultimo rifornimento, una media aziendale o il valore previsto nel luogo di rifornimento. L’importante è indicare quale dato è stato scelto e non alternare criteri diversi tra preventivi simili.
 
 Se il rapporto separa un adeguamento rispetto a un prezzo base, usa il [calcolatore fuel surcharge per autotrasporto](/it/calcolatori/fuel-surcharge-autotrasporto/) come controllo specifico. Prima di applicare il risultato, verifica anche come sono documentati fonte, periodo e base nella [clausola di adeguamento carburante](/it/guide/clausola-adeguamento-carburante-autotrasporto/). L’adeguamento non sostituisce litri e costo carburante della tratta.

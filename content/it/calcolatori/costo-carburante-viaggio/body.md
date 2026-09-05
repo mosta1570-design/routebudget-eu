@@ -6,6 +6,12 @@ Non stima quale dovrebbe essere il consumo medio del tuo mezzo. Se stai cercando
 
 Il calcolo avviene nel browser. I valori inseriti non vengono inviati a RouteBudget e non vengono memorizzati dal calcolatore. Il risultato è una stima non vincolante: rifornimenti, variazioni di prezzo e consumo reale possono produrre un consuntivo diverso.
 
+## Hai il consumo in km/l? Prima convertilo
+
+Il campo richiede **litri per 100 km**, non chilometri per litro. Se il tuo dato è 4 km/l, inserisci `100 ÷ 4 = 25 L/100 km`, non 4. Su 400 km a un prezzo ipotetico di 1,70 €/l, l'input corretto produce **100 litri e 170 €**; inserire 4 produrrebbe 16 litri e 27,20 €, sottostimando il costo di 142,80 €.
+
+Se parti da più rifornimenti, usa il [metodo della media ponderata del consumo](/it/guide/quanto-consuma-un-camion/): `litri totali ÷ chilometri totali × 100`, su intervalli validi e missioni confrontabili. Il risultato è in L/100 km. Il calcolatore non riconosce automaticamente l'unità da cui proviene il numero.
+
 ## Formula applicata
 
 Per ogni segmento viene usata questa formula:
@@ -100,6 +106,8 @@ Il carburante è spesso visibile e facile da aggiornare, ma non deve assorbire t
 - condizioni e validità del preventivo.
 
 RouteBudget collega carburante o energia, pedaggi, tempo autista, pause operative, usura/manutenzione e ritorno a vuoto; confronta scenari di prezzo e crea un PDF della stima. Rischio commerciale, validità e condizioni dell’offerta restano valutazioni dell’impresa. Il calcolatore web resta deliberatamente limitato al carburante, così puoi ottenere una verifica rapida senza riprodurre il flusso completo dell’app.
+
+Per continuare senza confondere le voci, passa al [calcolo completo del costo di trasporto](/it/guide/calcolo-costo-trasporto/), poi controlla che cosa contiene il [riepilogo preventivo PDF di RouteBudget](/it/guide/preventivo-trasporto-pdf/). Il carburante calcolato qui entra una volta sola nel costo; il PDF non aggiunge automaticamente condizioni commerciali o dati del cliente.
 
 ## Checklist prima di riportare il dato
 

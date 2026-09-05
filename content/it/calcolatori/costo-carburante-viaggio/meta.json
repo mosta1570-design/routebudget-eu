@@ -6,8 +6,8 @@
   "description": "Inserisci distanza, consumo già noto e prezzo al litro per calcolare litri e costo carburante di andata e ritorno a vuoto.",
   "eyebrow": "Calcolatore carburante viaggio",
   "published": "2026-08-01",
-  "modified": "2026-08-31",
-  "reviewed": "2026-08-31",
+  "modified": "2026-09-05",
+  "reviewed": "2026-09-05",
   "primaryKeyword": "calcolatore costo carburante viaggio",
   "searchIntent": "transactional-informational",
   "topics": [
@@ -51,5 +51,5 @@
   "canonical": "/it/calcolatori/costo-carburante-viaggio/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunta una regola di sensibilità per misurare l'impatto di ogni centesimo al litro e una seconda fonte italiana datata per il confronto del prezzo."
+  "changeSummary": "Aggiunto controllo km/l versus L/100 km con esempio numerico verificato e percorso contestuale dal carburante al costo completo e al riepilogo PDF. Algoritmo invariato."
 }

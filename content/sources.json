@@ -1,4 +1,16 @@
 {
+  "https://www.scania.com/it/it/home/about-scania/newsroom/percorsi-online/2022/Scania-1000-punkte.html": {
+    "publishedOrUpdated": "Test 2021/22 riportato nella pagina italiana del costruttore",
+    "geography": "Test in Germania; fonte in italiano, non media del parco italiano",
+    "accessedAt": "2026-09-05",
+    "supports": "Scania 460 R: 27,1 l/100 km, combinazione 40 t nel test 1000 Punkte. Comunicazione del produttore su prova giornalistica, non prova RouteBudget o consumo garantito."
+  },
+  "https://www.volvotrucks.it/it-it/news/press-releases/2025/mar/volvo-fh-aero-wins-the-2025-green-truck.html": {
+    "publishedOrUpdated": "28 marzo 2025",
+    "geography": "343 km nel sud della Germania; fonte Volvo Trucks Italia",
+    "accessedAt": "2026-09-05",
+    "supports": "Green Truck 2025: FH Aero D13 420 CV I-Save, 21,20 l/100 km, 32 t complessive, autostrade e strade statali. Non confrontabile direttamente con prove diverse, né media nazionale."
+  },
   "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en": {
     "publishedOrUpdated": "Serie ufficiale aggiornata periodicamente",
     "geography": "Unione europea",

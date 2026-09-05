@@ -6,8 +6,8 @@
   "description": "Come stimare il costo operativo di una tratta camion includendo carburante, pedaggi, autista, usura, ritorno a vuoto e margine.",
   "eyebrow": "Guida al costo di tratta",
   "published": "2026-08-01",
-  "modified": "2026-09-03",
-  "reviewed": "2026-09-03",
+  "modified": "2026-09-05",
+  "reviewed": "2026-09-05",
   "primaryKeyword": "calcolo costo trasporto",
   "searchIntent": "informational",
   "topics": [
@@ -87,5 +87,5 @@
   "canonical": "/it/guide/calcolo-costo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunti percorsi distinti per pallet, refrigerato e Monte Bianco e collegamenti operativi verso foglio versionato, PDF, pagamenti e pedaggio N1 senza fondere intenti diversi."
+  "changeSummary": "Collegato il passaggio carburante alla misurazione del consumo e al calcolatore specifico, distinguendo ricerca del dato da calcolo dell'importo. URL e formule preservati."
 }

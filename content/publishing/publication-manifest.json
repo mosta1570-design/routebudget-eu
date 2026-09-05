@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-09-04-editorial-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-05-recovery-integrity",
   "staticArtifacts": {
     "/": "sha256:fd0d72596ae12eedc1dc3eaa964dc7decf07b2887895a9cbcfb46f339ae89315",
     "/it/calcolatori/": "sha256:c294c9d4bfc52ddac2c70897555a5b2638babbd00e2a3b059cd5ad76ad9e8a37",
-    "/it/guide/": "sha256:ff808877f5ed58f2f80dc082a61ff6f6ac07e1982b5faf94df0b4085ba8e0bf0",
+    "/it/guide/": "sha256:ca26dc11a7517d0de1118234b99fd7b72091e0d3aba30a0df18f3aa49adcd035",
     "/privacy.html": "sha256:50dda2b923646bdacc538e32628a70b63ae7206b07e7862be1d8c6bb9fe4908e",
     "/terms.html": "sha256:e361a12fce34488d27fa8dce374ec0bbc6639016e2a9a59cb1628d74f55c68f5"
   },
@@ -19,8 +19,8 @@
       "audienceMarket": "IT",
       "changeScope": "substantive-update",
       "intentOwner": "calcolo costo trasporto",
-      "demandEvidenceId": "demand:recovery-calcolo-costo-trasporto-20260831",
-      "approvalId": "review:2026-09-03-calcolo-costo-trasporto",
+      "demandEvidenceId": "demand:recovery-calcolo-costo-trasporto-20260905",
+      "approvalId": "review:2026-09-05-calcolo-costo-trasporto",
       "productProofIds": [
         "complete-route-calculation"
       ],
@@ -106,12 +106,14 @@
       "audienceMarket": "IT",
       "changeScope": "substantive-update",
       "intentOwner": "quanto consuma un camion",
-      "demandEvidenceId": "demand:recovery-quanto-consuma-camion-20260831",
-      "approvalId": "review:2026-09-02-quanto-consuma-camion",
+      "demandEvidenceId": "demand:recovery-quanto-consuma-un-camion-20260905",
+      "approvalId": "review:2026-09-05-quanto-consuma-un-camion",
       "productProofIds": [
         "fuel-estimate"
       ],
       "primarySourceUrls": [
+        "https://www.scania.com/it/it/home/about-scania/newsroom/percorsi-online/2022/Scania-1000-punkte.html",
+        "https://www.volvotrucks.it/it-it/news/press-releases/2025/mar/volvo-fh-aero-wins-the-2025-green-truck.html",
         "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
         "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
       ]
@@ -167,8 +169,8 @@
       "audienceMarket": "IT",
       "changeScope": "substantive-update",
       "intentOwner": "calcolatore costo carburante viaggio",
-      "demandEvidenceId": "demand:recovery-costo-carburante-viaggio-20260831",
-      "approvalId": "review:2026-08-31-costo-carburante-viaggio",
+      "demandEvidenceId": "demand:recovery-costo-carburante-viaggio-20260905",
+      "approvalId": "review:2026-09-05-costo-carburante-viaggio",
       "productProofIds": [
         "fuel-estimate"
       ],

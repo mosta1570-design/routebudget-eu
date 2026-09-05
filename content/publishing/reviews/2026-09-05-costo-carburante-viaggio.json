@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-05-costo-carburante-viaggio",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-05",
+  "decision": "approved",
+  "contentId": "calcolatori/costo-carburante-viaggio",
+  "contentFingerprint": "sha256:e86aabd38411b843abb0f91551bd030c1f7a6ae8cdde5476bfc151109fdb4787",
+  "artifactFingerprint": "sha256:b1d926674394688fc55cd2e6e961be3326fdc6e85109db9c8f9a3cd0f54642a7",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-05",
+    "basis": "Explicit owner request in the active RouteBudget task to improve existing articles and links, verify Reddit advice against evidence, diagnose lost visibility, and apply useful changes; existing authorization includes PR, publication and search-engine submissions."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Explains km/l versus L/100 km with checked financial consequences, explicitly retains the multiply-by-100 factor in the fleet-input formula, and links the existing measurement, complete-cost and PDF intents. Calculator code and one-profile limitation unchanged. Read-only independent review completed; the one formula-unit finding was corrected and rechecked. Existing generated-link, calculation, motion and event contracts passed."
+}
