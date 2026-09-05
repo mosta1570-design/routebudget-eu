@@ -64,7 +64,7 @@ const titles = new Set();
 const descriptions = new Set();
 const htmlByRoute = new Map();
 const incoming = new Map(generatedRoutes.map((route) => [route, 0]));
-const readingAssets = await Promise.all(['seo/seo.css', 'seo/events.js'].map(async (asset) => {
+const readingAssets = await Promise.all(['seo/seo.css', 'seo/events.js', 'seo/analytics.js', 'seo/analytics.css'].map(async (asset) => {
   const bytes = await readFile(path.join(DIST, asset));
   const version = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
   return `${BASE}/${asset}?v=${version}`;
@@ -158,6 +158,11 @@ assert(!/<noscript>[\s\S]*?<h1(?:\s|>)/.test(landing), 'landing must not duplica
 assert(landing.includes(`${BASE}/seo/events.js`), 'landing event hook missing');
 
 for (const [route, html] of htmlByRoute) {
+  assert.equal([...html.matchAll(/data-measurement-id="G-ELHQ6Z5F6E"/g)].length, 1, `${route}: approved collector must occur exactly once`);
+  assert(!/<(?:script|link)[^>]+(?:googletagmanager\.com|google-analytics\.com)/i.test(html), `${route}: Google resources must not load before consent`);
+  const collectorOffset = html.indexOf('/seo/analytics.js');
+  const eventsOffset = html.indexOf('/seo/events.js');
+  assert(collectorOffset >= 0 && (eventsOffset < 0 || collectorOffset < eventsOffset), `${route}: consent adapter must load before local events`);
   for (const match of html.matchAll(/href="([^"]+)"/g)) {
     const targetRoute = await verifyInternalTarget(route, match[1], htmlByRoute);
     if (targetRoute && incoming.has(targetRoute)) incoming.set(targetRoute, incoming.get(targetRoute) + 1);
@@ -176,6 +181,8 @@ for (const asset of [
   'CNAME',
   'seo/seo.css',
   'seo/events.js',
+  'seo/analytics.js',
+  'seo/analytics.css',
   'seo/calculators.js',
   'seo/calculators-core.js',
   'store-badges/app-store-it.svg',

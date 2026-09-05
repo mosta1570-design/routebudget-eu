@@ -115,7 +115,7 @@ const siteUrl = `${config.origin}${config.basePath}`;
 // Public assets bypass Vite's hashed bundle names. Give each reading asset a
 // deterministic URL so repeat visitors do not reuse pre-deployment CSS/JS.
 const readingAssetUrls = Object.fromEntries(await Promise.all(
-  ['seo/seo.css', 'seo/events.js'].map(async (asset) => {
+  ['seo/seo.css', 'seo/events.js', 'seo/analytics.js', 'seo/analytics.css'].map(async (asset) => {
     const bytes = await readFile(path.join(ROOT, 'public', asset));
     const version = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
     return [asset, `${config.basePath}/${asset}?v=${version}`];
@@ -138,6 +138,26 @@ await Promise.all([
     writeRoute(hubPath(locale, section), renderHub(locale, section)),
   ),
 ]);
+
+// Static Vite/legal documents share the same opt-in collector as editorial
+// routes. Load it before the local event adapter; never embed Google's tag.
+for (const file of ['index.html', 'privacy.html', 'terms.html']) {
+  const target = path.join(OUTPUT_ROOT, file);
+  let html;
+  try {
+    html = await readFile(target, 'utf8');
+  } catch (error) {
+    // Content-only builds do not include Vite's static documents. Full-release
+    // verification still requires these routes and exactly one collector each.
+    if (error?.code === 'ENOENT') continue;
+    throw error;
+  }
+  const headEnd = html.indexOf('</head>');
+  const firstScript = html.indexOf('<script');
+  const offset = firstScript >= 0 && firstScript < headEnd ? firstScript : headEnd;
+  assert(offset >= 0, `${file}: static head missing`);
+  await writeFile(target, `${html.slice(0, offset)}${renderAnalyticsHead()}\n${html.slice(offset)}`, 'utf8');
+}
 
 const sitemapFiles = renderSitemaps();
 await mkdir(path.join(OUTPUT_ROOT, 'sitemaps'), { recursive: true });
@@ -250,6 +270,7 @@ function validateConfig(value) {
   assert(value.locales && typeof value.locales === 'object', 'site.json: locales required');
   assert(/^\d{4}-\d{2}-\d{2}$/.test(value.coreLastModified), 'site.json: coreLastModified required');
   assert(/^\d{4}-\d{2}-\d{2}$/.test(value.legalLastModified), 'site.json: legalLastModified required');
+  assert(/^G-[A-Z0-9]{6,20}$/.test(value.analyticsMeasurementId), 'site.json: approved GA4 measurement ID required');
   assert(/^https:\/\/apps\.apple\.com\/app\/id\d+$/.test(value.appStoreUrl), 'site.json: valid public App Store URL required');
   assert(value.googlePlayUrl === 'https://play.google.com/store/apps/details?id=eu.routebudget.app', 'site.json: Google Play URL must target eu.routebudget.app');
 }
@@ -678,10 +699,16 @@ function renderHead({ title, description, canonicalPath, type, modified, publish
     <link rel="icon" type="image/png" href="${config.basePath}/logo-ui.png" />
     <link rel="stylesheet" href="${readingAssetUrls['seo/seo.css']}" />
     <script type="application/ld+json">${safeJson(schema)}</script>
+    ${renderAnalyticsHead()}
     <script src="${readingAssetUrls['seo/events.js']}" defer></script>
     ${calculator ? `<script type="module" src="${config.basePath}/seo/calculators.js"></script>` : ''}
     <title>${escapeHtml(title)}</title>
   </head>`;
+}
+
+function renderAnalyticsHead() {
+  return `<link rel="stylesheet" href="${readingAssetUrls['seo/analytics.css']}" />
+    <script src="${readingAssetUrls['seo/analytics.js']}" data-measurement-id="${escapeAttr(config.analyticsMeasurementId)}" defer></script>`;
 }
 
 function renderHeader(locale) {
