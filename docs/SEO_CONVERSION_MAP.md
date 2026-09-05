@@ -19,6 +19,7 @@ Non usare countdown, urgenza artificiale, pulsanti ambigui, CTA che imitano risu
 | Passaggio | Segnale disponibile | Fonte corretta | Cosa non dimostra |
 | --- | --- | --- | --- |
 | Risultato Google → pagina | query, pagina, impressione, clic, CTR | Search Console, in forma aggregata | identità, installazione o ricavo |
+| Segnale ChatGPT → pagina | classe `chatgpt` della sola pagina corrente | evento effimero browser-locale in Fase 0, senza raccolta | referral autenticato, totale degli arrivi AI, percorso verso lo store o installazione |
 | Arrivo → CTA contestuale | vista e clic, solo se gli eventi web sono approvati | evento web minimizzato | lettura completa o intenzione certa |
 | CTA → store | clic outbound verso lo store | evento web minimizzato | visita effettiva dello store o installazione |
 | Store → installazione | installazioni e conversioni secondo le definizioni della piattaforma | App Store Connect / Google Play Console | query Google o pagina individuale d'origine |
@@ -109,6 +110,8 @@ Questa è una specifica, non un'autorizzazione a installare analytics. Finché l
 
 Questa sezione è l'unico contratto canonico per eventi trasmessi. I segnali browser-locali `routebudget:analytics` dell'implementazione corrente non sono eventi di rete e possono usare nomi o campi diversi. Non devono essere inoltrati così come sono: un collector futuro, approvato separatamente, deve mapparli alla allowlist seguente, sostituire qualsiasi path con `content_id` e scartare proprietà libere.
 
+L'adattatore locale espone ora `schema_version: 3`. Questo aggiornamento aggiunge una classe sorgente limitata e corregge la classificazione dei referrer; non attiva la Fase 1, un collector o un servizio analytics. La versione è comune a tutti gli eventi del documento, ma `source_class` resta esclusivamente su `content_landing_view`.
+
 | Evento | Quando scatta | Proprietà ammesse | Note |
 | --- | --- | --- | --- |
 | `content_landing_view` | una volta per caricamento della pagina editoriale | base + `source_class` | classificare la sorgente e scartare il referrer grezzo |
@@ -125,11 +128,11 @@ Questa sezione è l'unico contratto canonico per eventi trasmessi. I segnali bro
 
 | Proprietà | Valori ammessi |
 | --- | --- |
-| `schema_version` | versione intera della tassonomia; versione corrente `2` |
+| `schema_version` | versione intera della tassonomia; versione locale corrente `3`, nessuna trasmissione approvata |
 | `locale` | codice supportato, inizialmente `it` |
 | `content_id` | ID editoriale stabile, non URL completa |
 | `page_type` | `landing`, `hub`, `pillar`, `guide`, `calculator`, `comparison`, `product`, `legal` |
-| `source_class` | `organic_search`, `direct`, `referral`, `unknown` |
+| `source_class` | `chatgpt`, `organic_search`, `direct`, `referral`, `unknown` |
 | `cta_id` | uno degli ID del registro CTA |
 | `cta_position` | `inline`, `after_result`, `end`, `header`, `footer` |
 | `destination` | `internal`, `app_store`, `google_play` |
@@ -139,6 +142,18 @@ Questa sezione è l'unico contratto canonico per eventi trasmessi. I segnali bro
 | `error_code` | enum tecnico documentato, per esempio `required`, `out_of_range`, `invalid_format` |
 
 Non aggiungere proprietà libere. Ogni nuovo campo richiede un caso d'uso, un elenco di valori, revisione privacy e aggiornamento della versione dello schema.
+
+### Classificazione sorgente locale — versione 3
+
+La classificazione viene calcolata una volta al caricamento del documento, senza salvare o inoltrare URL, query, referrer, percorsi o parametri. Si applicano queste regole, in ordine:
+
+1. Un referrer HTTP/HTTPS valido con lo stesso hostname della pagina mantiene la classe storica `direct`; un eventuale UTM viene ignorato. È navigazione interna, **non** prova di acquisizione diretta.
+2. Un referrer HTTP/HTTPS con host esatto `chatgpt.com`, `www.chatgpt.com` o `chat.openai.com` dà `chatgpt`. Sono ammesse soltanto le porte standard del protocollo; credenziali, referrer malformati, schemi non web, sottodomini arbitrari e host somiglianti non sono accettati come referrer ChatGPT.
+3. In assenza di navigazione interna, un solo parametro `utm_source` con valore decodificato esattamente `chatgpt.com` dà `chatgpt`, anche senza referrer riconoscibile. Chiave e valore distinguono maiuscole/minuscole; duplicati, valori abbreviati, URL al posto del valore ed encoding malformato non danno questo segnale. Frammenti e altri parametri non sono fonti di classificazione. [OpenAI documenta questo UTM nei link di referral](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq), ma chiunque può copiarlo o modificarlo: **non autentica** un arrivo da ChatGPT. Se il tag valido coesiste con un referrer esterno diverso, prevale il tag; la singola classe non distingue le due evidenze.
+4. Gli host di ricerca sono confrontati con la allowlist esatta e limitata in `public/seo/events.js`: Google e domini europei comuni, Bing, DuckDuckGo e Yahoo, inclusi alcuni host nazionali di ricerca. Non è una lista globale esaustiva. Host come `google.evil.com` e `google.it.evil.example` restano `referral`, non `organic_search`.
+5. Senza referrer web valido né tag ChatGPT valido, la classe è `unknown`, non `direct`. Un altro referrer web valido dà `referral`.
+
+Il referrer può essere assente per privacy del browser, app, link copiati o policy del sito sorgente: `unknown` non significa accesso diretto e `chatgpt` non misura tutti gli arrivi AI. Nessun UTM viene aggiunto o propagato ai link. La classe non viene salvata in cookie, sessione o storage e non passa ad altre pagine, cambi di lingua, risultati del calcolatore o clic store. Non esiste quindi attribuzione ChatGPT→CTA→store, conteggio storico o funnel AI misurato. La preferenza lingua funzionale già esistente resta separata e non viene usata per attribuzione.
 
 ### Dati che non devono mai entrare negli eventi
 
@@ -157,7 +172,8 @@ Gli eventi dei calcolatori descrivono lo stato dell'interazione, mai la situazio
 
 - usare Search Console per domanda organica, clic, impressioni e CTR;
 - usare dati aggregati delle console store per installazioni e acquisti;
-- non caricare tracker, cookie, pixel o storage del sito;
+- non caricare tracker o pixel, né usare cookie o storage per analytics/attribuzione; la preferenza lingua funzionale preesistente è separata;
+- gli eventuali `CustomEvent` browser-locali sono effimeri: nessun collector, richiesta di rete, fornitore analytics o storico raccolto;
 - non tentare di attribuire una query a un'installazione.
 
 ### Fase 1 — eventi minimizzati, solo dopo approvazione
@@ -192,6 +208,12 @@ La Privacy e i Termini pubblici correnti descrivono l'app. Non devono essere int
 - Evitare identificatori persistenti e deduplicazione tra dispositivi.
 - Limitare accesso e conservazione al minimo approvato; non riutilizzare eventi per pubblicità, profilazione o vendita.
 - Versionare la tassonomia e mantenere un changelog con data, motivo e revisore privacy.
+
+### Changelog locale
+
+| Data | Versione | Motivo | Stato privacy |
+| --- | --- | --- | --- |
+| 2026-09-05 | `3` | `chatgpt` limitato alla landing; host allowlisted, tag esatto, referrer assente → `unknown`; nessuna propagazione o raccolta | Solo Fase 0; revisore e autorizzazione per qualsiasi collector ancora da definire |
 
 ## 10. Report consentiti
 

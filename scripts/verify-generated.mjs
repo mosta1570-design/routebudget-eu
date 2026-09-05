@@ -149,6 +149,10 @@ assert(landingGraph.some((entry) => entry['@type'] === 'Organization' && entry['
 const landingWebsite = landingGraph.find((entry) => entry['@type'] === 'WebSite');
 assert.equal(landingWebsite?.publisher?.['@id'], `${ORIGIN}/#organization`, 'landing WebSite publisher must use Organization identity');
 assert(landing.includes('data-static-home'), 'landing must contain useful static HTML before client rendering');
+const staticProductFacts = capture(landing, /<div data-static-product-facts>([\s\S]*?)<\/div>/, 'landing static product limits missing');
+for (const fact of ['Free include tre calcoli', 'Pro sblocca calcoli illimitati', 'logo aziendale nei preventivi PDF', 'richiedono una connessione', 'Trip Tracking opzionale resta una funzione iOS', 'non una tariffa ufficiale']) {
+  assert(staticProductFacts.includes(fact), `landing static product facts missing: ${fact}`);
+}
 assert(landing.includes('Strumenti di intelligenza artificiale possono assistere'), 'landing transparent AI-assistance disclosure missing');
 assert(!/<noscript>[\s\S]*?<h1(?:\s|>)/.test(landing), 'landing must not duplicate H1 inside noscript');
 assert(landing.includes(`${BASE}/seo/events.js`), 'landing event hook missing');
@@ -232,7 +236,7 @@ for (const eventName of ['content_landing_view', 'store_outbound_click', 'langua
   assert(eventAdapter.includes(eventName), `event adapter missing ${eventName}`);
 }
 assert(eventAdapter.includes('content_id'), 'event adapter must use stable content_id');
-assert(eventAdapter.includes('const SCHEMA_VERSION = 2'), 'event adapter schema version must match the canonical v2 contract');
+assert(eventAdapter.includes('const SCHEMA_VERSION = 3'), 'event adapter schema version must match the canonical v3 contract');
 assert(eventAdapter.includes('REQUIRED_FIELDS'), 'event adapter must reject incomplete payloads');
 for (const calculatorId of ['driving-time', 'minimum-price-margin', 'electric-van-charge-cost']) {
   assert(eventAdapter.includes(calculatorId), `event adapter missing calculator id ${calculatorId}`);
