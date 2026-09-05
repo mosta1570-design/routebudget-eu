@@ -17,6 +17,10 @@ updates:
         dependency-type: development
         patterns:
           - "*"
+        # Review major toolchain upgrades individually; retain normal security checks.
+        update-types:
+          - minor
+          - patch
     commit-message:
       prefix: deps
 
