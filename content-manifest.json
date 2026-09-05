@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-09-04",
+  "revisionDate": "2026-09-05",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -23,7 +23,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
       "indexable": true,
       "primaryKeyword": "calcolatore costo carburante viaggio",
-      "modified": "2026-08-31"
+      "modified": "2026-09-05"
     },
     {
       "id": "it:calcolatori:costo-chilometrico-camion",
@@ -131,7 +131,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costo-trasporto/",
       "indexable": true,
       "primaryKeyword": "calcolo costo trasporto",
-      "modified": "2026-09-03"
+      "modified": "2026-09-05"
     },
     {
       "id": "it:guide:calcolo-pedaggio-camion",
@@ -677,13 +677,13 @@
       "id": "it:guide:quanto-consuma-un-camion",
       "url": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
       "title": "Quanto consuma un camion? Consumo medio reale in l/100 km",
-      "description": "Come misurare il consumo medio reale di un camion in l/100 km, separare i profili di lavoro e usare il dato in una tratta senza medie ingannevoli.",
+      "description": "Consumo camion: esempi di test a 32 e 40 t, conversione in km/l e media corretta dai rifornimenti. Dati verificabili e metodo per il tuo preventivo.",
       "type": "guide",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
       "indexable": true,
       "primaryKeyword": "quanto consuma un camion",
-      "modified": "2026-09-02"
+      "modified": "2026-09-05"
     },
     {
       "id": "it:guide:quanto-consuma-un-furgone",

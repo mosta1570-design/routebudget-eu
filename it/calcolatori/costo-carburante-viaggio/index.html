@@ -18,7 +18,7 @@
     <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
     <meta property="og:image:alt" content="RouteBudget EU — Calcolatore carburante camion: litri e costo della tratta | RouteBudget EU" />
     <meta property="article:published_time" content="2026-08-01" />
-    <meta property="article:modified_time" content="2026-08-31" />
+    <meta property="article:modified_time" content="2026-09-05" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Calcolatore carburante camion: litri e costo della tratta | RouteBudget EU" />
     <meta name="twitter:description" content="Inserisci distanza, consumo già noto e prezzo al litro per calcolare litri e costo carburante di andata e ritorno a vuoto." />
@@ -62,15 +62,15 @@
         <p class="seo-hero__summary">Inserisci distanza, consumo già noto e prezzo al litro per calcolare litri e costo carburante di andata e ritorno a vuoto.</p>
         <div class="seo-meta" aria-label="Informazioni editoriali">
           <span>A cura di <a href="/#autore">Eng. Mostafa</a> · RouteBudget EU</span>
-          <span>Revisione 31 agosto 2026</span>
-          <span>5 min di lettura</span>
+          <span>Revisione 5 settembre 2026</span>
+          <span>6 min di lettura</span>
         </div>
 
       </div>
     </section>
     <section class="decision-strip" aria-label="Come usare questa risorsa">
     <div class="seo-shell decision-strip__inner">
-      <div><span>Risultato</span><strong>Una stima immediata con i dati inseriti da te.</strong><small>2 fonti verificabili · revisione 31 agosto 2026</small></div>
+      <div><span>Risultato</span><strong>Una stima immediata con i dati inseriti da te.</strong><small>2 fonti verificabili · revisione 5 settembre 2026</small></div>
       <div><span>Prepara</span><strong>Chilometri totali, consumo misurato e prezzo carburante con data.</strong></div>
       <div><span>Continua nell’app</span><strong>Porta il carburante nel costo completo insieme alle altre voci della missione.</strong></div>
     </div>
@@ -144,6 +144,9 @@
 <p>Questo strumento trasforma distanza, <strong>consumo già noto</strong> e prezzo al litro in due risultati: litri stimati e costo carburante. Puoi aggiungere i chilometri di ritorno a vuoto per evitare che il preventivo consideri solo la parte caricata della missione.</p>
 <p>Non stima quale dovrebbe essere il consumo medio del tuo mezzo. Se stai cercando “quanto consuma un camion” o devi ricavare i l/100 km dai rifornimenti, usa prima la guida per <a href="/it/guide/quanto-consuma-un-camion/">misurare il consumo medio reale del camion</a>, poi torna qui con il dato verificato.</p>
 <p>Il calcolo avviene nel browser. I valori inseriti non vengono inviati a RouteBudget e non vengono memorizzati dal calcolatore. Il risultato è una stima non vincolante: rifornimenti, variazioni di prezzo e consumo reale possono produrre un consuntivo diverso.</p>
+<h2 id="hai-il-consumo-in-km-l-prima-convertilo">Hai il consumo in km/l? Prima convertilo</h2>
+<p>Il campo richiede <strong>litri per 100 km</strong>, non chilometri per litro. Se il tuo dato è 4 km/l, inserisci <code>100 ÷ 4 = 25 L/100 km</code>, non 4. Su 400 km a un prezzo ipotetico di 1,70 €/l, l'input corretto produce <strong>100 litri e 170 €</strong>; inserire 4 produrrebbe 16 litri e 27,20 €, sottostimando il costo di 142,80 €.</p>
+<p>Se parti da più rifornimenti, usa il <a href="/it/guide/quanto-consuma-un-camion/">metodo della media ponderata del consumo</a>: <code>litri totali ÷ chilometri totali × 100</code>, su intervalli validi e missioni confrontabili. Il risultato è in L/100 km. Il calcolatore non riconosce automaticamente l'unità da cui proviene il numero.</p>
 <h2 id="formula-applicata">Formula applicata</h2>
 <p>Per ogni segmento viene usata questa formula:</p>
 <p><code>litri = distanza km ÷ 100 × consumo L/100 km</code></p>
@@ -245,6 +248,7 @@
 <li>condizioni e validità del preventivo.</li>
 </ul>
 <p>RouteBudget collega carburante o energia, pedaggi, tempo autista, pause operative, usura/manutenzione e ritorno a vuoto; confronta scenari di prezzo e crea un PDF della stima. Rischio commerciale, validità e condizioni dell’offerta restano valutazioni dell’impresa. Il calcolatore web resta deliberatamente limitato al carburante, così puoi ottenere una verifica rapida senza riprodurre il flusso completo dell’app.</p>
+<p>Per continuare senza confondere le voci, passa al <a href="/it/guide/calcolo-costo-trasporto/">calcolo completo del costo di trasporto</a>, poi controlla che cosa contiene il <a href="/it/guide/preventivo-trasporto-pdf/">riepilogo preventivo PDF di RouteBudget</a>. Il carburante calcolato qui entra una volta sola nel costo; il PDF non aggiunge automaticamente condizioni commerciali o dati del cliente.</p>
 <h2 id="checklist-prima-di-riportare-il-dato">Checklist prima di riportare il dato</h2>
 <ul>
 <li>distanza verificata per il mezzo;</li>
