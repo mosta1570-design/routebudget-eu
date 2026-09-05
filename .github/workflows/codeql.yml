@@ -18,7 +18,7 @@ on:
           - source
           - published
   workflow_run:
-    workflows: ['pages build and deployment']
+    workflows: ['pages-build-deployment', 'pages build and deployment']
     branches: [gh-pages]
     types: [completed]
 
