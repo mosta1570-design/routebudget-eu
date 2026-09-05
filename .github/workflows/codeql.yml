@@ -1,0 +1,110 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '23 5 * * 2'
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Scan source or the current published gh-pages commit
+        required: true
+        type: choice
+        default: source
+        options:
+          - source
+          - published
+  workflow_run:
+    workflows: ['pages build and deployment']
+    branches: [gh-pages]
+    types: [completed]
+
+permissions: {}
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    if: >-
+      github.event_name == 'push' ||
+      github.event_name == 'pull_request' ||
+      github.event_name == 'schedule' ||
+      (github.event_name == 'workflow_dispatch' && inputs.target == 'source')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [actions, javascript-typescript]
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+
+      - name: Analyze and upload source results
+        uses: github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        with:
+          category: /language:${{ matrix.language }}
+
+  analyze-published:
+    name: Analyze published (javascript-typescript)
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.target == 'published') ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.name == 'pages build and deployment' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_repository.full_name == github.repository &&
+       github.event.workflow_run.head_branch == 'gh-pages')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      # The workflow lives on main; the checkout is only data for static analysis.
+      # Never install packages, run build scripts, or execute these published files.
+      - name: Check out published JavaScript
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || 'gh-pages' }}
+          persist-credentials: false
+
+      - name: Record the exact published commit
+        id: published-commit
+        shell: bash
+        env:
+          SCAN_EVENT: ${{ github.event_name }}
+          EXPECTED_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          published_sha="$(git rev-parse --verify HEAD)"
+          if [[ "$SCAN_EVENT" == 'workflow_run' && "$published_sha" != "$EXPECTED_SHA" ]]; then
+            echo 'The checkout does not match the successful Pages run.' >&2
+            exit 1
+          fi
+          printf 'sha=%s\n' "$published_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Initialize CodeQL for published JavaScript
+        uses: github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        with:
+          languages: javascript-typescript
+          build-mode: none
+
+      - name: Analyze and upload published results
+        uses: github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        with:
+          ref: refs/heads/gh-pages
+          sha: ${{ steps.published-commit.outputs.sha }}
+          category: /language:javascript-typescript
