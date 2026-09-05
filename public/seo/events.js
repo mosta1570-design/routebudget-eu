@@ -1,6 +1,6 @@
 (() => {
   const EVENT_NAME = 'routebudget:analytics';
-  const SCHEMA_VERSION = 2;
+  const SCHEMA_VERSION = 3;
   const HOME_LOCALE_KEY = 'routebudget-site-locale';
   const SUPPORTED_LOCALES = new Set(['it', 'en']);
   const PAGE_TYPES = new Set(['landing', 'hub', 'pillar', 'guide', 'calculator', 'comparison', 'product', 'legal']);
@@ -24,6 +24,20 @@
     'mobile-menu-google-play',
   ]);
   const PDF_SAMPLE_IDS = new Set(['preventivo-pdf-sample']);
+  const CHATGPT_HOSTS = new Set(['chatgpt.com', 'www.chatgpt.com', 'chat.openai.com']);
+  const SEARCH_HOSTS = new Set([
+    ...[
+      'google.com', 'google.it', 'google.co.uk', 'google.de', 'google.fr', 'google.es',
+      'google.pt', 'google.nl', 'google.be', 'google.at', 'google.ch', 'google.ie',
+      'google.pl', 'google.cz', 'google.sk', 'google.hu', 'google.ro', 'google.bg',
+      'google.gr', 'google.dk', 'google.se', 'google.no', 'google.fi',
+    ].flatMap((host) => [host, `www.${host}`]),
+    'bing.com', 'www.bing.com', 'cn.bing.com',
+    'duckduckgo.com', 'www.duckduckgo.com', 'html.duckduckgo.com', 'lite.duckduckgo.com',
+    'yahoo.com', 'www.yahoo.com', 'search.yahoo.com', 'it.search.yahoo.com',
+    'uk.search.yahoo.com', 'fr.search.yahoo.com', 'de.search.yahoo.com',
+    'es.search.yahoo.com', 'search.yahoo.co.jp',
+  ]);
   const EVENT_FIELDS = {
     content_landing_view: ['source_class'],
     language_select: ['target_locale'],
@@ -47,7 +61,7 @@
     pdf_sample_download: ['asset_id', 'cta_position'],
   };
   const VALUE_RULES = {
-    source_class: (value) => ['organic_search', 'direct', 'referral', 'unknown'].includes(value),
+    source_class: (value) => ['chatgpt', 'organic_search', 'direct', 'referral', 'unknown'].includes(value),
     target_locale: (value) => SUPPORTED_LOCALES.has(value),
     cta_id: (value) => CTA_IDS.has(value),
     cta_position: (value) => ['inline', 'after_result', 'end', 'header', 'footer'].includes(value),
@@ -217,15 +231,31 @@
   }
 
   function classifySource(referrer) {
-    if (!referrer) return 'direct';
+    let referrerUrl = null;
     try {
-      const host = new URL(referrer).hostname;
-      if (host === window.location.hostname) return 'direct';
-      if (/(^|\.)(google|bing|duckduckgo|yahoo)\./i.test(host)) return 'organic_search';
-      return 'referral';
+      if (/^https?:\/\//i.test(referrer) && !/[\u0000-\u0020\u007f]/.test(referrer)) {
+        const parsed = new URL(referrer);
+        if (!parsed.username && !parsed.password) referrerUrl = parsed;
+      }
     } catch {
-      return 'unknown';
+      // Missing, malformed and non-web referrers do not establish a source.
     }
+    // Preserve the legacy internal-navigation class without renewing acquisition.
+    if (referrerUrl?.hostname === window.location.hostname) return 'direct';
+    if (CHATGPT_HOSTS.has(referrerUrl?.host)) return 'chatgpt';
+
+    try {
+      const query = window.location.search || '';
+      decodeURIComponent(query); // Reject malformed encoding before URLSearchParams' forgiving parse.
+      const sources = new URLSearchParams(query).getAll('utm_source');
+      if (sources.length === 1 && sources[0] === 'chatgpt.com') return 'chatgpt';
+    } catch {
+      // A malformed query is not a trusted source tag; never emit its contents.
+    }
+
+    if (!referrerUrl) return 'unknown';
+    if (SEARCH_HOSTS.has(referrerUrl.host)) return 'organic_search';
+    return 'referral';
   }
 
   function classifyStoreDestination(href) {

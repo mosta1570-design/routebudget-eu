@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build && node scripts/build-content.mjs --out dist",
     "content:build": "npm run build",
-    "content:verify": "node scripts/verify-calculators.mjs && node scripts/verify-events.mjs && node scripts/verify-generated.mjs",
+    "content:verify": "node scripts/verify-calculators.mjs && node scripts/verify-events.mjs && node scripts/verify-analytics.mjs && node scripts/verify-generated.mjs",
     "seo:audit": "node scripts/seo-audit.mjs",
     "seo:publish-gate": "node scripts/verify-publish-gate.mjs",
     "seo:publish-gate-exploits": "node scripts/verify-publish-gate-exploits.mjs",

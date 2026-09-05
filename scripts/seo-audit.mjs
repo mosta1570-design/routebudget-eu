@@ -14,4 +14,6 @@ assert.match(site.appStoreUrl, /^https:\/\/apps\.apple\.com\/app\/id\d+$/, 'App 
 assert(audit.length > 1500, 'SEO pipeline audit is incomplete');
 const packageText = JSON.stringify(packageJson);
 assert(!/(?:google-analytics|gtag|facebook-pixel|segment|mixpanel)/i.test(packageText), 'unapproved analytics dependency found');
-console.log('SEO architecture audit passed: reproducible scripts, verified store targets, no analytics provider.');
+assert.equal(site.analyticsMeasurementId, 'G-ELHQ6Z5F6E', 'analytics must use the approved RouteBudget property');
+assert(packageJson.scripts['content:verify'].includes('verify-analytics.mjs'), 'consent regression tests must run in CI');
+console.log('SEO architecture audit passed: reproducible scripts, verified stores, approved consent-gated GA4 property.');

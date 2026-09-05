@@ -64,7 +64,7 @@ const titles = new Set();
 const descriptions = new Set();
 const htmlByRoute = new Map();
 const incoming = new Map(generatedRoutes.map((route) => [route, 0]));
-const readingAssets = await Promise.all(['seo/seo.css', 'seo/events.js'].map(async (asset) => {
+const readingAssets = await Promise.all(['seo/seo.css', 'seo/events.js', 'seo/analytics.js', 'seo/analytics.css'].map(async (asset) => {
   const bytes = await readFile(path.join(DIST, asset));
   const version = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
   return `${BASE}/${asset}?v=${version}`;
@@ -149,11 +149,20 @@ assert(landingGraph.some((entry) => entry['@type'] === 'Organization' && entry['
 const landingWebsite = landingGraph.find((entry) => entry['@type'] === 'WebSite');
 assert.equal(landingWebsite?.publisher?.['@id'], `${ORIGIN}/#organization`, 'landing WebSite publisher must use Organization identity');
 assert(landing.includes('data-static-home'), 'landing must contain useful static HTML before client rendering');
+const staticProductFacts = capture(landing, /<div data-static-product-facts>([\s\S]*?)<\/div>/, 'landing static product limits missing');
+for (const fact of ['Free include tre calcoli', 'Pro sblocca calcoli illimitati', 'logo aziendale nei preventivi PDF', 'richiedono una connessione', 'Trip Tracking opzionale resta una funzione iOS', 'non una tariffa ufficiale']) {
+  assert(staticProductFacts.includes(fact), `landing static product facts missing: ${fact}`);
+}
 assert(landing.includes('Strumenti di intelligenza artificiale possono assistere'), 'landing transparent AI-assistance disclosure missing');
 assert(!/<noscript>[\s\S]*?<h1(?:\s|>)/.test(landing), 'landing must not duplicate H1 inside noscript');
 assert(landing.includes(`${BASE}/seo/events.js`), 'landing event hook missing');
 
 for (const [route, html] of htmlByRoute) {
+  assert.equal([...html.matchAll(/data-measurement-id="G-ELHQ6Z5F6E"/g)].length, 1, `${route}: approved collector must occur exactly once`);
+  assert(!/<(?:script|link)[^>]+(?:googletagmanager\.com|google-analytics\.com)/i.test(html), `${route}: Google resources must not load before consent`);
+  const collectorOffset = html.indexOf('/seo/analytics.js');
+  const eventsOffset = html.indexOf('/seo/events.js');
+  assert(collectorOffset >= 0 && (eventsOffset < 0 || collectorOffset < eventsOffset), `${route}: consent adapter must load before local events`);
   for (const match of html.matchAll(/href="([^"]+)"/g)) {
     const targetRoute = await verifyInternalTarget(route, match[1], htmlByRoute);
     if (targetRoute && incoming.has(targetRoute)) incoming.set(targetRoute, incoming.get(targetRoute) + 1);
@@ -172,6 +181,8 @@ for (const asset of [
   'CNAME',
   'seo/seo.css',
   'seo/events.js',
+  'seo/analytics.js',
+  'seo/analytics.css',
   'seo/calculators.js',
   'seo/calculators-core.js',
   'store-badges/app-store-it.svg',
@@ -232,7 +243,7 @@ for (const eventName of ['content_landing_view', 'store_outbound_click', 'langua
   assert(eventAdapter.includes(eventName), `event adapter missing ${eventName}`);
 }
 assert(eventAdapter.includes('content_id'), 'event adapter must use stable content_id');
-assert(eventAdapter.includes('const SCHEMA_VERSION = 2'), 'event adapter schema version must match the canonical v2 contract');
+assert(eventAdapter.includes('const SCHEMA_VERSION = 3'), 'event adapter schema version must match the canonical v3 contract');
 assert(eventAdapter.includes('REQUIRED_FIELDS'), 'event adapter must reject incomplete payloads');
 for (const calculatorId of ['driving-time', 'minimum-price-margin', 'electric-van-charge-cost']) {
   assert(eventAdapter.includes(calculatorId), `event adapter missing calculator id ${calculatorId}`);
