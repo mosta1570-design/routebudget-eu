@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-05-quanto-consuma-un-camion",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-05",
+  "decision": "approved",
+  "contentId": "guide/quanto-consuma-un-camion",
+  "contentFingerprint": "sha256:d163090e89760a915b698bb99484f6657b2e269b48d62273ccad5522ec843c7c",
+  "artifactFingerprint": "sha256:ca168d9eb8ecb614e7a7d3a1032309e3c77c77e509b596fe2ccd0a30be103d36",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-05",
+    "basis": "Explicit owner request in the active RouteBudget task to improve existing articles and links, verify Reddit advice against evidence, diagnose lost visibility, and apply useful changes; existing authorization includes PR, publication and search-engine submissions."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Adds a direct answer from two Italian-language manufacturer reports with test mass, year and German geography explicitly disclosed; not a national average or a like-for-like comparison. Original weighted-consumption example and conversions independently checked. No new app capability asserted. Read-only independent review completed; the one formula-unit finding was corrected and rechecked. Existing generated-link, calculation, motion and event contracts passed."
+}

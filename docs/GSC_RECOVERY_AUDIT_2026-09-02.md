@@ -4,7 +4,7 @@ Data audit: 2 settembre 2026. Proprietà: `sc-domain:routebudget.eu`. Tipo ricer
 
 ## Diagnosi
 
-Il calo è una rivalutazione algoritmica site-wide sincronizzata con l’August 2026 spam update, non un guasto tecnico di sitemap e non una manual action.
+Correzione interpretativa del 5 settembre: il calo coincide temporalmente con l’August 2026 spam update e interessa più famiglie di query. Una rivalutazione algoritmica è un’ipotesi plausibile, non una causa dimostrata dai dati disponibili. I controlli campione qui registrati non hanno rilevato un guasto di sitemap o una manual action; non escludono ogni possibile causa tecnica, competitiva o di qualità. Le metriche storiche sotto restano invariate.
 
 | Confronto | 19 ago–1 set | 5–18 ago | Variazione |
 |---|---:|---:|---:|
@@ -26,7 +26,7 @@ La perdita inizia il 19 agosto. Google dichiara l’August 2026 spam update dal 
 ## Debolezze confermate
 
 1. Dominio giovane con molte URL pubblicate in pochi giorni prima del calo.
-2. Report Links GSC: 0 link esterni rilevati; fiducia esterna quasi assente.
+2. Report Links GSC: 0 link esterni rilevati in quel report. Non prova che non esistano collegamenti altrove e non misura direttamente la fiducia attribuita dal motore.
 3. Ridistribuzione ranking ampia: la posizione peggiora insieme alla copertura query.
 4. Cinque URL nel report non indicizzate al 28 agosto; il report precede alcuni crawl del 31 agosto.
 5. Segnali interni GSC ancora concentrati su poche URL e privacy; report può essere in ritardo, ma richiede percorsi contestuali più espliciti.

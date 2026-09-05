@@ -1,0 +1,127 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-05",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "Google Search Console visible Web comparison for sc-domain:routebudget.eu, read 2026-09-05",
+    "Italian-language primary manufacturer test reports",
+    "Existing Italian intent inventory and source-verified product registry"
+  ],
+  "method": {
+    "interpretation": "Improve three existing intent owners after a verified historical visibility loss. GSC exposure supports a recovery priority, not a claim of trending search volume. No new URLs, keyword variants or invented Italian fleet averages.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "All volumes remain null. Page/query impressions are account observations for fixed date ranges, not market search volume or predicted downloads."
+  },
+  "gscContext": {
+    "property": "sc-domain:routebudget.eu",
+    "searchType": "web",
+    "capturedAt": "2026-09-05",
+    "newPeriod": "2026-08-19/2026-09-01",
+    "comparisonPeriod": "2026-08-05/2026-08-18",
+    "allWeb": {
+      "impressions": [
+        105,
+        1570
+      ],
+      "clicks": [
+        1,
+        19
+      ],
+      "ctrPercent": [
+        1,
+        1.2
+      ],
+      "averagePosition": [
+        27.7,
+        14.6
+      ]
+    },
+    "Italy": {
+      "impressions": [
+        77,
+        1418
+      ],
+      "clicks": [
+        1,
+        18
+      ]
+    },
+    "latestCompleteComparison": {
+      "newPeriod": "2026-08-31/2026-09-02",
+      "previousPeriod": "2026-08-28/2026-08-30",
+      "impressions": [
+        14,
+        13
+      ],
+      "clicks": [
+        0,
+        0
+      ],
+      "averagePosition": [
+        45.1,
+        55.4
+      ]
+    },
+    "causality": "These observations do not establish the cause of the decline or a recovery."
+  },
+  "candidates": [
+    {
+      "id": "demand:recovery-quanto-consuma-un-camion-20260905",
+      "primaryKeyword": "quanto consuma un camion",
+      "canonical": "/it/guide/quanto-consuma-un-camion/",
+      "query": "quanto consuma un camion",
+      "signal": "verified-gsc-page-loss-and-existing-italian-intent",
+      "signalNote": "Exact page: 1 versus 104 impressions, position 99 versus 18.2. Query rows include consumo medio camion 0/44, quanto consuma un camion 0/36 and quanto consuma un camion al km 0/29, new/old periods. Current inspection: indexed, successful smartphone crawl 2026-08-31, self canonical. Answer-first benchmarks address a concrete content gap, not a proven ranking cause.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The guide owns measurement and interpretation of l/100 km. The fuel calculator owns litres and cost after consumption is known; cost-per-km owns complete mission economics.",
+      "productFit": "A measured consumption profile is a relevant input to RouteBudget's released fuel estimate and full route-cost workflow.",
+      "productBoundary": "RouteBudget does not read telematics, diagnose a vehicle, provide a universal consumption benchmark or guarantee final fuel use.",
+      "sourceUrls": [
+        "https://www.scania.com/it/it/home/about-scania/newsroom/percorsi-online/2022/Scania-1000-punkte.html",
+        "https://www.volvotrucks.it/it-it/news/press-releases/2025/mar/volvo-fh-aero-wins-the-2025-green-truck.html",
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    },
+    {
+      "id": "demand:recovery-costo-carburante-viaggio-20260905",
+      "primaryKeyword": "calcolatore costo carburante viaggio",
+      "canonical": "/it/calcolatori/costo-carburante-viaggio/",
+      "query": "calcolatore costo carburante viaggio",
+      "signal": "verified-gsc-page-loss-and-existing-italian-intent",
+      "signalNote": "Exact page: 2 versus 320 impressions, position 42 versus 14.8, clicks 0/2 in the recorded Web periods. Current inspection: indexed, successful smartphone crawl 2026-08-31 and self canonical. Original unit-conversion example helps avoid a measurable input error; no search-volume claim.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The calculator owns litres and fuel cost from entered distance, measured consumption and price. The consumption guide owns measurement; the cost-per-km calculator owns the wider mission.",
+      "productFit": "RouteBudget can carry the verified fuel input into the released wider route-cost workflow with other supported cost components.",
+      "productBoundary": "Neither web calculator nor app supplies a guaranteed live fuel price, future price, route, official tariff or final profitability result.",
+      "sourceUrls": [
+        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
+        "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+      ]
+    },
+    {
+      "id": "demand:recovery-calcolo-costo-trasporto-20260905",
+      "primaryKeyword": "calcolo costo trasporto",
+      "canonical": "/it/guide/calcolo-costo-trasporto/",
+      "query": "calcolo costo trasporto",
+      "signal": "verified-gsc-page-loss-and-existing-italian-intent",
+      "signalNote": "Exact page: 5 versus 164 impressions, position 71.6 versus 20.1, clicks 0/1 in the recorded Web periods. This established complete-cost intent links to narrower measurement and calculation steps without creating a competing URL.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The pillar owns the complete single-mission cost method. Supporting guides own one component and calculators execute narrower numerical tasks.",
+      "productFit": "The method maps to RouteBudget's released complete route calculation, cost breakdown, scenarios and PDF estimate.",
+      "productBoundary": "The app does not replace dispatch, routing, live toll lookup, accounting, invoicing, legal review or an official market tariff.",
+      "sourceUrls": [
+        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+      ]
+    }
+  ]
+}

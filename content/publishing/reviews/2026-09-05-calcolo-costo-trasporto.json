@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "id": "review:2026-09-05-calcolo-costo-trasporto",
+  "type": "editorial",
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-05",
+  "decision": "approved",
+  "contentId": "guide/calcolo-costo-trasporto",
+  "contentFingerprint": "sha256:351f355ad0c322a7b7e5a8bdfb27de57d7fa8d79091f66c98b82e44b3bb22861",
+  "artifactFingerprint": "sha256:ed4378a8e95eb27c495f8e5702d0919ef19dee3f52a7bae8449de3f1f02759d3",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-05",
+    "basis": "Explicit owner request in the active RouteBudget task to improve existing articles and links, verify Reddit advice against evidence, diagnose lost visibility, and apply useful changes; existing authorization includes PR, publication and search-engine submissions."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Adds a contextual fuel-input decision path to the existing measurement guide and fuel calculator. Full-mission intent and prior evidence remain intact. No new page or product capability. Read-only independent review completed; the one formula-unit finding was corrected and rechecked. Existing generated-link, calculation, motion and event contracts passed."
+}

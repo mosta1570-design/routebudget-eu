@@ -1,8 +1,21 @@
-## Quanto consuma un camion: la risposta utile parte dai tuoi dati
+## Quanto consuma un camion: due riferimenti verificabili
 
-Chiedere quanto consuma un camion non porta a un unico valore valido per ogni mezzo e tratta. Motore, massa, rimorchio, pendenza, traffico e velocità possono cambiare il risultato in modo sostanziale. Una media generica può servire come controllo iniziale, ma non dovrebbe diventare la base di un preventivo. Questa è la pagina dedicata a **misurare e interpretare il consumo medio**; il calcolatore separato serve dopo, quando i l/100 km sono già noti.
+Per capire l'ordine di grandezza, ecco due risultati pubblicati dai costruttori nelle loro pagine italiane: **27,1 l/100 km** per uno Scania 460 R nel test 1000 Punkte 2021/22 a **40 tonnellate complessive**; **21,20 l/100 km** per un Volvo FH Aero nel Green Truck 2025 a **32 tonnellate complessive**. Sono risultati di prove diverse, non una media dei camion che lavorano in Italia e non una classifica confrontabile fra i due mezzi.
 
-Il dato operativo da cercare è il consumo del proprio veicolo in un contesto dichiarato: per esempio trattore e semirimorchio, carico medio, percorso autostradale e periodo estivo. Solo così il numero può essere confrontato con una nuova missione e trasformato in un costo carburante.
+Se devi quotare un viaggio oggi, non copiare il numero migliore. Usa il consumo del tuo mezzo su missioni comparabili; sotto trovi il metodo per ricavarlo dai rifornimenti, convertirlo in km/l e controllare quanto pesa sul costo.
+
+| Prova pubblicata | Dato e condizioni dichiarate |
+| --- | --- |
+| [Scania Italia — 1000 Punkte 2021/22](https://www.scania.com/it/it/home/about-scania/newsroom/percorsi-online/2022/Scania-1000-punkte.html) | 460 R: 27,1 l/100 km; combinazione da 40 t; prova organizzata in Germania. |
+| [Volvo Trucks Italia — Green Truck 2025](https://www.volvotrucks.it/it-it/news/press-releases/2025/mar/volvo-fh-aero-wins-the-2025-green-truck.html) | FH Aero D13 420 CV I-Save: 21,20 l/100 km; combinazione da 32 t; percorso di 343 km nel sud della Germania, autostrade e strade statali. |
+
+Le fonti sono comunicazioni dei produttori su test della stampa specializzata, non misurazioni svolte da RouteBudget. Peso, percorso, configurazione e anno cambiano: da questi due risultati non si può ricavare un intervallo garantito per un bilico a 44 t, per la montagna o per la distribuzione urbana. Il riferimento esterno serve a fare domande sul proprio dato, non a sostituirlo.
+
+## Quanti km fa un camion con un litro di gasolio?
+
+La conversione è `km/l = 100 ÷ consumo in l/100 km`. Per esempio, **30 l/100 km equivalgono a circa 3,33 km/l e 0,30 litri/km**. Trenta è qui un input didattico, non il consumo medio nazionale.
+
+Se invece conosci già consumo, distanza e prezzo, passa al [calcolatore carburante della tratta](/it/calcolatori/costo-carburante-viaggio/). Non devi leggere tutto il metodo per eseguire quel calcolo.
 
 ## L/100 km, km/l e litri totali
 
@@ -62,6 +75,24 @@ Il dato diventa utile quando puoi ricostruire da quale lavoro proviene. Per ogni
 | Anomalie | deviazione, coda, guasto, meteo o gruppo frigo | trattare un viaggio eccezionale come riferimento |
 
 Calcola i l/100 km per ogni riga valida, poi raggruppa solo missioni abbastanza simili. Non esiste un numero universale di viaggi che renda automaticamente affidabile la media: aumenta il campione finché aggiungere una tratta comparabile non sposta più il valore in modo rilevante per il tuo preventivo. Se i risultati restano dispersi, usa scenario base e prudente invece di nascondere la variabilità in una cifra sola.
+
+## La media corretta quando i viaggi hanno lunghezze diverse
+
+Per il consumo complessivo di un gruppo omogeneo, **somma prima litri e chilometri**, poi dividi. Fare la media semplice dei consumi delle singole tratte dà lo stesso peso a un viaggio breve e a uno lungo.
+
+Esempio inventato per verificare il metodo, con quantità riferite a intervalli pieni-pieni validi:
+
+| Intervallo | Rilevazione |
+| --- | --- |
+| A | 100 km e 40 litri: 40 l/100 km |
+| B | 900 km e 270 litri: 30 l/100 km |
+| Totale | 1.000 km e 310 litri: **31 l/100 km** |
+
+`consumo del gruppo = (40 + 270) ÷ (100 + 900) × 100 = 31 l/100 km`
+
+La media semplice `(40 + 30) ÷ 2 = 35` sarebbe sbagliata per il totale percorso. Su 620 km, usare 35 anziché 31 produce una differenza di **24,8 litri**: a un prezzo illustrativo di 1,68 €/l, sono **41,66 €** dopo l'arrotondamento finale.
+
+Il totale descrive quel gruppo, non ogni sua tratta. Se A è urbano e B autostradale, conserva anche i due profili separati: una media ponderata corretta non rende equivalenti missioni diverse. RouteBudget riceve il consumo che inserisci; non importa i rifornimenti né calcola automaticamente questa media dallo storico.
 
 ## I fattori che cambiano il consumo
 
