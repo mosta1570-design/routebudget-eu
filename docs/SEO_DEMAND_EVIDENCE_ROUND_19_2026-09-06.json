@@ -1,0 +1,172 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "locale": "it",
+  "market": "IT",
+  "capturedAt": "2026-09-06",
+  "providers": [
+    "Google Search Italian live browser sample",
+    "Google Suggest hl=it gl=it",
+    "Italian primary industry and government sources"
+  ],
+  "method": {
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty",
+      "search_trend_growth"
+    ],
+    "interpretation": "No candidate is described as proven high-volume, trending or globally best. Two exact suggestions establish wording; delivery-cost candidate is a narrower documented SERP-gap experiment. Neither SERPs nor supplied community notes quantify demand.",
+    "inventory": "Compared all 62 existing Italian articles and primary/secondary keyword owners on main 0ba6bffe before selection.",
+    "serpObservation": {
+      "date": "2026-09-06",
+      "parameters": "hl=it&gl=it&pws=0",
+      "context": "Desktop signed-in browser. First live query footer explicitly showed non-personalized results, Italy/Milano by IP. Precise location not granted. Ads and AI Overview excluded from factual evidence.",
+      "queries": [
+        {
+          "query": "borsa carichi per furgoni",
+          "observedOrganic": [
+            "https://truckscanner.it/it/blog/borsa-carichi-per-furgoni",
+            "https://www.cargopedia.it/",
+            "https://clicktrans.it/cerca-carichi"
+          ],
+          "gap": "Existing guides already cover how exchanges work and tariffs. Distinct addition is an actionable announcement-data sheet and compatible/not-compatible/needs-information decision, not a purported empty SERP."
+        },
+        {
+          "query": "costo per consegna ultimo miglio",
+          "observedOrganic": [
+            "https://www.dhl.com/discover/it-it/logistics-advice/import-export-advice/last-mile-solutions",
+            "https://optimoroute.com/it/consegna-dellultimo-miglio/",
+            "https://blog.ptvlogistics.com/it/trasporti-e-logistica/costi-nascosti-consegne-ultimo-miglio-che-dovresti-conoscere/"
+          ],
+          "gap": "Definitions, aggregate cost shares and optimization advice dominate sample. Contribution is a reproducible small-operator worksheet distinguishing paid units, successful deliveries and stops, plus incremental redelivery. Not proof that no competitor covers these."
+        },
+        {
+          "query": "divieti circolazione mezzi pesanti 2026",
+          "observation": "Web search/source research, not a completed browser SERP snapshot; browser location prompt interrupted this sample.",
+          "observedResults": [
+            "https://www.mit.gov.it/normativa/decreto-ministeriale-n-325-del-12-dicembre-2025",
+            "https://www.logisticamente.it/articoli/57241/divieti-circolazione-mezzi-pesanti-2026-calendario-mit/",
+            "https://www.trasporti-italia.com/camion/divieti-mezzi-pesanti-settembre-2026-italia-europa/1408644/?amp=1"
+          ],
+          "gap": "Calendars already exist. Contribution is linking official dates to a feasible delivery window before quotation, with external route checks and cost-change sheet."
+        }
+      ]
+    },
+    "selectionRule": "Distinct existing-intent boundary, qualitative Italian signal, at least two source records, original verified arithmetic and truthful product fit; delivery-cost candidate accepted as experiment with weaker demand evidence."
+  },
+  "rejectedCandidates": [
+    {
+      "query": "costo per consegna",
+      "reason": "Autocomplete returned driving-licence/postal queries, not business delivery. Not claimed as relevant exact suggestion.",
+      "rawResponse": "[\"costo per consegna\",[\"costo per consegna patente\",\"costo raccomandata per consegna patente\"],[],{\"google:suggestsubtypes\":[[512],[22,30]]}]"
+    },
+    {
+      "query": "costi ultimo miglio / costo ultimo miglio / calcolo costo consegna",
+      "reason": "No Suggest suggestions in captured responses. Nonappearance does not prove zero demand; do not use as exact-query evidence."
+    },
+    {
+      "query": "trasporto urgente preventivo",
+      "reason": "Too close to existing dedicated transport and quote owners for this batch."
+    },
+    {
+      "query": "tariffe padroncini",
+      "reason": "Would risk repeating existing truck subcontract and van cost articles; no independent price benchmark available."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "demand:round-19-preventivo-trasporto",
+      "primaryKeyword": "preventivo trasporto",
+      "canonical": "/it/guide/preventivo-trasporto/",
+      "query": "preventivo trasporto",
+      "signal": "existing-pillar-contextual-link-maintenance",
+      "signalNote": "Existing primary keyword owner retained. Only contextual links added to the three separately researched Italian tasks. No new search-demand measurement or new page is claimed for this maintenance item.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "The existing pillar retains general quote preparation; new guides own offer screening, delivery-unit economics and calendar feasibility.",
+      "productFit": "Verified supported route estimate and nonbinding PDF remain the pillar handoff, without additional functionality claims.",
+      "productBoundary": "The PDF is not a binding contract, route authorization or free-form conditions editor; external checks remain necessary.",
+      "sourceUrls": [
+        "https://apps.apple.com/app/id6789717191",
+        "https://play.google.com/store/apps/details?id=eu.routebudget.app"
+      ]
+    },
+    {
+      "id": "demand:round-19-borsa-carichi-per-furgoni",
+      "primaryKeyword": "borsa carichi per furgoni",
+      "canonical": "/it/guide/borsa-carichi-per-furgoni/",
+      "query": "borsa carichi per furgoni",
+      "signal": "exact-google-suggest-it-plus-primary-sources",
+      "signalNote": "Exact Italian autocomplete captured 6 September 2026. This confirms returned wording, not search volume, growth or expected traffic.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns van-freight offer discovery and data sufficiency/compatibility screening. Does not duplicate generic spot definition, empty-return economics, truck subcontract tariffs or full van cost/km method.",
+      "productFit": "Verified route estimates, economic scenarios and local archive support evaluating a technically compatible offer after external checks.",
+      "productBoundary": "RouteBudget is not a freight exchange, does not verify counterparties or cargo capacity, and has no direct integrations with the named platforms.",
+      "sourceUrls": [
+        "https://www.trans.eu/it/borsa-carichi/furgoni/",
+        "https://www.teleroute.com/it-it/borsa-trasporti/offerte-di-carico-in-diretta/"
+      ],
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=borsa%20carichi%20per%20furgoni",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "borsa carichi per furgoni"
+      ],
+      "rawResponse": "[\"borsa carichi per furgoni\",[\"borsa carichi per furgoni\"],[],{\"google:suggestsubtypes\":[[512]]}]"
+    },
+    {
+      "id": "demand:round-19-costo-consegna-ultimo-miglio",
+      "primaryKeyword": "costo per consegna ultimo miglio",
+      "canonical": "/it/guide/costo-consegna-ultimo-miglio/",
+      "query": "costo per consegna ultimo miglio",
+      "signal": "documented-italian-serp-gap-experiment",
+      "signalNote": "No exact relevant autocomplete signal verified. Actual Italian results and primary operational sources support a narrower unit-cost worksheet; volume and trend unknown.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns denominator choice for delivery-route unit costs and incremental redelivery. Not general van cost/km, pallet pricing, route optimization or a driver salary article.",
+      "productFit": "Verified route cost components provide inputs to an external delivery-route reconciliation; original worksheet computes unit costs.",
+      "productBoundary": "RouteBudget is not a multi-stop optimizer, proof-of-delivery system or per-delivery KPI calculator. Additional costs and stop data remain outside the app.",
+      "sourceUrls": [
+        "https://green.unibocconi.eu/sites/default/files/media/attach/RR28.pdf",
+        "https://blog.ptvlogistics.com/it/trasporti-e-logistica/costi-nascosti-consegne-ultimo-miglio-che-dovresti-conoscere/"
+      ],
+      "exactSuggestionReturned": null,
+      "requestUrl": "https://www.google.com/search?q=costo+per+consegna+ultimo+miglio&hl=it&gl=it&pws=0"
+    },
+    {
+      "id": "demand:round-19-divieti-circolazione-mezzi-pesanti-2026",
+      "primaryKeyword": "divieti circolazione mezzi pesanti 2026",
+      "canonical": "/it/guide/divieti-circolazione-mezzi-pesanti-2026/",
+      "query": "divieti circolazione mezzi pesanti 2026",
+      "signal": "exact-google-suggest-it-plus-primary-sources",
+      "signalNote": "Exact Italian autocomplete captured 6 September 2026. This confirms returned wording, not search volume, growth or expected traffic.",
+      "volume": null,
+      "decision": "publish",
+      "intentBoundary": "Owns Italian national calendar-to-delivery-window feasibility. Not driver-hours compliance, downtime profit or foreign tolls; no route clearance or legal opinion.",
+      "productFit": "Verified route estimation and PDF can support quotation only after external schedule/legal feasibility checks.",
+      "productBoundary": "RouteBudget does not consult road bans or authorize travel; extra costs without dedicated fields and custom commercial clauses remain external.",
+      "sourceUrls": [
+        "https://www.mit.gov.it/normativa/decreto-ministeriale-n-325-del-12-dicembre-2025",
+        "https://www.mit.gov.it/nfsmitgov/files/media/normativa/2026-01/DM_325.12-12-2025%20calendario%20mezzi%20pesanti%202026.pdf",
+        "https://www.gazzettaufficiale.it/eli/id/2025/12/31/25A07055/sg",
+        "https://prefettura.interno.gov.it/it/prefetture/bolzano/notizie/mezzi-pesanti-integrazione-calendario-dei-divieti-transito"
+      ],
+      "requestUrl": "https://suggestqueries.google.com/complete/search?client=firefox&hl=it&gl=it&q=divieti%20circolazione%20mezzi%20pesanti%202026",
+      "exactSuggestionReturned": true,
+      "returnedSuggestions": [
+        "divieti circolazione mezzi pesanti 2026",
+        "divieti circolazione mezzi pesanti 2026 pdf",
+        "divieti circolazione mezzi pesanti 2026 francia",
+        "divieti circolazione mezzi pesanti 2026 europa",
+        "divieti circolazione mezzi pesanti 2026 autostrade",
+        "divieti circolazione mezzi pesanti 2026 agosto",
+        "divieti circolazione mezzi pesanti 2026 germania",
+        "divieti circolazione mezzi pesanti 2026 austria",
+        "divieti circolazione mezzi pesanti 2026 luglio",
+        "divieti circolazione mezzi pesanti 2026 svizzera"
+      ],
+      "rawResponse": "[\"divieti circolazione mezzi pesanti 2026\",[\"divieti circolazione mezzi pesanti 2026\",\"divieti circolazione mezzi pesanti 2026 pdf\",\"divieti circolazione mezzi pesanti 2026 francia\",\"divieti circolazione mezzi pesanti 2026 europa\",\"divieti circolazione mezzi pesanti 2026 autostrade\",\"divieti circolazione mezzi pesanti 2026 agosto\",\"divieti circolazione mezzi pesanti 2026 germania\",\"divieti circolazione mezzi pesanti 2026 austria\",\"divieti circolazione mezzi pesanti 2026 luglio\",\"divieti circolazione mezzi pesanti 2026 svizzera\"],[],{\"google:suggestsubtypes\":[[512],[512],[512],[512],[512],[512],[512],[512],[512],[512]]}]"
+    }
+  ]
+}

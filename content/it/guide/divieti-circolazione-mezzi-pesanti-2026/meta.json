@@ -1,0 +1,77 @@
+{
+  "slug": "divieti-circolazione-mezzi-pesanti-2026",
+  "title": "Divieti mezzi pesanti 2026: calendario e controllo della tratta",
+  "description": "Calendario MIT settembre-dicembre 2026 e controlli prima del preventivo: massa autorizzata, percorso, orari di scarico e variazioni di costo.",
+  "eyebrow": "Italia · Fattibilità della consegna",
+  "primaryKeyword": "divieti circolazione mezzi pesanti 2026",
+  "secondaryKeywords": [
+    "divieti camion settembre 2026 Italia",
+    "calendario divieti camion ottobre dicembre 2026",
+    "consegna durante divieto mezzi pesanti"
+  ],
+  "cluster": "preventivi-trasporto",
+  "topics": [
+    "calendario nazionale",
+    "finestra di scarico",
+    "restrizioni territoriali"
+  ],
+  "related": [
+    "guide:preventivo-trasporto",
+    "guide:tempi-guida-riposo-camion",
+    "guide:costo-fermo-camion",
+    "calcolatori:tempi-guida-camion"
+  ],
+  "relatedCalculator": "calcolatori:tempi-guida-camion",
+  "appFeature": "complete-route-calculation",
+  "conversionIntent": "complete-trip",
+  "changeSummary": "Prima pubblicazione: estratto MIT settembre-dicembre 2026, controllo della finestra di consegna e scenario di variazione costi; nessuna verifica automatica dei divieti attribuita all'app.",
+  "kind": "guide",
+  "searchIntent": "informational-commercial",
+  "locale": "it",
+  "status": "published",
+  "published": "2026-09-06",
+  "modified": "2026-09-06",
+  "reviewed": "2026-09-06",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "pillar": "guide:preventivo-trasporto",
+  "calculatorId": null,
+  "translationGroup": "divieti-circolazione-mezzi-pesanti-2026",
+  "canonical": "/it/guide/divieti-circolazione-mezzi-pesanti-2026/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "MIT — Decreto ministeriale n. 325 del 12 dicembre 2025",
+      "url": "https://www.mit.gov.it/normativa/decreto-ministeriale-n-325-del-12-dicembre-2025",
+      "publishedOrUpdated": "8 gennaio 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-06",
+      "supports": "Identità del decreto, campo ordinario superiore a 7,5 t sulle strade extraurbane e pubblicazione."
+    },
+    {
+      "label": "MIT — DM 325/2025, testo e allegato A 2026",
+      "url": "https://www.mit.gov.it/nfsmitgov/files/media/normativa/2026-01/DM_325.12-12-2025%20calendario%20mezzi%20pesanti%202026.pdf",
+      "publishedOrUpdated": "12 dicembre 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-09-06",
+      "supports": "Articoli 1–2, 3–8 e 12; calendario settembre-dicembre nell'allegato A, pagine stampate 15–16."
+    },
+    {
+      "label": "Gazzetta Ufficiale — Decreto 12 dicembre 2025",
+      "url": "https://www.gazzettaufficiale.it/eli/id/2025/12/31/25A07055/sg",
+      "publishedOrUpdated": "31 dicembre 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-09-06",
+      "supports": "Pubblicazione GU Serie Generale 302, codice 25A07055."
+    },
+    {
+      "label": "Commissariato del Governo di Bolzano — Integrazione divieti",
+      "url": "https://prefettura.interno.gov.it/it/prefetture/bolzano/notizie/mezzi-pesanti-integrazione-calendario-dei-divieti-transito",
+      "publishedOrUpdated": "29 aprile 2026; aggiornamento 5 maggio 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-06",
+      "supports": "Esistenza di integrazioni territoriali: pagina ufficiale letta nel browser il 6 settembre 2026, dopo il blocco del lettore automatico. Nessun dettaglio operativo dell'ordinanza riprodotto."
+    }
+  ]
+}

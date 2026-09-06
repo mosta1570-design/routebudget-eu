@@ -1,0 +1,62 @@
+{
+  "slug": "costo-consegna-ultimo-miglio",
+  "title": "Costo per consegna ultimo miglio: il conto del giro",
+  "description": "Calcola il costo di una consegna nel giro del furgone: fermate, consegne riuscite, unità pagate e riconsegne, con un esempio verificabile.",
+  "eyebrow": "Distribuzione · Economia del giro",
+  "primaryKeyword": "costo per consegna ultimo miglio",
+  "secondaryKeywords": [
+    "calcolo costo giro consegne",
+    "costo riconsegna furgone",
+    "fermate e consegne riuscite"
+  ],
+  "cluster": "costi-autotrasporto",
+  "topics": [
+    "unità remunerate",
+    "riconsegne",
+    "costo unitario del giro"
+  ],
+  "related": [
+    "guide:costi-autotrasporto",
+    "guide:costo-furgone-per-km",
+    "guide:preventivo-trasporto",
+    "guide:preventivo-consuntivo-viaggio-camion",
+    "calcolatori:costo-carburante-viaggio"
+  ],
+  "relatedCalculator": "calcolatori:costo-carburante-viaggio",
+  "appFeature": "cost-breakdown",
+  "conversionIntent": "complete-trip",
+  "changeSummary": "Prima pubblicazione: distinzione fra colli, fermate e consegne pagate; giro da 266,60 euro e costo incrementale della riconsegna, senza benchmark universali.",
+  "kind": "guide",
+  "searchIntent": "informational-commercial",
+  "locale": "it",
+  "status": "published",
+  "published": "2026-09-06",
+  "modified": "2026-09-06",
+  "reviewed": "2026-09-06",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "pillar": "guide:costi-autotrasporto",
+  "calculatorId": null,
+  "translationGroup": "costo-consegna-ultimo-miglio",
+  "canonical": "/it/guide/costo-consegna-ultimo-miglio/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Bocconi — URBeLOG, Research Report 28",
+      "url": "https://green.unibocconi.eu/sites/default/files/media/attach/RR28.pdf",
+      "publishedOrUpdated": "30 settembre 2017",
+      "geography": "Italia",
+      "accessedAt": "2026-09-06",
+      "supports": "Distinzione metodologica fra chilometri, stop e consegne completate, sezione 4.1. Dati storici, non tariffe attuali."
+    },
+    {
+      "label": "PTV Logistics — Costi nascosti delle consegne dell'ultimo miglio",
+      "url": "https://blog.ptvlogistics.com/it/trasporti-e-logistica/costi-nascosti-consegne-ultimo-miglio-che-dovresti-conoscere/",
+      "publishedOrUpdated": "3 dicembre 2025",
+      "geography": "Italia",
+      "accessedAt": "2026-09-06",
+      "supports": "Riconsegne, tempo del conducente e costi operativi; nessuna percentuale estera usata come benchmark italiano."
+    }
+  ]
+}

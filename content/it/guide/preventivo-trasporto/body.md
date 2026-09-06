@@ -202,3 +202,5 @@ Questa distinzione evita che una simulazione venga scambiata per un incarico pro
 - [ ] La copia inviata resta archiviata con la relativa scheda di costo.
 
 Un buon preventivo rende più semplice decidere per entrambe le parti. Per l’impresa conserva il legame tra costo, margine e condizioni operative; per il cliente mostra con chiarezza che cosa riceve. [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/) aiuta a calcolare la tratta e a esportare un riepilogo PDF non vincolante; la completezza dell’offerta resta responsabilità dell’impresa.
+
+Prima della proposta, usa la scheda per [valutare i carichi per furgoni](/it/guide/borsa-carichi-per-furgoni/) se il lavoro arriva da un annuncio. Per un giro di distribuzione verifica invece [quali consegne producono costo e ricavo](/it/guide/costo-consegna-ultimo-miglio/). Per un mezzo soggetto al calendario nazionale, controlla i [divieti di circolazione 2026 e la finestra di scarico](/it/guide/divieti-circolazione-mezzi-pesanti-2026/) prima di confermare la data.

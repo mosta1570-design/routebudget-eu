@@ -1,0 +1,61 @@
+{
+  "slug": "borsa-carichi-per-furgoni",
+  "title": "Borsa carichi per furgoni: quali offerte accettare?",
+  "description": "Come valutare i carichi per furgoni: dati dell'annuncio, compatibilità, orari e confronto economico prima di accettare o proporre un prezzo.",
+  "eyebrow": "Furgoni · Selezione degli incarichi",
+  "primaryKeyword": "borsa carichi per furgoni",
+  "secondaryKeywords": [
+    "come trovare carichi per furgoni",
+    "valutare offerte borsa carichi furgone",
+    "scheda annuncio trasporto furgone"
+  ],
+  "cluster": "preventivi-trasporto",
+  "topics": [
+    "compatibilità del carico",
+    "filtri delle borse trasporti",
+    "selezione degli incarichi"
+  ],
+  "related": [
+    "guide:preventivo-trasporto",
+    "guide:costo-furgone-per-km",
+    "guide:consegna-con-sponda-idraulica",
+    "calcolatori:prezzo-minimo-margine-tratta"
+  ],
+  "relatedCalculator": "calcolatori:prezzo-minimo-margine-tratta",
+  "appFeature": "cost-scenarios",
+  "conversionIntent": "protect-margin",
+  "changeSummary": "Prima pubblicazione: scheda di selezione degli annunci per furgoni e confronto originale fra due offerte da 240 euro, senza graduatorie o tariffe inventate.",
+  "kind": "guide",
+  "searchIntent": "informational-commercial",
+  "locale": "it",
+  "status": "published",
+  "published": "2026-09-06",
+  "modified": "2026-09-06",
+  "reviewed": "2026-09-06",
+  "author": "Eng. Mostafa",
+  "reviewer": "Eng. Mostafa",
+  "pillar": "guide:preventivo-trasporto",
+  "calculatorId": null,
+  "translationGroup": "borsa-carichi-per-furgoni",
+  "canonical": "/it/guide/borsa-carichi-per-furgoni/",
+  "ogImage": "/og-cover.jpg",
+  "noindex": false,
+  "sources": [
+    {
+      "label": "Trans.eu — Carichi per furgoni",
+      "url": "https://www.trans.eu/it/borsa-carichi/furgoni/",
+      "publishedOrUpdated": "Data non esposta; consultata il 6 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-06",
+      "supports": "Filtri geografici, capacità, dimensioni e dotazioni dichiarati dalla piattaforma; non benchmark di ricavo."
+    },
+    {
+      "label": "Teleroute — Offerte di carico e FAQ",
+      "url": "https://www.teleroute.com/it-it/borsa-trasporti/offerte-di-carico-in-diretta/",
+      "publishedOrUpdated": "Data non esposta; consultata il 6 settembre 2026",
+      "geography": "Italia",
+      "accessedAt": "2026-09-06",
+      "supports": "Contatto, dettagli del servizio, negoziazione del prezzo e condizioni di pagamento prima della conferma."
+    }
+  ]
+}

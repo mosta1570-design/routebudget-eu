@@ -158,3 +158,5 @@ Per un controllo periodico, conserva invece un prospetto per ogni mezzo con:
 Un costo furgone per km professionale non nasce da una tariffa copiata: nasce da un perimetro chiaro, dati del mezzo e chilometri completi. Collegalo alla guida sui [costi dell'autotrasporto](/it/guide/costi-autotrasporto/) e rivedilo quando cambiano percorrenza, carburante, canone, organizzazione o tipo di servizio.
 
 Per un furgone elettrico puoi isolare prima [energia, costo e durata teorica di una sessione di ricarica](/it/calcolatori/quanto-costa-ricaricare-furgone-elettrico/). Quel risultato è soltanto una voce: questa guida conserva il calcolo completo in €/km e il metodo per includere mezzo, lavoro, percorrenza e chilometri non fatturabili.
+
+Quando il costo del mezzo è chiaro, puoi usarlo per [valutare un annuncio su una borsa carichi per furgoni](/it/guide/borsa-carichi-per-furgoni/). Se invece lavori con molti indirizzi nello stesso giro, passa al [costo per consegna nell'ultimo miglio](/it/guide/costo-consegna-ultimo-miglio/): fermate tentate e consegne riuscite richiedono un conteggio distinto.

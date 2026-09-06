@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-06",
+  "decision": "approved",
+  "id": "review:2026-09-06-costo-furgone-per-km",
+  "type": "editorial",
+  "contentId": "guide/costo-furgone-per-km",
+  "contentFingerprint": "sha256:d24faebfa3ba43633e72b883fe1ce596618e106de5efff9ad8994ad57abcfac7",
+  "artifactFingerprint": "sha256:dd316497dd923a799a62a95a3780c43601b19f8c4adb910d376028dd1235d2b1",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-06",
+    "basis": "Explicit active owner request to research and publish three distinct useful Italian RouteBudget articles, validate the website and submit sitemap/indexing requests to Google and Bing, with truthful ChatGPT search discovery support. This covers the contextual incoming links and exact reviewed publication artifacts; no independent human review or guaranteed ranking is claimed."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Only contextual incoming links and corresponding modified/review dates changed in this release. Existing body method, product boundaries and historical source dates preserved. Source diff checked; schema, internal links and shared responsive template passed. No fresh independent factual/legal review of the entire historical article is claimed."
+}

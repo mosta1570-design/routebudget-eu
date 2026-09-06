@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-09-05-ga4-consent-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-06-italian-operational-integrity",
   "staticArtifacts": {
     "/": "sha256:d00883a785d305bdaa37a2195204c3212f7b9befadc2a81e169e385dfbff90a7",
     "/it/calcolatori/": "sha256:1c577f4d24c361c984201037f13598282e462e14b005b8546830130a9ff37f91",
-    "/it/guide/": "sha256:2bb619d3a8462150d39c1178e1b97c52d33bf4d9dc870da07364d5bbeeca26ce",
+    "/it/guide/": "sha256:e5f5951cfc1ffadcf2b324b79ad6e78a24c104fc154c1eb371d19549d0b12fcd",
     "/privacy.html": "sha256:3250022f0bd86b85db716f0aa4c5be69cf0ebe98b54714fe1392f62b84fe47c0",
     "/terms.html": "sha256:be8f0e82f25d6fcb6b44e9a475a8d09b3d176521b7479b68074a7f83ea5956b6"
   },
@@ -50,7 +50,7 @@
       "changeScope": "metadata-or-links",
       "intentOwner": "costo furgone per km",
       "demandEvidenceId": "demand:maintenance-costo-furgone-per-km",
-      "approvalId": "review:2026-08-23-costo-furgone-per-km",
+      "approvalId": "review:2026-09-06-costo-furgone-per-km",
       "productProofIds": [
         "cost-breakdown"
       ],
@@ -154,7 +154,7 @@
       "changeScope": "substantive-update",
       "intentOwner": "calcolo tempi di guida e riposo camion",
       "demandEvidenceId": "demand:maintenance-tempi-guida-riposo",
-      "approvalId": "review:2026-08-23-tempi-guida-riposo",
+      "approvalId": "review:2026-09-06-tempi-guida-riposo-camion",
       "productProofIds": [
         "complete-route-calculation"
       ],
@@ -541,6 +541,72 @@
       "primarySourceUrls": [
         "https://www.dhl.com/it-it/home/spedizioni/soluzioni-di-trasporto-ltl.html",
         "https://www.maliktrasporti.it/service/trasporto-dedicato/"
+      ]
+    },
+    {
+      "contentId": "guide/borsa-carichi-per-furgoni",
+      "canonical": "/it/guide/borsa-carichi-per-furgoni/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "borsa carichi per furgoni",
+      "demandEvidenceId": "demand:round-19-borsa-carichi-per-furgoni",
+      "approvalId": "review:2026-09-06-borsa-carichi-per-furgoni",
+      "productProofIds": [
+        "cost-scenarios"
+      ],
+      "primarySourceUrls": [
+        "https://www.trans.eu/it/borsa-carichi/furgoni/",
+        "https://www.teleroute.com/it-it/borsa-trasporti/offerte-di-carico-in-diretta/"
+      ]
+    },
+    {
+      "contentId": "guide/costo-consegna-ultimo-miglio",
+      "canonical": "/it/guide/costo-consegna-ultimo-miglio/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "costo per consegna ultimo miglio",
+      "demandEvidenceId": "demand:round-19-costo-consegna-ultimo-miglio",
+      "approvalId": "review:2026-09-06-costo-consegna-ultimo-miglio",
+      "productProofIds": [
+        "cost-breakdown"
+      ],
+      "primarySourceUrls": [
+        "https://green.unibocconi.eu/sites/default/files/media/attach/RR28.pdf",
+        "https://blog.ptvlogistics.com/it/trasporti-e-logistica/costi-nascosti-consegne-ultimo-miglio-che-dovresti-conoscere/"
+      ]
+    },
+    {
+      "contentId": "guide/divieti-circolazione-mezzi-pesanti-2026",
+      "canonical": "/it/guide/divieti-circolazione-mezzi-pesanti-2026/",
+      "audienceMarket": "IT",
+      "changeScope": "new-content",
+      "intentOwner": "divieti circolazione mezzi pesanti 2026",
+      "demandEvidenceId": "demand:round-19-divieti-circolazione-mezzi-pesanti-2026",
+      "approvalId": "review:2026-09-06-divieti-circolazione-mezzi-pesanti-2026",
+      "productProofIds": [
+        "complete-route-calculation"
+      ],
+      "primarySourceUrls": [
+        "https://www.mit.gov.it/normativa/decreto-ministeriale-n-325-del-12-dicembre-2025",
+        "https://www.mit.gov.it/nfsmitgov/files/media/normativa/2026-01/DM_325.12-12-2025%20calendario%20mezzi%20pesanti%202026.pdf",
+        "https://www.gazzettaufficiale.it/eli/id/2025/12/31/25A07055/sg",
+        "https://prefettura.interno.gov.it/it/prefetture/bolzano/notizie/mezzi-pesanti-integrazione-calendario-dei-divieti-transito"
+      ]
+    },
+    {
+      "contentId": "guide/preventivo-trasporto",
+      "canonical": "/it/guide/preventivo-trasporto/",
+      "audienceMarket": "IT",
+      "changeScope": "metadata-or-links",
+      "intentOwner": "preventivo trasporto",
+      "demandEvidenceId": "demand:round-19-preventivo-trasporto",
+      "approvalId": "review:2026-09-06-preventivo-trasporto",
+      "productProofIds": [
+        "pdf-quote"
+      ],
+      "primarySourceUrls": [
+        "https://apps.apple.com/app/id6789717191",
+        "https://play.google.com/store/apps/details?id=eu.routebudget.app"
       ]
     }
   ],
