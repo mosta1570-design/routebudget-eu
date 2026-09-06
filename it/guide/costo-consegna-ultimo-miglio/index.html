@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070B12" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="description" content="Calcola il costo di una consegna nel giro del furgone: fermate, consegne riuscite, unità pagate e riconsegne, con un esempio verificabile." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="RouteBudget EU" />
+    <meta property="og:title" content="Costo per consegna ultimo miglio: il conto del giro | RouteBudget EU" />
+    <meta property="og:description" content="Calcola il costo di una consegna nel giro del furgone: fermate, consegne riuscite, unità pagate e riconsegne, con un esempio verificabile." />
+    <meta property="og:url" content="https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/" />
+    <meta property="og:image" content="https://routebudget.eu/og-cover.jpg" />
+    <meta property="og:image:alt" content="RouteBudget EU — Costo per consegna ultimo miglio: il conto del giro | RouteBudget EU" />
+    <meta property="article:published_time" content="2026-09-06" />
+    <meta property="article:modified_time" content="2026-09-06" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Costo per consegna ultimo miglio: il conto del giro | RouteBudget EU" />
+    <meta name="twitter:description" content="Calcola il costo di una consegna nel giro del furgone: fermate, consegne riuscite, unità pagate e riconsegne, con un esempio verificabile." />
+    <meta name="twitter:image" content="https://routebudget.eu/og-cover.jpg" />
+    <link rel="icon" type="image/png" href="/logo-ui.png" />
+    <link rel="stylesheet" href="/seo/seo.css?v=b14b1aa59a84" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://routebudget.eu/#author","name":"Eng. Mostafa","url":"https://routebudget.eu/#autore","description":"Sviluppatore indipendente di RouteBudget EU e responsabile di metodo, fonti e revisioni editoriali.","worksFor":{"@id":"https://routebudget.eu/#organization"}},{"@type":"Organization","@id":"https://routebudget.eu/#organization","name":"RouteBudget EU","url":"https://routebudget.eu/","logo":"https://routebudget.eu/logo.png","sameAs":["https://apps.apple.com/app/id6789717191","https://play.google.com/store/apps/details?id=eu.routebudget.app"]},{"@type":"WebSite","@id":"https://routebudget.eu/#website","url":"https://routebudget.eu/","name":"RouteBudget EU","inLanguage":"it-IT","publisher":{"@id":"https://routebudget.eu/#organization"}},{"@type":"BreadcrumbList","@id":"https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"RouteBudget","item":"https://routebudget.eu/"},{"@type":"ListItem","position":2,"name":"Guide","item":"https://routebudget.eu/it/guide/"},{"@type":"ListItem","position":3,"name":"Costo per consegna ultimo miglio: il conto del giro","item":"https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/"}]},{"@type":"Article","@id":"https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/#article","headline":"Costo per consegna ultimo miglio: il conto del giro","description":"Calcola il costo di una consegna nel giro del furgone: fermate, consegne riuscite, unità pagate e riconsegne, con un esempio verificabile.","url":"https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/","mainEntityOfPage":"https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/","datePublished":"2026-09-06","dateModified":"2026-09-06","inLanguage":"it-IT","author":{"@id":"https://routebudget.eu/#author"},"publisher":{"@id":"https://routebudget.eu/#organization"},"isPartOf":{"@id":"https://routebudget.eu/#website"},"image":"https://routebudget.eu/og-cover.jpg","keywords":"costo per consegna ultimo miglio, calcolo costo giro consegne, costo riconsegna furgone, fermate e consegne riuscite","about":[{"@type":"Thing","name":"unità remunerate"},{"@type":"Thing","name":"riconsegne"},{"@type":"Thing","name":"costo unitario del giro"}],"wordCount":1016,"timeRequired":"PT5M","citation":["https://green.unibocconi.eu/sites/default/files/media/attach/RR28.pdf","https://blog.ptvlogistics.com/it/trasporti-e-logistica/costi-nascosti-consegne-ultimo-miglio-che-dovresti-conoscere/"]}]}</script>
+    <link rel="stylesheet" href="/seo/analytics.css?v=5d74f816b087" />
+    <script src="/seo/analytics.js?v=bbf930d96ac8" data-measurement-id="G-ELHQ6Z5F6E" defer></script>
+    <script src="/seo/events.js?v=753dccd73f8f" defer></script>
+
+    <title>Costo per consegna ultimo miglio: il conto del giro | RouteBudget EU</title>
+  </head>
+<body class="seo-body" data-content-id="it:guide:costo-consegna-ultimo-miglio" data-page-type="guide" data-locale="it">
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar"></span></div>
+  <header class="seo-header">
+    <div class="seo-header__inner">
+      <a class="seo-brand" href="/" aria-label="RouteBudget EU, pagina principale">
+        <img src="/logo-ui.png" width="42" height="42" alt="" />
+        <span>RouteBudget <small>EU</small></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+      </nav>
+      <a class="seo-header__app" href="/it/app-per-autotrasportatori/">Scarica RouteBudget</a>
+    </div>
+  </header>
+  <main id="contenuto">
+    <section class="seo-hero">
+      <div class="seo-shell">
+        <nav class="breadcrumbs" aria-label="Percorso">
+    <a href="/">RouteBudget</a>
+    <span aria-hidden="true">/</span>
+    <a href="/it/guide/">Guide</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Costo per consegna ultimo miglio: il conto del giro</span>
+  </nav>
+        <h1>Costo per consegna ultimo miglio: il conto del giro</h1>
+        <p class="seo-hero__summary">Calcola il costo di una consegna nel giro del furgone: fermate, consegne riuscite, unità pagate e riconsegne, con un esempio verificabile.</p>
+        <div class="seo-meta" aria-label="Informazioni editoriali">
+          <span>A cura di <a href="/#autore">Eng. Mostafa</a> · RouteBudget EU</span>
+          <span>Revisione 6 settembre 2026</span>
+          <span>5 min di lettura</span>
+        </div>
+
+      </div>
+    </section>
+    <section class="decision-strip" aria-label="Come usare questa risorsa">
+    <div class="seo-shell decision-strip__inner">
+      <div><span>Risultato</span><strong>Un passaggio operativo da applicare al prossimo preventivo.</strong><small>2 fonti verificabili · revisione 6 settembre 2026</small></div>
+      <div><span>Prepara</span><strong>Distanza, ore, costi del mezzo e spese della missione.</strong></div>
+      <div><span>Continua nell’app</span><strong>Confronta ogni componente senza perdere ritorno e costi indiretti.</strong></div>
+    </div>
+  </section>
+
+    <div class="seo-shell article-layout">
+      <div class="article-main">
+        <details class="mobile-toc">
+    <summary><span>Indice della guida</span><b aria-hidden="true">+</b></summary>
+    <ol>
+      <li><a href="#prima-del-calcolo-che-cosa-chiami-consegna">Prima del calcolo: che cosa chiami consegna?</a></li>
+<li><a href="#il-foglio-minimo-dal-deposito-al-rientro">Il foglio minimo: dal deposito al rientro</a></li>
+<li><a href="#esempio-30-indirizzi-in-programma-27-consegne-riuscite">Esempio: 30 indirizzi in programma, 27 consegne riuscite</a></li>
+<li><a href="#un-secondo-passaggio-puo-cambiare-il-risultato">Un secondo passaggio può cambiare il risultato</a></li>
+<li><a href="#meglio-un-prezzo-per-giro-o-per-consegna">Meglio un prezzo per giro o per consegna?</a></li>
+<li><a href="#routebudget-la-base-della-tratta-non-un-ottimizzatore-multi-fermata">RouteBudget: la base della tratta, non un ottimizzatore multi fermata</a></li>
+<li><a href="#cinque-dati-da-conservare-domani">Cinque dati da conservare domani</a></li>
+    </ol>
+  </details>
+        <article class="seo-prose">
+          <p>Il <strong>costo per consegna nell'ultimo miglio</strong> si ottiene dividendo il costo del giro per le consegne definite con un criterio preciso. Il problema è proprio quel divisore: colli caricati, fermate tentate e consegne riuscite non sono la stessa quantità. Per un padroncino con furgone o una piccola impresa di distribuzione, confonderli può far sembrare conveniente un servizio che assorbe tutta la giornata.</p>
+<p>Qui costruisci un conto per giro e un confronto fra scenari. Non troverai una tariffa «giusta per tutta Italia»: servono i tuoi tempi, il tuo mezzo e il servizio concordato.</p>
+<h2 id="prima-del-calcolo-che-cosa-chiami-consegna">Prima del calcolo: che cosa chiami consegna?</h2>
+<p>Fissa una definizione e mantienila nel preventivo e nel consuntivo:</p>
+<ul>
+<li><strong>Collo:</strong> singola unità da movimentare. Più colli possono andare allo stesso indirizzo.</li>
+<li><strong>Fermata:</strong> sosta del veicolo per svolgere una o più operazioni.</li>
+<li><strong>Consegna riuscita:</strong> operazione completata secondo il criterio del servizio.</li>
+<li><strong>Unità pagata:</strong> ciò che il contratto remunera; potrebbe non coincidere con le altre tre voci.</li>
+</ul>
+<p>La ricerca <a href="https://green.unibocconi.eu/sites/default/files/media/attach/RR28.pdf" rel="noreferrer">URBeLOG dell'Università Bocconi, rapporto 28 del 2017</a>, distingue nei dati del giro chilometri, stop e consegne effettuate. È un riferimento metodologico storico, non una fonte di prezzi aggiornati. Il nostro esempio seguente è autonomo e non riprende i costi o i risultati della sperimentazione.</p>
+<p>Se porti tre colli allo stesso cliente, non puoi moltiplicare automaticamente il ricavo per tre. Prima devi sapere come viene pagata quell'operazione. Allo stesso modo, se il destinatario è assente, una fermata può avere un costo anche senza produrre una consegna riuscita.</p>
+<aside class="mobile-inline-cta" aria-label="Continua con RouteBudget">
+    <p class="rail-label">Continua nell’app</p>
+    <p class="mobile-inline-cta__title">Completa la stima con le voci supportate.</p>
+    <p>Riunisci carburante o energia, pedaggi, autista, usura, ritorno a vuoto e scenari; gestisci fuori dall’app eventuali voci non previste.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="inline" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="inline" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </aside><h2 id="il-foglio-minimo-dal-deposito-al-rientro">Il foglio minimo: dal deposito al rientro</h2>
+<p>Per un giro con più indirizzi, annota partenza e rientro, chilometri, ore di guida, preparazione, movimentazione e altre attività. Non fermare il conteggio all'ultima consegna se il mezzo deve ancora tornare in sede.</p>
+<p>La relazione da usare è:</p>
+<pre><code>Costo del giro = energia + quota tecnica del veicolo
+                 + costo del lavoro + accessi e pedaggi
+                 + quota fissa attribuita al giro
+
+Costo per consegna riuscita = costo del giro / consegne riuscite
+</code></pre>
+<p>La quota tecnica non deve contenere costi già presenti nella quota fissa. Per costruire questi valori, parti dal <a href="/it/guide/costo-furgone-per-km/">costo del furgone per km</a> e dalla distinzione fra <a href="/it/guide/costi-fissi-variabili-autotrasporto/">costi fissi e variabili</a>. Qui il risultato cercato è diverso: quanto costa completare una consegna dentro un giro, non quanto costa percorrere un chilometro.</p>
+<p>Se le consegne riuscite sono zero, non dividere: registra costo del giro e nessuna consegna completata. La metrica unitaria non è calcolabile, ma la spesa esiste.</p>
+<h2 id="esempio-30-indirizzi-in-programma-27-consegne-riuscite">Esempio: 30 indirizzi in programma, 27 consegne riuscite</h2>
+<p>Ipotesi didattiche, tutte sulla stessa base IVA esclusa; nessun valore è una media di mercato. Un furgone percorre 140 km. Il lavoro previsto impegna 8 ore complessive, non 8 ore di guida continua. La quota fissa esclude personale, energia e manutenzione già separati.</p>
+<div class="table-scroll" data-columns="3" tabindex="0" role="region" aria-label="Tabella dati 1"><table>
+<thead>
+<tr>
+<th>Voce del giro</th>
+<th>Calcolo</th>
+<th>Importo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gasolio</td>
+<td>140 km × 10 l/100 km × 1,70 €/l</td>
+<td>23,80 €</td>
+</tr>
+<tr>
+<td>Quota tecnica</td>
+<td>140 km × 0,12 €/km</td>
+<td>16,80 €</td>
+</tr>
+<tr>
+<td>Lavoro</td>
+<td>8 ore × 22 €/h</td>
+<td>176,00 €</td>
+</tr>
+<tr>
+<td>Quota fissa</td>
+<td>Ipotesi attribuita una sola volta</td>
+<td>40,00 €</td>
+</tr>
+<tr>
+<td>Accessi e pedaggi</td>
+<td>Ipotesi del giro</td>
+<td>10,00 €</td>
+</tr>
+<tr>
+<td>Totale</td>
+<td>Somma delle cinque voci</td>
+<td><strong>266,60 €</strong></td>
+</tr>
+</tbody></table></div>
+<p>Con 30 fermate tentate, il costo medio per fermata è <strong>8,89 €</strong>. Se soltanto 27 consegne sono completate, il costo per consegna riuscita è invece <strong>9,87 €</strong>. I valori unitari sono arrotondati ai centesimi solo alla fine.</p>
+<p>Supponiamo che il contratto paghi, esclusivamente in questo esempio, 10,50 € per consegna riuscita e nulla per i tre tentativi falliti. Il ricavo è 27 × 10,50 = <strong>283,50 €</strong>. La differenza rispetto al costo è 16,90 €, circa <strong>5,96% del ricavo</strong>, prima di eventuali altre voci non considerate e della fiscalità. Contare tutte e 30 come pagate avrebbe gonfiato il ricavo di 31,50 €.</p>
+<h2 id="un-secondo-passaggio-puo-cambiare-il-risultato">Un secondo passaggio può cambiare il risultato</h2>
+<p>Le <a href="https://blog.ptvlogistics.com/it/trasporti-e-logistica/costi-nascosti-consegne-ultimo-miglio-che-dovresti-conoscere/" rel="noreferrer">analisi operative di PTV sulle consegne dell'ultimo miglio</a> includono riconsegne, tempo del conducente ed energia fra i costi da considerare. Non usiamo percentuali internazionali come se fossero il risultato della tua impresa.</p>
+<p>Torniamo al nostro foglio. Ipotizziamo che recuperare le tre consegne richieda 24 km extra, un'ora aggiuntiva e nessun nuovo accesso a pagamento. Con gli stessi parametri:</p>
+<pre><code>Energia extra = 24 × 10 / 100 × 1,70 = 4,08 €
+Quota tecnica extra = 24 × 0,12 = 2,88 €
+Lavoro extra = 1 × 22 = 22,00 €
+Costo aggiuntivo = 28,96 €
+</code></pre>
+<p>Se le tre consegne riescono e sono pagate 10,50 € ciascuna, il ricavo aggiuntivo è 31,50 €: restano <strong>2,54 €</strong> sull'operazione di recupero. È un confronto incrementale, non una tariffa consigliata. Se il recupero occupa un altro turno o richiede altri costi, il modello va ampliato: non basta conservare l'ipotesi di una sola ora.</p>
+<h2 id="meglio-un-prezzo-per-giro-o-per-consegna">Meglio un prezzo per giro o per consegna?</h2>
+<p>Non esiste una risposta indipendente dai volumi e dal servizio. Chiedi che siano chiari zona, numero atteso di fermate, intervalli orari, colli, tentativi inclusi e trattamento di resi e ritiri. Un compenso per giro rende visibile l'impegno complessivo; uno per consegna richiede particolare attenzione alle unità effettivamente remunerate.</p>
+<p>Per controllare una proposta, confronta almeno un giro con volume normale e uno con meno consegne riuscite. Mantieni esplicite le ipotesi: non assegnare probabilità inventate alle assenze. La <a href="/it/guide/preventivo-consuntivo-viaggio-camion/">verifica preventivo-consuntivo</a> serve poi a sostituire le ipotesi con osservazioni confrontabili.</p>
+<h2 id="routebudget-la-base-della-tratta-non-un-ottimizzatore-multi-fermata">RouteBudget: la base della tratta, non un ottimizzatore multi-fermata</h2>
+<p>Puoi usare RouteBudget per le componenti supportate del costo della tratta e per confrontare scenari economici. La sequenza degli indirizzi, la fattibilità del giro e il conteggio delle consegne vanno preparati esternamente. Non inserire soltanto primo e ultimo indirizzo sperando che l'app ricostruisca le soste intermedie.</p>
+<p>Riconcilia chilometri e tempi delle tratte nel foglio del giro, senza contare più volte le stesse quote. L'app non calcola questo indicatore per consegna, non ottimizza una lista di fermate e non registra prove di avvenuta consegna. Le voci senza campo dedicato restano fuori dall'app, chiaramente distinte.</p>
+<p>Per una verifica rapida dell'energia puoi usare il <a href="/it/calcolatori/costo-carburante-viaggio/">calcolatore carburante</a>. Se devi comunicare un prezzo, la guida al <a href="/it/guide/preventivo-trasporto/">preventivo di trasporto</a> aiuta a distinguere il riepilogo PDF non vincolante dalle condizioni commerciali del giro. Guarda le <a href="/it/app-per-autotrasportatori/">funzioni dell'app</a> se ti serve conservare e riutilizzare quella base, non sostituire un gestionale di distribuzione.</p>
+<h2 id="cinque-dati-da-conservare-domani">Cinque dati da conservare domani</h2>
+<p>Segna km completi, ore operative, fermate tentate, consegne riuscite e unità pagate. Basta questa distinzione per capire se il problema è una distanza sottostimata, un tempo di servizio troppo lungo oppure un compenso legato a unità diverse da quelle che avevi contato. È un controllo concreto: il giro successivo si quota su dati migliori, non su una promessa di risparmio.</p>
+
+          <section class="sources" aria-labelledby="fonti-costo-consegna-ultimo-miglio">
+    <h2 id="fonti-costo-consegna-ultimo-miglio">Fonti e riferimenti</h2>
+    <p>Questi riferimenti aiutano a controllare regole o dati soggetti a variazione. Apri sempre la versione aggiornata prima di usarli in un preventivo.</p>
+    <ul>
+      <li><a href="https://green.unibocconi.eu/sites/default/files/media/attach/RR28.pdf" rel="noreferrer">Bocconi — URBeLOG, Research Report 28</a><small>Distinzione metodologica fra chilometri, stop e consegne completate, sezione 4.1. Dati storici, non tariffe attuali. · Italia · consultata in data 6 settembre 2026</small></li>
+<li><a href="https://blog.ptvlogistics.com/it/trasporti-e-logistica/costi-nascosti-consegne-ultimo-miglio-che-dovresti-conoscere/" rel="noreferrer">PTV Logistics — Costi nascosti delle consegne dell&#039;ultimo miglio</a><small>Riconsegne, tempo del conducente e costi operativi; nessuna percentuale estera usata come benchmark italiano. · Italia · consultata in data 6 settembre 2026</small></li>
+    </ul>
+  </section>
+          <section class="editorial-note" aria-labelledby="nota-editoriale">
+            <h2 id="nota-editoriale">Nota editoriale</h2>
+            <p><a href="/#autore">Eng. Mostafa</a> sviluppa RouteBudget EU e cura questo contenuto con un flusso dichiarato: domanda operativa, fonti primarie datate, esempio ricalcolato e controllo dei limiti del prodotto. Strumenti di intelligenza artificiale possono assistere ricerca, confronto e prima struttura; metodo, fonti, calcoli, limiti del prodotto e decisione di pubblicazione restano sotto la responsabilità dell’autore. La revisione indicata è un’autoverifica editoriale, non un controllo indipendente. Esempi e risultati restano stime non vincolanti: usa dati aziendali aggiornati e verifica tariffe, pedaggi e obblighi applicabili alla tratta. Per segnalare un errore: <a href="mailto:mosta1570@gmail.com">mosta1570@gmail.com</a>.</p>
+          </section>
+        </article>
+      </div>
+      <aside class="article-rail" aria-label="Approfondimenti e applicazione">
+        <nav class="article-toc" aria-label="Indice della guida">
+    <p class="rail-label">In questa guida</p>
+    <ol>
+      <li><a href="#prima-del-calcolo-che-cosa-chiami-consegna">Prima del calcolo: che cosa chiami consegna?</a></li>
+<li><a href="#il-foglio-minimo-dal-deposito-al-rientro">Il foglio minimo: dal deposito al rientro</a></li>
+<li><a href="#esempio-30-indirizzi-in-programma-27-consegne-riuscite">Esempio: 30 indirizzi in programma, 27 consegne riuscite</a></li>
+<li><a href="#un-secondo-passaggio-puo-cambiare-il-risultato">Un secondo passaggio può cambiare il risultato</a></li>
+<li><a href="#meglio-un-prezzo-per-giro-o-per-consegna">Meglio un prezzo per giro o per consegna?</a></li>
+<li><a href="#routebudget-la-base-della-tratta-non-un-ottimizzatore-multi-fermata">RouteBudget: la base della tratta, non un ottimizzatore multi fermata</a></li>
+<li><a href="#cinque-dati-da-conservare-domani">Cinque dati da conservare domani</a></li>
+    </ol>
+  </nav>
+        <section class="rail-link">
+    <p class="rail-label">Guida pilastro</p>
+    <h2><a href="/it/guide/costi-autotrasporto/">Costi dell’autotrasporto merci: voci fisse, variabili e indirette</a></h2>
+    <p>Mappa pratica dei costi dell’autotrasporto merci: voci fisse, variabili e indirette, costo per km, dati da aggiornare ed esempio mensile.</p>
+  </section>
+        <section class="app-cta">
+    <p class="rail-label">Continua nell’app</p>
+    <h2>Completa la stima con le voci supportate.</h2>
+    <p>Riunisci carburante o energia, pedaggi, autista, usura, ritorno a vuoto e scenari; gestisci fuori dall’app eventuali voci non previste.</p>
+    <div class="app-cta__actions store-badge-row">
+    <a class="store-badge-link" href="https://apps.apple.com/app/id6789717191" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su App Store" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="article" data-analytics-target="app-store"><img src="/store-badges/app-store-it.svg" width="120" height="40" loading="lazy" alt="Scarica su App Store" /></a>
+    <a class="store-badge-link" href="https://play.google.com/store/apps/details?id=eu.routebudget.app" target="_blank" rel="noreferrer" aria-label="Scarica RouteBudget su Google Play" data-analytics-event="store_outbound" data-analytics-id="complete_trip_app" data-analytics-position="article" data-analytics-target="google-play"><img src="/store-badges/google-play-it.png" width="129" height="50" loading="lazy" alt="Disponibile su Google Play" /></a>
+  </div>
+  </section>
+      </aside>
+    </div>
+    <section class="related-section">
+    <div class="seo-shell">
+      <div class="related-section__heading">
+        <h2>Prossimo controllo.</h2>
+      </div>
+      <div class="related-links">
+        <a href="/it/guide/costi-autotrasporto/">
+              <div><small>Guida pilastro</small><strong>Costi dell’autotrasporto merci: voci fisse, variabili e indirette</strong></div>
+              <b>Apri</b>
+            </a>
+<a href="/it/guide/costo-furgone-per-km/">
+              <div><small>Guida pratica</small><strong>Costo furgone per km: formula completa per veicoli N1</strong></div>
+              <b>Apri</b>
+            </a>
+<a href="/it/guide/preventivo-trasporto/">
+              <div><small>Guida pilastro</small><strong>Preventivo trasporto per autotrasportatori: costo e offerta</strong></div>
+              <b>Apri</b>
+            </a>
+<a href="/it/guide/preventivo-consuntivo-viaggio-camion/">
+              <div><small>Guida pratica</small><strong>Preventivo e consuntivo viaggio camion: trova il margine perso</strong></div>
+              <b>Apri</b>
+            </a>
+<a href="/it/calcolatori/costo-carburante-viaggio/">
+              <div><small>Calcolatore</small><strong>Calcolatore carburante camion: litri e costo della tratta</strong></div>
+              <b>Apri</b>
+            </a>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="seo-footer">
+    <div class="seo-shell seo-footer__inner">
+      <div>
+        <a class="seo-brand" href="/">
+          <img src="/logo-ui.png" width="38" height="38" loading="lazy" alt="" />
+          <span>RouteBudget <small>EU</small></span>
+        </a>
+        <p>Costi chiari. Decisioni difendibili.</p>
+      </div>
+      <nav aria-label="Risorse e informazioni legali">
+        <a href="/it/guide/">Guide</a>
+        <a href="/it/calcolatori/">Calcolatori</a>
+
+        <a href="/it/app-per-autotrasportatori/">App</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Termini</a>
+      </nav>
+      <p>© 2026 RouteBudget EU · Eng. Mostafa</p>
+    </div>
+  </footer>
+</body>
+</html>

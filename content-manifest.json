@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-09-05",
+  "revisionDate": "2026-09-06",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -96,6 +96,18 @@
       "indexable": true,
       "primaryKeyword": "BGTOLL camion",
       "modified": "2026-08-21"
+    },
+    {
+      "id": "it:guide:borsa-carichi-per-furgoni",
+      "url": "https://routebudget.eu/it/guide/borsa-carichi-per-furgoni/",
+      "title": "Borsa carichi per furgoni: quali offerte accettare?",
+      "description": "Come valutare i carichi per furgoni: dati dell'annuncio, compatibilità, orari e confronto economico prima di accettare o proporre un prezzo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/borsa-carichi-per-furgoni/",
+      "indexable": true,
+      "primaryKeyword": "borsa carichi per furgoni",
+      "modified": "2026-09-06"
     },
     {
       "id": "it:guide:calcolare-carburante-pedaggi-autista",
@@ -266,6 +278,18 @@
       "modified": "2026-08-08"
     },
     {
+      "id": "it:guide:costo-consegna-ultimo-miglio",
+      "url": "https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/",
+      "title": "Costo per consegna ultimo miglio: il conto del giro",
+      "description": "Calcola il costo di una consegna nel giro del furgone: fermate, consegne riuscite, unità pagate e riconsegne, con un esempio verificabile.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/costo-consegna-ultimo-miglio/",
+      "indexable": true,
+      "primaryKeyword": "costo per consegna ultimo miglio",
+      "modified": "2026-09-06"
+    },
+    {
       "id": "it:guide:costo-fermo-camion",
       "url": "https://routebudget.eu/it/guide/costo-fermo-camion/",
       "title": "Costo fermo camion: quanto perde davvero una giornata ferma",
@@ -287,7 +311,7 @@
       "canonical": "https://routebudget.eu/it/guide/costo-furgone-per-km/",
       "indexable": true,
       "primaryKeyword": "costo furgone per km",
-      "modified": "2026-08-23"
+      "modified": "2026-09-06"
     },
     {
       "id": "it:guide:costo-leasing-camion",
@@ -408,6 +432,18 @@
       "indexable": true,
       "primaryKeyword": "costo trasporto refrigerato",
       "modified": "2026-09-03"
+    },
+    {
+      "id": "it:guide:divieti-circolazione-mezzi-pesanti-2026",
+      "url": "https://routebudget.eu/it/guide/divieti-circolazione-mezzi-pesanti-2026/",
+      "title": "Divieti mezzi pesanti 2026: calendario e controllo della tratta",
+      "description": "Calendario MIT settembre-dicembre 2026 e controlli prima del preventivo: massa autorizzata, percorso, orari di scarico e variazioni di costo.",
+      "type": "guide",
+      "locale": "it",
+      "canonical": "https://routebudget.eu/it/guide/divieti-circolazione-mezzi-pesanti-2026/",
+      "indexable": true,
+      "primaryKeyword": "divieti circolazione mezzi pesanti 2026",
+      "modified": "2026-09-06"
     },
     {
       "id": "it:guide:errori-calcolo-tariffa-trasporto",
@@ -647,7 +683,7 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto",
-      "modified": "2026-08-22"
+      "modified": "2026-09-06"
     },
     {
       "id": "it:guide:prezzo-gasolio-autotrasporto-preventivo",
@@ -779,7 +815,7 @@
       "canonical": "https://routebudget.eu/it/guide/tempi-guida-riposo-camion/",
       "indexable": true,
       "primaryKeyword": "calcolo tempi di guida e riposo camion",
-      "modified": "2026-08-23"
+      "modified": "2026-09-06"
     },
     {
       "id": "it:guide:tempi-pagamento-autotrasporto",
