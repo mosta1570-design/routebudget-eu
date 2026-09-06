@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-06",
+  "decision": "approved",
+  "id": "review:2026-09-06-tempi-guida-riposo-camion",
+  "type": "editorial",
+  "contentId": "guide/tempi-guida-riposo-camion",
+  "contentFingerprint": "sha256:df37d2951c0c0abb3e597534a1f04f924fc601be26ed276a07a415d17bd02bc7",
+  "artifactFingerprint": "sha256:e768ee3c7728fa5a7cab5416b1539e4190be3db3d68a2cce696d90ee802c8237",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-06",
+    "basis": "Explicit active owner request to research and publish three distinct useful Italian RouteBudget articles, validate the website and submit sitemap/indexing requests to Google and Bing, with truthful ChatGPT search discovery support. This covers the contextual incoming links and exact reviewed publication artifacts; no independent human review or guaranteed ranking is claimed."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Only contextual incoming links and corresponding modified/review dates changed in this release. Existing body method, product boundaries and historical source dates preserved. Source diff checked; schema, internal links and shared responsive template passed. No fresh independent factual/legal review of the entire historical article is claimed."
+}

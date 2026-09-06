@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-06",
+  "decision": "approved",
+  "id": "review:2026-09-06-borsa-carichi-per-furgoni",
+  "type": "editorial",
+  "contentId": "guide/borsa-carichi-per-furgoni",
+  "contentFingerprint": "sha256:038e82a730a04719c277c45bd32f839e96c8fa13285c84507f451645e5762689",
+  "artifactFingerprint": "sha256:f336ec836e105ccd7bef15f6ca86df54a80e4f90e49baaa7f6e0eb8cc581f586",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-06",
+    "basis": "Explicit active owner request to research and publish three distinct useful Italian RouteBudget articles, validate the website and submit sitemap/indexing requests to Google and Bing, with truthful ChatGPT search discovery support. This covers the contextual incoming links and exact reviewed publication artifacts; no independent human review or guaranteed ranking is claimed."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Original Italian operational worksheet reviewed against dated primary sources and pinned product limits. Eleven integer-cent/rational arithmetic assertions passed across this batch. New bodies and mobile tables inspected; layouts sampled at 320, 375, 768 and desktop 1280 CSS pixels, without document overflow or browser errors. Not a physical iPhone test. Two keywords have exact Italian Suggest evidence; delivery cost remains an explicitly documented qualitative SERP experiment, not measured volume. No independent human, legal or driver review is claimed."
+}

@@ -2,6 +2,8 @@
 
 Sistema Italian-first per creare contenuti utili, verificabili e coerenti col prodotto. La keyword documenta un bisogno; non giustifica da sola una pagina.
 
+Per ogni nuova uscita, applicare anche il [contratto di pubblicazione Google, Bing e ChatGPT Search](SEARCH_DISCOVERY_RELEASE_CHECKLIST.md): produzione verificata, ricevute separate dallo stato di indicizzazione e nessun invio ChatGPT inventato.
+
 ## 1. Ciclo di vita
 
 ```text

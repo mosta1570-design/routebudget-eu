@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-06",
+  "decision": "approved",
+  "id": "review:2026-09-06-preventivo-trasporto",
+  "type": "editorial",
+  "contentId": "guide/preventivo-trasporto",
+  "contentFingerprint": "sha256:091f5882f17e2aab4abfe206ae84a661adc4791fc1a9e9d5842fd594ab1df23a",
+  "artifactFingerprint": "sha256:1346aae5601f5312fd45754915658b29bfa467e6c0a751168e75d0af2ffdbce5",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-06",
+    "basis": "Explicit active owner request to research and publish three distinct useful Italian RouteBudget articles, validate the website and submit sitemap/indexing requests to Google and Bing, with truthful ChatGPT search discovery support. This covers the contextual incoming links and exact reviewed publication artifacts; no independent human review or guaranteed ranking is claimed."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Only contextual incoming links and corresponding modified/review dates changed in this release. Existing body method, product boundaries and historical source dates preserved. Source diff checked; schema, internal links and shared responsive template passed. No fresh independent factual/legal review of the entire historical article is claimed."
+}

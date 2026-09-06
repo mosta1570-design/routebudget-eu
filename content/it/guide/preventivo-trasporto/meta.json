@@ -6,8 +6,8 @@
   "description": "Come trasformare il costo di una tratta in un’offerta di trasporto merci chiara, con prezzo, inclusioni, esclusioni, validità e PDF verificato.",
   "eyebrow": "Guida al preventivo",
   "published": "2026-08-01",
-  "modified": "2026-08-22",
-  "reviewed": "2026-08-22",
+  "modified": "2026-09-06",
+  "reviewed": "2026-09-06",
   "primaryKeyword": "preventivo trasporto",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -70,5 +70,5 @@
   "canonical": "/it/guide/preventivo-trasporto/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Aggiunto un percorso contestuale al controllo Excel di tariffe, versioni e passaggio al PDF, distinto dal processo commerciale del preventivo."
+  "changeSummary": "Aggiornamento dei soli collegamenti contestuali alle nuove guide operative; metodo e confini delle funzioni invariati."
 }
