@@ -103,6 +103,14 @@ Per calcolare il costo al km, dividi il totale operativo per i chilometri coeren
 
 Una tariffa può cambiare anche con attese, urgenza, condizioni di pagamento, accessi, traghetti o disponibilità del mezzo. Per questo non esiste un prezzo al km universale ricavabile dal solo risultato. La guida al [preventivo di trasporto per autotrasportatori](/it/guide/preventivo-trasporto/) mostra come passare dal calcolo interno a un’offerta leggibile.
 
+## Ti offrono una tariffa al km: quanto resta davvero?
+
+Riprendi l’esempio sopra, senza trasformarlo in una tariffa di mercato. Se l’offerta ipotetica è **2 €/km per i soli 500 km carichi**, il ricavo è 1.000 €, non 1.200 €: i 100 km vuoti non sono venduti. Tolti gli 898,50 € delle voci considerate, restano **101,50 €**, pari al **10,15% del ricavo**, prima di eventuali costi esclusi e imposte.
+
+Questo controllo risponde a “posso accettare questa offerta?”, non stabilisce quanto debbano pagare tutti i clienti. Se manca una spesa, il margine apparente la sta ancora finanziando. Usa il [calcolatore prezzo minimo e margine](/it/calcolatori/prezzo-minimo-margine-tratta/) con il costo completo, poi confronta il documento che vuoi inviare con l’[esempio di preventivo PDF RouteBudget](/it/guide/preventivo-trasporto-pdf/).
+
+Per conservare calcolo e scenari in un flusso mobile, guarda le [funzioni dell’app per autotrasportatori](/it/app-per-autotrasportatori/). Il modulo web non trasferisce i suoi input all’app: ricontrollali quando li inserisci. Il PDF non rende completa una stima se hai lasciato fuori costi reali.
+
 ## Cosa resta fuori
 
 Il risultato non include automaticamente:

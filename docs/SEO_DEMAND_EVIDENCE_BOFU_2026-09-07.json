@@ -1,0 +1,126 @@
+{
+  "$schema": "../content/publishing/demand-evidence.schema.json",
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-07",
+  "locale": "it",
+  "market": "IT",
+  "providers": [
+    "Italian-language search results and primary vendor pages",
+    "Existing Italian intent inventory",
+    "Pinned RouteBudget product evidence"
+  ],
+  "method": {
+    "interpretation": "Six existing intent owners; no new URLs. Three product-decision pages plus three established calculator/consumption pages. Preserve informational tasks and add relevant next actions, not bulk keyword replacement. Search Console identifies existing losses; vendor SERPs establish a category, not measured keyword volume or a proven ranking cause. Private account metrics are retained outside the public repository.",
+    "unavailableMetrics": [
+      "monthly_search_volume",
+      "cpc",
+      "keyword_difficulty"
+    ],
+    "volumePolicy": "Volumes remain null; no most-searched or trending claim."
+  },
+  "candidates": [
+    {
+      "id": "demand:bofu-app-20260907",
+      "primaryKeyword": "app per autotrasportatori",
+      "canonical": "/it/app-per-autotrasportatori/",
+      "query": "app per autotrasportatori preventivo pdf",
+      "signal": "italian-commercial-category-and-existing-intent",
+      "signalNote": "SAT and PTV describe carrier quotation/cost workflows; CargoNet describes a broader TMS. RouteBudget's existing product page needs a task-based selection path and proof, not another software landing URL.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "Product selection for a carrier estimating one trip on mobile, not ordering a shipment or selecting an enterprise TMS.",
+      "productFit": "Verified complete-route calculation, scenarios, local archive and PDF are directly relevant to the selection task.",
+      "productBoundary": "No freight marketplace, dispatch, invoicing, fleet synchronization or live toll guarantee.",
+      "sourceUrls": [
+        "https://www.gestionaletrasportatori.it/software-gestionale-per-preventivo-trasporti/",
+        "https://www.ptvlogistics.com/it/prodotti/ptv-mapandguide/calcolo-dei-costi-di-trasporto",
+        "https://www.cargonet.it/"
+      ]
+    },
+    {
+      "id": "demand:bofu-pdf-20260907",
+      "primaryKeyword": "preventivo trasporto PDF",
+      "canonical": "/it/guide/preventivo-trasporto-pdf/",
+      "query": "creare preventivo trasporto PDF",
+      "signal": "existing-italian-pdf-intent-and-first-party-product-proof",
+      "signalNote": "Existing quote guide already owns document preparation. Replace a generic invented layout table with a reproducible demo from pinned source; this is evidence of product output, not high search volume.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "Inspect the PDF and its generated fields before choosing the app; general quotation workflow stays with preventivo-trasporto.",
+      "productFit": "Pinned native template and calculation engine can produce a transparent demo with synthetic inputs and independently checked totals.",
+      "productBoundary": "Desktop print of verified template is not a captured native-device export, customer quote, legal model or current route tariff.",
+      "sourceUrls": [
+        "https://apps.apple.com/app/id6789717191",
+        "https://www.gestionaletrasportatori.it/software-gestionale-per-preventivo-trasporti/"
+      ]
+    },
+    {
+      "id": "demand:bofu-excel-20260907",
+      "primaryKeyword": "calcolo costi trasporto camion excel",
+      "canonical": "/it/guide/calcolo-costi-trasporto-camion-excel/",
+      "query": "app o Excel per calcolare costi trasporto",
+      "signal": "existing-italian-comparison-intent",
+      "signalNote": "Existing Excel guide owns spreadsheet method. Add a bounded task-based choice and product/PDF links, without replacing its formulas or inventing Excel integration. Comparison intent is not proof of purchase intent or search volume.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "Spreadsheet-versus-mobile task selection inside the existing Excel guide; no separate near-duplicate comparison page.",
+      "productFit": "RouteBudget supports the single-trip calculation/PDF side of the comparison; existing external spreadsheet processes remain distinct.",
+      "productBoundary": "No Excel import/export or synchronized fleet administration is claimed; unrelated historical spreadsheet instructions are unchanged.",
+      "sourceUrls": [
+        "https://www.cargonet.it/",
+        "https://www.ptvlogistics.com/it/prodotti/ptv-mapandguide/calcolo-dei-costi-di-trasporto"
+      ]
+    },
+    {
+      "id": "demand:bofu-consumo-20260907",
+      "primaryKeyword": "quanto consuma un camion",
+      "canonical": "/it/guide/quanto-consuma-un-camion/",
+      "query": "quanto consuma un camion",
+      "signal": "existing-italian-search-console-page-and-product-path",
+      "signalNote": "Existing URL appears in the owner’s before/after Search Console page comparison. Preserve its established task; add a bounded product choice and inspectable PDF. No exact-query volume or causality is inferred from page impressions.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "Measure consumption first; app selection is a contextual next action, not a replacement for the informational answer.",
+      "productFit": "Verified cost inputs, scenarios, local Archive and PDF support a subsequent carrier pricing decision.",
+      "productBoundary": "No telematics import, web-to-app input transfer, freight booking, live toll pricing or profit guarantee.",
+      "sourceUrls": [
+        "https://www.gestionaletrasportatori.it/software-gestionale-per-preventivo-trasporti/",
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
+      ]
+    },
+    {
+      "id": "demand:bofu-carburante-20260907",
+      "primaryKeyword": "calcolatore costo carburante viaggio",
+      "canonical": "/it/calcolatori/costo-carburante-viaggio/",
+      "query": "calcolatore costo carburante viaggio",
+      "signal": "existing-italian-search-console-page-and-product-path",
+      "signalNote": "Existing URL appears in the owner’s before/after Search Console page comparison. Preserve its established task; add a bounded product choice and inspectable PDF. No exact-query volume or causality is inferred from page impressions.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "Calculate known fuel inputs in the browser; mobile quote/Archive choice remains optional and separate.",
+      "productFit": "Verified cost inputs, scenarios, local Archive and PDF support a subsequent carrier pricing decision.",
+      "productBoundary": "No telematics import, web-to-app input transfer, freight booking, live toll pricing or profit guarantee.",
+      "sourceUrls": [
+        "https://www.gestionaletrasportatori.it/software-gestionale-per-preventivo-trasporti/",
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
+      ]
+    },
+    {
+      "id": "demand:bofu-chilometrico-20260907",
+      "primaryKeyword": "costo km camion",
+      "canonical": "/it/calcolatori/costo-chilometrico-camion/",
+      "query": "costo km camion",
+      "signal": "existing-italian-search-console-page-and-product-path",
+      "signalNote": "Existing URL appears in the owner’s before/after Search Console page comparison. Preserve its established task; add a bounded product choice and inspectable PDF. No exact-query volume or causality is inferred from page impressions.",
+      "volume": null,
+      "decision": "update",
+      "intentBoundary": "Estimate trip cost per driven/loaded kilometer; evaluate an illustrative offer without inventing market rates.",
+      "productFit": "Verified cost inputs, scenarios, local Archive and PDF support a subsequent carrier pricing decision.",
+      "productBoundary": "No telematics import, web-to-app input transfer, freight booking, live toll pricing or profit guarantee.",
+      "sourceUrls": [
+        "https://www.gestionaletrasportatori.it/software-gestionale-per-preventivo-trasporti/",
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
+      ]
+    }
+  ]
+}

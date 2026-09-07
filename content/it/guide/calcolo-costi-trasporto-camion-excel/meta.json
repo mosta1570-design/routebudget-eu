@@ -6,8 +6,8 @@
   "description": "Come strutturare in Excel anagrafiche, tariffe con decorrenza, dati di viaggio e versioni, poi controllare la tratta e preparare un PDF.",
   "eyebrow": "Gestione costi · Excel e preventivo",
   "published": "2026-08-22",
-  "modified": "2026-08-22",
-  "reviewed": "2026-08-22",
+  "modified": "2026-09-07",
+  "reviewed": "2026-09-07",
   "primaryKeyword": "calcolo costi trasporto camion excel",
   "searchIntent": "informational-commercial",
   "topics": [
@@ -59,6 +59,14 @@
       "geography": "Italia",
       "accessedAt": "2026-08-22",
       "supports": "Dipendenza del pedaggio da classe, chilometri tariffari, caratteristiche della tratta e concessionario, con IVA e arrotondamento previsti."
+    },
+    {
+      "label": "Apple App Store Italia — RouteBudget",
+      "url": "https://apps.apple.com/it/app/routebudget/id6789717191",
+      "publishedOrUpdated": "Scheda pubblica consultata il 2026-09-07; versione installata da verificare sul dispositivo",
+      "geography": "Italia",
+      "accessedAt": "2026-09-07",
+      "supports": "Funzioni generali dichiarate di calcolo costi, scenari, Archivio e PDF. Il campione PDF separato documenta il template sorgente datato, non ogni versione corrente."
     }
   ],
   "status": "published",
@@ -76,5 +84,5 @@
   "canonical": "/it/guide/calcolo-costi-trasporto-camion-excel/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Prima pubblicazione: architettura Excel con tariffe versionate, controlli di validità e passaggio trasparente dalla base aziendale alla stima di tratta e al PDF."
+  "changeSummary": "Aggiunta una scelta per compito tra Excel, app e gestionale, con percorsi verso il prodotto e il campione PDF; formule e fonti storiche non modificate."
 }

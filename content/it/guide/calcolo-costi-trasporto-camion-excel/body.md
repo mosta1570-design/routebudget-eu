@@ -91,6 +91,17 @@ Prima dell’invio, copia i risultati in un registro protetto oppure esporta uno
 
 ## Passaggio mobile: dove entra RouteBudget
 
+### Excel o app: scegli in base al compito, non al formato
+
+| La tua esigenza | Scelta coerente |
+| --- | --- |
+| Conservare listini con validità, anagrafiche e consuntivi personalizzati | Mantieni il foglio con i controlli descritti sopra o un gestionale adatto |
+| Valutare una singola tratta sul telefono e creare un riepilogo PDF | Verifica il flusso di [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/) |
+| Vedere il risultato prima di cambiare strumento | Apri l’[esempio PDF con input e conteggi](/it/guide/preventivo-trasporto-pdf/) |
+| Importare automaticamente Excel o sincronizzare una flotta | Non è il compito coperto da RouteBudget |
+
+Non serve abbandonare un foglio che funziona. Usa l’app solo dove il flusso della singola tratta ti è utile; controlla i diversi criteri di calcolo prima di confrontare due totali.
+
 Excel può restare la base aziendale per mezzi, consuntivi, listini e analisi mensili. RouteBudget è utile quando devi valutare **una singola tratta** con i valori già verificati: combina le voci supportate, presenta tre scenari di prezzo, conserva localmente lo snapshot del calcolo e genera un riepilogo PDF non vincolante.
 
 Il passaggio è manuale e va controllato. RouteBudget **non importa né esporta file Excel**, non sincronizza l’anagrafica clienti e non gestisce contratti o listini con decorrenza. Può stimare una distanza stradale da origine e destinazione, ma non guida l’autista svolta per svolta, non certifica l’idoneità del percorso per un mezzo pesante e non recupera la tariffa corrente dal concessionario. Nel profilo camion applica una quota usura fissa di **0,15 €/km**; nel profilo N1 la quota è modificabile. Se il criterio aziendale del foglio è diverso, confronta la differenza e non presentare i risultati come identici.

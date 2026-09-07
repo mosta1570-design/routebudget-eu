@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-09-06-italian-operational-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-07-bofu-integrity",
   "staticArtifacts": {
     "/": "sha256:d00883a785d305bdaa37a2195204c3212f7b9befadc2a81e169e385dfbff90a7",
-    "/it/calcolatori/": "sha256:1c577f4d24c361c984201037f13598282e462e14b005b8546830130a9ff37f91",
-    "/it/guide/": "sha256:e5f5951cfc1ffadcf2b324b79ad6e78a24c104fc154c1eb371d19549d0b12fcd",
+    "/it/calcolatori/": "sha256:d63bb9473e56f6979fae2b1c03d179e04f053049a593d8bae7159d76ab5fa279",
+    "/it/guide/": "sha256:75b8d18cd2b85f3762c04d95d13ec70a333fb464b2485188b6e63315f30c27e8",
     "/privacy.html": "sha256:3250022f0bd86b85db716f0aa4c5be69cf0ebe98b54714fe1392f62b84fe47c0",
     "/terms.html": "sha256:be8f0e82f25d6fcb6b44e9a475a8d09b3d176521b7479b68074a7f83ea5956b6"
   },
@@ -75,14 +75,16 @@
       "contentId": "guide/preventivo-trasporto-pdf",
       "canonical": "/it/guide/preventivo-trasporto-pdf/",
       "audienceMarket": "IT",
-      "changeScope": "metadata-or-links",
+      "changeScope": "substantive-update",
       "intentOwner": "preventivo trasporto PDF",
-      "demandEvidenceId": "demand:maintenance-preventivo-trasporto-pdf",
-      "approvalId": "review:2026-09-04-preventivo-trasporto-pdf",
+      "demandEvidenceId": "demand:bofu-pdf-20260907",
+      "approvalId": "review:2026-09-07-bofu-pdf",
       "productProofIds": [
         "pdf-quote"
       ],
-      "primarySourceUrls": []
+      "primarySourceUrls": [
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
+      ]
     },
     {
       "contentId": "guide/proteggere-margine-tratta",
@@ -106,16 +108,13 @@
       "audienceMarket": "IT",
       "changeScope": "substantive-update",
       "intentOwner": "quanto consuma un camion",
-      "demandEvidenceId": "demand:recovery-quanto-consuma-un-camion-20260905",
-      "approvalId": "review:2026-09-05-quanto-consuma-un-camion",
+      "demandEvidenceId": "demand:bofu-consumo-20260907",
+      "approvalId": "review:2026-09-07-bofu-consumo",
       "productProofIds": [
         "fuel-estimate"
       ],
       "primarySourceUrls": [
-        "https://www.scania.com/it/it/home/about-scania/newsroom/percorsi-online/2022/Scania-1000-punkte.html",
-        "https://www.volvotrucks.it/it-it/news/press-releases/2025/mar/volvo-fh-aero-wins-the-2025-green-truck.html",
-        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
-        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
       ]
     },
     {
@@ -169,14 +168,13 @@
       "audienceMarket": "IT",
       "changeScope": "substantive-update",
       "intentOwner": "calcolatore costo carburante viaggio",
-      "demandEvidenceId": "demand:recovery-costo-carburante-viaggio-20260905",
-      "approvalId": "review:2026-09-05-costo-carburante-viaggio",
+      "demandEvidenceId": "demand:bofu-carburante-20260907",
+      "approvalId": "review:2026-09-07-bofu-carburante",
       "productProofIds": [
         "fuel-estimate"
       ],
       "primarySourceUrls": [
-        "https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carburanti",
-        "https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en"
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
       ]
     },
     {
@@ -185,13 +183,13 @@
       "audienceMarket": "IT",
       "changeScope": "substantive-update",
       "intentOwner": "costo km camion",
-      "demandEvidenceId": "demand:recovery-costo-km-camion-20260831",
-      "approvalId": "review:2026-09-02-costo-chilometrico-camion",
+      "demandEvidenceId": "demand:bofu-chilometrico-20260907",
+      "approvalId": "review:2026-09-07-bofu-chilometrico",
       "productProofIds": [
         "cost-breakdown"
       ],
       "primarySourceUrls": [
-        "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
       ]
     },
     {
@@ -607,6 +605,36 @@
       "primarySourceUrls": [
         "https://apps.apple.com/app/id6789717191",
         "https://play.google.com/store/apps/details?id=eu.routebudget.app"
+      ]
+    },
+    {
+      "contentId": "landing/app-per-autotrasportatori",
+      "canonical": "/it/app-per-autotrasportatori/",
+      "audienceMarket": "IT",
+      "changeScope": "substantive-update",
+      "intentOwner": "app per autotrasportatori",
+      "demandEvidenceId": "demand:bofu-app-20260907",
+      "approvalId": "review:2026-09-07-bofu-app",
+      "productProofIds": [
+        "complete-route-calculation"
+      ],
+      "primarySourceUrls": [
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
+      ]
+    },
+    {
+      "contentId": "guide/calcolo-costi-trasporto-camion-excel",
+      "canonical": "/it/guide/calcolo-costi-trasporto-camion-excel/",
+      "audienceMarket": "IT",
+      "changeScope": "substantive-update",
+      "intentOwner": "calcolo costi trasporto camion excel",
+      "demandEvidenceId": "demand:bofu-excel-20260907",
+      "approvalId": "review:2026-09-07-bofu-excel",
+      "productProofIds": [
+        "cost-breakdown"
+      ],
+      "primarySourceUrls": [
+        "https://apps.apple.com/it/app/routebudget/id6789717191"
       ]
     }
   ],

@@ -4,6 +4,8 @@ Un preventivo di trasporto in PDF dovrebbe permettere al cliente di capire subit
 
 RouteBudget aiuta a combinare gli input della tratta, confrontare tre scenari di prezzo e generare un riepilogo PDF non vincolante. Il logo aziendale è opzionale con Pro. Questo riepilogo non diventa automaticamente contratto, fattura o offerta completa: l’impresa deve verificare quali dati, condizioni e formule servono nel proprio processo.
 
+Vuoi vedere il documento prima di scegliere l’app? [Apri il PDF dimostrativo RouteBudget, una pagina A4, circa 96 KB](/downloads/routebudget-preventivo-demo.pdf). È generato dal motore e dal template del codice verificato il 23 agosto 2026, con input di prova espliciti. Non è un’offerta a un cliente né un’esportazione registrata da uno smartphone: la stampa desktop può differire nell’impaginazione da quella sul dispositivo. Più sotto trovi dati e calcolo per controllarlo, non soltanto una promessa commerciale.
+
 ## Separare tre livelli evita confusione
 
 | Livello | Scopo | Destinatario |
@@ -66,23 +68,26 @@ RouteBudget presenta tre scenari. Non sono prezzi ufficiali o tariffe suggerite 
 
 Il documento inviato dovrebbe mostrare un solo prezzo scelto, salvo che l’impresa voglia proporre opzioni di servizio chiaramente diverse. Tre numeri senza spiegazione possono sembrare indecisione invece di trasparenza.
 
-## Esempio di impaginazione
+## Esempio verificabile: dagli input al PDF
 
-Esempio illustrativo, non modello legale né tariffa corrente.
+Il [campione PDF scaricabile](/downloads/routebudget-preventivo-demo.pdf) usa le etichette «Bologna (DEMO)» e «Milano (DEMO)». Tutti gli input sono dimostrativi: **240 km e 45 € di pedaggio non sono un percorso verificato o una tariffa attuale**. È selezionato lo scenario Consigliato, con dettaglio costi visibile, senza logo Pro e senza ritorno a vuoto. Nessun dato cliente è usato.
 
-| Campo | Contenuto di esempio |
+| Input del campione | Valore e significato |
 | --- | --- |
-| Riferimento | RB-2026-014 |
-| Servizio | Trasporto diretto con un ritiro e una consegna |
-| Tratta | Bologna–Monaco di Baviera |
-| Mezzo | Configurazione da confermare con il cliente |
-| Data | Finestra operativa concordata separatamente |
-| Prezzo | 1.480 € come puro esempio didattico |
-| Incluso | Pedaggi ordinari dell’itinerario ipotizzato |
-| Escluso | Attese extra e variazioni non comunicate |
-| Validità | Data esplicita scelta dall’offerente |
+| Distanza inserita | 240 km, solo andata |
+| Mezzo | Camion, 5 assi, 40 t |
+| Consumo e carburante | 30 l/100 km; 1,70 €/l, entrambi dati di prova |
+| Pedaggio manuale | 45,00 €, non verificato sul concessionario |
+| Costo autista | 24,00 €/h |
+| Velocità del modello verificato | 72 km/h: 240 ÷ 72 = 3 h 20 min, non previsione del traffico |
+| Usura camion nel modello | Quota fissa di 0,15 €/km |
+| Margine obiettivo | 20% sul ricavo, non ricarico sul costo |
 
-L’importo non rappresenta il costo o la tariffa reale della tratta. Serve solo a mostrare gerarchia visiva: riferimento e servizio prima, prezzo ben leggibile, condizioni subito dopo.
+Il controllo indipendente dà carburante **122,40 €** (`240 × 30 ÷ 100 × 1,70`), pedaggi **45,00 €**, autista **80,00 €** (`3⅓ × 24`) e usura **36,00 €** (`240 × 0,15`). Totale delle voci modellate: **283,40 €**. Non è il costo aziendale completo se mancano spese pertinenti alla commessa.
+
+Per il margine del 20%, il prezzo dello scenario Consigliato è `283,40 ÷ (1 − 0,20) = 354,25 €`, con utile operativo modellato di **70,85 €**. Il campione riporta proprio **354,25 €**, IVA e imposte non incluse. Minimo è 283,40 €; Ideale è 389,68 €, ottenuto aggiungendo il buffer del modello e arrotondando per eccesso al centesimo. Sono scenari del calcolo, non prezzi di mercato.
+
+La data dimostrativa di emissione è 7 settembre 2026. Il modello dichiara validità fissa di 14 giorni e stima non vincolante. Non usare questo file per un cliente: prepara la tua tratta con dati aggiornati e controlla il PDF prodotto dalla tua versione dell’app. Per capire se il flusso è adatto alla tua attività, consulta [RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/).
 
 ## Scrivere inclusioni ed esclusioni in modo utile
 

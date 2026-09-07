@@ -4,11 +4,11 @@
   "locale": "it",
   "status": "published",
   "title": "Preventivo di trasporto PDF: contenuti e controllo finale",
-  "description": "Struttura pratica per trasformare una stima di tratta in un PDF leggibile, distinguendo calcolo interno, offerta commerciale e dati da verificare.",
+  "description": "Apri un esempio PDF RouteBudget, controlla input e calcolo, e scopri quali campi genera l’app e quali dati completare prima dell’invio al cliente.",
   "eyebrow": "Dal calcolo al documento",
   "published": "2026-08-01",
-  "modified": "2026-09-04",
-  "reviewed": "2026-09-04",
+  "modified": "2026-09-07",
+  "reviewed": "2026-09-07",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "preventivo trasporto PDF",
@@ -44,21 +44,21 @@
   ],
   "sources": [
     {
-      "label": "Apple App Store — RouteBudget: Truck Toll Cost",
-      "url": "https://apps.apple.com/app/id6789717191",
-      "publishedOrUpdated": "Scheda live consultata il 2026-08-01",
-      "geography": "Disponibilità secondo paese o area dello store",
-      "accessedAt": "2026-08-01",
-      "supports": "Descrizione ufficiale delle funzioni di stima, scenari, archivio, PDF e logo aziendale."
-    },
-    {
       "label": "Google Play — RouteBudget EU",
       "url": "https://play.google.com/store/apps/details?id=eu.routebudget.app",
       "publishedOrUpdated": "Scheda live consultata il 2026-08-01",
       "geography": "Disponibilità secondo paese o area dello store",
       "accessedAt": "2026-08-01",
       "supports": "Destinazione ufficiale Android e disponibilità del prodotto; le funzioni restano quelle dichiarate nella pagina."
+    },
+    {
+      "label": "Apple App Store Italia — RouteBudget",
+      "url": "https://apps.apple.com/it/app/routebudget/id6789717191",
+      "publishedOrUpdated": "Scheda pubblica consultata il 2026-09-07; versione installata da verificare sul dispositivo",
+      "geography": "Italia",
+      "accessedAt": "2026-09-07",
+      "supports": "Funzioni generali dichiarate di calcolo costi, scenari, Archivio e PDF. Il campione PDF separato documenta il template sorgente datato, non ogni versione corrente."
     }
   ],
-  "changeSummary": "Aggiunti collegamenti contestuali a peso volumetrico, scarico con sponda e scelta del dedicato per verificare i dati prima della quotazione; contenuto e limiti del prodotto preservati."
+  "changeSummary": "Sostituito l’esempio generico con PDF riproducibile dal template verificato, input dimostrativi e controlli numerici; esplicitata la differenza tra stampa desktop e dispositivo e collegata la pagina di scelta dell’app."
 }

@@ -19,8 +19,8 @@ const HASH_PATTERN = /^sha256:[a-f0-9]{64}$/;
 const PINNED_BASELINE_REVIEW_ID = 'review:baseline-main-a952269';
 const PINNED_BASELINE_COMMIT = 'a952269';
 const PINNED_BASELINE_REVIEW_DIGEST = 'sha256:923ac8551fd5fb82c4db59d07e7b7acd042fe89f332f14efdbca072f225497ae';
-const PINNED_RELEASE_INTEGRITY_ID = 'review:2026-09-06-italian-operational-integrity';
-const PINNED_RELEASE_INTEGRITY_DIGEST = 'sha256:f11b0ee1f68d0c019f9cadd9429cc3710a2c8911a48775a81a8f74aad9d15a46';
+const PINNED_RELEASE_INTEGRITY_ID = 'review:2026-09-07-bofu-integrity';
+const PINNED_RELEASE_INTEGRITY_DIGEST = 'sha256:1dfc921af1d1dc7b3077f932f905b19356a11a5accd17155736297f7ca0caf95';
 const PINNED_APP_SOURCE_COMMIT = '3ea946e5c988aca4da3c778544a5dd6b8391b750';
 const APP_ATTESTATION_FILE = 'app-source-3ea946e5.json';
 const APP_ATTESTATION_ID = 'app-source:3ea946e5';
@@ -453,7 +453,7 @@ async function validateReleaseIntegrity() {
   const dependencyFingerprint = fingerprintStableObject(dependencyFiles);
   assert.equal(manifest.releaseIntegrityApprovalId, PINNED_RELEASE_INTEGRITY_ID, 'release integrity approval id is not pinned by executable policy');
   assert.equal(
-    fingerprintText(await readFile(path.join(REVIEWS, '2026-09-06-italian-operational-integrity.json'), 'utf8')),
+    fingerprintText(await readFile(path.join(REVIEWS, '2026-09-07-bofu-integrity.json'), 'utf8')),
     PINNED_RELEASE_INTEGRITY_DIGEST,
     'release integrity review changed without executable policy approval',
   );
