@@ -668,6 +668,11 @@ li {
   font-size: 0.88em;
 }
 
+.seo-prose :not(pre) > code {
+  /* Long spreadsheet formulas must wrap without changing copyable text. */
+  overflow-wrap: anywhere;
+}
+
 .seo-prose pre {
   overflow-x: auto;
   padding: 20px;

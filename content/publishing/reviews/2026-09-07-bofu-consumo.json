@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-07",
+  "decision": "approved",
+  "id": "review:2026-09-07-bofu-consumo",
+  "type": "editorial",
+  "contentId": "guide/quanto-consuma-un-camion",
+  "contentFingerprint": "sha256:7ba4010ee064558ef82f9671eab0325400ed2800a3e4068794bc9f8488e8bfb3",
+  "artifactFingerprint": "sha256:4bda56d479d1e478776cbd55313ae9b3c41b263b58c48988f221be5223ce0cac",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-07",
+    "basis": "Explicit owner authorization on 7 September 2026 to improve existing RouteBudget website pages for carrier purchase intent, preserve useful answers and URLs, validate the publication gate, publish through PR/gh-pages and request relevant discovery. Website only; no independent human review, native app change or ranking guarantee."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Chiarita la scelta tra misura dei consumi e app per preparare un prezzo, con percorso verso calcolo e PDF dimostrativo; nessuna promessa di telematica. Incremental changes inspected against pinned product source and public Italian App Store description; unrelated historical legal/tariff claims are not recertified as current. Synthetic PDF and offer arithmetic independently checked in integer cents. All 72 content pages passed four Chromium widths (320/375/768/1440); six changed surfaces inspected in mobile/desktop screenshots. Not a physical-device, legal, or independent human certification."
+}

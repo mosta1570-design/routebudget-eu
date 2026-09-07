@@ -7,8 +7,8 @@
   "description": "Consumo camion: esempi di test a 32 e 40 t, conversione in km/l e media corretta dai rifornimenti. Dati verificabili e metodo per il tuo preventivo.",
   "eyebrow": "Consumo camion · Metodo operativo",
   "published": "2026-08-11",
-  "modified": "2026-09-05",
-  "reviewed": "2026-09-05",
+  "modified": "2026-09-07",
+  "reviewed": "2026-09-07",
   "primaryKeyword": "quanto consuma un camion",
   "searchIntent": "informational",
   "topics": [
@@ -48,6 +48,14 @@
     {
       "label": "MIT — Valori indicativi dei costi di esercizio, marzo 2026",
       "url": "https://www.mit.gov.it/documentazione/valori-indicativi-di-riferimento-dei-costi-di-esercizio-dellimpresa-italiana-di-6"
+    },
+    {
+      "label": "Apple App Store Italia — RouteBudget",
+      "url": "https://apps.apple.com/it/app/routebudget/id6789717191",
+      "publishedOrUpdated": "Scheda pubblica consultata il 2026-09-07; versione installata da verificare sul dispositivo",
+      "geography": "Italia",
+      "accessedAt": "2026-09-07",
+      "supports": "Funzioni generali dichiarate di calcolo costi, scenari, Archivio e PDF. Il campione PDF separato documenta il template sorgente datato, non ogni versione corrente."
     }
   ],
   "status": "published",
@@ -64,5 +72,5 @@
   "canonical": "/it/guide/quanto-consuma-un-camion/",
   "ogImage": "/og-cover.jpg",
   "noindex": false,
-  "changeSummary": "Risposta diretta con due test pubblicati dai costruttori, condizioni e limiti; conversione km/l e esempio originale della media ponderata per evitare errori nel costo carburante. Nessuna media nazionale inventata."
+  "changeSummary": "Chiarita la scelta tra misura dei consumi e app per preparare un prezzo, con percorso verso calcolo e PDF dimostrativo; nessuna promessa di telematica."
 }

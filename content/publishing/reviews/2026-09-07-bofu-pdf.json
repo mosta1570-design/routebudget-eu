@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-07",
+  "decision": "approved",
+  "id": "review:2026-09-07-bofu-pdf",
+  "type": "editorial",
+  "contentId": "guide/preventivo-trasporto-pdf",
+  "contentFingerprint": "sha256:decae045cb0d4ff8f1a62fb880bbc96466c2ff9358b7548e4d1106ab5e6702fd",
+  "artifactFingerprint": "sha256:7552c2f60122dbd42872529a4c88473c3c7d52d4fb0a9025b738de374023b38e",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-07",
+    "basis": "Explicit owner authorization on 7 September 2026 to improve existing RouteBudget website pages for carrier purchase intent, preserve useful answers and URLs, validate the publication gate, publish through PR/gh-pages and request relevant discovery. Website only; no independent human review, native app change or ranking guarantee."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Sostituito l’esempio generico con PDF riproducibile dal template verificato, input dimostrativi e controlli numerici; esplicitata la differenza tra stampa desktop e dispositivo e collegata la pagina di scelta dell’app. Incremental changes inspected against pinned product source and public Italian App Store description; unrelated historical legal/tariff claims are not recertified as current. Synthetic PDF and offer arithmetic independently checked in integer cents. All 72 content pages passed four Chromium widths (320/375/768/1440); six changed surfaces inspected in mobile/desktop screenshots. Not a physical-device, legal, or independent human certification."
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-07",
+  "decision": "approved",
+  "id": "review:2026-09-07-bofu-excel",
+  "type": "editorial",
+  "contentId": "guide/calcolo-costi-trasporto-camion-excel",
+  "contentFingerprint": "sha256:19eef9e24020805719e8d38b0dbfaca4e86c30193e4a80f0c12e8aa0babe7211",
+  "artifactFingerprint": "sha256:057d991e99f0d3dee0b2363a4915d4380b9bb2b48d0edb73551325e44d5ae507",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-07",
+    "basis": "Explicit owner authorization on 7 September 2026 to improve existing RouteBudget website pages for carrier purchase intent, preserve useful answers and URLs, validate the publication gate, publish through PR/gh-pages and request relevant discovery. Website only; no independent human review, native app change or ranking guarantee."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Aggiunta una scelta per compito tra Excel, app e gestionale, con percorsi verso il prodotto e il campione PDF; formule e fonti storiche non modificate. Incremental changes inspected against pinned product source and public Italian App Store description; unrelated historical legal/tariff claims are not recertified as current. Synthetic PDF and offer arithmetic independently checked in integer cents. All 72 content pages passed four Chromium widths (320/375/768/1440); six changed surfaces inspected in mobile/desktop screenshots. Not a physical-device, legal, or independent human certification."
+}

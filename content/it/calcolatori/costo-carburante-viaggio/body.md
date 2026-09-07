@@ -109,6 +109,14 @@ RouteBudget collega carburante o energia, pedaggi, tempo autista, pause operativ
 
 Per continuare senza confondere le voci, passa al [calcolo completo del costo di trasporto](/it/guide/calcolo-costo-trasporto/), poi controlla che cosa contiene il [riepilogo preventivo PDF di RouteBudget](/it/guide/preventivo-trasporto-pdf/). Il carburante calcolato qui entra una volta sola nel costo; il PDF non aggiunge automaticamente condizioni commerciali o dati del cliente.
 
+## Dal calcolo gasolio al preventivo: quale strumento ti serve?
+
+Per verificare una singola spesa, questo calcolatore gratuito è sufficiente: non devi scaricare nulla. Se invece prepari più proposte e vuoi ritrovare calcolo, scenari di prezzo e PDF, valuta il flusso descritto nella [pagina RouteBudget per autotrasportatori](/it/app-per-autotrasportatori/).
+
+Prima di passare all’app, annota distanza, consumo, prezzo e ritorno: **i dati compilati qui non vengono trasferiti automaticamente**. L’app richiede un nuovo inserimento e un controllo delle altre voci. Puoi aprire l’[esempio PDF e confrontare i suoi importi](/it/guide/preventivo-trasporto-pdf/) per capire cosa riceverà il destinatario; dati cliente e condizioni commerciali non vengono aggiunti automaticamente.
+
+Se stai cercando un fornitore che esegua il trasporto, questa non è una richiesta di offerta a un vettore: RouteBudget aiuta chi deve calcolare il proprio prezzo, non trova un camion disponibile.
+
 ## Checklist prima di riportare il dato
 
 - distanza verificata per il mezzo;

@@ -150,6 +150,18 @@ Un ritorno a vuoto può consumare meno litri per km rispetto all'andata carica, 
 
 Evita anche il doppio conteggio. Se utilizzi già un costo chilometrico storico che include il carburante, non aggiungere di nuovo l'intero importo senza prima separare la quota. Il modello deve dichiarare cosa comprende ogni riga.
 
+## Ti serve un’app per controllare i consumi o per preparare un preventivo?
+
+Sono due lavori diversi. Se vuoi sapere perché il camion ha consumato di più, servono rilevazioni del mezzo e missioni confrontabili: un’app che riceve un consumo manuale non sostituisce la diagnosi né la telematica. RouteBudget non importa i rifornimenti e non ricostruisce automaticamente il consumo medio aziendale.
+
+Se invece hai già un consumo attendibile e devi dare un prezzo al cliente, il passaggio utile è questo:
+
+1. verifica i litri e la spesa nel [calcolatore carburante](/it/calcolatori/costo-carburante-viaggio/);
+2. aggiungi le altre voci della missione e controlla gli scenari nella [pagina dell’app per autotrasportatori](/it/app-per-autotrasportatori/);
+3. prima di scegliere il flusso PDF, apri l’[esempio di preventivo con input e calcolo verificabili](/it/guide/preventivo-trasporto-pdf/).
+
+Il vantaggio da valutare non è un consumo promesso più basso: è evitare di perdere un costo tra il calcolo e il documento. Il consumo rimane una tua ipotesi da controllare; il PDF rimane una stima non vincolante.
+
 ## Errori frequenti nel calcolo del consumo
 
 - Usare il valore dichiarato di un mezzo diverso come dato definitivo.

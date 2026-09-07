@@ -1,6 +1,19 @@
-## RouteBudget trasforma input operativi in una stima leggibile
+## Devi preparare un prezzo, non cercare un trasportatore?
 
 RouteBudget è un’app per autotrasportatori, padroncini e piccole imprese che vogliono stimare il costo di una tratta prima di proporre un prezzo. Riunisce gli input inseriti dall’utente, presenta tre scenari di prezzo, conserva i calcoli in un archivio locale e genera un riepilogo PDF non vincolante. Con Pro è possibile aggiungere facoltativamente il logo aziendale al PDF.
+
+Il cliente ti chiede quanto costa il viaggio. Prima di rispondere vuoi controllare le voci supportate, scegliere il prezzo e preparare un documento da condividere. RouteBudget serve a questo: **sei tu il trasportatore che prepara la propria stima**. Non trovi carichi o vettori e non prenoti una spedizione.
+
+Prima di scaricare, puoi [aprire l’esempio PDF con input e risultati verificabili](/it/guide/preventivo-trasporto-pdf/) oppure [guardare le schermate del prodotto nella homepage](/). Il campione usa dati dimostrativi: non è un’offerta reale né una tariffa Bologna–Milano.
+
+| Cosa devi fare oggi | Da dove iniziare |
+| --- | --- |
+| Controllare una componente del costo | [Calcolatore web del costo chilometrico](/it/calcolatori/costo-chilometrico-camion/) |
+| Capire il documento prima di usare l’app | [Campi, esempio e limiti del PDF](/it/guide/preventivo-trasporto-pdf/) |
+| Stimare una tratta e ritrovare il calcolo sul telefono | RouteBudget: input, tre scenari, archivio locale e riepilogo PDF |
+| Gestire clienti, fatture, flotta e ordini condivisi | Un gestionale dedicato: RouteBudget non sostituisce quel sistema |
+
+Il PDF ha validità fissa di 14 giorni; cliente, firma e condizioni personalizzate non sono campi generati dal template. Controlla che questo perimetro sia adatto al tuo lavoro. Se lo è, usa i pulsanti dello store del tuo dispositivo presenti nella pagina.
 
 Non è un navigatore e non promette tariffe o pedaggi aggiornati in tempo reale. Il risultato dipende dai dati forniti: distanza, costi e ipotesi vanno controllati dall’impresa. L’obiettivo è rendere il ragionamento economico più ordinato, non sostituire pianificazione, fonti ufficiali o consulenza professionale.
 
