@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-09-06",
+  "revisionDate": "2026-09-07",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -11,7 +11,7 @@
       "canonical": "https://routebudget.eu/it/app-per-autotrasportatori/",
       "indexable": true,
       "primaryKeyword": "app per autotrasportatori",
-      "modified": "2026-08-20"
+      "modified": "2026-09-07"
     },
     {
       "id": "it:calcolatori:costo-carburante-viaggio",
@@ -23,7 +23,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
       "indexable": true,
       "primaryKeyword": "calcolatore costo carburante viaggio",
-      "modified": "2026-09-05"
+      "modified": "2026-09-07"
     },
     {
       "id": "it:calcolatori:costo-chilometrico-camion",
@@ -35,7 +35,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
       "indexable": true,
       "primaryKeyword": "costo km camion",
-      "modified": "2026-09-02"
+      "modified": "2026-09-07"
     },
     {
       "id": "it:calcolatori:fuel-surcharge-autotrasporto",
@@ -131,7 +131,7 @@
       "canonical": "https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/",
       "indexable": true,
       "primaryKeyword": "calcolo costi trasporto camion excel",
-      "modified": "2026-08-22"
+      "modified": "2026-09-07"
     },
     {
       "id": "it:guide:calcolo-costo-trasporto",
@@ -665,13 +665,13 @@
       "id": "it:guide:preventivo-trasporto-pdf",
       "url": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
       "title": "Preventivo di trasporto PDF: contenuti e controllo finale",
-      "description": "Struttura pratica per trasformare una stima di tratta in un PDF leggibile, distinguendo calcolo interno, offerta commerciale e dati da verificare.",
+      "description": "Apri un esempio PDF RouteBudget, controlla input e calcolo, e scopri quali campi genera l’app e quali dati completare prima dell’invio al cliente.",
       "type": "guide",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto PDF",
-      "modified": "2026-09-04"
+      "modified": "2026-09-07"
     },
     {
       "id": "it:guide:preventivo-trasporto",
@@ -719,7 +719,7 @@
       "canonical": "https://routebudget.eu/it/guide/quanto-consuma-un-camion/",
       "indexable": true,
       "primaryKeyword": "quanto consuma un camion",
-      "modified": "2026-09-05"
+      "modified": "2026-09-07"
     },
     {
       "id": "it:guide:quanto-consuma-un-furgone",
