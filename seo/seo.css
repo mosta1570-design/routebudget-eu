@@ -66,6 +66,8 @@
   --focus: oklch(83% 0.12 238);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --header-height: 78px;
+  --reading-width: 72ch;
+  --control-radius: 14px;
 }
 
 * {
@@ -237,19 +239,22 @@ li {
   gap: 9px;
   padding: 13px 18px;
   border: 1px solid transparent;
-  border-radius: 999px;
-  font-weight: 700;
-  line-height: 1;
+  border-radius: var(--control-radius);
+  font-family: "Barlow", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  white-space: normal;
   text-decoration: none;
   transition:
-    transform 240ms var(--ease-out),
     background 240ms var(--ease-out),
     border-color 240ms var(--ease-out),
     box-shadow 240ms var(--ease-out);
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .button--primary {
@@ -347,9 +352,14 @@ li {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   margin-left: auto;
-  border-bottom: 1px solid var(--route);
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--control-radius);
+  line-height: 1.3;
+  text-align: center;
   font-size: 0.94rem;
   font-weight: 700;
   text-decoration: none;
@@ -361,7 +371,7 @@ li {
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--line-soft);
-  padding-block: clamp(54px, 7vw, 92px) clamp(58px, 7vw, 88px);
+  padding-block: clamp(28px, 4vw, 52px) clamp(36px, 5vw, 64px);
 }
 
 .seo-hero::before {
@@ -382,20 +392,24 @@ li {
 }
 
 .seo-hero h1 {
-  max-width: 1050px;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(3.25rem, 6.1vw, 6rem);
+  max-width: 28ch;
+  padding: clamp(20px, 3vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--asphalt);
+  font-family: "Barlow", system-ui, sans-serif;
+  font-size: clamp(2.25rem, 3.8vw, 3.5rem);
   font-weight: 600;
-  letter-spacing: -0.038em;
-  line-height: 0.94;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
 }
 
 .seo-hero__summary {
-  max-width: 780px;
-  margin-top: 30px;
+  max-width: 65ch;
+  margin-top: 24px;
   color: var(--ink-soft);
-  font-size: clamp(1.15rem, 2vw, 1.42rem);
-  line-height: 1.48;
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+  line-height: 1.6;
 }
 
 .seo-hero--index h1 {
@@ -519,14 +533,17 @@ li {
 
 .article-layout {
   display: grid;
-  grid-template-columns: minmax(0, 790px) minmax(280px, 350px);
-  gap: clamp(58px, 8vw, 112px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 310px);
+  gap: clamp(40px, 5vw, 80px);
   align-items: start;
-  padding-block: clamp(78px, 10vw, 136px);
+  padding-block: clamp(40px, 6vw, 80px);
 }
 
 .article-main {
   min-width: 0;
+  width: 100%;
+  max-width: var(--reading-width);
+  margin-inline: auto;
 }
 
 .seo-prose {
@@ -547,20 +564,20 @@ li {
   color: var(--ink);
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: -0.025em;
-  line-height: 1.02;
+  line-height: 1.15;
 }
 
 .seo-prose h2,
 .sources h2,
 .editorial-note h2 {
-  margin-top: 3.8rem;
-  font-size: clamp(2.2rem, 4vw, 3.35rem);
+  margin-top: 3rem;
+  font-size: clamp(1.875rem, 3vw, 2.5rem);
   font-weight: 600;
 }
 
 .seo-prose h3 {
-  margin-top: 2.65rem;
-  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  margin-top: 2.25rem;
+  font-size: clamp(1.5rem, 2.4vw, 1.875rem);
   font-weight: 600;
 }
 
@@ -647,6 +664,7 @@ li {
   padding: 13px 15px;
   border-bottom: 1px solid var(--line-soft);
   text-align: left;
+  font-variant-numeric: tabular-nums;
 }
 
 .seo-prose th {
@@ -873,8 +891,10 @@ li {
 }
 
 .store-badge-link {
-  min-height: 48px;
-  display: block;
+  min-height: 68px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 4px;
   border-radius: 10px;
 }
@@ -1662,13 +1682,13 @@ li {
     justify-content: center;
     margin-left: 0;
     border: 1px solid var(--line);
-    border-radius: 999px;
+    border-radius: var(--control-radius);
     padding-inline: 12px;
     font-size: 0.76rem;
   }
 
   .seo-hero {
-    padding-block: 54px 68px;
+    padding-block: 24px 36px;
   }
 
   .seo-hero::before {
@@ -1676,7 +1696,7 @@ li {
   }
 
   .seo-hero h1 {
-    font-size: clamp(3rem, 14vw, 5rem);
+    font-size: clamp(2rem, 5.5vw, 2.75rem);
   }
 
   .breadcrumbs {
@@ -1720,7 +1740,7 @@ li {
 
   .article-layout {
     gap: 52px;
-    padding-block: 68px;
+    padding-block: 36px;
   }
 
   .mobile-inline-cta .store-badge-link:first-child img {
@@ -1829,7 +1849,7 @@ li {
   }
 
   .seo-hero h1 {
-    font-size: clamp(2.9rem, 15.5vw, 4.2rem);
+    font-size: clamp(1.875rem, 7.5vw, 2.25rem);
   }
 
   .seo-hero__summary {
