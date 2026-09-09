@@ -4,11 +4,11 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-09-08-consent-layout-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-09-editorial-polish-integrity",
   "staticArtifacts": {
-    "/": "sha256:3ebcab418c5b7d2ca415ec50b59aded1d8b972be05fd4b9c359d454e68f9d1bc",
-    "/it/calcolatori/": "sha256:c7593621f9de2ed156a7afa360db7126968147527fdb9cfe62f4cb140d59064f",
-    "/it/guide/": "sha256:79c735f226d96cd12c7ea2d3e97b40390821fea700d24533e7cbe2f92c19ed39",
+    "/": "sha256:021fdcd4635aff2cbe87afe5f0da681b19778ba1548464998a7c3360f5a9b7ce",
+    "/it/calcolatori/": "sha256:8e31b7968bcf58da8f01259a55a02d5e1a2ac57629fe2d4a435f92110a6304a5",
+    "/it/guide/": "sha256:37058b47feca9eadb9a001180c1097cb49395ac4326834f310a9890e88e6b912",
     "/privacy.html": "sha256:8da2371df697599494a8885b5aad58d4285f8d9468dddb50cfd2611106be2325",
     "/terms.html": "sha256:d39d12e63b2b852b41e4752fde1deae588658611e5547811ca055f9b0f1f2050"
   },
