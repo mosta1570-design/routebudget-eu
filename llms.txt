@@ -1,0 +1,28 @@
+# RouteBudget EU
+
+> App per stimare i costi delle tratte di trasporto merci, per camion e furgoni N1, confrontare scenari di prezzo e preparare preventivi PDF non vincolanti. Il sito offre guide italiane e calcolatori web gratuiti.
+
+RouteBudget si rivolge ad autisti, padroncini e piccole imprese di trasporto. Le stime dipendono dai dati inseriti: carburante o energia, pedaggi, tempo dell'autista e costi del veicolo. Non sono tariffe ufficiali, garanzie di profitto o consulenza professionale. Verificare le ipotesi e gli importi prima di inviare un'offerta.
+
+L'app e i calcolatori web sono prodotti distinti. Nell'app, i calcoli principali e l'Archivio locale funzionano offline; la ricerca opzionale della distanza e le operazioni sull'abbonamento richiedono internet. Non è presente una sincronizzazione cloud dell'Archivio gestita dallo sviluppatore. Non presentare la ricerca della distanza come navigazione per camion. Il Trip Tracking opzionale è disponibile solo su iOS, non su Android.
+
+Le risorse collegate sono pagine HTML pubbliche, non copie Markdown. Consultarle per formule, ipotesi, fonti e limiti aggiornati.
+
+## Prodotto
+
+- [RouteBudget EU](https://routebudget.eu/): Funzioni dell'app, destinatari, limiti e accesso agli store.
+- [App per iOS](https://apps.apple.com/app/id6789717191): Scheda ufficiale App Store.
+- [App per Android](https://play.google.com/store/apps/details?id=eu.routebudget.app): Scheda ufficiale Google Play.
+
+## Metodo e strumenti
+
+- [Calcolo del costo di trasporto](https://routebudget.eu/it/guide/calcolo-costo-trasporto/): Metodo per includere carburante, pedaggi, autista, usura e ritorno a vuoto.
+- [Calcolatore costo chilometrico camion](https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/): Costo totale, per km percorso e per km carico.
+- [Prezzo di trasporto e margine](https://routebudget.eu/it/calcolatori/prezzo-minimo-margine-tratta/): Soglia di copertura e distinzione tra margine sul ricavo e ricarico sul costo.
+- [Preventivo di trasporto PDF](https://routebudget.eu/it/guide/preventivo-trasporto-pdf/): Esempio e controllo dei contenuti prima dell'invio al cliente.
+- [Metodo di calcolo in Excel](https://routebudget.eu/it/guide/calcolo-costi-trasporto-camion-excel/): Struttura dei dati, decorrenza delle tariffe e versioni del preventivo.
+
+## Optional
+
+- [Privacy](https://routebudget.eu/privacy.html): Dati locali, servizi esterni e differenze tra piattaforme.
+- [Termini di servizio](https://routebudget.eu/terms.html): Condizioni dell'app, abbonamenti e limiti delle stime.
