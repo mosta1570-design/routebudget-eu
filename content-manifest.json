@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-09-07",
+  "revisionDate": "2026-09-19",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -23,7 +23,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-carburante-viaggio/",
       "indexable": true,
       "primaryKeyword": "calcolatore costo carburante viaggio",
-      "modified": "2026-09-07"
+      "modified": "2026-09-19"
     },
     {
       "id": "it:calcolatori:costo-chilometrico-camion",
@@ -35,7 +35,7 @@
       "canonical": "https://routebudget.eu/it/calcolatori/costo-chilometrico-camion/",
       "indexable": true,
       "primaryKeyword": "costo km camion",
-      "modified": "2026-09-07"
+      "modified": "2026-09-19"
     },
     {
       "id": "it:calcolatori:fuel-surcharge-autotrasporto",
@@ -671,7 +671,7 @@
       "canonical": "https://routebudget.eu/it/guide/preventivo-trasporto-pdf/",
       "indexable": true,
       "primaryKeyword": "preventivo trasporto PDF",
-      "modified": "2026-09-07"
+      "modified": "2026-09-19"
     },
     {
       "id": "it:guide:preventivo-trasporto",
