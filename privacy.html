@@ -104,8 +104,8 @@
     <div class="kicker" data-lang="en">Privacy Policy</div>
     <div class="kicker" data-lang="it">Informativa sulla Privacy</div>
     <h1><span data-lang="en">Privacy Policy</span><span data-lang="it">Privacy</span></h1>
-    <p data-lang="en">App policy: effective 27 July 2026 · Updated 1 August 2026. Website section: 5 September 2026.</p>
-    <p data-lang="it">Informativa app: in vigore dal 27 luglio 2026 · Aggiornata il 1 agosto 2026. Sezione sito: 5 settembre 2026.</p>
+    <p data-lang="en">App policy: effective 27 July 2026 · Updated 19 September 2026. Website section: 5 September 2026.</p>
+    <p data-lang="it">Informativa app: in vigore dal 27 luglio 2026 · Aggiornata il 19 settembre 2026. Sezione sito: 5 settembre 2026.</p>
   </div>
 
   <section class="card" id="website-analytics" aria-labelledby="website-privacy-title">
@@ -142,8 +142,8 @@
   <p data-lang="it"><strong>Informativa dell'app.</strong> Il riepilogo e le Sezioni 1–10 seguenti riguardano l'app iOS e Android, non gli analytics facoltativi del sito descritti sopra.</p>
 
   <div class="summary">
-    <p data-lang="en"><b>In short:</b> Core calculations, quotes, settings and Archive data are kept on your device. Optional real-distance lookup sends origin and destination city text to Nominatim, then route endpoints and coordinates to OSRM. Apple or Google Play processes payment, depending on platform; RevenueCat processes purchase history and an anonymous App User ID for Pro access. Optional foreground-GPS Trip tracking exists on iOS only. Android has no Trip tracking, Maps feature or device-location permission. No account, advertising, Firebase Analytics, cross-app tracking or developer-operated cloud sync is present.</p>
-    <p data-lang="it"><b>In breve:</b> Calcoli, preventivi, impostazioni e dati dell'Archivio sono conservati sul dispositivo. La ricerca opzionale della distanza reale invia i nomi delle città di origine e destinazione a Nominatim, quindi gli estremi e le coordinate della tratta a OSRM. Apple o Google Play gestisce il pagamento, a seconda della piattaforma; RevenueCat tratta la cronologia degli acquisti e un ID utente anonimo dell'app per l'accesso Pro. Il Trip Tracking opzionale con GPS in primo piano esiste solo su iOS. Android non include Trip Tracking, funzionalità Maps o permessi di posizione del dispositivo. Non sono presenti account, pubblicità, Firebase Analytics, tracciamento tra app o sincronizzazione cloud gestita dallo sviluppatore.</p>
+    <p data-lang="en"><b>In short:</b> Core calculations, quotes, settings and Archive data are kept on your device. Optional real-distance lookup sends origin and destination city text to Nominatim, then route endpoints and coordinates to OSRM. Apple or Google Play processes payment, depending on platform; RevenueCat processes purchase history and an anonymous App User ID for Pro access. Smart Fuel can use foreground location on iOS and Android to match nearby official MIMIT fuel-price rows locally; GPS coordinates are not sent to MIMIT. Optional foreground-GPS Trip tracking exists on iOS only. No account, advertising, Firebase Analytics, cross-app tracking or developer-operated cloud sync is present.</p>
+    <p data-lang="it"><b>In breve:</b> Calcoli, preventivi, impostazioni e dati dell'Archivio sono conservati sul dispositivo. La ricerca opzionale della distanza reale invia i nomi delle città di origine e destinazione a Nominatim, quindi gli estremi e le coordinate della tratta a OSRM. Apple o Google Play gestisce il pagamento, a seconda della piattaforma; RevenueCat tratta la cronologia degli acquisti e un ID utente anonimo dell'app per l'accesso Pro. Smart Fuel può usare la posizione in primo piano su iOS e Android per abbinare localmente i prezzi ufficiali MIMIT nelle vicinanze; le coordinate GPS non vengono inviate al MIMIT. Il Trip Tracking opzionale con GPS in primo piano esiste solo su iOS. Non sono presenti account, pubblicità, Firebase Analytics, tracciamento tra app o sincronizzazione cloud gestita dallo sviluppatore.</p>
   </div>
 
   <div class="card">
@@ -169,14 +169,14 @@
     <ul>
       <li class="no" data-lang="en">intentionally send customer names, licence plates, wages, margins, toll breakdowns or financial totals to map or subscription providers;</li>
       <li class="no" data-lang="en">upload foreground GPS fixes used by optional iOS Trip tracking;</li>
-      <li class="no" data-lang="en">request Android device location or provide Android Trip tracking or Maps;</li>
+      <li class="no" data-lang="en">request background or always-on location on either platform; Android has no Trip tracking or native Trip map;</li>
       <li class="no" data-lang="en">sell user data;</li>
       <li class="no" data-lang="en">use advertising networks, ad identifiers, Firebase Analytics or cross-app tracking;</li>
       <li class="no" data-lang="en">use third-party analytics or session-replay SDKs;</li>
       <li class="no" data-lang="en">require an account, email or phone number to work.</li>
       <li class="no" data-lang="it">invia intenzionalmente nomi dei clienti, targhe, retribuzioni, margini, dettagli dei pedaggi o totali finanziari ai fornitori di mappe o abbonamenti;</li>
       <li class="no" data-lang="it">carica le posizioni GPS usate dal Trip Tracking opzionale su iOS;</li>
-      <li class="no" data-lang="it">richiede la posizione del dispositivo Android o offre Trip Tracking o Maps su Android;</li>
+      <li class="no" data-lang="it">richiede la posizione in background o sempre attiva su entrambe le piattaforme; Android non include Trip Tracking o mappa Trip nativa;</li>
       <li class="no" data-lang="it">vende i dati degli utenti;</li>
       <li class="no" data-lang="it">usa reti pubblicitarie, identificatori pubblicitari, Firebase Analytics o tracciamento tra app;</li>
       <li class="no" data-lang="it">usa SDK di analisi o riproduzione delle sessioni di terze parti;</li>
@@ -220,11 +220,13 @@
   </div>
 
   <div class="card">
-    <h2><span class="n">4</span><span data-lang="en">Trip Tracking and Device Location by Platform</span><span data-lang="it">Trip Tracking e posizione per piattaforma</span></h2>
+    <h2><span class="n">4</span><span data-lang="en">Smart Fuel, Trip Tracking and Device Location</span><span data-lang="it">Smart Fuel, Trip Tracking e posizione</span></h2>
+    <p data-lang="en"><strong>Smart Fuel on iOS and Android:</strong> the App requests foreground location while in use and matches coordinates locally against official daily MIMIT station and diesel-price files. GPS coordinates are not included in MIMIT requests; MIMIT may receive ordinary technical request data such as IP address. The latest nearby result, source date and an approximate location used for cache reuse are stored locally. Manual fuel-price entry remains available without location permission. Permission can be revoked in device settings. Official dataset: <a href="https://www.mimit.gov.it/index.php/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti" target="_blank" rel="noopener">MIMIT fuel prices</a>.</p>
+    <p data-lang="it"><strong>Smart Fuel su iOS e Android:</strong> l'App richiede la posizione in primo piano durante l'uso e abbina localmente le coordinate ai file giornalieri ufficiali MIMIT di impianti e prezzi gasolio. Le coordinate GPS non sono incluse nelle richieste MIMIT; il MIMIT può ricevere normali dati tecnici della richiesta, come l'indirizzo IP. L'ultimo risultato nelle vicinanze, la data della fonte e una posizione approssimata usata per riutilizzare la cache vengono conservati sul dispositivo. L'inserimento manuale del prezzo resta disponibile senza permesso di posizione. Il permesso può essere revocato nelle impostazioni del dispositivo. Dataset ufficiale: <a href="https://www.mimit.gov.it/index.php/it/open-data/elenco-dataset/carburanti-prezzi-praticati-e-anagrafica-degli-impianti" target="_blank" rel="noopener">prezzi carburanti MIMIT</a>.</p>
     <p data-lang="en"><strong>iOS only:</strong> optional Trip tracking requests foreground location access and uses GPS fixes <strong>only while tracking is active</strong> to measure travelled distance and cost on your device. It does not request background or always-on location, and current App code does not intentionally upload those GPS fixes. You can revoke permission at any time in iOS Settings.</p>
     <p data-lang="it"><strong>Solo iOS:</strong> il Trip Tracking opzionale richiede l'accesso alla posizione in primo piano e usa le posizioni GPS <strong>solo mentre il tracciamento è attivo</strong> per misurare distanza percorsa e costo sul dispositivo. Non richiede la posizione in background o sempre attiva e il codice attuale dell'App non invia intenzionalmente tali posizioni GPS. Puoi revocare il permesso in qualsiasi momento nelle Impostazioni iOS.</p>
-    <p data-lang="en"><strong>Android:</strong> this release has no Trip tracking, Maps feature or native Trip map and does not request device-location permission. Optional real-distance lookup uses city text that you enter and the Nominatim/OSRM flow in Section 6; it does not read Android GPS location.</p>
-    <p data-lang="it"><strong>Android:</strong> questa release non include Trip Tracking, funzionalità Maps o una mappa Trip nativa e non richiede il permesso di posizione del dispositivo. La ricerca opzionale della distanza reale usa i nomi delle città inseriti e il flusso Nominatim/OSRM della Sezione 6; non legge la posizione GPS Android.</p>
+    <p data-lang="en"><strong>Android:</strong> this release has no Trip tracking or native Trip map. Foreground location is used only for Smart Fuel; background location, location foreground service and activity recognition are disabled. Optional route-distance estimation uses entered city text and the Nominatim/OSRM flow in Section 6, not device GPS.</p>
+    <p data-lang="it"><strong>Android:</strong> questa release non include Trip Tracking o mappa Trip nativa. La posizione in primo piano serve solo a Smart Fuel; posizione in background, servizio di posizione in primo piano e riconoscimento attività sono disabilitati. La stima opzionale della distanza usa i nomi delle città inseriti e il flusso Nominatim/OSRM della Sezione 6, non il GPS del dispositivo.</p>
   </div>
 
   <div class="card">
