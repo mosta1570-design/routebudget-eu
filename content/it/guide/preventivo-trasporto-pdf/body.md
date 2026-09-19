@@ -91,6 +91,24 @@ La data dimostrativa di emissione è 7 settembre 2026. Il modello dichiara valid
 
 ## Scrivere inclusioni ed esclusioni in modo utile
 
+### Il prezzo del PDF deve tornare con il calcolo completo
+
+Nel distinto [esempio web del costo chilometrico](/it/calcolatori/costo-chilometrico-camion/), 500 km carichi e 100 km vuoti producono 898,50 € di costi e un’offerta ipotetica di 1.000 €. Il controllo interno è `1.000,00 − 898,50 = 101,50 €`. Nello scenario prudente dello stesso esempio, il costo sale a 1.014,52 €: mantenere l’offerta a 1.000 € lascia una differenza negativa di 14,52 €.
+
+È un esercizio diverso dal campione PDF Bologna–Milano sopra: **non aspettarti di trovare 1.000 € nel file dimostrativo**, che riporta 354,25 €. Gli input web non vengono trasferiti all’app. Inoltre, il calcolo web comprende una quota fissa facoltativa che non va nascosta in un pedaggio o nel costo autista per forzare il totale del PDF.
+
+Prima di inviare il documento, riconcilia questi tre elementi:
+
+| Controllo | Domanda da chiudere |
+| --- | --- |
+| Costo interno | Ho incluso anche le spese senza un campo dedicato nell’app? |
+| Prezzo scelto | Copre quel costo e il criterio commerciale deciso, non soltanto le voci modellate? |
+| Documento | Il totale e le condizioni effettivamente inviati coincidono con la proposta approvata? |
+
+Se il riepilogo dell’app non rappresenta l’offerta completa, prepara il documento finale nel tuo processo esterno. Non inviare due totali diversi senza spiegazione e non alterare un input per ottenere il prezzo desiderato. Tutti gli importi di questo confronto sono didattici, non tariffe o consuntivi di clienti.
+
+### Descrivere il servizio senza un generico «tutto incluso»
+
 “Tutto incluso” è poco preciso quando il servizio contiene variabili. Meglio usare frasi operative:
 
 - un ritiro e una consegna agli indirizzi confermati;
@@ -103,15 +121,7 @@ Le esclusioni non devono diventare una pagina di formule generiche. Inserire sol
 
 ## Controllo umano prima della condivisione
 
-Il riepilogo generato riflette i dati inseriti. Prima della condivisione:
-
-- verificare che origine e destinazione corrispondano alla richiesta;
-- confrontare il prezzo visualizzato con lo scenario selezionato;
-- controllare unità, valuta e lingua;
-- aprire il file, non limitarsi a verificare che sia stato creato;
-- controllare il logo aziendale se usato con Pro;
-- assicurarsi che nessun input di prova sia rimasto nel documento;
-- completare fuori dall’app eventuali dati cliente o condizioni richieste dal processo.
+Apri il file che stai per inviare, non soltanto la schermata del calcolo. La checklist finale riunisce i controlli su tratta, importi e condizioni; aggiungi il confronto di lingua e logo, se presente, e cerca eventuali input DEMO dimenticati.
 
 RouteBudget conserva localmente lo snapshot del calcolo, non il file PDF inviato. Dall’Archivio puoi riaprire la stima e generare un nuovo PDF; data di emissione, lingua, logo e motore di calcolo possono riflettere il momento della nuova esportazione. Conserva quindi il documento effettivamente inviato e le sue condizioni nel sistema aziendale appropriato.
 

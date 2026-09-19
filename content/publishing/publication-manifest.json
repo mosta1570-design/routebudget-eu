@@ -4,9 +4,9 @@
   "locale": "it",
   "market": "IT",
   "baselineReviewId": "review:baseline-main-a952269",
-  "releaseIntegrityApprovalId": "review:2026-09-09-editorial-polish-integrity",
+  "releaseIntegrityApprovalId": "review:2026-09-19-case-visual-integrity",
   "staticArtifacts": {
-    "/": "sha256:021fdcd4635aff2cbe87afe5f0da681b19778ba1548464998a7c3360f5a9b7ce",
+    "/": "sha256:62f0da96880ae1fe3d4a9411d9719c8da1c0eca9d41e53aa865187f2601cb45e",
     "/it/calcolatori/": "sha256:8e31b7968bcf58da8f01259a55a02d5e1a2ac57629fe2d4a435f92110a6304a5",
     "/it/guide/": "sha256:37058b47feca9eadb9a001180c1097cb49395ac4326834f310a9890e88e6b912",
     "/privacy.html": "sha256:8da2371df697599494a8885b5aad58d4285f8d9468dddb50cfd2611106be2325",
@@ -78,7 +78,7 @@
       "changeScope": "substantive-update",
       "intentOwner": "preventivo trasporto PDF",
       "demandEvidenceId": "demand:bofu-pdf-20260907",
-      "approvalId": "review:2026-09-07-bofu-pdf",
+      "approvalId": "review:2026-09-19-case-pdf",
       "productProofIds": [
         "pdf-quote"
       ],
@@ -169,7 +169,7 @@
       "changeScope": "substantive-update",
       "intentOwner": "calcolatore costo carburante viaggio",
       "demandEvidenceId": "demand:bofu-carburante-20260907",
-      "approvalId": "review:2026-09-07-bofu-carburante",
+      "approvalId": "review:2026-09-19-case-carburante",
       "productProofIds": [
         "fuel-estimate"
       ],
@@ -184,7 +184,7 @@
       "changeScope": "substantive-update",
       "intentOwner": "costo km camion",
       "demandEvidenceId": "demand:bofu-chilometrico-20260907",
-      "approvalId": "review:2026-09-07-bofu-chilometrico",
+      "approvalId": "review:2026-09-19-case-chilometrico",
       "productProofIds": [
         "cost-breakdown"
       ],

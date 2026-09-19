@@ -1,22 +1,22 @@
 import { useEffect, useRef } from 'react';
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, FileText, FolderClock } from 'lucide-react';
 
-import appArchive from '../assets/app-archive-it.png';
-import appArchiveAvif1080 from '../assets/app-archive-it-1080.avif';
-import appArchiveAvif540 from '../assets/app-archive-it-540.avif';
-import appCosts from '../assets/app-costs-it.png';
-import appCostsAvif1080 from '../assets/app-costs-it-1080.avif';
-import appCostsAvif540 from '../assets/app-costs-it-540.avif';
-import appScenarios from '../assets/app-scenarios-it.png';
-import appScenariosAvif1080 from '../assets/app-scenarios-it-1080.avif';
-import appScenariosAvif540 from '../assets/app-scenarios-it-540.avif';
+import appArchive from '../assets/app-vehicle-v172-it.png';
+import appArchiveAvif1080 from '../assets/app-vehicle-v172-it-1080.avif';
+import appArchiveAvif540 from '../assets/app-vehicle-v172-it-540.avif';
+import appCosts from '../assets/app-route-v172-it.png';
+import appCostsAvif1080 from '../assets/app-route-v172-it-1080.avif';
+import appCostsAvif540 from '../assets/app-route-v172-it-540.avif';
+import appScenarios from '../assets/app-scenarios-v172-it.png';
+import appScenariosAvif1080 from '../assets/app-scenarios-v172-it-1080.avif';
+import appScenariosAvif540 from '../assets/app-scenarios-v172-it-540.avif';
 import { APP_STORE_URL, GOOGLE_PLAY_URL, STORE_BADGES, SUPPORT_EMAIL } from '../content/siteConfig';
 import type { Locale, SiteCopy } from '../content/siteCopy';
 
 const editorial = {
   it: {
     methodLabel: 'Il conto della tratta',
-    methodNote: 'Esempio dimostrativo · 870 km · dati inseriti nell’app',
+    methodNote: 'Esempio di metodo · 870 km · distinto dalle schermate sotto',
     costLines: 'Costi operativi',
     operatingCost: 'Costo operativo',
     targetMargin: 'Margine obiettivo',
@@ -30,8 +30,8 @@ const editorial = {
     },
     calculationNote: 'Valori dimostrativi. Il risultato cambia con i dati inseriti.',
     productLabel: 'Il prodotto sul campo',
-    productProof: 'Schermate autentiche dell’app Android',
-    productSteps: ['Confronta il prezzo', 'Verifica ogni costo', 'Riapri la tratta'],
+    productProof: 'Schermate iPhone · RouteBudget EU 1.7.2',
+    productSteps: ['Confronta il prezzo', 'Imposta la tratta', 'Configura il veicolo'],
     functionsLabel: 'Flusso operativo',
     functionsHeading: 'Dai dati al cliente, senza perdere il filo.',
     functionsBody:
@@ -67,13 +67,13 @@ const editorial = {
     downloadTrust: 'Gratis su App Store e Google Play · Acquisti in-app',
     imageAlts: {
       scenarios: 'Scenari Minimo, Consigliato e Ideale nell’app RouteBudget EU',
-      costs: 'Schermata dei costi di una tratta in RouteBudget EU',
-      archive: 'Schermata dell’Archivio locale RouteBudget EU su Android',
+      costs: 'Origine, destinazione e distanza in RouteBudget EU 1.7.2 su iPhone',
+      archive: 'Categoria, assi, peso e consumo in RouteBudget EU 1.7.2 su iPhone',
     },
   },
   en: {
     methodLabel: 'Route ledger',
-    methodNote: 'Demonstration example · 870 km · data entered in the app',
+    methodNote: 'Method example · 870 km · separate from the screens below',
     costLines: 'Operating costs',
     operatingCost: 'Operating cost',
     targetMargin: 'Target margin',
@@ -87,8 +87,8 @@ const editorial = {
     },
     calculationNote: 'Demonstration values. Results change with the data entered.',
     productLabel: 'Product in the field',
-    productProof: 'Authentic Android app screens',
-    productSteps: ['Compare the price', 'Verify every cost', 'Reopen the route'],
+    productProof: 'iPhone screens · RouteBudget EU 1.7.2',
+    productSteps: ['Compare the price', 'Set the route', 'Configure the vehicle'],
     functionsLabel: 'Operating flow',
     functionsHeading: 'From data to customer, without losing the thread.',
     functionsBody:
@@ -123,8 +123,8 @@ const editorial = {
     downloadTrust: 'Free on the App Store and Google Play · In-App Purchases',
     imageAlts: {
       scenarios: 'Minimum, Recommended and Ideal scenarios in RouteBudget EU',
-      costs: 'Route cost detail screen in RouteBudget EU',
-      archive: 'Local RouteBudget EU Archive screen on Android',
+      costs: 'Origin, destination and distance in RouteBudget EU 1.7.2 on iPhone',
+      archive: 'Vehicle category, axles, weight and consumption in RouteBudget EU 1.7.2 on iPhone',
     },
   },
 } satisfies Record<Locale, object>;
@@ -309,7 +309,7 @@ export function ProductContinuation({ copy, locale }: ProductContinuationProps) 
                     <img
                       alt={screen.alt}
                       decoding="async"
-                      height="2400"
+                      height="2348"
                       loading="lazy"
                       src={screen.src}
                       width="1080"

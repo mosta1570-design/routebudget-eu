@@ -7,8 +7,8 @@
   "description": "Apri un esempio PDF RouteBudget, controlla input e calcolo, e scopri quali campi genera l’app e quali dati completare prima dell’invio al cliente.",
   "eyebrow": "Dal calcolo al documento",
   "published": "2026-08-01",
-  "modified": "2026-09-07",
-  "reviewed": "2026-09-07",
+  "modified": "2026-09-19",
+  "reviewed": "2026-09-19",
   "author": "Eng. Mostafa",
   "reviewer": "Eng. Mostafa",
   "primaryKeyword": "preventivo trasporto PDF",
@@ -60,5 +60,5 @@
       "supports": "Funzioni generali dichiarate di calcolo costi, scenari, Archivio e PDF. Il campione PDF separato documenta il template sorgente datato, non ogni versione corrente."
     }
   ],
-  "changeSummary": "Sostituito l’esempio generico con PDF riproducibile dal template verificato, input dimostrativi e controlli numerici; esplicitata la differenza tra stampa desktop e dispositivo e collegata la pagina di scelta dell’app."
+  "changeSummary": "Aggiunta riconciliazione fra costo completo, prezzo e documento; distinto l’esempio web dal PDF dimostrativo e ridotta la checklist duplicata."
 }

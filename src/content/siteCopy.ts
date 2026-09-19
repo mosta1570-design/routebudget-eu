@@ -159,13 +159,13 @@ const italian: SiteCopy = {
   showcase: {
     heading: 'Una decisione, non un foglio di calcolo.',
     body:
-      'Dalla tratta al preventivo, ogni schermata mantiene visibili costo, margine e prezzo scelto. Le immagini mostrano l’app reale su Android.',
-    screens: ['Panoramica', 'Dettaglio costi', 'Scenari di prezzo', 'Archivio locale'],
+      'Dalla tratta al preventivo, ogni schermata mantiene visibili costo, margine e prezzo scelto. Le immagini mostrano RouteBudget EU 1.7.2 su iPhone; le funzioni disponibili possono variare tra iOS e Android.',
+    screens: ['Panoramica', 'Dati della tratta', 'Scenari di prezzo', 'Configurazione veicolo'],
     captions: [
       'Capisci subito se il prezzo protegge il margine.',
-      'Carburante, pedaggi, autista e usura restano leggibili.',
+      'Origine, destinazione e distanza restano sotto controllo.',
       'Confronta Minimo, Consigliato e Ideale.',
-      'Riapri un calcolo e genera il PDF quando serve.',
+      'Imposta categoria, assi, peso e consumo del mezzo.',
     ],
   },
   flow: {
@@ -369,13 +369,13 @@ const english: SiteCopy = {
   showcase: {
     heading: 'A decision, not a spreadsheet.',
     body:
-      'From route to quote, each screen keeps cost, margin and selected price visible. Images show the real Android app.',
-    screens: ['Overview', 'Cost detail', 'Price scenarios', 'Local Archive'],
+      'From route to quote, each screen keeps cost, margin and selected price visible. Images show RouteBudget EU 1.7.2 on iPhone; available features may differ between iOS and Android.',
+    screens: ['Overview', 'Route inputs', 'Price scenarios', 'Vehicle setup'],
     captions: [
       'See immediately whether the price protects your margin.',
-      'Keep fuel, tolls, driver and wear easy to read.',
+      'Keep origin, destination and distance in view.',
       'Compare Minimum, Recommended and Ideal.',
-      'Reopen a calculation and create the PDF when needed.',
+      'Set vehicle category, axles, weight and consumption.',
     ],
   },
   flow: {
