@@ -16,15 +16,15 @@ import {
 } from 'react';
 import { createPortal } from 'react-dom';
 
-import appArchive from '../assets/app-archive-it.png';
-import appArchiveAvif1080 from '../assets/app-archive-it-1080.avif';
-import appArchiveAvif540 from '../assets/app-archive-it-540.avif';
-import appCosts from '../assets/app-costs-it.png';
-import appCostsAvif1080 from '../assets/app-costs-it-1080.avif';
-import appCostsAvif540 from '../assets/app-costs-it-540.avif';
-import appScenarios from '../assets/app-scenarios-it.png';
-import appScenariosAvif1080 from '../assets/app-scenarios-it-1080.avif';
-import appScenariosAvif540 from '../assets/app-scenarios-it-540.avif';
+import appArchive from '../assets/app-vehicle-v172-it.png';
+import appArchiveAvif1080 from '../assets/app-vehicle-v172-it-1080.avif';
+import appArchiveAvif540 from '../assets/app-vehicle-v172-it-540.avif';
+import appCosts from '../assets/app-route-v172-it.png';
+import appCostsAvif1080 from '../assets/app-route-v172-it-1080.avif';
+import appCostsAvif540 from '../assets/app-route-v172-it-540.avif';
+import appScenarios from '../assets/app-scenarios-v172-it.png';
+import appScenariosAvif1080 from '../assets/app-scenarios-v172-it-1080.avif';
+import appScenariosAvif540 from '../assets/app-scenarios-v172-it-540.avif';
 import heroDesktop from '../assets/hero/routebudget-hero-desktop.mp4';
 import heroDesktopWebm from '../assets/hero/routebudget-hero-desktop.webm';
 import heroMobile from '../assets/hero/routebudget-hero-mobile.mp4';
@@ -122,7 +122,7 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
     demoLabel: 'Vedi un esempio completo',
     demoTitle: 'Un costo leggibile. Tre prezzi da confrontare.',
     demoIntro:
-      'Schermate autentiche dell’app Android: composizione dei costi, scenari e Archivio locale.',
+      'Schermate iPhone · RouteBudget EU 1.7.2: tratta, veicolo e scenari di prezzo.',
     demoClose: 'Chiudi la dimostrazione',
     demoCarouselLabel: 'Schermate autentiche dell’app RouteBudget',
     demoControlsLabel: 'Controlli delle schermate',
@@ -133,13 +133,13 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
     ledgerLabel: 'Esempio di decisione economica',
     ledger: {
       routeLabel: 'Tratta dimostrativa',
-      routeValue: '870 km',
+      routeValue: '211 km',
       costLabel: 'Costo operativo',
-      costValue: '1.220,68 €',
+      costValue: '288,05 €',
       priceLabel: 'Prezzo consigliato',
-      priceValue: '1.525,85 €',
+      priceValue: '360,07 €',
       profitLabel: 'Utile · Margine',
-      profitValue: '305,17 € · 20%',
+      profitValue: '72,02 € · 20%',
       disclaimer: 'Stima operativa non vincolante',
     },
     opening: ['TRATTA', 'COSTI', 'MARGINE', 'PREZZO'],
@@ -164,7 +164,7 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
     demoLabel: 'See a complete example',
     demoTitle: 'One readable cost. Three prices to compare.',
     demoIntro:
-      'Authentic Android app screens: cost composition, scenarios and local Archive.',
+      'iPhone screens · RouteBudget EU 1.7.2: route, vehicle and price scenarios.',
     demoClose: 'Close demonstration',
     demoCarouselLabel: 'Authentic RouteBudget app screens',
     demoControlsLabel: 'Screen controls',
@@ -175,13 +175,13 @@ const heroLanguage: Record<Locale, HeroLanguage> = {
     ledgerLabel: 'Example economic decision',
     ledger: {
       routeLabel: 'Demonstration route',
-      routeValue: '870 km',
+      routeValue: '211 km',
       costLabel: 'Operating cost',
-      costValue: '€1,220.68',
+      costValue: '€288.05',
       priceLabel: 'Recommended price',
-      priceValue: '€1,525.85',
+      priceValue: '€360.07',
       profitLabel: 'Profit · Margin',
-      profitValue: '€305.17 · 20%',
+      profitValue: '€72.02 · 20%',
       disclaimer: 'Non-binding operating estimate',
     },
     opening: ['ROUTE', 'COSTS', 'MARGIN', 'PRICE'],
@@ -204,21 +204,21 @@ const demoFrames: Record<
       avifSrcSet: `${appScenariosAvif540} 540w, ${appScenariosAvif1080} 1080w`,
       alt: 'RouteBudget mostra gli scenari Minimo, Consigliato e Ideale',
       label: 'SCENARI',
-      value: '1.525,85 €',
+      value: '360,07 €',
     },
     {
       image: appCosts,
       avifSrcSet: `${appCostsAvif540} 540w, ${appCostsAvif1080} 1080w`,
-      alt: 'RouteBudget mostra carburante, pedaggi, autista e usura',
-      label: 'COSTI',
-      value: '1.220,68 €',
+      alt: 'RouteBudget 1.7.2 su iPhone: origine, destinazione e distanza della tratta',
+      label: 'TRATTA',
+      value: '211 km',
     },
     {
       image: appArchive,
       avifSrcSet: `${appArchiveAvif540} 540w, ${appArchiveAvif1080} 1080w`,
-      alt: 'RouteBudget mostra un calcolo salvato nell’Archivio locale',
-      label: 'ARCHIVIO',
-      value: 'SALVATO IN LOCALE',
+      alt: 'RouteBudget 1.7.2 su iPhone: categoria, assi, peso e consumo del veicolo',
+      label: 'VEICOLO',
+      value: '32 L/100 km',
     },
   ],
   en: [
@@ -227,21 +227,21 @@ const demoFrames: Record<
       avifSrcSet: `${appScenariosAvif540} 540w, ${appScenariosAvif1080} 1080w`,
       alt: 'RouteBudget shows Minimum, Recommended and Ideal price scenarios',
       label: 'SCENARIOS',
-      value: '€1,525.85',
+      value: '€360.07',
     },
     {
       image: appCosts,
       avifSrcSet: `${appCostsAvif540} 540w, ${appCostsAvif1080} 1080w`,
-      alt: 'RouteBudget shows fuel, tolls, driver and wear costs',
-      label: 'COSTS',
-      value: '€1,220.68',
+      alt: 'RouteBudget 1.7.2 on iPhone: route origin, destination and distance',
+      label: 'ROUTE',
+      value: '211 km',
     },
     {
       image: appArchive,
       avifSrcSet: `${appArchiveAvif540} 540w, ${appArchiveAvif1080} 1080w`,
-      alt: 'RouteBudget shows a calculation saved in the local Archive',
-      label: 'ARCHIVE',
-      value: 'SAVED LOCALLY',
+      alt: 'RouteBudget 1.7.2 on iPhone: vehicle category, axles, weight and consumption',
+      label: 'VEHICLE',
+      value: '32 L/100 km',
     },
   ],
 };
@@ -476,7 +476,7 @@ function DemoOverlay({
                 <img
                   alt={frame.alt}
                   decoding="async"
-                  height="2400"
+                  height="2348"
                   loading="lazy"
                   src={frame.image}
                   width="1080"
@@ -815,7 +815,7 @@ export function CinematicHero({ locale, onLocaleChange }: CinematicHeroProps) {
                     srcSet={`${appScenariosAvif540} 540w, ${appScenariosAvif1080} 1080w`}
                     type="image/avif"
                   />
-                  <img alt="" decoding="async" fetchPriority="low" height="2400" loading="lazy" src={appScenarios} width="1080" />
+                  <img alt="" decoding="async" fetchPriority="low" height="2348" loading="lazy" src={appScenarios} width="1080" />
                 </picture>
               </div>
             </div>

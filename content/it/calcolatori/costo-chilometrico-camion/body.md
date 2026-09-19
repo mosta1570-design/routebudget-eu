@@ -81,28 +81,6 @@ Il rapporto è circa **1,50 €/km percorso** e **1,80 €/km carico**. Nessuno 
 
 I valori indicativi dei costi di esercizio pubblicati dal MIT, aggiornati nella fonte consultata il 17 marzo 2026, possono servire come controllo esterno delle categorie considerate. Non sostituiscono consumo, costi e percorrenza della tua impresa e non vengono inseriti automaticamente nel calcolo.
 
-## Come leggere il risultato
-
-Confronta le componenti prima del totale. Se il carburante domina, controlla consumo, distanza e prezzo. Se l’autista pesa molto, verifica che le ore includano attività reali senza duplicazioni. Se la differenza fra i due costi per km è ampia, il ritorno a vuoto merita una decisione commerciale esplicita.
-
-Esegui almeno una prova prudente: aumenta prezzo carburante, ore operative o chilometri a vuoto. La sensibilità non predice il futuro, ma mostra quali ipotesi possono rendere fragile un’offerta.
-
-## Il controllo che trasforma il risultato in una decisione
-
-Dopo il calcolo conserva tre numeri distinti:
-
-1. **costo per km percorso**, utile per capire l’efficienza fisica della missione;
-2. **costo per km carico**, utile per vedere quanto devono recuperare i chilometri venduti;
-3. **prezzo proposto**, che deve coprire il costo completo e il criterio commerciale scelto.
-
-Se il cliente offre un prezzo totale, confrontalo prima con il costo operativo, non con una media €/km trovata online. Se offre una tariffa per km carico, moltiplicala solo per i km a cui si applica e verifica che il ricavo risultante copra anche ritorno, ore e spese fisse. Il [calcolatore di prezzo minimo e margine](/it/calcolatori/prezzo-minimo-margine-tratta/) parte dal costo chiuso e mostra separatamente soglia di copertura, margine sul prezzo e ricarico equivalente.
-
-## Dal costo km camion alla tariffa proposta
-
-Per calcolare il costo al km, dividi il totale operativo per i chilometri coerenti con la decisione. Per definire quanto chiedere al cliente, parti invece dal costo completo, verifica che nessuna voce sia stata esclusa e applica il criterio di margine scelto. Ricarico sul costo e margine sul prezzo finale non sono equivalenti.
-
-Una tariffa può cambiare anche con attese, urgenza, condizioni di pagamento, accessi, traghetti o disponibilità del mezzo. Per questo non esiste un prezzo al km universale ricavabile dal solo risultato. La guida al [preventivo di trasporto per autotrasportatori](/it/guide/preventivo-trasporto/) mostra come passare dal calcolo interno a un’offerta leggibile.
-
 ## Ti offrono una tariffa al km: quanto resta davvero?
 
 Riprendi l’esempio sopra, senza trasformarlo in una tariffa di mercato. Se l’offerta ipotetica è **2 €/km per i soli 500 km carichi**, il ricavo è 1.000 €, non 1.200 €: i 100 km vuoti non sono venduti. Tolti gli 898,50 € delle voci considerate, restano **101,50 €**, pari al **10,15% del ricavo**, prima di eventuali costi esclusi e imposte.
@@ -110,6 +88,25 @@ Riprendi l’esempio sopra, senza trasformarlo in una tariffa di mercato. Se l�
 Questo controllo risponde a “posso accettare questa offerta?”, non stabilisce quanto debbano pagare tutti i clienti. Se manca una spesa, il margine apparente la sta ancora finanziando. Usa il [calcolatore prezzo minimo e margine](/it/calcolatori/prezzo-minimo-margine-tratta/) con il costo completo, poi confronta il documento che vuoi inviare con l’[esempio di preventivo PDF RouteBudget](/it/guide/preventivo-trasporto-pdf/).
 
 Per conservare calcolo e scenari in un flusso mobile, guarda le [funzioni dell’app per autotrasportatori](/it/app-per-autotrasportatori/). Il modulo web non trasferisce i suoi input all’app: ricontrollali quando li inserisci. Il PDF non rende completa una stima se hai lasciato fuori costi reali.
+
+## Quando i 101,50 € non bastano: una prova prima di dire sì
+
+Mantieni l’offerta ipotetica di 1.000 € e i 500 km carichi. Supponi però di dover percorrere 130 km vuoti anziché 100, lavorare 10,5 ore anziché 9, consumare 33 L/100 km e pagare il gasolio 1,85 €/L. Anche il pedaggio ipotetico sale a 128 €. Non è una storia di un cliente: entrambi gli scenari sono inventati per rendere verificabile il controllo.
+
+| Componente | Stima iniziale | Scenario prudente |
+| --- | ---: | ---: |
+| Carburante | 325,50 € | 384,62 € |
+| Pedaggi inseriti | 120,00 € | 128,00 € |
+| Autista | 225,00 € | 262,50 € |
+| Usura a 0,18 €/km | 108,00 € | 113,40 € |
+| Costi fissi a 0,20 €/km | 120,00 € | 126,00 € |
+| Totale delle voci considerate | **898,50 €** | **1.014,52 €** |
+| Ricavo ipotetico | 1.000,00 € | 1.000,00 € |
+| Differenza ricavo meno costo | **+101,50 €** | **−14,52 €** |
+
+Il carburante deriva da `630 × 33 ÷ 100 × 1,85`; trovi le variazioni isolate nell’[esempio del calcolatore carburante](/it/calcolatori/costo-carburante-viaggio/). Il totale prudente, prima dell’arrotondamento finale, è 1.014,515 €. Il peggioramento rispetto alla base è 116,015 €, cioè **116,02 €**: più dello spazio iniziale di 101,50 €.
+
+Il controllo non dice che quel viaggio andrà male. Dice quali condizioni devi chiarire prima di accettarlo. Se il ritorno è certo, verifica soprattutto consumo e ore; se il ritorno è ancora aperto, non trattare il riposizionamento migliore come acquisito. Per costruire la proposta, usa la guida al [preventivo di trasporto](/it/guide/preventivo-trasporto/) e annota cosa fare se le ipotesi cambiano.
 
 ## Cosa resta fuori
 
@@ -124,9 +121,3 @@ Il risultato non include automaticamente:
 - verifica normativa delle ore e delle pause.
 
 Un costo formalmente corretto può quindi essere incompleto se manca una voce aziendale. Conserva le ipotesi insieme al risultato e aggiornale quando cambiano percorso, mezzo, carburante o condizioni operative.
-
-## Dal calcolo web al flusso completo
-
-RouteBudget riunisce nel calcolo della tratta carburante o energia, pedaggi stimati o inseriti, tempo autista, pause operative, usura/manutenzione, ritorno a vuoto e scenari di prezzo. Può poi generare un PDF della stima e conservarne il calcolo nell’Archivio locale. Il calcolatore web resta intenzionalmente più limitato: non salva, non genera documenti e non riproduce gli scenari dell’app.
-
-Prima di usare la stima, controlla distanza, consumo, pedaggi, ore, criteri di ripartizione e voci lasciate a zero. Arrotonda solo alla fine e non presentare il costo per km come tariffa minima ufficiale. Quando serve continuità tra calcolo, scenari e PDF, passa alla pagina [RouteBudget per autotrasportatori e padroncini](/it/app-per-autotrasportatori/).

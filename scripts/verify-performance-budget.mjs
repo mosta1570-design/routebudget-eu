@@ -33,7 +33,7 @@ const scripts = files.filter((name) => name.endsWith('.js'));
 const styles = files.filter((name) => name.endsWith('.css'));
 const webm = files.filter((name) => /routebudget-hero-.+\.webm$/.test(name));
 const mp4 = files.filter((name) => /routebudget-hero-.+\.mp4$/.test(name));
-const proofImages = files.filter((name) => /app-(?:scenarios|costs|archive)-.+\.png$/.test(name));
+const proofImages = files.filter((name) => /app-(?:scenarios|route|vehicle)-.+\.png$/.test(name));
 
 if (scripts.length === 0 || styles.length === 0) throw new Error('Bundled JavaScript and CSS assets are required');
 if (webm.length !== 2 || mp4.length !== 2) throw new Error('Expected desktop and mobile hero assets in both WebM and MP4');

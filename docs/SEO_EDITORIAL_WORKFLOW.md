@@ -205,3 +205,13 @@ Italiano resta mercato iniziale. Tradurre solo pagine provate da dati italiani o
 ## 12. Uso di automazione o AI
 
 Automazione può aiutare struttura e controlli; non è fonte né revisore. Contenuto resta soggetto a verifica umana, prodotto e linguistica. Dichiarare l’assistenza materiale nella nota editoriale visibile e documentarla nel flusso interno; non generare esperienze, autori, dati, citazioni o consenso. Nessuna quota giornaliera: completezza e qualità prevalgono sul numero di pagine.
+
+## 13. Revisione selettiva e casi verificabili
+
+- Preferire un miglioramento della pagina che già risolve il compito a una nuova URL per una variante della query. Non eliminare o ripubblicare pagine per azzerarne la storia o farle sembrare recenti.
+- Il template è una guida, non una sequenza obbligatoria di titoli. Tagliare introduzioni, avvertenze e CTA ripetute quando non aggiungono una decisione; conservare limiti sostanziali, fonti e percorsi utili.
+- Un caso reale richiede dati autorizzati, periodo, perimetro e metodo verificabili. Rimuovere identità clienti, targhe, indirizzi e dettagli riservati. Non pubblicare fatture o dati personali senza autorizzazione specifica.
+- Se i dati sono inventati, dichiararlo vicino al caso e alle sue varianti. Chiamarlo esempio o scenario, mai test sul campo, testimonianza o consuntivo reale. Non inventare risultati commerciali per rendere il testo più umano.
+- Un esempio condiviso fra pagine mantiene gli stessi input; ogni pagina aggiunge un controllo diverso. Verificare formule, arrotondamenti e differenza fra calcolatore web e app. Un vecchio PDF dimostrativo non va presentato come esportazione del nuovo esempio.
+- Registrare il valore aggiunto prima di pubblicare: strumento, confronto riproducibile, dato originale autorizzato o risposta che mancava. Il solo cambio di tono, numero di parole o data non basta.
+- Valutare dopo il nuovo crawl e su periodi completi, distinguendo query, paese, dispositivo, clic e uso dello strumento. Nessuna promessa di recupero dopo sette giorni o di immunità allo spam.

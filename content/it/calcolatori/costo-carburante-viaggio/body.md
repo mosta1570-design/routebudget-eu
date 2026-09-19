@@ -58,25 +58,28 @@ Ipotesi illustrative:
 
 | Dato | Valore |
 | --- | ---: |
-| Distanza di andata | 640 km |
-| Ritorno a vuoto | 120 km |
-| Consumo medio | 32 L/100 km |
+| Distanza di andata | 500 km |
+| Ritorno a vuoto | 100 km |
+| Consumo medio | 31 L/100 km |
 | Prezzo carburante | 1,75 €/L |
 
-L’andata richiede circa 204,8 litri, pari a 358,40 €. Il ritorno richiede circa 38,4 litri, pari a 67,20 €. Il totale stimato è **243,2 litri e 425,60 €**.
+L’andata richiede 155 litri, pari a 271,25 €. Il ritorno richiede 31 litri, pari a 54,25 €. Il totale stimato è **186 litri e 325,50 €**. Sono dati inventati per controllare la formula, non rilevazioni di un trasportatore o prezzi correnti.
 
 Il numero non comprende pedaggi, costo autista, usura, tempi di attesa, traghetti, pernottamenti o margine. Non è quindi il costo della tratta e non è una tariffa da offrire.
 
-## Controlla la sensibilità
+## Se il viaggio cambia, quale voce pesa di più?
 
-Una stima diventa più utile quando non guardi un solo scenario. Prova almeno due variazioni:
+Parti dai 325,50 € dell’esempio e cambia un input alla volta. Così puoi distinguere l’effetto del prezzo da quello del mezzo o del percorso.
 
-- aumenta il prezzo al litro di 0,10 €;
-- aumenta il consumo di 2 L/100 km;
-- aggiungi i chilometri di un possibile ritorno senza carico;
-- confronta percorso breve e percorso operativo realmente utilizzabile.
+| Prova illustrativa | Litri | Costo | Differenza dalla base |
+| --- | ---: | ---: | ---: |
+| Base: 600 km, 31 L/100 km, 1,75 €/L | 186 | 325,50 € | — |
+| Solo prezzo a 1,85 €/L | 186 | 344,10 € | +18,60 € |
+| Solo consumo a 33 L/100 km | 198 | 346,50 € | +21,00 € |
+| Solo distanza a 630 km | 195,3 | 341,78 € | +16,28 € |
+| Tutte e tre le variazioni insieme | 207,9 | 384,62 € | +59,12 € |
 
-Nell’esempio, un aumento di 0,10 €/L pesa circa 24,32 € sul viaggio complessivo. Un consumo di 34 L/100 km, a distanza e prezzo invariati, porta i litri a 258,4 e il costo a circa 452,20 €. Questo non prevede il futuro: rende visibile quanto la proposta dipende da un’ipotesi.
+L’ultima riga si ricalcola con `630 × 33 ÷ 100 × 1,85 = 384,615 €`, arrotondati a 384,62 €. Non sommare le tre differenze isolate: quando cambiano insieme, prezzo, consumo e chilometri si moltiplicano tra loro. È una prova di sensibilità, non un consuntivo reale né una previsione del prossimo viaggio.
 
 ## Quanto vale ogni centesimo prima di accettare
 
@@ -84,7 +87,7 @@ Per capire subito se un’offerta è fragile, non serve rifare tutto il preventi
 
 `impatto di 0,01 €/L = litri totali stimati × 0,01 €`
 
-Nell’esempio da 243,2 litri, ogni centesimo al litro cambia il costo di circa **2,43 €**. Cinque centesimi valgono circa 12,16 €; dieci centesimi 24,32 €. Questo indicatore consente tre controlli rapidi:
+Nella base da 186 litri, ogni centesimo al litro cambia il costo di **1,86 €**. Cinque centesimi valgono 9,30 €; dieci centesimi 18,60 €. Questo indicatore consente tre controlli rapidi:
 
 | Domanda prima della conferma | Controllo |
 | --- | --- |
@@ -96,18 +99,9 @@ Il [portale mensile MASE](https://sisen.mase.gov.it/dgsaie/prezzi-mensili-carbur
 
 ## Dal carburante al costo completo della tratta
 
-Il carburante è spesso visibile e facile da aggiornare, ma non deve assorbire tutta l’attenzione. Una tratta sostenibile considera anche:
+Per continuare con gli stessi 500 km carichi e 100 km vuoti, apri l’[esempio del calcolatore costo chilometrico](/it/calcolatori/costo-chilometrico-camion/): aggiunge pedaggi, ore, usura e quota fissa, poi confronta il costo con un’offerta ipotetica. I 325,50 € di carburante sono già compresi nel totale: non aggiungerli una seconda volta.
 
-- pedaggi e infrastrutture a pagamento;
-- ore operative e pause;
-- costo del mezzo e manutenzione;
-- ritorni, riposizionamenti e attese;
-- rischio e margine desiderato;
-- condizioni e validità del preventivo.
-
-RouteBudget collega carburante o energia, pedaggi, tempo autista, pause operative, usura/manutenzione e ritorno a vuoto; confronta scenari di prezzo e crea un PDF della stima. Rischio commerciale, validità e condizioni dell’offerta restano valutazioni dell’impresa. Il calcolatore web resta deliberatamente limitato al carburante, così puoi ottenere una verifica rapida senza riprodurre il flusso completo dell’app.
-
-Per continuare senza confondere le voci, passa al [calcolo completo del costo di trasporto](/it/guide/calcolo-costo-trasporto/), poi controlla che cosa contiene il [riepilogo preventivo PDF di RouteBudget](/it/guide/preventivo-trasporto-pdf/). Il carburante calcolato qui entra una volta sola nel costo; il PDF non aggiunge automaticamente condizioni commerciali o dati del cliente.
+La guida al [calcolo completo del costo di trasporto](/it/guide/calcolo-costo-trasporto/) serve invece a costruire il perimetro delle spese dell’impresa. Nessuno dei due moduli web prepara o salva un PDF.
 
 ## Dal calcolo gasolio al preventivo: quale strumento ti serve?
 

@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-19",
+  "decision": "approved",
+  "id": "review:2026-09-19-case-pdf",
+  "type": "editorial",
+  "contentId": "guide/preventivo-trasporto-pdf",
+  "contentFingerprint": "sha256:532fc67ea6aea8282f65f6c66a767d5709fbaeace24dd05bd0ad86e4dc27bb49",
+  "artifactFingerprint": "sha256:75ce92bf1d1d8484eb6e4be3ddd8908b191a37cdbc4829d365cd28593857773c",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-19",
+    "basis": "Owner explicitly requested implementation and publication of the selective editorial improvements, preserving credibility and useful URLs, then added replacement of website app screenshots with version 1.7.2 and coherent presentation. No bulk deletion, native app mutation, independent human certification or ranking guarantee."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Selective improvement of existing content; unchanged URL, title, original publication and historic source-access dates. Shared synthetic 600 km example, isolated fuel sensitivity and adverse route result independently checked against calculator functions and integer-cent expectations. PDF sample stays a distinct historical example with unchanged verified bytes. Repetition reduced; no invented operator experience or claim of current tariff/legal recertification. Build, links, calculator, privacy and responsive DOM/visual checks performed. Automated review with owner authorization, not independent human or real-device certification."
+}
