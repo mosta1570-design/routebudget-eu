@@ -70,13 +70,13 @@ jobs:
           persist-credentials: false
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        uses: github/codeql-action/init@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
         with:
           languages: ${{ matrix.language }}
           build-mode: none
 
       - name: Analyze source results
-        uses: github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        uses: github/codeql-action/analyze@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
         with:
           upload: ${{ steps.setup-mode.outputs.upload }}
           upload-database: ${{ steps.setup-mode.outputs.upload_database }}
@@ -143,13 +143,13 @@ jobs:
           printf 'sha=%s\n' "$published_sha" >> "$GITHUB_OUTPUT"
 
       - name: Initialize CodeQL for published JavaScript
-        uses: github/codeql-action/init@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        uses: github/codeql-action/init@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
         with:
           languages: javascript-typescript
           build-mode: none
 
       - name: Analyze published results
-        uses: github/codeql-action/analyze@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        uses: github/codeql-action/analyze@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
         with:
           upload: ${{ steps.setup-mode.outputs.upload }}
           upload-database: ${{ steps.setup-mode.outputs.upload_database }}
