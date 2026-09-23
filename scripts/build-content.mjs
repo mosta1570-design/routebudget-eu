@@ -593,7 +593,7 @@ ${renderHead({
 
 function documentTitle(editorialTitle) {
   const branded = `${editorialTitle} | ${config.name}`;
-  return branded.length <= 75 ? branded : editorialTitle;
+  return branded.length <= 70 ? branded : editorialTitle;
 }
 
 function renderHubEntries(sectionPages, section) {

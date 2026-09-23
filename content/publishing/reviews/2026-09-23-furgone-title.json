@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-23",
+  "decision": "approved",
+  "id": "review:2026-09-23-furgone-title",
+  "type": "editorial",
+  "contentId": "guide/conviene-comprare-furgone-elettrico",
+  "contentFingerprint": "sha256:e9973e509d7dbad2a79d8c82f77be68ace2e9494e37d25181ae9f8cd4bc99f01",
+  "artifactFingerprint": "sha256:06c5f05b8d464fec7b8c9fed7b0a94d143554a9fc7219a66a036be62d6ca26f1",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-23",
+    "basis": "Owner requested a full SEO audit, professional fixes and publication. This title-only correction removes Bing's observed length warning while preserving the established topic, canonical URL and unchanged body; it is not an independent editorial or legal certification."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Shortened a 75-character standalone title to 58 characters after Bing's live test specified titles under 70. Existing body, sources, route and product claims are unchanged. Automated source/build validation only; no invented review or ranking claim."
+}
