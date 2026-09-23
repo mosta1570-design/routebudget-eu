@@ -272,7 +272,7 @@ function verifyIndexableDocument(route, html) {
   assert(!html.includes('rel="manifest"'), `${route}: heavyweight web manifest must not load on indexable pages`);
 
   const title = capture(html, /<title>([^<]+)<\/title>/, `${route}: title missing`);
-  assert(title.length <= 75, `${route}: final document title exceeds 75 characters`);
+  assert(title.length <= 70, `${route}: final document title exceeds 70 characters`);
   assert(!titles.has(title), `${route}: duplicate title ${title}`);
   titles.add(title);
   const description = capture(html, /<meta\s+name="description"\s+content="([^"]+)"\s*\/>/, `${route}: description missing`);

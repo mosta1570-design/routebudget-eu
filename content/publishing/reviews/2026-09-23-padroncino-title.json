@@ -1,0 +1,26 @@
+{
+  "$schema": "../review-record.schema.json",
+  "schemaVersion": 1,
+  "reviewOperator": "Codex publication gate",
+  "reviewMode": "automated-with-owner-authorization",
+  "reviewedAt": "2026-09-23",
+  "decision": "approved",
+  "id": "review:2026-09-23-padroncino-title",
+  "type": "editorial",
+  "contentId": "guide/guadagno-padroncino-camion",
+  "contentFingerprint": "sha256:f9eb0776fc82178933eb56f55ad536cbe24d6a3e172e5dc8bd317a33e1fc83aa",
+  "artifactFingerprint": "sha256:b3f0ead7f7ae766579723721452e84056d6edcc2a8fac37ad80f9cf1116ba128",
+  "ownerAuthorization": {
+    "approvedBy": "Eng. Mostafa",
+    "approvedAt": "2026-09-23",
+    "basis": "Owner requested a full SEO audit, professional fixes and publication. This title-only correction addresses the measured title-length issue while preserving the established topic, canonical URL and unchanged body; it is not an independent editorial or financial certification."
+  },
+  "automatedChecks": {
+    "sourceCoverage": true,
+    "productClaims": true,
+    "italianIntent": true,
+    "seoContracts": true,
+    "accessibilityContracts": true
+  },
+  "notes": "Shortened a 71-character standalone title to 55 characters under the verified Bing 70-character threshold. No change to operational formulas, body, sources, route or product claims. Automated source/build validation only."
+}
