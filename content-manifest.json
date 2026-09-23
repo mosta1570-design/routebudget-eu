@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-09-19",
+  "revisionDate": "2026-09-23",
   "pages": [
     {
       "id": "it:landing:app-per-autotrasportatori",
@@ -208,14 +208,14 @@
     {
       "id": "it:guide:conviene-comprare-furgone-elettrico",
       "url": "https://routebudget.eu/it/guide/conviene-comprare-furgone-elettrico/",
-      "title": "Conviene comprare un furgone elettrico? Test sui tuoi giri, non sulla media",
+      "title": "Conviene comprare un furgone elettrico? Test sui tuoi giri",
       "description": "Metodo per confrontare furgone elettrico e diesel su autonomia utile, carico, ricarica, costo energia, fermo e differenza annua, senza promesse TCO.",
       "type": "guide",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/guide/conviene-comprare-furgone-elettrico/",
       "indexable": true,
       "primaryKeyword": "conviene comprare un furgone elettrico",
-      "modified": "2026-08-25"
+      "modified": "2026-09-23"
     },
     {
       "id": "it:guide:costi-autotrasporto",
@@ -472,14 +472,14 @@
     {
       "id": "it:guide:guadagno-padroncino-camion",
       "url": "https://routebudget.eu/it/guide/guadagno-padroncino-camion/",
-      "title": "Guadagno padroncino camion: calcolarlo senza confondere incasso e utile",
+      "title": "Guadagno padroncino camion: distinguere incasso e utile",
       "description": "Metodo per stimare quanto resta a un padroncino dopo costi di tratta, costi mensili e contributi, usando missioni reali invece di uno stipendio medio.",
       "type": "guide",
       "locale": "it",
       "canonical": "https://routebudget.eu/it/guide/guadagno-padroncino-camion/",
       "indexable": true,
       "primaryKeyword": "guadagno padroncino camion",
-      "modified": "2026-08-25"
+      "modified": "2026-09-23"
     },
     {
       "id": "it:guide:idoneita-finanziaria-autotrasporto",
