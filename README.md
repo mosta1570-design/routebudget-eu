@@ -29,6 +29,8 @@ GitHub Pages currently serves the root of the `gh-pages` branch. A production re
 
 `public/CNAME` keeps `routebudget.eu` in the uploaded Pages artifact. GitHub Pages custom-domain settings and DNS remain external deployment prerequisites.
 
+IndexNow ownership is proven by the key text file in `public/`. After deploying changed pages, notify an IndexNow endpoint only about canonical URLs changed in that release. Confirm the key file is publicly reachable before submitting; an accepted notification does not guarantee indexing. Keep Search Console and Bing sitemap submissions as separate discovery channels.
+
 ## Public routes
 
 - Landing page: `/`
